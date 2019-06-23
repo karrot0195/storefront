@@ -13,7 +13,7 @@ class PageWidget extends WP_Widget {
     public function widget( $args, $instance ) {
         echo $args['before_widget'];
         if( ! empty( $instance['selected_posts'] ) && is_array( $instance['selected_posts'] ) ){
-            $selected_posts = get_posts( array( 'post__in' => $instance['selected_posts'], 'post_type' => 'page' ) );
+            $selected_posts = get_posts( array( 'post__in' => $instance['selected_posts'], 'post_type' => 'page',  'orderby'    => 'ID', 'order' => 'ASC' ) );
             ?>
            <div class="block-widget-page">
                <ul>
