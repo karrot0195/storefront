@@ -31,6 +31,15 @@ add_action( 'storefront_header', 'storefront_primary_navigation_wrapper', 42 );
 add_action( 'storefront_header', 'storefront_primary_navigation', 50 );
 add_action( 'storefront_header', 'storefront_primary_navigation_wrapper_close', 68 );
 
+
+/**
+ * hook header home 1
+ */
+add_action( 'storefront_header_home_1', 'storefront_site_branding', 20 );
+add_action( 'storefront_header_home_1', 'storefront_primary_navigation', 30 );
+add_action( 'storefront_header_home_1', 'storefront_site_action', 40 );
+
+
 /**
  * Footer
  *
@@ -39,6 +48,13 @@ add_action( 'storefront_header', 'storefront_primary_navigation_wrapper_close', 
  */
 add_action( 'storefront_footer', 'storefront_footer_widgets', 10 );
 add_action( 'storefront_footer', 'storefront_credit', 20 );
+
+
+/**
+ * Footer home 1
+ */
+
+add_action( 'storefront_footer_home_1', 'storefront_footer_widgets', 10 );
 
 /**
  * Homepage

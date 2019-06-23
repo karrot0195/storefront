@@ -1,0 +1,22 @@
+.home-page-1 .site-header .col-full {
+  display: flex;
+}
+.home-page-1 .site-header .col-full .site-branding {
+  width: 30%;
+  display: inline;
+}
+.home-page-1 .site-header .col-full #site-navigation {
+  display: inline;
+  width: 30%;
+  overflow: hidden;
+  text-transform: uppercase;
+  text-align: center;
+}
+.home-page-1 .block-icon-action .list-action {
+  list-style: none;
+  padding-top: 20px;
+}
+.home-page-1 .block-icon-action .list-action li {
+  display: inline;
+  padding-left: 20px;
+}

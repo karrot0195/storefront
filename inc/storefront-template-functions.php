@@ -693,3 +693,19 @@ if ( ! function_exists( 'storefront_header_container_close' ) ) {
 		echo '</div>';
 	}
 }
+
+if ( !function_exists('storefront_site_action') ) {
+    function storefront_site_action() {
+        echo <<<HTML
+<div class="block-icon-action">
+    <ul class="list-action">
+        <li><a href=""><i class="fas fa-search"></i></a></li>
+        <li><a href="">SGP</a></li>
+        <li><a href=""><i class="fas fa-user-alt"></i></a></li>
+        <li><a href=""><span class="badge badge-default">3</span></a></li>
+    </ul>
+</div>
+HTML;
+
+    }
+}
