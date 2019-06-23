@@ -107,3 +107,9 @@ add_action( 'storefront_page_after', 'storefront_display_comments', 10 );
  */
 add_action( 'storefront_homepage', 'storefront_homepage_header', 10 );
 add_action( 'storefront_homepage', 'storefront_page_content', 20 );
+
+
+// Custom
+add_action( 'widgets_init', function(){
+    register_widget( 'PageWidget' );
+});

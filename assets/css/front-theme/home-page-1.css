@@ -20,3 +20,13 @@
   display: inline;
   padding-left: 20px;
 }
+.site-footer .block-widget-page ul {
+  list-style: none;
+}
+.site-footer .block-widget-page ul li {
+  display: inline;
+  padding-right: 20px;
+}
+.site-footer .block-widget-page ul li a {
+  text-decoration: none;
+}

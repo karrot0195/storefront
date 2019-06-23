@@ -32,6 +32,15 @@ require 'inc/storefront-functions.php';
 require 'inc/storefront-template-hooks.php';
 require 'inc/storefront-template-functions.php';
 
+// scan widgets
+foreach (scandir(dirname(__FILE__) . '/inc/widgets') as $filename) {
+    $path = dirname(__FILE__) . '/inc/widgets/' . $filename;
+    if (is_file($path)) {
+        require $path;
+    }
+}
+
+
 if ( class_exists( 'Jetpack' ) ) {
 	$storefront->jetpack = require 'inc/jetpack/class-storefront-jetpack.php';
 }
