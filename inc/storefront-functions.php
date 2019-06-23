@@ -208,3 +208,10 @@ function storefront_sanitize_hex_color( $color ) {
 
 	return null;
 }
+
+
+function dd($data) {
+	echo '<pre>';
+	print_r($data);
+	echo '</pre>';
+}
