@@ -67,10 +67,10 @@
   line-height: 0.6;
   letter-spacing: 0.9px;
   text-align: left;
-  color: #ffffff;
+  color: #d7d2d8;
 }
-.home-page-1 .site-content .block-content .slider--item.active {
-  display: inherit;
+.home-page-1 .site-content .block-content .slider--item .list-title ul li a.active {
+  color: #ffffff;
 }
 .site-footer .block-widget-page ul {
   list-style: none;

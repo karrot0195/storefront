@@ -27,7 +27,7 @@ get_header('home-1'); ?>
                         $attachmentUrl = wp_get_attachment_url($item['background']);
                         $description = $item['description'];
                 ?>
-                <div class="slider--item <?= $idx==0 ? 'active' : '' ?>">
+                <div class="slider--item" <?= $idx == 0 ? "style='display: block;'" : '' ?>>
                     <div class="block-img">
                         <img class="bg-img" src="<?= esc_url($attachmentUrl) ?>" alt="">
                     </div>
@@ -37,8 +37,12 @@ get_header('home-1'); ?>
                     <div class="list-title">
                         <ul>
                             <?php
-                            foreach ($title as $t) {
-                                echo "<li><a href='javascript:void(0)'>$t</a></li>";
+                            foreach ($title as $idxTitle => $t) {
+                                $class = "";
+                                if ($idxTitle == $idx) {
+                                    $class = 'active';
+                                }
+                                echo "<li><a href='javascript:void(0)' class='js-btn-slider ".$class."' data-id='$idxTitle'>$t</a></li>";
                             }
                             ?>
                         </ul>

@@ -321,6 +321,7 @@ if ( ! class_exists( 'Storefront' ) ) :
 
 			if (is_page_template( 'templates/template-home1.php' )) {
                 wp_enqueue_style( 'storefront-style-homepage-1', get_template_directory_uri() . '/assets/css/front-theme/home-page-1.css', '', $storefront_version );
+                wp_enqueue_script( 'storefront-js-homepage-1', get_template_directory_uri() . '/assets/js/front-theme/home-page1.js', ['jquery'], '0.4.3', true );
             }
 		}
 
