@@ -28,8 +28,6 @@ if (is_page_template('templates/template-home1.php')) {
 }
 ?>
 <div id="page" class="hfeed site home-page-1 <?= implode(' ', $class) ?>">
-    <?php do_action( 'storefront_before_header' ); ?>
-
     <header id="masthead" class="site-header" role="banner" style="<?php storefront_header_styles(); ?>">
 
         <div class="col-full">
@@ -45,7 +43,6 @@ if (is_page_template('templates/template-home1.php')) {
      * @hooked storefront_header_widget_region - 10
      * @hooked woocommerce_breadcrumb - 10
      */
-    do_action( 'storefront_before_content' );
     ?>
 
     <div id="content" class="site-content" tabindex="-1">
