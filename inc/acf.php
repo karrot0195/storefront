@@ -3,7 +3,7 @@ if( function_exists('acf_add_local_field_group') ):
 
     acf_add_local_field_group(array (
         'key' => 'group_5d10dbb504f6e',
-        'title' => 'Home Page 1',
+        'title' => 'Header Config',
         'fields' => array (
             array (
                 'key' => 'field_5d10ec11f3ace',
@@ -94,7 +94,7 @@ if( function_exists('acf_add_local_field_group') ):
                 array (
                     'param' => 'post_template',
                     'operator' => '==',
-                    'value' => 'templates/template-home1.php',
+                    'value' => 'templates/template-header-config.php',
                 ),
             ),
         ),

@@ -29,9 +29,16 @@ $storefront = (object) array(
 );
 
 require 'inc/storefront-functions.php';
+
+foreach (scandir(dirname(__FILE__) . '/helpers') as $filename) {
+    $path = dirname(__FILE__) . '/helpers/' . $filename;
+    if (is_file($path)) {
+        require $path;
+    }
+}
+
 require 'inc/storefront-template-hooks.php';
 require 'inc/storefront-template-functions.php';
-
 require 'inc/acf.php';
 // scan widgets
 foreach (scandir(dirname(__FILE__) . '/inc/widgets') as $filename) {
