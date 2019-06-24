@@ -23,7 +23,14 @@ get_header('home-1'); ?>
             </div>
 
             <div class="primary-menu">
-                <?= storefront_primary_navigation() ?>
+                <?php
+                wp_nav_menu(
+                    array(
+                        'theme_location'  => 'primary',
+                        'container_class' => 'primary-navigation',
+                    )
+                );
+                ?>
             </div>
 		</main><!-- #main -->
 

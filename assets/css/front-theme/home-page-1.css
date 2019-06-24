@@ -65,11 +65,15 @@
   letter-spacing: 1.46px;
   text-align: left;
   color: #ffffff;
+  margin-bottom: 50px;
 }
-.home-page-1.one-page .site-content .primary-menu ul li {
+.home-page-1.one-page .site-content .primary-menu ul.menu {
+  margin: auto;
+}
+.home-page-1.one-page .site-content .primary-menu ul.menu li {
   display: block;
 }
-.home-page-1.one-page .site-content .primary-menu ul li a {
+.home-page-1.one-page .site-content .primary-menu ul.menu li a {
   height: 33px;
   font-family: Barlow;
   font-size: 30px;
