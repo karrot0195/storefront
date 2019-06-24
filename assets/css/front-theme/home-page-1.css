@@ -22,6 +22,9 @@
   display: inline;
   padding-left: 20px;
 }
+.home-page-1 .site-content .block-content .content-area {
+  width: 100%;
+}
 .home-page-1 .site-content .block-content .slider--item {
   display: none;
   width: 100%;
