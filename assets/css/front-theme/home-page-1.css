@@ -40,6 +40,7 @@
   position: absolute;
 }
 .home-page-1.one-page .site-content {
+  position: relative;
   padding-top: 150px;
   height: 800px;
   width: 100%;
