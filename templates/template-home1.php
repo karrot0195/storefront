@@ -11,18 +11,42 @@
  *
  * @package storefront
  */
-$attachmentId = get_field('background_image');
-$attachmentUrl = wp_get_attachment_url($attachmentId);
-$title = get_field('title');
-
-
+$slider = get_field('slider');
+$title = [];
+if (!empty($slider)) {
+    foreach ($slider as $item) {
+        $title[] = $item['title'];
+    }
+}
 get_header('home-1'); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
-            <img class="bg-img" src="<?= esc_url($attachmentUrl) ?>" alt="">
-            <div class="title">
-                <?= $title ?>
+            <div class="slider">
+                <?php if (!empty($slider)):
+                    foreach ($slider as $idx => $item):
+                        $attachmentUrl = wp_get_attachment_url($item['background']);
+                        $description = $item['description'];
+                ?>
+                <div class="slider--item <?= $idx==0 ? 'active' : '' ?>">
+                    <div class="block-img">
+                        <img class="bg-img" src="<?= esc_url($attachmentUrl) ?>" alt="">
+                    </div>
+                    <div class="block-desc">
+                        <?= $description ?>
+                    </div>
+                    <div class="list-title">
+                        <ul>
+                            <?php
+                            foreach ($title as $t) {
+                                echo "<li><a href='javascript:void(0)'>$t</a></li>";
+                            }
+                            ?>
+                        </ul>
+                    </div>
+                </div>
+                <?php endforeach; endif;?>
             </div>
+
 		</main><!-- #main -->
 
         <div class="block-notify">

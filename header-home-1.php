@@ -46,7 +46,7 @@ if (is_page_template('templates/template-home1.php')) {
     ?>
 
     <div id="content" class="site-content" tabindex="-1">
-        <div class="col-full">
+        <div class="block-content">
 
 <?php
 //do_action( 'storefront_content_top' );

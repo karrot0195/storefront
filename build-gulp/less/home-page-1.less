@@ -1,4 +1,7 @@
 .home-page-1 {
+  header {
+    background: transparent;
+  }
   .site-header {
     width: 100%;
     .col-full {
@@ -21,10 +24,63 @@
       }
     }
   }
-  #content {
-    .col-full {
-      max-width: 80%;
-    }
+  .site-content {
+    .block-content {
+        .slider {
+          &--item {
+            display: none;
+            width: 100%;
+            position: relative;
+            .block-desc {
+              width: 546px;
+              height: 244px;
+              font-family: Barlow;
+              font-size: 73px;
+              font-weight: 500;
+              font-style: normal;
+              font-stretch: normal;
+              line-height: 1.3;
+              letter-spacing: 1.46px;
+              text-align: left;
+              color: #ffffff;
+              position: absolute;
+              top: 0;
+            }
+            .block-img {
+              .bg-img {
+                width: 100%;
+              }
+            }
+            .list-title {
+              position: absolute;
+              top: 400px;
+              ul {
+                list-style: none;
+                margin: auto;
+                li {
+                  a {
+                    width: 200px;
+                    height: 33px;
+                    font-family: Barlow;
+                    font-size: 45px;
+                    font-weight: 500;
+                    font-style: normal;
+                    font-stretch: normal;
+                    line-height: 0.6;
+                    letter-spacing: 0.9px;
+                    text-align: left;
+                    color: #ffffff;
+                  }
+                }
+              }
+            }
+          }
+          &--item.active {
+            display: inherit;
+          }
+
+        }
+      }
   }
 }
 
@@ -38,75 +94,6 @@
         a {
           text-decoration: none;
         }
-      }
-    }
-  }
-}
-
-
-/* ONE PAGE */
-.home-page-1.one-page {
-  header {
-    background: transparent;
-    position: absolute;
-  }
-
-  #site-navigation {
-  }
-
-  .site-content {
-    position: relative;
-    padding-top: 150px;
-    height: 800px;
-    width: 100%;
-    .bg-img {
-      position: absolute;
-      top:0;
-      left: 0;
-      width:100%;
-      height: 100%;
-      z-index: -1;
-    }
-
-    .title {
-      width: 546px;
-      height: 244px;
-      font-family: Barlow;
-      font-size: 73px;
-      font-weight: 500;
-      font-style: normal;
-      font-stretch: normal;
-      line-height: 1.3;
-      letter-spacing: 1.46px;
-      text-align: left;
-      color: #ffffff;
-      margin-bottom: 50px;
-    }
-
-    .primary-menu {
-      ul.menu {
-        margin: auto;
-        li {
-          display: block;
-          a {
-            height: 33px;
-            font-family: Barlow;
-            font-size: 30px;
-            font-weight: 500;
-            font-style: normal;
-            font-stretch: normal;
-            line-height: 0.6;
-            letter-spacing: 0.9px;
-            text-align: left;
-            color: #ffffff;
-          }
-        }
-      }
-    }
-
-    .block-notify {
-      &--element {
-        display: inline;
       }
     }
   }

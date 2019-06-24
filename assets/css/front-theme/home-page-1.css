@@ -1,3 +1,6 @@
+.home-page-1 header {
+  background: transparent;
+}
 .home-page-1 .site-header {
   width: 100%;
 }
@@ -19,39 +22,12 @@
   display: inline;
   padding-left: 20px;
 }
-.home-page-1 #content .col-full {
-  max-width: 80%;
-}
-.site-footer .block-widget-page ul {
-  list-style: none;
-}
-.site-footer .block-widget-page ul li {
-  display: inline;
-  padding-right: 20px;
-}
-.site-footer .block-widget-page ul li a {
-  text-decoration: none;
-}
-/* ONE PAGE */
-.home-page-1.one-page header {
-  background: transparent;
-  position: absolute;
-}
-.home-page-1.one-page .site-content {
+.home-page-1 .site-content .block-content .slider--item {
+  display: none;
+  width: 100%;
   position: relative;
-  padding-top: 150px;
-  height: 800px;
-  width: 100%;
 }
-.home-page-1.one-page .site-content .bg-img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-}
-.home-page-1.one-page .site-content .title {
+.home-page-1 .site-content .block-content .slider--item .block-desc {
   width: 546px;
   height: 244px;
   font-family: Barlow;
@@ -63,18 +39,25 @@
   letter-spacing: 1.46px;
   text-align: left;
   color: #ffffff;
-  margin-bottom: 50px;
+  position: absolute;
+  top: 0;
 }
-.home-page-1.one-page .site-content .primary-menu ul.menu {
+.home-page-1 .site-content .block-content .slider--item .block-img .bg-img {
+  width: 100%;
+}
+.home-page-1 .site-content .block-content .slider--item .list-title {
+  position: absolute;
+  top: 400px;
+}
+.home-page-1 .site-content .block-content .slider--item .list-title ul {
+  list-style: none;
   margin: auto;
 }
-.home-page-1.one-page .site-content .primary-menu ul.menu li {
-  display: block;
-}
-.home-page-1.one-page .site-content .primary-menu ul.menu li a {
+.home-page-1 .site-content .block-content .slider--item .list-title ul li a {
+  width: 200px;
   height: 33px;
   font-family: Barlow;
-  font-size: 30px;
+  font-size: 45px;
   font-weight: 500;
   font-style: normal;
   font-stretch: normal;
@@ -83,6 +66,16 @@
   text-align: left;
   color: #ffffff;
 }
-.home-page-1.one-page .site-content .block-notify--element {
+.home-page-1 .site-content .block-content .slider--item.active {
+  display: inherit;
+}
+.site-footer .block-widget-page ul {
+  list-style: none;
+}
+.site-footer .block-widget-page ul li {
   display: inline;
+  padding-right: 20px;
+}
+.site-footer .block-widget-page ul li a {
+  text-decoration: none;
 }
