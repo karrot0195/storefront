@@ -32,6 +32,7 @@ require 'inc/storefront-functions.php';
 require 'inc/storefront-template-hooks.php';
 require 'inc/storefront-template-functions.php';
 
+require 'inc/acf.php';
 // scan widgets
 foreach (scandir(dirname(__FILE__) . '/inc/widgets') as $filename) {
     $path = dirname(__FILE__) . '/inc/widgets/' . $filename;
