@@ -36,7 +36,6 @@ add_action( 'storefront_header', 'storefront_primary_navigation_wrapper_close', 
  * hook header home 1
  */
 add_action( 'storefront_header_home_1', 'storefront_site_branding', 20 );
-add_action( 'storefront_header_home_1', 'storefront_primary_navigation', 30 );
 add_action( 'storefront_header_home_1', 'storefront_site_action', 40 );
 
 

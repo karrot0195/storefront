@@ -14,23 +14,14 @@
 $attachmentId = get_field('background_image');
 $attachmentUrl = wp_get_attachment_url($attachmentId);
 $title = get_field('title');
+
+
 get_header('home-1'); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
             <img class="bg-img" src="<?= esc_url($attachmentUrl) ?>" alt="">
             <div class="title">
                 <?= $title ?>
-            </div>
-
-            <div class="primary-menu">
-                <?php
-                wp_nav_menu(
-                    array(
-                        'theme_location'  => 'primary',
-                        'container_class' => 'primary-navigation',
-                    )
-                );
-                ?>
             </div>
 		</main><!-- #main -->
 

@@ -1,28 +1,26 @@
+.home-page-1 .site-header {
+  width: 100%;
+}
 .home-page-1 .site-header .col-full {
   max-width: 80%;
   display: flex;
 }
 .home-page-1 .site-header .col-full .site-branding {
-  width: 30%;
-  display: inline;
+  width: 50%;
 }
-.home-page-1 .site-header .col-full #site-navigation {
+.home-page-1 .site-header .col-full .block-icon-action {
+  width: 50%;
+  text-align: right;
+}
+.home-page-1 .site-header .col-full .block-icon-action .list-action {
+  padding-top: 20px;
+}
+.home-page-1 .site-header .col-full .block-icon-action .list-action li {
   display: inline;
-  width: 30%;
-  overflow: hidden;
-  text-transform: uppercase;
-  text-align: center;
+  padding-left: 20px;
 }
 .home-page-1 #content .col-full {
   max-width: 80%;
-}
-.home-page-1 .block-icon-action .list-action {
-  list-style: none;
-  padding-top: 20px;
-}
-.home-page-1 .block-icon-action .list-action li {
-  display: inline;
-  padding-left: 20px;
 }
 .site-footer .block-widget-page ul {
   list-style: none;
