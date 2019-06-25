@@ -8,6 +8,12 @@ body.page-template-template-home1 {
 .home-page-1.one-page .site-header {
   position: absolute;
 }
+.home-page-1.one-page .site-header .col-full .site-branding {
+  width: 50%;
+}
+.home-page-1.one-page .site-header .col-full .block-icon-action {
+  width: 50%;
+}
 .home-page-1 header {
   border-bottom: 0;
 }
