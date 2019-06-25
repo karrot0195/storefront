@@ -696,13 +696,16 @@ if ( ! function_exists( 'storefront_header_container_close' ) ) {
 
 if ( !function_exists('storefront_site_action') ) {
     function storefront_site_action() {
+        $userIcon = storefront_icon('user');
+        $userSearchIcon = storefront_icon('search');
+        $unLockIcon = storefront_icon('unlock');
         echo <<<HTML
 <div class="block-icon-action">
     <ul class="list-action">
-        <li><a href=""><i class="fa fa-search"></i></li>
+        <li><a href=""><img width="20px" src="$userSearchIcon" alt=""></a></li>
         <li><a href="">SGP</a></li>
-        <li><a href=""><i class="fas fa-user-alt"></i></a></li>
-        <li><a href=""><span class="badge badge-dark">3</span></a></li>
+        <li><a href=""><img width="20px" src="$userIcon" alt=""></a></li>
+        <li><a href=""><img width="20px" src="$unLockIcon" alt=""></a></li>
     </ul>
 </div>
 HTML;

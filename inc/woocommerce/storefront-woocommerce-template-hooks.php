@@ -72,6 +72,19 @@ if ( defined( 'WC_VERSION' ) && version_compare( WC_VERSION, '3.3', '<' ) ) {
  * @see storefront_sticky_single_add_to_cart()
  */
 add_action( 'woocommerce_single_product_summary', 'storefront_edit_post_link', 60 );
+add_action('woocommerce_single_product_summary', function() {
+    $attrs = get_post_meta(get_the_ID(), '_product_attributes', true);
+    if (isset($attrs['code']) && $attrs['code']) {
+        $code = $attrs['code']['value'];
+        echo <<<HTML
+<div class="product_code">$code</div>
+HTML;
+    }
+
+}, 6);
+
+remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_price', 10 );
+
 
 remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_upsell_display', 15 );
 add_action( 'woocommerce_after_single_product_summary', 'storefront_upsell_display', 15 );
