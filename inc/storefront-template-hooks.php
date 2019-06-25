@@ -35,6 +35,10 @@ add_action( 'storefront_header', 'storefront_primary_navigation_wrapper_close', 
 /**
  * hook header home 1
  */
+add_action( 'storefront_header_full_home_1', 'storefront_site_branding', 20 );
+add_action( 'storefront_header_full_home_1', 'storefront_slider_header', 30 );
+add_action( 'storefront_header_full_home_1', 'storefront_site_action', 40 );
+
 add_action( 'storefront_header_home_1', 'storefront_site_branding', 20 );
 add_action( 'storefront_header_home_1', 'storefront_site_action', 40 );
 
