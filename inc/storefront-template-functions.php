@@ -709,3 +709,26 @@ HTML;
 
     }
 }
+
+
+if (!function_exists('storefront_slider_header')) {
+	function storefront_slider_header() {
+		$pages = get_pages([
+            'meta_key' => '_wp_page_template',
+            'meta_value' => 'templates/template-home1.php'
+        ]);
+
+        if (count($pages)) {
+            $slider = get_field('slider', $pages[0]->ID);
+            ?>
+            <div class="block-menu">
+                <ul>
+                    <?php foreach ($slider as $idx => $item) : ?>
+                        <li><a href="<?= home_url() . '?slider=' .$idx ?>"><?= $item['title'] ?></a></li>
+                    <?php endforeach; ?>
+                </ul>
+            </div>
+<?php
+        }
+	}
+}

@@ -4,9 +4,21 @@ body {
     padding: 0;
   }
 }
-.home-page-1 {
+
+.home-page-1.one-page {
   header {
     background: transparent;
+  }
+
+  .site-header {
+    position: absolute;
+  }
+}
+
+
+.home-page-1 {
+
+  header {
     border-bottom: 0;
   }
   .site-main {
@@ -59,18 +71,47 @@ body {
   }
   .site-header {
     width: 100%;
-    position: absolute;
     z-index: 9;
     .col-full {
       max-width: 100%;
       display: flex;
       padding-top: 55px;
+
       .site-branding {
-        width: 50%;
+        width: 30%;
+      }
+
+      .block-menu {
+        width: 40%;
+        text-align: center;
+        ul {
+          list-style: none;
+          li {
+            display: inline;
+            a {
+              text-decoration: none;
+              width: 407px;
+              height: 17px;
+              font-family: Barlow;
+              font-size: 22px;
+              font-weight: 500;
+              font-style: normal;
+              font-stretch: normal;
+              line-height: 1.5;
+              letter-spacing: 0.22px;
+              text-align: left;
+              color: #c4c4c4;
+            }
+
+            a.active {
+              color: #000000;
+            }
+          }
+        }
       }
 
       .block-icon-action {
-        width: 50%;
+        width: 30%;
         text-align: right;
         .list-action {
           padding: 0;
