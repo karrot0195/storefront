@@ -1,12 +1,57 @@
+body.page-template-template-home1 {
+  margin: 0 !important;
+  padding: 0;
+}
 .home-page-1 header {
   background: transparent;
+  border-bottom: 0;
+}
+.home-page-1 .site-main {
+  margin-bottom: 0;
+}
+.home-page-1 .col-full {
+  padding: 37px 4% 0 5.3125%;
+  margin: 0;
+}
+.home-page-1 .site-content {
+  background-color: rgba(209, 209, 209, 0.7);
+}
+.home-page-1 .block-notify {
+  padding: 27px 0 25px;
+  padding-left: 5.3125%;
+}
+.home-page-1 .block-notify--element {
+  font-family: "Barlow", sans-serif;
+  font-size: 17px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  letter-spacing: 0.34px;
+  text-align: left;
+  color: #ffffff;
+  display: inline-block;
+  vertical-align: middle;
+}
+.home-page-1 .block-notify--element.block-notify--action {
+  margin-left: 36px;
+}
+.home-page-1 .block-notify--element.block-notify--action i {
+  vertical-align: middle;
+}
+.home-page-1 .block-notify--element a {
+  font-weight: 500;
+  color: #ffffff;
+  text-decoration: underline;
 }
 .home-page-1 .site-header {
   width: 100%;
+  position: absolute;
+  z-index: 9;
 }
 .home-page-1 .site-header .col-full {
   max-width: 80%;
   display: flex;
+  padding-top: 55px;
 }
 .home-page-1 .site-header .col-full .site-branding {
   width: 50%;
@@ -16,7 +61,12 @@
   text-align: right;
 }
 .home-page-1 .site-header .col-full .block-icon-action .list-action {
-  padding-top: 20px;
+  padding: 0;
+  margin: 0;
+}
+.home-page-1 .site-header .col-full .block-icon-action .list-action a {
+  color: #151515;
+  text-decoration: none;
 }
 .home-page-1 .site-header .col-full .block-icon-action .list-action li {
   display: inline;
@@ -24,6 +74,7 @@
 }
 .home-page-1 .site-content .block-content .content-area {
   width: 100%;
+  margin-bottom: 0;
 }
 .home-page-1 .site-content .block-content .slider--item {
   display: none;
@@ -31,9 +82,8 @@
   position: relative;
 }
 .home-page-1 .site-content .block-content .slider--item .block-desc {
-  width: 546px;
-  height: 244px;
-  font-family: Barlow;
+  width: 590px;
+  font-family: "Barlow", sans-serif;
   font-size: 73px;
   font-weight: 500;
   font-style: normal;
@@ -43,23 +93,28 @@
   text-align: left;
   color: #ffffff;
   position: absolute;
-  top: 0;
+  top: 17.65%;
+  left: 5.3125%;
 }
 .home-page-1 .site-content .block-content .slider--item .block-img .bg-img {
   width: 100%;
 }
 .home-page-1 .site-content .block-content .slider--item .list-title {
   position: absolute;
-  top: 400px;
+  top: 65.75%;
+  left: 5.3125%;
 }
 .home-page-1 .site-content .block-content .slider--item .list-title ul {
   list-style: none;
   margin: auto;
+  padding-left: 0;
+}
+.home-page-1 .site-content .block-content .slider--item .list-title ul li {
+  padding-bottom: 54px;
 }
 .home-page-1 .site-content .block-content .slider--item .list-title ul li a {
   width: 200px;
-  height: 33px;
-  font-family: Barlow;
+  font-family: "Barlow", sans-serif;
   font-size: 45px;
   font-weight: 500;
   font-style: normal;
@@ -67,18 +122,79 @@
   line-height: 0.6;
   letter-spacing: 0.9px;
   text-align: left;
-  color: #d7d2d8;
+  color: rgba(255, 255, 255, 0.4);
+  text-decoration: none;
 }
 .home-page-1 .site-content .block-content .slider--item .list-title ul li a.active {
   color: #ffffff;
 }
+.site-footer {
+  background-color: #fff;
+}
+.site-footer .footer-widget-2 {
+  width: 40%;
+}
+.site-footer .footer-widget-1 {
+  width: 25%;
+}
+.site-footer .footer-widget-4 {
+  padding-left: 7.34375%;
+}
+.site-footer .footer-widget-4 .block-contact-form i {
+  vertical-align: middle;
+  padding-right: 8px;
+}
+.site-footer .footer-widget-4 .block-contact-form input {
+  border: 0;
+  font-family: "Barlow", sans-serif;
+  font-size: 15px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 2.2;
+  letter-spacing: 0.23px;
+  text-align: left;
+  color: #9c9c9c;
+}
+.site-footer .footer-widgets {
+  display: flex;
+  align-items: flex-end;
+}
+.site-footer .text-info-footer {
+  height: auto;
+  font-family: "Barlow", sans-serif;
+}
+.site-footer .block-social-footer ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.site-footer .block-social-footer ul li {
+  padding-right: 25px;
+}
+.site-footer .block-social-footer ul li a {
+  line-height: 2.2;
+  color: #151515;
+}
 .site-footer .block-widget-page ul {
   list-style: none;
+  margin: 0;
+  padding-left: 5.15625%;
 }
 .site-footer .block-widget-page ul li {
   display: inline;
-  padding-right: 20px;
+  padding-right: 30px;
 }
 .site-footer .block-widget-page ul li a {
   text-decoration: none;
+  font-family: "Barlow", sans-serif;
+  font-size: 17px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 2.2;
+  letter-spacing: 0.34px;
+  text-align: left;
+  color: #151515;
 }
