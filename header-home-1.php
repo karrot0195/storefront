@@ -23,8 +23,10 @@
 <?php do_action( 'storefront_before_site' ); ?>
 <?php
 $class = [];
+$action = 'storefront_header_full_home_1';
 if (is_page_template('templates/template-home1.php')) {
     $class[] = 'one-page';
+    $action = 'storefront_header_home_1';
 }
 ?>
 <div id="page" class="hfeed site home-page-1 <?= implode(' ', $class) ?>">
@@ -32,7 +34,7 @@ if (is_page_template('templates/template-home1.php')) {
 
         <div class="col-full">
             <?php
-            do_action( 'storefront_header_home_1' );
+            do_action( $action );
             ?>
         </div>
     </header><!-- #masthead -->
