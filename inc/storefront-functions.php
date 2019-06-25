@@ -215,3 +215,7 @@ function dd($data) {
 	print_r($data);
 	echo '</pre>';
 }
+
+function storefront_icon($name, $dot='.png') {
+    return get_template_directory_uri() . '/assets/images/icon/' .$name . $dot;
+}
