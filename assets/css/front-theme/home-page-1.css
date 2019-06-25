@@ -14,7 +14,15 @@ body.page-template-template-home1 {
   margin: 0;
 }
 .home-page-1 .site-content {
-  background-color: rgba(209, 209, 209, 0.7);
+  background-color: rgba(209, 209, 209, 0.85);
+}
+.home-page-1 .block-img:focus,
+.home-page-1 .slider--item:focus,
+.home-page-1 .slider:focus,
+.home-page-1 .site-main:focus,
+.home-page-1 .site-content:focus {
+  box-shadow: none;
+  outline: 0;
 }
 .home-page-1 .block-notify {
   padding: 27px 0 25px;
@@ -49,7 +57,7 @@ body.page-template-template-home1 {
   z-index: 9;
 }
 .home-page-1 .site-header .col-full {
-  max-width: 80%;
+  max-width: 100%;
   display: flex;
   padding-top: 55px;
 }
@@ -134,11 +142,21 @@ body.page-template-template-home1 {
 .site-footer .footer-widget-2 {
   width: 40%;
 }
+@media screen and (max-width: 1400px) {
+  .site-footer .footer-widget-2 {
+    width: 45%;
+  }
+}
 .site-footer .footer-widget-1 {
   width: 25%;
 }
 .site-footer .footer-widget-4 {
   padding-left: 7.34375%;
+}
+@media screen and (max-width: 1400px) {
+  .site-footer .footer-widget-4 {
+    padding-left: 1.34375%;
+  }
 }
 .site-footer .footer-widget-4 .block-contact-form i {
   vertical-align: middle;
@@ -147,12 +165,14 @@ body.page-template-template-home1 {
 .site-footer .footer-widget-4 .block-contact-form input {
   border: 0;
   font-family: "Barlow", sans-serif;
-  font-size: 15px;
+  font-size: 12px;
   font-weight: normal;
   font-style: normal;
   font-stretch: normal;
   line-height: 2.2;
   letter-spacing: 0.23px;
+  display: inline-block;
+  vertical-align: middle;
   text-align: left;
   color: #9c9c9c;
 }
@@ -163,6 +183,15 @@ body.page-template-template-home1 {
 .site-footer .text-info-footer {
   height: auto;
   font-family: "Barlow", sans-serif;
+  display: inline-block;
+  vertical-align: middle;
+  width: 100%;
+}
+@media screen and (max-width: 1400px) {
+  .site-footer .text-info-footer {
+    font-size: 12px;
+    width: 100%;
+  }
 }
 .site-footer .block-social-footer ul {
   display: flex;
@@ -174,7 +203,7 @@ body.page-template-template-home1 {
   padding-right: 25px;
 }
 .site-footer .block-social-footer ul li a {
-  line-height: 2.2;
+  line-height: 1.94;
   color: #151515;
 }
 .site-footer .block-widget-page ul {
@@ -185,6 +214,11 @@ body.page-template-template-home1 {
 .site-footer .block-widget-page ul li {
   display: inline;
   padding-right: 30px;
+}
+@media screen and (max-width: 1400px) {
+  .site-footer .block-widget-page ul li {
+    padding-right: 15px;
+  }
 }
 .site-footer .block-widget-page ul li a {
   text-decoration: none;
@@ -197,4 +231,9 @@ body.page-template-template-home1 {
   letter-spacing: 0.34px;
   text-align: left;
   color: #151515;
+}
+@media screen and (max-width: 1400px) {
+  .site-footer .block-widget-page ul li a {
+    font-size: 14px;
+  }
 }

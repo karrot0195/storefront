@@ -17,7 +17,18 @@ body {
     margin: 0;
   }
   .site-content {
-    background-color: rgba(209,209,209,0.7);
+    background-color: rgba(209,209,209,0.85);
+  }
+
+  .block-img,
+  .slider--item,
+  .slider,
+  .site-main,
+  .site-content {
+    &:focus {
+      box-shadow: none;
+      outline: 0;
+    }
   }
   .block-notify {
     padding: 27px 0 25px;
@@ -51,7 +62,7 @@ body {
     position: absolute;
     z-index: 9;
     .col-full {
-      max-width: 80%;
+      max-width: 100%;
       display: flex;
       padding-top: 55px;
       .site-branding {
@@ -146,13 +157,19 @@ body {
 .site-footer {
   background-color: #fff;
   .footer-widget-2 {
-    width: 40%
+    width: 40%;
+    @media screen and (max-width: 1400px) {
+      width: 45%;
+    }
   }
   .footer-widget-1 {
     width:  25%;
   }
   .footer-widget-4 {
     padding-left: 7.34375%;
+    @media screen and (max-width: 1400px) {
+      padding-left: 1.34375%;
+    }
     .block-contact-form {
       i {
         vertical-align: middle;
@@ -161,12 +178,14 @@ body {
       input {
         border: 0;
         font-family: "Barlow",sans-serif;
-        font-size: 15px;
+        font-size: 12px;
         font-weight: normal;
         font-style: normal;
         font-stretch: normal;
         line-height: 2.2;
         letter-spacing: 0.23px;
+        display: inline-block;
+        vertical-align: middle;
         text-align: left;
         color: #9c9c9c;
       }
@@ -179,6 +198,13 @@ body {
   .text-info-footer {
     height: auto;
     font-family: "Barlow",sans-serif;
+    display: inline-block;
+    vertical-align: middle;
+    width: 100%;
+    @media screen and (max-width: 1400px) {
+      font-size: 12px;
+      width: 100%;
+    }
   }
   .block-social-footer {
     ul {
@@ -189,7 +215,7 @@ body {
       li {
         padding-right: 25px;
         a {
-          line-height: 2.2;
+          line-height: 1.94;
           color: #151515;
         }
       }
@@ -203,6 +229,9 @@ body {
       li {
         display: inline;
         padding-right: 30px;
+        @media screen and (max-width:1400px) {
+         padding-right: 15px;
+        }
         a {
           text-decoration: none;
           font-family: "Barlow",sans-serif;
@@ -214,6 +243,9 @@ body {
           letter-spacing: 0.34px;
           text-align: left;
           color: #151515;
+          @media screen and (max-width:1400px) {
+            font-size: 14px;
+          }
         }
       }
     }
