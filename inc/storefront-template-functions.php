@@ -702,10 +702,10 @@ if ( !function_exists('storefront_site_action') ) {
         echo <<<HTML
 <div class="block-icon-action">
     <ul class="list-action">
-        <li><a href=""><img src="$userSearchIcon" alt=""></a></li>
+        <li><a href=""><img width="20px" src="$userSearchIcon" alt=""></a></li>
         <li><a href="">SGP</a></li>
-        <li><a href=""><img src="$userIcon" alt=""></a></li>
-        <li><a href=""><img src="$unLockIcon" alt=""></a></li>
+        <li><a href=""><img width="20px" src="$userIcon" alt=""></a></li>
+        <li><a href=""><img width="20px" src="$unLockIcon" alt=""></a></li>
     </ul>
 </div>
 HTML;
