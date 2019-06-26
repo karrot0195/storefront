@@ -117,10 +117,17 @@ add_action( 'widgets_init', function(){
     register_widget( 'PageWidget' );
 });
 
-add_filter('body_class', function($class) {
-    preg_match('/\/([a-zA-Z0-9]*)\/?\//', $_SERVER['REQUEST_URI'], $matches);
-    if (count($matches) == 2) {
-        $class[] = 'storefront-'.$matches[1];
+add_filter('body_class', function($classes) {
+    if (is_post_type_archive('product')) {
+        $classes[] = 'storefront-archive-product';
     }
-    return $class;
+
+    if (is_home()) {
+        $classes[] = 'storefront-home';
+    }
+
+    if (is_product()) {
+        $classes[] = 'storefront-product-detail';
+    }
+    return $classes;
 });
