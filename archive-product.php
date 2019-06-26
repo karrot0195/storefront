@@ -97,6 +97,36 @@ if ( woocommerce_product_loop() ) {
  * @hooked woocommerce_output_content_wrapper_end - 10 (outputs closing divs for the content)
  */
 ?>
+<section class="tab-content">
+	<div class="tabs">
+		<ul class="tabs-nav">
+			<li><a href="#tab-1">About</a></li>
+			<li><a href="#tab-2">Our Belief</a></li>
+			<li><a href="#tab-2">The Science Behind</a></li>
+		</ul>
+		<div class="tabs-stage">
+			<section id="tab-1">
+				<div class="sub-title">
+					Come and experience our multi-award winning redefinition of your everyday skincare routine. From cleansers to moisturisers, we have you covered every step of the way.
+				</div>
+				<div class="slider-tab-1" data-slick='{"slidesToShow": 5, "slidesToScroll": 1}'>
+					<div><img src="<?php bloginfo('template_url'); ?>/assets/images/common/about/about-5.jpg"/></div>
+					<div><h3><img src="<?php bloginfo('template_url'); ?>/assets/images/common/about/about-2.jpg"/></h3></div>
+					<div><h3><img src="<?php bloginfo('template_url'); ?>/assets/images/common/about/about-3.jpg"/></h3></div>
+					<div><h3><img src="<?php bloginfo('template_url'); ?>/assets/images/common/about/about-4.jpg"/></h3></div>
+					<div><h3><img src="<?php bloginfo('template_url'); ?>/assets/images/common/about/about-5.jpg"/></h3></div>
+					<div><h3><img src="<?php bloginfo('template_url'); ?>/assets/images/common/about/about-4.jpg"/></h3></div>
+				</div>
+			</section>
+			<section id="tab-2">
+				<p>Phasellus pharetra aliquet viverra. Donec scelerisque tincidunt diam, eu fringilla urna auctor at.</p>
+			</section>
+			<section id="tab-3">
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec neque nisi, dictum aliquet lectus.</p>
+			</section>
+		</div>
+	</div>
+</section>
 <section class="video">
 		<!-- <a href="https://codepen.io/himalayasingh/full/ZdWvMj" target="_blank" id="full_view">Full view</a> -->
 		<div id="player_cover">
