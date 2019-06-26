@@ -320,6 +320,9 @@ if ( ! class_exists( 'Storefront' ) ) :
 			wp_enqueue_script( 'jquery-pep', get_template_directory_uri() . '/assets/js/vendor/pep.min.js', array(), '0.4.3', true );
 
             wp_enqueue_style( 'storefront-style-homepage-1', get_template_directory_uri() . '/assets/css/front-theme/home-page-1.css', '', $storefront_version );
+
+            // custom js
+                wp_enqueue_script( 'storefront-js-slick', get_template_directory_uri() . '/build-gulp/node_modules/slick-carousel/slick/slick.min.js', ['jquery'], '0.4.3', true );
             wp_enqueue_script( 'storefront-js-homepage-1', get_template_directory_uri() . '/assets/js/front-theme/home-page1.js', ['jquery'], '0.4.3', true );
 		}
 
