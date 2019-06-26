@@ -28,6 +28,13 @@ $storefront = (object) array(
 	'customizer' => require 'inc/customizer/class-storefront-customizer.php',
 );
 
+foreach (scandir(dirname(__FILE__) . '/helpers') as $filename) {
+    $path = dirname(__FILE__) . '/helpers/' . $filename;
+    if (is_file($path)) {
+        require $path;
+    }
+}
+
 require 'inc/storefront-functions.php';
 require 'inc/storefront-template-hooks.php';
 require 'inc/storefront-template-functions.php';
