@@ -18,7 +18,6 @@ body.page-template-template-home1 {
 }
 .home-page-1.one-page .site-header .col-full .site-branding {
   width: 50%;
-  padding-top: 52px;
   padding-bottom: 0;
 }
 .home-page-1.one-page .site-header .col-full .block-icon-action {
@@ -124,6 +123,8 @@ body.page-template-template-home1 {
 .home-page-1 .site-header .col-full .block-icon-action .list-action a {
   color: #151515;
   text-decoration: none;
+  display: inline-block;
+  vertical-align: -webkit-baseline-middle;
 }
 .home-page-1 .site-header .col-full .block-icon-action .list-action li {
   display: inline;
