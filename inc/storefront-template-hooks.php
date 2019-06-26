@@ -117,6 +117,9 @@ add_action( 'widgets_init', function(){
     register_widget( 'PageWidget' );
 });
 
+/**
+ *
+ */
 add_filter('body_class', function($classes) {
     if (is_post_type_archive('product')) {
         $classes[] = 'storefront-archive-product';
@@ -131,3 +134,20 @@ add_filter('body_class', function($classes) {
     }
     return $classes;
 });
+
+add_action('upload_mimes', function($mimes = array()) {
+    $mimes['svg'] = "text/svg";
+    return $mimes;
+});
+
+//woocommerce_shop_loop_item_title_code
+add_action('woocommerce_shop_loop_item_title', function () {
+    $code = get_field('code');
+    if (!empty($code)) {
+    echo <<< HTML
+<div class="block-product-item">
+$code
+</div>
+HTML;
+    }
+}, 11);
