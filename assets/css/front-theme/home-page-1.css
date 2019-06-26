@@ -1617,6 +1617,9 @@ a:hover {
   position: relative;
 }
 /* -------------------- Slick Carousel ----------------*/
+.home-page-1 .added_to_cart.wc-forward {
+  display: none;
+}
 .home-page-1 .slick-slide img {
   margin: 0 auto;
 }
