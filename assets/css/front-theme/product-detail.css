@@ -1,0 +1,12 @@
+.storefront-product-detail .site-main .woocommerce-product-gallery {
+  position: relative;
+}
+.storefront-product-detail .site-main .woocommerce-product-gallery .woocommerce-product-gallery__trigger {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.storefront-product-detail .site-main .woocommerce-product-gallery .flex-control-nav img {
+  border-radius: 50%;
+  width: 70px;
+}
