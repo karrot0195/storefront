@@ -17,8 +17,19 @@
 	$('.tabs-stage section').hide();
 	$($(this).attr('href')).show();
   });
-  // $('.number-test').slick({
-  //   dots: true,
-  //   speed: 500
-  // });
+  $('.slider-tab-1').slick({
+    dots: false,
+    arrows: true,
+    speed: 500,
+  });
+  $('.slider-tab-2').slick({
+    dots: false,
+    arrows: true,
+    speed: 500,
+  });
+  $('.slider-tab-3').slick({
+    dots: false,
+    arrows: true,
+    speed: 500,
+  });
 })(jQuery);

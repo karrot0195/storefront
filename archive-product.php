@@ -109,14 +109,14 @@ if ( woocommerce_product_loop() ) {
 				<div class="sub-title">
 					Come and experience our multi-award winning redefinition of your everyday skincare routine. From cleansers to moisturisers, we have you covered every step of the way.
 				</div>
-				<!-- <div class="number-test" data-slick='{"slidesToShow": 4, "slidesToScroll": 4}'>
-					<div><h3>1</h3></div>
-					<div><h3>2</h3></div>
-					<div><h3>3</h3></div>
-					<div><h3>4</h3></div>
-					<div><h3>5</h3></div>
-					<div><h3>6</h3></div>
-				</div> -->
+				<div class="slider-tab-1" data-slick='{"slidesToShow": 5, "slidesToScroll": 1}'>
+					<div><img src="<?php bloginfo('template_url'); ?>/assets/images/common/about/about-5.jpg"/></div>
+					<div><h3><img src="<?php bloginfo('template_url'); ?>/assets/images/common/about/about-2.jpg"/></h3></div>
+					<div><h3><img src="<?php bloginfo('template_url'); ?>/assets/images/common/about/about-3.jpg"/></h3></div>
+					<div><h3><img src="<?php bloginfo('template_url'); ?>/assets/images/common/about/about-4.jpg"/></h3></div>
+					<div><h3><img src="<?php bloginfo('template_url'); ?>/assets/images/common/about/about-5.jpg"/></h3></div>
+					<div><h3><img src="<?php bloginfo('template_url'); ?>/assets/images/common/about/about-4.jpg"/></h3></div>
+				</div>
 			</section>
 			<section id="tab-2">
 				<p>Phasellus pharetra aliquet viverra. Donec scelerisque tincidunt diam, eu fringilla urna auctor at.</p>

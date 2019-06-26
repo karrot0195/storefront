@@ -8,6 +8,7 @@ body {
   margin: 0 !important;
   font-family: "Barlow", sans-serif !important;
   padding: 0;
+  overflow-x: hidden;
 }
 body.page-template-template-home1 {
   margin: 0 !important;
@@ -1528,6 +1529,13 @@ input[type="radio"] {
 /*------------------- 3. Tab Content -------------------------------------*/
 .tab-content {
   text-align: center;
+  padding: 94px 0 172px 0;
+  background-color: #e2e2e2;
+}
+@media screen and (max-width: 1400px) {
+  .tab-content {
+    padding: 66px 0 120px;
+  }
 }
 .tabs-nav {
   list-style: none;
@@ -1538,6 +1546,12 @@ input[type="radio"] {
   padding-bottom: 22px;
   padding-left: 0;
   position: relative;
+  margin-bottom: 87px;
+}
+@media screen and (max-width: 1400px) {
+  .tabs-nav {
+    margin-bottom: 60px;
+  }
 }
 .tabs-nav:before {
   content: '';
@@ -1546,7 +1560,7 @@ input[type="radio"] {
   bottom: 0;
   width: 100%;
   height: 3px;
-  background-color: #e2e2e2;
+  background-color: #fff;
 }
 .tabs {
   margin: 0 auto;
@@ -1600,11 +1614,39 @@ a:hover {
   cursor: default;
 }
 .tabs-stage {
-  border: 1px solid #cecfd5;
-  border-radius: 0 0 6px 6px;
-  border-top: 0;
-  clear: both;
-  padding: 24px 30px;
   position: relative;
-  top: -1px;
+}
+/* -------------------- Slick Carousel ----------------*/
+.home-page-1 .slick-slide img {
+  margin: 0 auto;
+}
+.home-page-1 .slick-initialized .slick-slide:focus {
+  outline: none;
+  box-shadow: 0;
+}
+.home-page-1 .slick-prev {
+  left: 0;
+}
+.home-page-1 .slick-next {
+  right: 0;
+}
+.home-page-1 .tabs .sub-title {
+  font-family: "Barlow", sans-serif;
+  font-size: 30px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.5;
+  width: 960px;
+  margin: 0 auto;
+  letter-spacing: 0.6px;
+  text-align: center;
+  color: #2a2a2a;
+  padding-bottom: 107px;
+}
+@media screen and (max-width: 1400px) {
+  .home-page-1 .tabs .sub-title {
+    font-size: 21px;
+    padding-bottom: 75px;
+  }
 }

@@ -73,9 +73,8 @@ if ( defined( 'WC_VERSION' ) && version_compare( WC_VERSION, '3.3', '<' ) ) {
  */
 add_action( 'woocommerce_single_product_summary', 'storefront_edit_post_link', 60 );
 add_action('woocommerce_single_product_summary', function() {
-    $attrs = get_post_meta(get_the_ID(), '_product_attributes', true);
-    if (isset($attrs['code']) && $attrs['code']) {
-        $code = $attrs['code']['value'];
+    $code = get_field('code');
+    if ($code) {
         echo <<<HTML
 <div class="product_code">$code</div>
 HTML;
@@ -127,3 +126,9 @@ if ( class_exists( 'WC_Brands' ) ) {
 	add_action( 'woocommerce_single_product_summary', 'storefront_woocommerce_brands_single', 4 );
 	add_action( 'homepage', 'storefront_woocommerce_brands_homepage_section', 80 );
 }
+
+
+add_filter('woocommerce_product_tabs', function($tabs) {
+    $tabs['additional_information']['priority'] = 9;
+    return $tabs;
+}, 10);
