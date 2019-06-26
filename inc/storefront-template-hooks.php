@@ -116,3 +116,11 @@ add_action( 'storefront_homepage', 'storefront_page_content', 20 );
 add_action( 'widgets_init', function(){
     register_widget( 'PageWidget' );
 });
+
+add_filter('body_class', function($class) {
+    preg_match('/\/([a-zA-Z0-9]*)\/?\//', $_SERVER['REQUEST_URI'], $matches);
+    if (count($matches) == 2) {
+        $class[] = 'storefront-'.$matches[1];
+    }
+    return $class;
+});
