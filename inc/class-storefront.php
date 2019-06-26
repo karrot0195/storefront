@@ -322,9 +322,13 @@ if ( ! class_exists( 'Storefront' ) ) :
             wp_enqueue_style( 'storefront-style-homepage-1', get_template_directory_uri() . '/assets/css/front-theme/home-page-1.css', '', $storefront_version );
 
             // custom js
-                wp_enqueue_script( 'storefront-js-slick', get_template_directory_uri() . '/build-gulp/node_modules/slick-carousel/slick/slick.min.js', ['jquery'], '0.4.3', true );
+            wp_enqueue_script( 'storefront-js-slick', get_template_directory_uri() . '/build-gulp/node_modules/slick-carousel/slick/slick.min.js', ['jquery'], '0.4.3', true );
             wp_enqueue_script( 'storefront-js-homepage-1', get_template_directory_uri() . '/assets/js/front-theme/home-page1.js', ['jquery'], '0.4.3', true );
-		}
+
+            if (is_singular('product')) {
+                wp_enqueue_style( 'storefront-style-product_detail', get_template_directory_uri() . '/assets/css/front-theme/product-detail.css', '', $storefront_version );
+            }
+        }
 
 		/**
 		 * Register Google fonts.
