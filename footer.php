@@ -24,7 +24,7 @@
 			 * @hooked storefront_footer_widgets - 10
 			 * @hooked storefront_credit         - 20
 			 */
-			do_action( 'storefront_footer' );
+			do_action( 'storefront_footer');
 			?>
 
 		</div><!-- .col-full -->
@@ -35,6 +35,5 @@
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
-
 </body>
 </html>
