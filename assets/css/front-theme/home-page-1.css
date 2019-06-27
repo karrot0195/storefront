@@ -1640,7 +1640,8 @@ a:hover {
 .home-page-1 .slick-next {
   right: 0;
 }
-.home-page-1 .tabs .sub-title {
+.home-page-1 .tabs .sub-title,
+.home-page-1 .tabs p {
   font-family: "Barlow", sans-serif;
   font-size: 21px;
   font-weight: normal;
@@ -1655,7 +1656,8 @@ a:hover {
   padding-bottom: 107px;
 }
 @media screen and (max-width: 1400px) {
-  .home-page-1 .tabs .sub-title {
+  .home-page-1 .tabs .sub-title,
+  .home-page-1 .tabs p {
     font-size: 21px;
     padding-bottom: 75px;
   }
