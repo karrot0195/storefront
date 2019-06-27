@@ -409,6 +409,10 @@ body.page-template-template-home1 {
   text-decoration: none;
   text-transform: capitalize;
 }
+.home-page-1 ul.products li.product .woocommerce-loop-product__title .star-rating::before,
+.home-page-1 ul.products li.product h2 .star-rating::before {
+  content: none;
+}
 .home-page-1 ul.products li.product .price {
   font-family: "Barlow", sans-serif;
   font-size: 16px;
