@@ -54,7 +54,7 @@ body.page-template-template-home1 {
 }
 .home-page-1 .block-notify--element {
   font-family: "Barlow", sans-serif;
-  font-size: 17px;
+  font-size: 12px;
   font-weight: normal;
   font-style: normal;
   font-stretch: normal;
@@ -104,7 +104,7 @@ body.page-template-template-home1 {
 .home-page-1 .site-header .col-full .block-menu ul li a {
   text-decoration: none;
   width: 407px;
-  height: 17px;
+  height: 12px;
   font-family: Barlow;
   font-size: 22px;
   font-weight: 500;
@@ -149,7 +149,7 @@ body.page-template-template-home1 {
 .home-page-1 .site-content .block-content .slider--item .block-desc {
   width: 590px;
   font-family: "Barlow", sans-serif;
-  font-size: 73px;
+  font-size: 51px;
   font-weight: 500;
   font-style: normal;
   font-stretch: normal;
@@ -163,7 +163,6 @@ body.page-template-template-home1 {
 }
 @media screen and (max-width: 1400px) {
   .home-page-1 .site-content .block-content .slider--item .block-desc {
-    font-size: 51px;
     width: 500px;
     top: 21%;
   }
@@ -187,7 +186,7 @@ body.page-template-template-home1 {
 .home-page-1 .site-content .block-content .slider--item .list-title ul li a {
   width: 200px;
   font-family: "Barlow", sans-serif;
-  font-size: 45px;
+  font-size: 32px;
   font-weight: 500;
   font-style: normal;
   font-stretch: normal;
@@ -230,6 +229,10 @@ body.page-template-template-home1 {
 .site-footer .footer-widget-4 .block-contact-form i {
   vertical-align: middle;
   padding-right: 8px;
+}
+.site-footer .footer-widget-4 .block-contact-form img {
+  display: inline-block;
+  vertical-align: middle;
 }
 .site-footer .footer-widget-4 .block-contact-form input {
   border: 0;
@@ -292,7 +295,7 @@ body.page-template-template-home1 {
 .site-footer .block-widget-page ul li a {
   text-decoration: none;
   font-family: "Barlow", sans-serif;
-  font-size: 17px;
+  font-size: 12px;
   font-weight: normal;
   font-style: normal;
   font-stretch: normal;
@@ -303,7 +306,7 @@ body.page-template-template-home1 {
 }
 @media screen and (max-width: 1400px) {
   .site-footer .block-widget-page ul li a {
-    font-size: 14px;
+    font-size: 12px;
   }
 }
 /* ---------------- 1. Banner ------------------------ */
@@ -314,9 +317,9 @@ body.page-template-template-home1 {
   background-repeat: no-repeat;
 }
 .banner-main .banner-title {
-  width: 863px;
+  width: 1249px;
   font-family: "Barlow", sans-serif;
-  font-size: 102px;
+  font-size: 70px;
   font-weight: 500;
   font-style: normal;
   font-stretch: normal;
@@ -330,7 +333,7 @@ body.page-template-template-home1 {
 @media screen and (max-width: 1400px) {
   .banner-main .banner-title {
     padding: 150px 0 220px;
-    font-size: 70px;
+    width: 863px;
   }
 }
 /* ------------------ Info Page ------------------- */
@@ -349,7 +352,7 @@ body.page-template-template-home1 {
 }
 .info-page .info-page-left a {
   font-family: "Barlow", sans-serif;
-  font-size: 18px;
+  font-size: 13px;
   font-weight: normal;
   font-style: normal;
   font-stretch: normal;
@@ -380,7 +383,7 @@ body.page-template-template-home1 {
   background-color: transparent;
   border: 0;
   font-family: "Barlow", sans-serif;
-  font-size: 17px;
+  font-size: 12px;
   font-weight: 500;
   font-style: normal;
   font-stretch: normal;
@@ -395,7 +398,7 @@ body.page-template-template-home1 {
 .home-page-1 ul.products li.product .woocommerce-loop-product__title,
 .home-page-1 ul.products li.product h2 {
   font-family: "Barlow", sans-serif;
-  font-size: 20px;
+  font-size: 14px;
   font-weight: 600;
   font-style: normal;
   font-stretch: normal;
@@ -408,7 +411,7 @@ body.page-template-template-home1 {
 }
 .home-page-1 ul.products li.product .price {
   font-family: "Barlow", sans-serif;
-  font-size: 22px;
+  font-size: 16px;
   font-weight: normal;
   font-style: normal;
   font-stretch: normal;
@@ -423,7 +426,7 @@ body.page-template-template-home1 {
 }
 .home-page-1 ul.products li.product .button {
   font-family: "Barlow", sans-serif;
-  font-size: 20px;
+  font-size: 14px;
   font-weight: 500;
   font-style: normal;
   font-stretch: normal;
@@ -447,7 +450,7 @@ body.page-template-template-home1 {
 @media screen and (max-width: 1400px) {
   .home-page-1 ul.products li.product .button {
     min-width: 110px;
-    font-size: 15px;
+    font-size: 14px;
   }
 }
 .home-page-1 ul.products li.product:hover .button {
@@ -1635,7 +1638,7 @@ a:hover {
 }
 .home-page-1 .tabs .sub-title {
   font-family: "Barlow", sans-serif;
-  font-size: 30px;
+  font-size: 21px;
   font-weight: normal;
   font-style: normal;
   font-stretch: normal;
