@@ -1552,7 +1552,7 @@ input[type="radio"] {
   list-style: none;
   display: flex;
   justify-content: center;
-  width: 322px;
+  width: 355px;
   margin: 0 auto;
   padding-bottom: 22px;
   padding-left: 0;
@@ -1607,7 +1607,7 @@ input[type="radio"] {
 }
 .tabs-nav a {
   font-family: "Barlow", sans-serif;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: normal;
   font-style: normal;
   font-stretch: normal;
