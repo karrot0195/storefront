@@ -233,6 +233,9 @@ body.page-template-template-home1 {
     padding-left: 1.34375%;
   }
 }
+.site-footer .footer-widget-4 .block-contact-form {
+  border-bottom: 1px solid #a7a7a7;
+}
 .site-footer .footer-widget-4 .block-contact-form i {
   vertical-align: middle;
   padding-right: 8px;
