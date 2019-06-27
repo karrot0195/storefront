@@ -140,14 +140,10 @@ add_action('upload_mimes', function($mimes = array()) {
     return $mimes;
 });
 
-//woocommerce_shop_loop_item_title_code
-add_action('woocommerce_shop_loop_item_title', function () {
-    $code = get_field('code');
-    if (!empty($code)) {
-    echo <<< HTML
-<div class="block-product-item">
-$code
-</div>
-HTML;
+add_filter( 'woocommerce_currency_symbol', 'woocommerce_currency_symbol_sgd', 1001, 2 );
+function woocommerce_currency_symbol_sgd( $currency_symbol, $currency ) {
+    if ($currency == 'SGD') {
+        $currency_symbol = 'SGD';
     }
-}, 11);
+    return $currency_symbol;
+}
