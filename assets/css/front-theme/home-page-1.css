@@ -395,6 +395,9 @@ body.page-template-template-home1 {
 .home-page-1 .storefront-sorting {
   display: none;
 }
+.home-page-1 .star-rating span::before {
+  content: none;
+}
 .home-page-1 ul.products li.product .woocommerce-loop-product__title,
 .home-page-1 ul.products li.product h2 {
   font-family: "Barlow", sans-serif;
@@ -444,6 +447,7 @@ body.page-template-template-home1 {
   position: absolute;
   left: 50%;
   opacity: 0;
+  text-align: center;
   min-width: 125px;
   transform: translate(-50%, 0);
   text-decoration: none;

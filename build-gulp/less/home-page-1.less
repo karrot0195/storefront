@@ -419,6 +419,9 @@ body {
   .storefront-sorting {
     display: none;
   }
+  .star-rating span::before {
+      content: none;
+  }
   ul.products li.product .woocommerce-loop-product__title, ul.products li.product h2 {
     font-family: "Barlow",sans-serif;
     font-size: 18px;
@@ -469,6 +472,7 @@ body {
     position: absolute;
     left: 50%;
     opacity: 0;
+    text-align: center;
     min-width: 125px;
     transform: translate(-50%, 0);
     text-decoration: none;
