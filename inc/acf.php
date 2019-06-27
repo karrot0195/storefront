@@ -275,9 +275,41 @@ if( function_exists('acf_add_local_field_group') ):
                         'max_height' => '',
                         'max_size' => '',
                         'mime_types' => '',
-                    ),
+                    )
                 ),
             ),
+            array (
+                'key' => 'field_1111asdasd3',
+                'label' => 'Video',
+                'name' => '',
+                'type' => 'tab',
+                'instructions' => '',
+                'required' => 0,
+                'conditional_logic' => 0,
+                'wrapper' => array (
+                    'width' => '',
+                    'class' => '',
+                    'id' => '',
+                ),
+                'placement' => 'top',
+                'endpoint' => 0,
+            ),
+            array (
+                'key' => 'field_5d151d498f355',
+                'label' => 'video',
+                'name' => 'video',
+                'type' => 'url',
+                'instructions' => '',
+                'required' => 0,
+                'conditional_logic' => 0,
+                'wrapper' => array (
+                    'width' => '',
+                    'class' => '',
+                    'id' => '',
+                ),
+                'default_value' => '',
+                'placeholder' => '',
+            )
         ),
         'location' => array (
             array (
