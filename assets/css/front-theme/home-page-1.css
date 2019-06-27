@@ -435,11 +435,12 @@ body.page-template-template-home1 {
   text-align: left;
   color: #ffffff;
   background-color: #0f1972;
-  padding: 24px 42px;
-  border-radius: 25px;
+  padding: 23px 42px;
+  border-radius: 35px;
   position: absolute;
   left: 50%;
   opacity: 0;
+  min-width: 125px;
   transform: translate(-50%, 0);
   text-decoration: none;
   text-transform: uppercase;
@@ -449,12 +450,11 @@ body.page-template-template-home1 {
 }
 @media screen and (max-width: 1400px) {
   .home-page-1 ul.products li.product .button {
-    min-width: 110px;
     font-size: 14px;
   }
 }
 .home-page-1 ul.products li.product:hover .button {
-  transform: translate(-50%, -86px);
+  transform: translate(-50%, -80px);
   opacity: 1;
 }
 .home-page-1 .site-main ul.products.columns-3 li.product {
