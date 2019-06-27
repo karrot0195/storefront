@@ -90,7 +90,10 @@ body.page-template-template-home1 {
 }
 .home-page-1 .site-header .col-full .block-menu {
   width: 40%;
+  display: flex;
+  float: none;
   text-align: center;
+  align-items: center;
 }
 .home-page-1 .site-header .col-full .block-menu ul {
   list-style: none;
@@ -105,8 +108,8 @@ body.page-template-template-home1 {
   text-decoration: none;
   width: 407px;
   height: 12px;
-  font-family: Barlow;
-  font-size: 22px;
+  font-family: "Barlow", sans-serif;
+  font-size: 16px;
   font-weight: 500;
   font-style: normal;
   font-stretch: normal;
@@ -122,6 +125,9 @@ body.page-template-template-home1 {
 .home-page-1 .site-header .col-full .block-icon-action {
   width: 30%;
   text-align: right;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 }
 .home-page-1 .site-header .col-full .block-icon-action .list-action {
   padding: 0;
