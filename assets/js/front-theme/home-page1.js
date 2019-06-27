@@ -33,3 +33,19 @@
     speed: 500,
   });
 })(jQuery);
+
+window.increaseValue = function() {
+  console.log('aaa');
+  var value = parseInt(document.getElementById('number').value, 10);
+  value = isNaN(value) ? 0 : value;
+  value++;
+  document.getElementById('number').value = value;
+}
+
+window.decreaseValue = function() {
+  var value = parseInt(document.getElementById('number').value, 10);
+  value = isNaN(value) ? 0 : value;
+  value < 1 ? value = 1 : '';
+  value--;
+  document.getElementById('number').value = value;
+}
