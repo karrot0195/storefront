@@ -156,7 +156,7 @@ body.page-template-template-home1 {
 .home-page-1 .site-content .block-content .slider--item .block-desc {
   width: 590px;
   font-family: "Barlow", sans-serif;
-  font-size: 51px;
+  font-size: 63px;
   font-weight: 500;
   font-style: normal;
   font-stretch: normal;
@@ -190,10 +190,15 @@ body.page-template-template-home1 {
 .home-page-1 .site-content .block-content .slider--item .list-title ul li {
   padding-bottom: 54px;
 }
+@media screen and (max-width: 1400px) {
+  .home-page-1 .site-content .block-content .slider--item .list-title ul li {
+    padding-bottom: 50px;
+  }
+}
 .home-page-1 .site-content .block-content .slider--item .list-title ul li a {
   width: 200px;
   font-family: "Barlow", sans-serif;
-  font-size: 32px;
+  font-size: 34px;
   font-weight: 500;
   font-style: normal;
   font-stretch: normal;
