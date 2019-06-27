@@ -45,9 +45,11 @@ if ( ! comments_open() ) {
                 <?= esc_html__('View all reviewers', 'storefront') ?>
             </div>
 
-            <div class="block-wite-comment">
+            <div class="block-write-comment">
                 <i class="fas fa-edit"></i>
-                <?= esc_html__('Write a review', 'storefront') ?>
+                <a href="javascript:void(0)" class="js-block-write-comment">
+                    <?= esc_html__('Write a review', 'storefront') ?>
+                </a>
             </div>
         </div>
 		<?php if ( have_comments() ) : ?>
