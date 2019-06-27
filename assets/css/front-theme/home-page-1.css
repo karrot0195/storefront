@@ -94,6 +94,7 @@ body.page-template-template-home1 {
   float: none;
   text-align: center;
   align-items: center;
+  justify-content: center;
 }
 .home-page-1 .site-header .col-full .block-menu ul {
   list-style: none;
