@@ -32,11 +32,12 @@ if (is_page_template('templates/template-home1.php')) {
 ?>
 <div id="page" class="hfeed site home-page-1 <?= implode(' ', $class) ?>">
     <header id="masthead" class="site-header" role="banner" style="<?php storefront_header_styles(); ?>">
-
-        <div class="col-full">
-            <?php
-            do_action( $action );
-            ?>
+        <div class="container">
+            <div class="col-full">
+                <?php
+                do_action( $action );
+                ?>
+            </div>
         </div>
     </header><!-- #masthead -->
     <?php

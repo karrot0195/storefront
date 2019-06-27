@@ -1,8 +1,8 @@
 (function($) {
   $('.js-btn-slider').on('click', function () {
     const idx = $(this).data('id') + 1;
-    $(this).parents('.slider--item').hide('slider');
-    $('.slider--item:nth-child('+idx+')').show('slider');
+    $(this).parents('.slider--item').fadeOut(300);
+    $('.slider--item:nth-child('+idx+')').fadeIn(300);
   });
   // Show the first tab by default
 	$('.tabs-stage section').hide();
