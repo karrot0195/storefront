@@ -19,13 +19,10 @@ defined( 'ABSPATH' ) || exit;
 
 get_header( 'home-1' );
 ?>
-	<section class="banner-main">
-		<div class="banner-title">Precision Skincare from Lab to Skin</div>
-
-	</section>
+    <?php ArchiveShopHelper::renderBanner() ?>
 	<section class="info-page">
 		<div class="info-page-left">
-			<a href="#">View All Products</a>
+			<a href="#"><?= esc_html__('View All Products', 'storefront') ?></a>
 			<ul class="list-filter">
 				<li><a href="#">8</a></li>
 				<li><a href="#">16</a></li>
@@ -33,7 +30,7 @@ get_header( 'home-1' );
 			</ul>
 		</div>
 		<div class="info-page-right">
-			<button class="btn-filter">FILTER</button>
+			<button class="btn-filter"><?= esc_html__('FILTER', 'storefront') ?></button>
 		</div>
 	</section>
 <?php 
