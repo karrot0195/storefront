@@ -54,7 +54,7 @@ body.page-template-template-home1 {
 }
 .home-page-1 .block-notify--element {
   font-family: "Barlow", sans-serif;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: normal;
   font-style: normal;
   font-stretch: normal;
@@ -254,6 +254,10 @@ body.page-template-template-home1 {
   vertical-align: middle;
   text-align: left;
   color: #9c9c9c;
+}
+.site-footer .footer-widget-4 .block-contact-form input:focus {
+  outline: none;
+  box-shadow: 0;
 }
 .site-footer .footer-widgets {
   display: flex;
