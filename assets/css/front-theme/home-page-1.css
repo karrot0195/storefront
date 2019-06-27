@@ -37,7 +37,7 @@ body.page-template-template-home1 {
   margin-bottom: 0;
 }
 .home-page-1 .col-full {
-  padding: 37px 4% 0 5.3125%;
+  padding: 30px 4% 30px 5.3125%;
   margin: 0;
 }
 .home-page-1 .block-img:focus,
@@ -208,11 +208,6 @@ body.page-template-template-home1 {
   color: rgba(255, 255, 255, 0.4);
   text-decoration: none;
 }
-@media screen and (max-width: 1400px) {
-  .home-page-1 .site-content .block-content .slider--item .list-title ul li a {
-    font-size: 32px;
-  }
-}
 .home-page-1 .site-content .block-content .slider--item .list-title ul li a.active {
   color: #ffffff;
 }
@@ -254,6 +249,7 @@ body.page-template-template-home1 {
   font-style: normal;
   font-stretch: normal;
   line-height: 2.2;
+  width: 160px;
   letter-spacing: 0.23px;
   display: inline-block;
   vertical-align: middle;
