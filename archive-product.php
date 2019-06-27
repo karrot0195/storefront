@@ -21,16 +21,20 @@ get_header( 'home-1' );
 ?>
     <?php ArchiveShopHelper::renderBanner() ?>
 	<section class="info-page">
-		<div class="info-page-left">
-			<a href="#"><?= esc_html__('View All Products', 'storefront') ?></a>
-			<ul class="list-filter">
-				<li><a href="#">8</a></li>
-				<li><a href="#">16</a></li>
-				<li><a href="#">24</a></li>
-			</ul>
-		</div>
-		<div class="info-page-right">
-			<button class="btn-filter"><?= esc_html__('FILTER', 'storefront') ?></button>
+		<div class="container">
+			<div class="info-page-child">
+				<div class="info-page-left">
+					<a href="#"><?= esc_html__('View All Products', 'storefront') ?></a>
+					<ul class="list-filter">
+						<li><a href="#">8</a></li>
+						<li><a href="#">16</a></li>
+						<li><a href="#">24</a></li>
+					</ul>
+				</div>
+				<div class="info-page-right">
+					<button class="btn-filter"><?= esc_html__('FILTER', 'storefront') ?></button>
+				</div>
+			</div>
 		</div>
 	</section>
 <?php 
@@ -107,12 +111,12 @@ if ( woocommerce_product_loop() ) {
 					Come and experience our multi-award winning redefinition of your everyday skincare routine. From cleansers to moisturisers, we have you covered every step of the way.
 				</div>
 				<div class="slider-tab-1" data-slick='{"slidesToShow": 5, "slidesToScroll": 1}'>
-					<div><img src="<?php bloginfo('template_url'); ?>/assets/images/common/about/Awards-1.png"/></div>
-					<div><h3><img src="<?php bloginfo('template_url'); ?>/assets/images/common/about/Awards2.png"/></h3></div>
-					<div><h3><img src="<?php bloginfo('template_url'); ?>/assets/images/common/about/Awards3.png"/></h3></div>
-					<div><h3><img src="<?php bloginfo('template_url'); ?>/assets/images/common/about/Awards4.png"/></h3></div>
-					<div><h3><img src="<?php bloginfo('template_url'); ?>/assets/images/common/about/Awards5.png"/></h3></div>
-					<div><h3><img src="<?php bloginfo('template_url'); ?>/assets/images/common/about/Awards-1.png"/></h3></div>
+					<div><img src="<?php bloginfo('template_url'); ?>/assets/images/common/about/Awards5.png"/></div>
+					<div><img src="<?php bloginfo('template_url'); ?>/assets/images/common/about/Awards2.png"/></div>
+					<div><img src="<?php bloginfo('template_url'); ?>/assets/images/common/about/Awards3.png"/></div>
+					<div><img src="<?php bloginfo('template_url'); ?>/assets/images/common/about/Awards4.png"/></div>
+					<div><img src="<?php bloginfo('template_url'); ?>/assets/images/common/about/Awards5.png"/></div>
+					<div><img src="<?php bloginfo('template_url'); ?>/assets/images/common/about/Awards2.png"/></div>
 				</div>
 			</section>
 			<section id="tab-2">

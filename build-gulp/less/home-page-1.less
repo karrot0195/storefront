@@ -51,7 +51,7 @@ body {
     margin-bottom: 0;
   }
   .col-full {
-    padding: 30px 4% 30px 5.3125%;
+    padding: 30px 0;
     margin: 0;
   }
 
@@ -377,11 +377,13 @@ body {
 }
 
 /* ------------------ Info Page ------------------- */
+.info-page-child {
+    display: flex;
+    align-items: center;
+}
 .info-page {
-  display: flex;
-  align-items: center;
-  padding: 23px 7.45% 21px 5.1%;
-  background-color: #e5e5e5;
+    background-color: #e5e5e5;
+    padding: 23px 0 21px;
   .info-page-left,
   .info-page-right {
     width: 50%;
@@ -2057,5 +2059,40 @@ input[type="checkbox"], input[type="radio"]
     &.single-product div.product form.cart {
         display: flex;
         align-items: center;
+    }
+}
+
+/*------------ 6. Define Container ---------------*/
+
+.container {
+    width: 100%;
+    padding-right: .75rem;
+    padding-left: .75rem;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+
+@media (min-width: 576px) {
+    .container {
+        max-width: 540px;
+    }    
+}
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 720px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        max-width: 960px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
     }
 }
