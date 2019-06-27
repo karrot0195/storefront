@@ -335,7 +335,7 @@ body.page-template-template-home1 {
   background-repeat: no-repeat;
 }
 .banner-main .banner-title {
-  width: 1249px;
+  width: 760px;
   font-family: "Barlow", sans-serif;
   font-size: 70px;
   font-weight: 500;
@@ -347,12 +347,6 @@ body.page-template-template-home1 {
   text-align: center;
   margin: 0 auto;
   color: #333333;
-}
-@media screen and (max-width: 1400px) {
-  .banner-main .banner-title {
-    padding: 150px 0 220px;
-    width: 863px;
-  }
 }
 /* ------------------ Info Page ------------------- */
 .info-page-child {
