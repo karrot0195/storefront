@@ -107,12 +107,12 @@ if ( woocommerce_product_loop() ) {
 					Come and experience our multi-award winning redefinition of your everyday skincare routine. From cleansers to moisturisers, we have you covered every step of the way.
 				</div>
 				<div class="slider-tab-1" data-slick='{"slidesToShow": 5, "slidesToScroll": 1}'>
-					<div><img src="<?php bloginfo('template_url'); ?>/assets/images/common/about/about-5.jpg"/></div>
-					<div><h3><img src="<?php bloginfo('template_url'); ?>/assets/images/common/about/about-2.jpg"/></h3></div>
-					<div><h3><img src="<?php bloginfo('template_url'); ?>/assets/images/common/about/about-3.jpg"/></h3></div>
-					<div><h3><img src="<?php bloginfo('template_url'); ?>/assets/images/common/about/about-4.jpg"/></h3></div>
-					<div><h3><img src="<?php bloginfo('template_url'); ?>/assets/images/common/about/about-5.jpg"/></h3></div>
-					<div><h3><img src="<?php bloginfo('template_url'); ?>/assets/images/common/about/about-4.jpg"/></h3></div>
+					<div><img src="<?php bloginfo('template_url'); ?>/assets/images/common/about/Awards-1.png"/></div>
+					<div><h3><img src="<?php bloginfo('template_url'); ?>/assets/images/common/about/Awards2.png"/></h3></div>
+					<div><h3><img src="<?php bloginfo('template_url'); ?>/assets/images/common/about/Awards3.png"/></h3></div>
+					<div><h3><img src="<?php bloginfo('template_url'); ?>/assets/images/common/about/Awards4.png"/></h3></div>
+					<div><h3><img src="<?php bloginfo('template_url'); ?>/assets/images/common/about/Awards5.png"/></h3></div>
+					<div><h3><img src="<?php bloginfo('template_url'); ?>/assets/images/common/about/Awards-1.png"/></h3></div>
 				</div>
 			</section>
 			<section id="tab-2">
