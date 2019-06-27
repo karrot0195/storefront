@@ -422,6 +422,9 @@ body {
   .star-rating span::before {
       content: none;
   }
+  .star-rating::before {
+    content: none;
+}
   ul.products li.product .woocommerce-loop-product__title, ul.products li.product h2 {
     font-family: "Barlow",sans-serif;
     font-size: 18px;
@@ -434,9 +437,6 @@ body {
     color: #020202;
     text-decoration: none;
     text-transform: capitalize;
-    .star-rating::before {
-        content: none;
-    }
   }
 
   ul.products li.product .price {
