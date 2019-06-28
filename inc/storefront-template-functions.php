@@ -725,13 +725,13 @@ if (!function_exists('storefront_slider_header')) {
         ]);
 
         if (count($pages)) {
-            $slider = get_field('slider', $pages[0]->ID);
+            $gallery = get_field('gallery', $pages[0]->ID);
             ?>
             <div class="block-menu">
                 <ul>
-                    <?php foreach ($slider as $idx => $item) : ?>
+                    <?php if (!empty($gallery)): foreach ($gallery as $idx => $item) : ?>
                         <li><a href="<?= home_url() . '?slider=' .$idx ?>"><?= $item['title'] ?></a></li>
-                    <?php endforeach; ?>
+                    <?php endforeach; endif; ?>
                 </ul>
             </div>
 <?php
