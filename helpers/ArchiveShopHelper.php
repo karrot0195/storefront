@@ -72,7 +72,7 @@ HTML;
         ?>
         <section class="video">
             <div class="video_wrapper video_wrapper_full js-videoWrapper">
-                <iframe class="videoIframe js-videoIframe" src="" frameborder="0" allowTransparency="true" allowfullscreen data-src="<?= $video ?>?autoplay=1&modestbranding=1&rel=0&hl=ru&showinfo=0&color=white" width="100%" height="500px"></iframe>
+                <iframe class="videoIframe js-videoIframe" src="" frameborder="0" allowTransparency="true" allowfullscreen data-src="https://www.youtube.com/watch?v=ltB_HyFTW4g&list=RDONdROwT78pU&index=16?autoplay=1&modestbranding=1&rel=0&hl=ru&showinfo=0&color=white" width="100%" height="500px"></iframe>
                 <button class="videoPoster js-videoPoster">
                     <i class="fas fa-play"></i>
                 </button>
