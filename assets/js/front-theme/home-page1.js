@@ -3,10 +3,10 @@
     let src = $(this).data('src');
     $('.js-btn-slider').removeClass('active');
     $(this).addClass('active');
-    $('img.bg-img').fadeOut(400, function() {
+    $('img.bg-img').fadeOut(300, function() {
       $('img.bg-img').attr('src', src);
     })
-      .fadeIn(400);
+      .fadeIn(300);
   });
   // Show the first tab by default
   $('.tabs-stage section').hide();
