@@ -186,6 +186,7 @@
 .storefront-product-detail #reviews .commentlist li .avatar {
   float: none;
   margin: 0;
+  width: auto;
 }
 .storefront-product-detail #reviews .commentlist li .comment_container {
   display: flex;
