@@ -176,3 +176,17 @@
 .storefront-product-detail #reviews .comment-form-email label {
   display: block;
 }
+.storefront-product-detail.single-product div.product .woocommerce-product-gallery .woocommerce-product-gallery__trigger {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.storefront-product-detail #reviews .commentlist li .comment_container .comment-text,
+.storefront-product-detail #reviews .commentlist li .avatar {
+  float: none;
+  margin: 0;
+}
+.storefront-product-detail #reviews .commentlist li .comment_container {
+  display: flex;
+}
