@@ -2,13 +2,32 @@
 if( function_exists('acf_add_local_field_group') ):
     // HOME
     acf_add_local_field_group(array (
-        'key' => 'group_5d10dbb504f6e',
-        'title' => 'Home Page 1',
+        'key' => 'group_5d1647606a5f6',
+        'title' => 'Home 1',
         'fields' => array (
             array (
-                'key' => 'field_5d10ec11f3ace',
-                'label' => 'Slider',
-                'name' => 'slider',
+                'key' => 'field_5d16476c7cff2',
+                'label' => 'Title',
+                'name' => 'title',
+                'type' => 'text',
+                'instructions' => '',
+                'required' => 0,
+                'conditional_logic' => 0,
+                'wrapper' => array (
+                    'width' => '',
+                    'class' => '',
+                    'id' => '',
+                ),
+                'default_value' => '',
+                'placeholder' => '',
+                'prepend' => '',
+                'append' => '',
+                'maxlength' => '',
+            ),
+            array (
+                'key' => 'field_5d164782f561a',
+                'label' => 'Gallery',
+                'name' => 'gallery',
                 'type' => 'repeater',
                 'instructions' => '',
                 'required' => 0,
@@ -25,8 +44,8 @@ if( function_exists('acf_add_local_field_group') ):
                 'button_label' => '',
                 'sub_fields' => array (
                     array (
-                        'key' => 'field_5d10ec30f3acf',
-                        'label' => 'title',
+                        'key' => 'field_5d1647a7f561b',
+                        'label' => 'Title',
                         'name' => 'title',
                         'type' => 'text',
                         'instructions' => '',
@@ -44,27 +63,8 @@ if( function_exists('acf_add_local_field_group') ):
                         'maxlength' => '',
                     ),
                     array (
-                        'key' => 'field_5d10ec3df3ad0',
-                        'label' => 'description',
-                        'name' => 'description',
-                        'type' => 'text',
-                        'instructions' => '',
-                        'required' => 0,
-                        'conditional_logic' => 0,
-                        'wrapper' => array (
-                            'width' => '',
-                            'class' => '',
-                            'id' => '',
-                        ),
-                        'default_value' => '',
-                        'placeholder' => '',
-                        'prepend' => '',
-                        'append' => '',
-                        'maxlength' => '',
-                    ),
-                    array (
-                        'key' => 'field_5d10ec43f3ad1',
-                        'label' => 'background',
+                        'key' => 'field_5d1647b8f561c',
+                        'label' => 'Background',
                         'name' => 'background',
                         'type' => 'image',
                         'instructions' => '',
@@ -111,9 +111,8 @@ if( function_exists('acf_add_local_field_group') ):
         'description' => '',
     ));
 
-    $shop = get_page_by_title('Shop');
-
     // Shop
+    $shop = get_page_by_title('Shop');
     acf_add_local_field_group(array (
         'key' => 'group_5d13a14b16610',
         'title' => 'Shop',
