@@ -43,3 +43,136 @@
 .storefront-product-detail .block-wite-comment {
   padding-right: 70px;
 }
+.storefront-product-detail #reviews .comment-form-rating label {
+  display: inline-block;
+  color: #333;
+}
+.storefront-product-detail .woocommerce-info,
+.storefront-product-detail .woocommerce-noreviews,
+.storefront-product-detail p.no-comments {
+  background-color: #ef0450;
+  font-family: "Barlow", sans-serif;
+  font-size: 12px;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1.57;
+  letter-spacing: 0.42px;
+  text-align: right;
+  color: #fff;
+}
+.storefront-product-detail .js-block-write-comment {
+  padding-right: 40px;
+  font-family: "Barlow", sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  text-decoration: none;
+  line-height: 0.56;
+  letter-spacing: 0.36px;
+  text-align: left;
+  color: #202020;
+}
+.storefront-product-detail p.stars.selected a.active:before,
+.storefront-product-detail p.stars:hover a:before,
+.storefront-product-detail p.stars.selected a:not(.active):before,
+.storefront-product-detail p.stars.selected a.active:before {
+  color: #fecf33;
+}
+.storefront-product-detail p.stars:hover a::before {
+  color: #fecf33;
+}
+.storefront-product-detail .comment-respond {
+  max-width: 660px;
+  margin: 0 auto;
+  padding: 30px;
+  border: 1px solid #0f1972;
+}
+.storefront-product-detail .comment-respond label {
+  font-weight: bold;
+}
+.storefront-product-detail .comment-respond .comment-form p {
+  font-family: "Barlow", sans-serif;
+  font-size: 15px;
+  font-weight: normal;
+  font-style: normal;
+  display: inline-block;
+  vertical-align: -webkit-baseline-middle;
+  font-stretch: normal;
+  line-height: 1.57;
+  letter-spacing: 0.42px;
+  text-align: left;
+  color: #333333;
+}
+.storefront-product-detail .comment-respond .comment-form p.comment-notes {
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 35px;
+}
+.storefront-product-detail .comment-respond .comment-form p input {
+  height: 30px;
+  width: calc(100% - 30px);
+  padding: 0 10px;
+}
+.storefront-product-detail .comment-respond .comment-form p input:focus,
+.storefront-product-detail .comment-respond .comment-form p input:active {
+  box-shadow: none;
+  outline-color: #0f1972;
+}
+.storefront-product-detail .comment-respond .comment-form p.stars {
+  margin-left: 15px;
+}
+.storefront-product-detail .comment-respond .comment-form p input[type="submit"] {
+  font-family: "Barlow", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.08;
+  letter-spacing: 0.4px;
+  text-align: left;
+  color: #ffffff;
+  background-color: #142d73;
+  padding: 16px 42px;
+  border-radius: 35px;
+  opacity: 1;
+  border: 0;
+  height: auto;
+  outline: 0;
+  box-shadow: none;
+  text-align: center;
+  min-width: 150px;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+}
+.storefront-product-detail .comment-respond textarea {
+  width: calc(100% - 30px);
+  padding: 0 10px;
+}
+.storefront-product-detail .comment-respond textarea:focus,
+.storefront-product-detail .comment-respond textarea:active {
+  box-shadow: none;
+  outline-color: #0f1972;
+}
+.storefront-product-detail .comment-respond .comment-form-comment {
+  width: 100%;
+}
+.storefront-product-detail .comment-respond #reviews .comment-form-rating label,
+.storefront-product-detail .comment-respond #reviews .comment-form-rating label {
+  display: inline-block;
+}
+.storefront-product-detail .comment-respond .comment-form-comment label {
+  display: block;
+}
+.storefront-product-detail #reviews .comment-form-author,
+.storefront-product-detail #reviews .comment-form-email {
+  width: 100%;
+}
+.storefront-product-detail #reviews .comment-form-author label,
+.storefront-product-detail #reviews .comment-form-email label {
+  display: block;
+}
