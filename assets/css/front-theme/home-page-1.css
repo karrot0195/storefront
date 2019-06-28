@@ -1807,6 +1807,16 @@ a:hover {
     max-width: 1140px;
   }
 }
+@media (min-width: 1360px) {
+  .container {
+    max-width: 1400px;
+  }
+}
+@media (min-width: 1500px) {
+  .container {
+    max-width: 1730px;
+  }
+}
 /*--------------------- 7. Add to card -----------------------*/
 form.increse-decrease {
   width: 300px;
