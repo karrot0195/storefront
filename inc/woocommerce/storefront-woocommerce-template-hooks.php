@@ -129,3 +129,5 @@ add_filter('woocommerce_product_tabs', function($tabs) {
     $tabs['additional_information']['priority'] = 9;
     return $tabs;
 }, 10);
+
+add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_price', 8 );
