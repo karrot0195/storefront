@@ -35,7 +35,6 @@
 })(jQuery);
 
 window.increaseValue = function() {
-  console.log('aaa');
   var value = parseInt(document.getElementById('number').value, 10);
   value = isNaN(value) ? 0 : value;
   value++;
@@ -49,3 +48,19 @@ window.decreaseValue = function() {
   value--;
   document.getElementById('number').value = value;
 }
+
+window.addToCart = function (product_id, quantity) {
+  jQuery.ajax({
+    url: `${home_url}?wc-ajax=add_to_cart`,
+    data: {
+      product_id: product_id,
+      quantity: quantity,
+      product_sku: ''
+    },
+    method: 'POST'
+  }).then(res => {
+    if (res['fragments']['a.footer-cart-contents']) {
+      jQuery('a.footer-cart-contents').html(res['fragments']['a.footer-cart-contents']);
+    }
+  });
+};

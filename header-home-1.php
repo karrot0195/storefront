@@ -15,7 +15,9 @@
     <link rel="profile" href="http://gmpg.org/xfn/11">
     <!-- Add the slick-theme.css if you want default styling -->
     <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
-
+    <script>
+        const home_url = "<?= home_url() ?>";
+    </script>
     <?php wp_head(); ?>
 </head>
 
