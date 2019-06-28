@@ -31,34 +31,39 @@ get_header('home-1'); ?>
                     <div class="block-img">
                         <img class="bg-img" src="<?= esc_url($attachmentUrl) ?>" alt="">
                     </div>
-                    <div class="block-desc">
-                        <?= $description ?>
-                    </div>
-                    <div class="list-title">
-                        <ul>
-                            <?php
-                            foreach ($title as $idxTitle => $t) {
-                                $class = "";
-                                if ($idxTitle == $idx) {
-                                    $class = 'active';
-                                }
-                                echo "<li><a href='javascript:void(0)' class='js-btn-slider ".$class."' data-id='$idxTitle'>$t</a></li>";
-                            }
-                            ?>
-                        </ul>
+                    <div class="block-description">
+                        <div class="container">
+                            <div class="block-desc">
+                                <?= $description ?>
+                            </div>
+                            <div class="list-title">
+                                <ul>
+                                    <?php
+                                    foreach ($title as $idxTitle => $t) {
+                                        $class = "";
+                                        if ($idxTitle == $idx) {
+                                            $class = 'active';
+                                        }
+                                        echo "<li><a href='javascript:void(0)' class='js-btn-slider ".$class."' data-id='$idxTitle'>$t</a></li>";
+                                    }
+                                    ?>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <?php endforeach; endif;?>
             </div>
 
 		</main><!-- #main -->
-
-        <div class="block-notify">
-            <div class="block-notify--element block-notify--text">
-                this website use cookies. <a href="#">Learn more</a>
-            </div>
-            <div class="block-notify--element block-notify--action">
-                <i class="fas fa-times"></i>
+        <div class="container">
+            <div class="block-notify">
+                <div class="block-notify--element block-notify--text">
+                    this website use cookies. <a href="#">Learn more</a>
+                </div>
+                <div class="block-notify--element block-notify--action">
+                    <i class="fas fa-times"></i>
+                </div>
             </div>
         </div>
 	</div><!-- #primary -->

@@ -53,7 +53,6 @@ body.page-template-template-home1 {
 }
 .home-page-1 .block-notify {
   padding: 27px 0 25px;
-  padding-left: 5.3125%;
 }
 .home-page-1 .block-notify--element {
   font-family: "Barlow", sans-serif;
@@ -151,6 +150,12 @@ body.page-template-template-home1 {
   width: 100%;
   margin-bottom: 0;
 }
+.home-page-1 .site-content .block-content .block-description {
+  position: absolute;
+  top: 21%;
+  left: 0;
+  right: 0;
+}
 .home-page-1 .site-content .block-content .slider--item {
   display: none;
   width: 100%;
@@ -167,23 +172,13 @@ body.page-template-template-home1 {
   letter-spacing: 1.46px;
   text-align: left;
   color: #ffffff;
-  position: absolute;
-  top: 17.65%;
-  left: 5.3125%;
-}
-@media screen and (max-width: 1400px) {
-  .home-page-1 .site-content .block-content .slider--item .block-desc {
-    width: 500px;
-    top: 21%;
-  }
 }
 .home-page-1 .site-content .block-content .slider--item .block-img .bg-img {
   width: 100%;
 }
 .home-page-1 .site-content .block-content .slider--item .list-title {
-  position: absolute;
-  top: 65.75%;
-  left: 5.3125%;
+  position: relative;
+  padding-top: 10%;
 }
 .home-page-1 .site-content .block-content .slider--item .list-title ul {
   list-style: none;
@@ -242,6 +237,14 @@ body.page-template-template-home1 {
 .site-footer .footer-widget-4 .block-contact-form i {
   vertical-align: middle;
   padding-right: 8px;
+}
+.site-footer .footer-widget-4 .block-contact-form i.fa-arrow-right {
+  padding-left: 0px;
+}
+@media screen and (min-width: 1440px) {
+  .site-footer .footer-widget-4 .block-contact-form i.fa-arrow-right {
+    padding-left: 40px;
+  }
 }
 .site-footer .footer-widget-4 .block-contact-form img {
   display: inline-block;
@@ -1804,7 +1807,7 @@ a:hover {
 }
 @media (min-width: 1200px) {
   .container {
-    max-width: 1140px;
+    max-width: 1200px;
   }
 }
 @media (min-width: 1360px) {

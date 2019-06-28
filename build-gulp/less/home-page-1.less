@@ -67,7 +67,6 @@ body {
   }
   .block-notify {
     padding: 27px 0 25px;
-    padding-left: 5.3125%;
   }
   .block-notify--element  {
     font-family: "Barlow",sans-serif;
@@ -173,6 +172,12 @@ body {
         margin-bottom: 0;
         
       }
+      .block-description {
+          position: absolute;
+          top: 21%;
+          left: 0;
+          right: 0;
+      }
         .slider {
           &--item {
             display: none;
@@ -189,13 +194,6 @@ body {
               letter-spacing: 1.46px;
               text-align: left;
               color: #ffffff;
-              position: absolute;
-              top: 17.65%;
-              left: 5.3125%;
-              @media screen and (max-width: 1400px) {
-                width: 500px;
-                top: 21%;
-              }
             }
             .block-img {
               .bg-img {
@@ -203,9 +201,8 @@ body {
               }
             }
             .list-title {
-              position: absolute;
-              top: 65.75%;
-              left: 5.3125%;
+              position: relative;
+              padding-top: 10%;
               ul {
                 list-style: none;
                 margin: auto;
@@ -263,6 +260,12 @@ body {
       i {
         vertical-align: middle;
         padding-right: 8px;
+        &.fa-arrow-right {
+            padding-left: 0px;
+            @media screen and (min-width: 1440px) {
+                padding-left: 40px;
+            }
+        }
       }
       img {
         display: inline-block;
@@ -2093,7 +2096,7 @@ input[type="checkbox"], input[type="radio"]
 
 @media (min-width: 1200px) {
     .container {
-        max-width: 1140px;
+        max-width: 1200px;
     }
 }
 
