@@ -82,9 +82,6 @@ HTML;
 
 }, 6);
 
-remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_price', 10 );
-
-
 remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_upsell_display', 15 );
 add_action( 'woocommerce_after_single_product_summary', 'storefront_upsell_display', 15 );
 
