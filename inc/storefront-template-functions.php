@@ -699,17 +699,20 @@ if ( !function_exists('storefront_site_action') ) {
         $userIcon = storefront_icon('user');
         $userSearchIcon = storefront_icon('search');
         $unLockIcon = storefront_icon('unlock');
-        echo <<<HTML
+?>
 <div class="block-icon-action">
     <ul class="list-action">
-        <li><a href=""><img width="20px" src="$userSearchIcon" alt=""></a></li>
+        <li><a href=""><img width="20px" src="<?= esc_url($userSearchIcon) ?>" alt=""></a></li>
         <li><a href="">SGP</a></li>
-        <li><a href=""><img width="20px" src="$userIcon" alt=""></a></li>
-        <li><a href=""><img width="20px" src="$unLockIcon" alt=""></a></li>
+        <li><a href=""><img width="20px" src="<?= esc_url($userIcon) ?>" alt=""></a></li>
+        <?php if (is_archive('product')): ?>
+        <li><?php storefront_handheld_footer_bar_cart_link(); ?></li>
+        <?php else: ?>
+        <li><a href=""><img width="20px" src="<?= esc_url($unLockIcon) ?>" alt=""></a></li>
+        <?php endif; ?>
     </ul>
 </div>
-HTML;
-
+<?php
     }
 }
 
@@ -722,13 +725,13 @@ if (!function_exists('storefront_slider_header')) {
         ]);
 
         if (count($pages)) {
-            $slider = get_field('slider', $pages[0]->ID);
+            $gallery = get_field('gallery', $pages[0]->ID);
             ?>
             <div class="block-menu">
                 <ul>
-                    <?php foreach ($slider as $idx => $item) : ?>
+                    <?php if (!empty($gallery)): foreach ($gallery as $idx => $item) : ?>
                         <li><a href="<?= home_url() . '?slider=' .$idx ?>"><?= $item['title'] ?></a></li>
-                    <?php endforeach; ?>
+                    <?php endforeach; endif; ?>
                 </ul>
             </div>
 <?php

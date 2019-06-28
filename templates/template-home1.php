@@ -11,25 +11,18 @@
  *
  * @package storefront
  */
-$slider = get_field('slider');
-$title = [];
-if (!empty($slider)) {
-    foreach ($slider as $item) {
-        $title[] = $item['title'];
-    }
-}
 get_header('home-1'); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
             <div class="slider">
-                <?php if (!empty($slider)):
-                    foreach ($slider as $idx => $item):
-                        $attachmentUrl = wp_get_attachment_url($item['background']);
-                        $description = $item['description'];
+                <?php
+                $gallery = get_field('gallery');
+                $description = get_field('title');
+                $attachmentUrl = wp_get_attachment_url($gallery[0]['background']);
                 ?>
-                <div class="slider--item" <?= $idx == 0 ? "style='display: block;'" : '' ?>>
+                <div class="slider--item" style="display: block;">
                     <div class="block-img">
-                        <img class="bg-img" src="<?= esc_url($attachmentUrl) ?>" alt="">
+                        <img class="bg-img" src="<?= esc_url($attachmentUrl) ?>" alt="" height="900px">
                     </div>
                     <div class="block-description">
                         <div class="container">
@@ -39,12 +32,12 @@ get_header('home-1'); ?>
                             <div class="list-title">
                                 <ul>
                                     <?php
-                                    foreach ($title as $idxTitle => $t) {
-                                        $class = "";
-                                        if ($idxTitle == $idx) {
-                                            $class = 'active';
-                                        }
-                                        echo "<li><a href='javascript:void(0)' class='js-btn-slider ".$class."' data-id='$idxTitle'>$t</a></li>";
+                                    $class = 'active';
+                                    foreach ($gallery as $attachment) {
+                                        $title = $attachment['title'];
+                                        $attachmentUrl = wp_get_attachment_url($attachment['background']);
+                                        echo "<li><a href='javascript:void(0)' class='js-btn-slider ".$class."' data-src='".esc_url($attachmentUrl)."'>$title</a></li>";
+                                        $class = '';
                                     }
                                     ?>
                                 </ul>
@@ -52,7 +45,6 @@ get_header('home-1'); ?>
                         </div>
                     </div>
                 </div>
-                <?php endforeach; endif;?>
             </div>
 
 		</main><!-- #main -->
