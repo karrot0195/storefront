@@ -369,7 +369,7 @@
   display: inline;
   margin-right: 15px;
 }
-.storefront-product-detail #tab-description h2 {
+.storefront-product-detail .wrap-description h2 {
   font-family: "Barlow", sans-serif;
   font-size: 16px;
   font-weight: 600;
@@ -380,7 +380,7 @@
   text-align: left;
   color: #000000;
 }
-.storefront-product-detail #tab-description p {
+.storefront-product-detail .wrap-description p {
   font-family: "Barlow", sans-serif;
   font-size: 15px;
   font-weight: normal;
