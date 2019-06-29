@@ -337,6 +337,7 @@
 }
 .storefront-product-detail #review_form_wrapper {
   padding-bottom: 60px;
+  display: none;
 }
 .storefront-product-detail .site-content {
   background-color: #f6f6f6;
