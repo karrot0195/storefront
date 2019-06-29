@@ -186,7 +186,28 @@
 .storefront-product-detail #reviews .commentlist li .avatar {
   float: none;
   margin: 0;
+  width: auto;
 }
 .storefront-product-detail #reviews .commentlist li .comment_container {
   display: flex;
+}
+.storefront-product-detail .single-product div.product p.price {
+  font-family: "Barlow", sans-serif;
+  font-size: 35px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 0.79;
+  letter-spacing: 0.35px;
+  text-align: left;
+  color: #222222;
+}
+.storefront-product-detail .star-rating span:before,
+.storefront-product-detail .quantity .plus,
+.storefront-product-detail .quantity .minus,
+.storefront-product-detail p.stars a:hover:after,
+.storefront-product-detail p.stars a:after,
+.storefront-product-detail .star-rating span:before,
+.storefront-product-detail #payment .payment_methods li input[type=radio]:first-child:checked + label:before {
+  color: #686868;
 }
