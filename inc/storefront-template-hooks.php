@@ -172,12 +172,12 @@ function set_item_from_cart() {
         'success' => false
     ];
     $product_id = $_POST['product_id'];
-    $quantity = $_POST['quantity'];
+    $quantity = intval($_POST['quantity']);
 
     $prod_unique_id = $cart->generate_cart_id( $product_id );
     unset( $cart->cart_contents[$prod_unique_id] );
 
-    if ($cart->add_to_cart( $product_id, $quantity )) {
+    if ($cart->add_to_cart( $product_id, $quantity ) || $quantity == 0) {
         $result['success'] = true;
         $result['total'] = get_all_quantity_item();
     }
