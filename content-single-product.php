@@ -57,8 +57,6 @@ if ( post_password_required() ) {
 			 */
 			do_action( 'woocommerce_single_product_summary' );
 			?>
-		</div>
-		<div class="summary entry-summary">
 			<div class="block-bookmark">
 				<div class="block-like">
 					<i class="far fa-heart"></i>
@@ -80,7 +78,7 @@ if ( post_password_required() ) {
 					</div>
 				</div>
 			</div>
-		</div>
+		</div>	
 		<?php
 		/**
 		 * Hook: woocommerce_after_single_product_summary.
