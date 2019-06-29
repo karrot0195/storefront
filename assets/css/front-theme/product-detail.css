@@ -298,7 +298,7 @@
 }
 .storefront-product-detail .block-bookmark {
   position: absolute;
-  top: 0;
+  top: 90px;
   right: 0;
 }
 .storefront-product-detail .block-bookmark .block-share {

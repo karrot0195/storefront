@@ -237,34 +237,29 @@ body.page-template-template-home1 {
 .site-footer .footer-widget-1 {
   width: 25%;
 }
-.site-footer .footer-widget-4 {
-  padding-left: 7.34375%;
+.site-footer .footer-widget-3 {
+  flex-grow: 1;
 }
-@media screen and (max-width: 1400px) {
-  .site-footer .footer-widget-4 {
-    padding-left: 1.34375%;
-  }
-}
-.site-footer .footer-widget-4 .block-contact-form {
+.site-footer .footer-widget-3 .block-contact-form {
   border-bottom: 1px solid #a7a7a7;
 }
-.site-footer .footer-widget-4 .block-contact-form i {
+.site-footer .footer-widget-3 .block-contact-form i {
   vertical-align: middle;
   padding-right: 8px;
 }
-.site-footer .footer-widget-4 .block-contact-form i.fa-arrow-right {
+.site-footer .footer-widget-3 .block-contact-form i.fa-arrow-right {
   padding-left: 0px;
 }
 @media screen and (min-width: 1440px) {
-  .site-footer .footer-widget-4 .block-contact-form i.fa-arrow-right {
+  .site-footer .footer-widget-3 .block-contact-form i.fa-arrow-right {
     padding-left: 40px;
   }
 }
-.site-footer .footer-widget-4 .block-contact-form img {
+.site-footer .footer-widget-3 .block-contact-form img {
   display: inline-block;
   vertical-align: middle;
 }
-.site-footer .footer-widget-4 .block-contact-form input {
+.site-footer .footer-widget-3 .block-contact-form input {
   border: 0;
   font-family: "Barlow", sans-serif;
   font-size: 12px;
@@ -279,7 +274,7 @@ body.page-template-template-home1 {
   text-align: left;
   color: #9c9c9c;
 }
-.site-footer .footer-widget-4 .block-contact-form input:focus {
+.site-footer .footer-widget-3 .block-contact-form input:focus {
   outline: none;
   box-shadow: 0;
 }
@@ -827,6 +822,7 @@ a:hover {
   margin-right: auto;
   margin-left: auto;
   position: relative;
+  box-sizing: border-box;
 }
 @media (min-width: 576px) {
   .container {
@@ -851,11 +847,6 @@ a:hover {
 @media (min-width: 1360px) {
   .container {
     max-width: 1400px;
-  }
-}
-@media (min-width: 1500px) {
-  .container {
-    max-width: 1730px;
   }
 }
 /*--------------------- 7. Add to card -----------------------*/
