@@ -80,13 +80,6 @@
             }
             isProcessing = false;
           });
-
-          const loop = setInterval(function() {
-            if (isProcessing) {
-              isProcessing = false;
-            }
-            loop.clear();
-          }, 1000);
         }
       } catch (e) {
         isProcessing = false;
