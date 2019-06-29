@@ -50,15 +50,16 @@
 .storefront-product-detail .woocommerce-info,
 .storefront-product-detail .woocommerce-noreviews,
 .storefront-product-detail p.no-comments {
-  background-color: #ef0450;
+  background-color: transparent;
   font-family: "Barlow", sans-serif;
   font-size: 12px;
-  font-weight: normal;
+  font-weight: 700;
   font-style: normal;
   line-height: 1.57;
   letter-spacing: 0.42px;
   text-align: right;
-  color: #fff;
+  color: #222;
+  border: 0;
 }
 .storefront-product-detail .js-block-write-comment {
   padding-right: 40px;
@@ -294,4 +295,46 @@
 }
 .storefront-product-detail #reviews .commentlist {
   padding-left: 0;
+}
+.storefront-product-detail .block-bookmark {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.storefront-product-detail .block-bookmark .block-share {
+  margin-top: 15px;
+}
+.storefront-product-detail .block-bookmark .block-share ul {
+  display: none;
+}
+.storefront-product-detail .related.products {
+  text-align: center;
+  padding: 65px 0;
+  position: relative;
+}
+.storefront-product-detail .related.products:before {
+  content: '';
+  position: absolute;
+  width: 500%;
+  height: 100%;
+  left: -500px;
+  z-index: -1;
+  top: 0;
+  background-color: #f6f6f6;
+}
+.storefront-product-detail .related > h2:first-child,
+.storefront-product-detail .upsells > h2:first-child {
+  font-family: "Barlow", sans-serif;
+  font-size: 22px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 0.72;
+  letter-spacing: normal;
+  text-align: center;
+  color: #a7a7a7;
+  margin-bottom: 60px;
+}
+.storefront-product-detail #review_form_wrapper {
+  padding-bottom: 60px;
 }
