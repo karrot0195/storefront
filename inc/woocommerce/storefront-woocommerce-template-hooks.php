@@ -123,3 +123,11 @@ if ( class_exists( 'WC_Brands' ) ) {
 	add_action( 'woocommerce_single_product_summary', 'storefront_woocommerce_brands_single', 4 );
 	add_action( 'homepage', 'storefront_woocommerce_brands_homepage_section', 80 );
 }
+
+
+// insert title comment wcs
+add_action('comment_post', function ($commentId) {
+    if (isset($_POST['title']) && $_POST['title']) {
+        add_comment_meta($commentId, 'title', $_POST['title'], true);
+    }
+});

@@ -31,7 +31,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 		 *
 		 * @hooked woocommerce_review_display_gravatar - 10
 		 */
-		do_action( 'woocommerce_review_before', $comment );
+//		do_action( 'woocommerce_review_before', $comment );
 		?>
 
 		<div class="comment-text">
@@ -51,6 +51,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 			 * @hooked WC_Structured_Data::generate_review_data() - 20
 			 */
 			do_action( 'woocommerce_review_meta', $comment );
+
+
+            // title comment
+            $title = get_comment_meta($comment->comment_ID, 'title', true);
+
+            echo "<div class='review-title'>$title</div>";
 
 			do_action( 'woocommerce_review_before_comment_text', $comment );
 
