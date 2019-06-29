@@ -26,26 +26,27 @@ if ( ! defined( 'ABSPATH' ) ) {
  * @see woocommerce_default_product_tabs()
  */
 $tabs = apply_filters( 'woocommerce_product_tabs', array() );
-echo '<div class="wrap-description">';
+echo '<div class="wrap-container-description">';
+if ( isset($tabs['additional_information']) ) {
+    $key = 'additional_information';
+    $tab = $tabs['additional_information'];
+    ?>
+    <div class="wrap-additional_information">
+        <?php if ( isset( $tab['callback'] ) ) { call_user_func( $tab['callback'], $key, $tab ); } ?>
+    </div>
+    <?php
+}
+
 if ( isset($tabs['description']) ) {
     $key = 'description';
     $tab = $tabs['description'];
     ?>
-    <div class="block-description">
+    <div class="wrap-description">
         <?php if ( isset( $tab['callback'] ) ) { call_user_func( $tab['callback'], $key, $tab ); } ?>
     </div>
 <?php
 }
 
-if ( isset($tabs['additional_information']) ) {
-    $key = 'additional_information';
-    $tab = $tabs['additional_information'];
-    ?>
-    <div class="block-additional_information">
-        <?php if ( isset( $tab['callback'] ) ) { call_user_func( $tab['callback'], $key, $tab ); } ?>
-    </div>
-    <?php
-}
 echo '</div>';
 
 if ( isset($tabs['reviews']) ) {
