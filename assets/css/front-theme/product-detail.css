@@ -312,7 +312,7 @@
 }
 .storefront-product-detail .block-review-left {
   display: inline-block;
-  vertical-align: text-top;
+  vertical-align: top;
 }
 .storefront-product-detail table tbody td {
   background-color: transparent;
