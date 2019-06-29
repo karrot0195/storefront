@@ -187,6 +187,7 @@
 .storefront-product-detail #reviews .commentlist li .avatar {
   float: none;
   margin: 0;
+  text-align: left;
   width: auto;
 }
 .storefront-product-detail #reviews .commentlist li .comment_container {
@@ -211,4 +212,82 @@
 .storefront-product-detail .star-rating span:before,
 .storefront-product-detail #payment .payment_methods li input[type=radio]:first-child:checked + label:before {
   color: #686868;
+}
+.storefront-product-detail #reviews .commentlist li p.meta strong {
+  font-family: "Barlow", sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.2;
+  letter-spacing: 0.4px;
+  text-align: left;
+  color: #222222;
+}
+.storefront-product-detail #reviews .commentlist li p.meta time {
+  font-family: "Barlow", sans-serif;
+  font-size: 13px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.67;
+  letter-spacing: 0.36px;
+  text-align: left;
+  color: #777777;
+  padding-top: 10px;
+}
+.storefront-product-detail #reviews .commentlist li .comment_container .comment-text .star-rating {
+  float: none;
+  text-align: left;
+  margin-top: 20px;
+}
+.storefront-product-detail .review-title {
+  font-family: "Barlow", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.2;
+  letter-spacing: 0.5px;
+  text-align: left;
+  color: #222222;
+}
+.storefront-product-detail #reviews .commentlist li p.meta {
+  text-align: left;
+  margin: 0;
+}
+.storefront-product-detail .review-left {
+  margin-right: 50px;
+  min-width: 125px;
+}
+.storefront-product-detail .review-left i {
+  display: inline-block;
+  vertical-align: -webkit-baseline-middle;
+}
+.storefront-product-detail .review-left i::before {
+  background-color: #51a011;
+  color: #fff;
+  border-radius: 50%;
+  font-size: 15px;
+}
+.storefront-product-detail .block-review-left {
+  display: inline-block;
+  vertical-align: text-top;
+}
+.storefront-product-detail .description p {
+  font-family: "Barlow", sans-serif;
+  font-size: 15px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.57;
+  letter-spacing: 0.42px;
+  text-align: left;
+  color: #222222;
+}
+.storefront-product-detail #reviews .commentlist li .comment_container .comment-text {
+  display: flex;
+}
+.storefront-product-detail #reviews .commentlist {
+  padding-left: 0;
 }

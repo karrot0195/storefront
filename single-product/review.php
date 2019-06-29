@@ -33,41 +33,50 @@ if ( ! defined( 'ABSPATH' ) ) {
 		 */
 //		do_action( 'woocommerce_review_before', $comment );
 		?>
-
 		<div class="comment-text">
+			<div class="review-left">
+				<div class="block-review-left">
+					<?php
 
+					/**
+					 * The woocommerce_review_meta hook.
+					 *
+					 * @hooked woocommerce_review_display_meta - 10
+					 * @hooked WC_Structured_Data::generate_review_data() - 20
+					 */
+					do_action( 'woocommerce_review_meta', $comment );
+					?>
+					<?php
+					/**
+					 * The woocommerce_review_before_comment_meta hook.
+					 *
+					 * @hooked woocommerce_review_display_rating - 10
+					 */
+					do_action( 'woocommerce_review_before_comment_meta', $comment );
+					?>
+				</div>
+				<i class="far fa-check-circle"></i>
+			</div>
 			<?php
-			/**
-			 * The woocommerce_review_before_comment_meta hook.
-			 *
-			 * @hooked woocommerce_review_display_rating - 10
-			 */
-			do_action( 'woocommerce_review_before_comment_meta', $comment );
-
-			/**
-			 * The woocommerce_review_meta hook.
-			 *
-			 * @hooked woocommerce_review_display_meta - 10
-			 * @hooked WC_Structured_Data::generate_review_data() - 20
-			 */
-			do_action( 'woocommerce_review_meta', $comment );
-
-
             // title comment
-            $title = get_comment_meta($comment->comment_ID, 'title', true);
+			$title = get_comment_meta($comment->comment_ID, 'title', true);
+			?>
+			<div class="review-right">
+				<?php
 
-            echo "<div class='review-title'>$title</div>";
+				echo "<div class='review-title'>$title</div>";
 
-			do_action( 'woocommerce_review_before_comment_text', $comment );
+				do_action( 'woocommerce_review_before_comment_text', $comment );
 
-			/**
-			 * The woocommerce_review_comment_text hook
-			 *
-			 * @hooked woocommerce_review_display_comment_text - 10
-			 */
-			do_action( 'woocommerce_review_comment_text', $comment );
+				/**
+				 * The woocommerce_review_comment_text hook
+				 *
+				 * @hooked woocommerce_review_display_comment_text - 10
+				 */
+				do_action( 'woocommerce_review_comment_text', $comment );
 
-			do_action( 'woocommerce_review_after_comment_text', $comment ); ?>
+				do_action( 'woocommerce_review_after_comment_text', $comment ); ?>
+			</div>
 
 		</div>
 	</div>

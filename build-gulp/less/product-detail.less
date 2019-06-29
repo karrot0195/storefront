@@ -194,6 +194,7 @@
   #reviews .commentlist li .avatar {
     float: none;
     margin: 0;
+    text-align: left;
     width: auto;
   }
   #reviews .commentlist li .comment_container {
@@ -213,5 +214,86 @@
 
   .star-rating span:before, .quantity .plus, .quantity .minus, p.stars a:hover:after, p.stars a:after, .star-rating span:before, #payment .payment_methods li input[type=radio]:first-child:checked+label:before {
     color: #686868;
+  }
+  #reviews .commentlist li p.meta strong {
+    font-family: "Barlow", sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.2;
+    letter-spacing: 0.4px;
+    text-align: left;
+    color: #222222;
+  }
+
+  #reviews .commentlist li p.meta time {
+    font-family: "Barlow", sans-serif;
+    font-size: 13px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.67;
+    letter-spacing: 0.36px;
+    text-align: left;
+    color: #777777;
+    padding-top: 10px;
+  }
+  #reviews .commentlist li .comment_container .comment-text .star-rating {
+    float: none;
+    text-align: left;
+    margin-top: 20px;
+  }
+  .review-title {
+    font-family: "Barlow", sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.2;
+    letter-spacing: 0.5px;
+    text-align: left;
+    color: #222222;
+  }
+  #reviews .commentlist li p.meta {
+    text-align:left;
+    margin: 0;
+  }
+  .review-left {
+    margin-right: 50px;
+    min-width: 125px;
+    i {
+      display: inline-block;
+      vertical-align: -webkit-baseline-middle;
+      &::before {
+        background-color: #51a011;
+        color: #fff;
+        border-radius: 50%;
+        font-size: 15px;
+      }
+    }
+  }
+  .block-review-left {
+    display: inline-block;
+    vertical-align: text-top;
+  }
+  .description {
+    p {
+      font-family: "Barlow", sans-serif;
+      font-size: 15px;
+      font-weight: normal;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: 1.57;
+      letter-spacing: 0.42px;
+      text-align: left;
+      color: #222222;
+    }
+  }
+  #reviews .commentlist li .comment_container .comment-text {
+    display: flex;
+  }
+  #reviews .commentlist {
+    padding-left: 0;
   }
 }
