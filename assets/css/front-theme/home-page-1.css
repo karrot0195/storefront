@@ -929,6 +929,10 @@ form #input-wrap {
 }
 .wrap-cart .fm-sl-cart {
   opacity: 0;
+  left: 50%;
+  text-align: center;
+  min-width: 125px;
+  transform: translate(-50%, 0);
 }
 .wrap-cart:hover .button.product_type_simple {
   display: none;
