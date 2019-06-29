@@ -61,7 +61,7 @@
     if (!isProcessing) {
       isProcessing = true;
       try {
-        const parent = $(this).parent();
+        const parent = $(this).parents('.fm-sl-cart');
         const self = $(this);
         const val = parseInt($(this).data('val'));
         const productId = parent.data('product_id');
@@ -72,6 +72,11 @@
             if (res.success) {
               $('a.footer-cart-contents').html(`<span class="count">${res.total}</span>`);
               parent.find('input[name=number]').val(total);
+              if (total == 0) {
+                parent.removeClass('proccessing');
+              } else {
+                parent.addClass('proccessing');
+              }
             }
             isProcessing = false;
           });

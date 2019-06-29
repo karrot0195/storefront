@@ -957,91 +957,86 @@ body {
 }
 
 
-/*--------------------- 7. Add to card -----------------------*/
-form.increse-decrease {
-    width: 300px;
-    margin: 0 auto;
-    text-align: center;
-    padding-top: 50px;
-    .value-button {
-        display: inline-block;
-        border: 1px solid #ddd;
-        margin: 0px;
-        width: 40px;
-        height: 20px;
+  /* Add to cart */
+  .wrap-product-item {
+      .fm-sl-cart {
+        opacity: 0;
+        display: block;
+        left: 50%;
         text-align: center;
-        vertical-align: middle;
-        padding: 11px 0;
-        background: #eee;
-        -webkit-touch-callout: none;
-        -webkit-user-select: none;
-        -khtml-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
+        min-width: 100px;
+        transform: translate(-50%, 0);
+        top: 70%;
+        height: 50px;
+        color: white;
+        position: relative;
+
+        .wrap-proccess {
+          display: flex;
+          opacity: 0;
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+          z-index: -1;
+        }
+        .wrap-init {
+          display: flex;
+          opacity: 1;
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+          transition: all 1s ease;
+          -moz-transition: all 1s ease;
+          -webkit-transition: all 1s ease;
+        }
+        &.proccessing {
+          .wrap-init {
+            opacity: 0;
+            z-index: -1;
+          }
+          .wrap-proccess {
+            opacity: 1;
+            transition: all 0.5s ease;
+            -moz-transition: all 0.5s ease;
+            -webkit-transition: all 0.5s ease;
+          }
+        }
+
+        .lb-btn {
+          height: 100%;
+          display: inline;
+          background-color: #142d73;
+          padding: 10px 5px;
+          cursor: pointer;
+        }
+        .block-number {
+          display: inline;
+          input {
+            padding: 9px;
+            text-align: center;
+
+          }
+        }
+
+        .value-button {
+          display: inline;
+          background-color: #142d73;
+          padding: 10px 20px;
+          cursor: pointer;
+        }
       }
-      
-      .value-button:hover {
-        cursor: pointer;
+      &:hover {
+        .fm-sl-cart {
+          opacity: 1;
+          transition: all 1s ease;
+          -moz-transition: all 1s ease;
+          -webkit-transition: all 1s ease;
+        }
       }
-      
-      input#number {
-        text-align: center;
-        border: none;
-        border-top: 1px solid #ddd;
-        border-bottom: 1px solid #ddd;
-        margin: 0px;
-        width: 40px;
-        height: 40px;
-        display: inline-block;
-        vertical-align: middle;
-      }
-      
-      input[type=number]::-webkit-inner-spin-button,
-      input[type=number]::-webkit-outer-spin-button {
-          -webkit-appearance: none;
-          margin: 0;
-      }
-  }
-  form #decrease {
-    margin-right: -4px;
-    border-radius: 8px 0 0 8px;
-  }
-  
-  form #increase {
-    margin-left: -4px;
-    border-radius: 0 8px 8px 0;
-  }
-  
-  form #input-wrap {
-    margin: 0px;
-    padding: 0px;
   }
 
-  .wrap-cart {
-    .fm-sl-cart {
-      opacity: 0;
-      display: block;
-      left: 50%;
-      text-align: center;
-      min-width: 125px;
-      transform: translate(-50%, 0);
-      position: absolute;
-      top: 70%;
-    }
-  }
-
-  .wrap-cart:hover {
-    .button.product_type_simple {
-      display: none;
-    }
-    .fm-sl-cart {
-      opacity: 1;
-      transition: all 0.5s ease;
-      -moz-transition: all 0.5s ease;
-      -webkit-transition: all 0.5s ease;
-    }
-  }
   .wrap-additional_information {
     padding-top: 10px;
     padding-left: 25px;
