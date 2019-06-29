@@ -55,7 +55,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 					do_action( 'woocommerce_review_before_comment_meta', $comment );
 					?>
 				</div>
-				<i class="far fa-check-circle"></i>
+				<i class="icon ion-md-checkmark-circle"></i>
 			</div>
 			<?php
             // title comment

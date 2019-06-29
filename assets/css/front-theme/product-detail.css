@@ -305,10 +305,10 @@
   vertical-align: -webkit-baseline-middle;
 }
 .storefront-product-detail .review-left i::before {
-  background-color: #51a011;
-  color: #fff;
+  background-color: white;
+  color: #51a011;
   border-radius: 50%;
-  font-size: 15px;
+  font-size: 20px;
 }
 .storefront-product-detail .block-review-left {
   display: inline-block;
