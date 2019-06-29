@@ -72,15 +72,6 @@ if ( defined( 'WC_VERSION' ) && version_compare( WC_VERSION, '3.3', '<' ) ) {
  * @see storefront_sticky_single_add_to_cart()
  */
 add_action( 'woocommerce_single_product_summary', 'storefront_edit_post_link', 60 );
-add_action('woocommerce_single_product_summary', function() {
-    $code = get_field('code');
-    if ($code) {
-        echo <<<HTML
-<div class="product_code">$code</div>
-HTML;
-    }
-
-}, 6);
 
 remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_upsell_display', 15 );
 add_action( 'woocommerce_after_single_product_summary', 'storefront_upsell_display', 15 );
