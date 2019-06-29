@@ -55,37 +55,46 @@
     // подставляем в src параметр из data
     iframe.attr('src', src);
   }
+
+  let isProcessing = false;
+  $('.js-cart-btn').on('click', function () {
+    console.log(isProcessing);
+    if (!isProcessing) {
+      isProcessing = true;
+      try {
+        const parent = $(this).parent();
+        const self = $(this);
+        const val = parseInt($(this).data('val'));
+        const productId = parent.data('product_id');
+        let total = parseInt(parent.find('input[name=number]').val());
+        if (total + val >= 0) {
+          total = total + val;
+          setItemCart(productId, total, function (res) {
+            if (res.success) {
+              $('a.footer-cart-contents').html(`<span class="count">${res.total}</span>`);
+              parent.find('input[name=number]').val(total);
+            }
+            isProcessing = false;
+          });
+        }
+      } catch (e) {
+        isProcessing = false;
+      }
+    }
+  });
 })(jQuery);
 
-
-
-window.increaseValue = function() {
-  var value = parseInt(document.getElementById('number').value, 10);
-  value = isNaN(value) ? 0 : value;
-  value++;
-  document.getElementById('number').value = value;
-}
-
-window.decreaseValue = function() {
-  var value = parseInt(document.getElementById('number').value, 10);
-  value = isNaN(value) ? 0 : value;
-  value < 1 ? value = 1 : '';
-  value--;
-  document.getElementById('number').value = value;
-}
-
-window.addToCart = function(product_id, quantity) {
+window.setItemCart = function(product_id, quantity, callback) {
   jQuery.ajax({
-    url: `${home_url}?wc-ajax=add_to_cart`,
+    url: my_ajax_object.ajax_url,
     data: {
-      product_id: product_id,
-      quantity: quantity,
-      product_sku: ''
+      'action' : 'set_item_from_cart',
+      'product_id': product_id,
+      'quantity': quantity
     },
-    method: 'POST'
+    method: 'post'
   }).then(res => {
-    if (res['fragments']['a.footer-cart-contents']) {
-    jQuery('a.footer-cart-contents').html(res['fragments']['a.footer-cart-contents']);
-  }
+    callback(res);
 });
 };
+

@@ -146,3 +146,54 @@ function woocommerce_currency_symbol_sgd( $currency_symbol, $currency ) {
     }
     return $currency_symbol;
 }
+
+function get_item_quantity($targeted_id) {
+    foreach ( WC()->cart->get_cart() as $cart_item ) {
+        if($cart_item['product_id'] == $targeted_id ){
+            return $cart_item['quantity'];
+        }
+    }
+    return 0;
+}
+
+function get_all_quantity_item() {
+    $total = 0;
+    foreach ( WC()->cart->get_cart() as $cart_item ) {
+        if (!empty($cart_item['quantity'])) {
+            $total += intval($cart_item['quantity']);
+        }
+    }
+    return $total;
+}
+
+function set_item_from_cart() {
+    $cart = WC()->instance()->cart;
+    $result = [
+        'success' => false
+    ];
+    $product_id = $_POST['product_id'];
+    $quantity = $_POST['quantity'];
+
+    $prod_unique_id = $cart->generate_cart_id( $product_id );
+    unset( $cart->cart_contents[$prod_unique_id] );
+
+    if ($cart->add_to_cart( $product_id, $quantity )) {
+        $result['success'] = true;
+        $result['total'] = get_all_quantity_item();
+    }
+    header('Content-Type: application/json');
+    echo json_encode($result);
+    die;
+}
+
+add_action('wp_ajax_set_item_from_cart', 'set_item_from_cart');
+add_action('wp_ajax_nopriv_set_item_from_cart', 'set_item_from_cart');
+
+function my_enqueue() {
+
+    wp_enqueue_script( 'ajax-script', get_template_directory_uri() . '/js/my-ajax-script.js', array('jquery') );
+
+    wp_localize_script( 'ajax-script', 'my_ajax_object',
+        array( 'ajax_url' => admin_url( 'admin-ajax.php' ) ) );
+}
+add_action( 'wp_enqueue_scripts', 'my_enqueue' );

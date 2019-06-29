@@ -904,3 +904,19 @@ form #input-wrap {
   margin: 0px;
   padding: 0px;
 }
+.wrap-cart .fm-sl-cart {
+  opacity: 0;
+}
+.wrap-cart:hover .button.product_type_simple {
+  display: none;
+}
+.wrap-cart:hover .fm-sl-cart {
+  display: block;
+  opacity: 1;
+  transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  position: absolute;
+  top: 70%;
+  transform: translateX(-50%, 0);
+}
