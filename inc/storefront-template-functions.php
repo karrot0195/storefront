@@ -706,7 +706,7 @@ if ( !function_exists('storefront_site_action') ) {
         <li><a href="" style="color: #808080">SGP</a></li>
         <li><a href=""><img width="20px" src="<?= esc_url($userIcon) ?>" alt=""></a></li>
         <?php if (is_archive('product')): ?>
-        <li><?php storefront_handheld_footer_bar_cart_link(); ?></li>
+        <li id="list-action-cart"><?php storefront_handheld_footer_bar_cart_link(); ?></li>
         <?php else: ?>
         <li><a href=""><img width="20px" src="<?= esc_url($unLockIcon) ?>" alt=""></a></li>
         <?php endif; ?>

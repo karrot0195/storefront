@@ -146,15 +146,17 @@ body.page-template-template-home1 {
   justify-content: flex-end;
   align-items: center;
 }
-.home-page-1 .site-header .col-full .block-icon-action .footer-cart-contents {
+.home-page-1 .site-header .col-full .block-icon-action #list-action-cart .footer-cart-contents {
   position: relative;
   width: 25px;
   height: 25px;
   background-color: #8c8c8c;
   border-radius: 50%;
   text-align: center;
+  display: inline-table;
+  vertical-align: middle;
 }
-.home-page-1 .site-header .col-full .block-icon-action .footer-cart-contents span {
+.home-page-1 .site-header .col-full .block-icon-action #list-action-cart .footer-cart-contents span {
   width: 7px;
   height: 10px;
   font-family: GothamHTF;
@@ -162,12 +164,9 @@ body.page-template-template-home1 {
   font-weight: 500;
   font-style: normal;
   font-stretch: normal;
-  line-height: 2.08;
+  line-height: 25px;
   letter-spacing: normal;
   color: #f2f2f2;
-  top: -3px;
-  position: absolute;
-  left: 9px;
 }
 .home-page-1 .site-header .col-full .block-icon-action .list-action {
   padding: 0;
