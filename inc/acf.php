@@ -297,7 +297,7 @@ if( function_exists('acf_add_local_field_group') ):
                 'key' => 'field_5d151d498f355',
                 'label' => 'video',
                 'name' => 'video',
-                'type' => 'url',
+                'type' => 'text',
                 'instructions' => '',
                 'required' => 0,
                 'conditional_logic' => 0,
