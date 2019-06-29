@@ -945,9 +945,9 @@ a:hover {
 }
 .wrap-product-item:hover .fm-sl-cart {
   opacity: 1;
-  transition: opacity 0.7s ease;
-  -moz-transition: opacity 0.7s ease;
-  -webkit-transition: opacity 0.7s ease;
+  transition: position 1s ease;
+  -moz-transition: position 1s ease;
+  -webkit-transition: position 1s ease;
 }
 .wrap-additional_information {
   padding-top: 10px;
