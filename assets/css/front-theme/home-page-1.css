@@ -946,3 +946,17 @@ form #input-wrap {
   -moz-transition: all 0.5s ease;
   -webkit-transition: all 0.5s ease;
 }
+.wrap-additional_information {
+  padding-top: 10px;
+  padding-left: 25px;
+}
+.wrap-additional_information .woocommerce-product-attributes-item__value {
+  padding-bottom: 20px;
+}
+.wrap-additional_information .woocommerce-product-attributes-item__value i {
+  display: inline;
+}
+.wrap-additional_information .woocommerce-product-attributes-item__value p {
+  padding-left: 10px;
+  display: inline;
+}
