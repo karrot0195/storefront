@@ -125,6 +125,9 @@ if ( class_exists( 'WC_Brands' ) ) {
 }
 
 
+remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_price', 10);
+add_action('woocommerce_single_product_summary', 'woocommerce_template_single_price', 9);
+
 // insert title comment wcs
 add_action('comment_post', function ($commentId) {
     if (isset($_POST['title']) && $_POST['title']) {
