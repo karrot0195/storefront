@@ -158,7 +158,8 @@
   box-shadow: none;
   outline-color: #0f1972;
 }
-.storefront-product-detail .comment-respond .comment-form-comment {
+.storefront-product-detail .comment-respond .comment-form-comment,
+.storefront-product-detail .comment-respond .comment-form-title {
   width: 100%;
 }
 .storefront-product-detail .comment-respond #reviews .comment-form-rating label,
