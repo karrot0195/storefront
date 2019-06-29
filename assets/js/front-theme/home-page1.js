@@ -86,6 +86,21 @@
       }
     }
   });
+  $('.moreless-button').click(function() {
+    // $('.description').removeClass('active');
+    var x = $(this).parent().find('.description');
+    // console.log(x);
+    // if(x.hasClass('active')) {
+    //   x.removeClass('active');
+    // }
+    if ($(this).text() == "Read more") {
+      $(this).text("Read less");
+      x.addClass('active');
+    } else {
+      $(this).text("Read more");
+      x.removeClass('active');
+    }
+  });
 })(jQuery);
 
 window.setItemCart = function(product_id, quantity, callback) {
