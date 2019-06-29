@@ -228,6 +228,7 @@ function dd($data) {
             left: 0;
             padding: 30px;
             border-radius: 10px;
+            position: absolute;
         }
     </style>
 <?php

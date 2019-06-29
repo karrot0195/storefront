@@ -26,12 +26,35 @@ if ( ! defined( 'ABSPATH' ) ) {
  * @see woocommerce_default_product_tabs()
  */
 $tabs = apply_filters( 'woocommerce_product_tabs', array() );
-if ( ! empty( $tabs ) ) : ?>
-
-<?php foreach ( $tabs as $key => $tab ) : ?>
-    <div class="woocommerce-Tabs-panel woocommerce-Tabs-panel--<?php echo esc_attr( $key ); ?> panel entry-content wc-tab" id="tab-<?php echo esc_attr( $key ); ?>" role="tabpanel" aria-labelledby="tab-title-<?php echo esc_attr( $key ); ?>">
+echo '<div class="wrap-description">';
+if ( isset($tabs['description']) ) {
+    $key = 'description';
+    $tab = $tabs['description'];
+    ?>
+    <div class="block-description">
         <?php if ( isset( $tab['callback'] ) ) { call_user_func( $tab['callback'], $key, $tab ); } ?>
     </div>
-<?php endforeach; ?>
+<?php
+}
 
-<?php endif; ?>
+if ( isset($tabs['additional_information']) ) {
+    $key = 'additional_information';
+    $tab = $tabs['additional_information'];
+    ?>
+    <div class="block-additional_information">
+        <?php if ( isset( $tab['callback'] ) ) { call_user_func( $tab['callback'], $key, $tab ); } ?>
+    </div>
+    <?php
+}
+echo '</div>';
+
+if ( isset($tabs['reviews']) ) {
+    $key = 'reviews';
+    $tab = $tabs['reviews'];
+    ?>
+    <div class="block-reviews">
+        <?php if ( isset( $tab['callback'] ) ) { call_user_func( $tab['callback'], $key, $tab ); } ?>
+    </div>
+    <?php
+}
+
