@@ -256,6 +256,10 @@
   text-align: left;
   margin: 0;
 }
+.storefront-product-detail #tab-description {
+  float: none;
+  clear: both;
+}
 .storefront-product-detail .review-left {
   margin-right: 50px;
   min-width: 125px;

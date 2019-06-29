@@ -57,29 +57,30 @@ if ( post_password_required() ) {
 			 */
 			do_action( 'woocommerce_single_product_summary' );
 			?>
-		</div><div class="summary entry-summary">
-        <div class="block-bookmark">
-            <div class="block-like">
-                <i class="far fa-heart"></i>
-            </div>
-            <div class="block-share">
-                <i class="fas fa-share-alt"></i>
-                <div class="block-share--conent">
-                    <ul>
-                        <li>
-                            <a href="https://www.facebook.com/sharer/sharer.php?u=<?= home_url( $wp->request ) ?>"><i class="fab fa-facebook"></i></a>
-                        </li>
-                        <li>
-                            <a href="https://twitter.com/home?status=<?= home_url( $wp->request ) ?>"><i class="fab fa-twitter"></i></a>
-                        </li>
-                        <li>
-                            <a href="https://plus.google.com/share?url=<?= home_url( $wp->request ) ?>"><i class="fab fa-google-plus-g"></i></a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
+		</div>
+		<div class="summary entry-summary">
+			<div class="block-bookmark">
+				<div class="block-like">
+					<i class="far fa-heart"></i>
+				</div>
+				<div class="block-share">
+					<i class="fas fa-share-alt"></i>
+					<div class="block-share--conent">
+						<ul>
+							<li>
+								<a href="https://www.facebook.com/sharer/sharer.php?u=<?= home_url( $wp->request ) ?>"><i class="fab fa-facebook"></i></a>
+							</li>
+							<li>
+								<a href="https://twitter.com/home?status=<?= home_url( $wp->request ) ?>"><i class="fab fa-twitter"></i></a>
+							</li>
+							<li>
+								<a href="https://plus.google.com/share?url=<?= home_url( $wp->request ) ?>"><i class="fab fa-google-plus-g"></i></a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
 		<?php
 		/**
 		 * Hook: woocommerce_after_single_product_summary.
