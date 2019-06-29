@@ -123,11 +123,3 @@ if ( class_exists( 'WC_Brands' ) ) {
 	add_action( 'woocommerce_single_product_summary', 'storefront_woocommerce_brands_single', 4 );
 	add_action( 'homepage', 'storefront_woocommerce_brands_homepage_section', 80 );
 }
-
-
-add_filter('woocommerce_product_tabs', function($tabs) {
-    $tabs['additional_information']['priority'] = 9;
-    return $tabs;
-}, 10);
-
-add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_price', 8 );

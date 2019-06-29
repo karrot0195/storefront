@@ -211,10 +211,26 @@ function storefront_sanitize_hex_color( $color ) {
 
 
 function dd($data) {
-	echo '<pre>';
-	print_r($data);
-	echo '</pre>';
-	die;
+    $num = rand(0, 1000);
+   ?>
+    <div class="block-debug-<?= $num ?>">
+        <?php
+        echo '<pre>';
+        print_r($data);
+        echo '</pre>';
+        ?>
+    </div>
+    <style>
+        .block-debug-<?= $num ?> {
+            top: 0;
+            background: #cecece;
+            z-index: 100000000000;
+            left: 0;
+            padding: 30px;
+            border-radius: 10px;
+        }
+    </style>
+<?php
 }
 
 function storefront_icon($name, $dot='.png') {

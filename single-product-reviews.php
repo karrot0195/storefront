@@ -79,7 +79,7 @@ if ( ! comments_open() ) {
 	</div>
 
 	<?php if ( get_option( 'woocommerce_review_rating_verification_required' ) === 'no' || wc_customer_bought_product( '', get_current_user_id(), $product->get_id() ) ) : ?>
-		<div id="review_form_wrapper" style="display: none">
+		<div id="review_form_wrapper">
 			<div id="review_form">
 				<?php
 				$commenter = wp_get_current_commenter();
@@ -101,6 +101,7 @@ if ( ! comments_open() ) {
 					'label_submit'        => __( 'Submit', 'storefront' ),
 					'logged_in_as'        => '',
 					'comment_field'       => '',
+                    'title_field'         => ''
 				);
 
 				$account_page_url = wc_get_page_permalink( 'myaccount' );
@@ -119,8 +120,9 @@ if ( ! comments_open() ) {
 						<option value="1">' . esc_html__( 'Very poor', 'storefront' ) . '</option>
 					</select></div>';
 				}
+                $comment_form['comment_field'] .= '<p class="comment-form-title"><label for="title">' . esc_html__( 'Your title', 'storefront' ) . '&nbsp;<span class="required">*</span></label><input type="text" name="title" id="title"/></p>';
 
-				$comment_form['comment_field'] .= '<p class="comment-form-comment"><label for="comment">' . esc_html__( 'Your review', 'storefront' ) . '&nbsp;<span class="required">*</span></label><textarea id="comment" name="comment" cols="45" rows="8" required></textarea></p>';
+                $comment_form['comment_field'] .= '<p class="comment-form-comment"><label for="comment">' . esc_html__( 'Your review', 'storefront' ) . '&nbsp;<span class="required">*</span></label><textarea id="comment" name="comment" cols="45" rows="8" required></textarea></p>';
 
 				comment_form( apply_filters( 'woocommerce_product_review_comment_form_args', $comment_form ) );
 				?>
