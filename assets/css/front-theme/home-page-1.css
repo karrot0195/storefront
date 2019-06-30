@@ -404,12 +404,9 @@ body.page-template-template-home1 {
   background-color: #e5e5e5;
   padding: 23px 0 21px;
 }
-.info-page .info-page-left,
-.info-page .info-page-right {
-  width: 50%;
-}
 .info-page .info-page-left {
   display: flex;
+  flex-grow: 1;
 }
 .info-page .info-page-left a {
   font-family: "Barlow", sans-serif;
@@ -539,6 +536,16 @@ body.page-template-template-home1 {
   position: relative;
   background-color: #000;
 }
+@media screen and (max-width: 992px) {
+  .video_wrapper {
+    height: 300px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .video_wrapper {
+    height: 200px;
+  }
+}
 .video_wrapper_full {
   padding-top: 0;
 }
@@ -626,6 +633,11 @@ button:hover .fa-play:before {
     padding: 66px 0 120px;
   }
 }
+@media screen and (max-width: 992px) {
+  .tab-content {
+    padding: 40px 0 80px;
+  }
+}
 .tabs-nav {
   list-style: none;
   display: flex;
@@ -640,9 +652,14 @@ button:hover .fa-play:before {
 @media screen and (max-width: 1400px) {
   .tabs-nav {
     margin-bottom: 60px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .tabs-nav {
     width: 100%;
     white-space: nowrap;
     overflow-y: hidden;
+    margin-bottom: 30px;
   }
 }
 .tabs-nav:before {
