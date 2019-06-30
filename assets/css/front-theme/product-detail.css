@@ -406,7 +406,7 @@
 }
 @media screen and (max-width: 767px) {
   .storefront-product-detail.single-product div.product .summary {
-    padding-bottom: 0;
+    padding-top: 0;
   }
 }
 .storefront-product-detail.single-product div.product .woocommerce-product-gallery {
