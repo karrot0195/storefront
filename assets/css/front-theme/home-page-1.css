@@ -899,6 +899,11 @@ a:hover {
     max-width: 1400px;
   }
 }
+@media screen and (max-width: 1560px) {
+  .container {
+    max-width: 1600px;
+  }
+}
 /* Add to cart */
 .wrap-product-item .fm-sl-cart {
   opacity: 0;
