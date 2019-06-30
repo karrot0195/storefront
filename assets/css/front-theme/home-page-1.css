@@ -330,6 +330,9 @@ body.page-template-template-home1 {
   display: inline;
   padding-right: 30px;
 }
+.site-footer .block-widget-page ul li:last-child {
+  padding-left: 50px;
+}
 @media screen and (max-width: 1400px) {
   .site-footer .block-widget-page ul li {
     padding-right: 15px;
