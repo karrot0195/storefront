@@ -635,6 +635,9 @@ button:hover .fa-play:before {
 @media screen and (max-width: 1400px) {
   .tabs-nav {
     margin-bottom: 60px;
+    width: 100%;
+    white-space: nowrap;
+    overflow-y: hidden;
   }
 }
 .tabs-nav:before {
