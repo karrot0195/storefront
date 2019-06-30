@@ -383,7 +383,7 @@
   background-color: #f6f6f6;
 }
 .storefront-product-detail.single-product div.product .summary {
-  padding: 90px 0 40px;
+  padding: 90px 0 15px;
 }
 .storefront-product-detail.single-product div.product .woocommerce-product-gallery {
   padding-bottom: 90px;
