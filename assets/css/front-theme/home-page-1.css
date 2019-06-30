@@ -939,12 +939,12 @@ a:hover {
   cursor: pointer;
 }
 .wrap-product-item .fm-sl-cart .block-number {
-  display: inline;
-}
-.wrap-product-item .fm-sl-cart .block-number input {
-  padding: 15px;
-  text-align: center;
-  max-width: 45px;
+  min-height: 16px;
+  width: 40px;
+  color: #153374;
+  padding: 14px;
+  background: white;
+  border: 1px solid #153374;
 }
 .wrap-product-item .fm-sl-cart .value-button {
   display: inline;

@@ -20,7 +20,7 @@ class LoopProductItemHelper {
                      <i class="icon ion-md-remove"></i> 
                 </div>
                 <div class="block-number">
-                    <input type="number" id="number" name="number" value="$total" readonly/>
+                    <div id="number"><div class="val">$total</div></div>
                 </div>
                 <div class="value-button js-cart-btn" data-val="1" id="increase" value="Increase Value">
                     <i class="icon ion-md-add"></i>  
