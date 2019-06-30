@@ -1,13 +1,6 @@
 (function($) {
   setTimeout(function() {
-    $('.js-block-write-comment').on('click', function() {
-      console.log(123);
-      $('#review_form_wrapper').toggle();
-    });
-
-
-    if ( $('.fm-detail-cart .js-detail-cart-btn').length) {
-      $('.fm-detail-cart .js-detail-cart-btn').on('click', function () {
+      $(document).on('click', '.fm-detail-cart .js-detail-cart-btn', function () {
           const parent = $(this).parents('.fm-detail-cart');
           const self = $(this);
           const val = parseInt($(this).data('val'));
@@ -20,7 +13,7 @@
           }
       });
 
-      $('.fm-detail-cart .js-btn-add-to-cart').on('click', function () {
+      $(document).on('click', '.fm-detail-cart .js-btn-add-to-cart',  function () {
         const self = $(this);
         if (!self.hasClass('proccess')) {
           const parent = $(this).parents('.fm-detail-cart');
@@ -42,7 +35,6 @@
           }
         }
       });
-    }
 
   }, 100);
 })(jQuery);

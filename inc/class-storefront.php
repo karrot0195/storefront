@@ -331,6 +331,9 @@ if ( ! class_exists( 'Storefront' ) ) :
             // js for product detail
             if (is_singular('product')) {
                 wp_enqueue_script( 'storefront-js-product_detail', get_template_directory_uri() . '/assets/js/front-theme/product-detail.js', ['jquery'], $storefront_version );
+                wp_enqueue_script( 'storefront-js-product_detail--popup_review', get_template_directory_uri() . '/assets/js/front-theme/product-detail--popup_review.js', ['jquery'], $storefront_version );
+
+                wp_enqueue_style( 'storefront-style-product_detail--popup-review', get_template_directory_uri() . '/assets/css/front-theme/product-detail--popup_review.css', '', $storefront_version );
                 wp_enqueue_style( 'storefront-style-product_detail', get_template_directory_uri() . '/assets/css/front-theme/product-detail.css', '', $storefront_version );
             }
         }
