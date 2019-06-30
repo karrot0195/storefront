@@ -656,7 +656,7 @@ button:hover .fa-play:before {
   list-style: none;
   display: flex;
   justify-content: center;
-  width: 355px;
+  max-width: 355px;
   margin: 0 auto;
   padding-bottom: 22px;
   padding-left: 0;
@@ -670,7 +670,7 @@ button:hover .fa-play:before {
 }
 @media screen and (max-width: 992px) {
   .tabs-nav {
-    width: 100%;
+    width: auto;
     margin-bottom: 40px;
   }
 }
