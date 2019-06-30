@@ -1032,12 +1032,14 @@ a:hover {
   cursor: pointer;
 }
 .wrap-product-item .fm-sl-cart .block-number {
-  min-height: 16px;
-  width: 40px;
+  min-height: 20px;
+  width: 60px;
   color: #153374;
   padding: 14px;
   background: white;
   border: 1px solid #153374;
+  border-left: 0;
+  border-right: 0;
 }
 .wrap-product-item .fm-sl-cart .value-button {
   display: inline;
