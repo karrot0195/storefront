@@ -684,6 +684,10 @@
   content: "\f00d";
 }
 /* Cart detail*/
+.storefront-product-detail.single-product div.product .product_meta {
+  padding-top: 45px;
+  border-color: #f6f6f6;
+}
 .storefront-product-detail .woocommerce-product-details__short-description + .wrap-cart .wrap-block.wrap-proccess #number .val {
   font-family: "Barlow", sans-serif;
   font-size: 30px;
@@ -734,7 +738,7 @@
 }
 .storefront-product-detail .wrap-cart {
   position: relative;
-  margin-bottom: 20px;
+  margin-bottom: 45px;
 }
 .storefront-product-detail .wrap-cart .fm-detail-cart {
   display: block;
