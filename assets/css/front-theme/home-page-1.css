@@ -705,17 +705,16 @@ a:hover {
   box-shadow: 0;
 }
 .home-page-1 .slick-prev {
-  left: 0;
+  left: 15px;
+  height: auto;
 }
 .home-page-1 .slick-prev:before,
 .home-page-1 .slick-next:before {
-  color: red;
-}
-.home-page-1 .slick-prev:before {
-  content: "\f3d2";
+  color: #1e1e1e;
   display: inline-block;
   font-family: "Ionicons";
   speak: none;
+  font-size: 30px;
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
@@ -724,8 +723,18 @@ a:hover {
   line-height: 1;
   -webkit-font-smoothing: antialiased;
 }
+.home-page-1 .slick-arrow {
+  z-index: 9;
+}
+.home-page-1 .slick-prev:before {
+  content: "";
+}
+.home-page-1 .slick-next:before {
+  content: "";
+}
 .home-page-1 .slick-next {
-  right: 0;
+  right: 15px;
+  height: auto;
 }
 .home-page-1 .tabs .sub-title,
 .home-page-1 .tabs p {

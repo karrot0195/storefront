@@ -772,19 +772,15 @@ body {
         }
     }
     .slick-prev {
-        left: 0;
+        left: 15px;
+        height: auto;
     }
     .slick-prev:before, .slick-next:before {
-      color: red;
-    }
-    .slick-arrow{
-    }
-
-    .slick-prev:before {
-      content: "\f3d2";
+      color: #1e1e1e;
       display: inline-block;
       font-family: "Ionicons";
       speak: none;
+      font-size: 30px;
       font-style: normal;
       font-weight: normal;
       font-variant: normal;
@@ -793,8 +789,20 @@ body {
       line-height: 1;
       -webkit-font-smoothing: antialiased;
     }
+    .slick-arrow{
+      z-index: 9;
+    }
+
+    .slick-prev:before {
+      content: "";
+      
+    }
+    .slick-next:before{
+      content: "";
+    }
     .slick-next {
-        right: 0
+        right: 15px;
+        height: auto;
     }
     .tabs {
         .sub-title, p {
