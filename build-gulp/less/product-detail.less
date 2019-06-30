@@ -707,87 +707,108 @@
 
 
 /* Cart detail*/
-.wrap-cart {
-  position: relative;
-  margin-bottom: 20px;
-  .wrap-block.wrap-proccess {
-    #number {
-      .val {
-        font-family: "Barlow", sans-serif;
-        font-size: 30px;
-        font-weight: 500;
-        font-style: normal;
-        font-stretch: normal;
-        line-height: 0.48;
-        letter-spacing: 0.9px;
-        text-align: left;
-        color: #5b5b5b;
+.storefront-product-detail { 
+  .wrap-cart {
+    position: relative;
+    margin-bottom: 20px;
+    .wrap-block.wrap-proccess {
+      #number {
+        .val {
+          font-family: "Barlow", sans-serif;
+          font-size: 30px;
+          font-weight: 500;
+          font-style: normal;
+          font-stretch: normal;
+          line-height: 0.48;
+          letter-spacing: 0.9px;
+          text-align: left;
+          color: #5b5b5b;
+        }
+      }
+      .value-button {
+        i {
+          font-family: "Barlow", sans-serif;
+          font-size: 30px;
+          font-weight: normal;
+          font-style: normal;
+          font-stretch: normal;
+          line-height: 0.39;
+          letter-spacing: 1.1px;
+          text-align: left;
+          color: #8e8d8d;
+        }
       }
     }
-    .value-button {
-      i {
-        font-family: "Barlow", sans-serif;
-        font-size: 30px;
-        font-weight: normal;
-        font-style: normal;
-        font-stretch: normal;
-        line-height: 0.39;
-        letter-spacing: 1.1px;
-        text-align: left;
-        color: #8e8d8d;
-      }
-    }
-  }
-  
-  .fm-detail-cart {
-    display: block;
-    text-align: center;
-    min-width: 100px;
-    .wrap-block {
-      display: flex;
-      align-items: center;
-    }
-
-    .block-number {
-      min-height: 16px;
-      width: 40px;
-      padding: 14px;
-    }
-
-    .btn-add-to-cart {
-      margin-left: 20px;
-      background-color: #142d73;
-      padding: 15px 20px;
-      font-size: 16px;
-      font-weight: 400;
-      line-height: 1.65;
-      letter-spacing: 0.5px;
+    
+    .fm-detail-cart {
+      display: block;
       text-align: center;
-      color: #ffffff;
-      cursor: pointer;
-      border-radius: 35px;
-      font-family: "Barlow", sans-serif;
-      min-width: 140px;
-      text-transform: uppercase;
-
-      &.proccess {
-        background-color: #ffffff;
-        color: #0f1972;
+      min-width: 100px;
+      .wrap-block {
+        display: flex;
+        align-items: center;
       }
-    }
-
-    .value-button {
-      padding: 15px 20px;
-      cursor: pointer;
-
-      &#increase {
-        border-bottom-right-radius: 20px;
-        border-top-right-radius: 20px;
+  
+      .block-number {
+        min-height: 16px;
+        width: 40px;
+        padding: 14px;
       }
-
-      &#decrease {
-        border-bottom-left-radius: 20px;
-        border-top-left-radius: 20px;
+  
+      .btn-add-to-cart {
+        margin-left: 20px;
+        background-color: #142d73;
+        padding: 15px 20px;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 1.65;
+        letter-spacing: 0.5px;
+        text-align: center;
+        min-width: 100px;
+        .wrap-block {
+          display: flex;
+        }
+        .block-number {
+          min-height: 16px;
+          width: 40px;
+          padding: 14px;
+        }
+  
+        .btn-add-to-cart {
+          margin-left: 20px;
+          background-color: #142d73;
+          padding: 15px 20px;
+          border-radius: 20px;
+          font-family: Barlow;
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 1.65;
+          letter-spacing: 0.5px;
+          text-align: center;
+          min-width: 90px;
+          color: #ffffff;
+          cursor: pointer;
+  
+          &.proccess {
+            background-color: #ffffff;
+            color: #0f1972;
+          }
+        }
+  
+        .value-button {
+          padding: 15px 20px;
+          cursor: pointer;
+  
+          &#increase {
+            border-bottom-right-radius: 20px;
+            border-top-right-radius: 20px;
+          }
+  
+          &#decrease {
+            border-bottom-left-radius: 20px;
+            border-top-left-radius: 20px;
+          }
+        }
       }
     }
   }
