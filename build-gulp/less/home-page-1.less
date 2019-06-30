@@ -292,7 +292,7 @@ body {
   .footer-widget-1 {
     width:  25%;
   }
-  .footer-widget- {
+  .footer-widget-3 {
     flex-grow: 1;
   }
   .footer-widget-4 {
@@ -301,6 +301,7 @@ body {
       i {
         vertical-align: middle;
         padding-right: 8px;
+        font-size: 25px;
         &.fa-arrow-right {
             padding-left: 0px;
             @media screen and (min-width: 1440px) {
@@ -772,19 +773,15 @@ body {
         }
     }
     .slick-prev {
-        left: 0;
+        left: 15px;
+        height: auto;
     }
     .slick-prev:before, .slick-next:before {
-      color: red;
-    }
-    .slick-arrow{
-    }
-
-    .slick-prev:before {
-      content: "\f3d2";
+      color: #1e1e1e;
       display: inline-block;
       font-family: "Ionicons";
       speak: none;
+      font-size: 30px;
       font-style: normal;
       font-weight: normal;
       font-variant: normal;
@@ -793,8 +790,24 @@ body {
       line-height: 1;
       -webkit-font-smoothing: antialiased;
     }
+    .slick-arrow{
+      z-index: 9;
+    }
+
+    .slick-prev:before {
+      content: "";
+      
+    }
+    .slick-next:before{
+      content: "";
+    }
     .slick-next {
-        right: 0
+        right: 15px;
+        height: auto;
+    }
+
+    .ion-md-arrow-round-forward:before {
+
     }
     .tabs {
         .sub-title, p {
@@ -832,6 +845,36 @@ body {
         text-align: left;
         color: #222222;
         text-transform: capitalize;
+    }
+    &.single-product div.product .woocommerce-product-gallery .woocommerce-product-gallery__trigger {
+      width: 60px;
+      border-radius: 50%;
+      height: 60px;
+      background-color: rgba(255,255,255,0.9);
+      position: relative;
+      &::before {
+        content: "";
+        display: inline-block;
+        vertical-align: middle;
+        font-family: "Ionicons";
+        speak: none;
+        font-size: 25px;
+        font-style: normal;
+        font-weight: normal;
+        font-variant: normal;
+        text-transform: none;
+        text-rendering: auto;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        line-height: 1;
+        position: absolute;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+      img {
+        visibility: hidden;
+      }
     }
     .woocommerce-product-details__short-description {
         p {
@@ -974,6 +1017,12 @@ body {
     .container {
         max-width: 1400px;
     }
+}
+
+@media screen and (min-width: 1560px) {
+  .container {
+    max-width: 1600px;
+  }
 }
 
 

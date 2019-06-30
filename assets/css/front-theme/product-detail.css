@@ -342,7 +342,7 @@
 .storefront-product-detail .block-bookmark {
   position: absolute;
   top: 90px;
-  right: 0;
+  right: 60px;
 }
 .storefront-product-detail .block-bookmark .block-share {
   margin-top: 15px;
@@ -525,11 +525,14 @@
 .storefront-product-detail fieldset legend {
   background-color: transparent;
 }
+.storefront-product-detail .wrap-description .title {
+  margin-bottom: 20px;
+}
 .storefront-product-detail .wrap-description .title-1 {
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 .storefront-product-detail .wrap-description .title-2 {
-  margin: 60px 0 30px;
+  margin: 60px 0 20px;
 }
 .storefront-product-detail .moreless-button {
   font-size: 15px;
@@ -558,4 +561,30 @@
 }
 .storefront-product-detail .woocommerce-Price-currencySymbol {
   padding-right: 8px;
+}
+.block-like > i {
+  display: none;
+}
+.block-like {
+  cursor: pointer;
+  height: 50px;
+  width: 50px;
+  background-image: url('https://abs.twimg.com/a/1446542199/img/t1/web_heart_animation.png');
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: 2900%;
+}
+.block-like:hover {
+  background-position: right;
+}
+.is_animating {
+  animation: heart-burst 0.8s steps(28) 1;
+}
+@keyframes heart-burst {
+  from {
+    background-position: left;
+  }
+  to {
+    background-position: right;
+  }
 }
