@@ -740,6 +740,9 @@ a:hover {
   outline: none;
   box-shadow: 0;
 }
+.home-page-1 .slick-dots {
+  bottom: - 45px;
+}
 .home-page-1 .slick-prev {
   left: 0px;
   height: auto;
