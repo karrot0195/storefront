@@ -581,6 +581,13 @@ body.page-template-template-home1 {
   border: 4px solid #fff;
   border-radius: 50%;
 }
+@media screen and (min-width: 1360px) {
+  .videoPoster .fa-play {
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+  }
+}
 .videoPoster .fa-play:before {
   color: #aaabaa;
   -webkit-text-stroke: 4px #fff;
