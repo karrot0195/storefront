@@ -507,7 +507,7 @@
 }
 .storefront-product-detail #reviews .commentlist li {
   margin-bottom: 0;
-  padding: 40px 0 20px;
+  padding: 40px 0 35px;
   border-bottom: 1px solid #d1d1d1;
 }
 .storefront-product-detail #reviews .commentlist li:last-child {
