@@ -4,6 +4,46 @@
       console.log(123);
       $('#review_form_wrapper').toggle();
     });
+
+
+    if ( $('.fm-detail-cart .js-detail-cart-btn').length) {
+      $('.fm-detail-cart .js-detail-cart-btn').on('click', function () {
+          const parent = $(this).parents('.fm-detail-cart');
+          const self = $(this);
+          const val = parseInt($(this).data('val'));
+          const productId = parent.data('product_id');
+          const $input = parent.find('#number .val');
+          let total = parseInt($input.html());
+          if (total + val >= 0) {
+            total = total + val;
+            $input.html(total);
+          }
+      });
+
+      $('.fm-detail-cart .js-btn-add-to-cart').on('click', function () {
+        const self = $(this);
+        if (!self.hasClass('proccess')) {
+          const parent = $(this).parents('.fm-detail-cart');
+          const total = parent.find('#number .val').html();
+          const productId = parent.data('product_id');
+
+          if (total >= 0) {
+            setItemCart(productId, total, function(res) {
+              if (res.success) {
+                let text = self.html();
+                self.html('DONE');
+                self.addClass('proccess');
+                setTimeout(() => {
+                  self.html(text);
+                self.removeClass('proccess');
+              }, 4000);
+              }
+            });
+          }
+        }
+      });
+    }
+
   }, 100);
 })(jQuery);
 
