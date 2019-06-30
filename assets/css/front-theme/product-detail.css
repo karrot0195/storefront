@@ -30,6 +30,11 @@
   align-items: center;
   margin-bottom: 50px;
 }
+@media screen and (max-width: 767px) {
+  .storefront-product-detail .block-comment-header {
+    margin-bottom: 30px;
+  }
+}
 .storefront-product-detail .woocommerce-Reviews-title,
 .storefront-product-detail .block-view-all {
   display: block;
@@ -281,6 +286,11 @@
   float: none;
   text-align: left;
   margin-top: 20px;
+}
+@media screen and (max-width: 767px) {
+  .storefront-product-detail #reviews .commentlist li .comment_container .comment-text .star-rating {
+    margin-top: 10px;
+  }
 }
 .storefront-product-detail .review-title {
   font-family: "Barlow", sans-serif;
@@ -585,6 +595,11 @@
 }
 .storefront-product-detail .wrap-description .title-2 {
   margin: 60px 0 20px;
+}
+@media screen and (max-width: 767px) {
+  .storefront-product-detail .wrap-description .title-2 {
+    margin: 40px 20px;
+  }
 }
 .storefront-product-detail .moreless-button {
   font-size: 15px;
