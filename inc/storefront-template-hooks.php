@@ -166,7 +166,25 @@ function get_all_quantity_item() {
     return $total;
 }
 
-function set_item_from_cart() {
+
+// AJAX
+function my_enqueue() {
+    wp_enqueue_script( 'ajax-script', get_template_directory_uri() . '/assets/js/ajax-gobal.js', array('jquery') );
+    wp_localize_script( 'ajax-script', 'my_ajax_object',
+        array( 'ajax_url' => admin_url( 'admin-ajax.php' ) ) );
+}
+
+add_action( 'wp_enqueue_scripts', 'my_enqueue' );
+
+// ajax wc set cart
+add_action('wp_ajax_set_item_from_cart', 'ajax_set_item_from_cart');
+add_action('wp_ajax_nopriv_set_item_from_cart', 'ajax_set_item_from_cart');
+
+// ajax get product by text
+add_action('wp_ajax_search_product', 'ajax_search_product');
+add_action('wp_ajax_nopriv_search_product', 'ajax_search_product');
+
+function ajax_set_item_from_cart() {
     $cart = WC()->instance()->cart;
     $result = [
         'success' => false
@@ -192,14 +210,74 @@ function set_item_from_cart() {
     die;
 }
 
-add_action('wp_ajax_set_item_from_cart', 'set_item_from_cart');
-add_action('wp_ajax_nopriv_set_item_from_cart', 'set_item_from_cart');
+function ajax_search_product() {
+    try {
+        $result = [
+            'success' => false,
+            'data' => [],
+            'html' => ''
+        ];
 
-function my_enqueue() {
+        $text = isset($_POST['text']) ? $_POST['text'] : '';
+        $result['data'] = getProductByText($text);
+        if (!empty($result['data'])) {
+            foreach ($result['data'] as $item) {
+                $thumbnail_url = $item['thumbnail_url'];
+                $permalink = $item['permalink'];
+                $title = $item['title'];
+                $result['html'] .= <<<HTML
+  <div class="wrap-item">
+                        <div class="block-thumbnail">
+                            <a href="">
+                                <img width="100%" src="$thumbnail_url" alt="$title">
+                            </a>
+                        </div>
+                        <div class="block-title">
+                            <a href="$permalink">$title</a>
+                        </div>
+                    </div>
+HTML;
 
-    wp_enqueue_script( 'ajax-script', get_template_directory_uri() . '/js/my-ajax-script.js', array('jquery') );
-
-    wp_localize_script( 'ajax-script', 'my_ajax_object',
-        array( 'ajax_url' => admin_url( 'admin-ajax.php' ) ) );
+            }
+        }
+        $result['success'] = true;
+    } catch (Exception $e) {}
+    header('Content-Type: application/json');
+    echo json_encode($result);
+    die;
 }
-add_action( 'wp_enqueue_scripts', 'my_enqueue' );
+
+function getProductByText($text='', $number=4) {
+    $arr = [];
+    $posts = get_posts([
+        'post_type' => 'product',
+        'numberposts' =>  -1
+    ]);
+    $idx = 0;
+    while($idx < count($posts) && count($arr) < $number) {
+        $row = [];
+        $isCheck = false;
+
+        if (!empty($text)) {
+            $t1 = convert_text_2_key($text);
+            $title = convert_text_2_key($posts[$idx]->post_title);
+            preg_match('/'.$t1.'/', $title, $matches);
+            if (!empty($matches)) {
+                $isCheck = true;
+            }
+        } else {
+            $isCheck = true;
+        }
+        if ($isCheck) {
+            $row['ID'] = $posts[$idx]->ID;
+            $row['title'] = $posts[$idx]->post_title;
+            $row['permalink'] = get_permalink($posts[$idx]->ID);
+            $row['thumbnail_url'] = get_the_post_thumbnail_url($posts[$idx]->ID);
+            $arr[] = $row;
+        }
+
+        $idx ++;
+    }
+
+    return $arr;
+}
