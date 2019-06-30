@@ -688,7 +688,7 @@
   position: relative;
   margin-bottom: 20px;
 }
-.wrap-cart #number .val {
+.wrap-cart .wrap-block.wrap-proccess #number .val {
   font-family: "Barlow", sans-serif;
   font-size: 30px;
   font-weight: 500;
@@ -699,7 +699,7 @@
   text-align: left;
   color: #5b5b5b;
 }
-.wrap-cart .value-button i {
+.wrap-cart .wrap-block.wrap-proccess .value-button i {
   font-family: "Barlow", sans-serif;
   font-size: 30px;
   font-weight: normal;
