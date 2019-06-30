@@ -159,9 +159,9 @@
                 if (res.success) {
                   $('a.footer-cart-contents').html(`<span class="count">${res.total}</span>`);
 
-                  $input.slideToggle('fast', function () {
+                  $input.slideToggle(300, function () {
                     $input.html(total);
-                    $input.slideToggle('slow');
+                    $input.slideToggle(300);
                   });
 
 
