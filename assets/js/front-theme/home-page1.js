@@ -16,6 +16,39 @@
     dots: false,
     arrows: true,
     speed: 500,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+          arrows: false,
+          dots: true,
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          arrows: false,
+          dots: true,
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          arrows: false,
+          dots: true,
+        }
+      }
+      // You can unslick at a given breakpoint now by adding:
+      // settings: "unslick"
+      // instead of a settings object
+    ]
   });
   $('.slider-tab-2').slick({
     dots: false,
@@ -62,6 +95,16 @@
       x.removeClass('active');
     }
   });
+
+
+  /* EFFECT LIKE, SHARE */
+  $('.block-share .fa-share-alt').click(function(){
+    $('.block-share').toggleClass('block-share-click');
+   $('.block-share--conent').toggleClass('block-share--conent-click');
+    $('.block-share--conent li').toggleClass('effect-fb');
+    console.log('hdhc');
+  });
+
 
   $(".block-like").on('click touchstart', function(){
     $(this).toggleClass('is_animating');
