@@ -666,6 +666,12 @@ button:hover .fa-play:before {
     margin-bottom: 30px;
   }
 }
+@media screen and (max-width: 480px) {
+  .tabs-nav {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
 .tabs-nav:before {
   content: '';
   position: absolute;
