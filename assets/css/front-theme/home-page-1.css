@@ -1143,6 +1143,7 @@ a:hover {
   .block.footer-widget-4 {
     width: 49%;
     display: inline-block;
+    vertical-align: top;
   }
   .block.footer-widget-1,
   .block.footer-widget-2 {
