@@ -23,8 +23,8 @@
           slidesToShow: 3,
           slidesToScroll: 3,
           infinite: true,
-          arrows: true,
-          dots: false,
+          arrows: false,
+          dots: true,
         }
       },
       {
