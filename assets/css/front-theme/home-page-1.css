@@ -666,8 +666,6 @@ button:hover .fa-play:before {
 }
 @media screen and (max-width: 480px) {
   .tabs-nav {
-    padding-left: 30px;
-    padding-right: 30px;
     white-space: nowrap;
     overflow-x: scroll;
     overflow-y: visible;
