@@ -82,6 +82,7 @@ body.page-template-template-home1 {
 }
 .home-page-1 .block-notify--element.block-notify--action {
   margin-left: 36px;
+  cursor: pointer;
 }
 .home-page-1 .block-notify--element.block-notify--action i {
   vertical-align: middle;
