@@ -1,13 +1,4 @@
 (function($) {
-  $('.js-btn-slider').on('click', function() {
-    let src = $(this).data('src');
-    $('.js-btn-slider').removeClass('active');
-    $(this).addClass('active');
-    $('img.bg-img').fadeOut(300, function() {
-      $('img.bg-img').attr('src', src);
-    })
-      .fadeIn(300);
-  });
   // Show the first tab by default
   $('.tabs-stage section').hide();
   $('.tabs-stage section:first').show();
@@ -56,36 +47,6 @@
     iframe.attr('src', src);
   }
 
-  let isProcessing = false;
-  $('.js-cart-btn').on('click', function () {
-    if (!isProcessing) {
-      isProcessing = true;
-      try {
-        const parent = $(this).parents('.fm-sl-cart');
-        const self = $(this);
-        const val = parseInt($(this).data('val'));
-        const productId = parent.data('product_id');
-        let total = parseInt(parent.find('input[name=number]').val());
-        if (total + val >= 0) {
-          total = total + val;
-          setItemCart(productId, total, function (res) {
-            if (res.success) {
-              $('a.footer-cart-contents').html(`<span class="count">${res.total}</span>`);
-              parent.find('input[name=number]').val(total);
-              if (total == 0) {
-                parent.removeClass('proccessing');
-              } else {
-                parent.addClass('proccessing');
-              }
-            }
-            isProcessing = false;
-          });
-        }
-      } catch (e) {
-        isProcessing = false;
-      }
-    }
-  });
   $('.moreless-button').click(function() {
     // $('.description').removeClass('active');
     var x = $(this).parent().find('.description');
@@ -103,17 +64,77 @@
   });
 })(jQuery);
 
+
+/* CUSTOM EVENT */
+(function($) {
+
+  // [HOME PAGE] COOKIE
+    if ($('.js-requirecookie').length > 0) {
+      const $container = $('.js-requirecookie').parents('.container');
+      $('.js-requirecookie').on('click', () => {
+        $container.fadeOut(300);
+      });
+  }
+
+
+  // [HOME PAGE] EVENT SLIDER
+  $('.js-btn-slider').on('click', function() {
+    let src = $(this).data('src');
+    $('.js-btn-slider').removeClass('active');
+    $(this).addClass('active');
+    $('img.bg-img').fadeOut(300, function() {
+      $('img.bg-img').attr('src', src);
+    })
+      .fadeIn(300);
+  });
+
+  // [SHOP] BUTTON CART
+    if ( $('.js-cart-btn').length) {
+      let isProcessing = false;
+      $('.js-cart-btn').on('click', function () {
+        if (!isProcessing) {
+          isProcessing = true;
+          try {
+            const parent = $(this).parents('.fm-sl-cart');
+            const self = $(this);
+            const val = parseInt($(this).data('val'));
+            const productId = parent.data('product_id');
+            let total = parseInt(parent.find('input[name=number]').val());
+            if (total + val >= 0) {
+              total = total + val;
+              setItemCart(productId, total, function (res) {
+                if (res.success) {
+                  $('a.footer-cart-contents').html(`<span class="count">${res.total}</span>`);
+                  parent.find('input[name=number]').val(total);
+                  if (total == 0) {
+                    parent.removeClass('proccessing');
+                  } else {
+                    parent.addClass('proccessing');
+                  }
+                }
+                isProcessing = false;
+              });
+            }
+          } catch (e) {
+            isProcessing = false;
+          }
+        }
+      });
+    }
+}(jQuery));
+
 window.setItemCart = function(product_id, quantity, callback) {
-  jQuery.ajax({
-    url: my_ajax_object.ajax_url,
-    data: {
-      'action' : 'set_item_from_cart',
-      'product_id': product_id,
-      'quantity': quantity
-    },
-    method: 'post'
-  }).then(res => {
-    callback(res);
-});
+    jQuery.ajax({
+      url: my_ajax_object.ajax_url,
+      data: {
+        'action' : 'set_item_from_cart',
+        'product_id': product_id,
+        'quantity': quantity
+      },
+      method: 'post'
+    }).then(res => {
+      callback(res);
+  });
 };
 
+/* END CUSTOM */
