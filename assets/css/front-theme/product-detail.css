@@ -730,7 +730,7 @@
   margin-left: 20px;
   background-color: #142d73;
   padding: 15px 20px;
-  border-radius: 20px;
+  border-radius: 35px;
   font-family: "Barlow", sans-serif;
   font-size: 16px;
   font-weight: 400;
@@ -740,6 +740,7 @@
   min-width: 130px;
   color: #ffffff;
   cursor: pointer;
+  text-transform: uppercase;
 }
 .storefront-product-detail .wrap-cart .fm-detail-cart .btn-add-to-cart.proccess {
   background-color: #ffffff;
