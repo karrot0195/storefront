@@ -695,6 +695,7 @@
 }
 .wrap-cart .fm-detail-cart .wrap-block {
   display: flex;
+  align-items: center;
 }
 .wrap-cart .fm-detail-cart .block-number {
   min-height: 16px;
