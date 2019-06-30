@@ -199,7 +199,7 @@ body.page-template-template-home1 {
   position: relative;
 }
 .home-page-1 .site-content .block-content .slider--item .block-desc {
-  width: 590px;
+  max-width: 590px;
   font-family: "Barlow", sans-serif;
   font-size: 63px;
   font-weight: 500;
@@ -360,7 +360,7 @@ body.page-template-template-home1 {
   background-repeat: no-repeat;
 }
 .banner-main .banner-title {
-  width: 760px;
+  max-width: 760px;
   font-family: "Barlow", sans-serif;
   font-size: 70px;
   font-weight: 500;
@@ -376,7 +376,7 @@ body.page-template-template-home1 {
 @media screen and (max-width: 992px) {
   .banner-main .banner-title {
     font-size: 50px;
-    width: 80%;
+    max-width: 80%;
     padding: 120px 0 200px;
   }
 }
