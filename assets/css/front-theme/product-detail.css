@@ -686,7 +686,6 @@
 /* Cart detail*/
 .storefront-product-detail.single-product div.product .product_meta {
   padding-top: 45px;
-  border-color: #f6f6f6;
 }
 .storefront-product-detail .woocommerce-product-details__short-description + .wrap-cart .wrap-block.wrap-proccess #number .val {
   font-family: "Barlow", sans-serif;
