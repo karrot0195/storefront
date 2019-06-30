@@ -761,6 +761,12 @@
 
 /* Cart detail*/
 .storefront-product-detail {
+  .block-process {
+    display: flex;
+    @media screen and (max-width: 767px) {
+      justify-content: center;
+    }
+  }
   &.single-product div.product .product_meta {
     padding-top: 45px;
   }
@@ -770,7 +776,7 @@
       margin-top: 40px;
       .fm-detail-cart .wrap-block {
         display: block;
-        text-align: left;
+        text-align: center;
       }
       .wrap-block.wrap-proccess {
         #number {
