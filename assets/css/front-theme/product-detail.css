@@ -607,6 +607,8 @@
   z-index: 1;
   padding: 7px 0;
   color: #aab8c2;
+  width: 30px;
+  height: 30px;
 }
 .block-bookmark .block-share .block-share--conent {
   position: absolute;
