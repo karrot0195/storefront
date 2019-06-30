@@ -579,7 +579,7 @@ body.page-template-template-home1 {
 }
 .videoPoster .fa-play {
   font-size: 3em;
-  padding: 60px;
+  width: 60px;
   height: 60px;
   line-height: 60px;
   border: 4px solid #fff;
