@@ -55,7 +55,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 					do_action( 'woocommerce_review_before_comment_meta', $comment );
 					?>
 				</div>
-				<i class="far fa-check-circle"></i>
+				<i class="icon ion-md-checkmark-circle"></i>
 			</div>
 			<?php
             // title comment
@@ -67,15 +67,17 @@ if ( ! defined( 'ABSPATH' ) ) {
 				echo "<div class='review-title'>$title</div>";
 
 				do_action( 'woocommerce_review_before_comment_text', $comment );
-
 				/**
 				 * The woocommerce_review_comment_text hook
 				 *
 				 * @hooked woocommerce_review_display_comment_text - 10
 				 */
 				do_action( 'woocommerce_review_comment_text', $comment );
+				
+				do_action( 'woocommerce_review_after_comment_text', $comment ); 
+				echo "<span class='moreless-button'>Read more</span>";
+				?>
 
-				do_action( 'woocommerce_review_after_comment_text', $comment ); ?>
 			</div>
 
 		</div>

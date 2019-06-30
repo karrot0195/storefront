@@ -31,9 +31,40 @@
     height: 54px;
   }
 
+  .block-comment-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+  }
+
   .woocommerce-Reviews-title,
   .block-view-all {
-    display: none;
+    display: block;
+  }
+  .woocommerce-Reviews-title{
+    font-family: "Barlow", sans-serif;
+    font-size: 26px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 0.62;
+    letter-spacing: normal;
+    text-align: left;
+    color: #222222;
+    margin-right: 25px;
+  }
+
+  .block-view-all {
+    font-family: "Barlow", sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 0.56;
+    letter-spacing: 0.36px;
+    text-align: left;
+    color: #777777;
+    flex-grow: 1;
   }
 
   #reviews #comments {
@@ -93,6 +124,7 @@
     margin: 0 auto;
     padding: 30px;
     border: 1px solid  #0f1972;
+    margin-top:40px;
     label {
       font-weight: bold;
     }
@@ -218,7 +250,7 @@
   }
   #reviews .commentlist li p.meta strong {
     font-family: "Barlow", sans-serif;
-    font-size: 20px;
+    font-size: 15px;
     font-weight: bold;
     font-style: normal;
     font-stretch: normal;
@@ -226,6 +258,11 @@
     letter-spacing: 0.4px;
     text-align: left;
     color: #222222;
+    display: block;
+    max-width: 140px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
 
   #reviews .commentlist li p.meta time {
@@ -265,22 +302,25 @@
     clear: both;
   }
   .review-left {
-    margin-right: 50px;
+    flex-basis: 11rem;
     min-width: 125px;
     i {
       display: inline-block;
       vertical-align: -webkit-baseline-middle;
       &::before {
-        background-color: #51a011;
-        color: #fff;
+        background-color: white;
+        color: #51a011;
         border-radius: 50%;
-        font-size: 15px;
+        font-size: 20px;
       }
     }
   }
   .block-review-left {
     display: inline-block;
-    vertical-align: text-top;
+    vertical-align: top;
+  }
+  table tbody td {
+    background-color: transparent;
   }
   .description {
     p {
@@ -304,7 +344,7 @@
 
   .block-bookmark {
     position: absolute;
-    top: 0;
+    top: 90px;
     right: 0;
     .block-share {
       margin-top: 15px;
@@ -342,13 +382,14 @@
   }
   #review_form_wrapper {
     padding-bottom: 60px;
+    display: none;
   }
   .site-content {
     background-color: #f6f6f6;
   }
 
   &.single-product div.product .summary {
-    padding: 90px 0;
+    padding: 90px 0 40px;
   }
   &.single-product div.product .woocommerce-product-gallery {
     padding-bottom: 90px;
@@ -372,5 +413,159 @@
     color: #333333;
     display: inline;
     margin-right: 15px;
+  }
+  .wrap-description::-webkit-scrollbar {
+      background-color:#fff;
+      width:16px
+  }
+
+  /* background of the scrollbar except button or resizer */
+  .wrap-description::-webkit-scrollbar-track {
+      background-color:#fff
+  }
+  .wrap-description::-webkit-scrollbar-track:hover {
+      background-color:#f4f4f4
+  }
+
+  /* scrollbar itself */
+  .wrap-description::-webkit-scrollbar-thumb {
+      background-color:#babac0;
+      border-radius:16px;
+      border:5px solid #fff
+  }
+  .wrap-description::-webkit-scrollbar-thumb:hover {
+      background-color:#a0a0a5;
+      border:4px solid #f4f4f4
+  }
+
+  /* set button(top and bottom of the scrollbar) */
+  .scrollbar::-webkit-scrollbar-button {display:none}
+  .wrap-description {
+    height: 260px;
+    overflow-y: scroll;
+    
+    h2 {
+      font-family: "Barlow", sans-serif;
+      font-size: 16px;
+      font-weight: 600;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: 0.98;
+      letter-spacing: 0.66px;
+      text-align: left;
+      color: #000000;
+      text-transform: uppercase;
+    }
+    p {
+      font-family: "Barlow", sans-serif;
+      font-size: 15px;
+      font-weight: normal;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: 1.57;
+      letter-spacing: 0.42px;
+      text-align: left;
+      color: #202020;
+    }
+  }
+  .woocommerce-product-attributes-item__value {
+    p {
+      font-family: "Barlow", sans-serif;
+      font-size: 16px;
+      font-weight: normal;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: 0.98;
+      letter-spacing: normal;
+      text-align: left;
+      color: #202020;
+    }
+  }
+  .wrap-additional_information {
+    clear: both;
+    flex-basis: 15em;
+  }
+  .wrap-container-description {
+    display: flex;
+    clear: both;
+    padding-bottom: 60px;
+    padding-top: 60px;
+    z-index: 1;
+    position: relative;
+    &::before {
+      content: '';
+      position: absolute;
+      width: 200%;
+      height: 100%;
+      top: 0;
+      z-index: -1;
+      left: -500px;
+      background-color: #fbfbfb;
+    }
+  }
+
+  .woocommerce-Reviews {
+    padding: 70px 0 50px;
+    z-index: 1;
+    position: relative;
+    &::before {
+      content: '';
+      position: absolute;
+      width: 200%;
+      height: 100%;
+      top: 0;
+      z-index: -1;
+      left: -500px;
+      background-color: #ffff;
+    }
+  }
+  #reviews .commentlist li {
+    margin-bottom: 0;
+    padding: 40px 0 20px;
+    border-bottom: 1px solid #d1d1d1;
+    &:last-child {
+      border: 0;
+      padding-bottom: 0;
+    }
+    &:first-child {
+      padding-top: 0;
+    }
+  }
+
+  table tbody tr:nth-child(2n) td, fieldset, fieldset legend {
+    background-color: transparent;
+  }
+  .wrap-description {
+    .title-1 {
+      margin-bottom: 30px;
+    }
+    .title-2 {
+      margin: 60px 0 30px;
+    }
+  }
+  .moreless-button {
+    font-size: 15px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.57;
+    letter-spacing: 0.42px;
+    text-align: left;
+    cursor: pointer;
+    color: #222222;
+    text-decoration: underline;
+    font-family: "Barlow", sans-serif;
+  }
+
+  .comment-text {
+    .description {
+      height: 40px;
+      overflow: hidden;
+      transition: height 0.3s ease;
+      &.active {
+        height: auto;
+        overflow: auto;
+      }
+    }
   }
 }

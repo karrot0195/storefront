@@ -51,9 +51,10 @@ get_header('home-1'); ?>
         <div class="container">
             <div class="block-notify">
                 <div class="block-notify--element block-notify--text">
-                    this website use cookies. <a href="#">Learn more</a>
+                    <?= esc_html__('This website use cookies.', 'storefront') ?>
+                    <a href="#learn-more"><?= esc_html__('Learn more', 'storefront') ?></a>
                 </div>
-                <div class="block-notify--element block-notify--action">
+                <div class="block-notify--element block-notify--action js-requirecookie">
                     <i class="fas fa-times"></i>
                 </div>
             </div>
