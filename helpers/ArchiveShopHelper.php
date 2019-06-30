@@ -21,6 +21,7 @@ class ArchiveShopHelper {
         if (!empty($tabs)):
         ?>
         <section class="tab-content">
+            <div class="container">
             <div class="tabs">
                 <ul class="tabs-nav">
                     <?php
@@ -60,6 +61,7 @@ HTML;
                     <?php endforeach; ?>
                 </div>
             </div>
+        </div>
         </section>
 
 <?php endif;
