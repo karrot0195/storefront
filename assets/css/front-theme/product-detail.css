@@ -33,6 +33,7 @@
 @media screen and (max-width: 767px) {
   .storefront-product-detail .block-comment-header {
     margin-bottom: 30px;
+    display: block;
   }
 }
 .storefront-product-detail .woocommerce-Reviews-title,
@@ -62,6 +63,11 @@
   text-align: left;
   color: #777777;
   flex-grow: 1;
+}
+@media screen and (max-width: 767px) {
+  .storefront-product-detail .block-view-all {
+    margin-bottom: 15px;
+  }
 }
 .storefront-product-detail #reviews #comments {
   font-family: "Barlow", sans-serif;
