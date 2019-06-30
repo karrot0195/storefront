@@ -45,6 +45,29 @@ body.modal {
   text-decoration: none;
   cursor: pointer;
 }
+.storefront-product-detail .wrap-back {
+  padding: 40px 100px;
+}
+.storefront-product-detail .wrap-back i {
+  color: #a7a7a7;
+  font-size: 20px;
+  margin-right: 10px;
+}
+.storefront-product-detail .wrap-back a {
+  width: 180px;
+  height: 16px;
+  font-family: "Barlow", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.08;
+  letter-spacing: 0.4px;
+  text-align: left;
+  color: #a7a7a7;
+  text-decoration: none;
+  text-transform: uppercase;
+}
 .storefront-product-detail .wrap-modal .modal-title {
   font-size: 20px;
   font-weight: 600;
