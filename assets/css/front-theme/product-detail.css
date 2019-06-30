@@ -688,9 +688,9 @@
   position: relative;
   margin-bottom: 20px;
 }
-.wrap-cart .number .val {
+.wrap-cart #number .val {
   font-family: "Barlow", sans-serif;
-  font-size: 35px;
+  font-size: 30px;
   font-weight: 500;
   font-style: normal;
   font-stretch: normal;
@@ -701,7 +701,7 @@
 }
 .wrap-cart .value-button i {
   font-family: "Barlow", sans-serif;
-  font-size: 40px;
+  font-size: 30px;
   font-weight: normal;
   font-style: normal;
   font-stretch: normal;
