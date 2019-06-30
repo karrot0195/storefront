@@ -95,7 +95,7 @@
   /* EFFECT LIKE, SHARE */
   $('.block-share .fa-share-alt').click(function(){
     $('.block-share').toggleClass('block-share-click');
-   $('.block-share--conent').toggleClass('test');
+   $('.block-share--conent').toggleClass('block-share--conent-click');
     $('.block-share--conent li').toggleClass('effect-fb');
     console.log('hdhc');
   });
