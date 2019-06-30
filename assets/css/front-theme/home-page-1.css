@@ -387,7 +387,12 @@ body.page-template-template-home1 {
 @media screen and (max-width: 992px) {
   .banner-main .banner-title {
     font-size: 50px;
-    max-width: 80%;
+    width: 80%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .banner-main .banner-title {
+    font-size: 35px;
   }
 }
 /* ------------------ Info Page ------------------- */
@@ -771,6 +776,11 @@ a:hover {
     width: auto;
     font-size: 18px;
     padding-bottom: 45px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .home-page-1 .tabs p {
+    font-size: 14px;
   }
 }
 /* ----------------- 5. Product Detail -------------- */
