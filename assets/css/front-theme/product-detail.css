@@ -715,7 +715,7 @@
   cursor: pointer;
   border-radius: 35px;
   font-family: "Barlow", sans-serif;
-  min-width: 125px;
+  min-width: 140px;
 }
 .wrap-cart .fm-detail-cart .btn-add-to-cart.proccess {
   background-color: #ffffff;
