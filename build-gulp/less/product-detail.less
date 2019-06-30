@@ -707,7 +707,7 @@
 
 
 /* Cart detail*/
-.storefront-product-detail { 
+.storefront-product-detail {
   .wrap-cart {
     position: relative;
     margin-bottom: 20px;
@@ -739,26 +739,24 @@
         }
       }
     }
-    
     .fm-detail-cart {
       display: block;
       text-align: center;
       min-width: 100px;
       .wrap-block {
         display: flex;
-        align-items: center;
       }
-  
       .block-number {
         min-height: 16px;
         width: 40px;
         padding: 14px;
       }
-  
+
       .btn-add-to-cart {
         margin-left: 20px;
         background-color: #142d73;
         padding: 15px 20px;
+        border-radius: 20px;
         font-family: "Barlow", sans-serif;
         font-size: 16px;
         font-weight: 400;
@@ -766,48 +764,27 @@
         letter-spacing: 0.5px;
         text-align: center;
         min-width: 130px;
-        .wrap-block {
-          display: flex;
+        color: #ffffff;
+        cursor: pointer;
+
+        &.proccess {
+          background-color: #ffffff;
+          color: #0f1972;
         }
-        .block-number {
-          min-height: 16px;
-          width: 40px;
-          padding: 14px;
+      }
+
+      .value-button {
+        padding: 15px 20px;
+        cursor: pointer;
+
+        &#increase {
+          border-bottom-right-radius: 20px;
+          border-top-right-radius: 20px;
         }
-  
-        .btn-add-to-cart {
-          margin-left: 20px;
-          background-color: #142d73;
-          padding: 15px 20px;
-          border-radius: 35px;
-          font-family: "Barlow", sans-serif;
-          font-size: 16px;
-          font-weight: 400;
-          line-height: 1.65;
-          letter-spacing: 0.5px;
-          text-align: center;
-          min-width: 90px;
-          color: #ffffff;
-          cursor: pointer;
-          &.proccess {
-            background-color: #ffffff;
-            color: #0f1972;
-          }
-        }
-  
-        .value-button {
-          padding: 15px 20px;
-          cursor: pointer;
-  
-          &#increase {
-            border-bottom-right-radius: 20px;
-            border-top-right-radius: 20px;
-          }
-  
-          &#decrease {
-            border-bottom-left-radius: 20px;
-            border-top-left-radius: 20px;
-          }
+
+        &#decrease {
+          border-bottom-left-radius: 20px;
+          border-top-left-radius: 20px;
         }
       }
     }
