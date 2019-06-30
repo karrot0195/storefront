@@ -45,6 +45,9 @@ body.modal {
   text-decoration: none;
   cursor: pointer;
 }
+.storefront-product-detail .pswp__caption__center {
+  text-align: center;
+}
 .storefront-product-detail .wrap-back {
   padding: 40px 100px;
 }
