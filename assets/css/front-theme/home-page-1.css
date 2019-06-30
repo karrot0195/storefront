@@ -706,6 +706,23 @@ a:hover {
 .home-page-1 .slick-prev {
   left: 0;
 }
+.home-page-1 .slick-prev:before,
+.home-page-1 .slick-next:before {
+  color: red;
+}
+.home-page-1 .slick-prev:before {
+  content: "\f3d2";
+  display: inline-block;
+  font-family: "Ionicons";
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  text-rendering: auto;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+}
 .home-page-1 .slick-next {
   right: 0;
 }
