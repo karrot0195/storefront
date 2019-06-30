@@ -373,7 +373,7 @@ body.page-template-template-home1 {
   font-style: normal;
   font-stretch: normal;
   line-height: 1.31;
-  padding: 273px 0 420px;
+  padding: 204px 0 181px;
   letter-spacing: 2.55px;
   text-align: center;
   margin: 0 auto;
@@ -383,7 +383,7 @@ body.page-template-template-home1 {
   .banner-main .banner-title {
     font-size: 50px;
     max-width: 80%;
-    padding: 120px 0 200px;
+    padding: 120px 0 180px;
   }
 }
 @media screen and (max-width: 767px) {
