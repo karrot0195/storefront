@@ -707,6 +707,23 @@ a:hover {
 .home-page-1 .slick-prev {
   left: 0;
 }
+.home-page-1 .slick-prev:before,
+.home-page-1 .slick-next:before {
+  color: red;
+}
+.home-page-1 .slick-prev:before {
+  content: "\f3d2";
+  display: inline-block;
+  font-family: "Ionicons";
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  text-rendering: auto;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+}
 .home-page-1 .slick-next {
   right: 0;
 }
@@ -917,8 +934,8 @@ a:hover {
   min-width: 90px;
   padding: 15px 10px;
   background-color: #142d73;
-  border-bottom-left-radius: 10px;
-  border-top-left-radius: 10px;
+  border-bottom-left-radius: 20px;
+  border-top-left-radius: 20px;
   cursor: pointer;
 }
 .wrap-product-item .fm-sl-cart .block-number {
@@ -936,12 +953,12 @@ a:hover {
   cursor: pointer;
 }
 .wrap-product-item .fm-sl-cart .value-button#increase {
-  border-bottom-right-radius: 10px;
-  border-top-right-radius: 10px;
+  border-bottom-right-radius: 20px;
+  border-top-right-radius: 20px;
 }
 .wrap-product-item .fm-sl-cart .value-button#decrease {
-  border-bottom-left-radius: 10px;
-  border-top-left-radius: 10px;
+  border-bottom-left-radius: 20px;
+  border-top-left-radius: 20px;
 }
 .wrap-product-item:hover .fm-sl-cart {
   opacity: 1;

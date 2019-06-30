@@ -553,3 +553,9 @@
   height: auto;
   overflow: auto;
 }
+.storefront-product-detail .woocommerce-product-gallery__image {
+  text-align: center;
+}
+.storefront-product-detail .woocommerce-Price-currencySymbol {
+  padding-right: 8px;
+}
