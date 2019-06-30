@@ -174,13 +174,19 @@ function set_item_from_cart() {
     $product_id = $_POST['product_id'];
     $quantity = intval($_POST['quantity']);
 
-    $prod_unique_id = $cart->generate_cart_id( $product_id );
-    unset( $cart->cart_contents[$prod_unique_id] );
 
-    if ($cart->add_to_cart( $product_id, $quantity ) || $quantity == 0) {
-        $result['success'] = true;
-        $result['total'] = get_all_quantity_item();
+    $prod_unique_id = $cart->generate_cart_id( $product_id );
+
+    if (empty($quantity)) {
+        $cart->remove_cart_item($prod_unique_id);
+    } else {
+        unset( $cart->cart_contents[$prod_unique_id] );
+        $cart->add_to_cart( $product_id, $quantity );
     }
+
+    $result['success'] = true;
+    $result['total'] = get_all_quantity_item();
+
     header('Content-Type: application/json');
     echo json_encode($result);
     die;
