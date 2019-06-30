@@ -687,6 +687,10 @@
 .storefront-product-detail.single-product div.product .product_meta {
   padding-top: 45px;
 }
+.storefront-product-detail .woocommerce-product-details__short-description + .wrap-cart {
+  margin-bottom: 45px;
+  margin-top: 40px;
+}
 .storefront-product-detail .woocommerce-product-details__short-description + .wrap-cart .wrap-block.wrap-proccess #number .val {
   font-family: "Barlow", sans-serif;
   font-size: 30px;
@@ -737,8 +741,6 @@
 }
 .storefront-product-detail .wrap-cart {
   position: relative;
-  margin-bottom: 45px;
-  margin-top: 40px;
 }
 .storefront-product-detail .wrap-cart .fm-detail-cart {
   display: block;
