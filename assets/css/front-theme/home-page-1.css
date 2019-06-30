@@ -384,6 +384,12 @@ body.page-template-template-home1 {
   margin: 0 auto;
   color: #333333;
 }
+@media screen and (max-width: 992px) {
+  .banner-main .banner-title {
+    font-size: 50px;
+    max-width: 80%;
+  }
+}
 /* ------------------ Info Page ------------------- */
 .info-page-child {
   display: flex;
@@ -737,7 +743,6 @@ a:hover {
   right: 0px;
   height: auto;
 }
-.home-page-1 .tabs .sub-title,
 .home-page-1 .tabs p {
   font-family: "Barlow", sans-serif;
   font-size: 21px;
@@ -753,16 +758,16 @@ a:hover {
   padding-bottom: 107px;
 }
 @media screen and (max-width: 1400px) {
-  .home-page-1 .tabs .sub-title,
   .home-page-1 .tabs p {
     font-size: 21px;
     padding-bottom: 75px;
   }
 }
 @media screen and (max-width: 992px) {
-  .home-page-1 .tabs .sub-title,
   .home-page-1 .tabs p {
     width: auto;
+    font-size: 18px;
+    padding-bottom: 45px;
   }
 }
 /* ----------------- 5. Product Detail -------------- */
