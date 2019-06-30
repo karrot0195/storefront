@@ -66,13 +66,13 @@ if ( post_password_required() ) {
 					<div class="block-share--conent">
 						<ul>
 							<li>
-								<a href="https://www.facebook.com/sharer/sharer.php?u=<?= home_url( $wp->request ) ?>"><i class="fab fa-facebook"></i></a>
+								<a class="icon-fb" href="https://www.facebook.com/sharer/sharer.php?u=<?= home_url( $wp->request ) ?>"><i class="fab fa-facebook-f"></i></a>
 							</li>
 							<li>
-								<a href="https://twitter.com/home?status=<?= home_url( $wp->request ) ?>"><i class="fab fa-twitter"></i></a>
+								<a class="icon-tt" href="https://twitter.com/home?status=<?= home_url( $wp->request ) ?>"><i class="fab fa-twitter"></i></a>
 							</li>
 							<li>
-								<a href="https://plus.google.com/share?url=<?= home_url( $wp->request ) ?>"><i class="fab fa-google-plus-g"></i></a>
+								<a class="icon-gg" href="https://plus.google.com/share?url=<?= home_url( $wp->request ) ?>"><i class="fab fa-google-plus-g"></i></a>
 							</li>
 						</ul>
 					</div>

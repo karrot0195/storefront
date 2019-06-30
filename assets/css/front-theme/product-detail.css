@@ -347,9 +347,6 @@
 .storefront-product-detail .block-bookmark .block-share {
   margin-top: 15px;
 }
-.storefront-product-detail .block-bookmark .block-share ul {
-  display: none;
-}
 .storefront-product-detail .related.products {
   text-align: center;
   padding: 65px 0;
@@ -562,6 +559,7 @@
 .storefront-product-detail .woocommerce-Price-currencySymbol {
   padding-right: 8px;
 }
+/* ---- Effect like, share ----*/
 .block-like > i {
   display: none;
 }
@@ -587,4 +585,145 @@
   to {
     background-position: right;
   }
+}
+.block-bookmark .block-share {
+  width: 30px;
+  height: 30px;
+  background: white;
+  margin: 0 auto;
+  border-radius: 50%;
+  -webkit-box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.3);
+  -webkit-transition: 0.3s all ease;
+  -o-transition: 0.3s all ease;
+  transition: 0.3s all ease;
+  position: relative;
+  text-align: center;
+}
+.block-bookmark .block-share > i {
+  position: relative;
+  z-index: 1;
+  padding: 7px 0;
+  color: #aab8c2;
+}
+.block-bookmark .block-share .block-share--conent {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 30px;
+  height: 30px;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  z-index: 0;
+  opacity: 0;
+  -webkit-transition: 0.3s all ease;
+  -o-transition: 0.3s all ease;
+  transition: 0.3s all ease;
+}
+.block-bookmark .block-share .block-share--conent ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+.block-bookmark .block-share .block-share--conent ul li {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  -webkit-transition: 0.3s all ease;
+  -o-transition: 0.3s all ease;
+  transition: 0.3s all ease;
+}
+.block-bookmark .block-share .block-share--conent ul li a i {
+  width: 25px;
+  height: 25px;
+  border-radius: 50px;
+  -webkit-box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.3);
+  font-size: 14px;
+  line-height: 25px;
+}
+.block-bookmark .block-share .block-share--conent ul li a {
+  color: #ffffff;
+}
+.block-bookmark .block-share .block-share--conent ul li .icon-fb i {
+  background: #0f1972;
+}
+.block-bookmark .block-share .block-share--conent ul li .icon-tt i {
+  background: #00acee;
+}
+.block-bookmark .block-share .block-share--conent ul li .icon-gg i {
+  background: #db4a39;
+}
+.block-bookmark .block-share .block-share--conent ul li:first-child.effect-fb {
+  left: -35px;
+  right: auto;
+  top: -10px;
+}
+.block-bookmark .block-share .block-share--conent ul li:nth-child(2).effect-fb {
+  top: -35px;
+}
+.block-bookmark .block-share .block-share--conent ul li:last-child.effect-fb {
+  right: -35px;
+  left: auto;
+  top: -10px;
+}
+.block-bookmark .block-share .test {
+  opacity: 1;
+}
+.storefront-product-detail .block-bookmark .block-share-click {
+  margin-top: 35px;
+}
+.storefront-product-detail .block-bookmark .block-share-click .fa-share-alt:before {
+  content: "\f00d";
+}
+/* Cart detail*/
+.wrap-cart {
+  position: relative;
+  margin-bottom: 20px;
+}
+.wrap-cart .fm-detail-cart {
+  display: block;
+  text-align: center;
+  min-width: 100px;
+}
+.wrap-cart .fm-detail-cart .wrap-block {
+  display: flex;
+}
+.wrap-cart .fm-detail-cart .block-number {
+  min-height: 16px;
+  width: 40px;
+  padding: 14px;
+}
+.wrap-cart .fm-detail-cart .btn-add-to-cart {
+  margin-left: 20px;
+  background-color: #142d73;
+  padding: 15px 20px;
+  border-radius: 20px;
+  font-family: Barlow;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.65;
+  letter-spacing: 0.5px;
+  text-align: center;
+  min-width: 90px;
+  color: #ffffff;
+  cursor: pointer;
+}
+.wrap-cart .fm-detail-cart .btn-add-to-cart.proccess {
+  background-color: #ffffff;
+  color: #0f1972;
+}
+.wrap-cart .fm-detail-cart .value-button {
+  padding: 15px 20px;
+  cursor: pointer;
+}
+.wrap-cart .fm-detail-cart .value-button#increase {
+  border-bottom-right-radius: 20px;
+  border-top-right-radius: 20px;
+}
+.wrap-cart .fm-detail-cart .value-button#decrease {
+  border-bottom-left-radius: 20px;
+  border-top-left-radius: 20px;
 }
