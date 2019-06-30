@@ -579,13 +579,16 @@ body.page-template-template-home1 {
 }
 .videoPoster .fa-play {
   font-size: 3em;
-  padding: 2.3vw 2.2vw 2.2vw 2.666vw;
+  padding: 60px;
+  height: 60px;
+  line-height: 60px;
   border: 4px solid #fff;
   border-radius: 50%;
 }
 .videoPoster .fa-play:before {
   color: #aaabaa;
   -webkit-text-stroke: 4px #fff;
+  margin-left: 10px;
 }
 .videoPoster:hover {
   cursor: pointer;
