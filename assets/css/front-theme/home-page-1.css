@@ -1243,6 +1243,7 @@ a:hover {
 .home-page-1 .site-header.fixed {
   position: fixed;
   background-color: #fff;
+  z-index: 999;
 }
 .home-page-1 .site-header.fixed .col-full {
   padding: 15px 0;

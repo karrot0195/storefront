@@ -12,6 +12,21 @@
     $('.tabs-stage section').hide();
     $($(this).attr('href')).show();
   });
+
+  // Menu Mobile
+  $('.hamburger-menu').on('click', function(){
+    $('.hamburger-menu .bar').toggleClass('animate');
+    $(this).parent().find('.menu-mobile').toggleClass('open-menu-mobile');
+  });
+
+  // Scroll Menu 
+  $(window).scroll(function(){
+      if ($(this).scrollTop() > 50) {
+        $('.site-header').addClass('fixed');
+      } else {
+        $('.site-header').removeClass('fixed');
+      }
+  });
   $('.slider-tab-1').slick({
     dots: false,
     arrows: true,
