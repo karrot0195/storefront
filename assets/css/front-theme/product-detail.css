@@ -340,6 +340,9 @@
   .storefront-product-detail #reviews .commentlist li .comment_container .comment-text {
     display: block;
   }
+  .storefront-product-detail #reviews .commentlist li .comment_container .comment-text .review-right {
+    margin-top: 30px;
+  }
 }
 .storefront-product-detail #reviews .commentlist {
   padding-left: 0;
