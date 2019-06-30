@@ -336,6 +336,11 @@
 .storefront-product-detail #reviews .commentlist li .comment_container .comment-text {
   display: flex;
 }
+@media screen and (max-width: 480px) {
+  .storefront-product-detail #reviews .commentlist li .comment_container .comment-text {
+    display: block;
+  }
+}
 .storefront-product-detail #reviews .commentlist {
   padding-left: 0;
 }
@@ -480,10 +485,15 @@
   z-index: 1;
   position: relative;
 }
+@media screen and (max-width: 768px) {
+  .storefront-product-detail .wrap-container-description {
+    display: block;
+  }
+}
 .storefront-product-detail .wrap-container-description::before {
   content: '';
   position: absolute;
-  width: 200%;
+  width: 2000%;
   height: 100%;
   top: 0;
   z-index: -1;
@@ -498,7 +508,7 @@
 .storefront-product-detail .woocommerce-Reviews::before {
   content: '';
   position: absolute;
-  width: 200%;
+  width: 2000%;
   height: 100%;
   top: 0;
   z-index: -1;

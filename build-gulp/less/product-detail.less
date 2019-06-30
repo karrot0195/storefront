@@ -337,6 +337,9 @@
   }
   #reviews .commentlist li .comment_container .comment-text {
     display: flex;
+    @media screen and (max-width: 480px) {
+      display: block;
+    }
   }
   #reviews .commentlist {
     padding-left: 0;
@@ -489,10 +492,13 @@
     padding-top: 60px;
     z-index: 1;
     position: relative;
+    @media screen and (max-width: 768px) {
+      display: block;
+    }
     &::before {
       content: '';
       position: absolute;
-      width: 200%;
+      width: 2000%;
       height: 100%;
       top: 0;
       z-index: -1;
@@ -508,7 +514,7 @@
     &::before {
       content: '';
       position: absolute;
-      width: 200%;
+      width: 2000%;
       height: 100%;
       top: 0;
       z-index: -1;
