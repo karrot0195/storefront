@@ -97,6 +97,9 @@ body {
     vertical-align: middle;
     &.block-notify--action {
       margin-left: 36px;
+      @media screen and (max-width: 480px) {
+        margin-left: 30px;
+      }
       cursor: pointer;
       i {
         vertical-align: middle;
@@ -114,8 +117,8 @@ body {
     .col-full {
       max-width: 100%;
       display: flex;
-      padding-top: 42px;
-      padding-bottom: 52px;
+      padding-top: 30px;
+      padding-bottom: 40px;
 
       .site-branding {
         width: 30%;
@@ -289,9 +292,11 @@ body {
   .footer-widget-4 {
     .block-contact-form {
         border-bottom: 1px solid #a7a7a7;
+        display: flex;
+        align-items: center;
       i {
         vertical-align: middle;
-        padding-right: 8px;
+        margin-right: 8px;
         font-size: 25px;
         &.fa-arrow-right {
             padding-left: 0px;
@@ -303,6 +308,7 @@ body {
       img {
         display: inline-block;
         vertical-align: middle;
+        margin-right: 8px;
       }
       input {
         border: 0;
@@ -318,6 +324,7 @@ body {
         vertical-align: middle;
         text-align: left;
         color: #9c9c9c;
+        flex-grow: 1;
         &:focus {
             outline: none;
             box-shadow: 0;
@@ -693,7 +700,7 @@ body {
     list-style: none;
     display: flex;
     justify-content: center;
-    width: 355px;
+    max-width: 355px;
     margin: 0 auto;
     padding-bottom: 22px;
     padding-left: 0;
@@ -703,7 +710,7 @@ body {
         margin-bottom: 60px;
     }
     @media screen and (max-width: 992px) {
-      width: 100%;
+      width: auto;
       margin-bottom: 40px;
     }
     @media screen and (max-width: 480px) {
@@ -711,6 +718,7 @@ body {
       overflow-x: scroll;
       overflow-y: visible;
       margin-bottom: 30px;
+      padding-left: 60px;
     }
     &:before {
      content: '';
@@ -797,7 +805,7 @@ body {
     }
 
     .slick-dots {
-      bottom: - 45px;
+      bottom: -45px;
     }
     .slick-prev {
         left: 0px;
@@ -880,6 +888,9 @@ body {
         text-align: left;
         color: #222222;
         text-transform: capitalize;
+        @media screen and (max-width: 767px) {
+          text-align: center;
+        }
     }
     &.single-product div.product .woocommerce-product-gallery .woocommerce-product-gallery__trigger {
       width: 60px;
@@ -1162,7 +1173,7 @@ body {
 
   .wrap-additional_information {
     padding-top: 10px;
-    padding-left: 25px;
+    padding-left: 0px;
 
     .woocommerce-product-attributes-item__value {
       padding-bottom: 20px;
@@ -1225,6 +1236,10 @@ body {
   .block.footer-widget-4{
       width: 49%;
       display: inline-block;
+      vertical-align: top;
+  }
+  .slick-dots li button:before {
+    font-size: 9px;
   }
   .block.footer-widget-1,
   .block.footer-widget-2{
@@ -1275,5 +1290,170 @@ body {
 @media screen and (max-width: 400px){
   .home-page-1 .site-header .col-full .block-icon-action .list-action li{
     padding-left: 12px;
+  }
+}
+
+// Responsive Menu
+.home-page-1 {
+  .site-header {
+    .col-full {
+      @media screen and (max-width: 992px) {
+        padding: 15px 0;
+      }
+      .menu-desktop {
+        @media screen and (max-width: 992px) {
+          .block-menu,
+          .block-icon-action {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+  .menu-desktop {
+    max-width: 100%;
+    display: flex;
+    width: 100%;
+  }
+  .menu-mobile {
+    display: none;
+    @media screen and (max-width: 992px) {
+      display: block;
+      position: fixed;
+      top: 78px;
+      right: -100%;;
+      max-width: 75%;
+      width: 100%;
+      height: 100vh;
+      z-index: 999;
+      padding-top: 20px;
+      margin-left: 0px;
+      background: #fff;
+      transition: all 0.75s ease;
+      -webkit-transition: all 0.75s ease;
+      -moz-transition: all 0.75s ease;
+      -o-transition: all 0.75s ease;
+      &.open-menu-mobile {
+        right: 0;
+      }
+    }
+  }
+  .site-header {
+    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    &.fixed {
+      position: fixed;
+      background-color: #fff;
+      z-index: 999;
+      .col-full {
+        padding: 15px 0;
+      }
+      @media screen and (max-width: 992px) {
+      }
+    }
+    .col-full {
+      .menu-mobile {
+        .site-branding {
+          display: none;
+        }
+        .block-menu {
+          width: 100%;
+          display: block;
+          float: none;
+          text-align: center;
+          ul {
+            li {
+              display: block;
+              padding-right: 30px;
+              width: 100%;
+              margin-bottom: 30px;
+            }
+          }
+        }
+        .block-icon-action {
+          width: 100%;
+          text-align: center;
+          display: block;
+          .list-action li {
+            display: block;
+            padding-left: 0;
+            margin-bottom: 20px;
+          }
+        }
+      }
+    }
+  }
+  .hamburger-menu {
+    position: absolute;
+    right: 30px;
+    top: 50%;
+    padding: 10px 0;
+    cursor: pointer;
+    z-index: 101;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+    .bar {
+      position: relative;
+      width: 32px;
+      height: 5px;
+      background-color: #020202;
+      transition: bottom 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms cubic-bezier(0.23, 1, 0.32, 1), -webkit-transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
+      &.animate {
+        background: rgba(255, 255, 255, 0) !important;
+        &:before {
+          bottom: 0;
+          -webkit-transform: rotate(-45deg);
+          -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+          transition: bottom 300ms cubic-bezier(0.23, 1, 0.32, 1), -webkit-transform 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1);
+          transition: bottom 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1);
+          transition: bottom 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1), -webkit-transform 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1);
+        }
+        &:after {
+          top: 0;
+          -webkit-transform: rotate(45deg);
+          -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+          transition: top 300ms cubic-bezier(0.23, 1, 0.32, 1), -webkit-transform 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1);
+          transition: top 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1);
+          transition: top 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1), -webkit-transform 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1);
+        }
+      }
+      &:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        width: 32px;
+        height: 5px;
+        bottom: 10px;
+        background-color: #020202;
+        transition: bottom 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1), -webkit-transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
+        transition: bottom 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
+        transition: bottom 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms cubic-bezier(0.23, 1, 0.32, 1), -webkit-transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
+      }
+      &:after {
+        content: "";
+        position: absolute;
+        left: 0;
+        width: 32px;
+        height: 5px;
+        top: 10px;
+        background-color: #020202;
+        transition: top 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1), -webkit-transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
+        transition: top 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
+        transition: top 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms cubic-bezier(0.23, 1, 0.32, 1), -webkit-transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
+      }
+    }
+  }
+  .hamburger-menu {
+    display: none;
+    @media screen and (max-width: 992px) {
+      display: block;
+    }
   }
 }
