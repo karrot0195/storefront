@@ -17,8 +17,8 @@ get_header('home-1'); ?>
             <div class="slider">
                 <?php
                 $gallery = get_field('gallery');
-                $description = get_field('title');
-                $attachmentUrl = wp_get_attachment_url($gallery[0]['background']);
+                $description = isset($gallery[0]['description']) ? $gallery[0]['description'] : '';
+                $attachmentUrl = isset($gallery[0]['background']) ? wp_get_attachment_url($gallery[0]['background']) : '';
                 ?>
                 <div class="slider--item" style="display: block;">
                     <div class="block-img">
@@ -34,9 +34,10 @@ get_header('home-1'); ?>
                                     <?php
                                     $class = 'active';
                                     foreach ($gallery as $attachment) {
-                                        $title = $attachment['title'];
-                                        $attachmentUrl = wp_get_attachment_url($attachment['background']);
-                                        echo "<li><a href='javascript:void(0)' class='js-btn-slider ".$class."' data-src='".esc_url($attachmentUrl)."'>$title</a></li>";
+                                        $title = isset($attachment['title']) ? $attachment['title'] : '';
+                                        $description = isset($attachment['description']) ? $attachment['description'] : '';
+                                        $attachmentUrl = isset($attachment['background']) ? wp_get_attachment_url($attachment['background']) : '';
+                                        echo "<li><a href='javascript:void(0)' class='js-btn-slider ".$class."' data-description='".esc_html($description)."' data-src='".esc_url($attachmentUrl)."'>$title</a></li>";
                                         $class = '';
                                     }
                                     ?>
