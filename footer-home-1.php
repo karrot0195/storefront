@@ -33,12 +33,15 @@
 	</footer><!-- #colophon -->
 
 	<?php do_action( 'storefront_after_footer' ); ?>
-<!--    <div class="wrap-modal">-->
-<!--        <div class="modal-content">-->
-<!--            <span class="close">&times;</span>-->
-<!--            <p>Some text in the Modal..</p>-->
-<!--        </div>-->
-<!--    </div>-->
+    <div class="wrap-modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="modal-title"></div>
+            <div class="modal-content--main">
+                <p>Some text in the Modal..</p>
+            </div>
+        </div>
+    </div>
 </div><!-- #page -->
 
 <?php wp_footer(); ?>

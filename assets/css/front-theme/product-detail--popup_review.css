@@ -1,7 +1,14 @@
+body.modal {
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+}
 .wrap-modal {
+  display: none;
+  /* Hidden by default */
   position: fixed;
   /* Stay   in place */
-  z-index: 1;
+  z-index: 100;
   /* Sit on top */
   left: 0;
   top: 0;
@@ -18,12 +25,13 @@
 }
 .wrap-modal .modal-content {
   background-color: #fefefe;
-  margin: 15% auto;
-  /* 15% from the top and centered */
+  /* margin: 15% auto; */
   padding: 20px;
   border: 1px solid #888;
-  width: 80%;
-  /* Could be more or less, depending on screen size */
+  width: 600px;
+  top: 0;
+  position: absolute;
+  transform: translate(50%, 20px);
 }
 .wrap-modal .close {
   color: #aaa;
@@ -36,4 +44,27 @@
   color: black;
   text-decoration: none;
   cursor: pointer;
+}
+.storefront-product-detail .wrap-modal .modal-title {
+  font-size: 20px;
+  font-weight: 600;
+  padding-left: 30px;
+  padding-top: 5px;
+}
+.storefront-product-detail .wrap-modal #respond {
+  border: none;
+  padding: 0 30px;
+}
+.storefront-product-detail .wrap-modal #respond p.form-submit {
+  display: block;
+}
+.storefront-product-detail .wrap-modal #respond .comment-form-author,
+.storefront-product-detail .wrap-modal #respond .comment-form-email {
+  width: 100%;
+}
+.storefront-product-detail .wrap-modal #respond .form-submit {
+  text-align: center;
+}
+.storefront-product-detail .wrap-modal #respond .form-submit input.submit {
+  width: 20px;
 }

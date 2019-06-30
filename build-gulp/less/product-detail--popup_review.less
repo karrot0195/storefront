@@ -1,7 +1,8 @@
+body.modal {margin: 0; height: 100%; overflow: hidden}
 .wrap-modal {
-  //display: none; /* Hidden by default */
+  display: none; /* Hidden by default */
   position: fixed; /* Stay   in place */
-  z-index: 1; /* Sit on top */
+  z-index: 100; /* Sit on top */
   left: 0;
   top: 0;
   width: 100%; /* Full width */
@@ -12,10 +13,13 @@
 
   .modal-content {
     background-color: #fefefe;
-    margin: 15% auto; /* 15% from the top and centered */
+    /* margin: 15% auto; */
     padding: 20px;
     border: 1px solid #888;
-    width: 80%; /* Could be more or less, depending on screen size */
+    width: 600px;
+    top: 0;
+    position: absolute;
+    transform: translate(50%, 20px);
   }
 
   .close {
@@ -30,5 +34,34 @@
     color: black;
     text-decoration: none;
     cursor: pointer;
+  }
+}
+
+.storefront-product-detail {
+  .wrap-modal {
+    .modal-title {
+      font-size: 20px;
+      font-weight: 600;
+      padding-left: 30px;
+      padding-top: 5px;
+    }
+    #respond {
+      border: none;
+      padding: 0 30px;
+      p.form-submit {
+        display: block;
+      }
+
+      .comment-form-author, .comment-form-email {
+        width: 100%;
+      }
+
+      .form-submit {
+        text-align: center;
+        input.submit{
+          width: 20px;
+        }
+      }
+    }
   }
 }
