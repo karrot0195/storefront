@@ -118,13 +118,20 @@
             const self = $(this);
             const val = parseInt($(this).data('val'));
             const productId = parent.data('product_id');
-            let total = parseInt(parent.find('input[name=number]').val());
+            const $input = parent.find('#number .val');
+            let total = parseInt($input.html());
             if (total + val >= 0) {
               total = total + val;
               setItemCart(productId, total, function (res) {
                 if (res.success) {
                   $('a.footer-cart-contents').html(`<span class="count">${res.total}</span>`);
-                  parent.find('input[name=number]').val(total);
+
+                  $input.slideToggle('fast', function () {
+                    $input.html(total);
+                    $input.slideToggle('slow');
+                  });
+
+
                   if (total == 0) {
                     parent.removeClass('proccessing');
                   } else {

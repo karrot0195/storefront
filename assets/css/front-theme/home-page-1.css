@@ -260,7 +260,7 @@ body.page-template-template-home1 {
 .site-footer .footer-widget-1 {
   width: 25%;
 }
-.site-footer .footer-widget- {
+.site-footer .footer-widget-3 {
   flex-grow: 1;
 }
 .site-footer .footer-widget-4 .block-contact-form {
@@ -772,6 +772,36 @@ a:hover {
   color: #222222;
   text-transform: capitalize;
 }
+.storefront-product-detail.single-product div.product .woocommerce-product-gallery .woocommerce-product-gallery__trigger {
+  width: 60px;
+  border-radius: 50%;
+  height: 60px;
+  background-color: rgba(255, 255, 255, 0.9);
+  position: relative;
+}
+.storefront-product-detail.single-product div.product .woocommerce-product-gallery .woocommerce-product-gallery__trigger::before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  font-family: "Ionicons";
+  speak: none;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  text-rendering: auto;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  line-height: 1;
+  position: absolute;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.storefront-product-detail.single-product div.product .woocommerce-product-gallery .woocommerce-product-gallery__trigger img {
+  visibility: hidden;
+}
 .storefront-product-detail .woocommerce-product-details__short-description p {
   font-family: "Barlow", sans-serif;
   font-size: 15px;
@@ -899,6 +929,11 @@ a:hover {
     max-width: 1400px;
   }
 }
+@media screen and (min-width: 1560px) {
+  .container {
+    max-width: 1600px;
+  }
+}
 /* Add to cart */
 .wrap-product-item .fm-sl-cart {
   opacity: 0;
@@ -949,12 +984,12 @@ a:hover {
   cursor: pointer;
 }
 .wrap-product-item .fm-sl-cart .block-number {
-  display: inline;
-}
-.wrap-product-item .fm-sl-cart .block-number input {
-  padding: 15px;
-  text-align: center;
-  max-width: 45px;
+  min-height: 16px;
+  width: 40px;
+  color: #153374;
+  padding: 14px;
+  background: white;
+  border: 1px solid #153374;
 }
 .wrap-product-item .fm-sl-cart .value-button {
   display: inline;
