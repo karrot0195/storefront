@@ -894,7 +894,6 @@ a:hover {
   transform: translate(-50%, -50%);
 }
 .wrap-product-item .fm-sl-cart .wrap-proccess {
-  opacity: 0;
   z-index: -1;
 }
 .wrap-product-item .fm-sl-cart .wrap-init {
