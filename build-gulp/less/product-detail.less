@@ -400,9 +400,15 @@
 
   &.single-product div.product .summary {
     padding: 90px 0 15px;
+    @media screen and (max-width: 767px) {
+      padding-bottom: 0;
+    }
   }
   &.single-product div.product .woocommerce-product-gallery {
     padding-bottom: 90px;
+    @media screen and (max-width: 767px) {
+      padding-bottom: 0;
+    }
   }
   &.single-product div.product .woocommerce-product-rating {
     display: flex;
@@ -410,6 +416,14 @@
     text-align: left;
     align-items: center;
     justify-content: flex-end;
+    @media screen and (max-width: 767px) {
+      justify-content: center;
+    }
+  }
+  &.single-product div.product p.price {
+    @media screen and (max-width: 767px) {
+      text-align: center;
+    }
   }
   &.single-product div.product .woocommerce-product-rating a {
     font-family: "Barlow", sans-serif;

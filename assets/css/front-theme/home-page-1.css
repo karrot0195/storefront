@@ -837,6 +837,11 @@ a:hover {
   color: #222222;
   text-transform: capitalize;
 }
+@media screen and (max-width: 767px) {
+  .storefront-product-detail .product_title {
+    text-align: center;
+  }
+}
 .storefront-product-detail.single-product div.product .woocommerce-product-gallery .woocommerce-product-gallery__trigger {
   width: 60px;
   border-radius: 50%;
