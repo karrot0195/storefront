@@ -355,6 +355,17 @@
 .storefront-product-detail .block-bookmark .block-share {
   margin-top: 15px;
 }
+@media screen and (max-width: 767px) {
+  .storefront-product-detail .block-bookmark .block-share {
+    margin-top: 8px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .storefront-product-detail .block-bookmark {
+    top: 10px;
+    right: 30px;
+  }
+}
 .storefront-product-detail .related.products {
   text-align: center;
   padding: 65px 0;
