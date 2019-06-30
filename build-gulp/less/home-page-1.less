@@ -773,7 +773,7 @@ body {
         }
     }
     .slick-prev {
-        left: 15px;
+        left: 0px;
         height: auto;
     }
     .slick-prev:before, .slick-next:before {
@@ -802,7 +802,7 @@ body {
       content: "";
     }
     .slick-next {
-        right: 15px;
+        right: 0px;
         height: auto;
     }
 
@@ -826,6 +826,9 @@ body {
             @media screen and (max-width: 1400px) {
                 font-size: 21px;
                 padding-bottom: 75px;
+            }
+            @media screen and (max-width: 992px) {
+              width: auto;
             }
         }
     }
@@ -1133,4 +1136,10 @@ body {
         display: inline;
       }
     }
+  }
+
+  .wrap-cart .fm-detail-cart .btn-add-to-cart {
+    border-radius: 35px;
+    font-family: "Barlow", sans-serif;
+    min-width: 125px;
   }

@@ -706,7 +706,7 @@ a:hover {
   box-shadow: 0;
 }
 .home-page-1 .slick-prev {
-  left: 15px;
+  left: 0px;
   height: auto;
 }
 .home-page-1 .slick-prev:before,
@@ -734,7 +734,7 @@ a:hover {
   content: "";
 }
 .home-page-1 .slick-next {
-  right: 15px;
+  right: 0px;
   height: auto;
 }
 .home-page-1 .tabs .sub-title,
@@ -757,6 +757,12 @@ a:hover {
   .home-page-1 .tabs p {
     font-size: 21px;
     padding-bottom: 75px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .home-page-1 .tabs .sub-title,
+  .home-page-1 .tabs p {
+    width: auto;
   }
 }
 /* ----------------- 5. Product Detail -------------- */
@@ -1025,4 +1031,9 @@ a:hover {
 .wrap-additional_information .woocommerce-product-attributes-item__value p {
   padding-left: 10px;
   display: inline;
+}
+.wrap-cart .fm-detail-cart .btn-add-to-cart {
+  border-radius: 35px;
+  font-family: "Barlow", sans-serif;
+  min-width: 125px;
 }
