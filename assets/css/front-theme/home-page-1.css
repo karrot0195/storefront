@@ -334,6 +334,9 @@ body.page-template-template-home1 {
   .site-footer .block-widget-page ul li {
     padding-right: 15px;
   }
+  .site-footer .block-widget-page ul li:last-child {
+    padding-left: 30px;
+  }
 }
 .site-footer .block-widget-page ul li a {
   text-decoration: none;
