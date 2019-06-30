@@ -738,6 +738,7 @@
 .storefront-product-detail .wrap-cart {
   position: relative;
   margin-bottom: 45px;
+  margin-top: 40px;
 }
 .storefront-product-detail .wrap-cart .fm-detail-cart {
   display: block;
