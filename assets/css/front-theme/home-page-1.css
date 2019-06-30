@@ -261,7 +261,7 @@ body.page-template-template-home1 {
   width: 25%;
 }
 .site-footer .footer-widget-3 {
-  flex-flow: 1;
+  flex-grow: 1;
 }
 .site-footer .footer-widget-4 .block-contact-form {
   border-bottom: 1px solid #a7a7a7;
