@@ -84,6 +84,11 @@ body.page-template-template-home1 {
   margin-left: 36px;
   cursor: pointer;
 }
+@media screen and (max-width: 480px) {
+  .home-page-1 .block-notify--element.block-notify--action {
+    margin-left: 30px;
+  }
+}
 .home-page-1 .block-notify--element.block-notify--action i {
   vertical-align: middle;
 }
