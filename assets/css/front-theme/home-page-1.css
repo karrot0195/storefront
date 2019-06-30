@@ -1085,7 +1085,7 @@ a:hover {
 }
 .wrap-additional_information {
   padding-top: 10px;
-  padding-left: 25px;
+  padding-left: 0px;
 }
 .wrap-additional_information .woocommerce-product-attributes-item__value {
   padding-bottom: 20px;
