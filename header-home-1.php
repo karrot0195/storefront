@@ -69,7 +69,7 @@ if (is_page_template('templates/template-home1.php')) {
                 foreach ($products as $product): ?>
                     <div class="wrap-item">
                         <div class="block-thumbnail">
-                            <a href="">
+                            <a href="<?= esc_url($product['permalink']) ?>">
                                 <img width="100%" src="<?= esc_url($product['thumbnail_url']) ?>" alt="<?= esc_attr($product['title']) ?>">
                             </a>
                         </div>

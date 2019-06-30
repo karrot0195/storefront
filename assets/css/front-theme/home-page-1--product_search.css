@@ -41,9 +41,15 @@
   padding-bottom: 50px;
 }
 .wrap-search-product .block-content--main .wrap-item {
+  text-align: center;
   width: calc(100%/5);
   display: inline-block;
   margin-right: 20px;
+}
+.wrap-search-product .block-content--main .wrap-item .block-title a {
+  text-decoration: none;
+  color: #020202;
+  font-size: 18px;
 }
 .wrap-search-product .block-content--action {
   padding-bottom: 50px;

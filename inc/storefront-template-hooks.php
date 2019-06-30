@@ -222,13 +222,13 @@ function ajax_search_product() {
         $result['data'] = getProductByText($text);
         if (!empty($result['data'])) {
             foreach ($result['data'] as $item) {
-                $thumbnail_url = $item['thumbnail_url'];
-                $permalink = $item['permalink'];
-                $title = $item['title'];
+                $thumbnail_url = esc_url($item['thumbnail_url']);
+                $permalink = esc_url($item['permalink']);
+                $title = esc_html($item['title']);
                 $result['html'] .= <<<HTML
   <div class="wrap-item">
                         <div class="block-thumbnail">
-                            <a href="">
+                            <a href="$permalink">
                                 <img width="100%" src="$thumbnail_url" alt="$title">
                             </a>
                         </div>
