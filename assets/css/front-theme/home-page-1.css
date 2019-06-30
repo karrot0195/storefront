@@ -663,13 +663,14 @@ button:hover .fa-play:before {
     width: 100%;
     white-space: nowrap;
     overflow-y: hidden;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
   }
 }
 @media screen and (max-width: 480px) {
   .tabs-nav {
     padding-left: 30px;
     padding-right: 30px;
+    margin-bottom: 30px;
   }
 }
 .tabs-nav:before {
