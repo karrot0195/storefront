@@ -608,14 +608,16 @@
   .block-share{
     width: 30px;
     height: 30px;
-    background: white;
     margin: 0 auto;
     border-radius: 50%;
-    -webkit-box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.3);
-    box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.3);
-    -webkit-transition: 0.3s all ease;
       -o-transition: 0.3s all ease;
       transition: 0.3s all ease;
+    &:hover{
+      background: white;
+      -webkit-box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.3);
+      box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.3);
+      -webkit-transition: 0.3s all ease;
+    }
     >i{
       position: relative;
       z-index: 1;
@@ -638,6 +640,7 @@
       -webkit-transition: 0.3s all ease;
       -o-transition: 0.3s all ease;
       transition: 0.3s all ease;
+      cursor: pointer;
       ul{
         list-style: none;
         padding-left: 0;
@@ -687,14 +690,14 @@
         }
       }
     }
-    .test{
+    .block-share--conent-click{
       opacity: 1;
     }
   }
 
 } 
 .storefront-product-detail .block-bookmark .block-share-click{
-  margin-top: 35px;
+  margin-top: 30px;
   .fa-share-alt:before{
     content: "\f00d";
   }

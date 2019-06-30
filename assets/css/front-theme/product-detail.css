@@ -589,16 +589,18 @@
 .block-bookmark .block-share {
   width: 30px;
   height: 30px;
-  background: white;
   margin: 0 auto;
   border-radius: 50%;
-  -webkit-box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.3);
-  box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.3);
-  -webkit-transition: 0.3s all ease;
   -o-transition: 0.3s all ease;
   transition: 0.3s all ease;
   position: relative;
   text-align: center;
+}
+.block-bookmark .block-share:hover {
+  background: white;
+  -webkit-box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.3);
+  -webkit-transition: 0.3s all ease;
 }
 .block-bookmark .block-share > i {
   position: relative;
@@ -620,6 +622,7 @@
   -webkit-transition: 0.3s all ease;
   -o-transition: 0.3s all ease;
   transition: 0.3s all ease;
+  cursor: pointer;
 }
 .block-bookmark .block-share .block-share--conent ul {
   list-style: none;
@@ -669,11 +672,11 @@
   left: auto;
   top: -10px;
 }
-.block-bookmark .block-share .test {
+.block-bookmark .block-share .block-share--conent-click {
   opacity: 1;
 }
 .storefront-product-detail .block-bookmark .block-share-click {
-  margin-top: 35px;
+  margin-top: 30px;
 }
 .storefront-product-detail .block-bookmark .block-share-click .fa-share-alt:before {
   content: "\f00d";
