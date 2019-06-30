@@ -525,11 +525,14 @@
 .storefront-product-detail fieldset legend {
   background-color: transparent;
 }
+.storefront-product-detail .wrap-description .title {
+  margin-bottom: 20px;
+}
 .storefront-product-detail .wrap-description .title-1 {
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 .storefront-product-detail .wrap-description .title-2 {
-  margin: 60px 0 30px;
+  margin: 60px 0 20px;
 }
 .storefront-product-detail .moreless-button {
   font-size: 15px;
