@@ -52,6 +52,43 @@ if (is_page_template('templates/template-home1.php')) {
             </div>
         </div>
     </header><!-- #masthead -->
+
+    <!--    Product search-->
+
+    <div class="wrap-search-product <?= isset($_GET['action']) && $_GET['action'] == 'search' ? 'show' : '' ?>">
+        <span class="close"><i class="icon ion-md-close"></i></span>
+        <div class="block-search">
+            <input type="text" class="js-input-search" name="search" autocomplete="false">
+        </div>
+
+        <div class="block-content">
+            <div class="block-content--main">
+                <?php
+                $products = getProductByText();
+                if (!empty($products)):
+                foreach ($products as $product): ?>
+                    <div class="wrap-item">
+                        <div class="block-thumbnail">
+                            <a href="">
+                                <img width="100%" src="<?= esc_url($product['thumbnail_url']) ?>" alt="<?= esc_attr($product['title']) ?>">
+                            </a>
+                        </div>
+                        <div class="block-title">
+                            <a href="<?= esc_url($product['permalink']) ?>"><?= esc_html($product['title']) ?></a>
+                        </div>
+                    </div>
+                <?php
+                endforeach;
+                endif;
+                ?>
+            </div>
+            <div class="block-content--action">
+                <a href="#" class="js-btn-search"><?= esc_html('View all products', 'storefront') ?></a>
+            </div>
+        </div>
+    </div>
+    <!--  end  -->
+
     <?php
     /**
      * Functions hooked in to storefront_before_content

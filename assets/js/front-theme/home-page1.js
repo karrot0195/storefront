@@ -200,7 +200,8 @@
 }(jQuery));
 
 window.setItemCart = function(product_id, quantity, callback) {
-    jQuery.ajax({
+
+  jQuery.ajax({
       url: my_ajax_object.ajax_url,
       data: {
         'action' : 'set_item_from_cart',
