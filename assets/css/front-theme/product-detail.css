@@ -722,6 +722,9 @@
   min-height: 16px;
   width: 40px;
   padding: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .storefront-product-detail .wrap-cart .fm-detail-cart .btn-add-to-cart {
   margin-left: 20px;
