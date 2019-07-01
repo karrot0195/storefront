@@ -1120,14 +1120,18 @@ body {
 
         .lb-btn {
           align-content: flex-start;
-          padding: 15px 10px;
-          background-color: #142d73;
+          padding: 16px 10px;
           min-width: 120px;
           padding: 17px 10px;
           border-bottom-left-radius: 35px;
           border-top-left-radius: 35px;
           text-transform: uppercase;
           cursor: pointer;
+          border: 2px solid #142d73;
+          border-right: 0;
+          color: #142d73;
+          font-weight: bold;
+          background-color: #ffffff;
         }
         .block-number {
           min-height: 20px;
@@ -1135,9 +1139,10 @@ body {
           color: #153374;
           padding: 14px;
           background: white;
-          border: 1px solid #153374;
+          border: 2px solid #142d73;
           border-left: 0;
           border-right: 0;
+          font-weight: bold;
         }
 
         .value-button {
@@ -1145,18 +1150,26 @@ body {
           background-color: #142d73;
           padding: 15px 20px;
           border-left: 1px solid #fff;
-          padding: 17px 20px;
+          padding: 16px 20px;
 
           cursor: pointer;
 
           &#increase {
             border-bottom-right-radius: 35px;
             border-top-right-radius: 35px;
+            background: #ffffff;
+            border: 2px solid #142d73;
+            border-left: 2px dotted;
+            color: #142d73;
           }
 
           &#decrease {
             border-bottom-left-radius: 35px;
             border-top-left-radius: 35px;
+            background: #ffffff;
+            border: 2px solid #142d73;
+            border-right: 2px dotted;
+            color: #142d73;
           }
         }
       }
