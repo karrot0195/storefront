@@ -206,6 +206,7 @@
             const $input = parent.find('#number .val');
             let total = parseInt($input.html());
             if (total + val >= 0) {
+
               let oldtotal = total;
               total = total + val;
               setItemCart(productId, total, function (res) {
