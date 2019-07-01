@@ -337,16 +337,16 @@ body.page-template-template-home1 {
 }
 .site-footer .block-widget-page ul li {
   display: inline-block;
-  padding-right: 30px;
+  padding-right: 15px;
 }
 @media screen and (max-width: 1024px) {
   .site-footer .block-widget-page ul li:last-child {
-    padding-left: 0;
+    padding-left: 15px;
   }
 }
 @media screen and (max-width: 1400px) {
-  .site-footer .block-widget-page ul li {
-    padding-right: 15px;
+  .site-footer .block-widget-page ul li:last-child {
+    padding-right: 30px;
   }
 }
 .site-footer .block-widget-page ul li a {

@@ -369,15 +369,18 @@ body {
       padding-left: 20px;
       li {
         display: inline-block;
-        padding-right: 30px;
+        padding-right: 15px;
         &:last-child {
           @media screen and (max-width: 1024px){
-            padding-left: 0;
+            padding-left: 15px;
           }
         }
-        @media screen and (max-width:1400px) {
-         padding-right: 15px;
+        &:last-child {
+          @media screen and (max-width:1400px) {
+            padding-right: 30px;
+          }
         }
+        
         a {
           text-decoration: none;
           font-family: "Barlow",sans-serif;
