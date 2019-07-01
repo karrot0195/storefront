@@ -261,9 +261,7 @@ window.setItemCart = function(product_id, quantity, callback) {
 };
 
 $(document).ready(function() {
-    
   // [HOME PAGE] EVENT SLIDER
-  
   $('.js-btn-slider').on('click', function() {
     let src = $(this).data('src');
     let desc = $(this).data('description');
