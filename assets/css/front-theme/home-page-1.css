@@ -1235,6 +1235,20 @@ a:hover {
   .home-page-1 .site-content .block-content .slider--item .block-img .bg-img {
     height: 500px;
   }
+  .storefront-product-detail .wrap-cart {
+    display: none;
+  }
+  .home-page-1 .site-main ul.products.columns-4 li.product:hover h2.woocommerce-loop-product__title,
+  .home-page-1 .site-main ul.products.columns-4 li.product:hover .price {
+    display: block;
+  }
+  .home-page-1 .site-main ul.products.columns-3 li.product {
+    position: relative;
+  }
+  .home-page-1 .site-main ul.products.columns-3 li.product:hover h2.woocommerce-loop-product__title,
+  .home-page-1 .site-main ul.products.columns-3 li.product:hover .price {
+    display: block;
+  }
 }
 @media screen and (max-width: 400px) {
   .home-page-1 .site-header .col-full .block-icon-action .list-action li {
