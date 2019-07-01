@@ -641,9 +641,6 @@
 .storefront-product-detail .woocommerce-product-gallery__image {
   text-align: center;
 }
-.storefront-product-detail .woocommerce-Price-currencySymbol {
-  padding-right: 8px;
-}
 /* ---- Effect like, share ----*/
 .block-like > i {
   display: none;

@@ -174,6 +174,12 @@
 
 
   // [HOME PAGE] EVENT SLIDER
+  $(document).ready(function() {
+    $('img.bg-img').fadeOut(300, function() {
+      $('img.bg-img').attr('src', src);
+      $('.slider--item .block-desc').html(desc);
+    }).fadeIn(300);
+  );
   $('.js-btn-slider').on('click', function() {
     let src = $(this).data('src');
     let desc = $(this).data('description');
@@ -201,9 +207,7 @@
             let total = parseInt($input.html());
             if (total + val >= 0) {
               let oldtotal = total;
-              console.log(oldtotal);
               total = total + val;
-              console.log(total);
               setItemCart(productId, total, function (res) {
                 if (res.success) {
                   $('a.footer-cart-contents').html(`<span class="count">${res.total}</span>`);
