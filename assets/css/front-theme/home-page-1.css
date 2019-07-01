@@ -33,6 +33,9 @@ body.page-template-template-home1 {
 .home-page-1.one-page .site-header .col-full .block-icon-action {
   width: 50%;
 }
+.home-page-1 .woocommerce-Price-currencySymbol {
+  margin-right: 8px;
+}
 .home-page-1 .custom-logo-link:focus {
   box-shadow: none;
   outline: 0;
