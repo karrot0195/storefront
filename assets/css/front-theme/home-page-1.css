@@ -1053,6 +1053,7 @@ a:hover {
   -moz-transition: opacity 0.5s ease;
   -webkit-transition: opacity 0.5s ease;
   height: 50px;
+  cursor: pointer;
 }
 .wrap-product-item .fm-sl-cart.proccessing .wrap-init {
   opacity: 0;
