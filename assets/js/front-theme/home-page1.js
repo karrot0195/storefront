@@ -170,6 +170,8 @@
             const productId = parent.data('product_id');
             const $input = parent.find('#number .val');
             let total = parseInt($input.html());
+            console.log(total);
+            console.log(val);
             if (total + val >= 0) {
               total = total + val;
               setItemCart(productId, total, function (res) {
@@ -190,7 +192,8 @@
                 }
                 isProcessing = false;
               });
-            }
+            } 
+            
           } catch (e) {
             isProcessing = false;
           }
