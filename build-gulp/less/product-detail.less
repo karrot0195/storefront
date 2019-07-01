@@ -818,28 +818,51 @@
       .block-number {
         width: 60px;
         min-height: 20px;
+        border: 2px solid #142d73;
         border-left: 0;
         border-right: 0;
+        .val{
+          font-weight: bold;
+        }
       }
       .value-button {
-        padding: 17px 20px;
+        padding: 16px 20px;
         cursor: pointer;
         border-left: 1px solid #fff;
         &#increase {
           border-bottom-right-radius: 35px;
           border-top-right-radius: 35px;
+          background: #ffffff;
+          border: 2px solid #142d73;
+          border-left: 2px dotted;
+          color: #142d73;
+          i::before{
+            font-weight: bold;
+          }
         }
         &#decrease {
           border-bottom-left-radius: 35px;
           border-top-left-radius: 35px;
+          background: #ffffff;
+          border: 2px solid #142d73;
+          border-right: 2px dotted;
+          color: #142d73;
+          i::before{
+            font-weight: bold;
+          }
         }
       }
       .lb-btn {
         min-width: 120px;
-        padding: 17px 10px;
+        padding: 16px 10px;
         border-bottom-left-radius: 35px;
         border-top-left-radius: 35px;
         text-transform: uppercase;
+        border: 2px solid #142d73;
+        border-right: 0;
+        color: #142d73;
+        font-weight: bold;
+        background-color: #ffffff;
       }
     }
   }

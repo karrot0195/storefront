@@ -176,9 +176,9 @@
                 if (res.success) {
                   $('a.footer-cart-contents').html(`<span class="count">${res.total}</span>`);
 
-                  $input.slideToggle(300, function () {
+                  $input.slideToggle(100, function () {
                     $input.html(total);
-                    $input.slideToggle(300);
+                    $input.slideToggle(100);
                   });
 
 
