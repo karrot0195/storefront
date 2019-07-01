@@ -162,10 +162,13 @@
           width: calc(100% - 30px);
           padding: 0 10px;
           border: 1px solid rgba(169, 169, 169);
+          border-radius: 2px;
+          transition: 0.2s all ease;
           &:focus,
           &:active {
-            box-shadow: none;
-            outline-color: #0f1972;
+            box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.3);
+            border-color: transparent;
+            outline: none;
           }
         }
         &.stars {
@@ -190,7 +193,7 @@
           outline: 0;
           box-shadow: none;
           text-align: center;
-          min-width: 150px;
+          min-width: 170px;
           text-decoration: none;
           text-transform: uppercase;
           transition: all 0.3s ease;
@@ -201,12 +204,15 @@
     }
     textarea {
       width: calc(100% - 30px);
-      padding: 0 10px;
+      padding: 10px;
       border: 1px solid rgba(169, 169, 169);
+      border-radius: 2px;
+      transition: 0.2s all ease;
       &:focus,
       &:active {
-        box-shadow: none;
-        outline-color: #0f1972;
+        box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.3);
+        border-color: transparent;
+        outline: none;
       }
     }
     .comment-form-comment,
