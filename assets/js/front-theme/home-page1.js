@@ -27,6 +27,35 @@
         $('.site-header').removeClass('fixed');
       }
   });
+  // Filter
+  $('.btn-filter').on('click', function(){
+    $('.modal-filter').slideToggle(300);
+    $(this).hide();
+  })
+
+  // Close Modal Filter
+  $('.button-close').on('click', function() {
+    $('.modal-filter').slideToggle(300);
+    $('.info-page-child .btn-filter').show(300);
+  });
+
+  // Choose Filter
+  $('.content-1 ul li button').on('click', function() {
+    $('.content-1 ul li').removeClass('is-selected');
+    $(this).parent().addClass('is-selected');
+  });
+
+  $('.content-2 ul li button').on('click', function() {
+    $('.content-2 ul li').removeClass('is-selected');
+    $(this).parent().addClass('is-selected');
+  });
+
+  $('.content-3 ul li button').on('click', function() {
+    $('.content-3 ul li').removeClass('is-selected');
+    $(this).parent().addClass('is-selected');
+  });
+
+
   $('.slider-tab-1').slick({
     dots: false,
     arrows: true,
