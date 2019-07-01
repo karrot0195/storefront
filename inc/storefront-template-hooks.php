@@ -166,6 +166,12 @@ function get_all_quantity_item() {
     return $total;
 }
 
+add_filter('loop_shop_columns', 'loop_columns', 999);
+if (!function_exists('loop_columns')) {
+	function loop_columns() {
+		return 4; // 3 products per row
+	}
+}
 
 // AJAX
 function my_enqueue() {
