@@ -526,6 +526,14 @@ body.page-template-template-home1 {
 .home-page-1 .site-main ul.products.columns-3 li.product {
   position: relative;
 }
+.home-page-1 .site-main ul.products.columns-3 li.product h2.woocommerce-loop-product__title,
+.home-page-1 .site-main ul.products.columns-3 li.product .price {
+  transition: 0.3s all ease;
+}
+.home-page-1 .site-main ul.products.columns-3 li.product:hover h2.woocommerce-loop-product__title,
+.home-page-1 .site-main ul.products.columns-3 li.product:hover .price {
+  display: none;
+}
 .home-page-1 .onsale {
   display: none;
 }
@@ -1011,7 +1019,7 @@ a:hover {
   left: 50%;
   text-align: center;
   min-width: 100px;
-  top: 100%;
+  top: 0;
   height: 50px;
   color: white;
   position: absolute;
@@ -1024,6 +1032,11 @@ a:hover {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+  height: 50px;
+  box-sizing: border-box;
+  border: 2px solid #142d73;
+  border-radius: 35px;
+  overflow: hidden;
 }
 .wrap-product-item .fm-sl-cart .wrap-proccess {
   z-index: -1;
@@ -1033,6 +1046,7 @@ a:hover {
   transition: opacity 0.5s ease;
   -moz-transition: opacity 0.5s ease;
   -webkit-transition: opacity 0.5s ease;
+  height: 50px;
 }
 .wrap-product-item .fm-sl-cart.proccessing .wrap-init {
   opacity: 0;
@@ -1098,7 +1112,7 @@ a:hover {
   transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
   -webkit-transition: all 0.5s ease;
-  transform: translate(-50%, -100%);
+  transform: translate(-50%, 0);
 }
 .wrap-additional_information {
   padding-top: 10px;

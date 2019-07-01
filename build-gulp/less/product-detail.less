@@ -822,9 +822,7 @@
       .block-number {
         width: 60px;
         min-height: 20px;
-        border: 2px solid #142d73;
-        border-left: 0;
-        border-right: 0;
+        border: none;
         .number{
           padding: 2px 0;
         }
@@ -837,21 +835,17 @@
         cursor: pointer;
         border-left: 1px solid #fff;
         &#increase {
-          border-bottom-right-radius: 35px;
-          border-top-right-radius: 35px;
-          background: #142d73;
-          border: 2px solid #142d73;
-          border-left: 1px solid #ffffff;
-          color: #ffffff;
+          background: #ffffff;
+          border: none;
+          border-left: 1px dotted #142d73;
+          color: #142d73;
           i::before{
             font-weight: bold;
           }
         }
         &#decrease {
-          border-bottom-left-radius: 35px;
-          border-top-left-radius: 35px;
           background: #ffffff;
-          border: 2px solid #142d73;
+          border: none;
           border-right: 2px dotted;
           color: #142d73;
           i::before{
@@ -860,12 +854,14 @@
         }
       }
       .lb-btn {
-        min-width: 120px;
-        padding: 16px 10px;
-        border-bottom-left-radius: 35px;
-        border-top-left-radius: 35px;
+        padding: 0 36px;
+        border-radius: 35px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         text-transform: uppercase;
-        border: 2px solid #142d73;
+        border: none;
         border-right: 0;
         color: #ffffff;
         font-weight: bold;

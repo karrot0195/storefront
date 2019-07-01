@@ -10,10 +10,8 @@ class LoopProductItemHelper {
     <div class="wrap-cart">
          <form class="increse-decrease fm-sl-cart $class" data-product_id="$productId">
             <div class="wrap-block wrap-init">
-              <div class="lb-btn">Add to cart</div>
-              <div class="value-button js-cart-btn" data-val="1" id="increase" value="Increase Value">
-                    <i class="icon ion-md-add"></i>  
-                </div>
+              <div class="lb-btn js-cart-btn" data-val="1" id="increase" value="Increase Value">Add to cart</div>
+              
             </div>
             <div class="wrap-block wrap-proccess">
                  <div class="value-button js-cart-btn" data-val="-1" id="decrease" value="Decrease Value">
