@@ -1260,6 +1260,10 @@ a:hover {
   position: fixed;
   background-color: #fff;
   z-index: 999;
+  transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
 }
 .home-page-1 .site-header.fixed .col-full {
   padding: 15px 0;
