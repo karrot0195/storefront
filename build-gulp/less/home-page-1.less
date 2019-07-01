@@ -43,11 +43,17 @@ body {
 
 
 .home-page-1 {
+  .woocommerce-Price-currencySymbol {
+    margin-right: 8px;
+  }
   .custom-logo-link {
       &:focus {
           box-shadow: none;
           outline: 0;
       }
+  }
+  ul.products {
+    padding-left: 0;
   }
   .ytp-cued-thumbnail-overlay-image {
       background-image: none !important;
@@ -289,6 +295,10 @@ body {
   .footer-widget-3 {
     flex-grow: 1;
   }
+  .footer-widget-2 {
+    flex-grow: 1;
+    text-align: center;
+  }
   .footer-widget-4 {
     .block-contact-form {
         border-bottom: 1px solid #a7a7a7;
@@ -343,7 +353,7 @@ body {
     vertical-align: middle;
     width: 100%;
     @media screen and (max-width: 1400px) {
-      font-size: 12px;
+      font-size: 10px;
       width: 100%;
     }
   }

@@ -33,9 +33,15 @@ body.page-template-template-home1 {
 .home-page-1.one-page .site-header .col-full .block-icon-action {
   width: 50%;
 }
+.home-page-1 .woocommerce-Price-currencySymbol {
+  margin-right: 8px;
+}
 .home-page-1 .custom-logo-link:focus {
   box-shadow: none;
   outline: 0;
+}
+.home-page-1 ul.products {
+  padding-left: 0;
 }
 .home-page-1 .ytp-cued-thumbnail-overlay-image {
   background-image: none !important;
@@ -257,6 +263,10 @@ body.page-template-template-home1 {
 .site-footer .footer-widget-3 {
   flex-grow: 1;
 }
+.site-footer .footer-widget-2 {
+  flex-grow: 1;
+  text-align: center;
+}
 .site-footer .footer-widget-4 .block-contact-form {
   border-bottom: 1px solid #a7a7a7;
   display: flex;
@@ -313,7 +323,7 @@ body.page-template-template-home1 {
 }
 @media screen and (max-width: 1400px) {
   .site-footer .text-info-footer {
-    font-size: 12px;
+    font-size: 10px;
     width: 100%;
   }
 }
