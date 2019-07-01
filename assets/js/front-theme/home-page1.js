@@ -199,8 +199,6 @@
             const productId = parent.data('product_id');
             const $input = parent.find('#number .val');
             let total = parseInt($input.html());
-            console.log(total);
-            console.log(val);
             if (total + val >= 0) {
               total = total + val;
               setItemCart(productId, total, function (res) {
@@ -209,7 +207,19 @@
 
                   $input.slideToggle(100, function () {
                     $input.html(total);
-                    $input.slideToggle(100);
+                    // $input.fadeIn();
+                    $input.addClass('val-1');
+                    setTimeout(function(){ 
+                      $input.addClass('val-2');
+                    }, 200);
+                    setTimeout(function(){ 
+                      $input.addClass('val-3');
+                    }, 300);
+                    setTimeout(function(){ 
+                      $input.removeClass('val-1');
+                      $input.removeClass('val-2');
+                      $input.removeClass('val-3');
+                    }, 400);
                   });
 
 
