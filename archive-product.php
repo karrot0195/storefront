@@ -72,6 +72,7 @@ get_header( 'home-1' );
 									<li><button>Hand & Body</button></li>
 									<li><button>Men’s</button></li>
 									<li><button>Skin </button></li>
+									<li><button>Travel </button></li>
 								</ul>
 							</div>
 						</div>

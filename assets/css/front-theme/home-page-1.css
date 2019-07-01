@@ -600,7 +600,7 @@ body.page-template-template-home1 {
 }
 .home-page-1 .site-main ul.products.columns-3 li.product:hover h2.woocommerce-loop-product__title,
 .home-page-1 .site-main ul.products.columns-3 li.product:hover .price {
-  display: none;
+  visibility: hidden;
 }
 .home-page-1 .onsale {
   display: none;
@@ -1180,7 +1180,7 @@ a:hover {
   transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
   -webkit-transition: all 0.5s ease;
-  transform: translate(-50%, 0);
+  transform: translate(-50%, -80px);
 }
 .wrap-additional_information {
   padding-top: 10px;
@@ -1484,5 +1484,5 @@ a:hover {
 }
 .site-main ul.products.columns-4 li.product:hover h2.woocommerce-loop-product__title,
 .site-main ul.products.columns-4 li.product:hover .price {
-  display: none;
+  visibility: hidden;
 }
