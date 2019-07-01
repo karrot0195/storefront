@@ -571,10 +571,6 @@ body {
 
   .site-main ul.products.columns-3 li.product {
     position: relative;
-    h2.woocommerce-loop-product__title,
-      .price{
-        transition: 0.3s all ease;
-      }
     &:hover{
       h2.woocommerce-loop-product__title,
       .price{
@@ -1148,18 +1144,19 @@ body {
         }
 
         .lb-btn {
-          align-content: flex-start;
-          padding: 16px 10px;
-          min-width: 120px;
-          border-bottom-left-radius: 35px;
-          border-top-left-radius: 35px;
+          padding: 0 36px;
+          border-radius: 35px;
+          height: 50px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
           text-transform: uppercase;
-          cursor: pointer;
-          border: 2px solid #142d73;
+          border: none;
           border-right: 0;
           color: #ffffff;
           font-weight: bold;
           background-color: #142d73;
+          min-width: 120px;
         }
         .block-number {
           min-height: 20px;
@@ -1167,10 +1164,11 @@ body {
           color: #153374;
           padding: 14px;
           background: white;
-          border: 2px solid #142d73;
-          border-left: 0;
-          border-right: 0;
+          border: none;
           font-weight: bold;
+          display: flex;
+          justify-content: center;
+          align-items: center;
         }
 
         .value-button {
@@ -1183,19 +1181,18 @@ body {
           cursor: pointer;
 
           &#increase {
-            border-bottom-right-radius: 35px;
-            border-top-right-radius: 35px;
-            background: #142d73;
-            border: 2px solid #142d73;
-            border-left: 1px solid #ffffff;
+            background: #ffffff;
+            color: #142d73;
+            border: none;
+            border-left: 2px dotted #142d73;
             color: #ffffff;
           }
 
           &#decrease {
-            border-bottom-left-radius: 35px;
-            border-top-left-radius: 35px;
             background: #ffffff;
-            border: 2px solid #142d73;
+            border: none;
+            border-right: 2px dotted;
+            color: #142d73; 
             border-right: 2px dotted;
             color: #142d73;
           }
@@ -1507,4 +1504,15 @@ body {
   background: #ffffff;
   color: #142d73;
   border-left: 2px dotted #142d73;
+}
+.wrap-cart{
+  position: relative;
+}
+.site-main ul.products.columns-4 li.product{
+  &:hover{
+    h2.woocommerce-loop-product__title,
+    .price{
+      display: none;
+    }
+  }
 }
