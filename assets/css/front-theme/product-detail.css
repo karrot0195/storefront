@@ -164,6 +164,7 @@
   height: 30px;
   width: calc(100% - 30px);
   padding: 0 10px;
+  border: 1px solid rgba(169, 169, 169);
 }
 .storefront-product-detail .comment-respond .comment-form p input:focus,
 .storefront-product-detail .comment-respond .comment-form p input:active {
@@ -202,6 +203,7 @@
 .storefront-product-detail .comment-respond textarea {
   width: calc(100% - 30px);
   padding: 0 10px;
+  border: 1px solid rgba(169, 169, 169);
 }
 .storefront-product-detail .comment-respond textarea:focus,
 .storefront-product-detail .comment-respond textarea:active {
