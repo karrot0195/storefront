@@ -175,10 +175,10 @@
 
   // [HOME PAGE] EVENT SLIDER
   $(document).ready(function() {
-    $('img.bg-img').fadeOut(300, function() {
+    $('img.bg-img').fadeOut(100, function() {
       $('img.bg-img').attr('src', src);
       $('.slider--item .block-desc').html(desc);
-    }).fadeIn(300);
+    }).fadeIn(100);
   );
   $('.js-btn-slider').on('click', function() {
     let src = $(this).data('src');
