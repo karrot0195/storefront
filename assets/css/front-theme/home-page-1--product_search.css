@@ -3,6 +3,9 @@
   width: 100%;
   position: relative;
 }
+.wrap-search-product .block-content--main .block-thumbnail img {
+  max-width: 70%;
+}
 .wrap-search-product .block-content--main {
   font-size: 0;
 }
