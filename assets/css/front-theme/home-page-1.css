@@ -37,6 +37,9 @@ body.page-template-template-home1 {
   box-shadow: none;
   outline: 0;
 }
+.home-page-1 ul.products {
+  padding-left: 0;
+}
 .home-page-1 .ytp-cued-thumbnail-overlay-image {
   background-image: none !important;
   background-color: #d1d1d1;
