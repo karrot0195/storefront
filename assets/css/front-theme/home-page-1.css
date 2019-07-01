@@ -1497,16 +1497,31 @@ a:hover {
   display: block !important;
   transition: 0.2s all ease;
 }
-.val-1 {
+.dec-1 {
   bottom: 45px;
   opacity: 0;
   display: block !important;
 }
-.val-2 {
+.dec-2 {
   bottom: -20px;
   display: block !important;
 }
-.val-3 {
+.dec-3 {
+  bottom: 16px;
+  opacity: 1;
+  display: block !important;
+}
+.inc-1 {
+  bottom: -14px;
+  opacity: 0;
+  display: block !important;
+}
+.inc-2 {
+  bottom: 45px;
+  display: block !important;
+  opacity: 1;
+}
+.inc-3 {
   bottom: 16px;
   opacity: 1;
   display: block !important;

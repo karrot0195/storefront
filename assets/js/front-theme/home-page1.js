@@ -200,7 +200,10 @@
             const $input = parent.find('#number .val');
             let total = parseInt($input.html());
             if (total + val >= 0) {
+              let oldtotal = total;
+              console.log(oldtotal);
               total = total + val;
+              console.log(total);
               setItemCart(productId, total, function (res) {
                 if (res.success) {
                   $('a.footer-cart-contents').html(`<span class="count">${res.total}</span>`);
@@ -208,18 +211,34 @@
                   $input.slideToggle(100, function () {
                     $input.html(total);
                     // $input.fadeIn();
-                    $input.addClass('val-1');
-                    setTimeout(function(){ 
-                      $input.addClass('val-2');
-                    }, 200);
-                    setTimeout(function(){ 
-                      $input.addClass('val-3');
-                    }, 300);
-                    setTimeout(function(){ 
-                      $input.removeClass('val-1');
-                      $input.removeClass('val-2');
-                      $input.removeClass('val-3');
-                    }, 400);
+                    if(oldtotal > total){
+                      $input.addClass('dec-1');
+                      setTimeout(function(){ 
+                        $input.addClass('dec-2');
+                      }, 200);
+                      setTimeout(function(){ 
+                        $input.addClass('dec-3');
+                      }, 300);
+                      setTimeout(function(){ 
+                        $input.removeClass('dec-1');
+                        $input.removeClass('dec-2');
+                        $input.removeClass('dec-3');
+                      }, 400);
+                    } else{
+                      $input.addClass('inc-1');
+                      setTimeout(function(){ 
+                        $input.addClass('inc-2');
+                      }, 200);
+                      setTimeout(function(){ 
+                        $input.addClass('inc-3');
+                      }, 300);
+                      setTimeout(function(){ 
+                        $input.removeClass('inc-1');
+                        $input.removeClass('inc-2');
+                        $input.removeClass('inc-3');
+                      }, 400);
+                    }
+        
                   });
 
 
