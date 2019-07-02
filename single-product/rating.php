@@ -35,7 +35,7 @@ if ( $rating_count > 0 ) : ?>
 		<?php echo wc_get_rating_html( $average, $rating_count ); // WPCS: XSS ok. ?>
 		<?php if ( comments_open() ) : ?>
 			<?php //phpcs:disable ?>
-			<a href="#reviews" class="woocommerce-review-link" rel="nofollow">(<?= $review_count ?>)</a>
+			<a href="#reviews" class="woocommerce-review-link" rel="nofollow">(<?= $review_count . ' ' . esc_html__('Reviews', 'storefront') ?>)</a>
 			<?php // phpcs:enable ?>
 		<?php endif ?>
 	</div>

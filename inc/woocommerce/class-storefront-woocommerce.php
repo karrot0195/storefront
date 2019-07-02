@@ -204,13 +204,9 @@ if ( ! class_exists( 'Storefront_WooCommerce' ) ) :
 		 * @since  1.0.0
 		 */
 		public function thumbnail_columns() {
-			$columns = 4;
-
-			if ( ! is_active_sidebar( 'sidebar-1' ) ) {
-				$columns = 5;
-			}
-
-			return intval( apply_filters( 'storefront_product_thumbnail_columns', $columns ) );
+//			$columns = 3;
+//			return intval( apply_filters( 'storefront_product_thumbnail_columns', $columns ) );
+            return 3;
 		}
 
 		/**
