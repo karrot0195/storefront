@@ -894,6 +894,11 @@
   cursor: pointer;
   border-left: 1px solid #fff;
 }
+@media screen and (max-width: 767px) {
+  .storefront-product-detail .wrap-product-item .fm-sl-cart .value-button {
+    padding: 10px 14px;
+  }
+}
 .storefront-product-detail .wrap-product-item .fm-sl-cart .value-button#increase {
   background: #ffffff;
   border: none;
