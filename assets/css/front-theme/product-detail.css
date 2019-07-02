@@ -963,9 +963,7 @@
   display: inline-block;
   text-transform: uppercase;
   transition: 0.3s all ease;
-}
-.storefront-product-detail .wrap-cart .fm-detail-cart .btn-add-to-cart:focus {
-  font-size: 12px;
+  position: relative;
 }
 @media screen and (max-width: 767px) {
   .storefront-product-detail .wrap-cart .fm-detail-cart .btn-add-to-cart {
@@ -976,6 +974,19 @@
 .storefront-product-detail .wrap-cart .fm-detail-cart .btn-add-to-cart.proccess {
   background-color: #ffffff;
   color: #0f1972;
+}
+.storefront-product-detail .wrap-cart .fm-detail-cart .btn-add-to-cart-click {
+  background: #ffffff;
+  color: #142d73;
+}
+.storefront-product-detail .wrap-cart .fm-detail-cart .btn-add-to-cart-click::before {
+  position: absolute;
+  content: '';
+  top: 50%;
+  left: 50%;
+  width: 50px;
+  height: 50px;
+  background-image: url(../../assets/images/icon/arrow-right.png);
 }
 .storefront-product-detail .wrap-cart .fm-detail-cart .value-button {
   padding: 15px 20px;

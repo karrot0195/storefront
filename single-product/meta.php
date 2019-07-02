@@ -31,9 +31,26 @@ global $product;
 
 	<?php endif; ?>
 
-	<?php echo wc_get_product_category_list( $product->get_id(), '', '<span class="posted_in">' . _n( 'key function:', 'key function:', count( $product->get_category_ids() ), 'storefront' ) . ' ', '</span>' ); ?>
+	<?php
+    $label = _n( 'key function:', 'key function:', count( $product->get_category_ids() ), 'storefront' );
 
-	<?php echo wc_get_product_tag_list( $product->get_id(), '', '<span class="tagged_as">' . _n( 'suitable for:', 'suitable for:', count( $product->get_tag_ids() ), 'storefront' ) . ' ', '</span>' ); ?>
+    $beforeHtml = '<span class="posted_in"><div class="label">'.$label.'</div><div class="main-content">';
+    $afterHtml = '</div></span>';
+    echo wc_get_product_category_list(
+	        $product->get_id(), '',
+            $beforeHtml,
+            $afterHtml ); ?>
+
+	<?php
+    $label = _n( 'suitable for:', 'suitable for:', count( $product->get_tag_ids() ), 'storefront' );
+    $beforeHtml =  '<span class="tagged_as"><div class="label">' . $label . '</div><div class="main-content"></span>';
+    $afterHtml = '</div></span>';
+
+    echo wc_get_product_tag_list(
+	        $product->get_id(),
+            '',
+            $beforeHtml,
+            $afterHtml); ?>
 
 	<?php do_action( 'woocommerce_product_meta_end' ); ?>
 

@@ -125,3 +125,11 @@ add_action('comment_post', function ($commentId) {
         add_comment_meta($commentId, 'title', $_POST['title'], true);
     }
 });
+
+add_filter( 'woocommerce_single_product_carousel_options', 'ud_update_woo_flexslider_options' );
+
+function ud_update_woo_flexslider_options( $options ) {
+    $options['directionNav'] = true;
+    $options['slideshow'] = true;
+    return $options;
+}
