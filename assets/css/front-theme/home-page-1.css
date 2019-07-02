@@ -318,7 +318,7 @@ body.page-template-template-home1 {
   white-space: pre-line;
 }
 .home-page-1 .site-content .block-content .slider--item .block-img {
-  height: cacl(-80vh);
+  height: calc(100vh - 180px);
 }
 .home-page-1 .site-content .block-content .slider--item .block-img .bg-img {
   width: 100%;
