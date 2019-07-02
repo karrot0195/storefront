@@ -1405,6 +1405,10 @@ a:hover {
   .home-page-1 .site-content .block-content .slider--item .block-desc {
     font-size: 25px;
   }
+  .home-page-1 .site-content .block-content .slider--item .block-img .bg-img {
+    object-fit: initial;
+    object-position: initial;
+  }
   .home-page-1 .site-content .block-content .slider--item .list-title ul li a {
     font-size: 18px;
   }
@@ -1421,6 +1425,9 @@ a:hover {
   }
   .site-footer .block-widget-page ul li {
     padding-right: 5px;
+  }
+  .site-footer .footer-widget-2 .block-widget-page {
+    text-align: left;
   }
   .home-page-1 .site-content .block-content .block-description {
     top: 22%;
