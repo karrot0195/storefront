@@ -1114,6 +1114,7 @@ a:hover {
   display: inline-block;
   vertical-align: middle;
   width: 20%;
+  margin-bottom: 10px;
 }
 .storefront-product-detail.single-product div.product .product_meta .posted_in .main-content,
 .storefront-product-detail.single-product div.product .product_meta .sku_wrapper .main-content,
