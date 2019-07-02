@@ -53,7 +53,7 @@ if ( isset($tabs['reviews']) ) {
     $key = 'reviews';
     $tab = $tabs['reviews'];
     ?>
-    <div class="block-reviews">
+    <div data-wow-delay="0.5s" class="block-reviews wow fadeIn">
         <?php if ( isset( $tab['callback'] ) ) { call_user_func( $tab['callback'], $key, $tab ); } ?>
     </div>
     <?php

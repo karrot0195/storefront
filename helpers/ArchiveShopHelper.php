@@ -20,7 +20,7 @@ class ArchiveShopHelper {
         $tabs = get_field('tab_group', $page->ID ? $page->ID : '');
         if (!empty($tabs)):
         ?>
-        <section class="tab-content">
+        <section data-wow-delay="0.5s" class="tab-content wow fadeIn">
             <div class="container">
             <div class="tabs">
                 <ul class="tabs-nav">
@@ -72,7 +72,7 @@ HTML;
         $page = get_page_by_title('shop');
         $video = get_field('video', $page->ID ? $page->ID : '');
         ?>
-        <section class="video">
+        <section data-wow-delay="0.5s" class="video wow fadeIn">
             <div class="video_wrapper video_wrapper_full js-videoWrapper">
                 <iframe class="videoIframe js-videoIframe" src="" frameborder="0" allowTransparency="true" allowfullscreen data-src="https://www.youtube.com/embed/<?= $video ?>" width="100%" height="500px"></iframe>
                 <button class="videoPoster js-videoPoster">
