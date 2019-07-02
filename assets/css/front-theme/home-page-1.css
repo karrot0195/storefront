@@ -20,11 +20,6 @@ body.page-template-template-home1 {
 .home-page-1.one-page .site-main {
   background-color: #fff;
 }
-.home-page-1.one-page .site-footer {
-  position: absolute;
-  width: 100%;
-  bottom: 0;
-}
 .home-page-1.one-page .block-notify::before {
   content: '';
   width: 2000%;
@@ -312,9 +307,6 @@ body.page-template-template-home1 {
   letter-spacing: 1.46px;
   text-align: left;
   color: #ffffff;
-}
-.home-page-1 .site-content .block-content .slider--item .block-img {
-  height: 550px;
 }
 .home-page-1 .site-content .block-content .slider--item .block-img .bg-img {
   width: 100%;
