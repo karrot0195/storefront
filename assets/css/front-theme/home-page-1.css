@@ -158,8 +158,14 @@ body.page-template-template-home1 {
   box-shadow: none;
   outline: 0;
 }
+.home-page-1 .block-wrapper-notify {
+  position: absolute;
+  bottom: 70px;
+  left: 0;
+  background-color: #cacbcc;
+}
 .home-page-1 .block-notify {
-  padding: 27px 10px 25px;
+  padding: 27px 0px 25px;
 }
 .home-page-1 .block-notify--element {
   font-family: "Barlow", sans-serif;
