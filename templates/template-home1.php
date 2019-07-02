@@ -13,55 +13,53 @@
  */
 get_header('home-1'); ?>
 	<div id="primary" class="content-area">
-        <div class="wrapper-container">
-            <main id="main" class="site-main" role="main">
-                <div class="slider">
-                    <?php
-                    $gallery = get_field('gallery');
-                    $description = isset($gallery[0]['description']) ? $gallery[0]['description'] : '';
-                    $attachmentUrl = isset($gallery[0]['background']) ? wp_get_attachment_url($gallery[0]['background']) : '';
-                    ?>
-                    <div class="slider--item" style="display: block;">
-                        <div class="block-img">
-                            <img class="bg-img" style="opacity: 0;" alt="" src="<?= esc_url($attachmentUrl) ?>" height="100%">
-                        </div>
-                        <div class="block-description">
-                            <div class="container">
-                                <div class="block-desc">
-                                    <?= $description ?>
-                                </div>
-                                <div class="list-title">
-                                    <ul>
-                                        <?php
-                                        $class = 'active';
-                                        foreach ($gallery as $attachment) {
-                                            $title = isset($attachment['title']) ? $attachment['title'] : '';
-                                            $description = isset($attachment['description']) ? $attachment['description'] : '';
-                                            $attachmentUrl = isset($attachment['background']) ? wp_get_attachment_url($attachment['background']) : '';
-                                            echo "<li><a href='javascript:void(0)' class='js-btn-slider ".$class."' data-description='".esc_html($description)."' data-src='".esc_url($attachmentUrl)."'>$title</a></li>";
-                                            $class = '';
-                                        }
-                                        ?>
-                                    </ul>
-                                </div>
+        <main id="main" class="site-main" role="main">
+            <div class="slider">
+                <?php
+                $gallery = get_field('gallery');
+                $description = isset($gallery[0]['description']) ? $gallery[0]['description'] : '';
+                $attachmentUrl = isset($gallery[0]['background']) ? wp_get_attachment_url($gallery[0]['background']) : '';
+                ?>
+                <div class="slider--item" style="display: block;">
+                    <div class="block-img">
+                        <img class="bg-img" style="opacity: 0;" alt="" src="<?= esc_url($attachmentUrl) ?>">
+                    </div>
+                    <div class="block-description">
+                        <div class="container">
+                            <div class="block-desc">
+                                <?= $description ?>
+                            </div>
+                            <div class="list-title">
+                                <ul>
+                                    <?php
+                                    $class = 'active';
+                                    foreach ($gallery as $attachment) {
+                                        $title = isset($attachment['title']) ? $attachment['title'] : '';
+                                        $description = isset($attachment['description']) ? $attachment['description'] : '';
+                                        $attachmentUrl = isset($attachment['background']) ? wp_get_attachment_url($attachment['background']) : '';
+                                        echo "<li><a href='javascript:void(0)' class='js-btn-slider ".$class."' data-description='".esc_html($description)."' data-src='".esc_url($attachmentUrl)."'>$title</a></li>";
+                                        $class = '';
+                                    }
+                                    ?>
+                                </ul>
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
 
-            </main><!-- #main -->
-            <div class="container">
-                <div class="block-notify">
-                    <div class="block-notify--element block-notify--text">
-                        <?= esc_html__('This website use cookies.', 'storefront') ?>
-                        <a href="#learn-more"><?= esc_html__('Learn more', 'storefront') ?></a>
-                    </div>
-                    <div class="block-notify--element block-notify--action js-requirecookie">
-                        <i class="fas fa-times"></i>
-                    </div>
+        </main><!-- #main -->
+        <div class="container">
+            <div class="block-notify">
+                <div class="block-notify--element block-notify--text">
+                    <?= esc_html__('This website use cookies.', 'storefront') ?>
+                    <a href="#learn-more"><?= esc_html__('Learn more', 'storefront') ?></a>
+                </div>
+                <div class="block-notify--element block-notify--action js-requirecookie">
+                    <i class="fas fa-times"></i>
                 </div>
             </div>
-        </div><!-- #primary -->
-    </div>
+        </div>
+    </div><!-- #primary -->
 <?php
 get_footer('home-1');

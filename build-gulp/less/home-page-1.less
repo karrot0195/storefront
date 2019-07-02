@@ -20,22 +20,30 @@ body {
 }
 
 .home-page-1.one-page {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  .site-content {
+    flex-grow: 1;
+  }
   .site-main {
     background-color: #fff;
   }
-  .site-footer {
+  // .site-footer {
+  //   position: absolute;
+  //   bottom: 0;
+  //   width: 100%;
+  //   bottom: 0;
+  // }
+  .block-notify {
     position: absolute;
     bottom: 0;
-    width: 100%;
-    bottom: 0;
-  }
-  .block-notify {
     &::before {
       content: '';
       width: 2000%;
       position: absolute;
       left: -500px;
-      z-index: -1;
+      z-index: 9;
       top: 0;
       height: 100%;
       background-color: rgba(202,203,204,1);
@@ -78,20 +86,25 @@ body {
           outline: 0;
       }
   }
-  .modal-filter {
-    display: none;
-    .modal-heading {
-      display: flex;
-      .logo {
-        flex-grow: 1;
-      }
-      span {
-        i {
-          color: #222;
-          font-size: 35px;
-        }
+  .modal-heading {
+    display: flex;
+    cursor: pointer;
+    .logo {
+      flex-grow: 1;
+    }
+    .button-close {
+      display: none;
+    }
+    span {
+      i {
+        color: #222;
+        font-size: 35px;
       }
     }
+  }
+  .modal-filter {
+    display: none;
+    
     .block-content {
       display: flex;
       .content {
@@ -190,6 +203,8 @@ body {
     color: #f7f7f7;
     display: inline-block;
     vertical-align: middle;
+    position: relative;
+    z-index: 10;
     &.block-notify--action {
       margin-left: 36px;
       @media screen and (max-width: 480px) {
@@ -227,10 +242,21 @@ body {
 
       .site-branding {
         width: 30%;
+        .custom-logo-link {
+          @media screen and (max-width: 992px) {
+            padding: 10px 0;
+            display: block;
+          }
+        }
         img {
           transition: all 0.3s ease;
           -moz-transition: all 0.3s ease;
           -webkit-transition: all 0.3s ease;
+          @media screen and (max-width: 992px) {
+            max-width: 90%;
+            width: auto;
+            height: auto;
+          }
         }
       }
 
@@ -357,11 +383,15 @@ body {
               letter-spacing: 1.46px;
               text-align: left;
               color: #ffffff;
+              white-space: pre-line;
             }
             .block-img {
-              height: 550px;
+              height: calc(100vh - 70px);
               .bg-img {
                 width: 100%;
+                height: 100%;
+                object-position: center;
+                object-fit: cover;
               }
             }
             .list-title {
@@ -555,7 +585,8 @@ body {
       padding: 120px 0 180px;
     }
     @media screen and (max-width: 767px) {
-      font-size: 35px;
+      font-size: 25px;
+      padding: 40px 0;
     }
   }
 }
@@ -564,6 +595,9 @@ body {
 .info-page-child {
     display: flex;
     align-items: center;
+    @media screen and (max-width: 767px) {
+      display: block;
+    }
 }
 .info-page {
     background-color: #e5e5e5;
@@ -583,6 +617,9 @@ body {
       color: #706f6f;
       text-decoration: none;
       text-transform: uppercase;
+      @media screen and (max-width: 767px) {
+        font-size: 8px;
+      }
     }
     ul {
       list-style: none;
@@ -600,6 +637,11 @@ body {
         margin-left: 20px;
         border: 2px solid #8e8b8b;
         transition: 0.3s all ease;
+        @media screen and (max-width: 767px) {
+          width: 30px;
+          height: 30px;
+          font-size: 11px;
+        }
         a {
           color: #8e8b8b;
           text-decoration: none;
@@ -615,6 +657,10 @@ body {
   }
   .info-page-right {
     text-align: right;
+    @media screen and (max-width: 767px) {
+      text-align: left;
+      margin-top: 15px;
+    }
     button {
       background-color: transparent;
       border: 0;
@@ -653,6 +699,9 @@ body {
     color: #020202;
     text-decoration: none;
     text-transform: capitalize;
+    @media screen and (max-width: 767px) {
+      font-size: 15px;
+    }
   }
 
   ul.products li.product .price {
@@ -665,6 +714,14 @@ body {
     letter-spacing: 0.44px;
     text-align: center;
     color: #020202;
+    @media screen and (max-width: 767px) {
+      font-size: 14px;
+    }
+  }
+  ul.products li.product {
+    @media screen and (max-width: 767px){
+      margin-bottom: 30px;
+    }
   }
 
   ul.products li.product .woocommerce-LoopProduct-link,
@@ -1046,6 +1103,8 @@ body {
         text-transform: capitalize;
         @media screen and (max-width: 767px) {
           text-align: center;
+          font-size: 20px;
+          margin: 10px 0;
         }
     }
     &.single-product div.product .woocommerce-product-gallery .woocommerce-product-gallery__trigger {
@@ -1089,6 +1148,9 @@ body {
             letter-spacing: 0.42px;
             text-align: left;
             color: #333333;
+            @media screen and (max-width: 767px) {
+              font-size: 14px;
+            }
         }
     }
     &.single-product div.product .product_meta .posted_in, 
@@ -1433,10 +1495,14 @@ body {
 }
 @media screen and (max-width: 767px){
   .home-page-1 .site-content .block-content .slider--item .block-desc{
-    font-size: 40px;
+    font-size: 25px;
+  }
+  .home-page-1 .site-content .block-content .slider--item .block-img .bg-img {
+    object-fit: initial;
+    object-position: initial;
   }
   .home-page-1 .site-content .block-content .slider--item .list-title ul li a{
-    font-size: 26px;
+    font-size: 18px;
   }
   .block.footer-widget-1,
   .block.footer-widget-2,
@@ -1452,15 +1518,18 @@ body {
   .site-footer .block-widget-page ul li{
     padding-right: 5px;
   }
+  .site-footer .footer-widget-2 .block-widget-page {
+    text-align: left;
+  }
   .home-page-1 .site-content .block-content .block-description{
-    top: 25%;
+    top: 20%;
   }
   .home-page-1 .site-content .block-content .slider--item .list-title ul li{
-    padding-bottom: 25px;
+    padding-bottom: 20px;
   }
-  .home-page-1 .site-content .block-content .slider--item .block-img .bg-img{
-    height: 500px;
-  }
+  // .home-page-1 .site-content .block-content .slider--item .block-img .bg-img{
+  //   height: 500px;
+  // }
   .storefront-product-detail .wrap-cart{
     display: none;
   }
@@ -1494,7 +1563,7 @@ body {
   .site-header {
     .col-full {
       @media screen and (max-width: 992px) {
-        padding: 10px 0;
+        padding: 0px 0;
       }
       .menu-desktop {
         @media screen and (max-width: 992px) {
@@ -1548,7 +1617,7 @@ body {
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
       .col-full {
-        padding: 10px 0;
+        padding: 0px 0;
       }
       @media screen and (max-width: 992px) {
       }
@@ -1599,8 +1668,8 @@ body {
     transform: translateY(-50%);
     .bar {
       position: relative;
-      width: 32px;
-      height: 5px;
+      width: 25px;
+      height: 1px;
       background-color: #020202;
       transition: bottom 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms cubic-bezier(0.23, 1, 0.32, 1), -webkit-transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
       &.animate {
@@ -1628,9 +1697,9 @@ body {
         content: "";
         position: absolute;
         left: 0;
-        width: 32px;
-        height: 5px;
-        bottom: 10px;
+        width: 25px;
+        height: 1px;
+        bottom: 6px;
         background-color: #020202;
         transition: bottom 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1), -webkit-transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
         transition: bottom 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
@@ -1640,9 +1709,9 @@ body {
         content: "";
         position: absolute;
         left: 0;
-        width: 32px;
-        height: 5px;
-        top: 10px;
+        width: 25px;
+        height: 1px;
+        top: 6px;
         background-color: #020202;
         transition: top 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1), -webkit-transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
         transition: top 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
