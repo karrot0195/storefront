@@ -401,7 +401,7 @@
   }
   .related>h2:first-child, .upsells>h2:first-child {
     font-family: "Barlow", sans-serif;
-    font-size: 22px;
+    font-size: 20px;
     font-weight: normal;
     font-style: normal;
     font-stretch: normal;
@@ -801,7 +801,7 @@
         .value-button {
           i {
             font-family: "Barlow", sans-serif;
-            font-size: 30px;
+            font-size: 24px;
             font-weight: normal;
             font-style: normal;
             font-stretch: normal;
@@ -901,6 +901,10 @@
         cursor: pointer;
         display: inline-block;
         text-transform: uppercase;
+        transition: 0.3s all ease;
+        &:focus{
+          font-size: 12px;
+        }
         @media screen and (max-width: 767px) {
           margin-left: 0;
           margin-top: 20px;

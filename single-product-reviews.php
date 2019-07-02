@@ -42,7 +42,7 @@ if ( ! comments_open() ) {
             </h2>
 
             <div class="block-view-all">
-                <?= esc_html__('View all reviewers', 'storefront') ?>
+                <?= esc_html__('View all', 'storefront') ?>
             </div>
 
             <div class="block-write-comment">
