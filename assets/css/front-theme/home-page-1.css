@@ -164,8 +164,8 @@ body.page-template-template-home1 {
   z-index: 9;
 }
 .home-page-1 .site-header.fixed .col-full .site-branding img {
-  width: 30px;
-  height: 120px;
+  width: 120px;
+  height: 30px;
 }
 .home-page-1 .site-header .col-full {
   max-width: 100%;
