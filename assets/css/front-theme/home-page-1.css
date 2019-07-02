@@ -32,6 +32,7 @@ body.page-template-template-home1 {
   position: absolute;
   bottom: 0;
   left: 0;
+  width: 100%;
   overflow: hidden;
 }
 .home-page-1.one-page .block-notify::before {
