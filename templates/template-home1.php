@@ -22,7 +22,7 @@ get_header('home-1'); ?>
                 ?>
                 <div class="slider--item" style="display: block;">
                     <div class="block-img">
-                        <img class="bg-img" style="opacity: 0;" alt="" src="<?= esc_url($attachmentUrl) ?>" height="900px">
+                        <img class="bg-img" style="opacity: 0;" alt="" src="<?= esc_url($attachmentUrl) ?>" height="500px">
                     </div>
                     <div class="block-description">
                         <div class="container">
