@@ -25,8 +25,9 @@ get_header( 'home-1' );
 			<div class="wrapper-page">
 				<div class="info-page-child">
 					<div class="info-page-left">
-						<a href="#"><?= esc_html__('View All Products', 'storefront') ?></a>
+						<a href="#"><?= esc_html__('View Products', 'storefront') ?></a>
 						<ul class="list-filter">
+							<li><a href="#">ALL</a></li>
 							<li><a href="#">8</a></li>
 							<li><a href="#">16</a></li>
 							<li><a href="#">24</a></li>
