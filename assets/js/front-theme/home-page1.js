@@ -190,7 +190,10 @@
     };
 
 	$("img.bg-img").imgLoad(function () {
-		setTimeout(() => {$('img.bg-img').css("opacity", 1);}, 300);	
+		 $('img.bg-img').fadeOut(200);
+		setTimeout(() => {
+			$('img.bg-img').css("opacity", 1).fadeIn(600);
+		}, 300);	
 	});
   $('.js-btn-slider').on('click', function() {
     let src = $(this).data('src');
