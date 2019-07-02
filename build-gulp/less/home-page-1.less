@@ -1239,6 +1239,52 @@ body {
       margin-right: 0;
     }
 
+    .flex-direction-nav {
+      display: flex;
+      list-style: none;
+      padding: 0;
+      .flex-nav-prev {
+        flex-grow: 1;
+      }
+      .flex-prev {
+        font-size: 0;
+        &::before {
+          content: "";
+          color: #1e1e1e;
+          display: inline-block;
+          font-family: "Ionicons";
+          speak: none;
+          font-size: 30px;
+          font-style: normal;
+          font-weight: normal;
+          font-variant: normal;
+          text-transform: none;
+          text-rendering: auto;
+          line-height: 1;
+          -webkit-font-smoothing: antialiased;
+        }
+      }
+      .flex-next {
+        font-size: 0;
+        &::after {
+          content: "";
+          color: #1e1e1e;
+          display: inline-block;
+          font-family: "Ionicons";
+          speak: none;
+          font-size: 30px;
+          font-style: normal;
+          font-weight: normal;
+          font-variant: normal;
+          text-transform: none;
+          text-rendering: auto;
+          line-height: 1;
+          -webkit-font-smoothing: antialiased;
+
+        }
+      }
+    }
+
     .single_add_to_cart_button {
         font-family: "Barlow", sans-serif;
         font-size: 14px;
