@@ -302,6 +302,9 @@ body.page-template-template-home1 {
 .home-page-1 .site-header .col-full .block-icon-action .list-action {
   padding: 0;
   margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .home-page-1 .site-header .col-full .block-icon-action .list-action a {
   color: #151515;
