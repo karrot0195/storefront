@@ -21,7 +21,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 if ( $related_products ) : ?>
 
-	<section class="related products">
+	<section data-wow-delay="0.5s" class="related products wow fadeIn">
 
 		<h2><?php esc_html_e( 'You May Also Like', 'woocommerce' ); ?></h2>
 

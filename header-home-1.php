@@ -15,8 +15,12 @@
     <link rel="profile" href="http://gmpg.org/xfn/11">
     <!-- Add the slick-theme.css if you want default styling -->
     <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css" >
+
     <script>
         const home_url = "<?= home_url() ?>";
+        new WOW().init();
     </script>
     <?php wp_head(); ?>
 </head>
