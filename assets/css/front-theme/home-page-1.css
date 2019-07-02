@@ -20,6 +20,9 @@ body.page-template-template-home1 {
 .home-page-1.one-page header {
   background: transparent;
 }
+.home-page-1.one-page .site-content {
+  background-color: #cacbcc;
+}
 .home-page-1.one-page .site-header {
   position: absolute;
 }
