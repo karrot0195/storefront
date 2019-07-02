@@ -1105,7 +1105,7 @@ a:hover {
   color: #222222;
   text-transform: uppercase;
 }
-.storefront-product-detail.single-product div.product .product_meta .posted_in label {
+.storefront-product-detail.single-product div.product .product_meta .posted_in .label {
   display: inline-block;
   vertical-align: top;
   width: 20%;
