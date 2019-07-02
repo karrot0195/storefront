@@ -25,6 +25,9 @@ body.page-template-template-home1 {
 .home-page-1.one-page .site-content {
   flex-grow: 1;
 }
+.home-page-1.one-page .wrapper-main {
+  position: relative;
+}
 .home-page-1.one-page .site-main {
   background-color: #fff;
 }
@@ -154,7 +157,7 @@ body.page-template-template-home1 {
 }
 .home-page-1 .block-wrapper-notify {
   position: absolute;
-  bottom: 70px;
+  bottom: 0px;
   left: 0;
   width: 100%;
   background-color: #cacbcc;
