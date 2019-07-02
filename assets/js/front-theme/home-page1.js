@@ -194,7 +194,10 @@
   //       img.src = src;
   //   }
   // });
-  $('.bg-img').fadeIn(5000);
+   $('img.bg-img').fadeOut(300, function() {
+      let src = $('.list-title li:nth-child(1) a').data('src');
+      $('img.bg-img').attr('src', src);
+    }).fadeIn(300);
   $('.js-btn-slider').on('click', function() {
     let src = $(this).data('src');
     let desc = $(this).data('description');
