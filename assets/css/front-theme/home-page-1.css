@@ -1164,6 +1164,10 @@ a:hover {
 .storefront-product-detail.single-product div.product .woocommerce-product-gallery {
   margin-right: 0;
 }
+.storefront-product-detail.single-product div.product .woocommerce-product-gallery img {
+  display: block;
+  margin: 0 auto;
+}
 .storefront-product-detail .flex-direction-nav {
   display: flex;
   list-style: none;
