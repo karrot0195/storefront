@@ -317,7 +317,7 @@ body.page-template-template-home1 {
   color: #ffffff;
 }
 .home-page-1 .site-content .block-content .slider--item .block-img {
-  height: 500px;
+  height: cacl(-80vh);
 }
 .home-page-1 .site-content .block-content .slider--item .block-img .bg-img {
   width: 100%;
