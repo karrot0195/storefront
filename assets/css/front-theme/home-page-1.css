@@ -20,6 +20,11 @@ body.page-template-template-home1 {
 .home-page-1.one-page .site-main {
   background-color: #fff;
 }
+.home-page-1.one-page .wrapper-container {
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+}
 .home-page-1.one-page header {
   background: transparent;
 }
