@@ -28,12 +28,16 @@ body.page-template-template-home1 {
 .home-page-1.one-page .site-main {
   background-color: #fff;
 }
+.home-page-1.one-page .block-notify {
+  position: absolute;
+  bottom: 0;
+}
 .home-page-1.one-page .block-notify::before {
   content: '';
   width: 2000%;
   position: absolute;
   left: -500px;
-  z-index: -1;
+  z-index: 9;
   top: 0;
   height: 100%;
   background-color: #cacbcc;
@@ -171,6 +175,8 @@ body.page-template-template-home1 {
   color: #f7f7f7;
   display: inline-block;
   vertical-align: middle;
+  position: relative;
+  z-index: 10;
 }
 .home-page-1 .block-notify--element.block-notify--action {
   margin-left: 36px;
@@ -206,10 +212,23 @@ body.page-template-template-home1 {
 .home-page-1 .site-header .col-full .site-branding {
   width: 30%;
 }
+@media screen and (max-width: 992px) {
+  .home-page-1 .site-header .col-full .site-branding .custom-logo-link {
+    padding: 10px 0;
+    display: block;
+  }
+}
 .home-page-1 .site-header .col-full .site-branding img {
   transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
   -webkit-transition: all 0.3s ease;
+}
+@media screen and (max-width: 992px) {
+  .home-page-1 .site-header .col-full .site-branding img {
+    max-width: 90%;
+    width: auto;
+    height: auto;
+  }
 }
 .home-page-1 .site-header .col-full .block-menu {
   width: 40%;
@@ -322,7 +341,7 @@ body.page-template-template-home1 {
   white-space: pre-line;
 }
 .home-page-1 .site-content .block-content .slider--item .block-img {
-  height: calc(100vh - 180px);
+  height: calc(100vh - 70px);
 }
 .home-page-1 .site-content .block-content .slider--item .block-img .bg-img {
   width: 100%;
@@ -518,13 +537,19 @@ body.page-template-template-home1 {
 }
 @media screen and (max-width: 767px) {
   .banner-main .banner-title {
-    font-size: 35px;
+    font-size: 25px;
+    padding: 40px 0;
   }
 }
 /* ------------------ Info Page ------------------- */
 .info-page-child {
   display: flex;
   align-items: center;
+}
+@media screen and (max-width: 767px) {
+  .info-page-child {
+    display: block;
+  }
 }
 .info-page {
   background-color: #e5e5e5;
@@ -547,6 +572,11 @@ body.page-template-template-home1 {
   text-decoration: none;
   text-transform: uppercase;
 }
+@media screen and (max-width: 767px) {
+  .info-page .info-page-left a {
+    font-size: 8px;
+  }
+}
 .info-page .info-page-left ul {
   list-style: none;
   padding: 0;
@@ -565,6 +595,13 @@ body.page-template-template-home1 {
   border: 2px solid #8e8b8b;
   transition: 0.3s all ease;
 }
+@media screen and (max-width: 767px) {
+  .info-page .info-page-left ul li {
+    width: 30px;
+    height: 30px;
+    font-size: 11px;
+  }
+}
 .info-page .info-page-left ul li a {
   color: #8e8b8b;
   text-decoration: none;
@@ -577,6 +614,12 @@ body.page-template-template-home1 {
 }
 .info-page .info-page-right {
   text-align: right;
+}
+@media screen and (max-width: 767px) {
+  .info-page .info-page-right {
+    text-align: left;
+    margin-top: 15px;
+  }
 }
 .info-page .info-page-right button {
   background-color: transparent;
@@ -614,6 +657,12 @@ body.page-template-template-home1 {
   text-decoration: none;
   text-transform: capitalize;
 }
+@media screen and (max-width: 767px) {
+  .home-page-1 ul.products li.product .woocommerce-loop-product__title,
+  .home-page-1 ul.products li.product h2 {
+    font-size: 15px;
+  }
+}
 .home-page-1 ul.products li.product .price {
   font-family: "Barlow", sans-serif;
   font-size: 16px;
@@ -624,6 +673,16 @@ body.page-template-template-home1 {
   letter-spacing: 0.44px;
   text-align: center;
   color: #020202;
+}
+@media screen and (max-width: 767px) {
+  .home-page-1 ul.products li.product .price {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .home-page-1 ul.products li.product {
+    margin-bottom: 30px;
+  }
 }
 .home-page-1 ul.products li.product .woocommerce-LoopProduct-link,
 .home-page-1 ul.products li.product .price ins {
@@ -984,6 +1043,8 @@ a:hover {
 @media screen and (max-width: 767px) {
   .storefront-product-detail .product_title {
     text-align: center;
+    font-size: 20px;
+    margin: 10px 0;
   }
 }
 .storefront-product-detail.single-product div.product .woocommerce-product-gallery .woocommerce-product-gallery__trigger {
@@ -1026,6 +1087,11 @@ a:hover {
   letter-spacing: 0.42px;
   text-align: left;
   color: #333333;
+}
+@media screen and (max-width: 767px) {
+  .storefront-product-detail .woocommerce-product-details__short-description p {
+    font-size: 14px;
+  }
 }
 .storefront-product-detail.single-product div.product .product_meta .posted_in,
 .storefront-product-detail.single-product div.product .product_meta .sku_wrapper,
@@ -1387,7 +1453,7 @@ a:hover {
 }
 @media screen and (max-width: 992px) {
   .home-page-1 .site-header .col-full {
-    padding: 10px 0;
+    padding: 0px 0;
   }
 }
 @media screen and (max-width: 992px) {
@@ -1442,7 +1508,7 @@ a:hover {
   -o-transition: all 0.5s ease;
 }
 .home-page-1 .site-header.fixed .col-full {
-  padding: 10px 0;
+  padding: 0px 0;
 }
 .home-page-1 .site-header .col-full .menu-mobile .site-branding {
   display: none;
@@ -1484,8 +1550,8 @@ a:hover {
 }
 .home-page-1 .hamburger-menu .bar {
   position: relative;
-  width: 32px;
-  height: 5px;
+  width: 25px;
+  height: 1px;
   background-color: #020202;
   transition: bottom 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms cubic-bezier(0.23, 1, 0.32, 1), -webkit-transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
 }
@@ -1514,9 +1580,9 @@ a:hover {
   content: "";
   position: absolute;
   left: 0;
-  width: 32px;
-  height: 5px;
-  bottom: 10px;
+  width: 25px;
+  height: 1px;
+  bottom: 6px;
   background-color: #020202;
   transition: bottom 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1), -webkit-transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
   transition: bottom 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
@@ -1526,9 +1592,9 @@ a:hover {
   content: "";
   position: absolute;
   left: 0;
-  width: 32px;
-  height: 5px;
-  top: 10px;
+  width: 25px;
+  height: 1px;
+  top: 6px;
   background-color: #020202;
   transition: top 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1), -webkit-transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
   transition: top 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
