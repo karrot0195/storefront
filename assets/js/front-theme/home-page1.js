@@ -167,9 +167,7 @@
   // [HOME PAGE] COOKIE
     if ($('.js-requirecookie').length > 0) {
       const $container = $('.js-requirecookie').parents('.container');
-      $()
       $('.js-requirecookie').on('click', () => {
-        
         $container.fadeOut(300);
       });
   }
@@ -192,11 +190,11 @@
     };
 
 	$("img.bg-img").imgLoad(function () {
-		 $('img.bg-img').fadeOut(200);
 		setTimeout(() => {
-			$('img.bg-img').css("opacity", 1).fadeIn(600);
+			$('img.bg-img').animate({opacity: 1}, 300);
 		}, 300);	
 	});
+
   $('.js-btn-slider').on('click', function() {
     let src = $(this).data('src');
     let desc = $(this).data('description');
