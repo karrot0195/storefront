@@ -20,9 +20,9 @@ get_header('home-1'); ?>
                 $description = isset($gallery[0]['description']) ? $gallery[0]['description'] : '';
                 $attachmentUrl = isset($gallery[0]['background']) ? wp_get_attachment_url($gallery[0]['background']) : '';
                 ?>
-                <div class="slider--item" style="display: block; transition: all 5s ease;">
+                <div class="slider--item" style="display: block;">
                     <div class="block-img">
-                        <img class="bg-img" src="<?= esc_url($attachmentUrl) ?>" alt="" height="900px">
+                        <img class="bg-img" style="transition: all 5s ease;" src="<?= esc_url($attachmentUrl) ?>" alt="" height="900px">
                     </div>
                     <div class="block-description">
                         <div class="container">
