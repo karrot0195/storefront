@@ -411,7 +411,7 @@
 .storefront-product-detail .related > h2:first-child,
 .storefront-product-detail .upsells > h2:first-child {
   font-family: "Barlow", sans-serif;
-  font-size: 22px;
+  font-size: 20px;
   font-weight: normal;
   font-style: normal;
   font-stretch: normal;
@@ -801,7 +801,7 @@
 }
 .storefront-product-detail .woocommerce-product-details__short-description + .wrap-cart .wrap-block.wrap-proccess .value-button i {
   font-family: "Barlow", sans-serif;
-  font-size: 30px;
+  font-size: 24px;
   font-weight: normal;
   font-style: normal;
   font-stretch: normal;
@@ -894,6 +894,10 @@
   cursor: pointer;
   display: inline-block;
   text-transform: uppercase;
+  transition: 0.3s all ease;
+}
+.storefront-product-detail .wrap-cart .fm-detail-cart .btn-add-to-cart:focus {
+  font-size: 12px;
 }
 @media screen and (max-width: 767px) {
   .storefront-product-detail .wrap-cart .fm-detail-cart .btn-add-to-cart {
