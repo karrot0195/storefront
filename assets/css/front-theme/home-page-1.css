@@ -43,7 +43,12 @@ body.page-template-template-home1 {
   z-index: 9;
   top: 0;
   height: 100%;
-  background-color: #cacbcc;
+  background-color: transparent;
+}
+@media screen and (max-width: 767px) {
+  .home-page-1.one-page .block-notify::before {
+    background-color: #cacbcc;
+  }
 }
 .home-page-1.one-page .wrapper-container {
   display: flex;
