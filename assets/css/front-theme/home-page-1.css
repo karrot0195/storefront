@@ -283,7 +283,7 @@ body.page-template-template-home1 {
 .home-page-1 .site-content .block-content .slider--item .block-desc {
   max-width: 590px;
   font-family: "Barlow", sans-serif;
-  font-size: 63px;
+  font-size: 40px;
   font-weight: 500;
   font-style: normal;
   font-stretch: normal;
@@ -291,6 +291,9 @@ body.page-template-template-home1 {
   letter-spacing: 1.46px;
   text-align: left;
   color: #ffffff;
+}
+.home-page-1 .site-content .block-content .slider--item .block-img {
+  height: 500px;
 }
 .home-page-1 .site-content .block-content .slider--item .block-img .bg-img {
   width: 100%;

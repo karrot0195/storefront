@@ -167,7 +167,9 @@
   // [HOME PAGE] COOKIE
     if ($('.js-requirecookie').length > 0) {
       const $container = $('.js-requirecookie').parents('.container');
+      $()
       $('.js-requirecookie').on('click', () => {
+        
         $container.fadeOut(300);
       });
   }
