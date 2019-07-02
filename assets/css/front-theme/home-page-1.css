@@ -1105,12 +1105,16 @@ a:hover {
   color: #222222;
   text-transform: uppercase;
 }
-.storefront-product-detail.single-product div.product .product_meta .posted_in .label {
+.storefront-product-detail.single-product div.product .product_meta .posted_in .label,
+.storefront-product-detail.single-product div.product .product_meta .sku_wrapper .label,
+.storefront-product-detail.single-product div.product .product_meta .tagged_as .label {
   display: inline-block;
   vertical-align: top;
   width: 20%;
 }
-.storefront-product-detail.single-product div.product .product_meta .posted_in .main-content {
+.storefront-product-detail.single-product div.product .product_meta .posted_in .main-content,
+.storefront-product-detail.single-product div.product .product_meta .sku_wrapper .main-content,
+.storefront-product-detail.single-product div.product .product_meta .tagged_as .main-content {
   display: inline-block;
   vertical-align: top;
   width: 80%;
