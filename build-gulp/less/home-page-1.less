@@ -1242,12 +1242,16 @@ body {
     .flex-direction-nav {
       display: flex;
       list-style: none;
+      transform: translateY(-50px);
       padding: 0;
       .flex-nav-prev {
         flex-grow: 1;
       }
       .flex-prev {
         font-size: 0;
+        &:focus {
+          outline: 0;
+        }
         &::before {
           content: "";
           color: #1e1e1e;
@@ -1266,6 +1270,9 @@ body {
       }
       .flex-next {
         font-size: 0;
+        &:focus {
+          outline: 0;
+        }
         &::after {
           content: "";
           color: #1e1e1e;
