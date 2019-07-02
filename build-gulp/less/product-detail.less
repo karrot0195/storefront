@@ -2,8 +2,20 @@
   .comment-form {
     font-family: "Barlow", sans-serif;
   }
+  &.single-product div.product .woocommerce-product-rating .star-rating {
+    @media screen and (max-width: 767px) {
+      font-size: 14px;
+    }
+  } 
   .block-process {
     display: flex;
+  }
+  &.single-product div.product p.price {
+    font-family: "Barlow", sans-serif;
+    font-size: 25px;
+    @media screen and (max-width: 767px) {
+      font-size: 14px;
+    }
   }
   .site-main {
     .woocommerce-product-gallery {
@@ -62,6 +74,9 @@
     text-align: left;
     color: #222222;
     margin-right: 25px;
+    @media screen and (max-width: 767px) {
+      font-size: 18px;
+    }
   }
 
   .block-view-all {
@@ -319,6 +334,9 @@
     letter-spacing: 0.5px;
     text-align: left;
     color: #222222;
+    @media screen and (max-width: 767px) {
+      font-size: 15px;
+    }
   }
   #reviews .commentlist li p.meta {
     text-align:left;
@@ -360,6 +378,9 @@
       letter-spacing: 0.42px;
       text-align: left;
       color: #222222;
+      @media screen and (max-width: 767px) {
+        font-size: 14px;
+      }
     }
   }
   #reviews .commentlist li .comment_container .comment-text {
@@ -394,6 +415,9 @@
     text-align: center;
     padding: 65px 0;
     position: relative;
+    @media screen and (max-width: 767px) {
+      padding: 30px 0;
+    }
     &:before {
       content: '';
       position: absolute;
@@ -416,6 +440,10 @@
     text-align: center;
     color: #a7a7a7;
     margin-bottom: 60px;
+    @media screen and (max-width: 767px) {
+      margin-bottom: 25px;
+      font-size: 16px;
+    }
   }
   #review_form_wrapper {
     padding-bottom: 60px;
@@ -429,6 +457,7 @@
     padding: 90px 0 15px;
     @media screen and (max-width: 767px) {
       padding-top: 0;
+      margin-bottom: 0;
     }
   }
   &.single-product div.product .woocommerce-product-gallery {
@@ -506,6 +535,9 @@
       text-align: left;
       color: #000000;
       text-transform: uppercase;
+      @media screen and (max-width: 767px) {
+        font-size: 15px;
+      }
     }
     p {
       font-family: "Barlow", sans-serif;
@@ -517,6 +549,9 @@
       letter-spacing: 0.42px;
       text-align: left;
       color: #202020;
+      @media screen and (max-width: 767px) {
+        font-size: 14px;
+      }
     }
   }
   .woocommerce-product-attributes-item__value {
@@ -565,7 +600,7 @@
     z-index: 1;
     position: relative;
     @media screen and (max-width: 767px) {
-      padding: 30px 0 20px;
+      padding: 15px 0 20px;
     }
     &::before {
       content: '';
@@ -582,6 +617,9 @@
     margin-bottom: 0;
     padding: 40px 0 35px;
     border-bottom: 1px solid #d1d1d1;
+    @media screen and (max-width: 767px) {
+      padding: 25px 0;
+    }
     &:last-child {
       border: 0;
       padding-bottom: 0;
@@ -778,6 +816,9 @@
   }
   &.single-product div.product .product_meta {
     padding-top: 45px;
+    @media screen and (max-width: 767px) {
+      padding-top: 25px;
+    }
   }
   .woocommerce-product-details__short-description {
     + .wrap-cart {
@@ -908,9 +949,7 @@
         display: inline-block;
         text-transform: uppercase;
         transition: 0.3s all ease;
-        &:focus{
-          font-size: 12px;
-        }
+        position: relative;
         @media screen and (max-width: 767px) {
           margin-left: 0;
           margin-top: 20px;
@@ -919,6 +958,19 @@
         &.proccess {
           background-color: #ffffff;
           color: #0f1972;
+        }
+      }
+      .btn-add-to-cart-click{
+        background: #ffffff;
+        color: #142d73;
+        &::before{
+          position: absolute;
+          content: '';
+          top: 50%;
+          left: 50%;
+          width: 50px;
+          height: 50px;
+          background-image: url(../../assets/images/icon/arrow-right.png);
         }
       }
 

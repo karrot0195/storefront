@@ -35,6 +35,11 @@
           }
         }
       });
+
+      $(document).on('click', '.fm-detail-cart .js-btn-add-to-cart',  function () {
+        $(this).addClass('btn-add-to-cart-click');
+      });
+
   }, 100);
 })(jQuery);
 
