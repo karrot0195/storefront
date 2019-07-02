@@ -63,18 +63,21 @@ body.page-template-template-home1 {
   box-shadow: none;
   outline: 0;
 }
-.home-page-1 .modal-filter {
-  display: none;
-}
-.home-page-1 .modal-filter .modal-heading {
+.home-page-1 .modal-heading {
   display: flex;
 }
-.home-page-1 .modal-filter .modal-heading .logo {
+.home-page-1 .modal-heading .logo {
   flex-grow: 1;
 }
-.home-page-1 .modal-filter .modal-heading span i {
+.home-page-1 .modal-heading .button-close {
+  display: none;
+}
+.home-page-1 .modal-heading span i {
   color: #222;
   font-size: 35px;
+}
+.home-page-1 .modal-filter {
+  display: none;
 }
 .home-page-1 .modal-filter .block-content {
   display: flex;

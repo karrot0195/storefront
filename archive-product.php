@@ -36,14 +36,14 @@ get_header( 'home-1' );
 					<div class="info-page-right">
 						<button class="btn-filter"><?= esc_html__('FILTER', 'storefront') ?></button>
 					</div>
-				</div>
-				<div class="modal-filter">
 					<div class="modal-heading">
 						<span href="#" class="logo"></span>
 						<span class="button-close">
 							<i class="ion ion-ios-close"></i>
 						</span>
 					</div>
+				</div>
+				<div class="modal-filter">
 					<div class="modal-content">
 						<div class="block-content">
 							<div class="content content-1">

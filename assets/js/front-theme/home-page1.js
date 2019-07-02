@@ -29,6 +29,7 @@
   });
   // Filter
   $('.btn-filter').on('click', function(){
+    $('.button-close').show(300);
     $('.modal-filter').slideToggle(300);
     $(this).hide();
   })
@@ -37,6 +38,7 @@
   $('.button-close').on('click', function() {
     $('.modal-filter').slideToggle(300);
     $('.info-page-child .btn-filter').show(300);
+    $('.button-close').hide();
   });
 
   // Choose Filter
