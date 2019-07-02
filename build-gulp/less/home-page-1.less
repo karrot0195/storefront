@@ -183,6 +183,16 @@ body {
   .site-header {
     width: 100%;
     z-index: 9;
+    &.fixed {
+      .col-full{
+        .site-branding {
+          img {
+            width: 30px;
+            height: 120px;
+          }
+        }
+      }
+    }
     .col-full {
       max-width: 100%;
       display: flex;
@@ -191,6 +201,11 @@ body {
 
       .site-branding {
         width: 30%;
+        img {
+          transition: all 0.3s ease;
+          -moz-transition: all 0.3s ease;
+          -webkit-transition: all 0.3s ease;
+        }
       }
 
       .block-menu {
@@ -1477,7 +1492,7 @@ body {
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
       .col-full {
-        padding: 5px 0;
+        padding: 10px 0;
       }
       @media screen and (max-width: 992px) {
       }

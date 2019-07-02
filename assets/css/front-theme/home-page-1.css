@@ -163,6 +163,10 @@ body.page-template-template-home1 {
   width: 100%;
   z-index: 9;
 }
+.home-page-1 .site-header.fixed .col-full .site-branding img {
+  width: 30px;
+  height: 120px;
+}
 .home-page-1 .site-header .col-full {
   max-width: 100%;
   display: flex;
@@ -171,6 +175,11 @@ body.page-template-template-home1 {
 }
 .home-page-1 .site-header .col-full .site-branding {
   width: 30%;
+}
+.home-page-1 .site-header .col-full .site-branding img {
+  transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
 }
 .home-page-1 .site-header .col-full .block-menu {
   width: 40%;
@@ -1371,7 +1380,7 @@ a:hover {
   -o-transition: all 0.5s ease;
 }
 .home-page-1 .site-header.fixed .col-full {
-  padding: 5px 0;
+  padding: 10px 0;
 }
 .home-page-1 .site-header .col-full .menu-mobile .site-branding {
   display: none;
