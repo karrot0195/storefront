@@ -61,7 +61,7 @@ get_header('home-1'); ?>
                     </div>
                 </div>
             </div>
-        </div>
-     </div><!-- #primary -->
+        </div><!-- #primary -->
+    </div>
 <?php
 get_footer('home-1');

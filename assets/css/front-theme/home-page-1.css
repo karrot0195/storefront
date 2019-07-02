@@ -20,6 +20,21 @@ body.page-template-template-home1 {
 .home-page-1.one-page .site-main {
   background-color: #fff;
 }
+.home-page-1.one-page .site-footer {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+}
+.home-page-1.one-page .block-notify::before {
+  content: '';
+  width: 2000%;
+  position: absolute;
+  left: -500px;
+  z-index: -1;
+  top: 0;
+  height: 100%;
+  background-color: #cacbcc;
+}
 .home-page-1.one-page .wrapper-container {
   display: flex;
   height: 100vh;
@@ -27,9 +42,6 @@ body.page-template-template-home1 {
 }
 .home-page-1.one-page header {
   background: transparent;
-}
-.home-page-1.one-page .site-content {
-  background-color: #cacbcc;
 }
 .home-page-1.one-page .site-header {
   position: absolute;
@@ -302,14 +314,14 @@ body.page-template-template-home1 {
   color: #ffffff;
 }
 .home-page-1 .site-content .block-content .slider--item .block-img {
-  height: 500px;
+  height: 550px;
 }
 .home-page-1 .site-content .block-content .slider--item .block-img .bg-img {
   width: 100%;
 }
 .home-page-1 .site-content .block-content .slider--item .list-title {
   position: relative;
-  padding-top: 10%;
+  padding-top: 5%;
 }
 .home-page-1 .site-content .block-content .slider--item .list-title ul {
   list-style: none;
@@ -317,17 +329,17 @@ body.page-template-template-home1 {
   padding-left: 0;
 }
 .home-page-1 .site-content .block-content .slider--item .list-title ul li {
-  padding-bottom: 54px;
+  padding-bottom: 30px;
 }
 @media screen and (max-width: 1400px) {
   .home-page-1 .site-content .block-content .slider--item .list-title ul li {
-    padding-bottom: 50px;
+    padding-bottom: 30px;
   }
 }
 .home-page-1 .site-content .block-content .slider--item .list-title ul li a {
   width: 200px;
   font-family: "Barlow", sans-serif;
-  font-size: 34px;
+  font-size: 20px;
   font-weight: 500;
   font-style: normal;
   font-stretch: normal;
