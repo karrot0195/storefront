@@ -1316,7 +1316,7 @@ a:hover {
 }
 @media screen and (max-width: 992px) {
   .home-page-1 .site-header .col-full {
-    padding: 15px 0;
+    padding: 10px 0;
   }
 }
 @media screen and (max-width: 992px) {
@@ -1371,7 +1371,7 @@ a:hover {
   -o-transition: all 0.5s ease;
 }
 .home-page-1 .site-header.fixed .col-full {
-  padding: 15px 0;
+  padding: 5px 0;
 }
 .home-page-1 .site-header .col-full .menu-mobile .site-branding {
   display: none;

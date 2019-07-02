@@ -174,6 +174,24 @@
 
 
   // [HOME PAGE] EVENT SLIDER
+  $.fn.imgLoad = function(callback) {
+        return this.each(function() {
+            if (callback) {
+                if (this.complete || /*for IE 10-*/ $(this).height() > 0) {
+                    callback.apply(this);
+                }
+                else {
+                    $(this).on('load', function(){
+                        callback.apply(this);
+                    });
+                }
+            }
+        });
+    };
+
+	$("img.bg-img").imgLoad(function () {
+		setTimeout(() => {$('img.bg-img').css("opacity", 1);}, 300);	
+	});
   $('.js-btn-slider').on('click', function() {
     let src = $(this).data('src');
     let desc = $(this).data('description');
