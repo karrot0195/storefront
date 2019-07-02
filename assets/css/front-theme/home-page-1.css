@@ -17,6 +17,14 @@ body.page-template-template-home1 {
   margin: 0 !important;
   padding: 0;
 }
+.home-page-1.one-page {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.home-page-1.one-page .site-content {
+  flex-grow: 1;
+}
 .home-page-1.one-page .site-main {
   background-color: #fff;
 }
