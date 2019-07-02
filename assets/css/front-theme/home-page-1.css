@@ -317,7 +317,13 @@ body.page-template-template-home1 {
   letter-spacing: 0.9px;
   text-align: left;
   color: rgba(255, 255, 255, 0.4);
+  transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
   text-decoration: none;
+}
+.home-page-1 .site-content .block-content .slider--item .list-title ul li a:hover {
+  color: #fff;
 }
 .home-page-1 .site-content .block-content .slider--item .list-title ul li a.active {
   color: #ffffff;
