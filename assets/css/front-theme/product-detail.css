@@ -1,3 +1,6 @@
+.storefront-product-detail .comment-form {
+  font-family: "Barlow", sans-serif;
+}
 .storefront-product-detail .block-process {
   display: flex;
 }
@@ -159,6 +162,9 @@
   text-align: center;
   text-transform: uppercase;
   margin-bottom: 35px;
+}
+.storefront-product-detail .comment-respond .comment-form p label {
+  font-family: "Barlow", sans-serif;
 }
 .storefront-product-detail .comment-respond .comment-form p input {
   height: 30px;

@@ -65,6 +65,7 @@ body.page-template-template-home1 {
 }
 .home-page-1 .modal-heading {
   display: flex;
+  cursor: pointer;
 }
 .home-page-1 .modal-heading .logo {
   flex-grow: 1;
