@@ -22,9 +22,9 @@ get_header('home-1'); ?>
                 ?>
                 <div class="slider--item" style="display: block;">
                     <div class="block-img">
-                        <img class="bg-img" src="<?= esc_url($attachmentUrl) ?>" alt="" height="900px">
+                        <img class="bg-img" alt="" height="900px">
                     </div>
-                    <div class="block-description">style="transition: all 5s ease;" 
+                    <div class="block-description">
                         <div class="container">
                             <div class="block-desc">
                                 <?= $description ?>
