@@ -1518,7 +1518,7 @@ a:hover {
   .home-page-1 .menu-mobile {
     display: block;
     position: fixed;
-    top: 78px;
+    top: 57px;
     right: -100%;
     max-width: 75%;
     width: 100%;
@@ -1552,7 +1552,12 @@ a:hover {
   -o-transition: all 0.5s ease;
 }
 .home-page-1 .site-header.fixed .col-full {
-  padding: 0px 0;
+  padding: 30px 0;
+}
+@media screen and (max-width: 992px) {
+  .home-page-1 .site-header.fixed {
+    padding: 0;
+  }
 }
 .home-page-1 .site-header .col-full .menu-mobile .site-branding {
   display: none;
