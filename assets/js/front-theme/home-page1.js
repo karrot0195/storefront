@@ -174,27 +174,6 @@
 
 
   // [HOME PAGE] EVENT SLIDER
-  // $(document).ready(function() {
-  //   let src = $(this).data('src');
-  //   let desc = $(this).data('description');
-  //   $('img.bg-img').fadeOut(100, function() {
-  //     $('img.bg-img').attr('src', src);
-  //     $('.slider--item .block-desc').html(desc);
-  //   }).fadeIn(100);
-  // );
-  // $(".bg-img").each(function() {
-  //   var src = $(this).data("src");
-  //   if (src) {
-  //       var img = new Image();
-  //       img.style.display = "none";
-  //       img.onload = function() {
-  //           $(this).fadeIn(1000);
-  //       };
-  //       $(this).append(img);            
-  //       img.src = src;
-  //   }
-  // });
-  $('.bg-img').fadeIn(5000);
   $('.js-btn-slider').on('click', function() {
     let src = $(this).data('src');
     let desc = $(this).data('description');
