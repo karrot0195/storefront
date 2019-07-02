@@ -130,6 +130,6 @@ add_filter( 'woocommerce_single_product_carousel_options', 'ud_update_woo_flexsl
 
 function ud_update_woo_flexslider_options( $options ) {
     $options['directionNav'] = true;
-    $options['slideshow'] = true;
+    $options['slideshow'] = false;
     return $options;
 }
