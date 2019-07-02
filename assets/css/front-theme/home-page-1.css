@@ -1155,6 +1155,12 @@ a:hover {
   color: #0f1972;
   border-color: #0f1972;
 }
+.storefront-product-detail.single-product div.product .woocommerce-product-gallery .flex-control-thumbs li {
+  width: 54px !important;
+  height: 54px !important;
+  border-radius: 50% !important;
+  margin: 0 15px !important;
+}
 .storefront-product-detail .single_add_to_cart_button {
   font-family: "Barlow", sans-serif;
   font-size: 14px;
