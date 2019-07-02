@@ -1555,7 +1555,7 @@ a:hover {
   padding: 30px 0;
 }
 @media screen and (max-width: 992px) {
-  .home-page-1 .site-header.fixed {
+  .home-page-1 .site-header.fixed .col-full {
     padding: 0;
   }
 }
