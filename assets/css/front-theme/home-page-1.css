@@ -275,12 +275,16 @@ body.page-template-template-home1 {
 .home-page-1 .site-header .col-full .block-icon-action .list-action {
   padding: 0;
   margin: 0;
+  display: flex;
 }
 .home-page-1 .site-header .col-full .block-icon-action .list-action a {
   color: #151515;
   text-decoration: none;
   display: inline-block;
   vertical-align: -webkit-baseline-middle;
+}
+.home-page-1 .site-header .col-full .block-icon-action .list-action a img {
+  vertical-align: middle;
 }
 .home-page-1 .site-header .col-full .block-icon-action .list-action li {
   display: inline;
