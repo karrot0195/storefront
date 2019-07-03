@@ -72,9 +72,19 @@ body {
       .site-branding {
         width: 50%;
         padding-bottom: 0;
+        @media screen and (max-width: 767px) {
+          width: 25%;
+        }
       }
       .block-icon-action {
         width: 50%;
+        .list-action {
+          li {
+            img {
+              width: 15px;
+            }
+          }
+        }
       }
     }
   }
@@ -2081,8 +2091,10 @@ figure.woocommerce-product-gallery__wrapper{
   }
   .home-page-1 .site-header .col-full .menu-desktop .block-icon-action{
     display: flex;
-    margin-left: 30px;
+    margin-left: 0px;
     width: auto;
+    flex: auto;
+    justify-content: center;
   }
   .header-icon{
     width: 50px;
@@ -2194,4 +2206,10 @@ figure.woocommerce-product-gallery__wrapper{
 @keyframes heart-burst {
   from {background-position:left;}
   to { background-position:right;}
+}
+
+@media screen and (max-width: 767px) {
+  .home-page-1 .site-header .col-full .menu-desktop .block-icon-action {
+    justify-content: space-between;;
+  }
 }
