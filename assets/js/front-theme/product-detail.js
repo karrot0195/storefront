@@ -21,9 +21,10 @@
           const productId = parent.data('product_id');
 
           if (total >= 0) {
+            let text = self.html();
+            self.html(`<i class="fa fa-spinner fa-pulse"></i>`);
             setItemCart(productId, total, function(res) {
               if (res.success) {
-                let text = self.html();
                 self.html('DONE');
                 self.addClass('proccess');
                 setTimeout(() => {
@@ -36,9 +37,9 @@
         }
       });
 
-      $(document).on('click', '.fm-detail-cart .js-btn-add-to-cart',  function () {
-        $(this).addClass('btn-add-to-cart-click');
-      });
+      // $(document).on('click', '.fm-detail-cart .js-btn-add-to-cart',  function () {
+      //   $(this).addClass('btn-add-to-cart-click');
+      // });
 
   }, 100);
 })(jQuery);

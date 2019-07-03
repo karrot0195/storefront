@@ -25,22 +25,11 @@ body.page-template-template-home1 {
 .home-page-1.one-page .site-content {
   flex-grow: 1;
 }
+.home-page-1.one-page .wrapper-main {
+  position: relative;
+}
 .home-page-1.one-page .site-main {
   background-color: #fff;
-}
-.home-page-1.one-page .block-notify {
-  position: absolute;
-  bottom: 0;
-}
-.home-page-1.one-page .block-notify::before {
-  content: '';
-  width: 2000%;
-  position: absolute;
-  left: -500px;
-  z-index: 9;
-  top: 0;
-  height: 100%;
-  background-color: #cacbcc;
 }
 .home-page-1.one-page .wrapper-container {
   display: flex;
@@ -166,8 +155,15 @@ body.page-template-template-home1 {
   box-shadow: none;
   outline: 0;
 }
+.home-page-1 .block-wrapper-notify {
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  width: 100%;
+  background-color: #cacbcc;
+}
 .home-page-1 .block-notify {
-  padding: 27px 0 25px;
+  padding: 27px 0px 25px;
 }
 .home-page-1 .block-notify--element {
   font-family: "Barlow", sans-serif;
@@ -306,6 +302,9 @@ body.page-template-template-home1 {
 .home-page-1 .site-header .col-full .block-icon-action .list-action {
   padding: 0;
   margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .home-page-1 .site-header .col-full .block-icon-action .list-action a {
   color: #151515;
@@ -1112,6 +1111,21 @@ a:hover {
   color: #222222;
   text-transform: uppercase;
 }
+.storefront-product-detail.single-product div.product .product_meta .posted_in .label,
+.storefront-product-detail.single-product div.product .product_meta .sku_wrapper .label,
+.storefront-product-detail.single-product div.product .product_meta .tagged_as .label {
+  display: inline-block;
+  vertical-align: middle;
+  width: 20%;
+  margin-bottom: 10px;
+}
+.storefront-product-detail.single-product div.product .product_meta .posted_in .main-content,
+.storefront-product-detail.single-product div.product .product_meta .sku_wrapper .main-content,
+.storefront-product-detail.single-product div.product .product_meta .tagged_as .main-content {
+  display: inline-block;
+  vertical-align: middle;
+  width: 80%;
+}
 .storefront-product-detail.single-product div.product .product_meta span {
   margin-bottom: 20px;
 }
@@ -1119,7 +1133,7 @@ a:hover {
   font-family: "Barlow", sans-serif;
   font-size: 11px;
   font-weight: 600;
-  padding: 9px 30px;
+  padding: 9px 20px;
   min-width: 70px;
   font-style: normal;
   font-stretch: normal;
@@ -1138,11 +1152,76 @@ a:hover {
   display: inline-block;
 }
 .storefront-product-detail.single-product div.product .product_meta a:first-child {
-  margin-left: 30px;
+  margin-left: 0px;
 }
 .storefront-product-detail.single-product div.product .product_meta a:hover {
   color: #0f1972;
   border-color: #0f1972;
+}
+.storefront-product-detail.single-product div.product .woocommerce-product-gallery .flex-control-thumbs li {
+  width: 54px !important;
+  height: 54px !important;
+  border-radius: 50% !important;
+  margin: 0 15px !important;
+}
+.storefront-product-detail.single-product div.product .woocommerce-product-gallery {
+  margin-right: 0;
+}
+.storefront-product-detail.single-product div.product .woocommerce-product-gallery img {
+  display: block;
+  margin: 0 auto;
+}
+.storefront-product-detail .flex-direction-nav {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  transform: translateY(-36px);
+  padding: 0;
+}
+.storefront-product-detail .flex-direction-nav .flex-nav-prev {
+  flex-grow: 1;
+}
+.storefront-product-detail .flex-direction-nav .flex-prev {
+  font-size: 0;
+}
+.storefront-product-detail .flex-direction-nav .flex-prev:focus {
+  outline: 0;
+}
+.storefront-product-detail .flex-direction-nav .flex-prev::before {
+  content: "";
+  color: #1e1e1e;
+  display: inline-block;
+  font-family: "Ionicons";
+  speak: none;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  text-rendering: auto;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+}
+.storefront-product-detail .flex-direction-nav .flex-next {
+  font-size: 0;
+}
+.storefront-product-detail .flex-direction-nav .flex-next:focus {
+  outline: 0;
+}
+.storefront-product-detail .flex-direction-nav .flex-next::after {
+  content: "";
+  color: #1e1e1e;
+  display: inline-block;
+  font-family: "Ionicons";
+  speak: none;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  text-rendering: auto;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
 }
 .storefront-product-detail .single_add_to_cart_button {
   font-family: "Barlow", sans-serif;
