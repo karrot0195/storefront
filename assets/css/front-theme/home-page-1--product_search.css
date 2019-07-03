@@ -30,10 +30,15 @@
 }
 .wrap-search-product .close {
   position: absolute;
-  left: 74.5%;
+  right: 25%;
   top: 0;
   font-size: 20px;
   cursor: pointer;
+}
+@media screen and (max-width: 400px) {
+  .wrap-search-product .close {
+    right: 20px;
+  }
 }
 .wrap-search-product .block-search {
   text-align: center;
