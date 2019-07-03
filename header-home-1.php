@@ -65,10 +65,15 @@ if (is_page_template('templates/template-home1.php')) {
     <!--    Product search-->
 
     <div class="wrap-search-product <?= isset($_GET['action']) && $_GET['action'] == 'search' ? 'show' : '' ?>">
+<<<<<<< HEAD
+=======
+       
+>>>>>>> ec31f9a1b1262e223d295784af4c1a3886ceb6ee
         <div class="wrap-block-search">
             <div class="block-search">
                 <span class="close"><i class="icon ion-md-close"></i></span>
                 <input type="text" class="js-input-search" name="search" autocomplete="off">
+                <span class="close"><i class="icon ion-md-close"></i></span>
                 <ul class="search-content-remind">
                 </ul>
             </div>
