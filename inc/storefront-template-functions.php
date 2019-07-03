@@ -710,6 +710,7 @@ if ( !function_exists('storefront_site_action') ) {
         <?php else: ?>
         <li><a href=""><img width="20px" src="<?= esc_url($unLockIcon) ?>" alt=""></a></li>
         <?php endif; ?>
+		<li class="block-like header-icon"></li>
     </ul>
 </div>
 <?php

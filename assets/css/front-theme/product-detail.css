@@ -721,6 +721,10 @@
   background-repeat: no-repeat;
   background-size: 2900%;
 }
+.header-icon {
+  width: 40px;
+  height: 40px;
+}
 .block-like:hover {
   background-position: right;
 }
