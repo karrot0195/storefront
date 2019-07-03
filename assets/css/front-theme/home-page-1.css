@@ -615,13 +615,14 @@ body.page-template-template-home1 {
     display: none;
   }
   .CPFilterItem-trigger {
-    height: 10px;
+    height: 40px;
     padding-top: 2px;
     position: absolute;
     right: 40px;
     top: 0;
-    width: 10px;
+    width: 100%;
     z-index: 10;
+    text-align: right;
   }
   .CPFilterItem-triggerIcon {
     fill: #252525;
@@ -1900,11 +1901,12 @@ figure.woocommerce-product-gallery__wrapper {
 @media screen and (max-width: 992px) {
   .home-page-1 .wrap-search-product .block-content--main .wrap-item {
     width: 50%;
-    margin-bottom: 0;
+    margin-bottom: 10px;
     margin-right: 0;
   }
   .home-page-1 .wrap-search-product .block-content--main .wrap-item .block-title a {
     font-size: 14px;
+    line-height: 14px;
   }
   .wrap-search-product .block-content--main .block-thumbnail img {
     display: block;
