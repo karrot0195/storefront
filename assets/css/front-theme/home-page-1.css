@@ -49,6 +49,10 @@ body.page-template-template-home1 {
 .home-page-1.one-page .site-header .col-full .block-icon-action {
   width: 50%;
 }
+.site-main ul.products li.product img {
+  max-width: 100%;
+  object-fit: cover;
+}
 .home-page-1 .woocommerce-Price-currencySymbol {
   margin-right: 8px;
 }
@@ -1892,7 +1896,7 @@ figure.woocommerce-product-gallery__wrapper {
     display: block;
   }
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 992px) {
   .home-page-1 .site-header .col-full .block-menu ul li a {
     font-size: 14px;
   }
@@ -1901,6 +1905,12 @@ figure.woocommerce-product-gallery__wrapper {
   }
   .home-page-1 .site-header .col-full .menu-mobile .block-icon-action .list-action li {
     margin: 0 10px;
+  }
+  .block.footer-widget-1,
+  .block.footer-widget-2,
+  .block.footer-widget-3,
+  .block.footer-widget-4 {
+    width: 100%;
   }
   .footer-widgets.row-1.fix {
     display: none;
