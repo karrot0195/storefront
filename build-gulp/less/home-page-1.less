@@ -1842,6 +1842,10 @@ figure.woocommerce-product-gallery__wrapper{
   .wrap-product-item .fm-sl-cart .block-number{
     width: 35px;
   }
+  .home-page-1 .products::after, 
+  .home-page-1 .products::before{
+    content: none;
+  }
 }
 
 @media screen and (max-width: 400px){
@@ -2023,8 +2027,11 @@ figure.woocommerce-product-gallery__wrapper{
 @media screen and (max-width: 992px){
   .home-page-1 .wrap-search-product .block-content--main .wrap-item{
     width: 50%;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     margin-right: 0;
+    .block-title{
+      margin-top: 5px;
+    }
   }
   .home-page-1 .wrap-search-product .block-content--main .wrap-item .block-title a{
     font-size: 14px;
