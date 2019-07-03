@@ -9,7 +9,7 @@
 */
 body {
   margin: 0 !important;
-  font-family: "Barlow", sans-serif !important;
+  font-family: "Barlow" !important;
   padding: 0;
   overflow-x: hidden;
 }
@@ -170,7 +170,7 @@ body.page-template-template-home1 {
   padding: 27px 0px 25px;
 }
 .home-page-1 .block-notify--element {
-  font-family: "Barlow", sans-serif;
+  font-family: "Barlow";
   font-size: 14px;
   font-weight: normal;
   font-style: normal;
@@ -256,7 +256,7 @@ body.page-template-template-home1 {
   text-decoration: none;
   width: 407px;
   height: 12px;
-  font-family: "Barlow", sans-serif;
+  font-family: "Barlow";
   font-size: 16px;
   font-weight: 500;
   font-style: normal;
@@ -337,7 +337,7 @@ body.page-template-template-home1 {
 }
 .home-page-1 .site-content .block-content .slider--item .block-desc {
   max-width: 590px;
-  font-family: "Barlow", sans-serif;
+  font-family: "Barlow";
   font-size: 40px;
   font-weight: 500;
   font-style: normal;
@@ -376,7 +376,7 @@ body.page-template-template-home1 {
 }
 .home-page-1 .site-content .block-content .slider--item .list-title ul li a {
   width: 200px;
-  font-family: "Barlow", sans-serif;
+  font-family: "Barlow";
   font-size: 20px;
   font-weight: 500;
   font-style: normal;
@@ -440,7 +440,7 @@ body.page-template-template-home1 {
 }
 .site-footer .footer-widget-4 .block-contact-form input {
   border: 0;
-  font-family: "Barlow", sans-serif;
+  font-family: "Barlow";
   font-size: 12px;
   font-weight: normal;
   font-style: normal;
@@ -464,7 +464,7 @@ body.page-template-template-home1 {
 }
 .site-footer .text-info-footer {
   height: auto;
-  font-family: "Barlow", sans-serif;
+  font-family: "Barlow";
   display: inline-block;
   vertical-align: middle;
   width: 100%;
@@ -510,7 +510,7 @@ body.page-template-template-home1 {
 }
 .site-footer .block-widget-page ul li a {
   text-decoration: none;
-  font-family: "Barlow", sans-serif;
+  font-family: "Barlow";
   font-size: 12px;
   font-weight: normal;
   font-style: normal;
@@ -650,7 +650,7 @@ body.page-template-template-home1 {
 }
 .banner-main .banner-title {
   max-width: 760px;
-  font-family: "Barlow", sans-serif;
+  font-family: "Barlow";
   font-size: 70px;
   font-weight: 500;
   font-style: normal;
@@ -694,7 +694,7 @@ body.page-template-template-home1 {
   flex-grow: 1;
 }
 .info-page .info-page-left a {
-  font-family: "Barlow", sans-serif;
+  font-family: "Barlow";
   font-size: 13px;
   font-weight: 800;
   font-style: normal;
@@ -759,7 +759,7 @@ body.page-template-template-home1 {
 .info-page .info-page-right button {
   background-color: transparent;
   border: 0;
-  font-family: "Barlow", sans-serif;
+  font-family: "Barlow";
   font-size: 12px;
   font-weight: 500;
   font-style: normal;
@@ -780,7 +780,7 @@ body.page-template-template-home1 {
 }
 .home-page-1 ul.products li.product .woocommerce-loop-product__title,
 .home-page-1 ul.products li.product h2 {
-  font-family: "Barlow", sans-serif;
+  font-family: "Barlow";
   font-size: 18px;
   font-weight: 600;
   font-style: normal;
@@ -799,7 +799,7 @@ body.page-template-template-home1 {
   }
 }
 .home-page-1 ul.products li.product .price {
-  font-family: "Barlow", sans-serif;
+  font-family: "Barlow";
   font-size: 16px;
   font-weight: normal;
   font-style: normal;
@@ -824,7 +824,7 @@ body.page-template-template-home1 {
   text-decoration: none;
 }
 .home-page-1 ul.products li.product .button {
-  font-family: "Barlow", sans-serif;
+  font-family: "Barlow";
   font-size: 14px;
   font-weight: 500;
   font-style: normal;
@@ -1063,7 +1063,7 @@ button:hover .fa-play:before {
   border-top-right-radius: 6px;
 }
 .tabs-nav a {
-  font-family: "Barlow", sans-serif;
+  font-family: "Barlow";
   font-size: 16px;
   font-weight: normal;
   font-style: normal;
@@ -1131,7 +1131,7 @@ a:hover {
   height: auto;
 }
 .home-page-1 .tabs p {
-  font-family: "Barlow", sans-serif;
+  font-family: "Barlow";
   font-size: 21px;
   font-weight: normal;
   font-style: normal;
@@ -1164,7 +1164,7 @@ a:hover {
 }
 /* ----------------- 5. Product Detail -------------- */
 .storefront-product-detail .product_title {
-  font-family: "Barlow", sans-serif;
+  font-family: "Barlow";
   font-size: 32px;
   font-weight: 500;
   font-style: normal;
@@ -1213,7 +1213,7 @@ a:hover {
   visibility: hidden;
 }
 .storefront-product-detail .woocommerce-product-details__short-description p {
-  font-family: "Barlow", sans-serif;
+  font-family: "Barlow";
   font-size: 15px;
   font-weight: normal;
   font-style: normal;
@@ -1231,7 +1231,7 @@ a:hover {
 .storefront-product-detail.single-product div.product .product_meta .posted_in,
 .storefront-product-detail.single-product div.product .product_meta .sku_wrapper,
 .storefront-product-detail.single-product div.product .product_meta .tagged_as {
-  font-family: "Barlow", sans-serif;
+  font-family: "Barlow";
   font-size: 13px;
   font-weight: 600;
   font-style: normal;
