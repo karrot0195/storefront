@@ -30,7 +30,7 @@
 }
 .wrap-search-product .close {
   position: absolute;
-  right: 0;
+  right: -20px;
   top: 0;
   font-size: 20px;
   cursor: pointer;
