@@ -463,7 +463,7 @@ body {
   }
 }
 .btn-filter.sp{
-  display: none;
+  display: none !important;
 }
 
 
@@ -1822,6 +1822,7 @@ figure.woocommerce-product-gallery__wrapper{
     margin-left: 20px;
     border-bottom: 1px solid rgba(51,51,51,.2);
   }
+  
 }
 
 @media screen and (max-width: 400px){
@@ -1857,7 +1858,7 @@ figure.woocommerce-product-gallery__wrapper{
     @media screen and (max-width: 992px) {
       display: block;
       position: fixed;
-      top: 57px;
+      top: 45px;
       right: -100%;;
       max-width: 75%;
       width: 100%;
@@ -1999,6 +2000,76 @@ figure.woocommerce-product-gallery__wrapper{
     }
   }
 }
+
+@media screen and (max-width: 767px){
+  .home-page-1 .site-header .col-full .block-menu ul li a{
+    font-size: 14px;
+  }
+  .home-page-1 .site-header .col-full .menu-mobile .block-menu ul li{
+    margin-bottom: 10px;
+  }
+  .home-page-1 .site-header .col-full .menu-mobile .block-icon-action .list-action li{
+    margin: 0 10px;
+  }
+  .footer-widgets.row-1.fix{
+    display: none;
+  }
+  .footer-widgets.row-2.fix{
+    ul{
+      list-style: none;
+      text-align: center;
+      padding-left: 0;
+      li{
+        margin-bottom: 10px;
+        a{
+          text-decoration: none;
+          color: #151515;
+          font-size: 12px;
+        }
+      }
+    }
+  }
+  .footer-widgets.row-3.fix{
+    ul{
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      padding-left: 0;
+      li{
+        margin-right: 10px;
+        a{
+          color: #151515;
+        }
+      }
+    }
+  }
+  .footer-widgets.row-4.fix{
+    .block-contact-form{
+      display: flex;
+      border-bottom: 1px solid #a7a7a7;
+      padding-bottom: 5px;
+      width: 188px;
+      margin: 0 auto;
+      input{
+        border: none;
+        padding: 0 5px;
+        font-size: 12px;
+      }
+    }
+  }
+  .home-page-1 .site-header .col-full .menu-mobile .block-icon-action{
+    margin: 20px 0 10px;
+  }
+  .header-icon{
+    width: 50px;
+    height: 50px;
+  }
+  .home-page-1 .site-header .col-full .menu-mobile .block-icon-action .list-action li.header-icon{
+    margin: 0;
+  }
+}
+
+
 
 .wrap-product-item .fm-sl-cart.proccessing .value-button#increase{
   background: #ffffff;

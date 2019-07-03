@@ -45,12 +45,6 @@
     $('.modal-filter').slideToggle(300);
   });
 
-  $('.CPFilterItem-trigger').on('click', function(){
-    $(this).parents('.content').toggleClass('is-opened');
-    $(this).parents('.content').find('ul').slideToggle(300);
-    $(this).parents('.title-wrapper').find('.title-show').toggleClass('title-hide');
-  });
-
   // Choose Filter
   $('.content-1 ul li button').on('click', function() {
     $('.content-1 ul li').removeClass('is-selected');
@@ -65,6 +59,15 @@
   $('.content-3 ul li button').on('click', function() {
     $('.content-3 ul li').removeClass('is-selected');
     $(this).parent().addClass('is-selected');
+  });
+
+  $('.CPFilterItem-trigger').on('click', function(){
+    $(this).parents('.content').toggleClass('is-opened');
+    $(this).parents('.content').find('ul').slideToggle(300);
+    $(this).parents('.title-wrapper').find('.title-show').toggleClass('title-hide');
+    var test = $(this).parents('.content').find('.is-selected');
+    var totaltest = $test.text(); 
+    console.log(totaltest);
   });
 
 
