@@ -48,11 +48,13 @@ if (is_page_template('templates/template-home1.php')) {
                 <div class="hamburger-menu">
                     <div class="bar"></div>
                 </div>
+
                 <div class="menu-mobile">
                     <?php
-                        do_action( $action );
+                       storefront_mobile_footer_widgets();
                     ?>
                 </div>
+
             </div>
         </div>
     </header><!-- #masthead -->
