@@ -710,6 +710,7 @@ if ( !function_exists('storefront_site_action') ) {
         <?php else: ?>
         <li><a href=""><img width="20px" src="<?= esc_url($unLockIcon) ?>" alt=""></a></li>
         <?php endif; ?>
+		<li class="block-like header-icon"></li>
     </ul>
 </div>
 <?php
@@ -736,5 +737,44 @@ if (!function_exists('storefront_slider_header')) {
             </div>
 <?php
         }
+	}
+}
+
+if (!function_exists('storefront_mobile_footer_widgets')) {
+	function storefront_mobile_footer_widgets() {
+		$rows    = intval( apply_filters( 'storefront_footer_widget_rows', 4 ) );
+		$regions = intval( apply_filters( 'storefront_footer_widget_columns', 1 ) );
+
+		for ( $row = 1; $row <= $rows; $row++ ) :
+
+			// Defines the number of active columns in this footer row.
+			for ( $region = $regions; 0 < $region; $region-- ) {
+				if ( is_active_sidebar( 'footer-' . esc_attr( $region + $regions * ( $row - 1 ) ) ) ) {
+					$columns = $region;
+					break;
+				}
+			}
+
+			if ( isset( $columns ) ) :
+				?>
+				<div class=<?php echo '"footer-widgets row-' . esc_attr( $row ) . ' col-' . esc_attr( $columns ) . ' fix"'; ?>>
+				<?php
+				for ( $column = 1; $column <= $columns; $column++ ) :
+					$footer_n = $column + $regions * ( $row - 1 );
+
+					if ( is_active_sidebar( 'footer-' . esc_attr( $footer_n ) ) ) :
+						?>
+					<div class="block footer-widget-<?php echo esc_attr( $column ); ?>">
+						<?php dynamic_sidebar( 'footer-' . esc_attr( $footer_n ) ); ?>
+					</div>
+						<?php
+					endif;
+				endfor;
+				?>
+			</div><!-- .footer-widgets.row-<?php echo esc_attr( $row ); ?> -->
+				<?php
+				unset( $columns );
+			endif;
+		endfor;
 	}
 }

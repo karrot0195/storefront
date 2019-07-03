@@ -34,7 +34,8 @@ get_header( 'home-1' );
 						</ul>
 					</div>
 					<div class="info-page-right">
-						<button class="btn-filter"><?= esc_html__('FILTER', 'storefront') ?></button>
+						<button class="btn-filter pc"><?= esc_html__('FILTER', 'storefront') ?></button>
+						<button class="btn-filter sp"><?= esc_html__('FILTER', 'storefront') ?></button>
 					</div>
 					<div class="modal-heading">
 						<span href="#" class="logo"></span>
@@ -44,10 +45,27 @@ get_header( 'home-1' );
 					</div>
 				</div>
 				<div class="modal-filter">
+					<div class="modal-title-sp">Filter</div>
+					<div class="btn-done-sp">
+						<button> 
+							Done
+						</button>
+					</div>
+					<span class="button-close-sp">
+						<i class="ion ion-ios-close"></i>
+					</span>
 					<div class="modal-content">
 						<div class="block-content">
 							<div class="content content-1">
+								
 								<h5 class="title">Skin Type</h5>
+								<div class="title-wrapper">
+									<h6 class="title-show">All Types</h6>
+									<span class="CPFilterItem-trigger">
+									<svg class="Icon CPFilterItem-triggerIcon" role="img" viewBox="0 0 50 50"><title id="a1a69d1f-7219-416d-8097-a49e25d45c50">Open</title><g><polygon points="25,31.3 4.2,10.5 0.1,14.6 25,39.5 50,14.6 45.9,10.5 "></polygon></g></svg>
+									</span>
+									
+								</div>
 								<ul>
 									<li class="is-selected"><button>All Types</button></li>
 									<li><button>Dry</button></li>
@@ -57,7 +75,15 @@ get_header( 'home-1' );
 								</ul>
 							</div>
 							<div class="content content-2">
-								<h5 class="title">Skin Concern</h5>
+							<h5 class="title">Skin Concern</h5>
+								<div class="title-wrapper">
+									<h6 class="title-show">Skin Concern</h6>
+									<span class="CPFilterItem-trigger">
+									<svg class="Icon CPFilterItem-triggerIcon" role="img" viewBox="0 0 50 50"><title id="a1a69d1f-7219-416d-8097-a49e25d45c50">Open</title><g><polygon points="25,31.3 4.2,10.5 0.1,14.6 25,39.5 50,14.6 45.9,10.5 "></polygon></g></svg>
+									</span>
+									
+								</div>
+								
 								<ul>
 									<li class="is-selected"><button>All Concerns</button></li>
 									<li><button>Dehydrated</button></li>
@@ -67,6 +93,14 @@ get_header( 'home-1' );
 							</div>
 							<div class="content content-3">
 								<h5 class="title">Sub Category</h5>
+								<div class="title-wrapper">
+									<h6 class="title-show">Sub Category</h6>
+									<span class="CPFilterItem-trigger">
+									<svg class="Icon CPFilterItem-triggerIcon" role="img" viewBox="0 0 50 50"><title id="a1a69d1f-7219-416d-8097-a49e25d45c50">Open</title><g><polygon points="25,31.3 4.2,10.5 0.1,14.6 25,39.5 50,14.6 45.9,10.5 "></polygon></g></svg>
+									</span>
+									
+								</div>
+								
 								<ul>
 									<li class="is-selected"><button>All Products</button></li>
 									<li><button>Gift Kits</button></li>
