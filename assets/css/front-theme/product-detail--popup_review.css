@@ -29,7 +29,7 @@ body.modal {
 .storefront-product-detail .wrap-back a {
   width: 180px;
   height: 16px;
-  font-family: "Barlow", sans-serif;
+  font-family: "Barlow";
   font-size: 15px;
   font-weight: 500;
   font-style: normal;
@@ -47,11 +47,11 @@ body.modal {
   }
 }
 .storefront-product-detail .comment-form-rating label {
-  font-family: "Barlow", sans-serif;
+  font-family: "Barlow";
   color: #222;
 }
 .storefront-product-detail .wrap-modal .modal-title {
-  font-family: "Barlow", sans-serif;
+  font-family: "Barlow";
   font-size: 18px;
   font-weight: 600;
   padding-left: 30px;

@@ -9,7 +9,7 @@
 */
 body {
   margin: 0 !important;
-  font-family: "Barlow", sans-serif !important;
+  font-family: "Barlow" !important;
   padding: 0;
   overflow-x: hidden;
 }
@@ -46,8 +46,16 @@ body.page-template-template-home1 {
   width: 50%;
   padding-bottom: 0;
 }
+@media screen and (max-width: 767px) {
+  .home-page-1.one-page .site-header .col-full .site-branding {
+    width: 25%;
+  }
+}
 .home-page-1.one-page .site-header .col-full .block-icon-action {
   width: 50%;
+}
+.home-page-1.one-page .site-header .col-full .block-icon-action .list-action li img {
+  width: 15px;
 }
 .site-main ul.products li.product img {
   max-width: 100%;
@@ -170,7 +178,7 @@ body.page-template-template-home1 {
   padding: 27px 0px 25px;
 }
 .home-page-1 .block-notify--element {
-  font-family: "Barlow", sans-serif;
+  font-family: "Barlow";
   font-size: 14px;
   font-weight: normal;
   font-style: normal;
@@ -256,7 +264,7 @@ body.page-template-template-home1 {
   text-decoration: none;
   width: 407px;
   height: 12px;
-  font-family: "Barlow", sans-serif;
+  font-family: "Barlow";
   font-size: 16px;
   font-weight: 500;
   font-style: normal;
@@ -337,7 +345,7 @@ body.page-template-template-home1 {
 }
 .home-page-1 .site-content .block-content .slider--item .block-desc {
   max-width: 590px;
-  font-family: "Barlow", sans-serif;
+  font-family: "Barlow";
   font-size: 40px;
   font-weight: 500;
   font-style: normal;
@@ -376,7 +384,7 @@ body.page-template-template-home1 {
 }
 .home-page-1 .site-content .block-content .slider--item .list-title ul li a {
   width: 200px;
-  font-family: "Barlow", sans-serif;
+  font-family: "Barlow";
   font-size: 20px;
   font-weight: 500;
   font-style: normal;
@@ -440,7 +448,7 @@ body.page-template-template-home1 {
 }
 .site-footer .footer-widget-4 .block-contact-form input {
   border: 0;
-  font-family: "Barlow", sans-serif;
+  font-family: "Barlow";
   font-size: 12px;
   font-weight: normal;
   font-style: normal;
@@ -464,7 +472,7 @@ body.page-template-template-home1 {
 }
 .site-footer .text-info-footer {
   height: auto;
-  font-family: "Barlow", sans-serif;
+  font-family: "Barlow";
   display: inline-block;
   vertical-align: middle;
   width: 100%;
@@ -510,7 +518,7 @@ body.page-template-template-home1 {
 }
 .site-footer .block-widget-page ul li a {
   text-decoration: none;
-  font-family: "Barlow", sans-serif;
+  font-family: "Barlow";
   font-size: 12px;
   font-weight: normal;
   font-style: normal;
@@ -615,19 +623,30 @@ body.page-template-template-home1 {
     display: none;
   }
   .CPFilterItem-trigger {
-    height: 10px;
+    height: 40px;
     padding-top: 2px;
     position: absolute;
     right: 40px;
     top: 0;
-    width: 10px;
+    width: 100%;
     z-index: 10;
+    text-align: right;
   }
   .CPFilterItem-triggerIcon {
     fill: #252525;
     height: 10px;
     transition: transform 0.15s cubic-bezier(0.215, 0.61, 0.355, 1);
     width: 10px;
+  }
+  .home-page-1 ul.products {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: auto auto;
+    grid-template-columns: auto auto;
+  }
+  .home-page-1 ul.products li.product img {
+    width: 150px;
+    height: 150px;
   }
 }
 /* ---------------- 1. Banner ------------------------ */
@@ -639,7 +658,7 @@ body.page-template-template-home1 {
 }
 .banner-main .banner-title {
   max-width: 760px;
-  font-family: "Barlow", sans-serif;
+  font-family: "Barlow";
   font-size: 70px;
   font-weight: 500;
   font-style: normal;
@@ -683,7 +702,7 @@ body.page-template-template-home1 {
   flex-grow: 1;
 }
 .info-page .info-page-left a {
-  font-family: "Barlow", sans-serif;
+  font-family: "Barlow";
   font-size: 13px;
   font-weight: 800;
   font-style: normal;
@@ -697,8 +716,8 @@ body.page-template-template-home1 {
 }
 @media screen and (max-width: 767px) {
   .info-page .info-page-left a {
-    font-size: 8px;
-    line-height: 30px;
+    font-size: 12px;
+    line-height: 34px;
   }
 }
 .info-page .info-page-left ul {
@@ -748,7 +767,7 @@ body.page-template-template-home1 {
 .info-page .info-page-right button {
   background-color: transparent;
   border: 0;
-  font-family: "Barlow", sans-serif;
+  font-family: "Barlow";
   font-size: 12px;
   font-weight: 500;
   font-style: normal;
@@ -769,7 +788,7 @@ body.page-template-template-home1 {
 }
 .home-page-1 ul.products li.product .woocommerce-loop-product__title,
 .home-page-1 ul.products li.product h2 {
-  font-family: "Barlow", sans-serif;
+  font-family: "Barlow";
   font-size: 18px;
   font-weight: 600;
   font-style: normal;
@@ -788,7 +807,7 @@ body.page-template-template-home1 {
   }
 }
 .home-page-1 ul.products li.product .price {
-  font-family: "Barlow", sans-serif;
+  font-family: "Barlow";
   font-size: 16px;
   font-weight: normal;
   font-style: normal;
@@ -813,7 +832,7 @@ body.page-template-template-home1 {
   text-decoration: none;
 }
 .home-page-1 ul.products li.product .button {
-  font-family: "Barlow", sans-serif;
+  font-family: "Barlow";
   font-size: 14px;
   font-weight: 500;
   font-style: normal;
@@ -1052,7 +1071,7 @@ button:hover .fa-play:before {
   border-top-right-radius: 6px;
 }
 .tabs-nav a {
-  font-family: "Barlow", sans-serif;
+  font-family: "Barlow";
   font-size: 16px;
   font-weight: normal;
   font-style: normal;
@@ -1120,7 +1139,7 @@ a:hover {
   height: auto;
 }
 .home-page-1 .tabs p {
-  font-family: "Barlow", sans-serif;
+  font-family: "Barlow";
   font-size: 21px;
   font-weight: normal;
   font-style: normal;
@@ -1153,7 +1172,7 @@ a:hover {
 }
 /* ----------------- 5. Product Detail -------------- */
 .storefront-product-detail .product_title {
-  font-family: "Barlow", sans-serif;
+  font-family: "Barlow";
   font-size: 32px;
   font-weight: 500;
   font-style: normal;
@@ -1202,7 +1221,7 @@ a:hover {
   visibility: hidden;
 }
 .storefront-product-detail .woocommerce-product-details__short-description p {
-  font-family: "Barlow", sans-serif;
+  font-family: "Barlow";
   font-size: 15px;
   font-weight: normal;
   font-style: normal;
@@ -1220,7 +1239,7 @@ a:hover {
 .storefront-product-detail.single-product div.product .product_meta .posted_in,
 .storefront-product-detail.single-product div.product .product_meta .sku_wrapper,
 .storefront-product-detail.single-product div.product .product_meta .tagged_as {
-  font-family: "Barlow", sans-serif;
+  font-family: "Barlow";
   font-size: 13px;
   font-weight: 600;
   font-style: normal;
@@ -1529,9 +1548,9 @@ figure.woocommerce-product-gallery__wrapper {
 }
 @media screen and (max-width: 767px) {
   .wrap-product-item .fm-sl-cart .lb-btn {
-    font-size: 12px;
+    font-size: 10px;
     height: 40px;
-    min-width: 100px;
+    min-width: 70px;
   }
 }
 .wrap-product-item .fm-sl-cart .block-number {
@@ -1729,6 +1748,13 @@ figure.woocommerce-product-gallery__wrapper {
     margin-left: 20px;
     border-bottom: 1px solid rgba(51, 51, 51, 0.2);
   }
+  .wrap-product-item .fm-sl-cart .block-number {
+    width: 35px;
+  }
+  .home-page-1 .products::after,
+  .home-page-1 .products::before {
+    content: none;
+  }
 }
 @media screen and (max-width: 400px) {
   .home-page-1 .site-header .col-full .block-icon-action .list-action li {
@@ -1898,13 +1924,23 @@ figure.woocommerce-product-gallery__wrapper {
   }
 }
 @media screen and (max-width: 992px) {
+  .wrap-search-product .block-content--main {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: auto auto;
+    grid-template-columns: auto auto;
+  }
   .home-page-1 .wrap-search-product .block-content--main .wrap-item {
-    width: 50%;
-    margin-bottom: 0;
+    width: auto;
+    margin-bottom: 15px;
     margin-right: 0;
+  }
+  .home-page-1 .wrap-search-product .block-content--main .wrap-item .block-title {
+    margin-top: 5px;
   }
   .home-page-1 .wrap-search-product .block-content--main .wrap-item .block-title a {
     font-size: 14px;
+    line-height: 14px;
   }
   .wrap-search-product .block-content--main .block-thumbnail img {
     display: block;
@@ -1967,8 +2003,10 @@ figure.woocommerce-product-gallery__wrapper {
   }
   .home-page-1 .site-header .col-full .menu-desktop .block-icon-action {
     display: flex;
-    margin-left: 30px;
+    margin-left: 0px;
     width: auto;
+    flex: auto;
+    justify-content: center;
   }
   .header-icon {
     width: 50px;
@@ -2069,5 +2107,10 @@ figure.woocommerce-product-gallery__wrapper {
   }
   to {
     background-position: right;
+  }
+}
+@media screen and (max-width: 767px) {
+  .home-page-1 .site-header .col-full .menu-desktop .block-icon-action {
+    justify-content: space-between;
   }
 }
