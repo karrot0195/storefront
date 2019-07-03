@@ -1402,7 +1402,7 @@ a:hover {
   display: flex;
   align-items: center;
 }
-figure {
+figure.woocommerce-product-gallery__wrapper {
   margin: 0;
 }
 /*------------ 6. Define Container ---------------*/
