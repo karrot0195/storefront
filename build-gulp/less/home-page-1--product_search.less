@@ -37,27 +37,65 @@
       top: 0;
       font-size: 20px;
       cursor: pointer;
+      z-index: 10;
     }
-    .block-search {
-      text-align: center;
-      input {
-        min-width: 50%;
-        padding: 10px 3px;
-        border-bottom: 1px solid #c3c3c3;
-        box-shadow: none;
-        border-top: none;
-        border-left: none;
-        border-right: none;
-        font-size: 24px;
-        &:focus {
-          border-bottom: 2px solid #9b9b9b;
-          outline: none;
+
+    .wrap-block-search {
+        position: relative;
+        min-height: 100px;
+        .block-search {
+          position: absolute;
+          left: 50%;
+          transform: translateX(-50%);
+          top: 20px;
+          min-width: 50%;
+          input {
+            width: 100%;
+            padding: 10px 3px;
+            border-bottom: 1px solid #c3c3c3;
+            box-shadow: none;
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            font-size: 24px;
+            &:focus {
+              border-bottom: 2px solid #9b9b9b;
+              outline: none;
+            }
+          }
+
+          .search-content-remind {
+            -webkit-transition: all 300ms ease;
+            -moz-transition: all 300ms ease;
+            -ms-transition: all 300ms ease;
+            -o-transition: all 300ms ease;
+            transition: all 300ms ease;
+
+            list-style: none;
+            padding-left: 0;
+            padding-bottom: 5px;
+            font-size: 10px;
+            line-height: 1.5;
+            opacity: 1;
+
+            &.processing {
+              opacity: 0;
+              -webkit-transition: all 300ms ease;
+              -moz-transition: all 300ms ease;
+              -ms-transition: all 300ms ease;
+              -o-transition: all 300ms ease;
+              transition: all 300ms ease;
+            }
+            li {
+              cursor: pointer;
+              &:hover {
+                font-weight: 600;
+              }
+            }
+          }
         }
-      }
-  
-      padding-bottom: 50px
+      padding-bottom: 20px
     }
-  
     .block-content {
       width: 80%;
       position: relative;
