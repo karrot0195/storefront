@@ -31,7 +31,7 @@
 .wrap-search-product .close {
   position: absolute;
   right: 0;
-  top: 0;
+  top: -10px;
   font-size: 20px;
   cursor: pointer;
   z-index: 10;
