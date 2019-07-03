@@ -114,7 +114,6 @@ body {
   }
   .modal-filter {
     display: none;
-    
     .block-content {
       display: flex;
       .content {
@@ -123,8 +122,8 @@ body {
         flex-basis: auto;
         width: calc(100% * 1 / 5);
         .title {
-          border-bottom: 1px solid rgba(51, 51, 51, .2);
-            font-size: 16px;
+            font-size: 12px;
+            color: #666;
             margin-bottom: 20px;
             padding-bottom: 5px;
         }
@@ -455,6 +454,19 @@ body {
   }
 }
 
+.home-page-1{
+  .modal-title-sp,
+  .button-close-sp,
+  .btn-done-sp,
+  .title-wrapper{
+    display: none;
+  }
+}
+.btn-filter.sp{
+  display: none;
+}
+
+
 .site-footer {
   background-color: #fff;
   .footer-widget-3 {
@@ -576,6 +588,114 @@ body {
   }
 }
 
+@media screen and (max-width: 767px){
+  .home-page-1 .modal-filter{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: #e5e5e5;
+    z-index: 99999;
+    padding: 20px 0;
+    overflow: auto;
+  }
+  .btn-filter.pc{
+    display: none;
+  }
+  .btn-filter.sp{
+    display: block !important;
+  }
+  .home-page-1 .modal-heading{
+    display: none !important;
+  }
+  .home-page-1{
+    .modal-title-sp{
+      display: block;
+      padding: 10px 20px 20px;
+      font-size: 24px;
+      line-height: 1.25;
+      color: #252525;
+    }
+    .button-close-sp{
+      display: block;
+      position: absolute;
+      top: 30px;
+      right: 20px;
+      i::before{
+        font-size: 30px;
+        color: #222;
+      }
+    }
+    .btn-done-sp{
+      display: block;
+      margin: 20px 20px 40px;
+      button{
+        width: 100%;
+        padding: 21px 23px;
+        border: none;
+        font-size: 14px;
+        color: #ffffff;
+        background: #333;
+        cursor: pointer;
+      }
+    }
+  }
+  .home-page-1 .modal-filter .block-content .content .title{
+    padding-bottom: 0;
+  }
+  .home-page-1 .modal-filter .block-content .content.content-1 ul{
+    column-count: 1;
+  }
+  .home-page-1 .modal-filter .block-content .content ul{
+    display: none;
+  }
+  .home-page-1 .modal-filter .block-content .content ul li.is-selected button{
+    color: #222;
+    padding: 0;
+  }
+  .home-page-1 .modal-filter .block-content .content ul li button{
+    font-size: 16px;
+    padding: 0;
+  }
+  .content.is-opened .CPFilterItem-triggerIcon{
+    transform: rotate(180deg);
+  }
+  .content .title-wrapper{
+    position: relative;
+    display: block;
+    h6{
+      color: #252525;
+      font-size: 18px;
+      height: 25px;
+      margin: 0;
+      margin-right: 30px;
+      opacity: 1;
+      text-align: left;
+      transition: all .3s cubic-bezier(.215,.61,.355,1);
+      padding-bottom: 20px;
+    }
+    .title-hide{
+      display: none;
+    }
+  }
+  .CPFilterItem-trigger{
+    height: 10px;
+    padding-top: 2px;
+    position: absolute;
+    right: 40px;
+    top: 0;
+    width: 10px;
+    z-index: 10;
+  }
+  .CPFilterItem-triggerIcon{
+    fill: #252525;
+    height: 10px;
+    transition: transform .15s cubic-bezier(.215,.61,.355,1);
+    width: 10px;
+  }
+}
+
 /* ---------------- 1. Banner ------------------------ */
 .banner-main {
   background-image: url(../../images/common/micro-dermarx_02.jpg);
@@ -635,6 +755,7 @@ body {
       text-transform: uppercase;
       @media screen and (max-width: 767px) {
         font-size: 8px;
+        line-height: 30px;
       }
     }
     ul {
@@ -1124,9 +1245,9 @@ body {
         }
     }
     &.single-product div.product .woocommerce-product-gallery .woocommerce-product-gallery__trigger {
-      width: 60px;
+      width: 40px;
       border-radius: 50%;
-      height: 60px;
+      height: 40px;
       background-color: rgba(255,255,255,0.9);
       position: relative;
       &::before {
@@ -1135,7 +1256,7 @@ body {
         vertical-align: middle;
         font-family: "Ionicons";
         speak: none;
-        font-size: 25px;
+        font-size: 21px;
         font-style: normal;
         font-weight: normal;
         font-variant: normal;
@@ -1191,11 +1312,18 @@ body {
         vertical-align: middle;
         width: 20%;
         margin-bottom: 10px;
+        @media screen and (max-width: 767px){
+          width: auto;
+        }
       }
       .main-content {
         display: inline-block;
         vertical-align: middle;
         width: 80%;
+        @media screen and (max-width: 767px){
+          width: auto;
+          display: block;
+        }
       }
     }
     &.single-product div.product .product_meta{
@@ -1255,9 +1383,15 @@ body {
       .flex-nav-prev {
         flex-grow: 1;
         margin-left: 100px;
+        @media screen and (max-width: 767px){
+          margin-left: 0;
+        }
       }
       .flex-nav-next{
         margin-right: 100px;
+        @media screen and (max-width: 767px){
+          margin-right: 0;
+        }
       }
       .flex-prev {
         font-size: 0;
@@ -1340,6 +1474,10 @@ body {
         display: flex;
         align-items: center;
     }
+}
+
+figure{
+  margin: 0;
 }
 
 /*------------ 6. Define Container ---------------*/
@@ -1673,6 +1811,16 @@ body {
         display: block;
       }
     }
+  }
+
+  .home-page-1 .modal-filter .block-content{
+    display: block;
+  }
+  .home-page-1 .modal-filter .block-content .content,
+  .home-page-1 .modal-filter .block-content .content.content-1{
+    width: 100%;
+    margin-left: 20px;
+    border-bottom: 1px solid rgba(51,51,51,.2);
   }
 }
 

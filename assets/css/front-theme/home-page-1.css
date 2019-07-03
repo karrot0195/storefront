@@ -88,8 +88,8 @@ body.page-template-template-home1 {
   width: calc(100% * 1 / 5);
 }
 .home-page-1 .modal-filter .block-content .content .title {
-  border-bottom: 1px solid rgba(51, 51, 51, 0.2);
-  font-size: 16px;
+  font-size: 12px;
+  color: #666;
   margin-bottom: 20px;
   padding-bottom: 5px;
 }
@@ -392,6 +392,15 @@ body.page-template-template-home1 {
 .home-page-1 .site-content .block-content .slider--item .list-title ul li a.active {
   color: #ffffff;
 }
+.home-page-1 .modal-title-sp,
+.home-page-1 .button-close-sp,
+.home-page-1 .btn-done-sp,
+.home-page-1 .title-wrapper {
+  display: none;
+}
+.btn-filter.sp {
+  display: none;
+}
 .site-footer {
   background-color: #fff;
 }
@@ -511,6 +520,111 @@ body.page-template-template-home1 {
     font-size: 12px;
   }
 }
+@media screen and (max-width: 767px) {
+  .home-page-1 .modal-filter {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: #e5e5e5;
+    z-index: 99999;
+    padding: 20px 0;
+    overflow: auto;
+  }
+  .btn-filter.pc {
+    display: none;
+  }
+  .btn-filter.sp {
+    display: block !important;
+  }
+  .home-page-1 .modal-heading {
+    display: none !important;
+  }
+  .home-page-1 .modal-title-sp {
+    display: block;
+    padding: 10px 20px 20px;
+    font-size: 24px;
+    line-height: 1.25;
+    color: #252525;
+  }
+  .home-page-1 .button-close-sp {
+    display: block;
+    position: absolute;
+    top: 30px;
+    right: 20px;
+  }
+  .home-page-1 .button-close-sp i::before {
+    font-size: 30px;
+    color: #222;
+  }
+  .home-page-1 .btn-done-sp {
+    display: block;
+    margin: 20px 20px 40px;
+  }
+  .home-page-1 .btn-done-sp button {
+    width: 100%;
+    padding: 21px 23px;
+    border: none;
+    font-size: 14px;
+    color: #ffffff;
+    background: #333;
+    cursor: pointer;
+  }
+  .home-page-1 .modal-filter .block-content .content .title {
+    padding-bottom: 0;
+  }
+  .home-page-1 .modal-filter .block-content .content.content-1 ul {
+    column-count: 1;
+  }
+  .home-page-1 .modal-filter .block-content .content ul {
+    display: none;
+  }
+  .home-page-1 .modal-filter .block-content .content ul li.is-selected button {
+    color: #222;
+    padding: 0;
+  }
+  .home-page-1 .modal-filter .block-content .content ul li button {
+    font-size: 16px;
+    padding: 0;
+  }
+  .content.is-opened .CPFilterItem-triggerIcon {
+    transform: rotate(180deg);
+  }
+  .content .title-wrapper {
+    position: relative;
+    display: block;
+  }
+  .content .title-wrapper h6 {
+    color: #252525;
+    font-size: 18px;
+    height: 25px;
+    margin: 0;
+    margin-right: 30px;
+    opacity: 1;
+    text-align: left;
+    transition: all 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+    padding-bottom: 20px;
+  }
+  .content .title-wrapper .title-hide {
+    display: none;
+  }
+  .CPFilterItem-trigger {
+    height: 10px;
+    padding-top: 2px;
+    position: absolute;
+    right: 40px;
+    top: 0;
+    width: 10px;
+    z-index: 10;
+  }
+  .CPFilterItem-triggerIcon {
+    fill: #252525;
+    height: 10px;
+    transition: transform 0.15s cubic-bezier(0.215, 0.61, 0.355, 1);
+    width: 10px;
+  }
+}
 /* ---------------- 1. Banner ------------------------ */
 .banner-main {
   background-image: url(../../images/common/micro-dermarx_02.jpg);
@@ -579,6 +693,7 @@ body.page-template-template-home1 {
 @media screen and (max-width: 767px) {
   .info-page .info-page-left a {
     font-size: 8px;
+    line-height: 30px;
   }
 }
 .info-page .info-page-left ul {
@@ -1052,9 +1167,9 @@ a:hover {
   }
 }
 .storefront-product-detail.single-product div.product .woocommerce-product-gallery .woocommerce-product-gallery__trigger {
-  width: 60px;
+  width: 40px;
   border-radius: 50%;
-  height: 60px;
+  height: 40px;
   background-color: rgba(255, 255, 255, 0.9);
   position: relative;
 }
@@ -1064,7 +1179,7 @@ a:hover {
   vertical-align: middle;
   font-family: "Ionicons";
   speak: none;
-  font-size: 25px;
+  font-size: 21px;
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
@@ -1119,12 +1234,27 @@ a:hover {
   width: 20%;
   margin-bottom: 10px;
 }
+@media screen and (max-width: 767px) {
+  .storefront-product-detail.single-product div.product .product_meta .posted_in .label,
+  .storefront-product-detail.single-product div.product .product_meta .sku_wrapper .label,
+  .storefront-product-detail.single-product div.product .product_meta .tagged_as .label {
+    width: auto;
+  }
+}
 .storefront-product-detail.single-product div.product .product_meta .posted_in .main-content,
 .storefront-product-detail.single-product div.product .product_meta .sku_wrapper .main-content,
 .storefront-product-detail.single-product div.product .product_meta .tagged_as .main-content {
   display: inline-block;
   vertical-align: middle;
   width: 80%;
+}
+@media screen and (max-width: 767px) {
+  .storefront-product-detail.single-product div.product .product_meta .posted_in .main-content,
+  .storefront-product-detail.single-product div.product .product_meta .sku_wrapper .main-content,
+  .storefront-product-detail.single-product div.product .product_meta .tagged_as .main-content {
+    width: auto;
+    display: block;
+  }
 }
 .storefront-product-detail.single-product div.product .product_meta span {
   margin-bottom: 20px;
@@ -1182,8 +1312,18 @@ a:hover {
   flex-grow: 1;
   margin-left: 100px;
 }
+@media screen and (max-width: 767px) {
+  .storefront-product-detail .flex-direction-nav .flex-nav-prev {
+    margin-left: 0;
+  }
+}
 .storefront-product-detail .flex-direction-nav .flex-nav-next {
   margin-right: 100px;
+}
+@media screen and (max-width: 767px) {
+  .storefront-product-detail .flex-direction-nav .flex-nav-next {
+    margin-right: 0;
+  }
 }
 .storefront-product-detail .flex-direction-nav .flex-prev {
   font-size: 0;
@@ -1261,6 +1401,9 @@ a:hover {
 .storefront-product-detail.single-product div.product form.cart {
   display: flex;
   align-items: center;
+}
+figure {
+  margin: 0;
 }
 /*------------ 6. Define Container ---------------*/
 .container {
@@ -1571,6 +1714,15 @@ a:hover {
   .home-page-1 .site-main ul.products.columns-3 li.product:hover h2.woocommerce-loop-product__title,
   .home-page-1 .site-main ul.products.columns-3 li.product:hover .price {
     display: block;
+  }
+  .home-page-1 .modal-filter .block-content {
+    display: block;
+  }
+  .home-page-1 .modal-filter .block-content .content,
+  .home-page-1 .modal-filter .block-content .content.content-1 {
+    width: 100%;
+    margin-left: 20px;
+    border-bottom: 1px solid rgba(51, 51, 51, 0.2);
   }
 }
 @media screen and (max-width: 400px) {
