@@ -96,6 +96,10 @@ body.page-template-template-home1 {
 .home-page-1 .modal-heading {
   display: flex;
   cursor: pointer;
+  position: absolute;
+  top: 50%;
+  right: 24px;
+  transform: translateY(-50%);
 }
 .home-page-1 .modal-heading .logo {
   flex-grow: 1;
@@ -723,6 +727,7 @@ body.page-template-template-home1 {
 .info-page-child {
   display: flex;
   align-items: center;
+  position: relative;
 }
 @media screen and (max-width: 767px) {
   .info-page-child {
