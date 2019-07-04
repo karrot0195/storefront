@@ -1899,6 +1899,7 @@ figure.woocommerce-product-gallery__wrapper {
   padding-left: 16px;
   text-transform: uppercase;
   border-bottom: 1px solid #ddd;
+  font-family: "Barlow-m";
 }
 .home-page-1 .site-header .col-full .menu-mobile .my-account.my-wishlist {
   padding-left: 0;
@@ -1910,6 +1911,7 @@ figure.woocommerce-product-gallery__wrapper {
   color: #222;
   background-color: #eee;
   line-height: 44px;
+  font-family: "Barlow-m";
   padding-left: 16px;
   text-transform: uppercase;
   border-bottom: 1px solid #ddd;
@@ -1926,6 +1928,7 @@ figure.woocommerce-product-gallery__wrapper {
   border-bottom: 1px solid #ddd;
   cursor: default;
   text-align: left;
+  font-family: "Barlow-m";
   margin-bottom: 0;
 }
 .home-page-1 .site-header .col-full .menu-mobile .footer-widgets.row-2.fix ul li a {
