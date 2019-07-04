@@ -1968,7 +1968,10 @@ figure.woocommerce-product-gallery__wrapper {
   line-height: 44px;
   font-family: "Barlow-m";
   padding-left: 16px;
-  text-transform: uppercase;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  text-transform: capitalize;
   border-bottom: 1px solid #ddd;
 }
 .home-page-1 .site-header .col-full .menu-mobile .footer-widgets.row-2.fix ul {
@@ -1987,7 +1990,8 @@ figure.woocommerce-product-gallery__wrapper {
   margin-bottom: 0;
 }
 .home-page-1 .site-header .col-full .menu-mobile .footer-widgets.row-2.fix ul li a {
-  font-size: 16px;
+  font-size: 14px;
+  font-weight: bold;
   text-transform: uppercase;
 }
 .home-page-1 .site-header .col-full .menu-mobile .site-branding {
