@@ -2121,6 +2121,7 @@ figure.woocommerce-product-gallery__wrapper {
     margin-bottom: 0;
   }
   .home-page-1 .site-header .col-full .block-icon-action .list-action li:last-child,
+  .home-page-1 .site-header .col-full .block-icon-action .list-action li:nth-child(2),
   .home-page-1 .site-header .col-full .block-icon-action .list-action li:nth-child(3) {
     display: none;
   }
