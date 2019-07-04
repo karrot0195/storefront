@@ -34,8 +34,9 @@ get_header( 'home-1' );
 						</ul>
 					</div>
 					<div class="info-page-right">
-						<button class="btn-filter pc"><span><?= esc_html__('FILTER', 'storefront') ?></span><i class="ion ion-ios-arrow-down"></i></button>
-						<button class="btn-filter sp"><span><?= esc_html__('FILTER', 'storefront') ?></span><i class="ion ion-ios-arrow-down"></i></button>
+						<button class="btn-filter pc"><?= esc_html__('FILTER', 'storefront') ?><i class="ion ion-ios-arrow-down"></i></button>
+						<button class="btn-filter sp"><?= esc_html__('FILTER', 'storefront') ?><i class="ion ion-ios-arrow-down"></i></button>
+						
 					</div>
 					<div class="modal-heading">
 						<span href="#" class="logo"></span>

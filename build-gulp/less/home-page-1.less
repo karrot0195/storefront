@@ -84,7 +84,9 @@ body {
     .col-full {
       .site-branding {
         width: 50%;
-        padding-left: 50px;
+        @media screen and (max-width: 992px) {
+          padding-left: 50px;
+        }
         @media screen and (max-width: 767px) {
           width: 40%;
         }
@@ -135,6 +137,10 @@ body {
   .modal-heading {
     display: flex;
     cursor: pointer;
+    position: absolute;
+    top: 50%;
+    right: 24px;
+    transform: translateY(-50%);
     .logo {
       flex-grow: 1;
     }
@@ -283,8 +289,8 @@ body {
             padding-left: 50px;
           }
           img {
-            width: 120px;
-            height: 30px;
+            width: 100%;
+            height: 100%;
           }
         }
       }
@@ -297,7 +303,14 @@ body {
 
       .site-branding {
         width: 30%;
-        padding-left: 50px;
+        @media screen and (max-width: 992px){
+          padding-left: 50px;
+        }
+        a{
+          display: block;
+          width: 120px;
+          height: 30px;
+        }
         .custom-logo-link {
           @media screen and (max-width: 992px) {
             padding: 10px 0;
@@ -446,7 +459,6 @@ body {
               letter-spacing: 1.46px;
               text-align: left;
               color: #ffffff;
-              white-space: pre-line;
             }
             .block-img {
               height: calc(100vh - 70px);
@@ -650,7 +662,7 @@ body {
     overflow: auto;
   }
   .btn-filter.pc{
-    display: none;
+    display: none !important;
   }
   .btn-filter.sp{
     display: block !important;
@@ -791,6 +803,7 @@ body {
 .info-page-child {
     display: flex;
     align-items: center;
+    position: relative;
     @media screen and (max-width: 767px) {
       display: block;
     }
@@ -861,15 +874,18 @@ body {
     button {
       background-color: transparent;
       border: 0;
-      font-family: "Barlow";
+      font-family: "Barlow-m";
       font-size: 12px;
-      font-weight: 500;
       font-style: normal;
       font-stretch: normal;
       line-height: 1.27;
       letter-spacing: 0.34px;
       text-align: left;
       color: #333333;
+      cursor: pointer;
+      i{
+        padding-left: 5px;
+      }
       &:focus {
         outline: 0;
       }
@@ -1014,7 +1030,7 @@ body {
     width: 100%;
     height: 100%;
     background-color: #aaabaa;
-    background-size: 100%;
+    background-size: 100% !important;
     border: none;
     overflow: hidden;
     opacity: 1;
@@ -1919,6 +1935,7 @@ figure.woocommerce-product-gallery__wrapper{
     max-width: 100%;
     display: flex;
     width: 100%;
+    align-items: center;
   }
   .menu-mobile {
     display: none;
@@ -1987,7 +2004,7 @@ figure.woocommerce-product-gallery__wrapper{
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
       .col-full {
-        padding: 30px 0;
+        padding: 15px 0;
         @media screen and (max-width: 992px) {
           padding: 0; 
         }
@@ -1995,6 +2012,23 @@ figure.woocommerce-product-gallery__wrapper{
     }
     .col-full {
       .menu-mobile {
+        .footer-widget-3 {
+          display: none;
+          ul {
+            padding-left: 0;
+            margin-left: 0;
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            li {
+              padding: 0 10px;
+              a {
+                color: #222;
+              }
+            }
+          }
+        }
         .my-account {
           display: block;
           text-align: left;
@@ -2006,8 +2040,21 @@ figure.woocommerce-product-gallery__wrapper{
           text-transform: uppercase;
           border-bottom: 1px solid #ddd;
           font-family: "Barlow-m";
+          span {
+            display: inline-block;
+            vertical-align: middle;
+            + span {
+              display: inline-block;
+              padding-left: 15px;
+            }
+          }
           &.my-wishlist {
             padding-left: 0;
+            span {
+              + span {
+                padding-left: 0;
+              }
+            }
           }
         }
         .ugd {
@@ -2230,8 +2277,16 @@ figure.woocommerce-product-gallery__wrapper{
     margin-bottom: 0;
   }
 
+  .home-page-1 .site-header .col-full .menu-mobile .footer-widgets.row-3.col-1 {
+    display: none;
+  }
+  .block.footer-widget-1, .block.footer-widget-2 {
+    margin-bottom: 0;
+  }
+
   .home-page-1 .site-header .col-full .block-icon-action .list-action li {
     &:last-child,
+    &:nth-child(2),
     &:nth-child(3){
       display: none;
     }
@@ -2269,7 +2324,7 @@ figure.woocommerce-product-gallery__wrapper{
       justify-content: center;
       padding-left: 0;
       li{
-        margin-right: 10px;
+        padding: 0 10px;
         a{
           color: #151515;
         }
