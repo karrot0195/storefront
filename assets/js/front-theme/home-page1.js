@@ -8,8 +8,8 @@
   // Control 1 product
   var count_product = $('ul.products li').length;
   if(count_product <= 1){
-    $('ul.products').css('display', 'flex');
-    $('ul.products li').css('margin', 'auto');
+    $('ul.products').addClass('products-mb');
+    $('ul.products li').addClass('product-mb');
   }
 
   // Change tab class and display content
