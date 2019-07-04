@@ -1907,6 +1907,10 @@ figure.woocommerce-product-gallery__wrapper {
   border-bottom: 1px solid #ddd;
   font-family: "Barlow-m";
 }
+.home-page-1 .site-header .col-full .menu-mobile .my-account span {
+  display: inline-block;
+  vertical-align: middle;
+}
 .home-page-1 .site-header .col-full .menu-mobile .my-account.my-wishlist {
   padding-left: 0;
 }
