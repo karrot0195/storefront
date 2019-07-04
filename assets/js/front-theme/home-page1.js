@@ -15,10 +15,24 @@
 
   // Menu Mobile
   $('.hamburger-menu').on('click', function(){
-    $(this).toggleClass('active');
-    $('.hamburger-menu .bar').toggleClass('animate');
     $(this).parent().find('.menu-mobile').toggleClass('open-menu-mobile');
   });
+  $('.hamburger-menu.close').on('click', function(){
+    $(this).parent('.menu-mobile').toggleClass('open-menu-mobile');
+  });
+
+  // Click outside Menu
+// $(document).on('click', function (e) {
+//   const $menu = $('.menu-mobile');
+//   const $hamburger = $('.hamburger-menu');
+//   if ((!$menu.is(e.target) // if the target of the click isn't the container...
+//     && $menu.has(e.target).length === 0) || (!$hamburger.is(e.target) // if the target of the click isn't the container...
+//     && $hamburger.has(e.target).length === 0)) // ... nor a descendant of the container
+//   {
+//     $menu.removeClass('open-menu-mobile');
+//  }
+// });
+
 
   // Scroll Menu 
   $(window).scroll(function(){
@@ -313,3 +327,5 @@ window.setItemCart = function(product_id, quantity, callback) {
 
 
 /* END CUSTOM */
+
+

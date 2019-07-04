@@ -1912,11 +1912,15 @@ figure.woocommerce-product-gallery__wrapper{
   }
   .menu-mobile {
     display: none;
+    span.block-like {
+      display: inline-block;
+      vertical-align: middle;
+    }
     
     @media screen and (max-width: 992px) {
       display: block;
       position: fixed;
-      top: 68px;
+      top: 0;
       left: -100%;;
       max-width: 100%;
       width: 320px;
@@ -1924,7 +1928,6 @@ figure.woocommerce-product-gallery__wrapper{
       z-index: 999;
       padding-top: 0px;
       margin-left: 0px;
-      overflow: hidden;
       background: #ddd;
       transition: all 0.5s ease;
       -webkit-transition: all 0.5s ease;
@@ -1992,6 +1995,9 @@ figure.woocommerce-product-gallery__wrapper{
           padding-left: 16px;
           text-transform: uppercase;
           border-bottom: 1px solid #ddd;
+          &.my-wishlist {
+            padding-left: 0;
+          }
         }
         .footer-widgets.row-2.fix ul {
           margin-top: 0;
@@ -2019,6 +2025,7 @@ figure.woocommerce-product-gallery__wrapper{
           float: none;
           text-align: left;
           ul {
+            overflow: hidden;
             li {
               display: block;
               line-height: 44px;
@@ -2059,23 +2066,38 @@ figure.woocommerce-product-gallery__wrapper{
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
-    &.active {
-      left: 0;
+    &.close {
+      top: 0;
+      transform: translateX(0px);
+      right: auto;
+      left: 320px;
+      z-index: 99;
+      background-color: #ddd;
+      padding: 21px 13px;
       @media screen and (max-width: 767px) {
-        transform: translateY(0);
         left: 320px;
-        background-color: #ddd;
-        padding: 25px 16px;
-        top: 0;
       }
       @media screen and (max-width: 374px) {
         left: 266px;
-        transform: translateY(0);
-        background-color: #ddd;
-        padding: 25px 16px;
-        top: 0;
       }
     }
+    // &.active {
+    //   left: 0;
+    //   @media screen and (max-width: 767px) {
+    //     transform: translateY(0);
+    //     left: 320px;
+    //     background-color: #ddd;
+    //     padding: 25px 16px;
+    //     top: 0;
+    //   }
+    //   @media screen and (max-width: 374px) {
+    //     left: 266px;
+    //     transform: translateY(0);
+    //     background-color: #ddd;
+    //     padding: 25px 16px;
+    //     top: 0;
+    //   }
+    // }
     .bar {
       position: relative;
       width: 20px;

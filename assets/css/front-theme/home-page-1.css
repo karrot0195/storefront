@@ -9,7 +9,7 @@
 */
 @font-face {
   font-family: "Barlow";
-  src: url(../../assets/fonts/Barlow-Regular.ttf);
+  src: url(../../assets/fonts/Barlow-Regular.ttf) format("truetype");
 }
 body {
   margin: 0 !important;
@@ -64,8 +64,10 @@ body.page-template-template-home1 {
     display: none;
   }
 }
-.home-page-1.one-page .site-header .col-full .block-icon-action .list-action li img {
-  width: 15px;
+@media screen and (max-width: 992px) {
+  .home-page-1.one-page .site-header .col-full .block-icon-action .list-action li img {
+    width: 15px;
+  }
 }
 .site-main ul.products li.product img {
   max-width: 100%;
@@ -1805,11 +1807,15 @@ figure.woocommerce-product-gallery__wrapper {
 .home-page-1 .menu-mobile {
   display: none;
 }
+.home-page-1 .menu-mobile span.block-like {
+  display: inline-block;
+  vertical-align: middle;
+}
 @media screen and (max-width: 992px) {
   .home-page-1 .menu-mobile {
     display: block;
     position: fixed;
-    top: 68px;
+    top: 0;
     left: -100%;
     max-width: 100%;
     width: 320px;
@@ -1817,7 +1823,6 @@ figure.woocommerce-product-gallery__wrapper {
     z-index: 999;
     padding-top: 0px;
     margin-left: 0px;
-    overflow: hidden;
     background: #ddd;
     transition: all 0.5s ease;
     -webkit-transition: all 0.5s ease;
@@ -1891,6 +1896,9 @@ figure.woocommerce-product-gallery__wrapper {
   text-transform: uppercase;
   border-bottom: 1px solid #ddd;
 }
+.home-page-1 .site-header .col-full .menu-mobile .my-account.my-wishlist {
+  padding-left: 0;
+}
 .home-page-1 .site-header .col-full .menu-mobile .footer-widgets.row-2.fix ul {
   margin-top: 0;
 }
@@ -1916,6 +1924,9 @@ figure.woocommerce-product-gallery__wrapper {
   display: block;
   float: none;
   text-align: left;
+}
+.home-page-1 .site-header .col-full .menu-mobile .block-menu ul {
+  overflow: hidden;
 }
 .home-page-1 .site-header .col-full .menu-mobile .block-menu ul li {
   display: block;
@@ -1953,25 +1964,23 @@ figure.woocommerce-product-gallery__wrapper {
   -moz-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
 }
-.home-page-1 .hamburger-menu.active {
-  left: 0;
+.home-page-1 .hamburger-menu.close {
+  top: 0;
+  transform: translateX(0px);
+  right: auto;
+  left: 320px;
+  z-index: 99;
+  background-color: #ddd;
+  padding: 21px 13px;
 }
 @media screen and (max-width: 767px) {
-  .home-page-1 .hamburger-menu.active {
-    transform: translateY(0);
+  .home-page-1 .hamburger-menu.close {
     left: 320px;
-    background-color: #ddd;
-    padding: 25px 16px;
-    top: 0;
   }
 }
 @media screen and (max-width: 374px) {
-  .home-page-1 .hamburger-menu.active {
+  .home-page-1 .hamburger-menu.close {
     left: 266px;
-    transform: translateY(0);
-    background-color: #ddd;
-    padding: 25px 16px;
-    top: 0;
   }
 }
 .home-page-1 .hamburger-menu .bar {
