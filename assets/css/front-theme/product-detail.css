@@ -13,6 +13,7 @@
   font-family: "Barlow";
   font-size: 25px;
   color: #222222;
+  font-weight: normal;
 }
 @media screen and (max-width: 767px) {
   .storefront-product-detail.single-product div.product p.price {
