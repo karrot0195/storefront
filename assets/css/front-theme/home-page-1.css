@@ -1580,6 +1580,7 @@ figure.woocommerce-product-gallery__wrapper {
   background-color: #142d73;
   min-width: 120px;
   font-family: "Barlow-m";
+  letter-spacing: 0.4px;
 }
 @media screen and (max-width: 767px) {
   .wrap-product-item .fm-sl-cart .lb-btn {
