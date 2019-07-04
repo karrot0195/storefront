@@ -36,21 +36,22 @@ global $product;
 
     $beforeHtml = '<span class="posted_in"><div class="label">'.$label.'</div><div class="main-content">';
     $afterHtml = '</div></span>';
-    echo wc_get_product_category_list(
-	        $product->get_id(), '',
-            $beforeHtml,
-            $afterHtml ); ?>
+    echo wc_get_product_tag_list(
+        $product->get_id(),
+        '',
+        $beforeHtml,
+        $afterHtml);
+    ?>
 
 	<?php
     $label = _n( 'suitable for:', 'suitable for:', count( $product->get_tag_ids() ), 'storefront' );
     $beforeHtml =  '<span class="tagged_as"><div class="label">' . $label . '</div><div class="main-content"></span>';
     $afterHtml = '</div></span>';
-
-    echo wc_get_product_tag_list(
-	        $product->get_id(),
-            '',
-            $beforeHtml,
-            $afterHtml); ?>
+    echo wc_get_product_category_list(
+        $product->get_id(), '',
+        $beforeHtml,
+        $afterHtml );
+    ?>
 
 	<?php do_action( 'woocommerce_product_meta_end' ); ?>
 
