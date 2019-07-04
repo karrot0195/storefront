@@ -9,11 +9,19 @@
 */
 @font-face {
   font-family: "Barlow";
-  src: url(../../assets/fonts/Barlow-Regular.ttf) format("truetype");
+  src: url(../../fonts/Barlow-Regular.ttf);
+}
+@font-face {
+  font-family: "Barlow-m";
+  src: url(../../fonts/Barlow-Medium.ttf);
+}
+@font-face {
+  font-family: "Barlow-s";
+  src: url(../../fonts/Barlow-SemiBold.ttf);
 }
 body {
   margin: 0 !important;
-  font-family: "Barlow" !important;
+  font-family: 'Barlow';
   padding: 0;
   overflow-x: hidden;
 }
@@ -64,8 +72,10 @@ body.page-template-template-home1 {
     display: none;
   }
 }
-.home-page-1.one-page .site-header .col-full .block-icon-action .list-action li img {
-  width: 15px;
+@media screen and (max-width: 992px) {
+  .home-page-1.one-page .site-header .col-full .block-icon-action .list-action li img {
+    width: 15px;
+  }
 }
 .site-main ul.products li.product img {
   max-width: 100%;
@@ -283,9 +293,9 @@ body.page-template-template-home1 {
 }
 .home-page-1 .site-header .col-full .block-menu ul li a {
   text-decoration: none;
-  width: 407px;
+  max-width: 407px;
   height: 12px;
-  font-family: "Barlow";
+  font-family: "Barlow-m";
   font-size: 16px;
   font-weight: 500;
   font-style: normal;
@@ -370,7 +380,7 @@ body.page-template-template-home1 {
 }
 .home-page-1 .site-content .block-content .slider--item .block-desc {
   max-width: 590px;
-  font-family: "Barlow";
+  font-family: "Barlow-m";
   font-size: 40px;
   font-weight: 500;
   font-style: normal;
@@ -409,7 +419,7 @@ body.page-template-template-home1 {
 }
 .home-page-1 .site-content .block-content .slider--item .list-title ul li a {
   width: 200px;
-  font-family: "Barlow";
+  font-family: "Barlow-m";
   font-size: 20px;
   font-weight: 500;
   font-style: normal;
@@ -683,7 +693,7 @@ body.page-template-template-home1 {
 }
 .banner-main .banner-title {
   max-width: 760px;
-  font-family: "Barlow";
+  font-family: "Barlow-m";
   font-size: 70px;
   font-weight: 500;
   font-style: normal;
@@ -1567,9 +1577,9 @@ figure.woocommerce-product-gallery__wrapper {
   border: none;
   border-right: 0;
   color: #ffffff;
-  font-weight: bold;
   background-color: #142d73;
   min-width: 120px;
+  font-family: "Barlow-m";
 }
 @media screen and (max-width: 767px) {
   .wrap-product-item .fm-sl-cart .lb-btn {
