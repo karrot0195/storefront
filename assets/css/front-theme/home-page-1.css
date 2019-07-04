@@ -7,6 +7,10 @@
                 5. Product Detail
 -----------------------------------------------------------------
 */
+@font-face {
+  font-family: "Barlow";
+  src: url(../../assets/fonts/Barlow-Regular.ttf);
+}
 body {
   margin: 0 !important;
   font-family: "Barlow" !important;
