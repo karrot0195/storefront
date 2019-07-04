@@ -1937,7 +1937,7 @@ figure.woocommerce-product-gallery__wrapper {
   text-align: left;
   text-decoration: none;
   color: #222;
-  background-color: #eee;
+  background-color: #fff;
   line-height: 44px;
   padding-left: 16px;
   text-transform: uppercase;
@@ -1963,11 +1963,14 @@ figure.woocommerce-product-gallery__wrapper {
   text-align: left;
   text-decoration: none;
   color: #222;
-  background-color: #eee;
+  background-color: #fff;
   line-height: 44px;
   font-family: "Barlow-m";
   padding-left: 16px;
-  text-transform: uppercase;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  text-transform: capitalize;
   border-bottom: 1px solid #ddd;
 }
 .home-page-1 .site-header .col-full .menu-mobile .footer-widgets.row-2.fix ul {
@@ -1976,7 +1979,7 @@ figure.woocommerce-product-gallery__wrapper {
 .home-page-1 .site-header .col-full .menu-mobile .footer-widgets.row-2.fix ul li {
   position: relative;
   display: block;
-  background-color: #eee;
+  background-color: #f8f8f8;
   line-height: 44px;
   padding-left: 16px;
   border-bottom: 1px solid #ddd;
@@ -1986,7 +1989,8 @@ figure.woocommerce-product-gallery__wrapper {
   margin-bottom: 0;
 }
 .home-page-1 .site-header .col-full .menu-mobile .footer-widgets.row-2.fix ul li a {
-  font-size: 16px;
+  font-size: 14px;
+  font-weight: bold;
   text-transform: uppercase;
 }
 .home-page-1 .site-header .col-full .menu-mobile .site-branding {
