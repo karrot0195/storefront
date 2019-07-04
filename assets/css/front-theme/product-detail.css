@@ -111,6 +111,18 @@
   text-align: right;
   color: #202020;
 }
+@media screen and (max-width: 767px) {
+  .storefront-product-detail #reviews #comments .block-write-comment {
+    text-align: left;
+    margin-top: 30px;
+  }
+  .storefront-product-detail #reviews #comments .woocommerce-noreviews {
+    text-align: left;
+    padding: 0;
+    margin-top: -25px;
+    margin-bottom: 20px;
+  }
+}
 .storefront-product-detail .block-wite-comment {
   padding-right: 70px;
 }
