@@ -1915,6 +1915,10 @@ figure.woocommerce-product-gallery__wrapper {
   display: inline-block;
   vertical-align: middle;
 }
+.home-page-1 .site-header .col-full .menu-mobile .my-account span + span {
+  display: inline-block;
+  padding-left: 8px;
+}
 .home-page-1 .site-header .col-full .menu-mobile .my-account.my-wishlist {
   padding-left: 0;
 }
