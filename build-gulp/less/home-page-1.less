@@ -2025,11 +2025,16 @@ figure.woocommerce-product-gallery__wrapper{
             vertical-align: middle;
             + span {
               display: inline-block;
-              padding-left: 8px;
+              padding-left: 15px;
             }
           }
           &.my-wishlist {
             padding-left: 0;
+            span {
+              + span {
+                padding-left: 0;
+              }
+            }
           }
         }
         .ugd {
@@ -2292,7 +2297,7 @@ figure.woocommerce-product-gallery__wrapper{
       justify-content: center;
       padding-left: 0;
       li{
-        margin-right: 10px;
+        padding: 0 10px;
         a{
           color: #151515;
         }
