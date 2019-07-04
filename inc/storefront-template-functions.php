@@ -778,3 +778,20 @@ if (!function_exists('storefront_mobile_footer_widgets')) {
 		endfor;
 	}
 }
+
+add_filter('custom_suggestions_out', function ($args, $post) {
+    $link = get_permalink($post->ID);
+    $imageUrl = get_the_post_thumbnail_url($post->ID);
+    $title = $post->post_title;
+    $args['item_html'] = "   <div class=\"wrap-item\">
+                        <div class=\"block-thumbnail\">
+                            <a href=\"$link\">
+                                <img width=\"100%\" src=\"$imageUrl\" alt=\"$title\">
+                            </a>
+                        </div>
+                        <div class=\"block-title\">
+                            <a href=\"$link\">$title</a>
+                        </div>
+                    </div>";
+    return $args;
+}, 1, 2);

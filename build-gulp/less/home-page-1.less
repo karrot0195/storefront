@@ -8,6 +8,11 @@
                 5. Product Detail
 -----------------------------------------------------------------
 */
+@font-face{
+  font-family: "Barlow";
+  src: url(../../assets/fonts/Barlow-Regular.ttf) format("truetype");
+}
+
 body {
   margin: 0 !important;
   font-family: "Barlow" !important;
@@ -2131,8 +2136,14 @@ figure.woocommerce-product-gallery__wrapper{
 }
 
 @media screen and (max-width: 992px){
+  .wrap-search-product .block-content--main{
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: auto auto;
+    grid-template-columns: auto auto;
+  }
   .home-page-1 .wrap-search-product .block-content--main .wrap-item{
-    width: 50%;
+    width: auto;
     margin-bottom: 15px;
     margin-right: 0;
     .block-title{
