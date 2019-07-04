@@ -27,10 +27,10 @@ get_header( 'home-1' );
 					<div class="info-page-left">
 						<a href="#"><?= esc_html__('View Products', 'storefront') ?></a>
 						<ul class="list-filter">
-							<li><a href="#">ALL</a></li>
-							<li><a href="#">8</a></li>
-							<li><a href="#">16</a></li>
-							<li><a href="#">24</a></li>
+							<li><a href="<?= RouterHelper::getPath('shop') ?>">ALL</a></li>
+							<li><a href="<?= RouterHelper::getPath('shop', ['limit' => 8]) ?>">8</a></li>
+							<li><a href="<?= RouterHelper::getPath('shop', ['limit' => 16]) ?>">16</a></li>
+							<li><a href="<?= RouterHelper::getPath('shop', ['limit' => 24]) ?>">24</a></li>
 						</ul>
 					</div>
 					<div class="info-page-right">
