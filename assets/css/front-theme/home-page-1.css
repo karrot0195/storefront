@@ -582,7 +582,7 @@ body.page-template-template-home1 {
     overflow: auto;
   }
   .btn-filter.pc {
-    display: none;
+    display: none !important;
   }
   .btn-filter.sp {
     display: block !important;
@@ -812,6 +812,9 @@ body.page-template-template-home1 {
   letter-spacing: 0.34px;
   text-align: left;
   color: #333333;
+}
+.info-page .info-page-right button i {
+  padding-left: 5px;
 }
 .info-page .info-page-right button:focus {
   outline: 0;
@@ -1813,6 +1816,7 @@ figure.woocommerce-product-gallery__wrapper {
   max-width: 100%;
   display: flex;
   width: 100%;
+  align-items: center;
 }
 .home-page-1 .menu-mobile {
   display: none;
@@ -1888,7 +1892,7 @@ figure.woocommerce-product-gallery__wrapper {
   -o-transition: all 0.5s ease;
 }
 .home-page-1 .site-header.fixed .col-full {
-  padding: 30px 0;
+  padding: 15px 0;
 }
 @media screen and (max-width: 992px) {
   .home-page-1 .site-header.fixed .col-full {
