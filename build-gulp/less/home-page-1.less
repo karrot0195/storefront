@@ -407,10 +407,6 @@ body {
           li {
             display: inline;
             padding-left:20px;
-            &:nth-child(3),
-            &:last-child {
-              display: none;
-            }
           }
         }
       }
@@ -1921,11 +1917,15 @@ figure.woocommerce-product-gallery__wrapper{
   }
   .menu-mobile {
     display: none;
+    span.block-like {
+      display: inline-block;
+      vertical-align: middle;
+    }
     
     @media screen and (max-width: 992px) {
       display: block;
       position: fixed;
-      top: 68px;
+      top: 0;
       left: -100%;;
       max-width: 100%;
       width: 320px;
@@ -1933,7 +1933,6 @@ figure.woocommerce-product-gallery__wrapper{
       z-index: 999;
       padding-top: 0px;
       margin-left: 0px;
-      overflow: hidden;
       background: #ddd;
       transition: all 0.5s ease;
       -webkit-transition: all 0.5s ease;
@@ -2001,6 +2000,22 @@ figure.woocommerce-product-gallery__wrapper{
           padding-left: 16px;
           text-transform: uppercase;
           border-bottom: 1px solid #ddd;
+          font-family: "Barlow-m";
+          &.my-wishlist {
+            padding-left: 0;
+          }
+        }
+        .ugd {
+          display: block;
+          text-align: left;
+          text-decoration: none;
+          color: #222;
+          background-color: #eee;
+          line-height: 44px;
+          font-family: "Barlow-m";
+          padding-left: 16px;
+          text-transform: uppercase;
+          border-bottom: 1px solid #ddd;
         }
         .footer-widgets.row-2.fix ul {
           margin-top: 0;
@@ -2013,6 +2028,7 @@ figure.woocommerce-product-gallery__wrapper{
             border-bottom: 1px solid #ddd;
             cursor: default;
             text-align: left;
+            font-family: "Barlow-m";
             margin-bottom: 0;
             a {
               font-size: 16px;
@@ -2028,6 +2044,7 @@ figure.woocommerce-product-gallery__wrapper{
           float: none;
           text-align: left;
           ul {
+            overflow: hidden;
             li {
               display: block;
               line-height: 44px;
@@ -2047,6 +2064,12 @@ figure.woocommerce-product-gallery__wrapper{
             display: block;
             padding-left: 0;
             margin-bottom: 20px;
+            @media screen and (max-width: 992px) {
+              &:nth-child(3),
+              &:last-child {
+                display: none;
+              }
+            }
           }
         }
       }
@@ -2068,23 +2091,38 @@ figure.woocommerce-product-gallery__wrapper{
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
-    &.active {
-      left: 0;
+    &.close {
+      top: 0;
+      transform: translateX(0px);
+      right: auto;
+      left: 320px;
+      z-index: 99;
+      background-color: #ddd;
+      padding: 21px 13px;
       @media screen and (max-width: 767px) {
-        transform: translateY(0);
         left: 320px;
-        background-color: #ddd;
-        padding: 25px 16px;
-        top: 0;
       }
       @media screen and (max-width: 374px) {
         left: 266px;
-        transform: translateY(0);
-        background-color: #ddd;
-        padding: 25px 16px;
-        top: 0;
       }
     }
+    // &.active {
+    //   left: 0;
+    //   @media screen and (max-width: 767px) {
+    //     transform: translateY(0);
+    //     left: 320px;
+    //     background-color: #ddd;
+    //     padding: 25px 16px;
+    //     top: 0;
+    //   }
+    //   @media screen and (max-width: 374px) {
+    //     left: 266px;
+    //     transform: translateY(0);
+    //     background-color: #ddd;
+    //     padding: 25px 16px;
+    //     top: 0;
+    //   }
+    // }
     .bar {
       position: relative;
       width: 20px;
@@ -2178,7 +2216,13 @@ figure.woocommerce-product-gallery__wrapper{
   }
   .home-page-1 .site-header .col-full .menu-mobile .block-icon-action .list-action li{
     margin: 0 10px;
-    
+  }
+
+  .home-page-1 .site-header .col-full .block-icon-action .list-action li {
+    &:last-child,
+    &:nth-child(3){
+      display: none;
+    }
   }
   .block.footer-widget-1, .block.footer-widget-2, .block.footer-widget-3, .block.footer-widget-4{
     width: 100%;

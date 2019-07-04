@@ -359,10 +359,6 @@ body.page-template-template-home1 {
   display: inline;
   padding-left: 20px;
 }
-.home-page-1 .site-header .col-full .block-icon-action .list-action li:nth-child(3),
-.home-page-1 .site-header .col-full .block-icon-action .list-action li:last-child {
-  display: none;
-}
 .home-page-1 .site-content .block-content .content-area {
   width: 100%;
   margin-bottom: 0;
@@ -1816,11 +1812,15 @@ figure.woocommerce-product-gallery__wrapper {
 .home-page-1 .menu-mobile {
   display: none;
 }
+.home-page-1 .menu-mobile span.block-like {
+  display: inline-block;
+  vertical-align: middle;
+}
 @media screen and (max-width: 992px) {
   .home-page-1 .menu-mobile {
     display: block;
     position: fixed;
-    top: 68px;
+    top: 0;
     left: -100%;
     max-width: 100%;
     width: 320px;
@@ -1828,7 +1828,6 @@ figure.woocommerce-product-gallery__wrapper {
     z-index: 999;
     padding-top: 0px;
     margin-left: 0px;
-    overflow: hidden;
     background: #ddd;
     transition: all 0.5s ease;
     -webkit-transition: all 0.5s ease;
@@ -1901,6 +1900,22 @@ figure.woocommerce-product-gallery__wrapper {
   padding-left: 16px;
   text-transform: uppercase;
   border-bottom: 1px solid #ddd;
+  font-family: "Barlow-m";
+}
+.home-page-1 .site-header .col-full .menu-mobile .my-account.my-wishlist {
+  padding-left: 0;
+}
+.home-page-1 .site-header .col-full .menu-mobile .ugd {
+  display: block;
+  text-align: left;
+  text-decoration: none;
+  color: #222;
+  background-color: #eee;
+  line-height: 44px;
+  font-family: "Barlow-m";
+  padding-left: 16px;
+  text-transform: uppercase;
+  border-bottom: 1px solid #ddd;
 }
 .home-page-1 .site-header .col-full .menu-mobile .footer-widgets.row-2.fix ul {
   margin-top: 0;
@@ -1914,6 +1929,7 @@ figure.woocommerce-product-gallery__wrapper {
   border-bottom: 1px solid #ddd;
   cursor: default;
   text-align: left;
+  font-family: "Barlow-m";
   margin-bottom: 0;
 }
 .home-page-1 .site-header .col-full .menu-mobile .footer-widgets.row-2.fix ul li a {
@@ -1927,6 +1943,9 @@ figure.woocommerce-product-gallery__wrapper {
   display: block;
   float: none;
   text-align: left;
+}
+.home-page-1 .site-header .col-full .menu-mobile .block-menu ul {
+  overflow: hidden;
 }
 .home-page-1 .site-header .col-full .menu-mobile .block-menu ul li {
   display: block;
@@ -1947,6 +1966,12 @@ figure.woocommerce-product-gallery__wrapper {
   padding-left: 0;
   margin-bottom: 20px;
 }
+@media screen and (max-width: 992px) {
+  .home-page-1 .site-header .col-full .menu-mobile .block-icon-action .list-action li:nth-child(3),
+  .home-page-1 .site-header .col-full .menu-mobile .block-icon-action .list-action li:last-child {
+    display: none;
+  }
+}
 .home-page-1 .hamburger-menu {
   position: absolute;
   right: auto;
@@ -1964,25 +1989,23 @@ figure.woocommerce-product-gallery__wrapper {
   -moz-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
 }
-.home-page-1 .hamburger-menu.active {
-  left: 0;
+.home-page-1 .hamburger-menu.close {
+  top: 0;
+  transform: translateX(0px);
+  right: auto;
+  left: 320px;
+  z-index: 99;
+  background-color: #ddd;
+  padding: 21px 13px;
 }
 @media screen and (max-width: 767px) {
-  .home-page-1 .hamburger-menu.active {
-    transform: translateY(0);
+  .home-page-1 .hamburger-menu.close {
     left: 320px;
-    background-color: #ddd;
-    padding: 25px 16px;
-    top: 0;
   }
 }
 @media screen and (max-width: 374px) {
-  .home-page-1 .hamburger-menu.active {
+  .home-page-1 .hamburger-menu.close {
     left: 266px;
-    transform: translateY(0);
-    background-color: #ddd;
-    padding: 25px 16px;
-    top: 0;
   }
 }
 .home-page-1 .hamburger-menu .bar {
@@ -2077,6 +2100,10 @@ figure.woocommerce-product-gallery__wrapper {
   }
   .home-page-1 .site-header .col-full .menu-mobile .block-icon-action .list-action li {
     margin: 0 10px;
+  }
+  .home-page-1 .site-header .col-full .block-icon-action .list-action li:last-child,
+  .home-page-1 .site-header .col-full .block-icon-action .list-action li:nth-child(3) {
+    display: none;
   }
   .block.footer-widget-1,
   .block.footer-widget-2,
