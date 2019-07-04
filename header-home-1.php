@@ -76,7 +76,7 @@ if (is_page_template('templates/template-home1.php')) {
                             </div>
                         </div>
                         <div class="ugd">You are in <b>SGD<b></div> -->
-                        <div class="ugd">You are in <b>SGD<b></div>
+                        <div class="ugd">You are in <b>SGD</b></div>
                     </div>
                     <div class="hamburger-menu close">
                         <div class="bar animate"></div>
