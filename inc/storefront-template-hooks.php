@@ -167,9 +167,10 @@ function get_all_quantity_item() {
 }
 
 add_filter('loop_shop_columns', 'loop_columns', 999);
-if (!function_exists('loop_columns')) {
+if (!function_exists('loop_ans')) {
 	function loop_columns() {
-		return 4; // 3 products per row
+	    $default = 4;
+		return $default; // 3 products per row
 	}
 }
 
@@ -286,4 +287,17 @@ function getProductByText($text='', $number=4) {
     }
 
     return $arr;
+}
+
+
+add_filter( 'loop_shop_per_page', 'new_loop_shop_per_page', 20 );
+
+function new_loop_shop_per_page( $cols ) {
+    // $cols contains the current number of products per page based on the value stored on Options -> Reading
+    // Return the number of products you wanna show per page.
+    $cols = 8;
+    if (isset($_GET['limit']) && !empty($_GET['limit'])) {
+        $cols = intval($_GET['limit']);
+    }
+    return $cols;
 }
