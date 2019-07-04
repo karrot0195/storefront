@@ -1903,6 +1903,17 @@ figure.woocommerce-product-gallery__wrapper {
 .home-page-1 .site-header .col-full .menu-mobile .my-account.my-wishlist {
   padding-left: 0;
 }
+.home-page-1 .site-header .col-full .menu-mobile .ugd {
+  display: block;
+  text-align: left;
+  text-decoration: none;
+  color: #222;
+  background-color: #eee;
+  line-height: 44px;
+  padding-left: 16px;
+  text-transform: uppercase;
+  border-bottom: 1px solid #ddd;
+}
 .home-page-1 .site-header .col-full .menu-mobile .footer-widgets.row-2.fix ul {
   margin-top: 0;
 }
