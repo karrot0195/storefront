@@ -70,12 +70,17 @@ HTML;
 
     static function renderVideo() {
         $page = get_page_by_title('shop');
-        $video = get_field('video', $page->ID ? $page->ID : '');
+	$video = get_field('video', $page->ID ? $page->ID : '');
+	$bg = get_field('video_bg', $page->ID ? $page->ID : '');
+	$has_bg = false;
+	if ($bg) {
+		$bg = wp_get_attachment_url($bg);$has_bg=true;
+	}
         ?>
-        <section data-wow-delay="0.5s" class="video wow fadeIn">
+		<section data-wow-delay="0.5s" class="video wow fadeIn <?= $has_bg ? 'has-bg' : '' ?>">
             <div class="video_wrapper video_wrapper_full js-videoWrapper">
                 <iframe class="videoIframe js-videoIframe" src="" frameborder="0" allowTransparency="true" allowfullscreen data-src="https://www.youtube.com/embed/<?= $video ?>" width="100%" height="500px"></iframe>
-                <button class="videoPoster js-videoPoster">
+		<button class="videoPoster js-videoPoster" <?= $has_bg ? 'style="background: url('.$bg.')"' : '' ?>>
                     <i class="fas fa-play"></i>
                 </button>
             </div>
