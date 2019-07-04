@@ -1813,6 +1813,7 @@ figure.woocommerce-product-gallery__wrapper {
   max-width: 100%;
   display: flex;
   width: 100%;
+  align-items: center;
 }
 .home-page-1 .menu-mobile {
   display: none;
@@ -1888,7 +1889,7 @@ figure.woocommerce-product-gallery__wrapper {
   -o-transition: all 0.5s ease;
 }
 .home-page-1 .site-header.fixed .col-full {
-  padding: 30px 0;
+  padding: 15px 0;
 }
 @media screen and (max-width: 992px) {
   .home-page-1 .site-header.fixed .col-full {
