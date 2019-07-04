@@ -59,7 +59,23 @@ if (is_page_template('templates/template-home1.php')) {
                         ?>
                         <a class="my-account" href="#"><span><img src="<?php bloginfo('template_url'); ?>/assets/images/icon/user.png"  alt="#"/></span><span>My Account</span></a>
                         <a class="my-account my-wishlist" href="#"><span class="block-like"></span><span>My wishlist</span></a>
-                        <div class="ugd">You are in SGD</div>
+                        <!-- <div class="block footer-widget-3">
+                            <div id="custom_html-3" class="widget_text widget widget_custom_html">
+                                <div class="textwidget custom-html-widget">
+                                    <div class="block-social-footer">
+                                        <ul>
+                                            <li>
+                                                <a>
+                                                    <i class="fab fa-facebook-f"></i>
+                                                </a>
+                                            </li>
+                                            <li><a><i class="fab fa-instagram"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ugd">You are in <b>SGD<b></div> -->
                     </div>
                     <div class="hamburger-menu close">
                         <div class="bar animate"></div>
