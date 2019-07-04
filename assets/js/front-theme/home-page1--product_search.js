@@ -12,83 +12,111 @@
   });
 
   $(document).on('click', '.js-remind-text', function() {
+    ProductSearch.configs.must_search = true;
+    jQuery('.search-content-remind').html('');
     $('.js-input-search').val($(this).html());
-    cleanRemine = true;
+    ProductSearch.configs.clean_remind = true;
   });
 
   $(document).on('keyup', '.js-input-search', function(e) {
     // enter
-    ProcessSearchTrigger();
+    ProductSearch.search();
   });
 
   $(document).on('change', '.js-input-search', function(e) {
     // enter
-    ProcessSearchTrigger();
+    ProductSearch.search();
   });
+})(jQuery);
 
-
-  let processSearch = false;
-  const searchDefaultHtml = $('.block-content--main').html();
-  let beforeText = '';
-  let cleanRemine = false;
-  function ProcessSearchTrigger() {
-    const text = $('.js-input-search').val();
-    if (!processSearch && beforeText.trim() != text.trim()) {
-      processSearch = true;
-      let html = '';
-      let remindHtml = '';
-      try {
-        if (text.length) {
-          jQuery.ajax({
-            url: `${home_url}?wc-ajax=ysm_product_search&query=${text}`,
-            method: 'get'
-          }).then(function(res) {
-            const json = JSON.parse(res);
-            json.suggestions.map((row, idx) => {
-              html += row.item_html;
-            if (idx < 2) {
-              remindHtml += `<li class="js-remind-text">${row.value}</li>`;
-            }
-          });
-
-            if (cleanRemine) {
-              $('.search-content-remind').html('');
-              $('.search-content-remind').animate({
-                opacity: 1
-              }, 300);
-
-              cleanRemine = false;
-            } else {
-              $('.search-content-remind').html(remindHtml);
-              $('.search-content-remind').animate({
-                opacity: 1
-              }, 300);
-            }
-            $('.block-content--main').fadeOut(300, function() {
-              $('.block-content--main').html(html);
-            }).fadeIn(300, function() {
-              beforeText = text;
-              processSearch = false;
-            });
-          });
-        } else {
-          html = searchDefaultHtml;
-
-          $('.search-content-remind').html('');
-          $('.search-content-remind').animate({
-            opacity: 1
-          }, 300);
-
-          $('.block-content--main').fadeOut(300, function() {
-            $('.block-content--main').html(html);
-          }).fadeIn(300, function() {
-            processSearch = false;
-          });
-        }
-      } catch (error) {
-        processSearch = false;
+const ProductSearch = {
+  metas: {
+    defaul_html: jQuery('.block-content--main').html(),
+    pre_text: '',
+    text: ''
+  },
+  configs: {
+    proccess_search: false,
+    clean_remind: false,
+    must_search: true
+  },
+  search: function() {
+    this.metas.text  = jQuery('.js-input-search').val();
+    if (this.check_condition()) {
+      this.beforeSeach();
+      this.ajax(() => {
+        this.afterSearch();
+      });
+    } else {
+      if (this.metas.text.trim().length == 0) {
+        this.defaultHtml();
       }
     }
+  },
+  ajax: function(callback) {
+    jQuery.ajax({
+      url: `${home_url}?wc-ajax=ysm_product_search&query=${this.metas.text}`,
+      method: 'get'
+    }).then((res) => {
+      this.setHtmlResult(res);
+      callback();
+    });
+  },
+  check_condition: function() {
+    if (this.configs.must_search) {
+      this.configs.must_search = false;
+      return true;
+    }
+
+    if (!this.configs.proccess_search &&
+      this.metas.text.trim().length > 0 &&
+      this.metas.pre_text.trim() != this.metas.text.trim()) {
+      return true;
+    }
+    return false;
+  },
+  defaultHtml: function() {
+    jQuery('.block-content--main').html(this.metas.defaul_html);
+  },
+  setHtmlResult: function (res, callback) {
+    const json = JSON.parse(res);
+    let html = '';
+    let remindHtml = ''
+    json.suggestions.map((row, idx) => {
+      html += row.item_html;
+        if (idx < 3) {
+          remindHtml += `<li class="js-remind-text">${row.value}</li>`;
+        }
+    });
+    jQuery('.block-content--main').html(html);
+    jQuery('.search-content-remind').html(remindHtml);
+  },
+  afterSearch: function () {
+    this.metas.pre_text = this.metas.text;
+
+    jQuery('.block-content--main').animate({
+      opacity: 1
+    }, 300, () => {
+        this.configs.proccess_search = false;
+    });
+
+    if (ProductSearch.configs.clean_remind) {
+      ProductSearch.configs.clean_remind = false;
+      jQuery('.search-content-remind').html('');
+    }
+    jQuery('.search-content-remind').animate({
+      opacity: 1
+    }, 300);
+  },
+  beforeSeach: function () {
+    this.configs.proccess_search = true;
+    jQuery('.block-content--main').animate({
+      opacity: 0
+    }, 300);
+
+    jQuery('.search-content-remind').animate({
+      opacity: 0
+    }, 300);
   }
-})(jQuery);
+};
 /* END CUSTOM */
