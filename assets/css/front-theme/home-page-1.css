@@ -2171,7 +2171,7 @@ figure.woocommerce-product-gallery__wrapper {
     padding-left: 0;
   }
   .footer-widgets.row-3.fix ul li {
-    margin-right: 10px;
+    padding: 0 10px;
   }
   .footer-widgets.row-3.fix ul li a {
     color: #151515;
