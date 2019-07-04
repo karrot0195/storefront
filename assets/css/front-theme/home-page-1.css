@@ -355,6 +355,11 @@ body.page-template-template-home1 {
   display: inline-block;
   vertical-align: -webkit-baseline-middle;
 }
+.home-page-1 .site-header .col-full .block-icon-action .list-action a.cur {
+  line-height: 20px;
+  vertical-align: middle;
+  font-weight: bold;
+}
 .home-page-1 .site-header .col-full .block-icon-action .list-action li {
   display: inline;
   padding-left: 20px;

@@ -703,7 +703,7 @@ if ( !function_exists('storefront_site_action') ) {
 <div class="block-icon-action">
     <ul class="list-action">
         <li><a href="#" class="js-show-wrap-product"><img src="<?= esc_url($userSearchIcon) ?>" alt=""></a></li>
-        <li><a href="#">SGD</a></li>
+        <li><a href="#" class="cur">SGD</a></li>
         <li><a href="#"><img src="<?= esc_url($userIcon) ?>" alt=""></a></li>
         <?php if (is_archive('product')): ?>
         <li id="list-action-cart"><?php storefront_handheld_footer_bar_cart_link(); ?></li>
