@@ -257,7 +257,11 @@ body.page-template-template-home1 {
 }
 .home-page-1 .site-header .col-full .site-branding {
   width: 30%;
-  padding-left: 50px;
+}
+@media screen and (max-width: 992px) {
+  .home-page-1 .site-header .col-full .site-branding {
+    padding-left: 50px;
+  }
 }
 .home-page-1 .site-header .col-full .site-branding a {
   display: block;
