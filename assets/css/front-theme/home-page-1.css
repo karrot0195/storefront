@@ -1909,6 +1909,9 @@ figure.woocommerce-product-gallery__wrapper {
     padding: 0;
   }
 }
+.home-page-1 .site-header .col-full .menu-mobile .footer-widget-3 {
+  display: none;
+}
 .home-page-1 .site-header .col-full .menu-mobile .footer-widget-3 ul {
   padding-left: 0;
   margin-left: 0;
