@@ -399,7 +399,6 @@ body.page-template-template-home1 {
   letter-spacing: 1.46px;
   text-align: left;
   color: #ffffff;
-  white-space: pre-line;
 }
 .home-page-1 .site-content .block-content .slider--item .block-img {
   height: calc(100vh - 70px);
