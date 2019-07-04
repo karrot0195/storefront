@@ -2060,6 +2060,12 @@ figure.woocommerce-product-gallery__wrapper{
             display: block;
             padding-left: 0;
             margin-bottom: 20px;
+            @media screen and (max-width: 992px) {
+              &:nth-child(3),
+              &:last-child {
+                display: none;
+              }
+            }
           }
         }
       }

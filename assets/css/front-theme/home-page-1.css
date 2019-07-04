@@ -1962,6 +1962,12 @@ figure.woocommerce-product-gallery__wrapper {
   padding-left: 0;
   margin-bottom: 20px;
 }
+@media screen and (max-width: 992px) {
+  .home-page-1 .site-header .col-full .menu-mobile .block-icon-action .list-action li:nth-child(3),
+  .home-page-1 .site-header .col-full .menu-mobile .block-icon-action .list-action li:last-child {
+    display: none;
+  }
+}
 .home-page-1 .hamburger-menu {
   position: absolute;
   right: auto;
