@@ -2015,6 +2015,14 @@ figure.woocommerce-product-gallery__wrapper{
           text-transform: uppercase;
           border-bottom: 1px solid #ddd;
           font-family: "Barlow-m";
+          span {
+            display: inline-block;
+            vertical-align: middle;
+            + span {
+              display: inline-block;
+              padding-left: 8px;
+            }
+          }
           &.my-wishlist {
             padding-left: 0;
           }
@@ -2241,6 +2249,7 @@ figure.woocommerce-product-gallery__wrapper{
 
   .home-page-1 .site-header .col-full .block-icon-action .list-action li {
     &:last-child,
+    &:nth-child(2),
     &:nth-child(3){
       display: none;
     }
