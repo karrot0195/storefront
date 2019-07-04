@@ -4,6 +4,14 @@
   $('.tabs-stage section:first').show();
   $('.tabs-nav li:first').addClass('tab-active');
 
+  
+  // Control 1 product
+  var count_product = $('ul.products li').length;
+  if(count_product <= 1){
+    $('ul.products').css('display', 'flex');
+    $('ul.products li').css('margin', 'auto');
+  }
+
   // Change tab class and display content
   $('.tabs-nav a').on('click', function(event) {
     event.preventDefault();
