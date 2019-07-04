@@ -359,10 +359,6 @@ body.page-template-template-home1 {
   display: inline;
   padding-left: 20px;
 }
-.home-page-1 .site-header .col-full .block-icon-action .list-action li:nth-child(3),
-.home-page-1 .site-header .col-full .block-icon-action .list-action li:last-child {
-  display: none;
-}
 .home-page-1 .site-content .block-content .content-area {
   width: 100%;
   margin-bottom: 0;
