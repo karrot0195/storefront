@@ -15,6 +15,7 @@
 
   // Menu Mobile
   $('.hamburger-menu').on('click', function(){
+    $(this).toggleClass('active');
     $('.hamburger-menu .bar').toggleClass('animate');
     $(this).parent().find('.menu-mobile').toggleClass('open-menu-mobile');
   });
