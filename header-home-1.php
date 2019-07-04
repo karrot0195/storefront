@@ -57,8 +57,8 @@ if (is_page_template('templates/template-home1.php')) {
                         <?php
                         storefront_mobile_footer_widgets();
                         ?>
-                        <a class="my-account" href="#"><span><img src="<?php bloginfo('template_url'); ?>/assets/images/icon/user.png"  alt="#"/></span><span>My Account<span></a>
-                        <a class="my-account my-wishlist" href="#"><span></span class="block-like"><span></span></a>
+                        <a class="my-account" href="#"><span><img src="<?php bloginfo('template_url'); ?>/assets/images/icon/user.png"  alt="#"/></span><span>My Account</span></a>
+                        <a class="my-account my-wishlist" href="#"><span class="block-like"></span><span>My wishlist</span></a>
                         <div class="ugd">You are in SGD</div>
                     </div>
                     <div class="hamburger-menu close">
