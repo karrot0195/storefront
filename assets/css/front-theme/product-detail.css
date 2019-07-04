@@ -272,6 +272,11 @@
   right: 200px;
   left: auto;
 }
+@media screen and (max-width: 480px) {
+  .storefront-product-detail.single-product div.product .woocommerce-product-gallery .woocommerce-product-gallery__trigger {
+    right: 30%;
+  }
+}
 .storefront-product-detail #reviews .commentlist li .comment_container .comment-text,
 .storefront-product-detail #reviews .commentlist li .avatar {
   float: none;
