@@ -1904,6 +1904,20 @@ figure.woocommerce-product-gallery__wrapper {
     padding: 0;
   }
 }
+.home-page-1 .site-header .col-full .menu-mobile .footer-widget-3 ul {
+  padding-left: 0;
+  margin-left: 0;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.home-page-1 .site-header .col-full .menu-mobile .footer-widget-3 ul li {
+  padding: 0 10px;
+}
+.home-page-1 .site-header .col-full .menu-mobile .footer-widget-3 ul li a {
+  color: #222;
+}
 .home-page-1 .site-header .col-full .menu-mobile .my-account {
   display: block;
   text-align: left;
@@ -2130,6 +2144,13 @@ figure.woocommerce-product-gallery__wrapper {
     margin: 0 10px;
   }
   .home-page-1 .site-header .col-full .menu-mobile .footer-widgets.row-2.fix ul {
+    margin-bottom: 0;
+  }
+  .home-page-1 .site-header .col-full .menu-mobile .footer-widgets.row-3.col-1 {
+    display: none;
+  }
+  .block.footer-widget-1,
+  .block.footer-widget-2 {
     margin-bottom: 0;
   }
   .home-page-1 .site-header .col-full .block-icon-action .list-action li:last-child,
