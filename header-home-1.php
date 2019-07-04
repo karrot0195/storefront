@@ -50,12 +50,15 @@ if (is_page_template('templates/template-home1.php')) {
                 </div>
 
                 <div class="menu-mobile">
-                    <?php
-                        do_action( $action );
-                    ?>
-                    <?php
-                       storefront_mobile_footer_widgets();
-                    ?>
+                    <div class="wrapper-menu">
+                        <?php
+                            do_action( $action );
+                        ?>
+                        <a class="my-account" href="#">My Account</a>
+                        <?php
+                        storefront_mobile_footer_widgets();
+                        ?>
+                    </div>
                 </div>
 
             </div>
