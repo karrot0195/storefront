@@ -8,6 +8,8 @@ body.modal {
 }
 .storefront-product-detail .wrap-back {
   padding: 40px 0px;
+  display: flex;
+  align-items: center;
 }
 @media screen and (max-width: 767px) {
   .storefront-product-detail .wrap-back {
