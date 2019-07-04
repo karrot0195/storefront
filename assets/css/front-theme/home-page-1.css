@@ -2100,6 +2100,9 @@ figure.woocommerce-product-gallery__wrapper {
   .home-page-1 .site-header .col-full .menu-mobile .block-icon-action .list-action li {
     margin: 0 10px;
   }
+  .home-page-1 .site-header .col-full .menu-mobile .footer-widgets.row-2.fix ul {
+    margin-bottom: 0;
+  }
   .home-page-1 .site-header .col-full .block-icon-action .list-action li:last-child,
   .home-page-1 .site-header .col-full .block-icon-action .list-action li:nth-child(3) {
     display: none;
