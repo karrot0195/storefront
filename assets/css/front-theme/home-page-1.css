@@ -266,7 +266,6 @@ body.page-template-template-home1 {
 .home-page-1 .site-header .col-full .site-branding a {
   display: block;
   width: 120px;
-  height: 30px;
 }
 @media screen and (max-width: 992px) {
   .home-page-1 .site-header .col-full .site-branding .custom-logo-link {
