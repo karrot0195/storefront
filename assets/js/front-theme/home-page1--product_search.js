@@ -13,6 +13,7 @@
 
   $(document).on('click', '.js-remind-text', function() {
     $('.js-input-search').val($(this).html());
+    cleanRemine = true;
   });
 
   $(document).on('keyup', '.js-input-search', function(e) {
@@ -29,13 +30,13 @@
   let processSearch = false;
   const searchDefaultHtml = $('.block-content--main').html();
   let beforeText = '';
+  let cleanRemine = false;
   function ProcessSearchTrigger() {
     const text = $('.js-input-search').val();
     if (!processSearch && beforeText.trim() != text.trim()) {
       processSearch = true;
       let html = '';
       let remindHtml = '';
-      $('.search-content-remind').addClass('processing')
       try {
         if (text.length) {
           jQuery.ajax({
@@ -49,8 +50,20 @@
               remindHtml += `<li class="js-remind-text">${row.value}</li>`;
             }
           });
-            $('.search-content-remind').html(remindHtml);
-            $('.search-content-remind').removeClass('processing');
+
+            if (cleanRemine) {
+              $('.search-content-remind').html('');
+              $('.search-content-remind').animate({
+                opacity: 1
+              }, 300);
+
+              cleanRemine = false;
+            } else {
+              $('.search-content-remind').html(remindHtml);
+              $('.search-content-remind').animate({
+                opacity: 1
+              }, 300);
+            }
             $('.block-content--main').fadeOut(300, function() {
               $('.block-content--main').html(html);
             }).fadeIn(300, function() {
@@ -60,6 +73,12 @@
           });
         } else {
           html = searchDefaultHtml;
+
+          $('.search-content-remind').html('');
+          $('.search-content-remind').animate({
+            opacity: 1
+          }, 300);
+
           $('.block-content--main').fadeOut(300, function() {
             $('.block-content--main').html(html);
           }).fadeIn(300, function() {
