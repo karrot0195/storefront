@@ -2212,7 +2212,13 @@ figure.woocommerce-product-gallery__wrapper{
   }
   .home-page-1 .site-header .col-full .menu-mobile .block-icon-action .list-action li{
     margin: 0 10px;
-    
+  }
+
+  .home-page-1 .site-header .col-full .block-icon-action .list-action li {
+    &:last-child,
+    &:nth-child(3){
+      display: none;
+    }
   }
   .block.footer-widget-1, .block.footer-widget-2, .block.footer-widget-3, .block.footer-widget-4{
     width: 100%;
