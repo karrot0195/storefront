@@ -39,7 +39,7 @@
 .wrap-search-product .wrap-block-search {
   position: relative;
   min-height: 100px;
-  max-width: 75%;
+  max-width: 50%;
   margin: 0 auto;
   padding-bottom: 20px;
 }
