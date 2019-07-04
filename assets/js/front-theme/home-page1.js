@@ -248,7 +248,7 @@
   // [SHOP] BUTTON CART
     if ( $('.js-cart-btn').length) {
       let isProcessing = false;
-      $('.js-cart-btn').on('click', function () {
+      $(document).on('click', '.js-cart-btn', function () {
         if (!isProcessing) {
           isProcessing = true;
           try {
