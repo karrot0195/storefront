@@ -544,6 +544,10 @@
   color: #333333;
   display: inline;
   margin-right: 15px;
+  text-decoration: none;
+}
+.storefront-product-detail.single-product div.product .woocommerce-product-rating a:hover {
+  text-decoration: underline;
 }
 .storefront-product-detail .wrap-description::-webkit-scrollbar {
   background-color: #fff;
