@@ -40,6 +40,13 @@
                             ?>
                             <div class="cat-content content content-<?= $idx+1 ?>" data-cat="<?= $cat['term_id'] ?>">
                                 <h5 class="title"><?= $cat['name'] ?></h5>
+                                <div class="title-wrapper">
+                                    <h6 class="title-show">All Types</h6>
+                                    <span class="CPFilterItem-trigger">
+                                    <svg class="Icon CPFilterItem-triggerIcon" role="img" viewBox="0 0 50 50"><title id="a1a69d1f-7219-416d-8097-a49e25d45c50">Open</title><g><polygon points="25,31.3 4.2,10.5 0.1,14.6 25,39.5 50,14.6 45.9,10.5 "></polygon></g></svg>
+                                    </span>
+                                    
+                                </div>
                                 <ul>
                                     <li class="is-selected" data-sub_cat="">
                                         <button class="js-filter-product"><?= esc_html__('All Types', 'storefront') ?></button>
