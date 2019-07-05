@@ -16,76 +16,61 @@ class ArchiveShopHelper {
 
     static function renderTabs() {
         $page = get_page_by_title('shop');
-
         $tabs = get_field('tab_group', $page->ID ? $page->ID : '');
-        if (!empty($tabs)):
-        ?>
-        <section data-wow-delay="0.5s" class="tab-content wow fadeIn">
-            <div class="container">
-            <div class="tabs">
-                <ul class="tabs-nav">
-                    <?php
-                        foreach ($tabs as $idx => $tab) {
-                            $tabTitle = $tab['title'];
-                            $tabHref = "#tab-".($idx+1);
-                            echo <<< HTML
-                    <li><a href="$tabHref">$tabTitle</a></li>
-HTML;
-
-                        }
-                    ?>
-                </ul>
-                <div class="tabs-stage">
-                    <?php foreach ($tabs as $idx => $tab): ?>
-                    <section id="tab-<?= ($idx+1) ?>">
-                        <div class="sub-title">
-                            <?= $tab['description'] ?>
-                        </div>
-                        <?php
-                        if (!empty($tab['gallery'])) {
-                          ?>
-                            <div class="slider-tab-<?= ($idx+1) ?>" data-slick='{"slidesToShow": 5, "slidesToScroll": 1}'>
-                                <?php
-                                foreach ($tab['gallery'] as $attachment) {
-                                    $attachmentUrl = $attachment['url'];
-                                    echo <<< HTML
-                                <div><img src="$attachmentUrl"/></div>
-HTML;
-                                }
-                                ?>
-                            </div>
-                            <?php
-                        }
-                        ?>
-                    </section>
-                    <?php endforeach; ?>
-                </div>
-            </div>
-        </div>
-        </section>
-
-<?php endif;
+        if (!empty($tabs)) {
+            echo render_php(PATH_THEME. '/views/shop/tabs.php', [
+                    'tabs' => $tabs
+            ]);
+        }
     }
 
 
     static function renderVideo() {
         $page = get_page_by_title('shop');
-	$video = get_field('video', $page->ID ? $page->ID : '');
-	$bg = get_field('video_bg', $page->ID ? $page->ID : '');
-	$has_bg = false;
-	if ($bg) {
-		$bg = wp_get_attachment_url($bg);$has_bg=true;
-	}
-        ?>
-		<section data-wow-delay="0.5s" class="video wow fadeIn <?= $has_bg ? 'has-bg' : '' ?>">
-            <div class="video_wrapper video_wrapper_full js-videoWrapper">
-                <iframe class="videoIframe js-videoIframe" src="" frameborder="0" allowTransparency="true" allowfullscreen data-src="https://www.youtube.com/embed/<?= $video ?>" width="100%" height="500px"></iframe>
-		<button class="videoPoster js-videoPoster" <?= $has_bg ? 'style="background: url('.$bg.')"' : '' ?>>
-                    <i class="fas fa-play"></i>
-                </button>
-            </div>
-        </section>
+        $video = get_field('video', $page->ID ? $page->ID : '');
+        $bg = get_field('video_bg', $page->ID ? $page->ID : '');
+        $has_bg = false;
+        if ($bg) {
+            $bg = wp_get_attachment_url($bg);$has_bg=true;
+        }
+        echo render_php(PATH_THEME. '/views/shop/video.php', [
+            'bg' => $bg,
+            'has_bg' => $has_bg,
+            'video' => $video,
+        ]);
+    }
 
-        <?php
+    static function renderFilter() {
+        $orderby = 'name';
+        $order = 'desc';
+        $hide_empty = false ;
+        $cat_args = array(
+            'orderby'    => $orderby,
+            'order'      => $order,
+            'hide_empty' => $hide_empty
+        );
+
+        $product_cats = get_terms( 'product_cat', array_merge($cat_args, [
+            'parent' => 0,
+            'orderby' => 'meta_value_num',
+            'meta_query' => [[
+                'key' => 'priority',
+                'type' => 'NUMERIC',
+            ]]
+        ]) );
+
+        if (!empty($product_cats)) {
+            for ($i=0; $i < count($product_cats); $i++) {
+                $product_cats[$i] = (array) $product_cats[$i];
+                $product_cats[$i]['sub_cats'] = (array) array_map(function($r) {
+                    return (array)$r;
+                }, get_terms('product_cat',
+                    array_merge($cat_args, ['parent' => $product_cats[$i]['term_id']])));
+            }
+        }
+
+        echo render_php(PATH_THEME. '/views/shop/product-filter.php', [
+                'product_cats' => $product_cats
+        ]);
     }
 }

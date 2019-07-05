@@ -191,6 +191,10 @@ add_action('wp_ajax_nopriv_set_item_from_cart', 'ajax_set_item_from_cart');
 add_action('wp_ajax_search_product', 'ajax_search_product');
 add_action('wp_ajax_nopriv_search_product', 'ajax_search_product');
 
+// ajax storefront_filter_product
+add_action('wp_ajax_storefront_filter_product', 'storefront_filter_product');
+add_action('wp_ajax_storefront_filter_product', 'storefront_filter_product');
+
 function ajax_set_item_from_cart() {
     $cart = WC()->instance()->cart;
     $result = [
@@ -288,6 +292,58 @@ function getProductByText($text='', $number=4) {
 
     return $arr;
 }
+
+function storefront_filter_product() {
+    global $wp_query;
+
+    $cats = $_GET['cat'];
+    $query_tax = [];
+    if (!empty($cats)) {
+        foreach ($cats as $cat_id => $cat_sub) {
+            $term_ids = [];
+            if (!empty($cat_sub)) {
+                $term_ids = [$cat_sub];
+            } else {
+                $terms = get_terms('product_cat', [
+                    'hide_empty' => false,
+                    'parent' => $cat_id
+                ]);
+
+                if (!empty($terms)) {
+                    foreach ($terms as $term) {
+                        $term_ids[] = $term->term_id;
+                    }
+                }
+
+            }
+            $query_tax [] = [
+                'taxonomy' => 'product_cat',
+                'terms' => $term_ids,
+                'operator' => 'IN'
+            ];
+        }
+    }
+
+    $wp_query = new WP_Query([
+        'post_type' => 'product',
+        'tax_query' => array_merge(['relation' => 'OR'], $query_tax)
+    ]);
+
+
+    while ( have_posts() ) {
+        the_post();
+
+        /**
+         * Hook: woocommerce_shop_loop.
+         *
+         * @hooked WC_Structured_Data::generate_product_data() - 10
+         */
+        do_action( 'woocommerce_shop_loop' );
+        wc_get_template_part( 'content', 'product' );
+    }
+    die;
+}
+// end ajax
 
 
 add_filter( 'loop_shop_per_page', 'new_loop_shop_per_page', 20 );

@@ -335,6 +335,11 @@ if ( ! class_exists( 'Storefront' ) ) :
             wp_enqueue_script( 'storefront-js-homepage-1--product_search', get_template_directory_uri() . '/assets/js/front-theme/home-page1--product_search.js', ['jquery'], '0.4.3', true );
             wp_enqueue_style( 'storefront-style-homepage-1--product_search', get_template_directory_uri() . '/assets/css/front-theme/home-page-1--product_search.css', '', $storefront_version );
 
+
+            // shop filter
+            wp_enqueue_script( 'storefront-js-shop-filter', get_template_directory_uri() . '/assets/js/front-theme/shop-filter.js', ['jquery'], '0.4.3', true );
+
+
             // js for product detail
             if (is_singular('product')) {
                 wp_enqueue_script( 'storefront-js-product_detail', get_template_directory_uri() . '/assets/js/front-theme/product-detail.js', ['jquery'], $storefront_version );

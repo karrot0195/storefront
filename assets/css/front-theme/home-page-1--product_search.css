@@ -31,7 +31,7 @@
 .wrap-search-product .close {
   position: absolute;
   right: 0;
-  top: -10px;
+  top: 0px;
   font-size: 20px;
   cursor: pointer;
   z-index: 10;
@@ -39,14 +39,14 @@
 .wrap-search-product .wrap-block-search {
   position: relative;
   min-height: 100px;
+  max-width: 50%;
+  margin: 0 auto;
   padding-bottom: 20px;
 }
 .wrap-search-product .wrap-block-search .block-search {
-  position: absolute;
+  position: relative;
   left: 50%;
   transform: translateX(-50%);
-  top: 20px;
-  min-width: 50%;
 }
 .wrap-search-product .wrap-block-search .block-search input {
   width: 100%;
@@ -71,7 +71,6 @@
   list-style: none;
   padding-left: 0;
   padding-bottom: 5px;
-  font-size: 10px;
   line-height: 1.5;
   opacity: 1;
 }
@@ -85,6 +84,7 @@
 }
 .wrap-search-product .wrap-block-search .block-search .search-content-remind li {
   cursor: pointer;
+  font-size: 14px;
 }
 .wrap-search-product .wrap-block-search .block-search .search-content-remind li:hover {
   font-weight: 600;

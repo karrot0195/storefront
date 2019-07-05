@@ -11,6 +11,7 @@
 $theme              = wp_get_theme( 'storefront' );
 $storefront_version = $theme['Version'];
 
+define('PATH_THEME', dirname(__FILE__));
 /**
  * Set the content width based on the theme's design and stylesheet.
  */
