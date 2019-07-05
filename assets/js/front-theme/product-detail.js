@@ -30,7 +30,11 @@
                 self.removeClass('btn-add-to-cart-click');
                 setTimeout(() => {
                   self.html(text);
-                self.removeClass('proccess');
+                self.removeClass('proccess')
+                self.addClass('test-f');
+                setTimeout(() => {
+                  self.removeClass('test-f');
+                },2000);
               }, 1000);
               }
             });
