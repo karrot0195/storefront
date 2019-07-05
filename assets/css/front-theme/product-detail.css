@@ -1048,9 +1048,6 @@
   border: 1px solid #142d73;
   animation: anim-effect-jelena 0.3s ease-out forwards;
 }
-.storefront-product-detail .wrap-cart .fm-detail-cart .test-f::after {
-  animation: test 0.1s ease forwards;
-}
 .storefront-product-detail .wrap-cart .fm-detail-cart .value-button {
   padding: 15px 20px;
   cursor: pointer;
