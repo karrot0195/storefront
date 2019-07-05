@@ -285,6 +285,11 @@
   right: 20px;
   left: auto;
 }
+@media screen and (max-width: 767px) {
+  .storefront-product-detail.single-product div.product .woocommerce-product-gallery .woocommerce-product-gallery__trigger {
+    right: initial;
+  }
+}
 .storefront-product-detail #reviews .commentlist li .comment_container .comment-text,
 .storefront-product-detail #reviews .commentlist li .avatar {
   float: none;
