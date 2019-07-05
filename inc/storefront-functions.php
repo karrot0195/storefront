@@ -210,7 +210,7 @@ function storefront_sanitize_hex_color( $color ) {
 }
 
 
-function dd($data, $isDie=false) {
+function dd($data, $isDie=true) {
     $num = rand(0, 1000);
    ?>
     <div class="block-debug-<?= $num ?>">
