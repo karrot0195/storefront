@@ -1393,7 +1393,7 @@ a:hover {
 }
 .storefront-product-detail .flex-direction-nav .flex-nav-prev {
   flex-grow: 1;
-  margin-left: 100px;
+  margin-left: 10px;
 }
 @media screen and (max-width: 767px) {
   .storefront-product-detail .flex-direction-nav .flex-nav-prev {
@@ -1401,7 +1401,7 @@ a:hover {
   }
 }
 .storefront-product-detail .flex-direction-nav .flex-nav-next {
-  margin-right: 100px;
+  margin-right: 10px;
 }
 @media screen and (max-width: 767px) {
   .storefront-product-detail .flex-direction-nav .flex-nav-next {
