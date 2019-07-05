@@ -16,21 +16,22 @@
       $(document).on('click', '.fm-detail-cart .js-btn-add-to-cart',  function () {
         const self = $(this);
         if (!self.hasClass('proccess')) {
+          self.addClass('btn-add-to-cart-click')
           const parent = $(this).parents('.fm-detail-cart');
           const total = parent.find('#number .val').html();
           const productId = parent.data('product_id');
 
           if (total >= 0) {
             let text = self.html();
-            self.html(`<i class="fa fa-spinner fa-pulse"></i>`);
             setItemCart(productId, total, function(res) {
               if (res.success) {
                 self.html('DONE');
                 self.addClass('proccess');
+                self.removeClass('btn-add-to-cart-click');
                 setTimeout(() => {
                   self.html(text);
                 self.removeClass('proccess');
-              }, 4000);
+              }, 1000);
               }
             });
           }
