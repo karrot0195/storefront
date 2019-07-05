@@ -34,7 +34,7 @@
                 self.addClass('test-f');
                 setTimeout(() => {
                   self.removeClass('test-f');
-                },2000);
+                },1000);
               }, 1000);
               }
             });
