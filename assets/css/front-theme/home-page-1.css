@@ -130,12 +130,13 @@ body.page-template-template-home1 {
 .home-page-1 .modal-filter .block-content .content .title {
   font-size: 12px;
   color: #666;
-  margin-bottom: 20px;
+  margin-bottom: 0;
   padding-bottom: 5px;
 }
 .home-page-1 .modal-filter .block-content .content ul {
   padding-left: 0;
   list-style: none;
+  margin-top: 0;
 }
 .home-page-1 .modal-filter .block-content .content ul li {
   padding: 5px 0;
@@ -747,8 +748,8 @@ body.page-template-template-home1 {
   }
 }
 .info-page {
-  background-color: #e5e5e5;
-  padding: 23px 0 21px;
+  background-color: #CECECE;
+  padding: 18px 0;
 }
 .info-page .info-page-left {
   display: flex;
