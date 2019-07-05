@@ -708,7 +708,7 @@ if ( !function_exists('storefront_site_action') ) {
         <?php if (is_archive('product')): ?>
         <li id="list-action-cart"><?php storefront_handheld_footer_bar_cart_link(); ?></li>
         <?php else: ?>
-        <li><a href=""><img src="<?= esc_url($unLockIcon) ?>" alt=""></a></li>
+        <li id="list-action-cart"><a class="footer-cart-contents" href="" title="View your shopping cart"><span class="count"></span></a></li>
         <?php endif; ?>
 		<li class="block-like header-icon"></li>
     </ul>
