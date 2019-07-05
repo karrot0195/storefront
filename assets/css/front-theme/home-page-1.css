@@ -689,7 +689,8 @@ body.page-template-template-home1 {
     transition: transform 0.15s cubic-bezier(0.215, 0.61, 0.355, 1);
     width: 10px;
   }
-  .home-page-1 ul.products {
+  .single-product .home-page-1 ul.products,
+  .home-page-1 ul.products .loop-main-product {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: auto auto;
