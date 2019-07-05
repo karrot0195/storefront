@@ -33,7 +33,7 @@
                 <span class="button-close-sp">
 						<i class="ion ion-ios-close"></i>
 					</span>
-                <div class="modal-content">
+                <div class="modal-content js-main-content-filter">
                     <div class="block-content">
                         <?php
                         foreach ($product_cats as $idx => $cat) {

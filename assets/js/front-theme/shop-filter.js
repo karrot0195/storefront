@@ -22,7 +22,7 @@
         opacity: 0
       }, 500);
 
-      $(this).parents('.block-content').find('li.is-selected').each(function () {
+      $('.js-main-content-filter li.is-selected').each(function () {
         const sub_cat = $(this).data('sub_cat');
         const cat = $(this).parents('.cat-content').data('cat');
         query += `&cat[${cat}]=${sub_cat}`;
