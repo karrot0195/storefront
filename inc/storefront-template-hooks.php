@@ -193,7 +193,7 @@ add_action('wp_ajax_nopriv_search_product', 'ajax_search_product');
 
 // ajax storefront_filter_product
 add_action('wp_ajax_storefront_filter_product', 'storefront_filter_product');
-add_action('wp_ajax_storefront_filter_product', 'storefront_filter_product');
+add_action('wp_ajax_nopriv_storefront_filter_product', 'storefront_filter_product');
 
 function ajax_set_item_from_cart() {
     $cart = WC()->instance()->cart;
@@ -295,8 +295,9 @@ function getProductByText($text='', $number=4) {
 
 function storefront_filter_product() {
     global $wp_query;
-
     $cats = $_GET['cat'];
+    $limit = isset($_GET['limit']) && !empty($_GET['limit']) ? intval($_GET['limit']) : -1;
+
     $query_tax = [];
     if (!empty($cats)) {
         foreach ($cats as $cat_id => $cat_sub) {
@@ -326,9 +327,9 @@ function storefront_filter_product() {
 
     $wp_query = new WP_Query([
         'post_type' => 'product',
-        'tax_query' => array_merge(['relation' => 'OR'], $query_tax)
+        'tax_query' => array_merge(['relation' => 'OR'], $query_tax),
+        'posts_per_page' => $limit
     ]);
-
 
     while ( have_posts() ) {
         the_post();
@@ -344,16 +345,3 @@ function storefront_filter_product() {
     die;
 }
 // end ajax
-
-
-add_filter( 'loop_shop_per_page', 'new_loop_shop_per_page', 20 );
-
-function new_loop_shop_per_page( $cols ) {
-    // $cols contains the current number of products per page based on the value stored on Options -> Reading
-    // Return the number of products you wanna show per page.
-    $cols = 8;
-    if (isset($_GET['limit']) && !empty($_GET['limit'])) {
-        $cols = intval($_GET['limit']);
-    }
-    return $cols;
-}

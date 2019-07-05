@@ -801,10 +801,12 @@ body.page-template-template-home1 {
   color: #8e8b8b;
   text-decoration: none;
 }
-.info-page .info-page-left ul li:hover {
+.info-page .info-page-left ul li:hover,
+.info-page .info-page-left ul li.is-selected {
   background: #8e8b8b;
 }
-.info-page .info-page-left ul li:hover a {
+.info-page .info-page-left ul li:hover a,
+.info-page .info-page-left ul li.is-selected a {
   color: #ffffff;
 }
 .info-page .info-page-right {

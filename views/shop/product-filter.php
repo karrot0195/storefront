@@ -4,11 +4,11 @@
             <div class="info-page-child">
                 <div class="info-page-left">
                     <a href="#"><?= esc_html__('View Products', 'storefront') ?></a>
-                    <ul class="list-filter">
-                        <li><a href="<?= RouterHelper::getPath('shop') ?>">ALL</a></li>
-                        <li><a href="<?= RouterHelper::getPath('shop', ['limit' => 8]) ?>">8</a></li>
-                        <li><a href="<?= RouterHelper::getPath('shop', ['limit' => 16]) ?>">16</a></li>
-                        <li><a href="<?= RouterHelper::getPath('shop', ['limit' => 24]) ?>">24</a></li>
+                    <ul class="list-filter js-list-filter">
+                        <li class="is-selected"><a href="javascript:void(0)" data-limit="-1">ALL</a></li>
+                        <li><a href="javascript:void(0)" data-limit="8">8</a></li>
+                        <li><a href="javascript:void(0)" data-limit="16">16</a></li>
+                        <li><a href="javascript:void(0)" data-limit="24">24</a></li>
                     </ul>
                 </div>
                 <div class="info-page-right">
