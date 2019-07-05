@@ -13,12 +13,20 @@
   }
 
   // Change tab class and display content
+  $('.tabs-nav a').on('mouseover', function(event) {
+    event.preventDefault();
+    $('.tabs-nav li').removeClass('tab-active');
+    $(this).parent().addClass('tab-active');
+    $('.tabs-stage section').hide();
+    $($(this).attr('href')).fadeIn(700);
+  });
+
   $('.tabs-nav a').on('click', function(event) {
     event.preventDefault();
     $('.tabs-nav li').removeClass('tab-active');
     $(this).parent().addClass('tab-active');
     $('.tabs-stage section').hide();
-    $($(this).attr('href')).show();
+    $($(this).attr('href')).fadeIn(700);
   });
 
   // Menu Mobile
@@ -206,7 +214,7 @@
     if ($('.js-requirecookie').length > 0) {
       const $container = $('.js-requirecookie').parents('.container');
       $('.js-requirecookie').on('click', () => {
-        $container.fadeOut(300);
+        $container.fadeOut(800);
       });
   }
 

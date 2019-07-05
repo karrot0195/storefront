@@ -130,7 +130,7 @@ body.page-template-template-home1 {
 .home-page-1 .modal-filter .block-content .content .title {
   font-size: 12px;
   color: #666;
-  margin-bottom: 0;
+  margin-bottom: 10px;
   padding-bottom: 5px;
 }
 .home-page-1 .modal-filter .block-content .content ul {
@@ -167,6 +167,7 @@ body.page-template-template-home1 {
 }
 .home-page-1 ul.products {
   padding-left: 0;
+  margin-top: 4.23580103em;
 }
 .home-page-1 .ytp-cued-thumbnail-overlay-image {
   background-image: none !important;
@@ -350,7 +351,6 @@ body.page-template-template-home1 {
 .home-page-1 .site-header .col-full .block-icon-action #list-action-cart .footer-cart-contents span {
   width: 7px;
   height: 10px;
-  font-family: GothamHTF;
   font-size: 13px;
   font-weight: 500;
   font-style: normal;
@@ -1115,6 +1115,7 @@ button:hover .fa-play:before {
   bottom: -22px;
   height: 3px;
   background-color: #323232;
+  transition: 0.3s all ease;
 }
 .tabs-nav li.tab-active::before {
   opacity: 1;
@@ -1140,6 +1141,9 @@ button:hover .fa-play:before {
   text-align: center;
   color: #939393;
   text-decoration: none;
+}
+.tabs-nav li:hover::before {
+  opacity: 1;
 }
 a:hover {
   color: #333;
