@@ -1051,6 +1051,10 @@
   border: 1px solid #142d73;
   animation: anim-effect-jelena 0.3s ease-out forwards;
 }
+.storefront-product-detail .wrap-cart .fm-detail-cart .test-f::after {
+  content: 'ADD TO CART';
+  animation: test-1 0.4s ease forwards;
+}
 .storefront-product-detail .wrap-cart .fm-detail-cart .value-button {
   padding: 15px 20px;
   cursor: pointer;
@@ -1086,6 +1090,14 @@
   }
 }
 @keyframes test {
+  0% {
+    transform: scaleY(0);
+  }
+  to {
+    transform: scaleY(1);
+  }
+}
+@keyframes test-1 {
   0% {
     transform: scaleY(0);
   }
