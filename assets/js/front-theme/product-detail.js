@@ -25,6 +25,9 @@
             let text = self.html();
             setItemCart(productId, total, function(res) {
               if (res.success) {
+                if ($('.footer-cart-contents').length) {
+                   $('.footer-cart-contents span').html(res.total);
+                }
                 self.html('DONE');
                 self.addClass('proccess');
                 self.removeClass('btn-add-to-cart-click');
@@ -41,10 +44,6 @@
           }
         }
       });
-
-      // $(document).on('click', '.fm-detail-cart .js-btn-add-to-cart',  function () {
-      //   $(this).addClass('btn-add-to-cart-click');
-      // });
 
   }, 100);
 })(jQuery);

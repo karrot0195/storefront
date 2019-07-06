@@ -705,11 +705,9 @@ if ( !function_exists('storefront_site_action') ) {
         <li><a href="#" class="js-show-wrap-product"><img src="<?= esc_url($userSearchIcon) ?>" alt=""></a></li>
         <li><a href="#" class="cur">SGD</a></li>
         <li><a href="#"><img src="<?= esc_url($userIcon) ?>" alt=""></a></li>
-        <?php if (is_archive('product')): ?>
+
         <li id="list-action-cart"><?php storefront_handheld_footer_bar_cart_link(); ?></li>
-        <?php else: ?>
-        <li id="list-action-cart"><a class="footer-cart-contents" href="" title="View your shopping cart"><span class="count"></span></a></li>
-        <?php endif; ?>
+
 		<li class="block-like header-icon"></li>
     </ul>
 </div>
