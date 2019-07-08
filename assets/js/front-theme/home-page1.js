@@ -324,6 +324,13 @@
         }
       });
     }
+
+  // [ABOUT US] SLICK SLIDER
+  $ ('.slider__item__img').slick({
+    autoplay: true,
+    autoplaySpeed: 1000,
+    arrows: false
+  });
 }(jQuery));
 
 window.setItemCart = function(product_id, quantity, callback) {

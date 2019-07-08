@@ -13,7 +13,7 @@
 get_header('home-1'); ?>
 
 	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+		<main id="main" class="site-main about-us" role="main">
             <div class="slider">
                 <?php
                     $slider = get_field('slider_about_us');
@@ -22,33 +22,62 @@ get_header('home-1'); ?>
                  ?>
                 <div class="slider__item">
                     <?php
-                         $bg_image = $slider[0]['background_image'];
-                         echo '<pre>';
-                            print_r($bg_image);
-                         echo '</pre>';
-                         if($bg_image) :
-                         $attachmentUrl = isset($bg_image[0]['image']) ? wp_get_attachment_url($bg_image[0]['image']) : ''; 
-                         echo '<pre>';
-                            print_r($attachmentUrl);
-                         echo '</pre>';
-
+                         $description = $slider[0]['description'];
                     ?>
-
                     <div class="slider__item__img">
-                        <img class="bg_img" alt="" src="<?= esc_url($attachmentUrl) ?>">
+                        <?php
+                         $bg_image = $slider[0]['background_image'];
+                         if($bg_image) :
+                                foreach($bg_image as $bg_img ):
+                                $slider_image = wp_get_attachment_url($bg_img['image']); 
+                                ?>
+                                 <img class="bg_img" alt="" src="<?= esc_url($slider_image) ?>">
+                            <?php endforeach; ?>
+                       
                     </div>
                     <div class="slider__item__content">
                         <div class="title">
-
+                            <?php echo $description[0]['title']  ?>
                         </div>
                         <div class="sub-title">
+                            <?php echo $description[0]['sub_title']  ?>
                         </div>
                     </div>
                     <?php endif ?>
                 </div>
                     <?php endif ?>
-            <div>
-		
+            </div>
+            <div class="container">
+                 <div class="content">
+                    <?php 
+                        $content_ab = get_field('content_ab');
+                        if($content_ab) :
+                    ?>
+                    <div class="title">
+                        <?php echo $content_ab[0]['title'] ?>
+                    </div>
+                    <div class="desc">
+                        <?php echo $content_ab[0]['description'] ?>
+                    </div>
+                    <?php endif ?>
+                </div>
+            </div>
+            <div class="block-image-wrapper">
+                <div class ="container">
+                    <div class= "block-image">
+                    <?php 
+                        $block_image_ab = get_field('block_image_ab');
+                        if ($block_image_ab) :  
+                            foreach($block_image_ab as $bl_img ):
+                            $image = wp_get_attachment_url($bl_img['image']); 
+                            ?>
+                            
+                            <img  alt="" src="<?= esc_url( $image) ?> ">
+                        <?php endforeach; ?>
+                        </div>
+                </div>
+                <?php endif ?>
+            </div>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 

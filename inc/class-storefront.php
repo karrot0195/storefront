@@ -347,7 +347,11 @@ if ( ! class_exists( 'Storefront' ) ) :
 
                 wp_enqueue_style( 'storefront-style-product_detail--popup-review', get_template_directory_uri() . '/assets/css/front-theme/product-detail--popup_review.css', '', $storefront_version );
                 wp_enqueue_style( 'storefront-style-product_detail', get_template_directory_uri() . '/assets/css/front-theme/product-detail.css', '', $storefront_version );
-            }
+			}
+			
+
+			// about us
+			wp_enqueue_style( 'storefront-style-about-us', get_template_directory_uri() . '/assets/css/front-theme/about-us.css', '', $storefront_version );
         }
 
 		/**
