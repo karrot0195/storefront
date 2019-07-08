@@ -51,10 +51,24 @@
   display: none;
 }
 .faq .faq-wrapper .content .block__content .sub-title p {
-  font-size: 11px;
+  font-size: 13px;
   line-height: 2.18;
   letter-spacing: 0.22px;
   text-align: left;
   color: #2a2a2a;
   margin: 30px auto 0;
+}
+/*=========== Responsive ==============*/
+@media screen and (max-width: 767px) {
+  .faq .faq-wrapper {
+    display: block;
+    padding: 0;
+  }
+  .faq .faq-wrapper .sidebar {
+    width: 100%;
+    margin: 50px auto 40px;
+  }
+  .faq .faq-wrapper .content {
+    width: 100%;
+  }
 }

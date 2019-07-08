@@ -355,6 +355,9 @@ if ( ! class_exists( 'Storefront' ) ) :
 
 			// faq
 			wp_enqueue_style( 'storefront-style-faq', get_template_directory_uri() . '/assets/css/front-theme/faq.css', '', $storefront_version );
+
+			// privacy policy
+			wp_enqueue_style( 'storefront-style-privacy-policy', get_template_directory_uri() . '/assets/css/front-theme/privacy-policy.css', '', $storefront_version );
         }
 
 		/**

@@ -335,7 +335,9 @@
   // [FAQ] TOGGLE DROPDOWN
   $('.block__content .title').click(function(){
     // $('.block__content').find('.sub-title').hide();
+    $(this).toggleClass('title-click');
     $(this).next('.sub-title').slideToggle(200);
+
   });
 }(jQuery));
 
