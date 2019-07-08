@@ -16,6 +16,7 @@
     jQuery('.search-content-remind').html('');
     $('.js-input-search').val($(this).html());
     ProductSearch.configs.clean_remind = true;
+    ProductSearch.search();
   });
 
   $(document).on('keyup', '.js-input-search', function(e) {
@@ -23,10 +24,6 @@
     ProductSearch.search();
   });
 
-  $(document).on('change', '.js-input-search', function(e) {
-    // enter
-    ProductSearch.search();
-  });
 })(jQuery);
 
 const ProductSearch = {
