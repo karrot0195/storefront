@@ -2534,3 +2534,8 @@ table th {
   display: inline-block;
   vertical-align: middle;
 }
+.home-page-1 table tbody tr:nth-child(2n) td,
+.home-page-1 fieldset,
+.home-page-1 fieldset legend {
+  background-color: #fff;
+}
