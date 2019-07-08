@@ -352,6 +352,9 @@ if ( ! class_exists( 'Storefront' ) ) :
 
 			// about us
 			wp_enqueue_style( 'storefront-style-about-us', get_template_directory_uri() . '/assets/css/front-theme/about-us.css', '', $storefront_version );
+
+			// faq
+			wp_enqueue_style( 'storefront-style-faq', get_template_directory_uri() . '/assets/css/front-theme/faq.css', '', $storefront_version );
         }
 
 		/**

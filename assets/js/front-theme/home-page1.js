@@ -331,6 +331,12 @@
     autoplaySpeed: 2000,
     arrows: false
   });
+
+  // [FAQ] TOGGLE DROPDOWN
+  $('.block__content .title').click(function(){
+    $('.block__content').find('.sub-title').hide();
+    $(this).next('.sub-title').slideToggle(200);
+  });
 }(jQuery));
 
 window.setItemCart = function(product_id, quantity, callback) {

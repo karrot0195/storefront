@@ -1,0 +1,60 @@
+.faq .faq-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0 100px;
+}
+.faq .faq-wrapper .sidebar {
+  width: 40%;
+}
+.faq .faq-wrapper .sidebar p {
+  font-size: 17px;
+  font-weight: 500;
+  letter-spacing: 0.34px;
+  text-align: left;
+  color: #2a2a2a;
+  margin: 0;
+}
+.faq .faq-wrapper .content {
+  width: 60%;
+}
+.faq .faq-wrapper .content .block__content {
+  padding-top: 22px;
+  padding-bottom: 30px;
+  cursor: pointer;
+  border-top: 1px solid rgba(149, 149, 149, 0.4);
+}
+.faq .faq-wrapper .content .block__content .title {
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.28px;
+  text-align: left;
+  color: #2a2a2a;
+  position: relative;
+}
+.faq .faq-wrapper .content .block__content .title::before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-family: "Ionicons";
+  content: "";
+  -webkit-transition: 0.3s all ease;
+  -o-transition: 0.3s all ease;
+  transition: 0.3s all ease;
+}
+.faq .faq-wrapper .content .block__content .title-click::before {
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+.faq .faq-wrapper .content .block__content .sub-title {
+  display: none;
+}
+.faq .faq-wrapper .content .block__content .sub-title p {
+  font-size: 11px;
+  line-height: 2.18;
+  letter-spacing: 0.22px;
+  text-align: left;
+  color: #2a2a2a;
+  margin: 30px auto 0;
+}
