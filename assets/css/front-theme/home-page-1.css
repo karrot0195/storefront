@@ -1908,6 +1908,7 @@ figure.woocommerce-product-gallery__wrapper {
 }
 .home-page-1 .site-header.fixed {
   position: fixed;
+  top: 0;
   background-color: #fff;
   z-index: 999;
   transition: all 0.5s ease;
