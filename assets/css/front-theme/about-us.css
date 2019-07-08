@@ -65,16 +65,18 @@
   padding-right: 0;
 }
 /*============= Responsive =============*/
-.about-us .block-image {
-  display: inline-block;
-  font-size: 0;
-  text-align: center;
-}
-.about-us .block-image img {
-  width: calc(50% - 10px);
-  padding: 0 5px;
-  margin-bottom: 10px;
-}
-.about-us .block-image img:last-child {
-  padding-right: 5px;
+@media screen and (max-width: 480px) {
+  .about-us .block-image {
+    display: inline-block;
+    font-size: 0;
+    text-align: center;
+  }
+  .about-us .block-image img {
+    width: calc(50% - 10px);
+    padding: 0 5px;
+    margin-bottom: 10px;
+  }
+  .about-us .block-image img:last-child {
+    padding-right: 5px;
+  }
 }

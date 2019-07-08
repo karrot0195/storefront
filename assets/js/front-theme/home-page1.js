@@ -328,7 +328,7 @@
   // [ABOUT US] SLICK SLIDER
   $ ('.slider__item__img').slick({
     autoplay: true,
-    autoplaySpeed: 1000,
+    autoplaySpeed: 2000,
     arrows: false
   });
 }(jQuery));
