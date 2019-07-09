@@ -25,16 +25,19 @@ if ( ! $product_attributes ) {
 ?>
 <table class="woocommerce-product-attributes shop_attributes">
 	<?php 
-	if (isset($product_attributes['attribute_ingredient'])) {
-		$arr = explode(',', $product_attributes['attribute_ingredient']['value']);
+	if (isset($product_attributes['attribute_pa_ingredient'])) {
+
+		$text = str_replace(",", "</p>,<p>", $product_attributes['attribute_pa_ingredient']['value']);
+
+		$arr = explode(',', $text);
 		for ($i=0; $i<count($arr); $i++) {
 			?>
-<tr class="woocommerce-product-attributes-item woocommerce-product-attributes-item">
-	<td class="woocommerce-product-attributes-item__value">
-   			<i class="icon ion-md-checkmark-circle-outline" style="display: inline"></i>
-    		<?= $arr[$i] ?>
-	</td>
-</tr>
+			<tr class="woocommerce-product-attributes-item woocommerce-product-attributes-item">
+				<td class="woocommerce-product-attributes-item__value">
+		   			<i class="icon ion-md-checkmark-circle-outline" style="display: inline"></i>
+		    		<?= $arr[$i] ?>
+				</td>
+			</tr>
 			<?php
 		}
 	}
