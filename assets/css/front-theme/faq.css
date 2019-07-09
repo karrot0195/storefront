@@ -12,7 +12,7 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 0 100px;
+  padding: 100px;
 }
 .faq .faq-wrapper .sidebar,
 .shipping .faq-wrapper .sidebar,
