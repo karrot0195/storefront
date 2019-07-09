@@ -1,6 +1,7 @@
 /*
     1. Login
     2. My Account
+    3. Contact Us
 */
 
 /************************/
@@ -258,6 +259,117 @@
 
 
 
+        }
+    }
+}
+
+/************************/
+/*      Contact Us      */
+/************************/
+.contact-us-wrapper{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 100px;
+    color: #2a2a2a;
+    p{
+        margin: 0;
+    }
+    .sidebar{
+        width: 40%;
+        p{
+            font-size: 22px;
+            font-family: 'Barlow-m';
+            letter-spacing: 0.34px;
+            text-align: left;
+            color: #2a2a2a;
+            margin: 0;
+        }
+    }
+    .content{
+        .ad-p-wrapper{
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            padding-bottom: 30px;
+            border-bottom: 1px solid rgba(149, 149, 149, 0.4);
+        }
+        .address,
+        .phone{
+            width: 50%;
+        }
+        .phone{
+            padding-left: 50px;
+        }
+        .title{
+            font-size: 19px;
+            font-family: "Barlow";
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        .desc{
+            font-size: 19px;
+            line-height: 1.36;
+        }
+        .contact-form{
+            padding-top: 15px;
+            .title{
+                margin-bottom: 30px;
+            }
+            input,
+            textarea{
+                border-radius: 2px;
+                border: solid 0.5px #d7d7d7;
+                padding-left: 12px;
+                font-size: 16px;
+                -webkit-transition: 0.3s all ease;
+                transition: 0.3s all ease;
+                &:focus{
+                    outline: none;
+                    box-shadow: 1px 2px 11px 3px rgba(0, 0, 0, 0.1);
+                    border-color: #ffffff;
+                }
+            }
+            .form-flex{
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                label{
+                    letter-spacing: 0.22px;
+                    input{
+                        height: 50px;
+                        margin-top: 10px;
+                      
+                    }
+                }
+                label:first-child{
+                    margin-right: 15px;
+                }
+            }
+            .form-flex.last{
+                margin-top: 20px;
+            }
+            .form-message{
+                margin-top: 20px;
+                textarea{
+                    width: 100%;
+                    margin-top: 10px;
+                }
+            }
+            .form-submit{
+                margin-top: 55px;
+                input{
+                    height: 50px;
+                    background: #0f1972;
+                    border-radius: 25px;
+                    width: 145px;
+                    text-align: center;
+                    color: #ffffff;
+                    font-size: 14px;
+                    cursor: pointer;
+
+                }
+            }
         }
     }
 }
