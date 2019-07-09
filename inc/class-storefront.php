@@ -358,6 +358,9 @@ if ( ! class_exists( 'Storefront' ) ) :
 
 			// privacy policy
 			wp_enqueue_style( 'storefront-style-privacy-policy', get_template_directory_uri() . '/assets/css/front-theme/privacy-policy.css', '', $storefront_version );
+
+			// login
+			wp_enqueue_style( 'storefront-style-login', get_template_directory_uri() . '/assets/css/front-theme/login.css', '', $storefront_version );
         }
 
 		/**

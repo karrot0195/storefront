@@ -1,0 +1,127 @@
+/*
+    1. Login
+*/
+
+/************************/
+/*       Login           */
+/************************/
+.login{
+    p{
+        margin: 0;
+    }
+    .login-wrapper{
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        padding: 0 100px;
+        color:  #2a2a2a;
+        .title{
+            font-size: 14px;
+            font-weight: 500;
+            letter-spacing: 0.28px;
+            margin-bottom: 30px;
+        }
+        label{
+            display: block;
+            font-size: 11px;
+            letter-spacing: 0.22px;
+            padding-bottom: 12px;
+        }
+        input{
+            height: 32px;
+            border-radius: 2px;
+            border: solid 0.5px #d7d7d7;
+            width: 100%;
+        }
+        .login{
+            width: 50%;
+            padding-right: 150px;
+            position: relative;
+            .btn-fb,
+            .btn-login{
+                width: 100%;
+                height: 32px;
+                border: none;
+                background: #004a80;
+                color: #ffffff;
+                font-size: 11px;
+                letter-spacing: 0.22px;
+                position: relative;
+                border-radius: 2px;
+                margin-bottom: 25px;
+                i{
+                    position: absolute;
+                    top: 50%;
+                    left: 14px;
+                    -webkit-transform: translateY(-50%);
+                    -ms-transform: translateY(-50%);
+                        transform: translateY(-50%);
+                }
+            }
+            .login-type{
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-pack: justify;
+                -ms-flex-pack: justify;
+                    justify-content: space-between;
+                -webkit-box-align: center;
+                    -ms-flex-align: center;
+                        align-items: center;
+                margin-bottom: 25px;
+                .line{
+                    width: 40%;
+                    height: 1px;
+                    opacity: 0.4;
+                    background-color: #959595;
+                }
+                .or{
+                    width: 20%;
+                    text-align: center;
+                    font-size: 12px;
+                    letter-spacing: 0.24px;
+                    color: #393939;
+                    text-transform: uppercase;
+                }
+            }
+            .email-wrapper,
+            .password-wrapper{
+               margin-bottom: 16px;
+            }
+            .fg-pass{
+                text-align: right;
+                font-size: 11px;
+                letter-spacing: 0.22px;
+                color: #0f1972;
+                margin-bottom: 30px;
+            }
+            .btn-login{
+                border-radius: 26px;
+            }
+            &::before{
+                position: absolute;
+                content: '';
+                height: 100%;
+                width: 1px;
+                top: 30px;
+                right: 0;
+                opacity: 0.4;
+                background-color: #959595;
+            }
+        }
+        .register{
+            width: 50%; 
+            padding-left: 150px;
+            .btn-register{
+                height: 32px;
+                border-radius: 2px;
+                background-color: #e1e1e1;
+                border: none;
+                width: 100%;
+                letter-spacing: 0.22px;
+                color: #313131;
+                font-size: 11px;
+              }
+        }
+    }
+}
