@@ -24,11 +24,19 @@ if ( ! $product_attributes ) {
 }
 ?>
 <table class="woocommerce-product-attributes shop_attributes">
-	<?php foreach ( $product_attributes as $product_attribute_key => $product_attribute ) : ?>
-		<tr class="woocommerce-product-attributes-item woocommerce-product-attributes-item--<?php echo esc_attr( $product_attribute_key ); ?>">
-			<td class="woocommerce-product-attributes-item__value">
-                <i class="icon ion-md-checkmark-circle-outline" style="display: inline"></i>
-                <?php echo wp_kses_post( $product_attribute['value'] ); ?></td>
-		</tr>
-	<?php endforeach; ?>
+	<?php 
+	if (isset($product_attributes['attribute_ingredient'])) {
+		$arr = explode(',', $product_attributes['attribute_ingredient']['value']);
+		for ($i=0; $i<count($arr); $i++) {
+			?>
+<tr class="woocommerce-product-attributes-item woocommerce-product-attributes-item">
+	<td class="woocommerce-product-attributes-item__value">
+   			<i class="icon ion-md-checkmark-circle-outline" style="display: inline"></i>
+    		<?= $arr[$i] ?>
+	</td>
+</tr>
+			<?php
+		}
+	}
+	?>
 </table>
