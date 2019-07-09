@@ -1,5 +1,16 @@
-.faq{
-    .faq-wrapper{
+
+/*
+    1. Faq
+    2. Shipping
+*/
+
+/************************/
+/*          Faq         */
+/************************/
+.faq,
+.shipping{
+    .faq-wrapper,
+    .shipping-wrapper{
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
@@ -7,8 +18,8 @@
         .sidebar{
             width: 40%;
             p{
-                font-size: 17px;
-                font-weight: 500;
+                font-size: 22px;
+                font-family: 'Barlow-m';
                 letter-spacing: 0.34px;
                 text-align: left;
                 color: #2a2a2a;
@@ -23,7 +34,7 @@
                 cursor: pointer;
                 border-top: 1px solid rgba(149, 149, 149, 0.4);
                 .title{
-                    font-size: 14px;
+                    font-size: 19px;
                     font-weight: 600;
                     letter-spacing: 0.28px;
                     text-align: left;
@@ -48,7 +59,7 @@
                 .sub-title{
                     display: none;
                     p{
-                        font-size: 13px;
+                        font-size: 16px;
                         line-height: 2.18;
                         letter-spacing: 0.22px;
                         text-align: left;
@@ -60,6 +71,20 @@
         }
     }
 }
+
+
+/************************/
+/*       Shipping        */
+/************************/
+
+.shipping-wrapper{
+    .desc{
+        p{
+            line-height: 1.45;
+        }
+    }
+}
+
 
 /*=========== Responsive ==============*/
 @media screen and (max-width: 767px){

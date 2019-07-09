@@ -339,6 +339,7 @@
     $(this).next('.sub-title').slideToggle(200);
   });
 
+  // [MY ACCOUNT] TAB CONTENT
   $('.sidebar .sidebar__tab').click(function(){
 		var tab_id = $(this).attr('data-tab');
 

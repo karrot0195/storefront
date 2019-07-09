@@ -1,38 +1,66 @@
-.faq .faq-wrapper {
+/*
+    1. Faq
+    2. Shipping
+*/
+/************************/
+/*          Faq         */
+/************************/
+.faq .faq-wrapper,
+.shipping .faq-wrapper,
+.faq .shipping-wrapper,
+.shipping .shipping-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   padding: 0 100px;
 }
-.faq .faq-wrapper .sidebar {
+.faq .faq-wrapper .sidebar,
+.shipping .faq-wrapper .sidebar,
+.faq .shipping-wrapper .sidebar,
+.shipping .shipping-wrapper .sidebar {
   width: 40%;
 }
-.faq .faq-wrapper .sidebar p {
-  font-size: 17px;
-  font-weight: 500;
+.faq .faq-wrapper .sidebar p,
+.shipping .faq-wrapper .sidebar p,
+.faq .shipping-wrapper .sidebar p,
+.shipping .shipping-wrapper .sidebar p {
+  font-size: 22px;
+  font-family: 'Barlow-m';
   letter-spacing: 0.34px;
   text-align: left;
   color: #2a2a2a;
   margin: 0;
 }
-.faq .faq-wrapper .content {
+.faq .faq-wrapper .content,
+.shipping .faq-wrapper .content,
+.faq .shipping-wrapper .content,
+.shipping .shipping-wrapper .content {
   width: 60%;
 }
-.faq .faq-wrapper .content .block__content {
+.faq .faq-wrapper .content .block__content,
+.shipping .faq-wrapper .content .block__content,
+.faq .shipping-wrapper .content .block__content,
+.shipping .shipping-wrapper .content .block__content {
   padding-top: 22px;
   padding-bottom: 30px;
   cursor: pointer;
   border-top: 1px solid rgba(149, 149, 149, 0.4);
 }
-.faq .faq-wrapper .content .block__content .title {
-  font-size: 14px;
+.faq .faq-wrapper .content .block__content .title,
+.shipping .faq-wrapper .content .block__content .title,
+.faq .shipping-wrapper .content .block__content .title,
+.shipping .shipping-wrapper .content .block__content .title {
+  font-size: 19px;
   font-weight: 600;
   letter-spacing: 0.28px;
   text-align: left;
   color: #2a2a2a;
   position: relative;
 }
-.faq .faq-wrapper .content .block__content .title::before {
+.faq .faq-wrapper .content .block__content .title::before,
+.shipping .faq-wrapper .content .block__content .title::before,
+.faq .shipping-wrapper .content .block__content .title::before,
+.shipping .shipping-wrapper .content .block__content .title::before {
   position: absolute;
   top: 0;
   right: 0;
@@ -42,21 +70,36 @@
   -o-transition: 0.3s all ease;
   transition: 0.3s all ease;
 }
-.faq .faq-wrapper .content .block__content .title-click::before {
+.faq .faq-wrapper .content .block__content .title-click::before,
+.shipping .faq-wrapper .content .block__content .title-click::before,
+.faq .shipping-wrapper .content .block__content .title-click::before,
+.shipping .shipping-wrapper .content .block__content .title-click::before {
   -webkit-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
   transform: rotate(180deg);
 }
-.faq .faq-wrapper .content .block__content .sub-title {
+.faq .faq-wrapper .content .block__content .sub-title,
+.shipping .faq-wrapper .content .block__content .sub-title,
+.faq .shipping-wrapper .content .block__content .sub-title,
+.shipping .shipping-wrapper .content .block__content .sub-title {
   display: none;
 }
-.faq .faq-wrapper .content .block__content .sub-title p {
-  font-size: 13px;
+.faq .faq-wrapper .content .block__content .sub-title p,
+.shipping .faq-wrapper .content .block__content .sub-title p,
+.faq .shipping-wrapper .content .block__content .sub-title p,
+.shipping .shipping-wrapper .content .block__content .sub-title p {
+  font-size: 16px;
   line-height: 2.18;
   letter-spacing: 0.22px;
   text-align: left;
   color: #2a2a2a;
   margin: 30px auto 0;
+}
+/************************/
+/*       Shipping        */
+/************************/
+.shipping-wrapper .desc p {
+  line-height: 1.45;
 }
 /*=========== Responsive ==============*/
 @media screen and (max-width: 767px) {
