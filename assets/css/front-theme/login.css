@@ -32,6 +32,9 @@
   border: solid 0.5px #d7d7d7;
   width: 100%;
 }
+.login .login-wrapper input:focus {
+  outline: none;
+}
 .login .login-wrapper .login {
   width: 50%;
   padding-right: 150px;
