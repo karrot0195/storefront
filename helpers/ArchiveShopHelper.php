@@ -18,7 +18,7 @@ class ArchiveShopHelper {
         $page = get_page_by_title('shop');
         $tabs = get_field('tab_group', $page->ID ? $page->ID : '');
         if (!empty($tabs)) {
-            echo render_php(PATH_THEME. '/views/shop/tabs.php', [
+            echo render_php('views/shop/tabs.php', [
                     'tabs' => $tabs
             ]);
         }
@@ -33,7 +33,7 @@ class ArchiveShopHelper {
         if ($bg) {
             $bg = wp_get_attachment_url($bg);$has_bg=true;
         }
-        echo render_php(PATH_THEME. '/views/shop/video.php', [
+        echo render_php('views/shop/video.php', [
             'bg' => $bg,
             'has_bg' => $has_bg,
             'video' => $video,
@@ -69,7 +69,7 @@ class ArchiveShopHelper {
             }
         }
 
-        echo render_php(PATH_THEME. '/views/shop/product-filter.php', [
+        echo render_php('views/shop/product-filter.php', [
                 'product_cats' => $product_cats
         ]);
     }

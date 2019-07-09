@@ -27,6 +27,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 					<th class="product-remove">&nbsp;</th>
 					<th class="product-thumbnail">&nbsp;</th>
 					<th class="product-name"><?php esc_html_e( 'Product', 'woocommerce' ); ?></th>
+					<th class="product-name"><?php esc_html_e( 'Size', 'woocommerce' ); ?></th>
 					<th class="product-price"><?php esc_html_e( 'Price', 'woocommerce' ); ?></th>
 					<th class="product-quantity"><?php esc_html_e( 'Quantity', 'woocommerce' ); ?></th>
 					<th class="product-subtotal"><?php esc_html_e( 'Total', 'woocommerce' ); ?></th>
@@ -88,6 +89,12 @@ do_action( 'woocommerce_before_cart' ); ?>
 								echo wp_kses_post( apply_filters( 'woocommerce_cart_item_backorder_notification', '<p class="backorder_notification">' . esc_html__( 'Available on backorder', 'woocommerce' ) . '</p>', $product_id ) );
 							}
 							?>
+							</td>
+
+							<td>
+								<div class="wrap-size">
+									<span><?= $_product->get_attribute('pa_size') ?></span>
+								</div>
 							</td>
 
 							<td class="product-price" data-title="<?php esc_attr_e( 'Price', 'woocommerce' ); ?>">
@@ -162,6 +169,8 @@ do_action( 'woocommerce_before_cart' ); ?>
 			do_action( 'woocommerce_cart_collaterals' );
 		?>
 	</div>
+
+	<?= render_php('views/cart/cart-carousel.php') ?>
 </div>
 
 <?php do_action( 'woocommerce_after_cart' ); ?>
