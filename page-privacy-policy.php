@@ -23,15 +23,15 @@ get_header('home-1'); ?>
 
                     ?>
                     <div class="sidebar">
-                        <?php echo $side_bar ?>
+                       <p> <?php echo $side_bar ?></p>
                     </div>    
                     <div class="content">
                         <?php 
                             $content=$privacy_policy[0]['content'];
-                            $sub_title = $content[0]['sub_title'];
+                           
                         ?>
-                        <div class="sub-title">
-                            <?php echo $content[0]['sub_title']; ?>
+                        <div class="desc">
+                            <?php echo get_field('description') ?>
                         </div>
                         <?php 
                             $content=$privacy_policy[0]['content'];
@@ -45,7 +45,7 @@ get_header('home-1'); ?>
                                     <?php echo $block_content[0]['title'] ?>
                                 </div>
                                 <div class="sub-title">
-                                <?php echo $block_content[0]['description'] ?>
+                                <?php echo $block_content[0]['sub_title'] ?>
                                 </div>
                             </div>
                             <?php endforeach ?>
