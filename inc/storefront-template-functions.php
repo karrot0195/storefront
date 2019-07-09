@@ -296,11 +296,13 @@ if ( ! function_exists( 'storefront_homepage_header' ) ) {
 	function storefront_homepage_header() {
 		edit_post_link( __( 'Edit this section', 'storefront' ), '', '', '', 'button storefront-hero__button-edit' );
 		?>
-		<header class="entry-header">
-			<?php
-			the_title( '<h1 class="entry-title">', '</h1>' );
-			?>
-		</header><!-- .entry-header -->
+		<div class="container">
+			<header class="entry-header">
+				<?php
+				the_title( '<h1 class="entry-title">', '</h1>' );
+				?>
+			</header><!-- .entry-header -->
+		</div>
 		<?php
 	}
 }
@@ -317,12 +319,14 @@ if ( ! function_exists( 'storefront_page_header' ) ) {
 		}
 
 		?>
-		<header class="entry-header">
-			<?php
-			storefront_post_thumbnail( 'full' );
-			the_title( '<h1 class="entry-title">', '</h1>' );
-			?>
-		</header><!-- .entry-header -->
+		<div class="container">
+			<header class="entry-header">
+				<?php
+				storefront_post_thumbnail( 'full' );
+				the_title( '<h1 class="entry-title">', '</h1>' );
+				?>
+			</header><!-- .entry-header -->
+		</div>
 		<?php
 	}
 }

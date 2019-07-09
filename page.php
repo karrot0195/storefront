@@ -37,5 +37,4 @@ get_header('home-1'); ?>
 	</div><!-- #primary -->
 
 <?php
-do_action( 'storefront_sidebar' );
 get_footer('home-1');
