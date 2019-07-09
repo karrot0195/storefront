@@ -11,23 +11,23 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 0 100px;
+  padding: 100px;
   color: #2a2a2a;
 }
 .login .login-wrapper .title {
-  font-size: 14px;
+  font-size: 19px;
   font-weight: 500;
   letter-spacing: 0.28px;
   margin-bottom: 30px;
 }
 .login .login-wrapper label {
   display: block;
-  font-size: 11px;
+  font-size: 16px;
   letter-spacing: 0.22px;
   padding-bottom: 12px;
 }
 .login .login-wrapper input {
-  height: 32px;
+  height: 50px;
   border-radius: 2px;
   border: solid 0.5px #d7d7d7;
   width: 100%;
@@ -40,11 +40,11 @@
 .login .login-wrapper .login .btn-fb,
 .login .login-wrapper .login .btn-login {
   width: 100%;
-  height: 32px;
+  height: 50px;
   border: none;
   background: #004a80;
   color: #ffffff;
-  font-size: 11px;
+  font-size: 16px;
   letter-spacing: 0.22px;
   position: relative;
   border-radius: 2px;
@@ -80,7 +80,7 @@
 .login .login-wrapper .login .login-type .or {
   width: 20%;
   text-align: center;
-  font-size: 12px;
+  font-size: 19px;
   letter-spacing: 0.24px;
   color: #393939;
   text-transform: uppercase;
@@ -91,7 +91,7 @@
 }
 .login .login-wrapper .login .fg-pass {
   text-align: right;
-  font-size: 11px;
+  font-size: 16px;
   letter-spacing: 0.22px;
   color: #0f1972;
   margin-bottom: 30px;
@@ -114,12 +114,12 @@
   padding-left: 150px;
 }
 .login .login-wrapper .register .btn-register {
-  height: 32px;
+  height: 50px;
   border-radius: 2px;
   background-color: #e1e1e1;
   border: none;
   width: 100%;
   letter-spacing: 0.22px;
   color: #313131;
-  font-size: 11px;
+  font-size: 16px;
 }

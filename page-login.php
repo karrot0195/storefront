@@ -33,11 +33,11 @@ get_header('home-1'); ?>
                                 </div>
                             </div>
                             <div class="email-wrapper">
-                                <label>Eamil Address</label>
+                                <label>Email Address</label>
                                 <input type="text" />
                             </div>
                             <div class="password-wrapper">
-                                <label>password</label>
+                                <label>Password</label>
                                 <input type="password" />
                             </div>
                             <p class="fg-pass">Forgot Password</p>
