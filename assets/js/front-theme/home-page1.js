@@ -337,8 +337,18 @@
     // $('.block__content').find('.sub-title').hide();
     $(this).toggleClass('title-click');
     $(this).next('.sub-title').slideToggle(200);
-
   });
+
+  $('.sidebar .sidebar__tab').click(function(){
+		var tab_id = $(this).attr('data-tab');
+
+		$('.sidebar .sidebar__tab').removeClass('current');
+		$('.tab-content-mc').removeClass('current');
+
+		$(this).addClass('current');
+		$("#"+tab_id).addClass('current');
+	})
+
 }(jQuery));
 
 window.setItemCart = function(product_id, quantity, callback) {

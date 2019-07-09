@@ -1,5 +1,6 @@
 /*
     1. Login
+    2. My Account
 */
 /************************/
 /*       Login           */
@@ -16,7 +17,7 @@
 }
 .login .login-wrapper .title {
   font-size: 19px;
-  font-weight: 500;
+  font-family: 'Barlow-m';
   letter-spacing: 0.28px;
   margin-bottom: 30px;
 }
@@ -52,6 +53,7 @@
   position: relative;
   border-radius: 2px;
   margin-bottom: 25px;
+  cursor: pointer;
 }
 .login .login-wrapper .login .btn-fb i,
 .login .login-wrapper .login .btn-login i {
@@ -125,4 +127,125 @@
   letter-spacing: 0.22px;
   color: #313131;
   font-size: 16px;
+  cursor: pointer;
+}
+/************************/
+/*      My Account      */
+/************************/
+.my-account .my-account-wrapper {
+  color: #2a2a2a;
+  padding: 100px;
+}
+.my-account .my-account-wrapper .title {
+  letter-spacing: 0.28px;
+  font-family: 'Barlow-m';
+  font-size: 19px;
+  margin-bottom: 40px;
+}
+.my-account .my-account-wrapper .content-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.my-account .my-account-wrapper .content-wrapper .sidebar {
+  width: 20%;
+}
+.my-account .my-account-wrapper .content-wrapper .content {
+  width: 80%;
+}
+.my-account .my-account-wrapper .sidebar__tab {
+  margin-bottom: 30px;
+  font-size: 16px;
+  font-family: 'Barlow-m';
+  color: #898989;
+  cursor: pointer;
+}
+.my-account .my-account-wrapper .sidebar__tab.current {
+  color: #2a2a2a;
+}
+.my-account .my-account-wrapper .content .tab-content-mc {
+  display: none;
+}
+.my-account .my-account-wrapper .content .tab-content-mc.current {
+  display: inherit;
+}
+.my-account .my-account-wrapper .content .dashboard {
+  display: none;
+}
+.my-account .my-account-wrapper .content .dashboard p {
+  margin: 0;
+  font-size: 16px;
+  font-family: 'Barlow-m';
+}
+.my-account .my-account-wrapper .content .dashboard p a {
+  color: #1c2ec9;
+  text-decoration: none;
+}
+.my-account .my-account-wrapper .content .dashboard p + p {
+  margin-top: 20px;
+}
+.my-account .my-account-wrapper .content .account-detail {
+  max-width: 700px;
+}
+.my-account .my-account-wrapper .content .account-detail label {
+  font-size: 16px;
+  letter-spacing: 0.22px;
+  padding-bottom: 12px;
+}
+.my-account .my-account-wrapper .content .account-detail input {
+  height: 50px;
+  border-radius: 2px;
+  border: solid 0.5px #d7d7d7;
+  padding-left: 12px;
+  -webkit-transition: 0.3s all ease;
+  transition: 0.3s all ease;
+  font-size: 16px;
+  color: #ababab;
+}
+.my-account .my-account-wrapper .content .account-detail input::placeholder {
+  color: #ababab;
+}
+.my-account .my-account-wrapper .content .account-detail input:focus {
+  outline: none;
+  box-shadow: 1px 2px 11px 3px rgba(0, 0, 0, 0.1);
+  border-color: #ffffff;
+}
+.my-account .my-account-wrapper .content .account-detail p {
+  margin: 0;
+}
+.my-account .my-account-wrapper .content .account-detail .f-l-wrapper,
+.my-account .my-account-wrapper .content .account-detail .p-e-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.my-account .my-account-wrapper .content .account-detail .f-l-wrapper .form-first,
+.my-account .my-account-wrapper .content .account-detail .p-e-wrapper .form-first,
+.my-account .my-account-wrapper .content .account-detail .f-l-wrapper .form-phone,
+.my-account .my-account-wrapper .content .account-detail .p-e-wrapper .form-phone {
+  width: 48%;
+  margin-right: 20px;
+}
+.my-account .my-account-wrapper .content .account-detail .f-l-wrapper .form-last,
+.my-account .my-account-wrapper .content .account-detail .p-e-wrapper .form-last,
+.my-account .my-account-wrapper .content .account-detail .f-l-wrapper .form-email,
+.my-account .my-account-wrapper .content .account-detail .p-e-wrapper .form-email {
+  width: 48%;
+}
+.my-account .my-account-wrapper .content .account-detail .form-company {
+  margin-bottom: 20px;
+}
+.my-account .my-account-wrapper .content .account-detail .p-e-wrapper {
+  margin-bottom: 40px;
+}
+.my-account .my-account-wrapper .content .account-detail .form-street > input {
+  margin-bottom: 20px;
+}
+.my-account .my-account-wrapper .content .account-detail .form-town,
+.my-account .my-account-wrapper .content .account-detail .form-country {
+  margin-bottom: 20px;
 }

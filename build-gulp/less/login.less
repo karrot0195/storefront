@@ -1,5 +1,6 @@
 /*
     1. Login
+    2. My Account
 */
 
 /************************/
@@ -17,7 +18,7 @@
         color:  #2a2a2a;
         .title{
             font-size: 19px;
-            font-weight: 500;
+            font-family: 'Barlow-m';
             letter-spacing: 0.28px;
             margin-bottom: 30px;
         }
@@ -52,6 +53,7 @@
                 position: relative;
                 border-radius: 2px;
                 margin-bottom: 25px;
+                cursor: pointer;
                 i{
                     position: absolute;
                     top: 50%;
@@ -124,7 +126,138 @@
                 letter-spacing: 0.22px;
                 color: #313131;
                 font-size: 16px;
+                cursor: pointer;
               }
+        }
+    }
+}
+
+/************************/
+/*      My Account      */
+/************************/
+.my-account{
+    .my-account-wrapper{
+        color: #2a2a2a;
+        padding: 100px;
+        .title{
+            letter-spacing: 0.28px;
+            font-family: 'Barlow-m';
+            font-size: 19px;
+            margin-bottom: 40px;
+        }
+        .content-wrapper{
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            .sidebar{
+                width: 20%;
+            }
+            .content{
+                width: 80%;
+            }
+        }
+        .sidebar__tab{
+            margin-bottom: 30px;
+            font-size: 16px;
+            font-family: 'Barlow-m';
+            color: #898989;
+            cursor: pointer;
+        }
+        .sidebar__tab.current{
+            color: #2a2a2a;
+        }
+        .content{
+            .tab-content-mc{
+                display: none;
+            }
+            .tab-content-mc.current{
+                display: inherit;
+            }
+            .dashboard{
+                display: none;
+                p{
+                    margin: 0;
+                    font-size: 16px;
+                    font-family: 'Barlow-m';
+                    a{
+                        color: #1c2ec9;
+                        text-decoration: none;
+                    }
+                }
+                p + p{
+                    margin-top: 20px;
+                }
+            }
+
+            .account-detail{
+                max-width: 700px;
+                label{
+                    font-size: 16px;
+                    letter-spacing: 0.22px;
+                    padding-bottom: 12px;
+                }
+                input{
+                    height: 50px;
+                    border-radius: 2px;
+                    border: solid 0.5px #d7d7d7;
+                    padding-left: 12px;
+                    -webkit-transition: 0.3s all ease;
+                    transition: 0.3s all ease;
+                    font-size: 16px;
+                    color: #ababab;
+                    &::placeholder{
+                        color: #ababab;
+                    }
+                    &:focus{
+                        outline: none;
+                        box-shadow: 1px 2px 11px 3px rgba(0, 0, 0, 0.1);
+                        border-color: #ffffff;
+                    }
+                }
+                p{
+                    margin: 0;
+                }
+                .f-l-wrapper,
+                .p-e-wrapper{
+                    display: -webkit-box;
+                    display: -ms-flexbox;
+                    display: flex;
+                    -webkit-box-pack: justify;
+                    -ms-flex-pack: justify;
+                        justify-content: space-between;
+                    margin-bottom: 20px;
+                    .form-first,
+                    .form-phone{
+                        width: 48%;
+                        margin-right: 20px;
+                    }
+                    .form-last,
+                    .form-email{
+                        width: 48%;
+                     
+                    }
+                }
+                .form-company{
+                    margin-bottom: 20px;
+                }
+                .p-e-wrapper{
+                    margin-bottom: 40px;
+                }
+                .form-street{
+                    > input{
+                      margin-bottom: 20px;  
+                    }
+                }
+                .form-town,
+                .form-country{
+                    margin-bottom: 20px;
+                }
+            }
+
+
+
+
+
         }
     }
 }
