@@ -1150,7 +1150,7 @@
       color: #222222;
     }
   }
-  #comments{
+  #reviews #comments{
     clear: both;
     padding-top: 50px;
     .contributions-filter{
@@ -1172,6 +1172,14 @@
           -webkit-box-direction: reverse;
               -ms-flex-direction: column-reverse;
                   flex-direction: column-reverse;
+        }
+        .meta{
+          .woocommerce-review__author{
+            display: none;
+          }
+        }
+        .contribution-actions{
+          display: none;
         }
       }
     }

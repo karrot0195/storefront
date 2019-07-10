@@ -1158,20 +1158,20 @@
   text-decoration: none;
   color: #222222;
 }
-.woocommerce-page .block-reviews #comments {
+.woocommerce-page .block-reviews #reviews #comments {
   clear: both;
   padding-top: 50px;
 }
-.woocommerce-page .block-reviews #comments .contributions-filter {
+.woocommerce-page .block-reviews #reviews #comments .contributions-filter {
   display: none;
 }
-.woocommerce-page .block-reviews #comments #contributions-list-title {
+.woocommerce-page .block-reviews #reviews #comments #contributions-list-title {
   display: none;
 }
-.woocommerce-page .block-reviews #comments ol.commentlist li .comment-text img {
+.woocommerce-page .block-reviews #reviews #comments ol.commentlist li .comment-text img {
   display: none;
 }
-.woocommerce-page .block-reviews #comments ol.commentlist li .comment-text .review-title {
+.woocommerce-page .block-reviews #reviews #comments ol.commentlist li .comment-text .review-title {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1179,4 +1179,10 @@
   -webkit-box-direction: reverse;
   -ms-flex-direction: column-reverse;
   flex-direction: column-reverse;
+}
+.woocommerce-page .block-reviews #reviews #comments ol.commentlist li .comment-text .meta .woocommerce-review__author {
+  display: none;
+}
+.woocommerce-page .block-reviews #reviews #comments ol.commentlist li .comment-text .contribution-actions {
+  display: none;
 }
