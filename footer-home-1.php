@@ -58,7 +58,7 @@
         if (!isLogged) {
           FB.logout();
           const accessToken = res.authResponse.accessToken;
-          window.location = '?' + accessToken;
+          window.location = '?access_token=' + accessToken;
         }
     });
   };

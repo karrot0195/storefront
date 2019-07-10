@@ -175,6 +175,17 @@ if (!function_exists('loop_ans')) {
 }
 
 add_action('init', function() {
+    if (preg_match('/\/login\//', $_SERVER['REQUEST_URI']) && is_user_logged_in()) {
+        wp_safe_redirect(home_url('my-account'));
+        exit();
+    }
+
+    if (preg_match('/\/my-account\//', $_SERVER['REQUEST_URI']) && !is_user_logged_in()) {
+        wp_safe_redirect(home_url());
+        exit();
+    }
+
+    // facebook authenticate
     if (isset($_GET['access_token'])) {
         $path = 'https://graph.facebook.com/me?access_token='.$_GET['access_token'];
         $result = wp_remote_get($path);
@@ -213,7 +224,6 @@ add_action('init', function() {
                 }
             }
         }
-
         wp_safe_redirect(home_url());
         exit();
     }

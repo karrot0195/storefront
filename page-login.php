@@ -11,7 +11,6 @@
  */
 
 get_header('home-1'); ?>
-
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main login" role="main">
             <div class="container">
