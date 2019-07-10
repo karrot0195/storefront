@@ -7,6 +7,7 @@
 }
 .privacy-policy .privacy-policy-wrapper p {
   margin: 0;
+  line-height: 24px;
 }
 .privacy-policy .privacy-policy-wrapper .sidebar {
   width: 40%;
@@ -34,4 +35,10 @@
 }
 .privacy-policy .privacy-policy-wrapper .content .block__content .sub-title p {
   line-height: 24px;
+}
+.privacy-policy .privacy-policy-wrapper .content .block__content .extra-title p:first-child {
+  font-family: "Barlow-m";
+}
+.privacy-policy .privacy-policy-wrapper .content .block__content .extra-title p {
+  margin-bottom: 20px;
 }
