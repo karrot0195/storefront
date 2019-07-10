@@ -1105,3 +1105,29 @@
     transform: scaleY(1);
   }
 }
+.block-reviews {
+  position: relative;
+  z-index: 1;
+}
+.block-reviews::before {
+  content: '';
+  position: absolute;
+  width: 2000%;
+  height: 100%;
+  top: 0;
+  z-index: -1;
+  left: -500px;
+  background-color: #ffffff;
+}
+.block-reviews h2.contributions-title {
+  display: none;
+}
+.block-reviews .product-rating-summary h3 {
+  display: none;
+}
+.block-reviews .contribution-form-wrapper.active {
+  display: none !important;
+}
+.woocommerce-page .block-reviews #reviews .product-rating .product-rating-details {
+  display: none;
+}
