@@ -1119,6 +1119,35 @@
     display: none !important;
   }
 }
-.woocommerce-page .block-reviews #reviews .product-rating .product-rating-details{
-  display: none;
-}
+.woocommerce-page .block-reviews{
+  #reviews .product-rating .product-rating-details{
+    display: none;
+  }
+  #reviews .product-rating, .woocommerce-page #reviews .product-rating{
+    display: block;
+    float: left;
+    width: auto;
+    .product-rating-summary{
+      p{
+        font-size: 22px;
+        margin: 0;
+      }
+    }
+  }
+  h3.contributions-form-title{
+    display: none;
+  }
+  .contribution-type-selector{
+    display: block;
+    float: right;
+    width: auto;
+    a{
+      border-bottom-color: #ffffff;
+      padding: 0;
+      text-decoration: none;
+    }
+  }
+  #comments{
+    clear: both;
+  }
+} 
