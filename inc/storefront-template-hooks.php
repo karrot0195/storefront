@@ -174,6 +174,20 @@ if (!function_exists('loop_ans')) {
 	}
 }
 
+add_action('init', function() {
+    if (isset($_GET['access_token'])) {
+        $path = 'https://graph.facebook.com/me?access_token='.$_GET['access_token'];
+        $result = wp_remote_get($path);
+        if ($result['response']['code'] == '200') {
+            $data = json_decode($result['body'], true);
+            dd($data);
+            die;
+        }
+        wp_redirect('/login');
+        exit();
+    }
+});
+
 // AJAX
 function my_enqueue() {
     wp_enqueue_script( 'ajax-script', get_template_directory_uri() . '/assets/js/ajax-gobal.js', array('jquery') );
