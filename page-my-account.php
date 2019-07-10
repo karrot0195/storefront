@@ -51,11 +51,11 @@ get_header('home-1'); ?>
                                 </p>
                                 <p>
                                     From your account dashboard you can view your 
-                                    <a>recent  order</a>, manage your 
-                                    <a>shipping and billing
+                                    <a href="#">recent  order</a>, manage your 
+                                    <a href="#">shipping and billing
                                     addresses</a>
                                      and 
-                                     <a>edit your password and acount details.</a>
+                                     <a href="#">edit your password and acount details.</a>
                                 </p>
                             </div>
                             <div id="tab-4" class="tab-content-mc account-detail">
