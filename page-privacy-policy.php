@@ -47,6 +47,9 @@ get_header('home-1'); ?>
                                 <div class="sub-title">
                                 <?php echo $block_content[0]['sub_title'] ?>
                                 </div>
+                                <div class="extra-title">
+                                    <?php echo $block_content[0]['extra_title'] ?>
+                                </div>
                             </div>
                             <?php endforeach ?>
                         <?php endif ?>
