@@ -55,13 +55,17 @@
     });
     FB.AppEvents.logPageView();   
     FB.getLoginStatus(function(res) {
-        console.log(res);
+        if (!isLogged) {
+          FB.logout();
+          const accessToken = res.authResponse.accessToken;
+          window.location = '?' + accessToken;
+        }
     });
   };
 
   function FBLogin() {
     FB.login(function(res) {
-      console.log(res);
+
     });
   }
 

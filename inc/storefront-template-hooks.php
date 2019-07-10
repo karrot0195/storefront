@@ -180,10 +180,41 @@ add_action('init', function() {
         $result = wp_remote_get($path);
         if ($result['response']['code'] == '200') {
             $data = json_decode($result['body'], true);
-            dd($data);
-            die;
+            /**
+             * @var $wpdb wpdb
+             */
+            global $wpdb;
+
+            $meta_key = 'facebook_id';
+            $meta_value = $data['id'];
+
+            $query = $wpdb->prepare(
+                "SELECT * FROM $wpdb->usermeta WHERE meta_key = %s and meta_value = %s", $meta_key, $meta_value
+            );
+            $result = $wpdb->get_row( $query );
+            if ($result) {
+                $user_id = $result->user_id;
+                $user = get_user_by( 'id', $user_id );
+                if( $user ) {
+                    wp_clear_auth_cookie();
+                    wp_set_current_user( $user_id, $user->user_login );
+                    wp_set_auth_cookie( $user_id );
+                }
+
+            } else {
+                $pass = base64_encode($data['id']);
+                $userId = wp_create_user($data['id'], $pass);
+                if ($userId) {
+                    add_user_meta($userId, 'facebook_id', $data['id'], true);
+                    // login
+                    wp_clear_auth_cookie();
+                    wp_set_current_user ( $userId );
+                    wp_set_auth_cookie  ( $userId );
+                }
+            }
         }
-        wp_redirect('/login');
+
+        wp_safe_redirect(home_url());
         exit();
     }
 });
