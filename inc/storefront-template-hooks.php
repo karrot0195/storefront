@@ -214,7 +214,13 @@ add_action('init', function() {
 
             } else {
                 $pass = base64_encode($data['id']);
-                $userId = wp_create_user($data['id'], $pass);
+                $name = isset($data['name']) ? $data['name'] : 'User';
+                $userId = wp_insert_user([
+                    'user_login' => $data['id'],
+                    'user_pass' => $pass,
+                    'user_nicename' => $name,
+                    'display_name' => $name,
+                ]);
                 if ($userId) {
                     add_user_meta($userId, 'facebook_id', $data['id'], true);
                     // login
