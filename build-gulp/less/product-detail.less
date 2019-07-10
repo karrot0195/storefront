@@ -1097,6 +1097,7 @@
 .block-reviews{
   position: relative;
   z-index: 1;
+  padding: 60px 200px 60px 30px;
   &::before{
     content: '';
     position: absolute;
@@ -1131,6 +1132,7 @@
       p{
         font-size: 22px;
         margin: 0;
+        color: #222222;
       }
     }
   }
@@ -1142,12 +1144,36 @@
     float: right;
     width: auto;
     a{
-      border-bottom-color: #ffffff;
+      border-bottom-color: #ffffff !important;
       padding: 0;
       text-decoration: none;
+      color: #222222;
     }
   }
   #comments{
     clear: both;
+    padding-top: 50px;
+    .contributions-filter{
+      display: none;
+    }
+    #contributions-list-title{
+      display: none;
+    }
+    ol.commentlist li{
+      .comment-text{
+        img{
+          display: none;
+        }
+        .review-title{
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: reverse;
+              -ms-flex-direction: column-reverse;
+                  flex-direction: column-reverse;
+        }
+      }
+    }
   }
 } 
