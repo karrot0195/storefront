@@ -184,55 +184,6 @@ add_action('init', function() {
         wp_safe_redirect(home_url());
         exit();
     }
-
-    // facebook authenticate
-    if (isset($_GET['access_token'])) {
-        $path = 'https://graph.facebook.com/me?access_token='.$_GET['access_token'];
-        $result = wp_remote_get($path);
-        if ($result['response']['code'] == '200') {
-            $data = json_decode($result['body'], true);
-            /**
-             * @var $wpdb wpdb
-             */
-            global $wpdb;
-
-            $meta_key = 'facebook_id';
-            $meta_value = $data['id'];
-
-            $query = $wpdb->prepare(
-                "SELECT * FROM $wpdb->usermeta WHERE meta_key = %s and meta_value = %s", $meta_key, $meta_value
-            );
-            $result = $wpdb->get_row( $query );
-            if ($result) {
-                $user_id = $result->user_id;
-                $user = get_user_by( 'id', $user_id );
-                if( $user ) {
-                    wp_clear_auth_cookie();
-                    wp_set_current_user( $user_id, $user->user_login );
-                    wp_set_auth_cookie( $user_id );
-                }
-
-            } else {
-                $pass = base64_encode($data['id']);
-                $name = isset($data['name']) ? $data['name'] : 'User';
-                $userId = wp_insert_user([
-                    'user_login' => $data['id'],
-                    'user_pass' => $pass,
-                    'user_nicename' => $name,
-                    'display_name' => $name,
-                ]);
-                if ($userId) {
-                    add_user_meta($userId, 'facebook_id', $data['id'], true);
-                    // login
-                    wp_clear_auth_cookie();
-                    wp_set_current_user ( $userId );
-                    wp_set_auth_cookie  ( $userId );
-                }
-            }
-        }
-        wp_safe_redirect(home_url());
-        exit();
-    }
 });
 
 // AJAX

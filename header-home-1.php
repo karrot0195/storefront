@@ -21,7 +21,6 @@
     <script>
         const home_url = "<?= home_url() ?>";
         new WOW().init();
-        const isLogged = "<?= is_user_logged_in() ?>".length > 0;
     </script>
     <?php
     ?>

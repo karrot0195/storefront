@@ -16,10 +16,10 @@ get_header('home-1'); ?>
             <div class="container">
                 <div class="login-wrapper">
                     <div class="login">
-                        <form class="login-form">
+                        <form class="login-form" onsubmit="return false;">
                             <p class="title">Login</p>
                             
-                            <button class="btn-fb" onclick="FBLogin()">
+                            <button class="btn-fb" onClick="loginFacebook()">
                                 <i class="fab fa-facebook-f"></i>
                                 <span>Sign in via Facebook</span>
                             </button>
@@ -53,6 +53,10 @@ get_header('home-1'); ?>
             </div>
 		</main><!-- #main -->
 	</div><!-- #primary -->
-
+<script type="text/javascript">
+    function loginFacebook() {
+        window.location = "<?= home_url('social') ?>";
+    }
+</script>
 <?php
 get_footer('home-1');
