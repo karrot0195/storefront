@@ -11,7 +11,6 @@
  */
 
 get_header('home-1'); ?>
-
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main login" role="main">
             <div class="container">
@@ -19,10 +18,12 @@ get_header('home-1'); ?>
                     <div class="login">
                         <form class="login-form">
                             <p class="title">Login</p>
-                            <button class="btn-fb">
+                            
+                            <button class="btn-fb" onclick="FBLogin()">
                                 <i class="fab fa-facebook-f"></i>
                                 <span>Sign in via Facebook</span>
                             </button>
+
                             <div class="login-type">
                                 <div class="line">
                                 </div>
