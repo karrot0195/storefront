@@ -78,7 +78,7 @@ if (!empty($_SESSION['fb_access_token'])) {
 	        }
 
 	    } else {
-	        $pass = 'derma' . $facebookId;
+	        $pass = md5('derma' . $facebookId);
 
 	        $userId = wp_insert_user([
 	            'user_login' => $facebookId,
