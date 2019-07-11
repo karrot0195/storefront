@@ -53,7 +53,6 @@ if (!empty($_SESSION['fb_access_token'])) {
 	$accessToken = $_SESSION['fb_access_token'];
 	$result = $fb->get('/me?fields=id,name,email', $accessToken);
 	$user = $result->getGraphUser();
-
 	if (!empty($user)) {
 		$facebookId = $user->getId();
 		$facebookName = $user->getName();
@@ -86,14 +85,18 @@ if (!empty($_SESSION['fb_access_token'])) {
 	            'user_pass' => $pass,
 	            'user_nicename' => $facebookName,
 	            'display_name' => $facebookName,
-	            'email' => $email,
+	            'user_email' => $email,
 	        ]);
-	        if ($userId) {
+	        if (!is_wp_error($userId)) {
 	            add_user_meta($userId, 'facebook_id', $facebookId, true);
 	            // login
 	            wp_clear_auth_cookie();
 	            wp_set_current_user ( $userId );
 	            wp_set_auth_cookie  ( $userId );
+	        } else {
+	        	$message = $userId->get_error_message();
+				header('location: ' . home_url('login') . '?error='.$message);
+				exit();	        	
 	        }
 	    }
 
