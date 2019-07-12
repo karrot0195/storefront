@@ -4,6 +4,15 @@
   $('.tabs-stage section:first').show();
   $('.tabs-nav li:first').addClass('tab-active');
 
+  // JS MENU MOBILE
+  $('.menu-shop').click(function(){
+    $(this).find('i').toggleClass('i-click');
+    $(this).next('ul').slideToggle(300);
+  });
+  $('.menu-info').click(function(){
+    $(this).find('i').toggleClass('i-click');
+    $(this).next('ul').slideToggle(300);
+  });
   
   // Control 1 product
   var count_product = $('ul.products li').length;

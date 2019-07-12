@@ -16,7 +16,9 @@ class PageWidget extends WP_Widget {
         if( !empty($post_ids) ){
             ?>
            <div class="block-widget-page">
+             <div class="menu-info"> Info  <span><i class="fa fa-chevron-up"></i></span> </div>
                <ul>
+                
                    <?php foreach ( $post_ids as $id ) { 
                     $post = get_post($id);
                     ?>

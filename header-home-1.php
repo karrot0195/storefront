@@ -54,17 +54,20 @@ if (is_page_template('templates/template-home1.php')) {
 
                 <div class="menu-mobile">
                     <div class="wrapper-menu">
+                   
                         <?php
                             do_action( $action );
                         ?>
                         <?php
                         storefront_mobile_footer_widgets();
                         ?>
-                        <a class="my-account" href="#"><span><img src="<?php bloginfo('template_url'); ?>/assets/images/icon/user.png"  alt="#"/></span><span>My Account</span></a>
-                        <a class="my-account my-wishlist" href="#"><span class="block-like"></span><span>My wishlist</span></a>
-                        <!-- <div class="block footer-widget-3">
+                        <a class="my-account" href="#"><span><span>My Account</span><img src="<?php bloginfo('template_url'); ?>/assets/images/icon/user.png"  alt="#"/></span></a>
+                        <a class="my-account my-wishlist" href="#"><span>My wishlist</span><span class="block-like"></span></a>
+                        <div class="ugd">shop in <b>SGD</b><a href="#">change</a></div>
+                        <div class="block footer-widget-3">
                             <div id="custom_html-3" class="widget_text widget widget_custom_html">
                                 <div class="textwidget custom-html-widget">
+                                    <div class="get-social">get social</div>
                                     <div class="block-social-footer">
                                         <ul>
                                             <li>
@@ -78,8 +81,12 @@ if (is_page_template('templates/template-home1.php')) {
                                 </div>
                             </div>
                         </div>
-                        <div class="ugd">You are in <b>SGD<b></div> -->
-                        <div class="ugd">You are in <b>SGD</b></div>
+                        <div class="new-letter-mb">
+                            <?php
+                            storefront_mobile_footer_widgets();
+                            ?>
+                        </div>
+                        
                     </div>
                     <div class="hamburger-menu close">
                         <div class="bar animate"></div>

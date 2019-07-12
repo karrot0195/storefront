@@ -734,6 +734,7 @@ if (!function_exists('storefront_slider_header')) {
             $gallery = get_field('gallery', $pages[0]->ID);
             ?>
             <div class="block-menu">
+				<div class="menu-shop">Shop <span><i class="fa fa-chevron-up"></i></span></div>
                 <ul>
                     <?php if (!empty($gallery)): foreach ($gallery as $idx => $item) : ?>
                         <li><a href="<?= home_url() . '?slider=' .$idx ?>"><?= $item['title'] ?></a></li>
