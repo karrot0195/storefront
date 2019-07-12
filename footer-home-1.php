@@ -45,38 +45,5 @@
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
-<script>
-  window.fbAsyncInit = function() {
-    FB.init({
-      appId      : '2465882220135151',
-      cookie     : true,
-      xfbml      : true,
-      version    : 'v3.3'
-    });
-    FB.AppEvents.logPageView();   
-    FB.getLoginStatus(function(res) {
-        if (!isLogged) {
-          FB.logout();
-          const accessToken = res.authResponse.accessToken;
-          window.location = '?access_token=' + accessToken;
-        }
-    });
-  };
-
-  function FBLogin() {
-    FB.login(function(res) {
-
-    });
-  }
-
-  (function(d, s, id){
-     var js, fjs = d.getElementsByTagName(s)[0];
-     if (d.getElementById(id)) {return;}
-     js = d.createElement(s); js.id = id;
-     js.src = "https://connect.facebook.net/en_US/sdk.js";
-     fjs.parentNode.insertBefore(js, fjs);
-   }(document, 'script', 'facebook-jssdk'));
-</script>
-
 </body>
 </html>
