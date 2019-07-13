@@ -28,7 +28,7 @@ body.disable {
   position: absolute;
   opacity: 0;
   float: right;
-  width: 300px;
+  width: 550px;
   height: 100%;
   background-color: white;
   padding: 0px 25px;
@@ -36,7 +36,7 @@ body.disable {
   transition: transform 1s ease;
 }
 .wrap-cart-side .block-cart-side .block-info {
-  border-bottom: 1px solid #636363;
+  border-bottom: 1px solid #eaeaea;
   padding: 30px 0;
   display: flex;
   justify-content: space-between;
@@ -48,29 +48,30 @@ body.disable {
   border-radius: 50%;
   color: #ffffff;
   font-size: 13px;
-  padding: 5px 10px;
+  padding: 6px 10px;
   display: inline;
   margin-right: 10px;
 }
 .wrap-cart-side .block-cart-side .block-info .info .desc {
   font-family: Barlow;
   display: inline;
+  font-size: 18px;
 }
 .wrap-cart-side .block-cart-side .block-info .close {
-  background-color: #d5d5d5;
-  color: #ffffff;
+  color: #565656;
   padding: 5px 10px;
   border-radius: 50%;
-  font-size: 13px;
+  font-size: 22px;
+  cursor: pointer;
 }
 .wrap-cart-side .block-cart-side .block-info .close:hover {
-  background-color: #a7a7a7;
+  background-color: #222222;
 }
 .wrap-cart-side .block-cart-side .block-item {
   display: flex;
   justify-content: flex-start;
-  padding: 30px 0;
-  border-bottom: 1px solid #636363;
+  padding: 50px 0;
+  border-bottom: 1px solid #eaeaea;
 }
 .wrap-cart-side .block-cart-side .block-item .thumbnail-item {
   margin-right: 10px;
@@ -80,10 +81,20 @@ body.disable {
 }
 .wrap-cart-side .block-cart-side .block-item .info-item {
   font-family: Barlow;
-  font-size: 13px;
+  font-size: 16px;
   text-align: left;
   color: #2a2a2a;
 }
+.wrap-cart-side .block-cart-side .block-item .info-item .item-name {
+  margin-bottom: 25px;
+}
 .wrap-cart-side .block-cart-side .block-item .price-item {
   margin-left: auto;
+}
+.wrap-cart-side .block-cart-side .block-item .price-item .woocommerce-Price-amount.amount {
+  color: #2a2a2a;
+  font-family: "Barlow-m";
+}
+.wrap-cart-side .block-cart-side .block-item .price-item .woocommerce-Price-amount.amount span {
+  margin-right: 5px;
 }
