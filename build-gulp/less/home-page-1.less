@@ -389,7 +389,7 @@ body {
             position: relative;
             width: 25px;
             height: 25px;
-            background-color: #8c8c8c;
+            background-color: #333333;
             border-radius: 50%;
             text-align: center;
             display: inline-table;
@@ -671,9 +671,11 @@ body {
     .modal-title-sp{
       display: block;
       padding: 10px 20px 20px;
-      font-size: 24px;
-      line-height: 1.25;
-      color: #252525;
+      font-size: 18px;
+      line-height: 1.22;
+      color: #333333;
+      font-family: "Barlow-m";
+      letter-spacing: 0.36px;
     }
     .button-close-sp{
       display: block;
@@ -690,17 +692,24 @@ body {
       margin: 20px 20px 40px;
       button{
         width: 100%;
-        padding: 21px 23px;
+        padding: 14px 23px;
         border: none;
         font-size: 14px;
         color: #ffffff;
-        background: #333;
+        background: #142d73;
         cursor: pointer;
+        border-radius: 22px;
+        text-transform: uppercase;
+        font-family: "Barlow-m;"
       }
     }
   }
   .home-page-1 .modal-filter .block-content .content .title{
     padding-bottom: 0;
+    font-size: 12px;
+    color: #706f6f;
+    line-height: 1.83;
+    letter-spacing: 0.24px;
   }
   .home-page-1 .modal-filter .block-content .content.content-1 ul{
     column-count: 1;
@@ -723,8 +732,8 @@ body {
     position: relative;
     display: block;
     h6{
-      color: #252525;
-      font-size: 18px;
+      color: #333333;
+      font-size: 16px;
       height: 25px;
       margin: 0;
       margin-right: 30px;
@@ -803,9 +812,6 @@ body {
     display: flex;
     align-items: center;
     position: relative;
-    @media screen and (max-width: 767px) {
-      display: block;
-    }
 }
 .info-page {
     background-color: #CECECE;
@@ -863,13 +869,17 @@ body {
           }
         }
       }
+      li:first-child{
+        width: auto;
+        padding: 0 10px;
+        margin-left: 0;
+      }
     }
   }
   .info-page-right {
     text-align: right;
     @media screen and (max-width: 767px) {
       text-align: left;
-      margin-top: 15px;
     }
     button {
       background-color: transparent;
@@ -928,7 +938,7 @@ body {
     text-align: center;
     color: #020202;
     @media screen and (max-width: 767px) {
-      font-size: 14px;
+      font-size: 15px;
     }
   }
   ul.products li.product {
@@ -1138,13 +1148,6 @@ body {
     @media screen and (max-width: 992px) {
       width: auto;
       margin-bottom: 40px;
-    }
-    @media screen and (max-width: 480px) {
-      white-space: nowrap;
-      overflow-x: scroll;
-      overflow-y: visible;
-      margin-bottom: 30px;
-      padding-left: 60px;
     }
     &:before {
      content: '';
@@ -1952,7 +1955,7 @@ figure.woocommerce-product-gallery__wrapper{
       top: 0;
       left: -100%;
       max-width: 100%;
-      width: 320px;
+      width: 250px;
       height: 100vh;
       z-index: 999;
       padding-top: 0px;
@@ -2146,7 +2149,7 @@ figure.woocommerce-product-gallery__wrapper{
   .hamburger-menu {
     position: absolute;
     right: auto;
-    top: 45%;
+    top: 50%;
     padding: 10px 0;
     cursor: pointer;
     z-index: 101;
@@ -2168,7 +2171,7 @@ figure.woocommerce-product-gallery__wrapper{
       background-color: #ffffff;
       padding: 21px 13px;
       @media screen and (max-width: 767px) {
-        left: 320px;
+        left: 250px;
       }
       @media screen and (max-width: 374px) {
         left: 266px;
@@ -2312,11 +2315,15 @@ figure.woocommerce-product-gallery__wrapper{
   }
   .footer-widgets.row-1.fix{
     display: block;
-    .footer-widget-1,
+    .footer-widget-4,
     .footer-widget-2,
     .footer-widget-3{
       display: none;
     }
+  }
+
+  .menu-mobile .footer-widgets.row-1.fix{
+    display: none;
   }
   .footer-widgets.row-2.fix{
     ul{
@@ -2833,5 +2840,20 @@ table th {
     .footer-widgets.row-2.fix ul li:last-child{
       padding-bottom: 0;
     }
+  }
+
+}
+@media screen and (max-width: 767px){
+  .tabs-nav{
+    max-width: 288px;
+  }
+  .tabs-nav a{
+    font-size: 15px;
+  }
+  .tabs-nav li{
+    margin-right: 20px;
+  }
+  .info-page .info-page-right button{
+    font-size: 16px;
   }
 }

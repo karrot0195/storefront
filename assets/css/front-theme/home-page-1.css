@@ -344,7 +344,7 @@ body.page-template-template-home1 {
   position: relative;
   width: 25px;
   height: 25px;
-  background-color: #8c8c8c;
+  background-color: #333333;
   border-radius: 50%;
   text-align: center;
   display: inline-table;
@@ -601,9 +601,11 @@ body.page-template-template-home1 {
   .home-page-1 .modal-title-sp {
     display: block;
     padding: 10px 20px 20px;
-    font-size: 24px;
-    line-height: 1.25;
-    color: #252525;
+    font-size: 18px;
+    line-height: 1.22;
+    color: #333333;
+    font-family: "Barlow-m";
+    letter-spacing: 0.36px;
   }
   .home-page-1 .button-close-sp {
     display: block;
@@ -621,15 +623,22 @@ body.page-template-template-home1 {
   }
   .home-page-1 .btn-done-sp button {
     width: 100%;
-    padding: 21px 23px;
+    padding: 14px 23px;
     border: none;
     font-size: 14px;
     color: #ffffff;
-    background: #333;
+    background: #142d73;
     cursor: pointer;
+    border-radius: 22px;
+    text-transform: uppercase;
+    font-family: "Barlow-m;";
   }
   .home-page-1 .modal-filter .block-content .content .title {
     padding-bottom: 0;
+    font-size: 12px;
+    color: #706f6f;
+    line-height: 1.83;
+    letter-spacing: 0.24px;
   }
   .home-page-1 .modal-filter .block-content .content.content-1 ul {
     column-count: 1;
@@ -653,8 +662,8 @@ body.page-template-template-home1 {
     display: block;
   }
   .content .title-wrapper h6 {
-    color: #252525;
-    font-size: 18px;
+    color: #333333;
+    font-size: 16px;
     height: 25px;
     margin: 0;
     margin-right: 30px;
@@ -734,11 +743,6 @@ body.page-template-template-home1 {
   align-items: center;
   position: relative;
 }
-@media screen and (max-width: 767px) {
-  .info-page-child {
-    display: block;
-  }
-}
 .info-page {
   background-color: #CECECE;
   padding: 18px 0;
@@ -804,13 +808,17 @@ body.page-template-template-home1 {
 .info-page .info-page-left ul li.is-selected a {
   color: #ffffff;
 }
+.info-page .info-page-left ul li:first-child {
+  width: auto;
+  padding: 0 10px;
+  margin-left: 0;
+}
 .info-page .info-page-right {
   text-align: right;
 }
 @media screen and (max-width: 767px) {
   .info-page .info-page-right {
     text-align: left;
-    margin-top: 15px;
   }
 }
 .info-page .info-page-right button {
@@ -871,7 +879,7 @@ body.page-template-template-home1 {
 }
 @media screen and (max-width: 767px) {
   .home-page-1 ul.products li.product .price {
-    font-size: 14px;
+    font-size: 15px;
   }
 }
 @media screen and (max-width: 767px) {
@@ -1070,15 +1078,6 @@ button:hover .fa-play:before {
   .tabs-nav {
     width: auto;
     margin-bottom: 40px;
-  }
-}
-@media screen and (max-width: 480px) {
-  .tabs-nav {
-    white-space: nowrap;
-    overflow-x: scroll;
-    overflow-y: visible;
-    margin-bottom: 30px;
-    padding-left: 60px;
   }
 }
 .tabs-nav:before {
@@ -1843,7 +1842,7 @@ figure.woocommerce-product-gallery__wrapper {
     top: 0;
     left: -100%;
     max-width: 100%;
-    width: 320px;
+    width: 250px;
     height: 100vh;
     z-index: 999;
     padding-top: 0px;
@@ -2036,7 +2035,7 @@ figure.woocommerce-product-gallery__wrapper {
 .home-page-1 .hamburger-menu {
   position: absolute;
   right: auto;
-  top: 45%;
+  top: 50%;
   padding: 10px 0;
   cursor: pointer;
   z-index: 101;
@@ -2061,7 +2060,7 @@ figure.woocommerce-product-gallery__wrapper {
 }
 @media screen and (max-width: 767px) {
   .home-page-1 .hamburger-menu.close {
-    left: 320px;
+    left: 250px;
   }
 }
 @media screen and (max-width: 374px) {
@@ -2189,9 +2188,12 @@ figure.woocommerce-product-gallery__wrapper {
   .footer-widgets.row-1.fix {
     display: block;
   }
-  .footer-widgets.row-1.fix .footer-widget-1,
+  .footer-widgets.row-1.fix .footer-widget-4,
   .footer-widgets.row-1.fix .footer-widget-2,
   .footer-widgets.row-1.fix .footer-widget-3 {
+    display: none;
+  }
+  .menu-mobile .footer-widgets.row-1.fix {
     display: none;
   }
   .footer-widgets.row-2.fix ul {
@@ -2673,5 +2675,19 @@ table th {
   .home-page-1 .site-header .col-full .menu-mobile .block-menu ul li:last-child,
   .home-page-1 .site-header .col-full .menu-mobile .footer-widgets.row-2.fix ul li:last-child {
     padding-bottom: 0;
+  }
+}
+@media screen and (max-width: 767px) {
+  .tabs-nav {
+    max-width: 288px;
+  }
+  .tabs-nav a {
+    font-size: 15px;
+  }
+  .tabs-nav li {
+    margin-right: 20px;
+  }
+  .info-page .info-page-right button {
+    font-size: 16px;
   }
 }

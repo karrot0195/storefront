@@ -3,9 +3,8 @@
         <div class="wrapper-page">
             <div class="info-page-child">
                 <div class="info-page-left">
-                    <a href="#"><?= esc_html__('View Products', 'storefront') ?></a>
                     <ul class="list-filter js-list-filter">
-                        <li class="is-selected"><a href="javascript:void(0)" data-limit="-1">ALL</a></li>
+                        <li class="is-selected"><a href="javascript:void(0)" data-limit="-1">VIEW ALL</a></li>
                         <li><a href="javascript:void(0)" data-limit="8">8</a></li>
                         <li><a href="javascript:void(0)" data-limit="16">16</a></li>
                         <li><a href="javascript:void(0)" data-limit="24">24</a></li>
