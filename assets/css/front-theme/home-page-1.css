@@ -2866,8 +2866,8 @@ table th {
   }
 }
 .related .related-wrapper .image-related {
-  float: left
-      width: 60%;
+  float: left;
+  width: 60%;
 }
 @media screen and (max-width: 767px) {
   .related .related-wrapper .image-related {
