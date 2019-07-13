@@ -281,6 +281,10 @@ body .wrap-cart-side{
         }
     }
 } 
+.woocommerce-account .hentry .entry-content .woocommerce .woocommerce-MyAccount-navigation ul h6{
+    display: none;
+}
+
 /************************/
 /*      Contact Us      */
 /************************/
@@ -475,7 +479,10 @@ body .wrap-cart-side{
     /*-Dashboard-*/
     .entry-header h1{
         padding-left: 0;
-        margin-bottom: 25px;
+        margin: 30px 0;
+        font-size: 20px;
+        color: #2a2a2a;
+        font-weight: 500;
     }
     .woocommerce-account .hentry .entry-content .woocommerce{
         display: block;
@@ -488,6 +495,7 @@ body .wrap-cart-side{
     }
     .woocommerce-account .hentry .entry-content .woocommerce .woocommerce-MyAccount-navigation ul{
         padding-left: 0;
+        display: none;
     }
     .woocommerce-account .hentry .entry-content .woocommerce .woocommerce-MyAccount-content p{
         margin-bottom: 0;
@@ -515,4 +523,36 @@ body .wrap-cart-side{
     .woocommerce-account .hentry .entry-content .woocommerce .woocommerce-MyAccount-content .form-btn-save button{
         width: 100%;
     }
+    .woocommerce-account .hentry .entry-content .woocommerce .woocommerce-MyAccount-navigation{
+        background: #D8D8D8;
+        padding: 20px 0 0;
+        margin-bottom: 45px;
+    }
+    .woocommerce-account .hentry .entry-content .woocommerce .woocommerce-MyAccount-navigation h6{
+        font-size: 16px;
+        font-family: "Barlow";
+        color: #2a2a2a;
+        font-weight: normal;
+        margin: 0;
+        padding: 0 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: row-reverse;
+        padding-bottom: 20px;
+        i{
+            transition: 0.3s all ease;
+        }
+        i.tab-click{
+            transform: rotate(180deg);
+        }
+    }
+    .woocommerce-account .hentry .entry-content .woocommerce .woocommerce-MyAccount-navigation ul li.woocommerce-MyAccount-navigation-link.is-active{
+        display: none;
+    }
+    .woocommerce-account .hentry .entry-content .woocommerce .woocommerce-MyAccount-navigation ul li.woocommerce-MyAccount-navigation-link{
+        padding: 0 20px 20px;
+        margin: 0;
+    }
+
 }

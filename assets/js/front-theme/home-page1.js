@@ -23,7 +23,21 @@
 
 		$(this).addClass('tab-click');
 		$("#"+tab_id).addClass('current');
-	})
+  })
+  
+  // MY ACCOUNT MOBILE
+  $(document).ready(function(){
+    var title_tab = "<h6></h6>";
+    var test =`<i class="fas fa-chevron-down"></i>`;
+    $(".woocommerce-account .hentry .entry-content .woocommerce .woocommerce-MyAccount-navigation").prepend(title_tab);
+    var htmlString = $( '.woocommerce-account .hentry .entry-content .woocommerce .woocommerce-MyAccount-navigation ul li.woocommerce-MyAccount-navigation-link.is-active a' ).text();
+    $('h6').text( htmlString); 
+    $('h6').prepend(test);
+    $('.woocommerce-MyAccount-navigation h6').click(function(){
+      $('.woocommerce-MyAccount-navigation ul').slideToggle(300);
+      $(this).find('i').toggleClass('tab-click');
+    });
+  });
 
   // Control 1 product
   var count_product = $('ul.products li').length;
