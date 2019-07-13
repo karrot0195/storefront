@@ -147,122 +147,88 @@
 /************************/
 /*      My Account      */
 /************************/
-.my-account .my-account-wrapper {
-  color: #2a2a2a;
-  padding: 100px;
+body .wrap-cart-side {
+  display: none;
 }
-.my-account .my-account-wrapper .title {
-  letter-spacing: 0.28px;
-  font-family: 'Barlow-m';
-  font-size: 19px;
-  margin-bottom: 68px;
+.entry-header h1 {
+  margin: 0;
+  padding-left: 114px;
+  margin-bottom: 80px;
 }
-.my-account .my-account-wrapper .content-wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
+/*-Dashboard-*/
+.woocommerce-account .hentry .entry-content {
+  padding-right: 0.75rem;
+  padding-left: 0.75rem;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+@media screen and (min-width: 576px) {
+  .woocommerce-account .hentry .entry-content {
+    max-width: 540px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .woocommerce-account .hentry .entry-content {
+    max-width: 720px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .woocommerce-account .hentry .entry-content {
+    max-width: 960px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .woocommerce-account .hentry .entry-content {
+    max-width: 1200px;
+  }
+}
+@media screen and (min-width: 1360px) {
+  .woocommerce-account .hentry .entry-content {
+    max-width: 1400px;
+  }
+}
+.woocommerce-account .hentry .entry-contentp {
+  margin: 0;
+}
+.woocommerce-account .hentry .entry-content .woocommerce {
   display: flex;
 }
-.my-account .my-account-wrapper .content-wrapper .sidebar {
-  width: 20%;
+.woocommerce-account .hentry .entry-content .woocommerce .woocommerce-MyAccount-navigation {
+  float: none;
+  width: 30%;
+  margin-right: 0;
 }
-.my-account .my-account-wrapper .content-wrapper .content {
-  width: 80%;
+.woocommerce-account .hentry .entry-content .woocommerce .woocommerce-MyAccount-navigation ul {
+  border: none;
+  padding-left: 114px;
+  margin: 0;
 }
-.my-account .my-account-wrapper .sidebar__tab {
-  margin-bottom: 30px;
-  font-size: 16px;
-  font-family: 'Barlow-m';
+.woocommerce-account .hentry .entry-content .woocommerce .woocommerce-MyAccount-navigation ul li.woocommerce-MyAccount-navigation-link {
+  border: none;
+  margin-bottom: 70px;
+}
+.woocommerce-account .hentry .entry-content .woocommerce .woocommerce-MyAccount-navigation ul li.woocommerce-MyAccount-navigation-link a {
   color: #898989;
-  cursor: pointer;
+  font-family: "Barlow-m";
+  padding: 0;
 }
-.my-account .my-account-wrapper .sidebar__tab.current {
+.woocommerce-account .hentry .entry-content .woocommerce .woocommerce-MyAccount-navigation ul li.woocommerce-MyAccount-navigation-link.is-active a {
   color: #2a2a2a;
 }
-.my-account .my-account-wrapper .content .tab-content-mc {
-  display: none;
+.woocommerce-account .hentry .entry-content .woocommerce .woocommerce-MyAccount-content {
+  float: none;
+  width: 70%;
+  color: #2a2a2a;
 }
-.my-account .my-account-wrapper .content .tab-content-mc.current {
-  display: inherit;
+.woocommerce-account .hentry .entry-content .woocommerce .woocommerce-MyAccount-content p {
+  margin: 0 0 45px;
 }
-.my-account .my-account-wrapper .content .dashboard {
-  display: none;
-}
-.my-account .my-account-wrapper .content .dashboard p {
-  margin: 0;
-  font-size: 16px;
-  font-family: 'Barlow-m';
-}
-.my-account .my-account-wrapper .content .dashboard p a {
+.woocommerce-account .hentry .entry-content .woocommerce .woocommerce-MyAccount-content a {
   color: #1c2ec9;
-  text-decoration: none;
 }
-.my-account .my-account-wrapper .content .dashboard p + p {
-  margin-top: 20px;
-}
-.my-account .my-account-wrapper .content .account-detail {
-  max-width: 700px;
-}
-.my-account .my-account-wrapper .content .account-detail label {
-  font-size: 16px;
-  letter-spacing: 0.22px;
-  padding-bottom: 12px;
-}
-.my-account .my-account-wrapper .content .account-detail input {
-  height: 50px;
-  border-radius: 4px;
-  border: solid 1px #d7d7d7;
-  padding-left: 12px;
-  -webkit-transition: 0.3s all ease;
-  transition: 0.3s all ease;
-  font-size: 16px;
-  color: #ababab;
-}
-.my-account .my-account-wrapper .content .account-detail input::placeholder {
-  color: #ababab;
-}
-.my-account .my-account-wrapper .content .account-detail input:focus {
-  outline: none;
-  box-shadow: 1px 2px 11px 3px rgba(0, 0, 0, 0.1);
-  border-color: #ffffff;
-}
-.my-account .my-account-wrapper .content .account-detail p {
-  margin: 0;
-}
-.my-account .my-account-wrapper .content .account-detail .f-l-wrapper,
-.my-account .my-account-wrapper .content .account-detail .p-e-wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  margin-bottom: 20px;
-}
-.my-account .my-account-wrapper .content .account-detail .f-l-wrapper .form-first,
-.my-account .my-account-wrapper .content .account-detail .p-e-wrapper .form-first,
-.my-account .my-account-wrapper .content .account-detail .f-l-wrapper .form-phone,
-.my-account .my-account-wrapper .content .account-detail .p-e-wrapper .form-phone {
-  width: 48%;
-  margin-right: 20px;
-}
-.my-account .my-account-wrapper .content .account-detail .f-l-wrapper .form-last,
-.my-account .my-account-wrapper .content .account-detail .p-e-wrapper .form-last,
-.my-account .my-account-wrapper .content .account-detail .f-l-wrapper .form-email,
-.my-account .my-account-wrapper .content .account-detail .p-e-wrapper .form-email {
-  width: 48%;
-}
-.my-account .my-account-wrapper .content .account-detail .form-company {
-  margin-bottom: 20px;
-}
-.my-account .my-account-wrapper .content .account-detail .p-e-wrapper {
-  margin-bottom: 40px;
-}
-.my-account .my-account-wrapper .content .account-detail .form-street > input {
-  margin-bottom: 20px;
-}
-.my-account .my-account-wrapper .content .account-detail .form-town,
-.my-account .my-account-wrapper .content .account-detail .form-country {
-  margin-bottom: 20px;
+/*-Account Details-*/
+.woocommerce-account .hentry .entry-content .woocommerce .woocommerce-MyAccount-content input {
+  box-sizing: border-box;
 }
 /************************/
 /*      Contact Us      */
@@ -448,4 +414,27 @@
   .login .login-wrapper .register {
     display: none;
   }
+  /*-Dashboard-*/
+  .entry-header h1 {
+    padding-left: 0;
+    margin-bottom: 25px;
+  }
+  .woocommerce-account .hentry .entry-content .woocommerce {
+    display: block;
+  }
+  .woocommerce-account .hentry .entry-content .woocommerce .woocommerce-MyAccount-navigation {
+    width: 100%;
+  }
+  .woocommerce-account .hentry .entry-content .woocommerce .woocommerce-MyAccount-content {
+    width: 100%;
+  }
+  .woocommerce-account .hentry .entry-content .woocommerce .woocommerce-MyAccount-navigation ul {
+    padding-left: 0;
+  }
+  .woocommerce-account .hentry .entry-content .woocommerce .woocommerce-MyAccount-content p {
+    margin-bottom: 0;
+    font-size: 14px;
+    line-height: 28px;
+  }
+  /*-Account Details-*/
 }
