@@ -34,7 +34,7 @@ get_header('home-1');
             <div class="container">
                 <div class="login-wrapper">
                     <div class="title-tab">
-                        <div class="tab login-title" data-tab="tab-1">Login</div>
+                        <div class="tab login-title tab-click" data-tab="tab-1">Login</div>
                         <div class="tab register-title" data-tab="tab-2">Register</div>
                     </div>
                     <div id="tab-1" class="tab-content-login login current">

@@ -19,7 +19,7 @@
 		var tab_id = $(this).attr('data-tab');
 
 		$('.title-tab .tab').removeClass('tab-click');
-		$('.tab-content').removeClass('current');
+		$('.tab-content-login').removeClass('current');
 
 		$(this).addClass('tab-click');
 		$("#"+tab_id).addClass('current');
