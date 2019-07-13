@@ -37,7 +37,7 @@ get_header('home-1');
                         <div class="tab login-title" data-tab="tab-1">Login</div>
                         <div class="tab register-title" data-tab="tab-2">Register</div>
                     </div>
-                    <div id="tab-1" class="tab-content login">
+                    <div id="tab-1" class="tab-content-login login">
                         <div class="login-form">
                             <p class="title">Login</p>
                             <button class="btn-fb" onClick="loginFacebook()">
@@ -67,7 +67,7 @@ get_header('home-1');
                             <button class="btn-login" onClick="loginForm()">Login</button>
                         </div>
                     </div>
-                    <div id="tab-2" class="tab-content register">
+                    <div id="tab-2" class="tab-content-login register">
                         <p class="title">Register</p>
                         <button class="btn-register"> Create an Account</button>
                     </div>
