@@ -2853,6 +2853,7 @@ table th {
 }
 .related .related-wrapper .content-related {
   width: 40%;
+  float: left;
   margin-right: 60px;
 }
 @media screen and (max-width: 767px) {
@@ -2863,6 +2864,10 @@ table th {
     float: none;
     margin-top: 50px;
   }
+}
+.related .related-wrapper .image-related {
+  float: left
+      width: 60%;
 }
 @media screen and (max-width: 767px) {
   .related .related-wrapper .image-related {
