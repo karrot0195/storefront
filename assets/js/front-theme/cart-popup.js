@@ -7,7 +7,7 @@
       $('.wrap-cart-side').addClass('active');
     });
 
-    $('.wrap-cart-side .close, .wrap-cart-side .background').on('click', function () {
+    $('.wrap-cart-side .close').on('click', function () {
       $('.wrap-cart-side').removeClass('active');
       $('body').removeClass('disable');
     });
