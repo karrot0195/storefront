@@ -20,7 +20,7 @@
   font-size: 26px;
   font-family: 'Barlow-m';
   letter-spacing: 0.28px;
-  margin-bottom: 30px;
+  margin-bottom: 68px;
 }
 .login .login-wrapper label {
   display: block;
@@ -84,13 +84,13 @@
   margin-bottom: 60px;
 }
 .login .login-wrapper .login .login-type .line {
-  width: 40%;
+  width: 44%;
   height: 2px;
   opacity: 0.4;
   background-color: #959595;
 }
 .login .login-wrapper .login .login-type .or {
-  width: 20%;
+  width: 12%;
   text-align: center;
   font-size: 16px;
   letter-spacing: 0.24px;
@@ -126,7 +126,7 @@
   padding-left: 150px;
 }
 .login .login-wrapper .register .btn-register {
-  height: 50px;
+  height: 44px;
   border-radius: 4px;
   background-color: #e1e1e1;
   border: none;
@@ -386,14 +386,39 @@
     display: none;
   }
   .login-wrapper .title-tab {
-    display: block;
+    display: flex;
+    justify-content: center;
   }
-  .login-wrapper .title-tab .login,
-  .login-wrapper .title-tab .register {
+  .login-wrapper .title-tab .login-title,
+  .login-wrapper .title-tab .register-title {
     font-size: 26px;
     font-family: 'Barlow-m';
     letter-spacing: 0.28px;
-    margin-bottom: 68px;
+    margin-bottom: 40px;
+    color: #939393;
+    width: auto;
+    border-bottom: 2px solid #D8D8D8;
+    padding-bottom: 7px;
+    transition: 0.3s all ease;
+    display: block;
+  }
+  .login-wrapper .title-tab .login-title {
+    padding-right: 10px;
+    padding-left: 5px;
+  }
+  .login-wrapper .title-tab .register-title {
+    padding-left: 10px;
+    padding-right: 5px;
+  }
+  .login-wrapper .title-tab .tab-click {
+    color: #2a2a2a;
+    border-bottom-color: #2a2a2a;
+  }
+  .login-wrapper .title-tab .login .login-wrapper .tab-content {
+    display: none;
+  }
+  .login-wrapper .title-tab .login .login-wrapper .tab-content.current {
+    display: block;
   }
   .login .login-wrapper .login .btn-fb,
   .login .login-wrapper .login .btn-login {
@@ -412,5 +437,8 @@
   .login .login-wrapper .login .btn-login {
     background: #0f1972;
     width: 100%;
+  }
+  .login .login-wrapper .register {
+    display: none;
   }
 }
