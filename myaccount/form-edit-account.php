@@ -33,18 +33,51 @@ do_action( 'woocommerce_before_edit_account_form' ); ?>
 	</p>
 	<div class="clear"></div>
 
-	<p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
-		<label for="account_display_name"><?php esc_html_e( 'Display name', 'woocommerce' ); ?>&nbsp;<span class="required">*</span></label>
-		<input type="text" class="woocommerce-Input woocommerce-Input--text input-text" name="account_display_name" id="account_display_name" value="<?php echo esc_attr( $user->display_name ); ?>" /> <span><em><?php esc_html_e( 'This will be how your name will be displayed in the account section and in reviews', 'woocommerce' ); ?></em></span>
+	<p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide clear">
+		<label for="account_display_name"><?php esc_html_e( 'Company name', 'woocommerce' ); ?></label>
+		<input type="text" class="woocommerce-Input woocommerce-Input--number input-text" name="account_display_name" id="account_display_name" value="" />
 	</p>
 	<div class="clear"></div>
 
-	<p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
+	<p class="woocommerce-form-row woocommerce-form-row--last form-row form-row-first">
+		<label for="account_phone"><?php esc_html_e( 'Phone', 'woocommerce' ); ?>&nbsp;<span class="required">*</span></label>
+		<input type="tel" class="woocommerce-Input woocommerce-Input--text input-tel" name="account_phone" id="account_phone" autocomplete="phone" value="<?php echo esc_attr( $user->phone ); ?>" />
+	</p>
+	<p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide form-row-last">
 		<label for="account_email"><?php esc_html_e( 'Email address', 'woocommerce' ); ?>&nbsp;<span class="required">*</span></label>
 		<input type="email" class="woocommerce-Input woocommerce-Input--email input-text" name="account_email" id="account_email" autocomplete="email" value="<?php echo esc_attr( $user->user_email ); ?>" />
 	</p>
+	<div class="clear"></div>
 
-	<fieldset>
+	<p class="woocommerce-form-row woocommerce-form-row--last form-row clear">
+		<label for="account_street"><?php esc_html_e( 'Street Address', 'woocommerce' ); ?>&nbsp;<span class="required">*</span></label>
+		<input type="text" class="woocommerce-Input woocommerce-Input--text input-text form-street-name" name="account_street_name" id="account_street_name" autocomplete="street-name" placeholder="House number and street name" value="<?php echo esc_attr( $user->street_name ); ?>" />
+		<input type="text" class="woocommerce-Input woocommerce-Input--text input-text form-street-option" name="account_street_option" id="account_street_option" autocomplete="street-option" placeholder="Appartment, suite, unit, etc (optional)" value="<?php echo esc_attr( $user->street_option ); ?>" />
+	</p>
+	<div class="clear"></div>
+
+
+	<p class="woocommerce-form-row woocommerce-form-row--last form-row">
+		<label for="account_town_city"><?php esc_html_e( 'Town/City', 'woocommerce' ); ?>&nbsp;<span class="required">*</span></label>
+		<input type="text" class="woocommerce-Input woocommerce-Input--text input-text" name="account_town_city" id="account_town_city" autocomplete="town-city" value="<?php echo esc_attr( $user->town_city ); ?>" />
+	</p>
+	<div class="clear"></div>
+
+
+	<p class="woocommerce-form-row woocommerce-form-row--last form-row">
+		<label for="account_country"><?php esc_html_e( 'Country', 'woocommerce' ); ?>
+		<input type="text" class="woocommerce-Input woocommerce-Input--text input-text" name="account_country" id="account_country" autocomplete="country" value="<?php echo esc_attr( $user->country ); ?>" />
+	</p>
+	<div class="clear"></div>
+
+
+	<p class="woocommerce-form-row woocommerce-form-row--last form-row form-post">
+		<label for="account_postcode"><?php esc_html_e( 'Postcode', 'woocommerce' ); ?>
+		<input type="text" class="woocommerce-Input woocommerce-Input--text input-text" name="account_postcode" id="account_postcode" autocomplete="postcode" value="<?php echo esc_attr( $user->postcode ); ?>" />
+	</p>
+	<div class="clear"></div>
+
+	<!-- <fieldset>
 		<legend><?php esc_html_e( 'Password change', 'woocommerce' ); ?></legend>
 
 		<p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
@@ -60,13 +93,13 @@ do_action( 'woocommerce_before_edit_account_form' ); ?>
 			<input type="password" class="woocommerce-Input woocommerce-Input--password input-text" name="password_2" id="password_2" autocomplete="off" />
 		</p>
 	</fieldset>
-	<div class="clear"></div>
+	<div class="clear"></div> -->
 
 	<?php do_action( 'woocommerce_edit_account_form' ); ?>
 
-	<p>
+	<p class="form-btn-save">
 		<?php wp_nonce_field( 'save_account_details', 'save-account-details-nonce' ); ?>
-		<button type="submit" class="woocommerce-Button button" name="save_account_details" value="<?php esc_attr_e( 'Save changes', 'woocommerce' ); ?>"><?php esc_html_e( 'Save changes', 'woocommerce' ); ?></button>
+		<button type="submit" class="woocommerce-Button button" name="save_account_details" value="<?php esc_attr_e( 'Save', 'woocommerce' ); ?>"><?php esc_html_e( 'Save', 'woocommerce' ); ?></button>
 		<input type="hidden" name="action" value="save_account_details" />
 	</p>
 
