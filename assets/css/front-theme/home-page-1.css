@@ -310,6 +310,7 @@ body.page-template-template-home1 {
 }
 .home-page-1 .site-header .col-full .block-menu ul li {
   display: inline;
+  padding-right: 30px;
 }
 .home-page-1 .site-header .col-full .block-menu ul li a {
   text-decoration: none;
@@ -2534,7 +2535,8 @@ table th {
 .home-page-1 fieldset legend {
   background-color: #fff;
 }
-.menu-info {
+.menu-info,
+.menu-shop {
   display: none;
 }
 @media screen and (max-width: 992px) {
