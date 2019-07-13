@@ -65,14 +65,14 @@ do_action( 'woocommerce_before_edit_account_form' ); ?>
 
 
 	<p class="woocommerce-form-row woocommerce-form-row--last form-row">
-		<label for="account_country"><?php esc_html_e( 'Country', 'woocommerce' ); ?>
+		<label for="account_country"><?php esc_html_e( 'Country', 'woocommerce' ); ?></label>
 		<input type="text" class="woocommerce-Input woocommerce-Input--text input-text" name="account_country" id="account_country" autocomplete="country" value="<?php echo esc_attr( $user->country ); ?>" />
 	</p>
 	<div class="clear"></div>
 
 
 	<p class="woocommerce-form-row woocommerce-form-row--last form-row form-post">
-		<label for="account_postcode"><?php esc_html_e( 'Postcode', 'woocommerce' ); ?>
+		<label for="account_postcode"><?php esc_html_e( 'Postcode', 'woocommerce' ); ?></label>
 		<input type="text" class="woocommerce-Input woocommerce-Input--text input-text" name="account_postcode" id="account_postcode" autocomplete="postcode" value="<?php echo esc_attr( $user->postcode ); ?>" />
 	</p>
 	<div class="clear"></div>
