@@ -12,6 +12,10 @@
     filterProduct();
   });
 
+  $('.btn-done-sp button').on('click', function() {
+     $('.button-close-sp').click();
+  });
+
 
   // extract function
   function filterProduct() {
