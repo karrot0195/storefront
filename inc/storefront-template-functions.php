@@ -714,7 +714,11 @@ if ( !function_exists('storefront_site_action') ) {
         <li><a href="#" class="js-show-wrap-product"><img src="<?= esc_url($userSearchIcon) ?>" alt=""></a></li>
         <li><a href="#" class="cur">SGD</a></li>
         <li><a href="<?= esc_url($userLink) ?>"><img src="<?= esc_url($userIcon) ?>" alt=""></a></li>
-        <li id="list-action-cart"><?php storefront_handheld_footer_bar_cart_link(); ?></li>
+        <li id="list-action-cart">
+        	<a class="js-cart-header cart-header" href="javascript:void(0)">
+        		<span class="count"><?= get_all_quantity_item();	 ?></span>
+        	</a>
+    	</li>
 		<li class="block-like header-icon"></li>
     </ul>
 </div>

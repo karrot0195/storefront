@@ -339,6 +339,9 @@ if ( ! class_exists( 'Storefront' ) ) :
             // shop filter
             wp_enqueue_script( 'storefront-js-shop-filter', get_template_directory_uri() . '/assets/js/front-theme/shop-filter.js', ['jquery'], '0.4.3', true );
 
+            // popup cart
+            wp_enqueue_script( 'storefront-js-homepage-1--cart-popup', get_template_directory_uri() . '/assets/js/front-theme/cart-popup.js', ['jquery'], '0.4.3', true );
+            wp_enqueue_style( 'storefront-style-homepage-1--cart-popup', get_template_directory_uri() . '/assets/css/front-theme/cart-popup.css', '', $storefront_version );
 
             // js for product detail
             if (is_singular('product')) {

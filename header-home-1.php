@@ -27,6 +27,11 @@
     <?php wp_head(); ?>
 </head>
 
+<div class="wrap-cart-side">
+    <?= render_php('views/cart/popup-cart.php') ?>
+    <div class="background"></div>
+</div>
+
 <body <?php body_class(); ?>>
 
 <?php do_action( 'storefront_before_site' ); ?>

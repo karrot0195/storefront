@@ -292,7 +292,7 @@
               total = total + val;
               setItemCart(productId, total, function (res) {
                 if (res.success) {
-                  $('a.footer-cart-contents').html(`<span class="count">${res.total}</span>`);
+                  $('a.cart-header').html(`<span class="count">${res.total}</span>`);
 
                   $input.slideToggle(100, function () {
                     $input.html(total);
