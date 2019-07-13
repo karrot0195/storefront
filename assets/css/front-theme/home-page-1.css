@@ -2701,3 +2701,93 @@ table th {
     justify-content: center;
   }
 }
+/*----------------- Wishlist -----------------------------*/
+@media screen and (max-width: 767px) {
+  .home-page-1 .site-main.page-wishlist ul.products li.product {
+    padding-bottom: 0;
+  }
+}
+.site-main.page-wishlist ul.products.columns-4 li.product {
+  margin-right: 1%;
+  margin-left: 1%;
+  width: 23%;
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+}
+@media screen and (max-width: 767px) {
+  .site-main.page-wishlist ul.products.columns-4 li.product {
+    border-radius: 7.5px;
+    width: auto;
+    box-shadow: 2.2px 11.3px 19.3px 1.7px rgba(0, 0, 1, 0.12);
+    background-color: #ffffff;
+  }
+  .site-main.page-wishlist ul.products.columns-4 li.product.wrap-product-item .fm-sl-cart {
+    position: relative;
+  }
+}
+.site-main.page-wishlist ul.products.columns-4 li.product:hover {
+  border-radius: 7.5px;
+  box-shadow: 2.2px 11.3px 19.3px 1.7px rgba(0, 0, 1, 0.12);
+  background-color: #ffffff;
+}
+.site-main.page-wishlist ul.products.columns-4 li.product:hover .icon-close,
+.site-main.page-wishlist ul.products.columns-4 li.product:hover .stock {
+  opacity: 1;
+}
+.site-main.page-wishlist ul.products.columns-4 li.product .icon-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #d4d4d4;
+  font-size: 20px;
+  transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  opacity: 0;
+}
+@media screen and (max-width: 767px) {
+  .site-main.page-wishlist ul.products.columns-4 li.product .icon-close {
+    opacity: 1;
+    padding-bottom: 0;
+  }
+}
+.site-main.page-wishlist ul.products.columns-4 li.product .stock {
+  padding: 10px;
+  opacity: 0;
+  background-color: #b0c1bb;
+  transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+}
+@media screen and (max-width: 767px) {
+  .site-main.page-wishlist ul.products.columns-4 li.product .stock {
+    opacity: 1;
+    margin-top: 20px;
+  }
+}
+.site-main.page-wishlist ul.products.columns-4 li.product .stock span {
+  display: inline-block;
+  vertical-align: middle;
+}
+.site-main.page-wishlist ul.products.columns-4 li.product .stock span + span {
+  margin-left: 10px;
+}
+.site-main.page-wishlist ul.products.columns-4 li.product .stock i {
+  font-size: 20px;
+  color: #fff;
+}
+.site-main.page-wishlist ul.products.columns-4 li.product .stock .text {
+  font-family: "Barlow";
+  font-size: 11px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.36;
+  letter-spacing: 0.22px;
+  text-align: left;
+  color: #ffffff;
+}
