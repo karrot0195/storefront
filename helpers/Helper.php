@@ -36,3 +36,7 @@ function get_class_the_bookmark() {
 
 	return '';
 }
+
+function get_method($a) {
+	dd(get_class_methods($a), false);
+}
