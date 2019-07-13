@@ -869,6 +869,10 @@ body.page-template-template-home1 {
   .home-page-1 ul.products li.product .woocommerce-loop-product__title,
   .home-page-1 ul.products li.product h2 {
     font-size: 15px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
   }
 }
 .home-page-1 ul.products li.product .price {

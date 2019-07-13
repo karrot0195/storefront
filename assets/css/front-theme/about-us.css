@@ -65,6 +65,18 @@
   padding-right: 0;
 }
 /*============= Responsive =============*/
+@media screen and (max-width: 767px) {
+  .about-us .slider__item__content .title {
+    font-size: 25px;
+  }
+  .about-us .slider__item__content .sub-title,
+  .about-us .content .title {
+    font-size: 16px;
+  }
+  .about-us .content .desc {
+    font-size: 14px;
+  }
+}
 @media screen and (max-width: 480px) {
   .about-us .slider__item__content .title {
     line-height: unset;

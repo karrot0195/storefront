@@ -545,4 +545,11 @@ body .wrap-cart-side {
     padding: 0 20px 20px;
     margin: 0;
   }
+  .contact-us-wrapper {
+    display: block;
+  }
+  .contact-us-wrapper .sidebar,
+  .contact-us-wrapper .content {
+    width: 100%;
+  }
 }
