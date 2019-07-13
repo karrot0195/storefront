@@ -44,6 +44,7 @@ body {
   }
   .site-main {
     background-color: #fff;
+    clear: both;
   }
   // .site-footer {
   //   position: absolute;
@@ -533,6 +534,7 @@ body {
 
 .site-footer {
   background-color: #fff;
+  clear: both;
   .footer-widget-3 {
     flex-grow: 1;
   }
@@ -2950,6 +2952,96 @@ table th {
       letter-spacing: 0.22px;
       text-align: left;
       color: #ffffff;
+    }
+  }
+}
+
+.home-page-1 {
+  .related {
+    .slick-disabled {
+      opacity: 0;
+      pointer-events:none;
+  }
+    .slick-arrow {
+      width: 39px;
+      height: 39px;
+      background-color: #0f1972;
+      color: #fff;
+      &:before {
+        color: #fff !important;
+      }
+    }
+  }
+}
+
+.home-page-1 .related ul.products li.product .woocommerce-LoopProduct-link:focus,
+.home-page-1 .related ul.products li.product .woocommerce-LoopProduct-link:active,
+.home-page-1 .related ul.products li.product .woocommerce-LoopProduct-link:hover {
+  outline: 0;
+  box-shadow: none;
+}
+
+
+.site-main.page-wishlist .related ul.products.columns-4 li.product {
+  box-shadow: none;
+  overflow: visible;
+  &:hover { 
+    box-shadow: none;
+  }
+}
+
+.related {
+  .title {
+    font-family: "Barlow-s";
+    font-size: 21px;
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.61;
+    letter-spacing: 0.28px;
+    text-align: left;
+    color: #2a2a2a;
+  }
+  .description{
+    font-family: "Barlow";
+    font-size: 17px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 2.05;
+    letter-spacing: 0.22px;
+    text-align: left;
+    color: #2a2a2a;
+  }
+
+  .related-wrapper {
+    clear: both;
+    display: flex;
+    @media screen and (max-width: 767px) {
+      display: block;
+    }
+    align-items: center;
+    .content-related {
+      width: 40%;
+      float: left;
+      margin-right: 60px;
+      @media screen and (max-width: 767px) {
+        display: block;
+        width: 100%;
+        margin: 0;
+        float: none;
+        margin-top: 50px;
+      }
+    }
+    .image-related {
+      float: left
+      width: 60%;
+      @media screen and (max-width: 767px) {
+        display: block;
+        width: 100%;
+        margin: 0;
+        float: none;
+      }
     }
   }
 }
