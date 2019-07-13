@@ -586,7 +586,6 @@ body.page-template-template-home1 {
     height: 100vh;
     background: #e5e5e5;
     z-index: 99999;
-    padding: 20px 0;
     overflow: auto;
   }
   .btn-filter.pc {
@@ -600,7 +599,7 @@ body.page-template-template-home1 {
   }
   .home-page-1 .modal-title-sp {
     display: block;
-    padding: 10px 20px 20px;
+    padding: 70px 20px 30px;
     font-size: 18px;
     line-height: 1.22;
     color: #333333;
@@ -610,7 +609,7 @@ body.page-template-template-home1 {
   .home-page-1 .button-close-sp {
     display: block;
     position: absolute;
-    top: 30px;
+    top: 70px;
     right: 20px;
   }
   .home-page-1 .button-close-sp i::before {
@@ -619,7 +618,7 @@ body.page-template-template-home1 {
   }
   .home-page-1 .btn-done-sp {
     display: block;
-    margin: 20px 20px 40px;
+    margin: 0 20px 40px;
   }
   .home-page-1 .btn-done-sp button {
     width: 100%;
@@ -631,7 +630,7 @@ body.page-template-template-home1 {
     cursor: pointer;
     border-radius: 22px;
     text-transform: uppercase;
-    font-family: "Barlow-m;";
+    font-family: "Barlow-m";
   }
   .home-page-1 .modal-filter .block-content .content .title {
     padding-bottom: 0;
