@@ -33,6 +33,10 @@ get_header('home-1');
 		<main id="main" class="site-main login" role="main">
             <div class="container">
                 <div class="login-wrapper">
+                    <div class="title-tab">
+                        <div class="login">Login</div>
+                        <div class="register">Register</div>
+                    </div>
                     <div class="login">
                         <div class="login-form">
                             <p class="title">Login</p>
