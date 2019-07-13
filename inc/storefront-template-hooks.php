@@ -189,6 +189,9 @@ add_action('init', function() {
 
 // add size to product detail
 add_action('woocommerce_single_product_summary', function () {
-    echo render_php('views/product-detail/attr-size.php');
+    global $product;
+    if ($product->is_type('variable')) {
+        echo render_php('views/product-detail/attr-size.php');
+    }
 }, 15);
 

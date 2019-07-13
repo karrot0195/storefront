@@ -9,7 +9,10 @@ $collect_price = [];
 if (!empty($available_variations)) {
 	foreach ($available_variations as $item) {
 		if (isset($item['attributes']['attribute_pa_size'])) {
-			$collect_price[$item['attributes']['attribute_pa_size']] = $item['display_price'];
+			$collect_price[$item['attributes']['attribute_pa_size']] = [
+				'price' => $item['display_price'],
+				'variation' => $item['variation_id']
+			];
 		}
 	}
 }
@@ -26,8 +29,10 @@ if (!empty($size_attribute_data)) {
 	echo '<div class="block-label">'.esc_html__('Size', 'storefront').'</div>';
 	echo '<ul class="block-main">';
 	foreach ($size_attribute_data as $size_item) {
+		// dd($size_item);
 		$data = [
-			'price' => isset($collect_price[$size_item->slug]) ? $collect_price[$size_item->slug] : ''
+			'price' => isset($collect_price[$size_item->slug]) ? $collect_price[$size_item->slug]['price'] : '',
+			'variation' => isset($collect_price[$size_item->slug]) ? $collect_price[$size_item->slug]['variation'] : '',
 		];
 		$is_checked = $attr_size_selected == $size_item->slug ? 'checked="checked"' : '';
 		echo '<li>';		
