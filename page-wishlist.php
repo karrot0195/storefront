@@ -14,6 +14,7 @@ get_header('home-1'); ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main page-wishlist" role="main">
+            <div class="container">
             <ul class="products columns-4">
                 <div class="loop-main-product">
                     <li class="wrap-product-item product type-produ
@@ -402,6 +403,7 @@ get_header('home-1'); ?>
                         </div>
                     </div>
                 </div>
+            </div>
             </div>
 		</main><!-- #main -->
 	</div><!-- #primary -->
