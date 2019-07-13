@@ -58,7 +58,7 @@ if ( post_password_required() ) {
 			do_action( 'woocommerce_single_product_summary' );
 			?>
 			<div class="block-bookmark">
-				<div class="block-like">
+				<div onclick="onClickLike(this)" class="block-like <?= get_class_the_bookmark() ?>" data-id="<?= get_the_ID() ?>">
 					<i class="far fa-heart"></i>
 				</div>
 				<div class="block-share">
@@ -91,5 +91,26 @@ if ( post_password_required() ) {
 		?>
 	</div>
 </div>
+
+<script type="text/javascript">
+	function onClickLike(e) {
+		const $e = jQuery(e);
+		const post_id = $e.data('id');
+		const ajax_url = my_ajax_object.ajax_url;
+		jQuery.get(`${ajax_url}?action=action_book_mark&post_id=${post_id}`, function(res) {
+			if (res == 0) {
+				console.log('feature for account login');
+			}
+
+			if (res == 1) {
+				$e.addClass('bookmark');
+			} 
+
+			if (res == -1) {
+				$e.removeClass('bookmark');
+			} 
+		});
+	}
+</script>
 
 <?php do_action( 'woocommerce_after_single_product' ); ?>

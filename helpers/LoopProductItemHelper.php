@@ -33,7 +33,8 @@ HTML;
     static function renderHtmlAddToCartDetail($product) {
         $textButton = esc_html__('Add to cart', 'storefront');
         $productId = get_the_ID();
-        $total = get_item_quantity($productId);
+        // $total = get_item_quantity($productId);
+        $total = 0;
         $class = $total > 0 ? 'proccessing' : '';
         return <<< HTML
     <div class="wrap-cart">

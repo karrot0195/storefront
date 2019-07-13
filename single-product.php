@@ -19,6 +19,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly
 }
 
+if (isset($_GET['action']) && $_GET['action'] == 'get_total_item') {
+	echo get_all_quantity_item();
+	die;
+}
+
 get_header( 'home-1' ); ?>
 
 	<?php

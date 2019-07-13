@@ -72,9 +72,7 @@ if (!empty($_SESSION['fb_access_token'])) {
 	        $user_id = $result->user_id;
 	        $user = get_user_by( 'id', $user_id );
 	        if( $user ) {
-	            wp_clear_auth_cookie();
-	            wp_set_current_user ( $userId );
-	            wp_set_auth_cookie( $user_id );
+	           login($user_id);
 	        }
 
 	    } else {
@@ -90,9 +88,7 @@ if (!empty($_SESSION['fb_access_token'])) {
 	        if (!is_wp_error($userId)) {
 	            add_user_meta($userId, 'facebook_id', $facebookId, true);
 	            // login
-	            wp_clear_auth_cookie();
-	            wp_set_current_user ( $userId );
-	            wp_set_auth_cookie  ( $userId );
+	          	login($userId);
 	        } else {
 	        	$message = $userId->get_error_message();
 				header('location: ' . home_url('login') . '?error='.$message);

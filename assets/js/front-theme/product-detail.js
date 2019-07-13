@@ -19,28 +19,31 @@
           self.addClass('btn-add-to-cart-click')
           const parent = $(this).parents('.fm-detail-cart');
           const total = parent.find('#number .val').html();
-          const productId = parent.data('product_id');
-
+          let product_id = parent.data('product_id');
           if (total >= 0) {
             let text = self.html();
-            setItemCart(productId, total, function(res) {
-              if (res.success) {
-                if ($('.footer-cart-contents').length) {
-                   $('.footer-cart-contents span').html(res.total);
-                }
-                self.html('DONE');
-                self.addClass('proccess');
-                self.removeClass('btn-add-to-cart-click');
-                setTimeout(() => {
-                  self.html(text);
-                self.removeClass('proccess')
-                self.addClass('test-f');
-                setTimeout(() => {
-                  self.removeClass('test-f');
-                },1000);
-              }, 1000);
-              }
-            });
+            if ($('.wrap-attribute-size').length) {
+              const label = $('.wrap-attribute-size input:checked').parent().find('label');
+              product_id = label.data('json').variation;
+            }
+
+            const url = `?add-to-cart=${product_id}&quantity=${total}`;
+            $.get(url, function () {
+                $.get('?action=get_total_item', function (res) {
+                    $('#list-action-cart .footer-cart-contents span').html(res);
+                    self.html('DONE');
+                    self.addClass('proccess');
+                    self.removeClass('btn-add-to-cart-click');
+                    setTimeout(() => {
+                      self.html(text);
+                        self.removeClass('proccess')
+                        self.addClass('test-f');
+                        setTimeout(() => {
+                          self.removeClass('test-f');
+                    },1000);
+                    });  
+                });
+             });
           }
         }
       });
