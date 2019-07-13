@@ -633,6 +633,9 @@ body.page-template-template-home1 {
     text-transform: uppercase;
     font-family: "Barlow-m";
   }
+  .home-page-1 .btn-done-sp button:focus {
+    outline: none;
+  }
   .home-page-1 .modal-filter .block-content .content .title {
     padding-bottom: 0;
     font-size: 12px;
