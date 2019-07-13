@@ -30,7 +30,7 @@
             const url = `?add-to-cart=${product_id}&quantity=${total}`;
             $.get(url, function () {
                 $.get('?action=get_total_item', function (res) {
-                    $('#list-action-cart .footer-cart-contents span').html(res);
+                    $('#list-action-cart .cart-header span').html(res);
                     self.html('DONE');
                     self.addClass('proccess');
                     self.removeClass('btn-add-to-cart-click');

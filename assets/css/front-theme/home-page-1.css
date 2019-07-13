@@ -341,7 +341,7 @@ body.page-template-template-home1 {
   justify-content: flex-end;
   align-items: center;
 }
-.home-page-1 .site-header .col-full .block-icon-action #list-action-cart .footer-cart-contents {
+.home-page-1 .site-header .col-full .block-icon-action #list-action-cart .cart-header {
   position: relative;
   width: 25px;
   height: 25px;
@@ -351,7 +351,7 @@ body.page-template-template-home1 {
   display: inline-table;
   vertical-align: middle;
 }
-.home-page-1 .site-header .col-full .block-icon-action #list-action-cart .footer-cart-contents span {
+.home-page-1 .site-header .col-full .block-icon-action #list-action-cart .cart-header span {
   width: 7px;
   height: 10px;
   font-size: 13px;
