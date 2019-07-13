@@ -14,6 +14,17 @@
     $(this).next('ul').slideToggle(300);
   });
   
+  // TAB LOGIN
+  $('.title-tab .tab').click(function(){
+		var tab_id = $(this).attr('data-tab');
+
+		$('.title-tab .tab').removeClass('tab-click');
+		$('.tab-content-login').removeClass('current');
+
+		$(this).addClass('tab-click');
+		$("#"+tab_id).addClass('current');
+	})
+
   // Control 1 product
   var count_product = $('ul.products li').length;
   if(count_product <= 1){
