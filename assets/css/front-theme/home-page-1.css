@@ -2692,4 +2692,7 @@ table th {
   .info-page .info-page-right button {
     font-size: 16px;
   }
+  .container .wrap-attribute-size {
+    justify-content: center;
+  }
 }

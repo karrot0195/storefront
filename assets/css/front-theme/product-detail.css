@@ -494,7 +494,6 @@
   .storefront-product-detail .related > h2:first-child,
   .storefront-product-detail .upsells > h2:first-child {
     margin-bottom: 25px;
-    font-size: 16px;
   }
 }
 .storefront-product-detail #review_form_wrapper {
@@ -708,7 +707,7 @@
 }
 @media screen and (max-width: 767px) {
   .storefront-product-detail .wrap-description .title-2 {
-    margin: 40px 20px;
+    margin: 40px 0 20px;
   }
 }
 .storefront-product-detail .moreless-button {
@@ -1203,4 +1202,15 @@
 }
 .container .wrap-attribute-size .block-main li {
   margin-right: 10px;
+}
+@media screen and (max-width: 767px) {
+  .wrap-additional_information tbody {
+    display: flex;
+  }
+  .wrap-additional_information tbody tr:last-child {
+    padding-left: 36px;
+  }
+  .home-page-1 ul.products {
+    margin-top: 2.235801em;
+  }
 }
