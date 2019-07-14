@@ -719,7 +719,7 @@ if ( !function_exists('storefront_site_action') ) {
         		<span class="count"><?= get_all_quantity_item();	 ?></span>
         	</a>
     	</li>
-		<li class="block-like header-icon"></li>
+		<li class="block-like header-icon" onclick="window.location='<?= esc_url(home_url('wishlist')) ?>'"></li>
     </ul>
 </div>
 <?php

@@ -170,7 +170,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 		?>
 	</div>
 
-	<?= render_php('views/cart/cart-carousel.php') ?>
+	<?=  render_php('views/cart/relate-product.php') ?>
 </div>
 
 <?php do_action( 'woocommerce_after_cart' ); ?>
