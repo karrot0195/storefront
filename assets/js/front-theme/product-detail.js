@@ -31,7 +31,10 @@
             $.get(url, function () {
                 $.get('?action=get_total_item', function (res) {
                     $('#list-action-cart .cart-header span').html(res);
-                    self.html('DONE');
+                    $(document).trigger('add-cart');
+
+
+                  self.html('DONE');
                     self.addClass('proccess');
                     self.removeClass('btn-add-to-cart-click');
                     setTimeout(() => {

@@ -1,5 +1,12 @@
 (function ($) {
   if ($('.js-cart-header').length) {
+    $(document).on('add-cart', function () {
+      const url = `${my_ajax_object.ajax_url}?action=get_html_popup_cart`;
+      $.get(url, function (res) {
+        $('.wrap-cart-side').html(res);
+      });
+    });
+
     $('.js-cart-header').on('click', function () {
       var top = $(document).scrollTop();
       $('body').addClass('disable');

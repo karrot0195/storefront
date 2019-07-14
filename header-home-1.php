@@ -28,8 +28,7 @@
 </head>
 
 <div class="wrap-cart-side">
-    <?= render_php('views/cart/popup-cart.php') ?>
-    <div class="background"></div>
+    <?= get_html_popup_cart() ?>
 </div>
 
 <body <?php body_class(); ?>>

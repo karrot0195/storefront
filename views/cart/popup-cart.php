@@ -2,13 +2,14 @@
 $cart = WC()->cart->get_cart();
 
 $total = get_all_quantity_item();
+$sub_price = 0;
 ?>
 <div class="block-cart-side">
     <div class="block-info">
         <div class="info">
             <div class="total"><?= $total ?></div>
             <div class="desc">
-                Added to my cart!&nbsp;&nbsp;<b><?= $total ?> <?= esc_html__('items', 'storefront') ?></b>
+                <?= esc_html__('Added to my cart!', 'storefront') ?>&nbsp;&nbsp;<b><?= $total ?> <?= esc_html__('items', 'storefront') ?></b>
             </div>
         </div>
         <div class="close">
@@ -21,7 +22,8 @@ $total = get_all_quantity_item();
         if (!empty($cart)) {
             foreach ($cart as $item) {
                 $product = $item['data'];
-                $thumbnail_url = wp_get_attachment_url( get_post_thumbnail_id( $item['product_id'] ))
+                $thumbnail_url = wp_get_attachment_url( get_post_thumbnail_id( $item['product_id'] ));
+                $sub_price += $item['line_total'];
                 ?>
                 <div class="block-item">
                     <div class="thumbnail-item">
@@ -45,4 +47,16 @@ $total = get_all_quantity_item();
         }
         ?>
     </div>
+
+    <div class="block-action">
+        <div class="block-subinfo">
+            <div class="block-subinfo--content"><?= esc_html__('Subtotal:', 'storefront') ?></div>
+            <div class="block-subinfo--price"><?= wc_price($sub_price) ?></div>
+        </div>
+
+        <div class="block-checkoutbutton">
+            <a href="<?= home_url('checkout') ?>" class="btn btn-checkout"><?= esc_html__('Checkout', 'storefront') ?></a>
+        </div>
+    </div>
 </div>
+<div class="background"></div>

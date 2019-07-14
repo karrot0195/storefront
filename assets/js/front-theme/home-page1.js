@@ -349,6 +349,7 @@
               setItemCart(productId, total, function (res) {
                 if (res.success) {
                   $('a.cart-header').html(`<span class="count">${res.total}</span>`);
+                  $(document).trigger('add-cart');
 
                   $input.slideToggle(100, function () {
                     $input.html(total);

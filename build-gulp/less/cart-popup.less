@@ -28,6 +28,9 @@ body.disable {margin: 0; height: 100%; overflow: hidden!important;}
 
   .block-cart-side {
     position: absolute;
+    display: flex;
+    flex-direction: column;
+
     float: right;
     width: 550px;
     height: 100vh;
@@ -101,6 +104,62 @@ body.disable {margin: 0; height: 100%; overflow: hidden!important;}
           span{
             margin-right: 5px;
           }
+        }
+      }
+    }
+
+    .block-action {
+      margin-top: auto;
+      .block-subinfo {
+        padding:25px 0;
+        border-top: 1px solid #eaeaea;
+        display: flex;
+
+        &--price {
+          margin-left: auto;
+          .woocommerce-Price-amount.amount{
+            color: #2a2a2a;
+            font-family: "Barlow-m";
+            span{
+              margin-right: 5px;
+            }
+          }
+        }
+        font-family: Barlow;
+        font-size: 16px;
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: normal;
+        color: #2a2a2a;
+      }
+
+      .block-checkoutbutton {
+        border-top: 1px solid #eaeaea;
+        padding:25px 0;
+        display: flex;
+        justify-content: center;
+
+        .btn-checkout {
+          background-color: #142d73;
+          padding: 12px 20px;
+          border-radius: 35px;
+          font-family: "Barlow";
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 1.65;
+          letter-spacing: 0.5px;
+          text-align: center;
+          color: #ffffff;
+          cursor: pointer;
+          display: inline-block;
+          border: 1px solid #142d73;
+          text-transform: uppercase;
+          transition: 0.3s all ease;
+          position: relative;
+          height: 20px;
+          transform: scale(1);
+          text-decoration: none;
+          width: 80%;
         }
       }
     }
