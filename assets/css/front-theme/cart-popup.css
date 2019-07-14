@@ -9,21 +9,20 @@ body.disable {
 }
 .wrap-cart-side.active .background {
   z-index: 1000;
-  right: 0;
-  transition: 0.3s all ease;
+  opacity: 1;
 }
 .wrap-cart-side.active .block-cart-side {
   z-index: 1001;
   right: 0;
-  transition: 0.3s all ease;
+  transition: right 1s ease;
 }
 .wrap-cart-side .background {
   position: fixed;
   width: 100%;
   height: 100%;
   background-color: #636363b8;
-  right: -100%;
-  transition: 0.3s all ease;
+  opacity: 0;
+  transition: opacity 0.2s ease;
 }
 .wrap-cart-side .block-cart-side {
   position: absolute;
@@ -32,7 +31,6 @@ body.disable {
   height: 100vh;
   background-color: white;
   padding: 0px 25px;
-  transition: 0.3s all ease;
   right: -100%;
   overflow: auto;
 }
