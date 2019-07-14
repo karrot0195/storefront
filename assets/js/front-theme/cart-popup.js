@@ -10,7 +10,7 @@
     $('.js-cart-header').on('click', function () {
       var top = $(document).scrollTop();
       $('body').addClass('disable');
-      $('.wrap-cart-side .block-cart-side').css('top', top);
+      // $('.wrap-cart-side .block-cart-side').css('top', top);
       $('.wrap-cart-side').addClass('active');
     });
 

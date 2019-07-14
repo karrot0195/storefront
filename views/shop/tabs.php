@@ -22,7 +22,7 @@ HTML;
                         <?php
                         if (!empty($tab['gallery'])) {
                             ?>
-                            <div class="slider-tab-<?= ($idx+1) ?>" data-slick='{"slidesToShow": 5, "slidesToScroll": 1}'>
+                            <div class="slider-tab-<?= ($idx+1) ?>">
                                 <?php
                                 foreach ($tab['gallery'] as $attachment) {
                                     $attachmentUrl = $attachment['url'];
