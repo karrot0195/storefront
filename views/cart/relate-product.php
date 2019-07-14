@@ -81,4 +81,3 @@ $products = $query->get_products();
         </div>
     </div>
 </div>
-}
