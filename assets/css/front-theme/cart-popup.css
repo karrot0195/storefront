@@ -28,6 +28,11 @@ body {
   opacity: 0;
   transition: opacity 0.2s ease;
 }
+@media screen and (max-width: 767px) {
+  .wrap-cart-side .background {
+    display: none;
+  }
+}
 .wrap-cart-side .block-cart-side {
   position: fixed;
   display: flex;
