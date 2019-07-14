@@ -800,6 +800,11 @@ body.page-template-template-home1 {
     font-size: 11px;
   }
 }
+@media screen and (max-width: 320px) {
+  .info-page .info-page-left ul li {
+    margin-left: 10px;
+  }
+}
 .info-page .info-page-left ul li a {
   color: #8e8b8b;
   text-decoration: none;
@@ -2713,7 +2718,7 @@ table th {
 }
 @media screen and (max-width: 320px) {
   .info-page .info-page-right button {
-    font-size: 11px;
+    font-size: 13px;
   }
 }
 /*----------------- Wishlist -----------------------------*/
