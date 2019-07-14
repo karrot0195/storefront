@@ -32,12 +32,16 @@ body.disable {margin: 0; height: 100%; overflow: hidden!important;}
     flex-direction: column;
 
     float: right;
-    width: 550px;
+    width: 400px;
     height: 100vh;
     background-color: white;
     padding: 0px 25px;
     right: -100%;
     overflow: auto;
+    z-index: 999;
+    @media screen and (max-width: 767px) {
+      width: auto;
+    }
     .block-info {
       border-bottom: 1px solid #eaeaea;
       padding: 30px 0;
@@ -146,7 +150,6 @@ body.disable {margin: 0; height: 100%; overflow: hidden!important;}
           font-family: "Barlow";
           font-size: 16px;
           font-weight: 400;
-          line-height: 1.65;
           letter-spacing: 0.5px;
           text-align: center;
           color: #ffffff;
@@ -160,6 +163,14 @@ body.disable {margin: 0; height: 100%; overflow: hidden!important;}
           transform: scale(1);
           text-decoration: none;
           width: 80%;
+          i {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 20px;
+            font-size: 20px;
+            color: #fff;
+          }
         }
       }
     }

@@ -29,12 +29,18 @@ body.disable {
   display: flex;
   flex-direction: column;
   float: right;
-  width: 550px;
+  width: 400px;
   height: 100vh;
   background-color: white;
   padding: 0px 25px;
   right: -100%;
   overflow: auto;
+  z-index: 999;
+}
+@media screen and (max-width: 767px) {
+  .wrap-cart-side .block-cart-side {
+    width: auto;
+  }
 }
 .wrap-cart-side .block-cart-side .block-info {
   border-bottom: 1px solid #eaeaea;
@@ -136,7 +142,6 @@ body.disable {
   font-family: "Barlow";
   font-size: 16px;
   font-weight: 400;
-  line-height: 1.65;
   letter-spacing: 0.5px;
   text-align: center;
   color: #ffffff;
@@ -150,4 +155,12 @@ body.disable {
   transform: scale(1);
   text-decoration: none;
   width: 80%;
+}
+.wrap-cart-side .block-cart-side .block-action .block-checkoutbutton .btn-checkout i {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 20px;
+  font-size: 20px;
+  color: #fff;
 }
