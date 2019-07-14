@@ -817,6 +817,11 @@ body.page-template-template-home1 {
   padding: 0 10px;
   margin-left: 0;
 }
+@media screen and (max-width: 320px) {
+  .info-page .info-page-left ul li:first-child {
+    width: max-content;
+  }
+}
 .info-page .info-page-right {
   text-align: right;
 }
@@ -2704,6 +2709,11 @@ table th {
   }
   .container .wrap-attribute-size {
     justify-content: center;
+  }
+}
+@media screen and (max-width: 320px) {
+  .info-page .info-page-right button {
+    font-size: 11px;
   }
 }
 /*----------------- Wishlist -----------------------------*/

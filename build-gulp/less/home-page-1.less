@@ -877,6 +877,9 @@ body {
         width: auto;
         padding: 0 10px;
         margin-left: 0;
+        @media screen and (max-width: 320px) {
+          width: max-content;
+        }
       }
     }
   }
@@ -2871,6 +2874,12 @@ table th {
     justify-content: center;
   }
 
+}
+
+@media screen and (max-width: 320px) {
+  .info-page .info-page-right button{
+    font-size: 11px;
+  }
 }
 
 /*----------------- Wishlist -----------------------------*/
