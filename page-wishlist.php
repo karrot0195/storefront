@@ -67,7 +67,12 @@ get_header('home-1'); ?>
                 </div>
             </ul>
             <?php
-            echo render_php('views/cart/relate-product.php')
+
+            echo render_php('views/cart/relate-product.php', [
+                'title' => get_field('title'),
+                'description' => get_field('description'),
+                'relate_product' => get_user_bookmark()
+            ]);
             ?>
             </div>
 		</main><!-- #main -->
