@@ -22,15 +22,14 @@ get_header('home-1'); ?>
                             $thumbnail_url = get_the_post_thumbnail_url($product->get_id());
                         ?>
                             <li class="wrap-product-item product type-product">
-                                <i class="ion ion-md-close-circle icon-close"></i>
+                                <i class="ion ion-md-close-circle icon-close js-btn-close" data-product_id="<?= $product->get_id() ?>"></i>
                                 <a href="<?= esc_url($product->get_permalink()) ?>" class="woocommerce-LoopProduct-link woocommerce-loop-product__link">
-                                    <img src="<?= esc_url($thumbnail_url) ?>" alt="#">
+                                    <img src="<?= esc_url($thumbnail_url) ?>" alt="<?= esc_url($product->get_permalink()) ?>">
                                     <h2 class="woocommerce-loop-product__title">
                                         <?= $product->get_title() ?>
                                     </h2>
                                     <span class="price">
                                         <?= wc_price($product->get_price()) ?>
-
                                     </span>
                                 </a>
                                 <div class="wrap-cart">
@@ -77,6 +76,34 @@ get_header('home-1'); ?>
             </div>
 		</main><!-- #main -->
 	</div><!-- #primary -->
+    <script>
+        (function($){
+            if ($('.js-btn-close').length) {
+                let proccessing = false;
+                $('.js-btn-close').on('click', function() {
+                    if (!proccessing) {
+                        proccessing = true;
+                        try {
+                            const self = this;
+                            const product_id = $(self).data('product_id');
+                            const url = `${my_ajax_object.ajax_url}?action=action_book_mark&post_id=${product_id}`;
+                            $.get(url, function(res) {
+                                if (res == -1) {
+                                    const parent = $(self).parents('li.product');
+                                    parent.hide(500, function () {
+                                        parent.remove();
+                                    });
 
+                                }
+                                proccessing = false;
+                            });
+                        } catch(e) {
+                            proccessing = false;
+                        }
+                    }
+                });
+            }
+        })(jQuery); 
+    </script>
 <?php
 get_footer('home-1');
