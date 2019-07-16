@@ -1381,6 +1381,8 @@ a:hover {
 .storefront-product-detail.single-product div.product .woocommerce-product-gallery img {
   display: block;
   margin: 0 auto;
+  max-width: 200px !important;
+  max-height: 300px !important;
 }
 .storefront-product-detail .flex-direction-nav {
   display: flex;
