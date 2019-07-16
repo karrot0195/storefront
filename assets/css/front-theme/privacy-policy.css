@@ -13,8 +13,13 @@
   width: 40%;
 }
 .privacy-policy .privacy-policy-wrapper .sidebar p {
-  font-size: 22px;
+  font-size: 24px;
   font-family: "Barlow-m";
+}
+@media screen and (max-width: 767px) {
+  .privacy-policy .privacy-policy-wrapper .sidebar p {
+    font-size: 20px;
+  }
 }
 .privacy-policy .privacy-policy-wrapper .content {
   width: 60%;
