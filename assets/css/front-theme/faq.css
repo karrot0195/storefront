@@ -147,15 +147,24 @@
 }
 /*=========== Responsive ==============*/
 @media screen and (max-width: 767px) {
-  .faq .faq-wrapper {
+  .faq .faq-wrapper,
+  .shipping .faq-wrapper,
+  .faq .shipping-wrapper,
+  .shipping .shipping-wrapper {
     display: block;
     padding: 0;
   }
-  .faq .faq-wrapper .sidebar {
+  .faq .faq-wrapper .sidebar,
+  .shipping .faq-wrapper .sidebar,
+  .faq .shipping-wrapper .sidebar,
+  .shipping .shipping-wrapper .sidebar {
     width: 100%;
     margin: 50px auto 20px;
   }
-  .faq .faq-wrapper .content {
+  .faq .faq-wrapper .content,
+  .shipping .faq-wrapper .content,
+  .faq .shipping-wrapper .content,
+  .shipping .shipping-wrapper .content {
     width: 100%;
   }
 }
