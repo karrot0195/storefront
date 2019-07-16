@@ -178,12 +178,22 @@ body {
 .woocommerce-cart .woocommerce-cart-form {
   padding: 0 114px;
 }
+@media screen and (max-width: 1024px) {
+  .woocommerce-cart .woocommerce-cart-form {
+    padding: 0;
+  }
+}
 .woocommerce-cart .woocommerce-cart-form table.cart td {
   background: #ffffff;
 }
 .woocommerce-cart .cart-collaterals {
   padding: 0 114px;
   margin-top: 50px;
+}
+@media screen and (max-width: 1024px) {
+  .woocommerce-cart .cart-collaterals {
+    padding: 0;
+  }
 }
 .woocommerce-cart .actions {
   display: flex;
