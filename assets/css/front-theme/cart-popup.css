@@ -174,6 +174,15 @@ body {
   font-size: 20px;
   color: #fff;
 }
+.woocommerce-cart .woocommerce-cart-form {
+  padding: 0 114px;
+}
+.woocommerce-cart .woocommerce-cart-form table.cart td {
+  background: #ffffff;
+}
+.woocommerce-cart .cart-collaterals {
+  padding: 0 114px;
+}
 /* Bill */
 .woocommerce-billing-fields h3 {
   font-family: "Barlow-m";
@@ -202,4 +211,7 @@ body {
 .col2-set .woocommerce-billing-fields__field-wrapper .form-row-first,
 .col2-set .woocommerce-billing-fields__field-wrapper .form-row-last {
   width: 49%;
+}
+.site-main.page-wishlist ul.products li.product img {
+  max-height: 400px;
 }
