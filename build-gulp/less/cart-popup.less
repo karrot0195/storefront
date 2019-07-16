@@ -187,6 +187,7 @@ body {
   }
 }
 
+/* Cart */
 .woocommerce-cart{
   .woocommerce-cart-form{
     padding: 0 114px;
@@ -197,6 +198,47 @@ body {
   .cart-collaterals{
     padding: 0 114px;
   }
+  .actions{
+    display: flex;
+    .coupon{
+      label{
+        display: none;
+      }
+      input{
+        max-width: 290px;
+        min-height: 44px;
+        box-shadow: none;
+        outline: 0;
+        padding: 10px 25px;
+        border: 1px solid #ddd;
+        border-radius: 25px;
+        box-sizing: border-box;
+        font-size: 16px;
+      }
+      button{
+        min-width: 175px;
+        min-height: 44px;
+        padding: 10px 25px;
+        border-radius: 25px;
+        border: 0;
+        outline: 0;
+        box-shadow: none;
+        color: #fff;
+        text-transform: capitalize;
+        background-color: #0f1972;
+        font-family: "Barlow";
+        letter-spacing: 0.18px;
+        text-align: center;
+        color: #fefefe;
+        font-size: 16px;
+        margin-left: -84px;
+      }
+    }
+    button{
+      margin-left: auto;
+    }
+  }
+ 
 }
 
 /* Bill */

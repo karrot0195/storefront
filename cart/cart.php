@@ -135,9 +135,9 @@ $product_ids = [];
 				?>
 
 				<?php do_action( 'woocommerce_cart_contents' ); ?>
-
-				<tr>
-					<td colspan="6" class="actions">
+				</tbody>
+		</table>
+					<div class="actions">
 
 						<?php if ( wc_coupons_enabled() ) { ?>
 							<div class="coupon">
@@ -151,12 +151,10 @@ $product_ids = [];
 						<?php do_action( 'woocommerce_cart_actions' ); ?>
 
 						<?php wp_nonce_field( 'woocommerce-cart', 'woocommerce-cart-nonce' ); ?>
-					</td>
-				</tr>
+					</div>
 
 				<?php do_action( 'woocommerce_after_cart_contents' ); ?>
-			</tbody>
-		</table>
+			
 		<?php do_action( 'woocommerce_after_cart_table' ); ?>
 	</form>
 

@@ -174,6 +174,7 @@ body {
   font-size: 20px;
   color: #fff;
 }
+/* Cart */
 .woocommerce-cart .woocommerce-cart-form {
   padding: 0 114px;
 }
@@ -182,6 +183,44 @@ body {
 }
 .woocommerce-cart .cart-collaterals {
   padding: 0 114px;
+}
+.woocommerce-cart .actions {
+  display: flex;
+}
+.woocommerce-cart .actions .coupon label {
+  display: none;
+}
+.woocommerce-cart .actions .coupon input {
+  max-width: 290px;
+  min-height: 44px;
+  box-shadow: none;
+  outline: 0;
+  padding: 10px 25px;
+  border: 1px solid #ddd;
+  border-radius: 25px;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+.woocommerce-cart .actions .coupon button {
+  min-width: 175px;
+  min-height: 44px;
+  padding: 10px 25px;
+  border-radius: 25px;
+  border: 0;
+  outline: 0;
+  box-shadow: none;
+  color: #fff;
+  text-transform: capitalize;
+  background-color: #0f1972;
+  font-family: "Barlow";
+  letter-spacing: 0.18px;
+  text-align: center;
+  color: #fefefe;
+  font-size: 16px;
+  margin-left: -84px;
+}
+.woocommerce-cart .actions button {
+  margin-left: auto;
 }
 /* Bill */
 .woocommerce-billing-fields h3 {
