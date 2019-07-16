@@ -403,3 +403,77 @@ if( function_exists('acf_add_local_field_group') ):
     ));
 
 endif;
+
+if( function_exists('acf_add_local_field_group') ):
+    $page_wishlist = get_page_by_title('wishlist');
+    $page_cart = get_page_by_title('cart');
+    acf_add_local_field_group(array (
+        'key' => 'group_5d2ab26ec979a',
+        'title' => 'Product related',
+        'fields' => array (
+            array (
+                'key' => 'field_5d2ab276f7def',
+                'label' => 'Title',
+                'name' => 'title',
+                'type' => 'text',
+                'instructions' => '',
+                'required' => 0,
+                'conditional_logic' => 0,
+                'wrapper' => array (
+                    'width' => '',
+                    'class' => '',
+                    'id' => '',
+                ),
+                'default_value' => '',
+                'placeholder' => '',
+                'prepend' => '',
+                'append' => '',
+                'maxlength' => '',
+            ),
+            array (
+                'key' => 'field_5d2ab27df7df0',
+                'label' => 'Description',
+                'name' => 'description',
+                'type' => 'textarea',
+                'instructions' => '',
+                'required' => 0,
+                'conditional_logic' => 0,
+                'wrapper' => array (
+                    'width' => '',
+                    'class' => '',
+                    'id' => '',
+                ),
+                'default_value' => '',
+                'placeholder' => '',
+                'prepend' => '',
+                'append' => '',
+                'maxlength' => '',
+            ),
+        ),
+        'location' => array (
+            array (
+                array (
+                    'param' => 'page',
+                    'operator' => '==',
+                    'value' => isset($page_wishlist->ID) ? $page_wishlist->ID :     '',
+                )
+            ),
+            array(
+                array (
+                    'param' => 'page',
+                    'operator' => '==',
+                    'value' => isset($page_cart->ID) ? $page_cart->ID : '',
+                ),
+            )
+        ),
+        'menu_order' => 0,
+        'position' => 'normal',
+        'style' => 'default',
+        'label_placement' => 'top',
+        'instruction_placement' => 'label',
+        'hide_on_screen' => '',
+        'active' => 1,
+        'description' => '',
+    ));
+
+endif;

@@ -27,6 +27,15 @@ function get_user_bookmark() {
     return $bookmark;
 }
 
+function get_products_by_bookmark() {
+    $bookmark_ids = get_user_bookmark();
+    $query = new WC_Product_Query( [
+        'include' => $bookmark_ids
+    ] );
+    $products = $query->get_products();
+    return $products;
+}
+
 function get_class_the_bookmark() {
 	$post_id = get_the_ID();
 	$bookmark = get_user_bookmark();

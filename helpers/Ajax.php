@@ -46,8 +46,6 @@ function action_book_mark() {
         }
         update_user_meta(get_current_user_id(), 'bookmark', $bookmark);
    }
-
-
     echo $type;
     die;
 }
