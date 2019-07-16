@@ -183,6 +183,7 @@ body {
 }
 .woocommerce-cart .cart-collaterals {
   padding: 0 114px;
+  margin-top: 50px;
 }
 .woocommerce-cart .actions {
   display: flex;
@@ -202,6 +203,10 @@ body {
   font-size: 16px;
 }
 .woocommerce-cart .actions .coupon button {
+  margin-left: -84px;
+}
+.woocommerce-cart .actions button {
+  margin-left: auto;
   min-width: 175px;
   min-height: 44px;
   padding: 10px 25px;
@@ -217,10 +222,13 @@ body {
   text-align: center;
   color: #fefefe;
   font-size: 16px;
-  margin-left: -84px;
+  cursor: pointer;
 }
-.woocommerce-cart .actions button {
-  margin-left: auto;
+.home-page-1 table tbody td {
+  background: #ffffff;
+}
+.home-page-1 .cart_totals table.shop_table.shop_table_responsive {
+  margin-bottom: 0;
 }
 /* Bill */
 .woocommerce-billing-fields h3 {

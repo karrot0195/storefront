@@ -2385,8 +2385,10 @@ table th {
 }
 .home-page-1 table.cart td,
 .home-page-1 table.cart th {
-  padding: 0;
   text-align: center;
+}
+.home-page-1 table.cart th {
+  padding: 0;
 }
 .home-page-1 table.cart td.product-remove {
   text-align: center;
@@ -2394,9 +2396,6 @@ table th {
 .home-page-1 table.shop_table_responsive tr td,
 .home-page-1 table.cart td.product-remove {
   border-bottom: 1px solid rgba(149, 149, 149, 0.4);
-}
-.home-page-1 table.shop_table_responsive tr:last-child td {
-  border: 0;
 }
 .home-page-1 table.cart td.actions .button {
   min-width: 175px;
@@ -2430,18 +2429,19 @@ table th {
   font-weight: normal;
   font-style: normal;
   font-stretch: normal;
-  line-height: 6.85;
+  line-height: 4.85;
   letter-spacing: 0.24px;
   text-align: left;
   color: #2a2a2a;
 }
 .home-page-1 .wc-proceed-to-checkout .button.checkout-button {
   width: auto;
+  min-height: 44px;
   padding: 10px;
-  border-radius: 16.5px;
+  border-radius: 22px;
   background-color: #0f1972;
   font-family: "Barlow";
-  font-size: 10px;
+  font-size: 16px;
   font-weight: normal;
   font-style: normal;
   font-stretch: normal;
@@ -2452,6 +2452,7 @@ table th {
   text-decoration: none;
   margin-top: 10px;
   position: relative;
+  box-sizing: border-box;
 }
 .home-page-1 .wc-proceed-to-checkout .button.checkout-button:after {
   content: "";
@@ -2487,29 +2488,15 @@ table th {
 .home-page-1 table.shop_table_responsive tr td .quantity label {
   display: none;
 }
+.home-page-1 table.shop_table_responsive tr:last-child td {
+  border: none;
+}
 .home-page-1 table.shop_table_responsive tr.order-total th {
   border: 0;
 }
-.home-page-1 table.cart td.actions .coupon {
-  position: relative;
-}
-.home-page-1 table.cart td.actions .coupon input {
-  max-width: 200px;
-  height: 44px;
-  box-shadow: none;
-  outline: 0;
-  padding: 0 10px;
-  border: 1px solid #ddd;
-  border-radius: 25px;
-}
-.home-page-1 table.cart td.actions .coupon input + button {
-  position: absolute;
-  top: 50%;
-  right: -95px;
-  transform: translateY(-50%);
-}
 .home-page-1 table.shop_table.shop_table_responsive {
   width: 100%;
+  margin-bottom: 1.706326em;
 }
 .home-page-1 .cart-collaterals h2 {
   display: none;
