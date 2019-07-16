@@ -95,6 +95,12 @@
   color: #2a2a2a;
   margin: 30px auto 0;
 }
+.faq .faq-wrapper .content .block__content:first-child,
+.shipping .faq-wrapper .content .block__content:first-child,
+.faq .shipping-wrapper .content .block__content:first-child,
+.shipping .shipping-wrapper .content .block__content:first-child {
+  padding-top: 0;
+}
 .faq .faq-wrapper .content .block__content:last-child,
 .shipping .faq-wrapper .content .block__content:last-child,
 .faq .shipping-wrapper .content .block__content:last-child,
