@@ -150,21 +150,24 @@
   .faq .faq-wrapper,
   .shipping .faq-wrapper,
   .faq .shipping-wrapper,
-  .shipping .shipping-wrapper {
+  .shipping .shipping-wrapper,
+  .privacy-policy .privacy-policy-wrapper {
     display: block;
     padding: 0;
   }
   .faq .faq-wrapper .sidebar,
   .shipping .faq-wrapper .sidebar,
   .faq .shipping-wrapper .sidebar,
-  .shipping .shipping-wrapper .sidebar {
+  .shipping .shipping-wrapper .sidebar,
+  .privacy-policy .privacy-policy-wrapper .sidebar {
     width: 100%;
     margin: 50px auto 20px;
   }
   .faq .faq-wrapper .content,
   .shipping .faq-wrapper .content,
   .faq .shipping-wrapper .content,
-  .shipping .shipping-wrapper .content {
+  .shipping .shipping-wrapper .content,
+  .privacy-policy .privacy-policy-wrapper .content {
     width: 100%;
   }
 }
