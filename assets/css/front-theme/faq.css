@@ -14,6 +14,14 @@
   display: flex;
   padding: 100px;
 }
+@media screen and (max-width: 1024px) {
+  .faq .faq-wrapper,
+  .shipping .faq-wrapper,
+  .faq .shipping-wrapper,
+  .shipping .shipping-wrapper {
+    padding: 100px 0;
+  }
+}
 .faq .faq-wrapper .sidebar,
 .shipping .faq-wrapper .sidebar,
 .faq .shipping-wrapper .sidebar,
@@ -31,6 +39,14 @@
   color: #2a2a2a;
   margin: 0;
 }
+@media screen and (max-width: 767px) {
+  .faq .faq-wrapper .sidebar p,
+  .shipping .faq-wrapper .sidebar p,
+  .faq .shipping-wrapper .sidebar p,
+  .shipping .shipping-wrapper .sidebar p {
+    font-size: 20px;
+  }
+}
 .faq .faq-wrapper .content,
 .shipping .faq-wrapper .content,
 .faq .shipping-wrapper .content,
@@ -41,7 +57,7 @@
 .shipping .faq-wrapper .content .block__content,
 .faq .shipping-wrapper .content .block__content,
 .shipping .shipping-wrapper .content .block__content {
-  padding-top: 22px;
+  padding-top: 24px;
   padding-bottom: 30px;
   cursor: pointer;
   border-bottom: 1px solid rgba(149, 149, 149, 0.4);
@@ -50,12 +66,20 @@
 .shipping .faq-wrapper .content .block__content .title,
 .faq .shipping-wrapper .content .block__content .title,
 .shipping .shipping-wrapper .content .block__content .title {
-  font-size: 19px;
+  font-size: 18px;
   font-weight: 600;
   letter-spacing: 0.28px;
   text-align: left;
   color: #2a2a2a;
   position: relative;
+}
+@media screen and (max-width: 767px) {
+  .faq .faq-wrapper .content .block__content .title,
+  .shipping .faq-wrapper .content .block__content .title,
+  .faq .shipping-wrapper .content .block__content .title,
+  .shipping .shipping-wrapper .content .block__content .title {
+    font-size: 16px;
+  }
 }
 .faq .faq-wrapper .content .block__content .title::before,
 .shipping .faq-wrapper .content .block__content .title::before,
@@ -95,6 +119,14 @@
   color: #2a2a2a;
   margin: 30px auto 0;
 }
+@media screen and (max-width: 767px) {
+  .faq .faq-wrapper .content .block__content .sub-title p,
+  .shipping .faq-wrapper .content .block__content .sub-title p,
+  .faq .shipping-wrapper .content .block__content .sub-title p,
+  .shipping .shipping-wrapper .content .block__content .sub-title p {
+    font-size: 14px;
+  }
+}
 .faq .faq-wrapper .content .block__content:first-child,
 .shipping .faq-wrapper .content .block__content:first-child,
 .faq .shipping-wrapper .content .block__content:first-child,
@@ -121,7 +153,7 @@
   }
   .faq .faq-wrapper .sidebar {
     width: 100%;
-    margin: 50px auto 40px;
+    margin: 50px auto 20px;
   }
   .faq .faq-wrapper .content {
     width: 100%;
