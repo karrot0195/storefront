@@ -49,6 +49,21 @@ get_header('home-1'); ?>
                     <div class="title">
                         <?php echo $content_ab[0]['title'] ?>
                     </div>
+                    <?php
+                        $box = $content_ab[0]['box'];
+                        if($box) : 
+                    ?>
+                    <div class="sub_title">
+                    </div>
+                    <div class="box">
+                        <div class="left">
+                            <?php echo $box[0]['left'] ?>
+                        </div>
+                        <div class="right">
+                            <?php echo $box[0]['right'] ?>
+                        </div>
+                    </div>
+                    <?php endif ?>
                     <div class="desc">
                         <?php echo $content_ab[0]['description'] ?>
                     </div>
