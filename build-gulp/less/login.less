@@ -346,6 +346,7 @@
                 font-size: 16px;
                 -webkit-transition: 0.3s all ease;
                 transition: 0.3s all ease;
+                box-sizing: border-box;
                 &:focus{
                     outline: none;
                     box-shadow: 1px 2px 11px 3px rgba(0, 0, 0, 0.1);
@@ -388,7 +389,7 @@
                     width: 200px;
                     text-align: center;
                     color: #ffffff;
-                    font-size: 14px;
+                    font-size: 16px;
                     cursor: pointer;
 
                 }
@@ -558,10 +559,39 @@
     // CONTACT US
     .contact-us-wrapper{
         display: block;
+        padding: 30px 0;
         .sidebar,
         .content{
             width: 100%;
         }
+        .sidebar{
+            margin-bottom: 30px;
+        }
+        .content{
+            .ad-p-wrapper{
+                display: block;
+                padding-bottom: 60px;
+            }
+            .phone{
+                padding-left: 0;
+                margin-top: 30px;
+            }
+            .contact-form{
+                padding-top: 30px;
+            }
+        }
     }
-
+    .contact-us-wrapper .content .contact-form .form-flex{
+        display: block;
+    }
+    .contact-us-wrapper .content .contact-form input, .contact-us-wrapper .content .contact-form textarea{
+        width: 100%;
+    }
+    .contact-us-wrapper .content .contact-form .form-flex label:last-child{
+        display: block;
+        margin-top: 20px;
+    }
+    .contact-us-wrapper .content .contact-form .form-submit input{
+        width: 100%;
+    }
 }

@@ -346,6 +346,7 @@
   font-size: 16px;
   -webkit-transition: 0.3s all ease;
   transition: 0.3s all ease;
+  box-sizing: border-box;
 }
 .contact-us-wrapper .content .contact-form input:focus,
 .contact-us-wrapper .content .contact-form textarea:focus {
@@ -389,7 +390,7 @@
   width: 200px;
   text-align: center;
   color: #ffffff;
-  font-size: 14px;
+  font-size: 16px;
   cursor: pointer;
 }
 /*==================== RESPONSIVE ====================*/
@@ -547,9 +548,38 @@
   }
   .contact-us-wrapper {
     display: block;
+    padding: 30px 0;
   }
   .contact-us-wrapper .sidebar,
   .contact-us-wrapper .content {
+    width: 100%;
+  }
+  .contact-us-wrapper .sidebar {
+    margin-bottom: 30px;
+  }
+  .contact-us-wrapper .content .ad-p-wrapper {
+    display: block;
+    padding-bottom: 60px;
+  }
+  .contact-us-wrapper .content .phone {
+    padding-left: 0;
+    margin-top: 30px;
+  }
+  .contact-us-wrapper .content .contact-form {
+    padding-top: 30px;
+  }
+  .contact-us-wrapper .content .contact-form .form-flex {
+    display: block;
+  }
+  .contact-us-wrapper .content .contact-form input,
+  .contact-us-wrapper .content .contact-form textarea {
+    width: 100%;
+  }
+  .contact-us-wrapper .content .contact-form .form-flex label:last-child {
+    display: block;
+    margin-top: 20px;
+  }
+  .contact-us-wrapper .content .contact-form .form-submit input {
     width: 100%;
   }
 }
