@@ -208,10 +208,10 @@
       {
         breakpoint: 600,
         settings: {
-          slidesToShow: 1,
           slidesToScroll: 1,
           arrows: false,
           dots: true,
+          variableWidth: true,
         }
       },
       {
@@ -221,6 +221,7 @@
           slidesToScroll: 1,
           arrows: false,
           dots: true,
+          variableWidth: true,
         }
       }
       // You can unslick at a given breakpoint now by adding:
