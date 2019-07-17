@@ -72,22 +72,6 @@ get_header('home-1'); ?>
                     <?php endif ?>
                 </div>
             </div>
-            <div class="block-image-wrapper">
-                <div class ="container">
-                    <div class= "block-image">
-                    <?php 
-                        $block_image_ab = get_field('block_image_ab');
-                        if ($block_image_ab) :  
-                            foreach($block_image_ab as $bl_img ):
-                            $image = wp_get_attachment_url($bl_img['image']); 
-                            ?>
-                            
-                            <img  alt="" src="<?= esc_url( $image) ?> ">
-                        <?php endforeach; ?>
-                        </div>
-                </div>
-                <?php endif ?>
-            </div>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
