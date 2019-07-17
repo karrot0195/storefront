@@ -1467,8 +1467,11 @@ body {
     &.single-product div.product .woocommerce-product-gallery img {
       display: block;
       margin: 0 auto;
-      max-width: 200px !important;
-      max-height: 300px !important;
+      @media screen and (max-width: 767px){
+        max-width: 200px !important;
+        max-height: 300px !important;
+      }
+    
     }
 
     .flex-direction-nav {
