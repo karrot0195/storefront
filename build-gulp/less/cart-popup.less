@@ -267,6 +267,7 @@ body {
   letter-spacing: 0.28px;
   text-align: left;
   color: #2a2a2a;
+  margin: 0 0 80px;
 }
 
 .woocommerce-billing-fields__field-wrapper {
@@ -283,11 +284,33 @@ body {
   }
 
   .form-row{
-    input {
+    input,
+    textarea {
       height: 44px;
       padding-left: 10px;
       box-sizing: border-box;
+      border-radius: 4px;
+      border: 1px solid #d7d7d7;
+      transition: 0.3s all ease;
+      &:focus{
+        outline: none;
+        box-shadow: 1px 2px 11px 3px rgba(0, 0, 0, 0.1);
+        border-color: #ffffff;
+      }
     }
+  }
+}
+form.checkout.woocommerce-checkout{
+  padding: 0 114px;
+  .col2-set{
+    width: 65%;
+    padding-right: 100px;
+    box-sizing: border-box;
+    margin-right: 0;
+  }
+  #order_review_heading,
+  #order_review{
+    width: 35%;
   }
 }
 .col2-set {
@@ -300,9 +323,51 @@ body {
       width: 49%;
       margin-right: 0;
     }
+    .update_totals_on_change{
+      width: 49%;
+      .select2-container--default .select2-selection--single{
+        height: 44px;
+        .select2-selection__rendered{
+          line-height: 44px;
+        }
+        .select2-selection__arrow{
+          top: 50%;
+          transform: translateY(-50%);
+        }
+      }
+    }
+    .validate-phone{
+      width: 49%;
+      float: left;
+    }
+    .validate-email{
+      width: 49%;
+      float: right;
+      clear: none;
+    }
   }
 }
-
+.woocommerce-additional-fields .form-row{
+  label{
+    margin-bottom: 18px;
+  }
+  textarea{
+    padding-left: 10px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    border: 1px solid #d7d7d7;
+    transition: 0.3s all ease;
+    height: 180px;
+    padding-top: 8px;
+    font-size: 16px;
+    &:focus{
+      outline: none;
+      box-shadow: 1px 2px 11px 3px rgba(0, 0, 0, 0.1);
+      border-color: #ffffff;
+    }
+  }
+  
+}
 // CUSTOM PAGE WISHLIST
 .site-main.page-wishlist ul.products li.product img{
   max-height: 400px;

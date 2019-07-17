@@ -250,6 +250,7 @@ body {
   letter-spacing: 0.28px;
   text-align: left;
   color: #2a2a2a;
+  margin: 0 0 80px;
 }
 .woocommerce-billing-fields__field-wrapper .form-row label {
   font-family: "Barlow";
@@ -262,10 +263,33 @@ body {
   color: #2a2a2a;
   margin-bottom: 18px;
 }
-.woocommerce-billing-fields__field-wrapper .form-row input {
+.woocommerce-billing-fields__field-wrapper .form-row input,
+.woocommerce-billing-fields__field-wrapper .form-row textarea {
   height: 44px;
   padding-left: 10px;
   box-sizing: border-box;
+  border-radius: 4px;
+  border: 1px solid #d7d7d7;
+  transition: 0.3s all ease;
+}
+.woocommerce-billing-fields__field-wrapper .form-row input:focus,
+.woocommerce-billing-fields__field-wrapper .form-row textarea:focus {
+  outline: none;
+  box-shadow: 1px 2px 11px 3px rgba(0, 0, 0, 0.1);
+  border-color: #ffffff;
+}
+form.checkout.woocommerce-checkout {
+  padding: 0 114px;
+}
+form.checkout.woocommerce-checkout .col2-set {
+  width: 65%;
+  padding-right: 100px;
+  box-sizing: border-box;
+  margin-right: 0;
+}
+form.checkout.woocommerce-checkout #order_review_heading,
+form.checkout.woocommerce-checkout #order_review {
+  width: 35%;
 }
 .col2-set .woocommerce-billing-fields__field-wrapper p {
   margin: 0 0 35px;
@@ -274,6 +298,46 @@ body {
 .col2-set .woocommerce-billing-fields__field-wrapper .form-row-last {
   width: 49%;
   margin-right: 0;
+}
+.col2-set .woocommerce-billing-fields__field-wrapper .update_totals_on_change {
+  width: 49%;
+}
+.col2-set .woocommerce-billing-fields__field-wrapper .update_totals_on_change .select2-container--default .select2-selection--single {
+  height: 44px;
+}
+.col2-set .woocommerce-billing-fields__field-wrapper .update_totals_on_change .select2-container--default .select2-selection--single .select2-selection__rendered {
+  line-height: 44px;
+}
+.col2-set .woocommerce-billing-fields__field-wrapper .update_totals_on_change .select2-container--default .select2-selection--single .select2-selection__arrow {
+  top: 50%;
+  transform: translateY(-50%);
+}
+.col2-set .woocommerce-billing-fields__field-wrapper .validate-phone {
+  width: 49%;
+  float: left;
+}
+.col2-set .woocommerce-billing-fields__field-wrapper .validate-email {
+  width: 49%;
+  float: right;
+  clear: none;
+}
+.woocommerce-additional-fields .form-row label {
+  margin-bottom: 18px;
+}
+.woocommerce-additional-fields .form-row textarea {
+  padding-left: 10px;
+  box-sizing: border-box;
+  border-radius: 4px;
+  border: 1px solid #d7d7d7;
+  transition: 0.3s all ease;
+  height: 180px;
+  padding-top: 8px;
+  font-size: 16px;
+}
+.woocommerce-additional-fields .form-row textarea:focus {
+  outline: none;
+  box-shadow: 1px 2px 11px 3px rgba(0, 0, 0, 0.1);
+  border-color: #ffffff;
 }
 .site-main.page-wishlist ul.products li.product img {
   max-height: 400px;
