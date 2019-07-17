@@ -115,6 +115,12 @@
   }
 }
 @media screen and (max-width: 480px) {
+  .about-us .slider__item .slick-track {
+    height: 540px;
+  }
+  .about-us .slider__item .slick-track img {
+    object-fit: cover;
+  }
   .about-us .slider__item__content .title {
     line-height: unset;
   }
