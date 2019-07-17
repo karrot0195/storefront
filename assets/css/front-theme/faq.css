@@ -151,7 +151,7 @@
   .shipping .faq-wrapper,
   .faq .shipping-wrapper,
   .shipping .shipping-wrapper,
-  .privacy-policy .privacy-policy-wrapper {
+  .home-page-1 .privacy-policy .privacy-policy-wrapper {
     display: block;
     padding: 0;
   }
@@ -159,7 +159,7 @@
   .shipping .faq-wrapper .sidebar,
   .faq .shipping-wrapper .sidebar,
   .shipping .shipping-wrapper .sidebar,
-  .privacy-policy .privacy-policy-wrapper .sidebar {
+  .home-page-1 .privacy-policy .privacy-policy-wrapper .sidebar {
     width: 100%;
     margin: 50px auto 20px;
   }
@@ -167,7 +167,7 @@
   .shipping .faq-wrapper .content,
   .faq .shipping-wrapper .content,
   .shipping .shipping-wrapper .content,
-  .privacy-policy .privacy-policy-wrapper .content {
+  .home-page-1 .privacy-policy .privacy-policy-wrapper .content {
     width: 100%;
   }
 }
