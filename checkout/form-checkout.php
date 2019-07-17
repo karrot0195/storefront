@@ -60,8 +60,51 @@ if ( ! $checkout->is_registration_enabled() && $checkout->is_registration_requir
 		</div>
 
 		<?php do_action( 'woocommerce_checkout_after_order_review' ); ?>
-
+		<div class="payment-wrapper">
+			<div class="payment-with">
+				<div class="title">
+					Payment with Debit / Credit Card
+				</div>
+				<div class="items">
+					<div class="item">
+						<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/Capa-1.png">
+					</div>
+					<div class="item">
+						<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/Layer-3.png">
+					</div>
+					<div class="item">
+						<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/Layer-4.png">
+					</div>
+				</div>	
+			</div>
+				<p class="form-row">
+					<label>Card Number</label>
+					<input type="text" class="form-number-card" placeholder="XXXX-XXXX-XXXX-XXXX">
+				</p>
+				<p class="form-row">
+					<label>Name</label>
+					<input type="text" class="form-name">
+				</p>
+				<div class="expiry-date">
+					<p class="form-row">
+						<label>Expiry Date</label>
+						<div class="m-y-wrapper">
+							<input type="text" class="form-month" placeholder="MM">
+							<input type="text" class="form-year"  placeholder="YYYY">
+						</div>
+					</p>
+				</div>
+					<p class="form-row">
+						<label>CVV</label>
+						<input type="text" class="form-cvv">
+					</p>
+				<div class="save-card">
+					<input type="checkbox" class="form-save"> Save card details for next time <br>
+					<button class="use-card">Use This Card</div>
+				</div>
+		</div>
 	</form>
+	<!--  -->
 </div>
 
 <?php do_action( 'woocommerce_after_checkout_form', $checkout ); ?>

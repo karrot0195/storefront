@@ -287,9 +287,15 @@ form.checkout.woocommerce-checkout .col2-set {
   box-sizing: border-box;
   margin-right: 0;
 }
-form.checkout.woocommerce-checkout #order_review_heading,
+form.checkout.woocommerce-checkout #order_review_heading {
+  display: none;
+}
 form.checkout.woocommerce-checkout #order_review {
   width: 35%;
+}
+form.checkout.woocommerce-checkout #order_review table.woocommerce-checkout-review-order-table {
+  line-height: unset;
+  margin-bottom: 0;
 }
 .col2-set .woocommerce-billing-fields__field-wrapper p {
   margin: 0 0 35px;
@@ -321,8 +327,12 @@ form.checkout.woocommerce-checkout #order_review {
   float: right;
   clear: none;
 }
+.woocommerce-additional-fields .form-row {
+  margin-top: 50px;
+}
 .woocommerce-additional-fields .form-row label {
   margin-bottom: 18px;
+  color: #2a2a2a;
 }
 .woocommerce-additional-fields .form-row textarea {
   padding-left: 10px;
@@ -338,6 +348,136 @@ form.checkout.woocommerce-checkout #order_review {
   outline: none;
   box-shadow: 1px 2px 11px 3px rgba(0, 0, 0, 0.1);
   border-color: #ffffff;
+}
+table.woocommerce-checkout-review-order-table tfoot {
+  margin-top: 30px;
+}
+table.woocommerce-checkout-review-order-table tfoot th {
+  line-height: unset;
+  border-bottom: 0;
+  padding: 10px 0;
+}
+table.woocommerce-checkout-review-order-table tfoot td {
+  font-family: "Barlow-m";
+  color: #2a2a2a;
+  padding: 10px 0;
+}
+table.woocommerce-checkout-review-order-table tfoot .order-total th,
+table.woocommerce-checkout-review-order-table tfoot .order-total td {
+  text-transform: uppercase;
+  font-family: "Barlow-s";
+}
+#payment.woocommerce-checkout-payment {
+  padding-right: 15px;
+}
+#payment.woocommerce-checkout-payment ul {
+  display: none;
+}
+#payment.woocommerce-checkout-payment .form-row.place-order {
+  margin-top: 30px;
+  padding: 0;
+  background-color: #ffffff;
+}
+#payment.woocommerce-checkout-payment .form-row.place-order .woocommerce-terms-and-conditions-wrapper {
+  display: none;
+}
+#payment.woocommerce-checkout-payment .form-row.place-order button {
+  height: 44px;
+  font-size: 16px;
+  background: #0f1972;
+  border-radius: 22px;
+  border: none;
+  cursor: pointer;
+}
+.payment-wrapper {
+  clear: both;
+  width: 65%;
+  padding-right: 100px;
+  box-sizing: border-box;
+  padding-top: 80px;
+}
+.payment-wrapper .payment-with {
+  display: flex;
+  margin-bottom: 80px;
+}
+.payment-wrapper .payment-with .title {
+  font-size: 24px;
+  color: #2a2a2a;
+  font-family: "Barlow-m";
+}
+.payment-wrapper .payment-with .items {
+  display: flex;
+  align-items: center;
+  margin-left: 15px;
+}
+.payment-wrapper .payment-with .items .item {
+  display: flex;
+  align-items: center;
+  border: 1px solid #eaeaea;
+  height: 30px;
+  width: 55px;
+  justify-content: center;
+  box-sizing: border-box;
+  margin-right: 5px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.payment-wrapper .payment-with .items .item:first-child img {
+  width: 30px;
+}
+.payment-wrapper input {
+  height: 44px;
+  border-radius: 4px;
+  border: 1px solid #d7d7d7;
+  transition: 0.3s all ease;
+  padding-left: 10px;
+  box-sizing: border-box;
+}
+.payment-wrapper input:focus {
+  outline: none;
+  box-shadow: 1px 2px 11px 3px rgba(0, 0, 0, 0.1);
+  border-color: #ffffff;
+}
+.payment-wrapper label {
+  margin-bottom: 18px;
+  color: #2a2a2a;
+}
+.payment-wrapper p {
+  margin-bottom: 35px;
+}
+.payment-wrapper .expiry-date p {
+  margin-bottom: 18px;
+}
+.payment-wrapper .expiry-date + .form-row {
+  width: 60%;
+}
+.payment-wrapper .m-y-wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 35px;
+}
+.payment-wrapper .m-y-wrapper input {
+  width: 49%;
+}
+.payment-wrapper .save-card {
+  color: #2a2a2a;
+  margin-top: 70px;
+  display: flex;
+  align-items: center;
+}
+.payment-wrapper .save-card input {
+  height: auto;
+}
+.payment-wrapper .save-card button {
+  margin-left: auto;
+  width: 290px;
+  height: 44px;
+  background: #0f1972;
+  border-radius: 22px;
+  border: none;
+  outline: none;
+  color: #ffffff;
+  cursor: pointer;
 }
 .site-main.page-wishlist ul.products li.product img {
   max-height: 400px;
