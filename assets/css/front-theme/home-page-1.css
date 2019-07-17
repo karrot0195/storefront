@@ -2743,6 +2743,9 @@ table th {
   .site-main.page-wishlist ul.products.columns-4 li.product.wrap-product-item .fm-sl-cart {
     position: relative;
   }
+  .site-main.page-wishlist ul.products.columns-4 li.product:hover .stock {
+    opacity: 1;
+  }
 }
 .site-main.page-wishlist ul.products.columns-4 li.product:hover {
   border-radius: 7.5px;
@@ -2780,8 +2783,8 @@ table th {
 }
 @media screen and (max-width: 767px) {
   .site-main.page-wishlist ul.products.columns-4 li.product .stock {
-    opacity: 1;
     margin-top: 20px;
+    padding: 0;
   }
 }
 .site-main.page-wishlist ul.products.columns-4 li.product .stock span {

@@ -210,7 +210,7 @@ body {
   border: 1px solid #ddd;
   border-radius: 25px;
   box-sizing: border-box;
-  font-size: 16px;
+  font-size: 15px;
 }
 .woocommerce-cart .actions .coupon button {
   margin-left: -84px;
@@ -480,5 +480,12 @@ table.woocommerce-checkout-review-order-table tfoot .order-total td {
   cursor: pointer;
 }
 .site-main.page-wishlist ul.products li.product img {
-  max-height: 400px;
+  max-height: 300px;
+  max-width: 200px;
+}
+@media screen and (max-width: 767px) {
+  .site-main.page-wishlist ul.products li.product img {
+    max-height: 225px;
+    max-width: 150px;
+  }
 }

@@ -2902,6 +2902,11 @@ table th {
       &.wrap-product-item .fm-sl-cart {
         position: relative;
       }
+      &:hover{
+        .stock{
+          opacity: 1;
+        }
+      }
     }
   &:hover {
     border-radius: 7.5px;
@@ -2935,8 +2940,8 @@ table th {
     -moz-transition:  all 0.3s ease;
     -webkit-transition:  all 0.3s ease;
     @media screen and (max-width: 767px) {
-      opacity: 1;
       margin-top: 20px;
+      padding: 0;
     }
     span {
       display: inline-block;

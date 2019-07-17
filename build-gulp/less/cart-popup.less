@@ -220,7 +220,7 @@ body {
         border: 1px solid #ddd;
         border-radius: 25px;
         box-sizing: border-box;
-        font-size: 16px;
+        font-size: 15px;
       }
       button{
         
@@ -518,5 +518,12 @@ table.woocommerce-checkout-review-order-table{
 }
 // CUSTOM PAGE WISHLIST
 .site-main.page-wishlist ul.products li.product img{
-  max-height: 400px;
+  max-height: 300px;
+  max-width: 200px;
+}
+@media screen and (max-width: 767px){
+  .site-main.page-wishlist ul.products li.product img{
+    max-height: 225px;
+    max-width: 150px;
+  }
 }
