@@ -35,6 +35,7 @@
 }
 .about-us .content p {
   margin: 0;
+  line-height: 32px;
 }
 .about-us .content .title {
   font-size: 25px;
@@ -52,11 +53,12 @@
 }
 .about-us .content .box .left,
 .about-us .content .box .right {
-  width: 37%;
+  width: 42%;
   text-align: left;
   padding: 40px;
   border: 1px solid #e2e2e2;
   position: relative;
+  line-height: 32px;
 }
 .about-us .content .box .left::before,
 .about-us .content .box .right::before {
@@ -70,7 +72,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  transform: scaleX(0.96) scaleY(0.9);
+  transform: scaleX(0.97) scaleY(0.9);
 }
 .about-us .content .desc {
   font-size: 16px;
@@ -78,7 +80,8 @@
   letter-spacing: 0.22px;
 }
 .about-us .content .desc p {
-  margin: 40px auto 0;
+  margin: 60px auto 0;
+  line-height: 32px;
 }
 .about-us .block-image-wrapper {
   margin-bottom: 110px;
