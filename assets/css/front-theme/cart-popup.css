@@ -263,11 +263,17 @@ body {
   margin-bottom: 18px;
 }
 .woocommerce-billing-fields__field-wrapper .form-row input {
-  height: 48px;
+  height: 44px;
+  padding-left: 10px;
+  box-sizing: border-box;
+}
+.col2-set .woocommerce-billing-fields__field-wrapper p {
+  margin: 0 0 35px;
 }
 .col2-set .woocommerce-billing-fields__field-wrapper .form-row-first,
 .col2-set .woocommerce-billing-fields__field-wrapper .form-row-last {
   width: 49%;
+  margin-right: 0;
 }
 .site-main.page-wishlist ul.products li.product img {
   max-height: 400px;
