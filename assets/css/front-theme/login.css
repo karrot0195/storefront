@@ -301,7 +301,7 @@
   width: 40%;
 }
 .contact-us-wrapper .sidebar p {
-  font-size: 22px;
+  font-size: 26px;
   font-family: 'Barlow-m';
   letter-spacing: 0.34px;
   text-align: left;
@@ -323,13 +323,13 @@
   padding-left: 50px;
 }
 .contact-us-wrapper .content .title {
-  font-size: 19px;
+  font-size: 18px;
   font-family: "Barlow";
   margin-bottom: 10px;
   font-weight: bold;
 }
-.contact-us-wrapper .content .desc {
-  font-size: 19px;
+.contact-us-wrapper .content .desc p {
+  font-size: 16px;
   line-height: 1.36;
 }
 .contact-us-wrapper .content .contact-form {
