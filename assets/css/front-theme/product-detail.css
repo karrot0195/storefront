@@ -1225,7 +1225,8 @@
   color: #2a2a2a;
   text-decoration: none;
 }
-.woocommerce #reviews .form-contribution .star-rating-selector:not(:checked) input:checked ~ label.checkbox {
+.woocommerce #reviews .form-contribution .star-rating-selector:not(:checked) input:checked ~ label.checkbox,
+.woocommerce #reviews .form-contribution .star-rating-selector:not(:checked) label.checkbox:hover {
   color: #fcbb1c !important;
 }
 @media screen and (max-width: 767px) {
