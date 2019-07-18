@@ -591,6 +591,7 @@ table.woocommerce-checkout-review-order-table tfoot .order-total td {
   table.cart td.product-quantity .quantity {
     justify-content: flex-end;
     padding-right: 10px;
+    margin-bottom: 10px;
   }
   table.cart td.product-quantity .quantity .qty {
     width: 20px;
@@ -609,5 +610,8 @@ table.woocommerce-checkout-review-order-table tfoot .order-total td {
   }
   .home-page-1 .cart-collaterals .cart_totals {
     width: 100%;
+  }
+  .woocommerce-cart .cart-collaterals {
+    margin-top: 20px;
   }
 }
