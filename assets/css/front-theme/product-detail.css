@@ -1229,6 +1229,17 @@
 .woocommerce #reviews .form-contribution .star-rating-selector:not(:checked) label.checkbox:hover {
   color: #fcbb1c !important;
 }
+.woocommerce #reviews #comments ol.commentlist li .contribution-actions a,
+.woocommerce-page #reviews #comments ol.commentlist li .contribution-actions a,
+.star-rating-selector:not(:checked) input:checked ~ label.checkbox,
+.star-rating-selector:not(:checked) label.checkbox:hover ~ label.checkbox,
+.star-rating-selector:not(:checked) label.checkbox:hover,
+.woocommerce #reviews #comments ol.commentlist li .contribution-actions a,
+.woocommerce-page #reviews #comments ol.commentlist li .contribution-actions a,
+.woocommerce #reviews .form-contribution .attachment-type:not(:checked) label.checkbox:before,
+.woocommerce-page #reviews .form-contribution .attachment-type:not(:checked) label.checkbox:before {
+  color: #fcbb1c !important;
+}
 @media screen and (max-width: 767px) {
   .wrap-additional_information tbody {
     display: flex;
