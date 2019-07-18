@@ -268,6 +268,15 @@
   $('.contribution-type-selector .js-switch-contribution-type').click(function(){
     $('.contribution-form-wrapper').addClass('contribution-form-wrapper-click');
     $('body').css('overflow', 'hidden');
+    if ($('.popup-background').length == 0) {
+      $(`<div class="popup-background" style="position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    background: #00000054;
+    top: 0;
+    left: 0;"> </div>`).insertBefore($('#reviews'));
+    }
   });
 
   /* EFFECT LIKE, SHARE */
