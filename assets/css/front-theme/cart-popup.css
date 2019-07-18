@@ -524,6 +524,9 @@ table.woocommerce-checkout-review-order-table tfoot .order-total td {
 .home-page-1 table.shop_table_responsive thead {
   display: block;
 }
+.woocommerce-cart .woocommerce-cart-form.sp {
+  display: none;
+}
 .site-main.page-wishlist ul.products li.product img {
   max-height: 300px;
   max-width: 200px;
