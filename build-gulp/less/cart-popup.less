@@ -561,6 +561,10 @@ table.woocommerce-checkout-review-order-table{
     }
   }
 }
+
+.woocommerce-cart .woocommerce-cart-form.sp{
+  display: none;
+}
 // CUSTOM PAGE WISHLIST
 .site-main.page-wishlist ul.products li.product img{
   max-height: 300px;
@@ -579,5 +583,86 @@ table.woocommerce-checkout-review-order-table{
         opacity: 1;
       }
     }
+  }
+  .woocommerce-cart .woocommerce-cart-form.pc{
+    display: none;
+  }
+  .woocommerce-cart .woocommerce-cart-form.sp{
+    display: block;
+    table.cart{
+      margin-bottom: 30px;
+    }
+    label{
+      display: none;
+    }
+    .actions{
+      display: block;
+      text-align: right;
+    }
+    .coupon{
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 30px;
+      input{
+        width: 60%;
+      }
+      button{
+        width: 50%;
+      }
+    }
+  }
+  .home-page-1 table.cart td.product-remove a.remove{
+    position: initial;
+  }
+  .woocommerce-cart .woocommerce-cart-form table.cart{
+    th,
+    td{
+      padding: 10px 0;
+      font-size: 14px;
+      text-align: left;
+      border-bottom: 1px solid rgba(149, 149, 149, 0.4);
+      a{
+        text-decoration: none;
+        color: #2a2a2a;
+      }
+    }
+    th{
+      line-height: unset;
+    }
+    th.product-thumbnail,
+    td.product-thumbnail{
+      text-align: center;
+    }
+    td.product-quantity{
+      text-align: right;
+      color: #2a2a2a;
+    }
+  }
+  table.cart td.product-quantity .quantity{
+    justify-content: flex-end;
+    padding-right: 10px;
+    margin-bottom: 10px;
+  }
+  table.cart td.product-quantity .quantity .qty{
+    width: 20px;
+  }
+  table.cart td.product-quantity .quantity .quantity-nav{
+    display: block;
+    right: 0;
+    width: auto;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  table.cart td.product-quantity .quantity .quantity-nav .quantity-button{
+    width: auto;
+    height: auto;
+    border: none;
+    font-size: 18px;
+  }
+  .home-page-1 .cart-collaterals .cart_totals{
+    width: 100%;
+  }
+  .woocommerce-cart .cart-collaterals{
+    margin-top: 20px;
   }
 }

@@ -356,7 +356,7 @@
 .storefront-product-detail #reviews .commentlist li .comment_container .comment-text .star-rating {
   float: none;
   text-align: left;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 @media screen and (max-width: 767px) {
   .storefront-product-detail #reviews .commentlist li .comment_container .comment-text .star-rating {
@@ -382,6 +382,16 @@
 .storefront-product-detail #reviews .commentlist li p.meta {
   text-align: left;
   margin: 0;
+  order: 1;
+}
+.storefront-product-detail #reviews .commentlist li p.meta .woocommerce-review__author {
+  text-transform: capitalize;
+}
+.storefront-product-detail #reviews .commentlist li .description {
+  order: 3;
+}
+.storefront-product-detail #reviews .commentlist li .description p {
+  margin-top: 10px;
 }
 .storefront-product-detail #tab-description {
   float: none;
@@ -426,6 +436,7 @@
 }
 .storefront-product-detail #reviews .commentlist li .comment_container .comment-text {
   display: flex;
+  flex-direction: column;
 }
 @media screen and (max-width: 480px) {
   .storefront-product-detail #reviews .commentlist li .comment_container .comment-text {
@@ -499,6 +510,7 @@
 .storefront-product-detail #review_form_wrapper {
   padding-bottom: 60px;
   display: none;
+  max-width: 840px;
 }
 .storefront-product-detail .site-content {
   background-color: #f6f6f6;
@@ -675,8 +687,8 @@
   background-color: #ffff;
 }
 .storefront-product-detail #reviews .commentlist li {
-  margin-bottom: 0;
-  padding: 40px 0 35px;
+  margin-bottom: 30px;
+  padding: 40px 0 25px;
   border-bottom: 1px solid #d1d1d1;
 }
 @media screen and (max-width: 767px) {
@@ -1127,16 +1139,12 @@
 .block-reviews .product-rating-summary h3 {
   display: none;
 }
-.block-reviews .contribution-form-wrapper.active {
-  display: none !important;
-}
 .woocommerce-page .block-reviews #reviews .product-rating .product-rating-details {
   display: none;
 }
 .woocommerce-page .block-reviews #reviews .product-rating,
 .woocommerce-page .block-reviews .woocommerce-page #reviews .product-rating {
   display: block;
-  float: left;
   width: auto;
 }
 .woocommerce-page .block-reviews #reviews .product-rating .product-rating-summary p,
@@ -1150,8 +1158,8 @@
 }
 .woocommerce-page .block-reviews .contribution-type-selector {
   display: block;
-  float: right;
   width: auto;
+  margin-top: 20px;
 }
 .woocommerce-page .block-reviews .contribution-type-selector a {
   border-bottom-color: #ffffff !important;
@@ -1161,7 +1169,7 @@
 }
 .woocommerce-page .block-reviews #reviews #comments {
   clear: both;
-  padding-top: 50px;
+  padding-top: 10px;
 }
 .woocommerce-page .block-reviews #reviews #comments .contributions-filter {
   display: none;
@@ -1176,12 +1184,14 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  order: 2;
+  margin-top: 10px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: reverse;
   -ms-flex-direction: column-reverse;
   flex-direction: column-reverse;
 }
-.woocommerce-page .block-reviews #reviews #comments ol.commentlist li .comment-text .meta .woocommerce-review__author {
+.woocommerce-page .block-reviews #reviews #comments ol.commentlist li .comment-text .meta .woocommerce-review__author .contribution-badge {
   display: none;
 }
 .woocommerce-page .block-reviews #reviews #comments ol.commentlist li .comment-text .contribution-actions {
@@ -1203,6 +1213,58 @@
 }
 .container .wrap-attribute-size .block-main li {
   margin-right: 10px;
+}
+.woocommerce #reviews .form-contribution {
+  border: none;
+}
+.woocommerce #reviews .form-contribution .form-row.star-rating-selector label {
+  color: #2a2a2a;
+  font-family: "Barlow-s";
+}
+.woocommerce #reviews .form-contribution .form-row.star-rating-selector fieldset label {
+  font-size: 16px;
+}
+.woocommerce #reviews .form-contribution .required {
+  color: #2a2a2a;
+  text-decoration: none;
+}
+.woocommerce #reviews .form-contribution .form-row,
+.woocommerce #reviews .form-contribution .wc-product-reviews-pro-form-submit-row {
+  display: block !important;
+  color: #2a2a2a;
+}
+.woocommerce #reviews .form-contribution .form-row label,
+.woocommerce #reviews .form-contribution .wc-product-reviews-pro-form-submit-row label {
+  margin-bottom: 10px;
+}
+.woocommerce #reviews .form-contribution .form-row input,
+.woocommerce #reviews .form-contribution .wc-product-reviews-pro-form-submit-row input {
+  height: 44px;
+  border-radius: 4px;
+  border: 1px solid #d7d7d7;
+  transition: 0.3s all ease;
+  padding-left: 10px;
+  box-sizing: border-box;
+}
+.woocommerce #reviews .form-contribution .form-row input:focus,
+.woocommerce #reviews .form-contribution .wc-product-reviews-pro-form-submit-row input:focus {
+  outline: none;
+  box-shadow: 1px 2px 11px 3px rgba(0, 0, 0, 0.1);
+  border-color: #ffffff;
+}
+.woocommerce #reviews .form-contribution #review_rating_field fieldset {
+  margin: 10px 0 15px;
+}
+.home-page-1 .woocommerce #reviews #comments ol.commentlist li .contribution-actions a,
+.home-page-1 .woocommerce-page #reviews #comments ol.commentlist li .contribution-actions a,
+.home-page-1 .star-rating-selector:not(:checked) input:checked ~ label.checkbox,
+.home-page-1 .star-rating-selector:not(:checked) label.checkbox:hover ~ label.checkbox,
+.home-page-1 .star-rating-selector:not(:checked) label.checkbox:hover,
+.home-page-1 .woocommerce #reviews #comments ol.commentlist li .contribution-actions a,
+.home-page-1 .woocommerce-page #reviews #comments ol.commentlist li .contribution-actions a,
+.home-page-1 .woocommerce #reviews .form-contribution .attachment-type:not(:checked) label.checkbox:before,
+.home-page-1 .woocommerce-page #reviews .form-contribution .attachment-type:not(:checked) label.checkbox:before {
+  color: #fcbb1c !important;
 }
 @media screen and (max-width: 767px) {
   .wrap-additional_information tbody {

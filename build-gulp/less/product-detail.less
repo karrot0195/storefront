@@ -344,7 +344,7 @@
   #reviews .commentlist li .comment_container .comment-text .star-rating {
     float: none;
     text-align: left;
-    margin-top: 20px;
+    margin-top: 10px;
     @media screen and (max-width: 767px) {
       margin-top: 10px;
     }
@@ -363,10 +363,22 @@
       font-size: 15px;
     }
   }
-  #reviews .commentlist li p.meta {
-    text-align:left;
-    margin: 0;
-  }
+  #reviews .commentlist li{
+    p.meta {
+      text-align:left;
+      margin: 0;
+      order: 1;
+      .woocommerce-review__author{
+        text-transform: capitalize;
+      }
+    }
+    .description{
+      order: 3;
+      p{
+        margin-top: 10px;
+      }
+    }
+  } 
   #tab-description {
     float: none;
     clear: both;
@@ -410,6 +422,7 @@
   }
   #reviews .commentlist li .comment_container .comment-text {
     display: flex;
+    flex-direction: column;
     @media screen and (max-width: 480px) {
       display: block;
       .review-right {
@@ -472,6 +485,7 @@
   #review_form_wrapper {
     padding-bottom: 60px;
     display: none;
+    max-width: 840px; 
   }
   .site-content {
     background-color: #f6f6f6;
@@ -641,8 +655,8 @@
     }
   }
   #reviews .commentlist li {
-    margin-bottom: 0;
-    padding: 40px 0 35px;
+    margin-bottom: 30px;
+    padding: 40px 0 25px;
     border-bottom: 1px solid #d1d1d1;
     @media screen and (max-width: 767px) {
       padding: 25px 0;
@@ -1118,9 +1132,7 @@
       display: none;
     }
   }
-  .contribution-form-wrapper.active{
-    display: none !important;
-  }
+
 }
 .woocommerce-page .block-reviews{
   #reviews .product-rating .product-rating-details{
@@ -1128,7 +1140,6 @@
   }
   #reviews .product-rating, .woocommerce-page #reviews .product-rating{
     display: block;
-    float: left;
     width: auto;
     .product-rating-summary{
       p{
@@ -1143,8 +1154,8 @@
   }
   .contribution-type-selector{
     display: block;
-    float: right;
     width: auto;
+    margin-top: 20px;
     a{
       border-bottom-color: #ffffff !important;
       padding: 0;
@@ -1154,7 +1165,7 @@
   }
   #reviews #comments{
     clear: both;
-    padding-top: 50px;
+    padding-top: 10px;
     .contributions-filter{
       display: none;
     }
@@ -1170,6 +1181,8 @@
           display: -webkit-box;
           display: -ms-flexbox;
           display: flex;
+          order: 2;
+          margin-top: 10px;
           -webkit-box-orient: vertical;
           -webkit-box-direction: reverse;
               -ms-flex-direction: column-reverse;
@@ -1177,7 +1190,9 @@
         }
         .meta{
           .woocommerce-review__author{
-            display: none;
+            .contribution-badge{
+              display: none;
+            }
           }
         }
         .contribution-actions{
@@ -1206,6 +1221,57 @@
     margin-right: 10px;
   }
 }
+.woocommerce #reviews .form-contribution{
+  border: none;
+  .form-row.star-rating-selector{
+    label{
+      color: #2a2a2a;
+      font-family: "Barlow-s";
+    }
+    fieldset{
+      label{
+        font-size: 16px;
+      }
+    }
+  }
+  .required{
+    color: #2a2a2a;
+    text-decoration: none;
+    }
+    .form-row,
+    .wc-product-reviews-pro-form-submit-row{
+      display: block !important;
+      color: #2a2a2a;
+      label{
+        margin-bottom: 10px;
+      }
+      input{
+        height: 44px;
+        padding-left: 10px;
+        box-sizing: border-box;
+        border-radius: 4px;
+        border: 1px solid #d7d7d7;
+        transition: 0.3s all ease;
+        padding-left: 10px;
+        box-sizing: border-box;
+        &:focus{
+          outline: none;
+          box-shadow: 1px 2px 11px 3px rgba(0, 0, 0, 0.1);
+          border-color: #ffffff;
+        }
+      }
+    }
+    #review_rating_field fieldset{
+      margin: 10px 0 15px;
+    }
+}
+.home-page-1{
+  .woocommerce #reviews #comments ol.commentlist li .contribution-actions a, .woocommerce-page #reviews #comments ol.commentlist li .contribution-actions a, .star-rating-selector:not(:checked) input:checked ~ label.checkbox, .star-rating-selector:not(:checked) label.checkbox:hover ~ label.checkbox, .star-rating-selector:not(:checked) label.checkbox:hover, .woocommerce #reviews #comments ol.commentlist li .contribution-actions a, .woocommerce-page #reviews #comments ol.commentlist li .contribution-actions a, .woocommerce #reviews .form-contribution .attachment-type:not(:checked) label.checkbox:before, .woocommerce-page #reviews .form-contribution .attachment-type:not(:checked) label.checkbox:before{
+    color: #fcbb1c !important;
+  }
+}
+
+
 @media screen and (max-width: 767px){
   .wrap-additional_information{
     tbody{
