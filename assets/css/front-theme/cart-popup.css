@@ -544,6 +544,9 @@ table.woocommerce-checkout-review-order-table tfoot .order-total td {
   .woocommerce-cart .woocommerce-cart-form.pc {
     display: none;
   }
+  .woocommerce-cart .woocommerce-cart-form.sp {
+    display: block;
+  }
   .woocommerce-cart .woocommerce-cart-form.sp table.cart {
     margin-bottom: 30px;
   }
