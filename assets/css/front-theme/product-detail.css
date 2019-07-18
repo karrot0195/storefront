@@ -1225,19 +1225,15 @@
   color: #2a2a2a;
   text-decoration: none;
 }
-.woocommerce #reviews .form-contribution .star-rating-selector:not(:checked) input:checked ~ label.checkbox,
-.woocommerce #reviews .form-contribution .star-rating-selector:not(:checked) label.checkbox:hover {
-  color: #fcbb1c !important;
-}
-.woocommerce #reviews #comments ol.commentlist li .contribution-actions a,
-.woocommerce-page #reviews #comments ol.commentlist li .contribution-actions a,
-.star-rating-selector:not(:checked) input:checked ~ label.checkbox,
-.star-rating-selector:not(:checked) label.checkbox:hover ~ label.checkbox,
-.star-rating-selector:not(:checked) label.checkbox:hover,
-.woocommerce #reviews #comments ol.commentlist li .contribution-actions a,
-.woocommerce-page #reviews #comments ol.commentlist li .contribution-actions a,
-.woocommerce #reviews .form-contribution .attachment-type:not(:checked) label.checkbox:before,
-.woocommerce-page #reviews .form-contribution .attachment-type:not(:checked) label.checkbox:before {
+.home-page-1 .woocommerce #reviews #comments ol.commentlist li .contribution-actions a,
+.home-page-1 .woocommerce-page #reviews #comments ol.commentlist li .contribution-actions a,
+.home-page-1 .star-rating-selector:not(:checked) input:checked ~ label.checkbox,
+.home-page-1 .star-rating-selector:not(:checked) label.checkbox:hover ~ label.checkbox,
+.home-page-1 .star-rating-selector:not(:checked) label.checkbox:hover,
+.home-page-1 .woocommerce #reviews #comments ol.commentlist li .contribution-actions a,
+.home-page-1 .woocommerce-page #reviews #comments ol.commentlist li .contribution-actions a,
+.home-page-1 .woocommerce #reviews .form-contribution .attachment-type:not(:checked) label.checkbox:before,
+.home-page-1 .woocommerce-page #reviews .form-contribution .attachment-type:not(:checked) label.checkbox:before {
   color: #fcbb1c !important;
 }
 @media screen and (max-width: 767px) {

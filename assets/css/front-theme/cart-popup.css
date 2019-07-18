@@ -607,6 +607,7 @@ table.woocommerce-checkout-review-order-table tfoot .order-total td {
     width: auto;
     height: auto;
     border: none;
+    font-size: 18px;
   }
   .home-page-1 .cart-collaterals .cart_totals {
     width: 100%;
