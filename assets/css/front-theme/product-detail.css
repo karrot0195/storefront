@@ -1233,6 +1233,10 @@
   display: block !important;
   color: #2a2a2a;
 }
+.woocommerce #reviews .form-contribution .form-row label,
+.woocommerce #reviews .form-contribution .wc-product-reviews-pro-form-submit-row label {
+  margin-bottom: 10px;
+}
 .woocommerce #reviews .form-contribution .form-row input,
 .woocommerce #reviews .form-contribution .wc-product-reviews-pro-form-submit-row input {
   height: 44px;
