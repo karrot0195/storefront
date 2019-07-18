@@ -1225,6 +1225,10 @@
   color: #2a2a2a;
   text-decoration: none;
 }
+.woocommerce #reviews .form-contribution .form-row,
+.woocommerce #reviews .form-contribution .wc-product-reviews-pro-form-submit-row {
+  display: block !important;
+}
 .home-page-1 .woocommerce #reviews #comments ol.commentlist li .contribution-actions a,
 .home-page-1 .woocommerce-page #reviews #comments ol.commentlist li .contribution-actions a,
 .home-page-1 .star-rating-selector:not(:checked) input:checked ~ label.checkbox,
