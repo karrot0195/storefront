@@ -1303,16 +1303,16 @@
 .home-page-1 .woocommerce-page #reviews .form-contribution .attachment-type:not(:checked) label.checkbox:before {
   color: #fcbb1c !important;
 }
-.home-page-1 .woocommerce #reviews .form-contribution .attachment-type:not(:checked) label.checkbox,
-.home-page-1 .woocommerce-page #reviews .form-contribution .attachment-type:not(:checked) label.checkbox {
+body.woocommerce #reviews .form-contribution .attachment-type:not(:checked) label.checkbox,
+body.woocommerce-page #reviews .form-contribution .attachment-type:not(:checked) label.checkbox {
   width: 46px;
   height: 46px;
   border: 1px solid #d7d7d7;
   border-radius: 4px;
   line-height: 46px;
 }
-.home-page-1 .woocommerce #reviews .form-contribution .attachment-type:not(:checked) input[value=photo] + label:before,
-.home-page-1 .woocommerce-page #reviews .form-contribution .attachment-type:not(:checked) input[value=photo] + label:before {
+body.woocommerce #reviews .form-contribution .attachment-type:not(:checked) input[value=photo] + label:before,
+body.woocommerce-page #reviews .form-contribution .attachment-type:not(:checked) input[value=photo] + label:before {
   color: #2a2a2a !important;
 }
 @media screen and (max-width: 767px) {
