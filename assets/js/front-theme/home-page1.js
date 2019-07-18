@@ -264,6 +264,10 @@
     }
   });
 
+  // SHOW POPUP REVIEW
+  $('.contribution-type-selector .js-switch-contribution-type active').click(function(){
+    $('.contribution-form-wrapper').fadeIn(500);
+  });
 
   /* EFFECT LIKE, SHARE */
   $('.block-share .fa-share-alt').click(function(){
