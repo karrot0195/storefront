@@ -1262,7 +1262,7 @@
 .woocommerce #reviews .form-contribution .wc-product-reviews-pro-form-submit-row a {
   color: #2a2a2a;
 }
-.woocommerce #reviews .form-contribution .form-row.subscribe_to_replies_field {
+.woocommerce #reviews .form-contribution .form-row#subscribe_to_replies_field {
   display: none !important;
 }
 .woocommerce #reviews .form-contribution #review_rating_field fieldset {
