@@ -518,6 +518,7 @@
   display: none !important;
   overflow: scroll;
   background: #ffffff;
+  height: 100vh;
 }
 .storefront-product-detail #review_form_wrapper.contribution-form-wrapper-click {
   display: block !important;
