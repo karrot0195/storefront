@@ -511,6 +511,11 @@
   padding-bottom: 60px;
   display: none;
   max-width: 840px;
+  position: absolute;
+  width: 840px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 .storefront-product-detail .site-content {
   background-color: #f6f6f6;
@@ -1279,6 +1284,7 @@
   border-radius: 22px;
   border: none;
   font-size: 16px;
+  cursor: pointer;
 }
 .home-page-1 .woocommerce #reviews #comments ol.commentlist li .contribution-actions a,
 .home-page-1 .woocommerce-page #reviews #comments ol.commentlist li .contribution-actions a,
