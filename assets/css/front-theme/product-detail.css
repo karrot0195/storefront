@@ -1127,16 +1127,12 @@
 .block-reviews .product-rating-summary h3 {
   display: none;
 }
-.block-reviews .contribution-form-wrapper.active {
-  display: none !important;
-}
 .woocommerce-page .block-reviews #reviews .product-rating .product-rating-details {
   display: none;
 }
 .woocommerce-page .block-reviews #reviews .product-rating,
 .woocommerce-page .block-reviews .woocommerce-page #reviews .product-rating {
   display: block;
-  float: left;
   width: auto;
 }
 .woocommerce-page .block-reviews #reviews .product-rating .product-rating-summary p,
@@ -1150,8 +1146,8 @@
 }
 .woocommerce-page .block-reviews .contribution-type-selector {
   display: block;
-  float: right;
   width: auto;
+  margin-top: 20px;
 }
 .woocommerce-page .block-reviews .contribution-type-selector a {
   border-bottom-color: #ffffff !important;
