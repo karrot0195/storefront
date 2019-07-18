@@ -344,7 +344,7 @@
   #reviews .commentlist li .comment_container .comment-text .star-rating {
     float: none;
     text-align: left;
-    margin-top: 20px;
+    margin-top: 10px;
     @media screen and (max-width: 767px) {
       margin-top: 10px;
     }
@@ -368,9 +368,15 @@
       text-align:left;
       margin: 0;
       order: 1;
+      .woocommerce-review__author{
+        text-transform: capitalize;
+      }
     }
     .description{
       order: 3;
+      p{
+        margin-top: 10px;
+      }
     }
   } 
   #tab-description {
@@ -1158,7 +1164,7 @@
   }
   #reviews #comments{
     clear: both;
-    padding-top: 50px;
+    padding-top: 10px;
     .contributions-filter{
       display: none;
     }
@@ -1175,6 +1181,7 @@
           display: -ms-flexbox;
           display: flex;
           order: 2;
+          margin-top: 10px;
           -webkit-box-orient: vertical;
           -webkit-box-direction: reverse;
               -ms-flex-direction: column-reverse;

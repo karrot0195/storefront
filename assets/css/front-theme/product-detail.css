@@ -356,7 +356,7 @@
 .storefront-product-detail #reviews .commentlist li .comment_container .comment-text .star-rating {
   float: none;
   text-align: left;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 @media screen and (max-width: 767px) {
   .storefront-product-detail #reviews .commentlist li .comment_container .comment-text .star-rating {
@@ -384,8 +384,14 @@
   margin: 0;
   order: 1;
 }
+.storefront-product-detail #reviews .commentlist li p.meta .woocommerce-review__author {
+  text-transform: capitalize;
+}
 .storefront-product-detail #reviews .commentlist li .description {
   order: 3;
+}
+.storefront-product-detail #reviews .commentlist li .description p {
+  margin-top: 10px;
 }
 .storefront-product-detail #tab-description {
   float: none;
@@ -1162,7 +1168,7 @@
 }
 .woocommerce-page .block-reviews #reviews #comments {
   clear: both;
-  padding-top: 50px;
+  padding-top: 10px;
 }
 .woocommerce-page .block-reviews #reviews #comments .contributions-filter {
   display: none;
@@ -1178,6 +1184,7 @@
   display: -ms-flexbox;
   display: flex;
   order: 2;
+  margin-top: 10px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: reverse;
   -ms-flex-direction: column-reverse;
