@@ -266,7 +266,7 @@
 
   // SHOW POPUP REVIEW
   $('.contribution-type-selector .js-switch-contribution-type').click(function(){
-    $('.contribution-form-wrapper').fadeIn(300);
+    $('.contribution-form-wrapper').addClass('contribution-form-wrapper-click');
   });
 
   /* EFFECT LIKE, SHARE */
