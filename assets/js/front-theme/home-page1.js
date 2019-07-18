@@ -265,8 +265,8 @@
   });
 
   // SHOW POPUP REVIEW
-  $('.contribution-type-selector .js-switch-contribution-type active').click(function(){
-    $('.contribution-form-wrapper').fadeIn(500);
+  $('.contribution-type-selector .js-switch-contribution-type').click(function(){
+    $('.contribution-form-wrapper').fadeIn(300);
   });
 
   /* EFFECT LIKE, SHARE */
