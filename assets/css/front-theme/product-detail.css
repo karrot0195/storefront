@@ -1214,6 +1214,9 @@
 .container .wrap-attribute-size .block-main li {
   margin-right: 10px;
 }
+.woocommerce #reviews .form-contribution {
+  border: none;
+}
 .woocommerce #reviews .form-contribution .form-row.star-rating-selector label {
   color: #2a2a2a;
   font-family: "Barlow-s";
@@ -1228,6 +1231,10 @@
 .woocommerce #reviews .form-contribution .form-row,
 .woocommerce #reviews .form-contribution .wc-product-reviews-pro-form-submit-row {
   display: block !important;
+  color: #2a2a2a;
+}
+.woocommerce #reviews .form-contribution #review_rating_field fieldset {
+  margin: 10px 0 15px;
 }
 .home-page-1 .woocommerce #reviews #comments ol.commentlist li .contribution-actions a,
 .home-page-1 .woocommerce-page #reviews #comments ol.commentlist li .contribution-actions a,
