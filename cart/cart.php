@@ -27,8 +27,7 @@ $product_ids = [];
 			<thead>
 				<tr>
 					<th class="product-remove">&nbsp;</th>
-					<th class="product-thumbnail">&nbsp;</th>
-					<th class="product-name"><?php esc_html_e( 'Product', 'woocommerce' ); ?></th>
+					<th class="product-thumbnail"><?php esc_html_e( 'Product', 'woocommerce' ); ?></th>
 					<th class="product-name"><?php esc_html_e( 'Size', 'woocommerce' ); ?></th>
 					<th class="product-price"><?php esc_html_e( 'Price', 'woocommerce' ); ?></th>
 					<th class="product-quantity"><?php esc_html_e( 'Quantity', 'woocommerce' ); ?></th>
@@ -62,36 +61,34 @@ $product_ids = [];
 							</td>
 
 							<td class="product-thumbnail">
-							<?php
-							$thumbnail = apply_filters( 'woocommerce_cart_item_thumbnail', $_product->get_image(), $cart_item, $cart_item_key );
+								<?php
+								$thumbnail = apply_filters( 'woocommerce_cart_item_thumbnail', $_product->get_image(), $cart_item, $cart_item_key );
 
-							if ( ! $product_permalink ) {
-								echo $thumbnail; // PHPCS: XSS ok.
-							} else {
-								printf( '<a href="%s">%s</a>', esc_url( $product_permalink ), $thumbnail ); // PHPCS: XSS ok.
-							}
-							?>
+								if ( ! $product_permalink ) {
+									echo $thumbnail; // PHPCS: XSS ok.
+								} else {
+									printf( '<a href="%s">%s</a>', esc_url( $product_permalink ), $thumbnail ); // PHPCS: XSS ok.
+								}
+								?>
+									<?php
+								if ( ! $product_permalink ) {
+									echo wp_kses_post( apply_filters( 'woocommerce_cart_item_name', $_product->get_name(), $cart_item, $cart_item_key ) . '&nbsp;' );
+								} else {
+									echo wp_kses_post( apply_filters( 'woocommerce_cart_item_name', sprintf( '<a href="%s">%s</a>', esc_url( $product_permalink ), $_product->get_name() ), $cart_item, $cart_item_key ) );
+								}
+
+								do_action( 'woocommerce_after_cart_item_name', $cart_item, $cart_item_key );
+
+								// Meta data.
+								echo wc_get_formatted_cart_item_data( $cart_item ); // PHPCS: XSS ok.
+
+								// Backorder notification.
+								if ( $_product->backorders_require_notification() && $_product->is_on_backorder( $cart_item['quantity'] ) ) {
+									echo wp_kses_post( apply_filters( 'woocommerce_cart_item_backorder_notification', '<p class="backorder_notification">' . esc_html__( 'Available on backorder', 'woocommerce' ) . '</p>', $product_id ) );
+								}
+								?>
 							</td>
 
-							<td class="product-name" data-title="<?php esc_attr_e( 'Product', 'woocommerce' ); ?>">
-							<?php
-							if ( ! $product_permalink ) {
-								echo wp_kses_post( apply_filters( 'woocommerce_cart_item_name', $_product->get_name(), $cart_item, $cart_item_key ) . '&nbsp;' );
-							} else {
-								echo wp_kses_post( apply_filters( 'woocommerce_cart_item_name', sprintf( '<a href="%s">%s</a>', esc_url( $product_permalink ), $_product->get_name() ), $cart_item, $cart_item_key ) );
-							}
-
-							do_action( 'woocommerce_after_cart_item_name', $cart_item, $cart_item_key );
-
-							// Meta data.
-							echo wc_get_formatted_cart_item_data( $cart_item ); // PHPCS: XSS ok.
-
-							// Backorder notification.
-							if ( $_product->backorders_require_notification() && $_product->is_on_backorder( $cart_item['quantity'] ) ) {
-								echo wp_kses_post( apply_filters( 'woocommerce_cart_item_backorder_notification', '<p class="backorder_notification">' . esc_html__( 'Available on backorder', 'woocommerce' ) . '</p>', $product_id ) );
-							}
-							?>
-							</td>
 
 							<td>
 								<div class="wrap-size">
