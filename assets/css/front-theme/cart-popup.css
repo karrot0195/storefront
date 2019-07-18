@@ -521,9 +521,6 @@ table.woocommerce-checkout-review-order-table tfoot .order-total td {
   color: #ffffff;
   cursor: pointer;
 }
-.home-page-1 table.shop_table_responsive thead {
-  display: block;
-}
 .woocommerce-cart .woocommerce-cart-form.sp {
   display: none;
 }
