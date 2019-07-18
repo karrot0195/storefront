@@ -516,6 +516,7 @@
   left: 50%;
   transform: translateX(-50%);
   display: none !important;
+  overflow: scroll;
 }
 .storefront-product-detail #review_form_wrapper.contribution-form-wrapper-click {
   display: block !important;
