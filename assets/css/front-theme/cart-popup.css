@@ -240,6 +240,51 @@ body {
 .home-page-1 .cart_totals table.shop_table.shop_table_responsive {
   margin-bottom: 0;
 }
+table.cart td.product-quantity .quantity {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+table.cart td.product-quantity .quantity .qty {
+  width: auto;
+  padding: 0;
+  border: none;
+  line-height: 32px;
+}
+table.cart td.product-quantity .quantity .quantity-nav {
+  position: absolute;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  line-height: 22px;
+  flex-direction: row-reverse;
+}
+table.cart td.product-quantity .quantity .quantity-nav .quantity-button {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #cccccc;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #cccccc;
+  transition: 0.3s all ease;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+table.cart td.product-quantity .quantity .quantity-nav .quantity-button:hover {
+  border-color: black;
+  color: black;
+}
+table.cart td.product-quantity .quantity input[type=number]::-webkit-inner-spin-button,
+table.cart td.product-quantity .quantity input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
 /* Bill */
 .woocommerce-billing-fields h3 {
   font-family: "Barlow-m";
