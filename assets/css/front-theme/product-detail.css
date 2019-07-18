@@ -510,6 +510,7 @@
 .storefront-product-detail #review_form_wrapper {
   padding-bottom: 60px;
   display: none;
+  max-width: 840px;
 }
 .storefront-product-detail .site-content {
   background-color: #f6f6f6;
@@ -1212,6 +1213,20 @@
 }
 .container .wrap-attribute-size .block-main li {
   margin-right: 10px;
+}
+.woocommerce #reviews .form-contribution .form-row.star-rating-selector label {
+  color: #2a2a2a;
+  font-family: "Barlow-s";
+}
+.woocommerce #reviews .form-contribution .form-row.star-rating-selector fieldset label {
+  font-size: 16px;
+}
+.woocommerce #reviews .form-contribution .required {
+  color: #2a2a2a;
+  text-decoration: none;
+}
+.woocommerce #reviews .form-contribution .star-rating-selector:not(:checked) input:checked ~ label.checkbox {
+  color: #fcbb1c !important;
 }
 @media screen and (max-width: 767px) {
   .wrap-additional_information tbody {
