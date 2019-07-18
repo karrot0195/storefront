@@ -509,9 +509,8 @@
 }
 .storefront-product-detail #review_form_wrapper {
   padding-bottom: 60px;
-  max-width: 840px;
   position: fixed;
-  width: 840px;
+  width: 700px;
   top: 75px;
   left: 50%;
   transform: translateX(-50%);
