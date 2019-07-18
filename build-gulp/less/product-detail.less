@@ -409,7 +409,7 @@
     }
   }
   #reviews .commentlist li .comment_container .comment-text {
-    display: flex;
+    display: block;
     @media screen and (max-width: 480px) {
       display: block;
       .review-right {
@@ -1174,7 +1174,9 @@
         }
         .meta{
           .woocommerce-review__author{
-            display: none;
+            .contribution-badge{
+              display: none;
+            }
           }
         }
         .contribution-actions{

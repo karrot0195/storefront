@@ -549,6 +549,7 @@ table.woocommerce-checkout-review-order-table tfoot .order-total td {
   }
   .woocommerce-cart .woocommerce-cart-form.sp .actions {
     display: block;
+    text-align: right;
   }
   .woocommerce-cart .woocommerce-cart-form.sp .coupon {
     display: flex;
@@ -605,5 +606,8 @@ table.woocommerce-checkout-review-order-table tfoot .order-total td {
     width: auto;
     height: auto;
     border: none;
+  }
+  .home-page-1 .cart-collaterals .cart_totals {
+    width: 100%;
   }
 }

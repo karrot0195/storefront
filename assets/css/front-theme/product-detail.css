@@ -425,7 +425,7 @@
   }
 }
 .storefront-product-detail #reviews .commentlist li .comment_container .comment-text {
-  display: flex;
+  display: block;
 }
 @media screen and (max-width: 480px) {
   .storefront-product-detail #reviews .commentlist li .comment_container .comment-text {
@@ -1177,7 +1177,7 @@
   -ms-flex-direction: column-reverse;
   flex-direction: column-reverse;
 }
-.woocommerce-page .block-reviews #reviews #comments ol.commentlist li .comment-text .meta .woocommerce-review__author {
+.woocommerce-page .block-reviews #reviews #comments ol.commentlist li .comment-text .meta .woocommerce-review__author .contribution-badge {
   display: none;
 }
 .woocommerce-page .block-reviews #reviews #comments ol.commentlist li .comment-text .contribution-actions {
