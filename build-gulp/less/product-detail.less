@@ -1242,10 +1242,12 @@
     .wc-product-reviews-pro-form-submit-row{
       display: block !important;
       color: #2a2a2a;
+      margin-bottom: 25px;
       label{
         margin-bottom: 10px;
       }
-      input{
+      input,
+      textarea{
         height: 44px;
         padding-left: 10px;
         box-sizing: border-box;
@@ -1268,6 +1270,16 @@
 .home-page-1{
   .woocommerce #reviews #comments ol.commentlist li .contribution-actions a, .woocommerce-page #reviews #comments ol.commentlist li .contribution-actions a, .star-rating-selector:not(:checked) input:checked ~ label.checkbox, .star-rating-selector:not(:checked) label.checkbox:hover ~ label.checkbox, .star-rating-selector:not(:checked) label.checkbox:hover, .woocommerce #reviews #comments ol.commentlist li .contribution-actions a, .woocommerce-page #reviews #comments ol.commentlist li .contribution-actions a, .woocommerce #reviews .form-contribution .attachment-type:not(:checked) label.checkbox:before, .woocommerce-page #reviews .form-contribution .attachment-type:not(:checked) label.checkbox:before{
     color: #fcbb1c !important;
+  }
+  .woocommerce #reviews .form-contribution .attachment-type:not(:checked) label.checkbox, .woocommerce-page #reviews .form-contribution .attachment-type:not(:checked) label.checkbox{
+    width: 46px;
+    height: 46px;
+    border: 1px solid #d7d7d7;
+    border-radius: 4px;
+    line-height: 46px;
+  }
+  .woocommerce #reviews .form-contribution .attachment-type:not(:checked) input[value=photo]+label:before, .woocommerce-page #reviews .form-contribution .attachment-type:not(:checked) input[value=photo]+label:before{
+    color: #2a2a2a !important;
   }
 }
 

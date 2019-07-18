@@ -1232,13 +1232,16 @@
 .woocommerce #reviews .form-contribution .wc-product-reviews-pro-form-submit-row {
   display: block !important;
   color: #2a2a2a;
+  margin-bottom: 25px;
 }
 .woocommerce #reviews .form-contribution .form-row label,
 .woocommerce #reviews .form-contribution .wc-product-reviews-pro-form-submit-row label {
   margin-bottom: 10px;
 }
 .woocommerce #reviews .form-contribution .form-row input,
-.woocommerce #reviews .form-contribution .wc-product-reviews-pro-form-submit-row input {
+.woocommerce #reviews .form-contribution .wc-product-reviews-pro-form-submit-row input,
+.woocommerce #reviews .form-contribution .form-row textarea,
+.woocommerce #reviews .form-contribution .wc-product-reviews-pro-form-submit-row textarea {
   height: 44px;
   border-radius: 4px;
   border: 1px solid #d7d7d7;
@@ -1247,7 +1250,9 @@
   box-sizing: border-box;
 }
 .woocommerce #reviews .form-contribution .form-row input:focus,
-.woocommerce #reviews .form-contribution .wc-product-reviews-pro-form-submit-row input:focus {
+.woocommerce #reviews .form-contribution .wc-product-reviews-pro-form-submit-row input:focus,
+.woocommerce #reviews .form-contribution .form-row textarea:focus,
+.woocommerce #reviews .form-contribution .wc-product-reviews-pro-form-submit-row textarea:focus {
   outline: none;
   box-shadow: 1px 2px 11px 3px rgba(0, 0, 0, 0.1);
   border-color: #ffffff;
@@ -1265,6 +1270,18 @@
 .home-page-1 .woocommerce #reviews .form-contribution .attachment-type:not(:checked) label.checkbox:before,
 .home-page-1 .woocommerce-page #reviews .form-contribution .attachment-type:not(:checked) label.checkbox:before {
   color: #fcbb1c !important;
+}
+.home-page-1 .woocommerce #reviews .form-contribution .attachment-type:not(:checked) label.checkbox,
+.home-page-1 .woocommerce-page #reviews .form-contribution .attachment-type:not(:checked) label.checkbox {
+  width: 46px;
+  height: 46px;
+  border: 1px solid #d7d7d7;
+  border-radius: 4px;
+  line-height: 46px;
+}
+.home-page-1 .woocommerce #reviews .form-contribution .attachment-type:not(:checked) input[value=photo] + label:before,
+.home-page-1 .woocommerce-page #reviews .form-contribution .attachment-type:not(:checked) input[value=photo] + label:before {
+  color: #2a2a2a !important;
 }
 @media screen and (max-width: 767px) {
   .wrap-additional_information tbody {
