@@ -511,18 +511,27 @@
   padding-bottom: 60px;
   position: fixed;
   width: 700px;
-  top: 75px;
+  top: 15px;
   left: 50%;
   transform: translateX(-50%);
-  display: none !important;
   overflow: scroll;
   background: #ffffff;
   height: 100vh;
   padding: 30px;
-  z-index: 1000;
+  opacity: 0;
+  transition: all 0.5s ease;
 }
-.storefront-product-detail #review_form_wrapper.contribution-form-wrapper-click {
-  display: block !important;
+.storefront-product-detail #review_form_wrapper .close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 20px;
+  cursor: pointer;
+  font-weight: 600;
+}
+.storefront-product-detail #review_form_wrapper.show {
+  z-index: 1000;
+  opacity: 1;
 }
 .storefront-product-detail .site-content {
   background-color: #f6f6f6;
