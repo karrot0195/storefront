@@ -1248,6 +1248,7 @@
   transition: 0.3s all ease;
   padding-left: 10px;
   box-sizing: border-box;
+  padding: 10px;
 }
 .woocommerce #reviews .form-contribution .form-row input:focus,
 .woocommerce #reviews .form-contribution .wc-product-reviews-pro-form-submit-row input:focus,
@@ -1257,8 +1258,25 @@
   box-shadow: 1px 2px 11px 3px rgba(0, 0, 0, 0.1);
   border-color: #ffffff;
 }
+.woocommerce #reviews .form-contribution .form-row a,
+.woocommerce #reviews .form-contribution .wc-product-reviews-pro-form-submit-row a {
+  color: #2a2a2a;
+}
+.woocommerce #reviews .form-contribution .form-row.subscribe_to_replies_field {
+  display: none !important;
+}
 .woocommerce #reviews .form-contribution #review_rating_field fieldset {
   margin: 10px 0 15px;
+}
+.woocommerce #reviews .form-contribution .wc-product-reviews-pro-form-submit-row {
+  text-align: center;
+}
+.woocommerce #reviews .form-contribution .wc-product-reviews-pro-form-submit-row button {
+  width: 175px;
+  height: 44px;
+  background: #142d73;
+  color: #ffffff;
+  border-radius: 22px;
 }
 .home-page-1 .woocommerce #reviews #comments ol.commentlist li .contribution-actions a,
 .home-page-1 .woocommerce-page #reviews #comments ol.commentlist li .contribution-actions a,
