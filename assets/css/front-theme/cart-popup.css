@@ -190,6 +190,9 @@ body {
   padding: 0 114px;
   margin-top: 50px;
 }
+.woocommerce-cart .cart-collaterals .woocommerce-shipping-totals {
+  display: none;
+}
 @media screen and (max-width: 1024px) {
   .woocommerce-cart .cart-collaterals {
     padding: 0;
@@ -316,6 +319,7 @@ table.cart td.product-quantity .quantity input[type=number]::-webkit-outer-spin-
   border-radius: 4px;
   border: 1px solid #d7d7d7;
   transition: 0.3s all ease;
+  font-size: 16px;
 }
 .woocommerce-billing-fields__field-wrapper .form-row input:focus,
 .woocommerce-billing-fields__field-wrapper .form-row textarea:focus {
@@ -385,7 +389,7 @@ form.checkout.woocommerce-checkout #order_review table.woocommerce-checkout-revi
   border-radius: 4px;
   border: 1px solid #d7d7d7;
   transition: 0.3s all ease;
-  height: 180px;
+  height: 80px;
   padding-top: 8px;
   font-size: 16px;
 }
@@ -406,14 +410,25 @@ table.woocommerce-checkout-review-order-table tfoot td {
   font-family: "Barlow-m";
   color: #2a2a2a;
   padding: 10px 0;
+  text-align: right;
+  border-bottom: none;
+}
+table.woocommerce-checkout-review-order-table tfoot .cart-subtotal th,
+table.woocommerce-checkout-review-order-table tfoot .cart-subtotal td {
+  padding-top: 40px;
+}
+table.woocommerce-checkout-review-order-table tfoot .woocommerce-shipping-totals ul {
+  padding-left: 0;
+  margin-top: 0;
 }
 table.woocommerce-checkout-review-order-table tfoot .order-total th,
 table.woocommerce-checkout-review-order-table tfoot .order-total td {
   text-transform: uppercase;
   font-family: "Barlow-s";
+  padding-top: 25px;
 }
 #payment.woocommerce-checkout-payment {
-  padding-right: 15px;
+  margin-top: 80px;
 }
 #payment.woocommerce-checkout-payment .form-row.place-order {
   margin-top: 30px;
@@ -430,6 +445,36 @@ table.woocommerce-checkout-review-order-table tfoot .order-total td {
   border-radius: 22px;
   border: none;
   cursor: pointer;
+}
+#payment.woocommerce-checkout-payment li.wc_payment_method {
+  background: #ffffff;
+}
+#payment.woocommerce-checkout-payment li.wc_payment_method label {
+  font-size: 24px;
+  color: #2a2a2a;
+}
+#payment.woocommerce-checkout-payment .payment_box.payment_method_stripe {
+  background: #ffffff;
+}
+#payment.woocommerce-checkout-payment .payment_box.payment_method_stripe #stripe-payment-data p:first-child {
+  display: none;
+}
+#payment.woocommerce-checkout-payment .payment_box.payment_method_stripe #stripe-payment-data fieldset .form-row label {
+  margin-bottom: 18px;
+  font-size: 16px;
+}
+#payment.woocommerce-checkout-payment .payment_box.payment_method_stripe #stripe-payment-data fieldset .form-row input {
+  height: 44px;
+  border-radius: 4px;
+  border: 1px solid #d7d7d7;
+  transition: 0.3s all ease;
+  padding-left: 10px;
+  box-sizing: border-box;
+}
+#payment.woocommerce-checkout-payment .payment_box.payment_method_stripe #stripe-payment-data fieldset .form-row input:focus {
+  outline: none;
+  box-shadow: 1px 2px 11px 3px rgba(0, 0, 0, 0.1);
+  border-color: #ffffff;
 }
 .payment-wrapper {
   clear: both;
@@ -523,6 +568,34 @@ table.woocommerce-checkout-review-order-table tfoot .order-total td {
 }
 .woocommerce-cart .woocommerce-cart-form.sp {
   display: none;
+}
+table.woocommerce-checkout-review-order-table th {
+  padding: 15px 0;
+  line-height: unset;
+}
+table.woocommerce-checkout-review-order-table td {
+  border-bottom: 1px solid rgba(149, 149, 149, 0.4);
+}
+table.woocommerce-checkout-review-order-table .product-name ul {
+  padding-left: 0;
+  list-style: none;
+  color: #2a2a2a;
+}
+table.woocommerce-checkout-review-order-table .product-name ul li {
+  margin-bottom: 10px;
+}
+table.woocommerce-checkout-review-order-table .product-name ul li:first-child {
+  font-family: "Barlow-m";
+}
+.home-page-1 table.woocommerce-checkout-review-order-table thead th.product-name {
+  width: 80px;
+}
+.home-page-1 table.woocommerce-checkout-review-order-table thead th.product-total {
+  text-align: right;
+  padding-right: 10px;
+}
+.home-page-1 table.woocommerce-checkout-review-order-table tbody td.thumbnail {
+  width: 80px;
 }
 .site-main.page-wishlist ul.products li.product img {
   max-height: 300px;

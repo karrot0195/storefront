@@ -1835,6 +1835,9 @@ figure.woocommerce-product-gallery__wrapper {
     padding-left: 12px;
   }
 }
+body.disable .home-page-1 .site-header {
+  position: absolute;
+}
 @media screen and (max-width: 992px) {
   .home-page-1 .site-header .col-full {
     padding: 0px 0;

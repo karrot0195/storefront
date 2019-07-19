@@ -266,17 +266,24 @@
 
   // SHOW POPUP REVIEW
   $('.contribution-type-selector .js-switch-contribution-type').click(function(){
-    $('.contribution-form-wrapper').addClass('contribution-form-wrapper-click');
-    $('body').css('overflow', 'hidden');
-    if ($('.popup-background').length == 0) {
-      $(`<div class="popup-background" style="position: fixed;
-    width: 100%;
-    height: 100%;
-    z-index: 999;
-    background: #00000054;
-    top: 0;
-    left: 0;"> </div>`).insertBefore($('#reviews'));
+    $('body').addClass('disable');
+
+    if ($('#review_form_wrapper .close').length == 0) {
+      $('#review_form_wrapper form').prepend(`<div class="close"><i class="icon ion-md-close"></i></div>`);
+      $('#review_form_wrapper .close').on('click', function () {
+        $('.popup-background').css('opacity', '0');
+        $('.popup-background').remove();
+        $('#review_form_wrapper').removeClass('show');
+        $('body').removeClass('disable');
+      });
     }
+    $('#review_form_wrapper').addClass('show');
+    if ($('.popup-background').length == 0) {
+      const style = "opacity: 0; position: fixed;width: 100%;height: 100%;z-index: 999;background: #00000054;top: 0;left: 0; transision: all 0.3 ease;";
+      $(`<div class="popup-background" style="${style}"> </div>`).insertBefore($('#reviews'));
+    }
+    $('.popup-background').css('opacity', '1');
+    $('#review_form_wrapper').addClass('show');
   });
 
   /* EFFECT LIKE, SHARE */

@@ -18,32 +18,41 @@
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
+$total_item = count(WC()->cart->get_cart());
 ?>
 <table class="shop_table woocommerce-checkout-review-order-table">
 	<thead>
 		<tr>
-			<th class="product-name"><?php _e( 'Product', 'woocommerce' ); ?></th>
-			<th class="product-total"><?php _e( 'Total', 'woocommerce' ); ?></th>
+			<th class="product-name"><?= $total_item ?> <?php _e( 'Item', 'woocommerce' ); ?></th>
+			<th class="product-total"><?php _e( 'Edit', 'woocommerce' ); ?></th>
 		</tr>
 	</thead>
 	<tbody>
 		<?php
 			do_action( 'woocommerce_review_order_before_cart_contents' );
-
 			foreach ( WC()->cart->get_cart() as $cart_item_key => $cart_item ) {
 				$_product     = apply_filters( 'woocommerce_cart_item_product', $cart_item['data'], $cart_item, $cart_item_key );
 
 				if ( $_product && $_product->exists() && $cart_item['quantity'] > 0 && apply_filters( 'woocommerce_checkout_cart_item_visible', true, $cart_item, $cart_item_key ) ) {
+				    $thumbnail_url = wp_get_attachment_url($_product->get_image_id());
 					?>
 					<tr class="<?php echo esc_attr( apply_filters( 'woocommerce_cart_item_class', 'cart_item', $cart_item, $cart_item_key ) ); ?>">
-						<td class="product-name">
-							<?php echo apply_filters( 'woocommerce_cart_item_name', $_product->get_name(), $cart_item, $cart_item_key ) . '&nbsp;'; ?>
-							<?php echo apply_filters( 'woocommerce_checkout_cart_item_quantity', ' <strong class="product-quantity">' . sprintf( '&times; %s', $cart_item['quantity'] ) . '</strong>', $cart_item, $cart_item_key ); ?>
-							<?php echo wc_get_formatted_cart_item_data( $cart_item ); ?>
-						</td>
-						<td class="product-total">
-							<?php echo apply_filters( 'woocommerce_cart_item_subtotal', WC()->cart->get_product_subtotal( $_product, $cart_item['quantity'] ), $cart_item, $cart_item_key ); ?>
-						</td>
+						<td class="thumbnail">
+                            <img width="50px" src="<?= esc_url($thumbnail_url) ?>" alt="">
+                        </td>
+                        <td class="product-name">
+                            <ul>
+                                <li>
+                                    <?php echo apply_filters( 'woocommerce_cart_item_subtotal', WC()->cart->get_product_subtotal( $_product, $cart_item['quantity'] ), $cart_item, $cart_item_key ); ?>
+                                </li>
+                                <li>
+                                    <?php echo apply_filters( 'woocommerce_cart_item_name', $_product->get_name(), $cart_item, $cart_item_key ) . '&nbsp;'; ?>
+                                </li>
+                                <li>
+                                    Qty: <span><?= $cart_item['quantity'] ?></span>
+                                </li>
+                            </ul>
+                        </td>
 					</tr>
 					<?php
 				}
