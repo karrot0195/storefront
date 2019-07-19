@@ -557,6 +557,12 @@ table.woocommerce-checkout-review-order-table .product-name ul li {
 table.woocommerce-checkout-review-order-table .product-name ul li:first-child {
   font-family: "Barlow-m";
 }
+.home-page-1 table.woocommerce-checkout-review-order-table thead th.product-name {
+  width: 50px;
+}
+.home-page-1 table.woocommerce-checkout-review-order-table tbody td.thumbnail {
+  width: 50px;
+}
 .site-main.page-wishlist ul.products li.product img {
   max-height: 300px;
   max-width: 200px;
