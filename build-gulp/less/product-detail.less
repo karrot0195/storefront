@@ -486,18 +486,27 @@
     padding-bottom: 60px;
     position: fixed;
     width: 700px;
-    top: 75px;
+    top: 15px;
     left: 50%;
     transform: translateX(-50%);
-    display: none !important;
     overflow: scroll;
     background: #ffffff;
     height: 100vh;
     padding: 30px;
-    z-index: 1;
-  }
-  #review_form_wrapper.contribution-form-wrapper-click{
-    display: block !important;
+    opacity: 0;
+    transition: all 0.5s ease;
+    .close {
+      position: absolute;
+      top: 10px;
+      right: 20px;
+      font-size: 20px;
+      cursor: pointer;
+      font-weight: 600;
+    }
+    &.show {
+      z-index: 1000;
+      opacity: 1;
+    }
   }
   .site-content {
     background-color: #f6f6f6;
