@@ -465,6 +465,19 @@ table.woocommerce-checkout-review-order-table tfoot .order-total td {
 #payment.woocommerce-checkout-payment .payment_box.payment_method_stripe #stripe-payment-data fieldset .form-row label {
   margin-bottom: 18px;
 }
+#payment.woocommerce-checkout-payment .payment_box.payment_method_stripe #stripe-payment-data fieldset .form-row input {
+  height: 44px;
+  border-radius: 4px;
+  border: 1px solid #d7d7d7;
+  transition: 0.3s all ease;
+  padding-left: 10px;
+  box-sizing: border-box;
+}
+#payment.woocommerce-checkout-payment .payment_box.payment_method_stripe #stripe-payment-data fieldset .form-row input:focus {
+  outline: none;
+  box-shadow: 1px 2px 11px 3px rgba(0, 0, 0, 0.1);
+  border-color: #ffffff;
+}
 .payment-wrapper {
   clear: both;
   width: 65%;
