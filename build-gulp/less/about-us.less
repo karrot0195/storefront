@@ -108,16 +108,20 @@
 }
 /*============= Responsive =============*/
 @media screen and (max-width: 767px){
-    .about-us .slider__item__content .title{
+    .about-us .slider__item__content .title p{
         font-size: 25px;
     }
-    .about-us .slider__item__content .sub-title{
+    .about-us .slider__item__content .sub-title p{
         font-size: 16px;
     }
-    .about-us .slider__item .slick-track{
+    .about-us .slick-track{
         height: 540px;
+        .slider__item__img{
+            height: 100%;
+        }
         img{
             object-fit: cover;
+            object-position: right;
         }
     }
     .about-us .content .sub_title{
