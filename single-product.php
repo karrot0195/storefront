@@ -38,7 +38,7 @@ get_header( 'home-1' ); ?>
 		<div class="container">
 			<div class="wrap-back">
 				<i class="ion ion-ios-arrow-back"></i>
-				<a href="<?= home_url('/shop') ?>"><?= esc_html__('back to DERMA-RX', 'storefront') ?></a>
+				<a href="<?= home_url('/derma-rx') ?>"><?= esc_html__('back to DERMA-RX', 'storefront') ?></a>
 			</div>
 		</div>
 		<?php while ( have_posts() ) : the_post(); ?>
