@@ -18,7 +18,7 @@ body.modal {
 }
 .storefront-product-detail .wrap-back i {
   color: #a7a7a7;
-  font-size: 20px;
+  font-size: 14px;
   margin-right: 10px;
   display: inline-block;
   vertical-align: middle;
@@ -30,7 +30,7 @@ body.modal {
 }
 .storefront-product-detail .wrap-back a {
   width: 180px;
-  height: 16px;
+  height: 14px;
   font-family: "Barlow-m";
   font-size: 15px;
   font-weight: 500;
