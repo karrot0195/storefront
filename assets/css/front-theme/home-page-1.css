@@ -841,6 +841,7 @@ body.page-template-template-home1 {
 }
 .info-page .info-page-right {
   text-align: right;
+  position: relative;
 }
 @media screen and (max-width: 767px) {
   .info-page .info-page-right {
