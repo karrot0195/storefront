@@ -10,34 +10,24 @@ get_header('home-1'); ?>
             <div class="slider">
                 <?php
                     $slider = get_field('slider_about_us');
-                   
                     if($slider) :
-                 ?>
-                <div class="slider__item">
-                    <?php
-                         $description = $slider[0]['description'];
-                    ?>
-                    <div class="slider__item__img">
-                        <?php
-                         $bg_image = $slider[0]['background_image'];
-                         if($bg_image) :
-                                foreach($bg_image as $bg_img ):
-                                $slider_image = wp_get_attachment_url($bg_img['image']); 
-                                ?>
-                                 <img class="bg_img" alt="" src="<?= esc_url($slider_image) ?>">
-                            <?php endforeach; ?>
-                       
-                    </div>
-                    <div class="slider__item__content">
-                        <div class="title">
-                            <?php echo $description[0]['title']  ?>
+                        foreach($slider as $slider_item ):
+                            $bg_image= wp_get_attachment_url($slider_item['background_image']);
+                        ?>
+                        <div class="slider__item">
+                            <div class="slider__item__img">
+                                <img class="bg_img" alt="" src="<?= esc_url($bg_image) ?>">
+                            </div>
+                            <div class="slider__item__content">
+                                <div class="title">
+                                    <?php echo $slider_item['title'] ?>
+                                </div>
+                                <div class="sub-title">
+                                    <?php echo $slider_item['sub_title'] ?>
+                                </div>
+                            </div>
                         </div>
-                        <div class="sub-title">
-                            <?php echo $description[0]['sub_title']  ?>
-                        </div>
-                    </div>
-                    <?php endif ?>
-                </div>
+                        <?php endforeach; ?>
                     <?php endif ?>
             </div>
             <div class="container">

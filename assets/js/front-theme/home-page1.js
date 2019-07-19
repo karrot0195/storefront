@@ -428,8 +428,8 @@
     }
 
   // [ABOUT US] SLICK SLIDER
-  $ ('.slider__item__img').slick({
-    autoplay: true,
+  $ ('.slider').slick({
+    // autoplay: true,
     autoplaySpeed: 2000,
     arrows: false
   });
