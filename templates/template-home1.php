@@ -36,9 +36,10 @@ get_header('home-1'); ?>
                                         $class = 'active';
                                         foreach ($gallery as $attachment) {
                                             $title = isset($attachment['title']) ? $attachment['title'] : '';
+                                            $slug = str_replace(' ', '-', strtolower($title));
                                             $description = isset($attachment['description']) ? $attachment['description'] : '';
                                             $attachmentUrl = isset($attachment['background']) ? wp_get_attachment_url($attachment['background']) : '';
-                                            echo "<li><a href='javascript:void(0)' class='js-btn-slider ".$class."' data-description='".esc_html($description)."' data-src='".esc_url($attachmentUrl)."'>$title</a></li>";
+                                            echo "<li><a href='".esc_url(home_url($slug))."' class='js-btn-slider ".$class."' data-description='".esc_html($description)."' data-src='".esc_url($attachmentUrl)."'>$title</a></li>";
                                             $class = '';
                                         }
                                         ?>

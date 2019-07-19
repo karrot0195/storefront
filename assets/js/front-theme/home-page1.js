@@ -340,16 +340,18 @@
 		}, 300);	
 	});
 
-  $('.js-btn-slider').on('click', function() {
-    let src = $(this).data('src');
-    let desc = $(this).data('description');
-    $('.js-btn-slider').removeClass('active');
-    $(this).addClass('active');
-    $('img.bg-img').fadeOut(300, function() {
-      $('img.bg-img').attr('src', src);
-      $('.slider--item .block-desc').html(desc);
-    })
-      .fadeIn(300);
+  $('.js-btn-slider').on('hover', function() {
+     if (!$(this).hasClass('active')) {
+      let src = $(this).data('src');
+      let desc = $(this).data('description');
+      $('.js-btn-slider').removeClass('active');
+      $(this).addClass('active');
+      $('img.bg-img').fadeOut(300, function () {
+        $('img.bg-img').attr('src', src);
+        $('.slider--item .block-desc').html(desc);
+        $('img.bg-img').fadeIn();
+      });
+     }
   });
 
   // [SHOP] BUTTON CART

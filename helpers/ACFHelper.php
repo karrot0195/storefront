@@ -36,10 +36,11 @@ class ACFHelper {
                                 <?php
                                 foreach ($title as $idxTitle => $t) {
                                     $class = "";
+                                    $slug = str_replace(' ', '-', strtolower($title));
                                     if ($idxTitle == $idx) {
                                         $class = 'active';
                                     }
-                                    echo "<li><a href='javascript:void(0)' class='js-btn-slider ".$class."' data-id='$idxTitle'>$t</a></li>";
+                                    echo "<li><a href='".home_url($slug)."'>$t</a></li>";
                                 }
                                 ?>
                             </ul>
