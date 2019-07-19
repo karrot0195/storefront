@@ -486,12 +486,20 @@ table.woocommerce-checkout-review-order-table{
     label{
       font-size: 24px;
       color: #2a2a2a;
-    background: #ffffff;
-
+      background: #ffffff;
+      padding-left: 0;
+      display: flex;
+      img{
+        float: none;
+      }
+      img.stripe-visa-icon{
+        padding-left: 10px;
+      }
     }
   }
   .payment_box.payment_method_stripe{
     background: #ffffff;
+    padding: 0;
     #stripe-payment-data{
       p:first-child{
         display: none;
@@ -499,6 +507,7 @@ table.woocommerce-checkout-review-order-table{
       fieldset{
         .form-row{
           font-size: 16px;
+          margin-top: 35px;
           label{
             margin-bottom: 18px;
            font-size: 16px;
