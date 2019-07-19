@@ -2872,6 +2872,7 @@ table th {
 .related .related-wrapper {
   clear: both;
   display: flex;
+  background: #fbf9f9;
   align-items: center;
 }
 @media screen and (max-width: 767px) {
