@@ -1363,6 +1363,9 @@ body.woocommerce-page #reviews .form-contribution .attachment-type[data-prev-val
 body.woocommerce-page #reviews .form-contribution .attachment-type[data-prev-value=video] input[value=video] + label.checkbox:last-child:before {
   color: #142d73 !important;
 }
+.woocommerce #reviews .form-contribution .form-row label {
+  margin-bottom: 10px;
+}
 @media screen and (max-width: 767px) {
   .wrap-additional_information tbody {
     display: flex;
