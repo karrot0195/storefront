@@ -2407,6 +2407,7 @@ table th {
 .home-page-1 table.cart .product-thumbnail {
   text-align: left;
   padding: 0;
+  width: 300px;
 }
 .home-page-1 table.cart td.product-remove {
   padding-left: 0;
@@ -2492,7 +2493,7 @@ table th {
   font-weight: normal;
 }
 .home-page-1 table.shop_table_responsive tr td {
-  text-align: right;
+  text-align: center;
 }
 .home-page-1 table.shop_table_responsive tr td .quantity,
 .home-page-1 table.shop_table_responsive tr td.product-subtotal,
