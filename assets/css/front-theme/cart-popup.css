@@ -413,10 +413,19 @@ table.woocommerce-checkout-review-order-table tfoot td {
   text-align: right;
   border-bottom: none;
 }
+table.woocommerce-checkout-review-order-table tfoot .cart-subtotal th,
+table.woocommerce-checkout-review-order-table tfoot .cart-subtotal td {
+  padding-top: 50px;
+}
+table.woocommerce-checkout-review-order-table tfoot .woocommerce-shipping-totals ul {
+  padding-left: 0;
+  margin-top: 0;
+}
 table.woocommerce-checkout-review-order-table tfoot .order-total th,
 table.woocommerce-checkout-review-order-table tfoot .order-total td {
   text-transform: uppercase;
   font-family: "Barlow-s";
+  padding-top: 50px;
 }
 #payment.woocommerce-checkout-payment {
   padding-right: 15px;
