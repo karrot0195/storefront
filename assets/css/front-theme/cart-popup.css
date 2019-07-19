@@ -415,7 +415,7 @@ table.woocommerce-checkout-review-order-table tfoot td {
 }
 table.woocommerce-checkout-review-order-table tfoot .cart-subtotal th,
 table.woocommerce-checkout-review-order-table tfoot .cart-subtotal td {
-  padding-top: 50px;
+  padding-top: 40px;
 }
 table.woocommerce-checkout-review-order-table tfoot .woocommerce-shipping-totals ul {
   padding-left: 0;
@@ -425,7 +425,7 @@ table.woocommerce-checkout-review-order-table tfoot .order-total th,
 table.woocommerce-checkout-review-order-table tfoot .order-total td {
   text-transform: uppercase;
   font-family: "Barlow-s";
-  padding-top: 50px;
+  padding-top: 25px;
 }
 #payment.woocommerce-checkout-payment {
   padding-right: 15px;
