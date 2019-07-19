@@ -446,23 +446,35 @@ table.woocommerce-checkout-review-order-table tfoot .order-total td {
   border: none;
   cursor: pointer;
 }
-#payment.woocommerce-checkout-payment li.wc_payment_method {
-  background: #ffffff;
-}
-#payment.woocommerce-checkout-payment li.wc_payment_method label {
+#payment.woocommerce-checkout-payment ul li.wc_payment_method label {
   font-size: 24px;
   color: #2a2a2a;
+  background: #ffffff;
+  padding-left: 0;
+  display: flex;
+}
+#payment.woocommerce-checkout-payment ul li.wc_payment_method label img {
+  float: none;
+}
+#payment.woocommerce-checkout-payment ul li.wc_payment_method label img.stripe-visa-icon {
+  padding-left: 10px;
 }
 #payment.woocommerce-checkout-payment .payment_box.payment_method_stripe {
   background: #ffffff;
+  padding: 0;
 }
 #payment.woocommerce-checkout-payment .payment_box.payment_method_stripe #stripe-payment-data p:first-child {
   display: none;
+}
+#payment.woocommerce-checkout-payment .payment_box.payment_method_stripe #stripe-payment-data fieldset .form-row {
+  font-size: 16px;
+  margin-top: 35px;
 }
 #payment.woocommerce-checkout-payment .payment_box.payment_method_stripe #stripe-payment-data fieldset .form-row label {
   margin-bottom: 18px;
   font-size: 16px;
 }
+#payment.woocommerce-checkout-payment .payment_box.payment_method_stripe #stripe-payment-data fieldset .form-row .wc-stripe-elements-field,
 #payment.woocommerce-checkout-payment .payment_box.payment_method_stripe #stripe-payment-data fieldset .form-row input {
   height: 44px;
   border-radius: 4px;
@@ -470,11 +482,38 @@ table.woocommerce-checkout-review-order-table tfoot .order-total td {
   transition: 0.3s all ease;
   padding-left: 10px;
   box-sizing: border-box;
+  font-size: 16px;
 }
+#payment.woocommerce-checkout-payment .payment_box.payment_method_stripe #stripe-payment-data fieldset .form-row .wc-stripe-elements-field:focus,
 #payment.woocommerce-checkout-payment .payment_box.payment_method_stripe #stripe-payment-data fieldset .form-row input:focus {
   outline: none;
   box-shadow: 1px 2px 11px 3px rgba(0, 0, 0, 0.1);
   border-color: #ffffff;
+}
+#payment.woocommerce-checkout-payment .payment_box.payment_method_stripe #stripe-payment-data fieldset .form-row .wc-stripe-elements-field div,
+#payment.woocommerce-checkout-payment .payment_box.payment_method_stripe #stripe-payment-data fieldset .form-row input div {
+  height: 100%;
+  display: flex !important;
+  align-items: center;
+}
+#payment.woocommerce-checkout-payment .payment_box.payment_method_stripe #stripe-payment-data fieldset .form-row .wc-stripe-elements-field div iframe,
+#payment.woocommerce-checkout-payment .payment_box.payment_method_stripe #stripe-payment-data fieldset .form-row input div iframe {
+  height: 100% !important;
+}
+#payment.woocommerce-checkout-payment .payment_box.payment_method_stripe #stripe-payment-data fieldset .form-row .wc-stripe-elements-field div iframe body form,
+#payment.woocommerce-checkout-payment .payment_box.payment_method_stripe #stripe-payment-data fieldset .form-row input div iframe body form {
+  height: 100% !important;
+}
+#payment.woocommerce-checkout-payment .payment_box.payment_method_stripe #stripe-payment-data fieldset .form-row .wc-stripe-elements-field div iframe body form span,
+#payment.woocommerce-checkout-payment .payment_box.payment_method_stripe #stripe-payment-data fieldset .form-row input div iframe body form span {
+  height: 100% !important;
+}
+#payment.woocommerce-checkout-payment .payment_box.payment_method_stripe #stripe-payment-data fieldset .form-row .wc-stripe-elements-field div iframe body form span input,
+#payment.woocommerce-checkout-payment .payment_box.payment_method_stripe #stripe-payment-data fieldset .form-row input div iframe body form span input {
+  height: 100% !important;
+}
+#payment.woocommerce-checkout-payment .payment_box.payment_method_stripe #stripe-payment-data p label {
+  font-size: 16px;
 }
 .payment-wrapper {
   clear: both;

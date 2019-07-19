@@ -482,26 +482,38 @@ table.woocommerce-checkout-review-order-table{
       cursor: pointer;
     }
   }
-  li.wc_payment_method{
-    background: #ffffff;
+  ul li.wc_payment_method{
     label{
       font-size: 24px;
       color: #2a2a2a;
+      background: #ffffff;
+      padding-left: 0;
+      display: flex;
+      img{
+        float: none;
+      }
+      img.stripe-visa-icon{
+        padding-left: 10px;
+      }
     }
   }
   .payment_box.payment_method_stripe{
     background: #ffffff;
+    padding: 0;
     #stripe-payment-data{
       p:first-child{
         display: none;
       }
       fieldset{
         .form-row{
+          font-size: 16px;
+          margin-top: 35px;
           label{
             margin-bottom: 18px;
-        font-size: 16px;
+           font-size: 16px;
 
           }
+          .wc-stripe-elements-field,
           input{
             height: 44px;
             padding-left: 10px;
@@ -511,14 +523,37 @@ table.woocommerce-checkout-review-order-table{
             transition: 0.3s all ease;
             padding-left: 10px;
             box-sizing: border-box;
+            font-size: 16px;
             &:focus{
               outline: none;
               box-shadow: 1px 2px 11px 3px rgba(0, 0, 0, 0.1);
               border-color: #ffffff;
             }
+            div{
+              height: 100%;
+              display: flex !important;
+              align-items: center;
+              iframe{
+                height: 100% !important;
+                body form{
+                  height: 100% !important;
+                  span{
+                    height: 100% !important;
+                    input{
+                      height: 100% !important;
+                    }
+                  }
+                }
+              }
+            }
         }
       }
-    }
+      }
+      p{
+        label{
+          font-size: 16px;
+        }
+      }
   }
 }
 }
