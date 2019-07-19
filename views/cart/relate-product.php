@@ -61,7 +61,7 @@ $products = $query->get_products();
                                                     <i class="icon ion-md-remove"></i>
                                                 </div>
                                                 <div class="block-number">
-                                                    <div id="number"><div class="val">1</div></div>
+                                                    <div id="number"><div class="val"><?= get_quality_product_cart($product->get_id()) ?></div></div>
                                                 </div>
                                                 <div class="value-button js-cart-btn" data-val="1" id="increase" value="Increase Value">
                                                     <i class="icon ion-md-add"></i>
