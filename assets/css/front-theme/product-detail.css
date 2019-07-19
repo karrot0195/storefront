@@ -1249,19 +1249,35 @@
   color: #2a2a2a;
   text-decoration: none;
 }
-.woocommerce #reviews .form-contribution .form-row,
+.woocommerce #reviews .form-contribution .form-row#review_title_field,
+.woocommerce #reviews .form-contribution .form-row#review_comment_field,
+.woocommerce #reviews .form-contribution .form-row#review_attachment_type_field,
+.woocommerce #reviews .form-contribution .form-row#review_author_field,
+.woocommerce #reviews .form-contribution .form-row#review_email_field,
 .woocommerce #reviews .form-contribution .wc-product-reviews-pro-form-submit-row {
   display: block !important;
   color: #2a2a2a;
   margin-bottom: 25px;
 }
-.woocommerce #reviews .form-contribution .form-row label,
+.woocommerce #reviews .form-contribution .form-row#review_title_field label,
+.woocommerce #reviews .form-contribution .form-row#review_comment_field label,
+.woocommerce #reviews .form-contribution .form-row#review_attachment_type_field label,
+.woocommerce #reviews .form-contribution .form-row#review_author_field label,
+.woocommerce #reviews .form-contribution .form-row#review_email_field label,
 .woocommerce #reviews .form-contribution .wc-product-reviews-pro-form-submit-row label {
   margin-bottom: 10px;
 }
-.woocommerce #reviews .form-contribution .form-row input,
+.woocommerce #reviews .form-contribution .form-row#review_title_field input,
+.woocommerce #reviews .form-contribution .form-row#review_comment_field input,
+.woocommerce #reviews .form-contribution .form-row#review_attachment_type_field input,
+.woocommerce #reviews .form-contribution .form-row#review_author_field input,
+.woocommerce #reviews .form-contribution .form-row#review_email_field input,
 .woocommerce #reviews .form-contribution .wc-product-reviews-pro-form-submit-row input,
-.woocommerce #reviews .form-contribution .form-row textarea,
+.woocommerce #reviews .form-contribution .form-row#review_title_field textarea,
+.woocommerce #reviews .form-contribution .form-row#review_comment_field textarea,
+.woocommerce #reviews .form-contribution .form-row#review_attachment_type_field textarea,
+.woocommerce #reviews .form-contribution .form-row#review_author_field textarea,
+.woocommerce #reviews .form-contribution .form-row#review_email_field textarea,
 .woocommerce #reviews .form-contribution .wc-product-reviews-pro-form-submit-row textarea {
   height: 44px;
   border-radius: 4px;
@@ -1272,15 +1288,27 @@
   padding: 10px;
   font-size: 16px;
 }
-.woocommerce #reviews .form-contribution .form-row input:focus,
+.woocommerce #reviews .form-contribution .form-row#review_title_field input:focus,
+.woocommerce #reviews .form-contribution .form-row#review_comment_field input:focus,
+.woocommerce #reviews .form-contribution .form-row#review_attachment_type_field input:focus,
+.woocommerce #reviews .form-contribution .form-row#review_author_field input:focus,
+.woocommerce #reviews .form-contribution .form-row#review_email_field input:focus,
 .woocommerce #reviews .form-contribution .wc-product-reviews-pro-form-submit-row input:focus,
-.woocommerce #reviews .form-contribution .form-row textarea:focus,
+.woocommerce #reviews .form-contribution .form-row#review_title_field textarea:focus,
+.woocommerce #reviews .form-contribution .form-row#review_comment_field textarea:focus,
+.woocommerce #reviews .form-contribution .form-row#review_attachment_type_field textarea:focus,
+.woocommerce #reviews .form-contribution .form-row#review_author_field textarea:focus,
+.woocommerce #reviews .form-contribution .form-row#review_email_field textarea:focus,
 .woocommerce #reviews .form-contribution .wc-product-reviews-pro-form-submit-row textarea:focus {
   outline: none;
   box-shadow: 1px 2px 11px 3px rgba(0, 0, 0, 0.1);
   border-color: #ffffff;
 }
-.woocommerce #reviews .form-contribution .form-row a,
+.woocommerce #reviews .form-contribution .form-row#review_title_field a,
+.woocommerce #reviews .form-contribution .form-row#review_comment_field a,
+.woocommerce #reviews .form-contribution .form-row#review_attachment_type_field a,
+.woocommerce #reviews .form-contribution .form-row#review_author_field a,
+.woocommerce #reviews .form-contribution .form-row#review_email_field a,
 .woocommerce #reviews .form-contribution .wc-product-reviews-pro-form-submit-row a {
   color: #2a2a2a;
 }
