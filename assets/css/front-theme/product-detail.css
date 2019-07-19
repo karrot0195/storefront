@@ -1352,7 +1352,7 @@ body.woocommerce-page #reviews .form-contribution .attachment-type:not(:checked)
   text-indent: 5px;
 }
 body.woocommerce-page #reviews .form-contribution .attachment-type[data-prev-value=photo] input[value=photo] + label:before,
-body.woocommerce-page #reviews .form-contribution .attachment-type[data-prev-value=video] input[value=photo] + label.checkbox:last-child:before {
+body.woocommerce-page #reviews .form-contribution .attachment-type[data-prev-value=video] input[value=video] + label.checkbox:last-child:before {
   color: #142d73 !important;
 }
 body.woocommerce-page #reviews .form-contribution .attachment-type[data-prev-value=photo] input[value=photo] + label.checkbox,
@@ -1360,7 +1360,7 @@ body.woocommerce-page #reviews .form-contribution .attachment-type[data-prev-val
   border-color: #0f1972;
 }
 body.woocommerce #reviews .form-contribution .attachment-type:not(:checked) input[value=video] + label:before,
-body.woocommerce-page #reviews .form-contribution .attachment-type:not(:checked) input[value=video] + label:before {
+body.woocommerce-page #reviews .form-contribution .attachment-type:not(:checked) input[value=photo] + label:before {
   color: #2a2a2a !important;
 }
 @media screen and (max-width: 767px) {
