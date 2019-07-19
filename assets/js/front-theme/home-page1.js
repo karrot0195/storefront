@@ -429,7 +429,7 @@
 
   // [ABOUT US] SLICK SLIDER
   $ ('.slider').slick({
-    // autoplay: true,
+    autoplay: true,
     autoplaySpeed: 2000,
     arrows: false
   });
