@@ -446,10 +446,10 @@ table.woocommerce-checkout-review-order-table tfoot .order-total td {
   border: none;
   cursor: pointer;
 }
-#payment.woocommerce-checkout-payment li.wc_payment_method {
+#payment.woocommerce-checkout-payment ul li.wc_payment_method {
   background: #ffffff;
 }
-#payment.woocommerce-checkout-payment li.wc_payment_method label {
+#payment.woocommerce-checkout-payment ul li.wc_payment_method label {
   font-size: 24px;
   color: #2a2a2a;
 }
