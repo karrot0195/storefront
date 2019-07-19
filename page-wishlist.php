@@ -9,7 +9,10 @@
  *
  * @package storefront
  */
-$products = get_products_by_bookmark();
+$products =  [];
+if (is_user_logged_in()) {
+    $products = get_products_by_bookmark();
+}
 get_header('home-1'); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main page-wishlist" role="main">
@@ -36,14 +39,13 @@ get_header('home-1'); ?>
                                     <form class="increse-decrease fm-sl-cart proccessing" data-product_id="<?= $product->get_id() ?>">
                                         <div class="wrap-block wrap-init">
                                             <div class="lb-btn js-cart-btn" data-val="1" id="increase" value="Increase Value"><?= esc_html__('Add to cart', 'storefront') ?></div>
-
                                         </div>
                                         <div class="wrap-block wrap-proccess">
                                             <div class="value-button js-cart-btn" data-val="-1" id="decrease" value="Decrease Value">
                                                 <i class="icon ion-md-remove"></i>
                                             </div>
                                             <div class="block-number">
-                                                <div id="number"><div class="val">1</div></div>
+                                                <div id="number"><div class="val"><?= get_quality_product_cart($product->get_id()) ?></div></div>
                                             </div>
                                             <div class="value-button js-cart-btn" data-val="1" id="increase" value="Increase Value">
                                                 <i class="icon ion-md-add"></i>

@@ -49,3 +49,19 @@ function get_class_the_bookmark() {
 function get_method($a) {
 	dd(get_class_methods($a), false);
 }
+
+function get_quality_product_cart($product_id) {
+	$quality = 0;
+	if (!empty($product_id)) {
+		$cart = WC()->instance()->cart;
+
+		if (!empty($cart)) {
+			foreach ($cart->cart_contents as $item) {
+				if ($item['product_id'] == $product_id) {
+					return $item['quantity'];
+				}
+			}
+		}
+	}
+	return $quality;
+}
