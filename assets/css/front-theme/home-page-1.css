@@ -2847,6 +2847,18 @@ table th {
 .site-main.page-wishlist .related ul.products.columns-4 li.product:hover {
   box-shadow: none;
 }
+.related {
+  position: relative;
+}
+.related::before {
+  position: absolute;
+  content: '';
+  width: 2000%;
+  left: -500px;
+  top: 0;
+  height: 100%;
+  background: #d7d7d7;
+}
 .related .title {
   font-family: "Barlow-s";
   font-size: 21px;
@@ -2872,7 +2884,6 @@ table th {
 .related .related-wrapper {
   clear: both;
   display: flex;
-  background: #fbf9f9;
   align-items: center;
 }
 @media screen and (max-width: 767px) {

@@ -3022,6 +3022,16 @@ table th {
 }
 
 .related {
+  position: relative;
+  &::before{
+    position: absolute;
+    content: '';
+    width: 2000%;
+    left: -500px;
+    top: 0;
+    height: 100%;
+    background: #d7d7d7;
+  }
   .title {
     font-family: "Barlow-s";
     font-size: 21px;
@@ -3048,7 +3058,6 @@ table th {
   .related-wrapper {
     clear: both;
     display: flex;
-    background: #fbf9f9;
     @media screen and (max-width: 767px) {
       display: block;
     }
