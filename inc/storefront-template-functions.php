@@ -740,8 +740,10 @@ if (!function_exists('storefront_slider_header')) {
             <div class="block-menu">
 				<div class="menu-shop">Shop <span><i class="fa fa-chevron-up"></i></span></div>
                 <ul>
-                    <?php if (!empty($gallery)): foreach ($gallery as $idx => $item) : ?>
-                        <li><a href="<?= home_url() . '?slider=' .$idx ?>"><?= $item['title'] ?></a></li>
+                    <?php if (!empty($gallery)): foreach ($gallery as $idx => $item) : 
+			            $slug = str_replace(' ', '-', strtolower( $item['title']));
+                    	?>
+                        <li><a href="<?= home_url($slug) ?>"><?= $item['title'] ?></a></li>
                     <?php endforeach; endif; ?>
                 </ul>
             </div>

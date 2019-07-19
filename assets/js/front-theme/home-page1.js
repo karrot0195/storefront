@@ -333,16 +333,18 @@
 		}, 300);	
 	});
 
-  $('.js-btn-slider').on('click', function() {
+  $('.js-btn-slider').on('hover', function() {
     let src = $(this).data('src');
     let desc = $(this).data('description');
+    
     $('.js-btn-slider').removeClass('active');
     $(this).addClass('active');
-    $('img.bg-img').fadeOut(300, function() {
+
+    $('img.bg-img').fadeOut(300, function () {
       $('img.bg-img').attr('src', src);
       $('.slider--item .block-desc').html(desc);
-    })
-      .fadeIn(300);
+      $('img.bg-img').fadeIn();
+    });
   });
 
   // [SHOP] BUTTON CART
