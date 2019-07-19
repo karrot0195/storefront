@@ -39,7 +39,7 @@
 .shipping .faq-wrapper .sidebar p,
 .faq .shipping-wrapper .sidebar p,
 .shipping .shipping-wrapper .sidebar p {
-  font-size: 22px;
+  font-size: 24px;
   font-family: 'Barlow-m';
   letter-spacing: 0.34px;
   text-align: left;
@@ -59,6 +59,12 @@
 .faq .shipping-wrapper .content,
 .shipping .shipping-wrapper .content {
   width: 60%;
+}
+.faq .faq-wrapper .content p,
+.shipping .faq-wrapper .content p,
+.faq .shipping-wrapper .content p,
+.shipping .shipping-wrapper .content p {
+  margin: 0;
 }
 .faq .faq-wrapper .content .block__content,
 .shipping .faq-wrapper .content .block__content,

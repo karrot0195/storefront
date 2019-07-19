@@ -9,35 +9,27 @@ get_header('home-1'); ?>
 		<main id="main" class="site-main faq" role="main">
             <div class="container">
                 <div class="faq-wrapper">
-                    <?php 
-                        $faq = get_field('faq') ;
-                        if($faq) :
-                            $side_bar = $faq[0]['side_bar'];
-
-                    ?>
                     <div class="sidebar">
-                        <?php echo $side_bar ?>
+                        <?php echo get_field('faq_sidebar') ?>
                     </div>    
                     <div class="content">
                         <?php 
-                            $content=$faq[0]['content'];
+                            $content= get_field('faq_content');
                             if($content) :
-                                foreach($content as $idx_block_content) :
+                                foreach($content as $content_item) :
                                    
                         ?>
-                            <div class="block__content">
-                                <?php  $block_content = $idx_block_content['block_content']; ?>
-                                <div class="title">
-                                    <?php echo $block_content[0]['title'] ?>
-                                </div>
-                                <div class="sub-title">
-                                <?php echo $block_content[0]['sub_title'] ?>
-                                </div>
-                            </div>
-                            <?php endforeach ?>
+                                    <div class="block__content">
+                                        <div class="title">
+                                            <?php echo $content_item['faq_category'] ?>
+                                        </div>
+                                        <div class="sub-title">
+                                        <?php echo $content_item['questions'] ?>
+                                        </div>
+                                    </div>
+                                <?php endforeach ?>
                         <?php endif ?>
                     </div>
-                    <?php endif ?>
                 </div>        
             </div>
 		</main><!-- #main -->
