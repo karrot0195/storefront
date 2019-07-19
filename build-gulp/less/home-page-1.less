@@ -816,10 +816,19 @@ body {
     display: flex;
     align-items: center;
     position: relative;
+    padding: 18px 0;
+    &::before{
+      position: absolute;
+      content: '';
+      width: 2000%;
+      height: 100%;
+      background: #cecece;
+      left: -500px;
+    }
 }
 .info-page {
-    background-color: #CECECE;
-    padding: 18px 0;
+    background-color: #e2e2e2;
+    padding: 0 0 18px;
   .info-page-left {
     display: flex;
     flex-grow: 1;
