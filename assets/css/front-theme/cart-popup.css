@@ -524,6 +524,13 @@ table.woocommerce-checkout-review-order-table tfoot .order-total td {
 .woocommerce-cart .woocommerce-cart-form.sp {
   display: none;
 }
+table.woocommerce-checkout-review-order-table .product-name ul {
+  padding-left: 0;
+  list-style: none;
+}
+table.woocommerce-checkout-review-order-table .product-name ul li {
+  margin-bottom: 10px;
+}
 .site-main.page-wishlist ul.products li.product img {
   max-height: 300px;
   max-width: 200px;
