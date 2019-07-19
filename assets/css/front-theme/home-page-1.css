@@ -2849,6 +2849,7 @@ table th {
 }
 .related {
   position: relative;
+  margin-top: 50px;
 }
 .related::before {
   position: absolute;
@@ -2858,6 +2859,9 @@ table th {
   top: 0;
   height: 100%;
   background: #fbf9f9;
+}
+.related ul.products {
+  margin-top: 2.235801em;
 }
 .related .title {
   font-family: "Barlow-s";
