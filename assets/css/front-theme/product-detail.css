@@ -1354,7 +1354,7 @@ body.woocommerce-page #reviews .form-contribution .attachment-type:not(:checked)
 body.woocommerce-page #reviews .form-contribution .attachment-type[data-prev-value=photo] input[value=photo] + label:before {
   color: #142d73 !important;
 }
-body.woocommerce-page #reviews .form-contribution .attachment-type[data-prev-value=photo] input[value=photo] + label {
+body.woocommerce-page #reviews .form-contribution .attachment-type[data-prev-value=photo] input[value=photo] + label.checkbox {
   border-color: #0f1972;
 }
 body.woocommerce #reviews .form-contribution .attachment-type:not(:checked) input[value=video] + label:before,
