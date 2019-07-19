@@ -190,6 +190,9 @@ body {
   padding: 0 114px;
   margin-top: 50px;
 }
+.woocommerce-cart .cart-collaterals .woocommerce-shipping-totals {
+  display: none;
+}
 @media screen and (max-width: 1024px) {
   .woocommerce-cart .cart-collaterals {
     padding: 0;
