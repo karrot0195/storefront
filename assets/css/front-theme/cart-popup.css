@@ -636,7 +636,7 @@ table.woocommerce-checkout-review-order-table .product-name ul li:first-child {
 .home-page-1 table.woocommerce-checkout-review-order-table tbody td.thumbnail {
   width: 80px;
 }
-.woocommerce-address-fields .woocommerce-address-fields__field-wrapper button {
+.woocommerce-address-fields button {
   width: 290px;
   height: 44px;
   background: #0f1972;
