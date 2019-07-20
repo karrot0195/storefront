@@ -26,7 +26,7 @@ get_header('home-1'); ?>
                                         <?php echo $content_item['shipping_category'] ?>
                                     </div>
                                     <div class="sub-title">
-                                        <?php echo $content_item['question'] ?>
+                                        <?php echo $content_item['questions'] ?>
                                     </div>
                                 </div>
                             <?php endforeach ?>
