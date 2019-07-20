@@ -454,6 +454,7 @@ body.page-template-template-home1 {
   -moz-transition: all 0.3s ease;
   -webkit-transition: all 0.3s ease;
   text-decoration: none;
+  outline: none;
 }
 .home-page-1 .site-content .block-content .slider--item .list-title ul li a:hover {
   color: #fff;
