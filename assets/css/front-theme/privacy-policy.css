@@ -47,6 +47,9 @@
 .privacy-policy .privacy-policy-wrapper .content .block__content .extra-title p {
   margin-bottom: 20px;
 }
+.privacy-policy .privacy-policy-wrapper .content .block__content .extra-desc p {
+  margin-bottom: 20px;
+}
 /*============ Responsive ================*/
 @media screen and (max-width: 767px) {
   .privacy-policy .privacy-policy-wrapper {
