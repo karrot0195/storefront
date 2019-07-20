@@ -749,7 +749,6 @@ body.page-template-template-home1 {
   align-items: center;
   position: relative;
   padding: 18px 0;
-  overflow: hidden;
 }
 .info-page-child::before {
   position: absolute;
@@ -762,6 +761,7 @@ body.page-template-template-home1 {
 }
 .info-page {
   background-color: #e2e2e2;
+  overflow: hidden;
 }
 .info-page .info-page-left {
   display: flex;
