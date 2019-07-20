@@ -9,38 +9,29 @@ get_header('home-1'); ?>
 		<main id="main" class="site-main shipping" role="main">
             <div class="container">
                 <div class="shipping-wrapper">
-                    <?php 
-                        $faq = get_field('faq') ;
-                        if($faq) :
-                            $side_bar = $faq[0]['side_bar'];
-
-                    ?>
                     <div class="sidebar">
-                        <?php echo $side_bar ?>
+                        <?php echo get_field('shipping_sidebar') ?>
                     </div>    
                     <div class="content">
                         <div class="desc">
                             <?php echo get_field('description'); ?>
                         </div>
                         <?php 
-                            $content=$faq[0]['content'];
+                            $content= get_field('shipping_content');
                             if($content) :
-                                foreach($content as $idx_block_content) :
-                                   
+                                foreach($content as $content_item) :
                         ?>
                             <div class="block__content">
-                                <?php  $block_content = $idx_block_content['block_content']; ?>
                                 <div class="title">
-                                    <?php echo $block_content[0]['title'] ?>
+                                    <?php echo $content_item['shipping_category'] ?>
                                 </div>
                                 <div class="sub-title">
-                                <?php echo $block_content[0]['sub_title'] ?>
+                                    <?php echo $content_item['questions'] ?>
                                 </div>
                             </div>
                             <?php endforeach ?>
                         <?php endif ?>
                     </div>
-                    <?php endif ?>
                 </div>        
             </div>
 		</main><!-- #main -->
