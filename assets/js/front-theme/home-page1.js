@@ -39,7 +39,7 @@
     });
   });
 
-  // Control 1 product
+  // Control 1 product on mobile
   var count_product = $('ul.products li').length;
   if(count_product <= 1){
     $('ul.products').addClass('products-mb');
