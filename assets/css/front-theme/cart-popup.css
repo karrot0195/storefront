@@ -645,6 +645,7 @@ table.woocommerce-checkout-review-order-table .product-name ul li:first-child {
   outline: none;
   color: #ffffff;
   cursor: pointer;
+  font-size: 16px;
 }
 .site-main.page-wishlist ul.products li.product img {
   max-height: 300px;

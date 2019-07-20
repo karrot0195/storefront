@@ -748,6 +748,7 @@ body.page-template-template-home1 {
   align-items: center;
   position: relative;
   padding: 18px 0;
+  overflow: hidden;
 }
 .info-page-child::before {
   position: absolute;
