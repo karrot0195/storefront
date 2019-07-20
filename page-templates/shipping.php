@@ -21,14 +21,14 @@ get_header('home-1'); ?>
                             if($content) :
                                 foreach($content as $content_item) :
                         ?>
-                            <div class="block__content">
-                                <div class="title">
-                                    <?php echo $content_item['shipping_category'] ?>
+                                <div class="block__content">
+                                    <div class="title">
+                                        <?php echo $content_item['shipping_category'] ?>
+                                    </div>
+                                    <div class="sub-title">
+                                        <?php echo $content_item['question'] ?>
+                                    </div>
                                 </div>
-                                <div class="sub-title">
-                                    <?php echo $content_item['question'] ?>
-                                </div>
-                            </div>
                             <?php endforeach ?>
                         <?php endif ?>
                     </div>
