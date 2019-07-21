@@ -29,6 +29,9 @@ function get_user_bookmark() {
 
 function get_products_by_bookmark() {
     $bookmark_ids = get_user_bookmark();
+    if (empty($bookmark_ids)) {
+        return [];
+    }
     $query = new WC_Product_Query( [
         'include' => $bookmark_ids
     ] );
