@@ -484,10 +484,7 @@
   }
   #review_form_wrapper {
     padding-bottom: 60px;
-    position: fixed;
     width: 700px;
-    top: 15px;
-    left: 50%;
     transform: translateX(-50%);
     overflow: scroll;
     background: #ffffff;
@@ -495,6 +492,8 @@
     padding: 30px;
     opacity: 0;
     transition: all 0.5s ease;
+    position: fixed;
+    top:-200%;
     .close {
       position: absolute;
       top: 10px;
@@ -503,9 +502,12 @@
       cursor: pointer;
       font-weight: 600;
     }
+
     &.show {
       z-index: 1000;
       opacity: 1;
+      top: 15px;
+      left: 50%;
     }
   }
   .site-content {
