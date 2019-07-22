@@ -513,8 +513,8 @@
   transform: translateX(-50%);
   overflow: auto;
   background: #ffffff;
-  height: 100vh;
-  padding: 30px;
+  height: 98vh;
+  padding: 0 30px;
   opacity: 0;
   transition: all 0.5s ease;
   position: fixed;
