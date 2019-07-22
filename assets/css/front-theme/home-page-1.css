@@ -2939,6 +2939,8 @@ table th {
     float: none;
   }
 }
-.home .site-footer {
+.home .site-footer,
+.product-template-default .site-footer,
+.archive .site-footer {
   border-top: none;
 }
