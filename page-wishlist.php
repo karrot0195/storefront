@@ -55,12 +55,14 @@ get_header('home-1'); ?>
                                         </div>
                                     </form>
                                 </div>
+                                <?php if ($product->is_in_stock()): ?>
                                 <div class="stock">
                                     <div class="wrapper">
                                         <span><i class="ion ion-ios-information-circle"></i></span>
                                         <span class="text"><?= esc_html__('Low in stock', 'storefornt') ?></span>
                                     </div>
                                 </div>
+                                <?php endif; ?>
                             </li>
                         <?php
                         }
