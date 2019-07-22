@@ -125,7 +125,7 @@ $total_item = count(WC()->cart->get_cart());
 <div class="add-block-wrapper">
 	<div class="free">
 		<span><i class="fa fa-exclamation-circle"></i></span>
-		FREE STANDAR DELIVERY TO SINGAPORE WHEN YOU SPEND OVER SGD 200
+		<p>FREE STANDAR DELIVERY TO SINGAPORE WHEN YOU SPEND OVER SGD 200</p>
 	</div>
 	<div class="place-order">
 		<button>Place Order</button>
