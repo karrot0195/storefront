@@ -519,6 +519,7 @@
   transition: all 0.5s ease;
   position: fixed;
   top: -200%;
+  left: 50%;
 }
 .storefront-product-detail #review_form_wrapper .close {
   position: absolute;
