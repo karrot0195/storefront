@@ -509,10 +509,7 @@
 }
 .storefront-product-detail #review_form_wrapper {
   padding-bottom: 60px;
-  position: fixed;
   width: 700px;
-  top: 15px;
-  left: 50%;
   transform: translateX(-50%);
   overflow: scroll;
   background: #ffffff;
@@ -520,6 +517,8 @@
   padding: 30px;
   opacity: 0;
   transition: all 0.5s ease;
+  position: fixed;
+  top: -200%;
 }
 .storefront-product-detail #review_form_wrapper .close {
   position: absolute;
@@ -532,6 +531,8 @@
 .storefront-product-detail #review_form_wrapper.show {
   z-index: 1000;
   opacity: 1;
+  top: 15px;
+  left: 50%;
 }
 .storefront-product-detail .site-content {
   background-color: #f6f6f6;
