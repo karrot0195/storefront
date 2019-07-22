@@ -55,7 +55,10 @@ get_header('home-1'); ?>
                                         </div>
                                     </form>
                                 </div>
-                                <?php if ($product->is_in_stock()): ?>
+                                <?php 
+                                $check =$product->get_manage_stock() && (intval($product->get_low_stock_amount()) - intval($product->get_stock_quantity())) >= 0;
+
+                                if ($check): ?>
                                 <div class="stock">
                                     <div class="wrapper">
                                         <span><i class="ion ion-ios-information-circle"></i></span>
