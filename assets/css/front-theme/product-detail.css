@@ -513,7 +513,7 @@
   transform: translateX(-50%);
   overflow: auto;
   background: #ffffff;
-  height: 98vh;
+  height: auto;
   padding: 0 30px;
   opacity: 0;
   transition: all 0.5s ease;
@@ -532,8 +532,9 @@
 .storefront-product-detail #review_form_wrapper.show {
   z-index: 1000;
   opacity: 1;
-  top: 10px;
+  top: 50%;
   left: 50%;
+  transform: translate(-50%, -50%);
 }
 .storefront-product-detail .site-content {
   background-color: #f6f6f6;
