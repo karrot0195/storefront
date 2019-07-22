@@ -509,7 +509,7 @@
 }
 .storefront-product-detail #review_form_wrapper {
   padding-bottom: 60px;
-  width: 700px;
+  min-width: 35%;
   transform: translateX(-50%);
   overflow: auto;
   background: #ffffff;
