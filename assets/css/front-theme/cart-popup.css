@@ -336,7 +336,8 @@ form.checkout.woocommerce-checkout .col2-set {
   box-sizing: border-box;
   margin-right: 0;
 }
-form.checkout.woocommerce-checkout #order_review_heading {
+form.checkout.woocommerce-checkout #order_review_heading,
+form.checkout.woocommerce-checkout .woocommerce-shipping-fields {
   display: none;
 }
 form.checkout.woocommerce-checkout #order_review {
