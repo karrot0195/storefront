@@ -119,8 +119,6 @@ $total_item = count(WC()->cart->get_cart());
 
 	</tfoot>
 </table>
-
-
 <!-- Place Order -->
 <div class="add-block-wrapper">
 	<div class="free">
