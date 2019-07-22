@@ -381,7 +381,17 @@
 .storefront-product-detail .review-rate {
   color: #707070;
   display: flex;
-  justify-content: center;
+  align-items: center;
+}
+.storefront-product-detail .review-rate .star-rating {
+  font-size: 12px;
+  margin-right: 10px;
+}
+.storefront-product-detail .review-rate .star-rating::before {
+  color: #cbcbcb;
+}
+.storefront-product-detail .review-rate .star-rating span:before {
+  color: #fcbb1c;
 }
 .storefront-product-detail #reviews .commentlist li p.meta {
   text-align: left;
@@ -776,7 +786,6 @@
   font-family: "Barlow";
 }
 .storefront-product-detail .comment-text .description {
-  height: 40px;
   overflow: hidden;
   transition: height 0.3s ease;
 }

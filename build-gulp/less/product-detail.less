@@ -365,7 +365,17 @@
   .review-rate{
     color: #707070;
     display: flex;
-    justify-content: center;
+    align-items: center;
+    .star-rating{
+      font-size: 12px;
+      margin-right: 10px;
+      &::before{
+        color: #cbcbcb;
+      }
+      span:before{
+        color: #fcbb1c;
+      }
+    }
   }
   #reviews .commentlist li{
     p.meta {
@@ -744,7 +754,6 @@
 
   .comment-text {
     .description {
-      height: 40px;
       overflow: hidden;
       transition: height 0.3s ease;
       &.active {
