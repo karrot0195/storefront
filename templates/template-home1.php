@@ -19,6 +19,8 @@ get_header('home-1'); ?>
                     <?php
                     $gallery = get_field('gallery');
                     $description = isset($gallery[0]['description']) ? $gallery[0]['description'] : '';
+
+                    $description = nl2br($description);
                     $attachmentUrl = isset($gallery[0]['background']) ? wp_get_attachment_url($gallery[0]['background']) : '';
                     ?>
                     <div class="slider--item" style="display: block;">
@@ -38,6 +40,7 @@ get_header('home-1'); ?>
                                             $title = isset($attachment['title']) ? $attachment['title'] : '';
                                             $slug = str_replace(' ', '-', strtolower($title));
                                             $description = isset($attachment['description']) ? $attachment['description'] : '';
+                                            $description = nl2br($description);
                                             $attachmentUrl = isset($attachment['background']) ? wp_get_attachment_url($attachment['background']) : '';
                                             echo "<li><a href='".esc_url(home_url($slug))."' class='js-btn-slider ".$class."' data-description='".esc_html($description)."' data-src='".esc_url($attachmentUrl)."'>$title</a></li>";
                                             $class = '';
