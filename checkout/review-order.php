@@ -120,14 +120,3 @@ $total_item = count(WC()->cart->get_cart());
 	</tfoot>
 </table>
 
-
-<!-- Place Order -->
-<div class="add-block-wrapper">
-	<div class="free">
-		<span><i class="fa fa-exclamation-circle"></i></span>
-		<p>FREE STANDAR DELIVERY TO SINGAPORE WHEN YOU SPEND OVER SGD 200</p>
-	</div>
-	<div class="place-order">
-		<button>Place Order</button>
-	</div>
-</div>
