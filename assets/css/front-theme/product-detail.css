@@ -336,8 +336,6 @@
   text-align: left;
   color: #222222;
   display: block;
-  max-width: 140px;
-  overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
@@ -407,8 +405,10 @@
   content: "";
   font-size: 16px;
   color: #2e9e00;
-  right: 0;
+  right: -25px;
   font-family: "Ionicons";
+  top: 50%;
+  transform: translateY(-50%);
 }
 .storefront-product-detail #reviews .commentlist li .description {
   order: 3;
