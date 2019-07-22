@@ -380,6 +380,8 @@
 }
 .storefront-product-detail .review-rate {
   color: #707070;
+  display: flex;
+  justify-content: center;
 }
 .storefront-product-detail #reviews .commentlist li p.meta {
   text-align: left;

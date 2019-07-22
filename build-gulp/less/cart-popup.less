@@ -406,8 +406,11 @@ form.checkout.woocommerce-checkout{
     }
   }
 }
+.woocommerce-additional-fields{
+  margin-top: 90px;
+}
 .woocommerce-additional-fields .form-row{
-  margin-top: 50px;
+  margin-top: 70px;
   label{
     margin-bottom: 18px;
     color: #2a2a2a;
@@ -530,21 +533,29 @@ table.woocommerce-checkout-review-order-table{
               box-shadow: 1px 2px 11px 3px rgba(0, 0, 0, 0.1);
               border-color: #ffffff;
             }
+           
             div{
               height: 100%;
               display: flex !important;
               align-items: center;
               iframe{
                 height: 100% !important;
-                body form{
+                html{
                   height: 100% !important;
-                  span{
+                  body{
                     height: 100% !important;
-                    input{
+                    form{
                       height: 100% !important;
+                      span{
+                        height: 100% !important;
+                        input{
+                          height: 100% !important;
+                        }
+                      }
                     }
                   }
                 }
+                
               }
             }
         }
@@ -557,6 +568,9 @@ table.woocommerce-checkout-review-order-table{
       }
   }
 }
+}
+.ElementsApp{
+  background: red;
 }
 .payment-wrapper{
   clear: both;
