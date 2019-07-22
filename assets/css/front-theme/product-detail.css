@@ -1335,6 +1335,8 @@
 .woocommerce #reviews .form-contribution .form-row#review_rating_field .star-label {
   float: none;
   text-transform: uppercase;
+  color: #2a2a2a;
+  font-size: 16px;
 }
 .woocommerce #reviews .form-contribution .form-row#subscribe_to_replies_field {
   display: none !important;
