@@ -327,7 +327,7 @@
 }
 .storefront-product-detail #reviews .commentlist li p.meta strong {
   font-family: "Barlow";
-  font-size: 15px;
+  font-size: 16px;
   font-weight: bold;
   font-style: normal;
   font-stretch: normal;
@@ -365,19 +365,21 @@
 }
 .storefront-product-detail .review-title {
   font-family: "Barlow";
-  font-size: 18px;
-  font-weight: 700;
+  font-size: 26px;
   font-style: normal;
   font-stretch: normal;
   line-height: 1.2;
-  letter-spacing: 0.5px;
   text-align: left;
   color: #222222;
+  margin-bottom: 5px;
 }
 @media screen and (max-width: 767px) {
   .storefront-product-detail .review-title {
     font-size: 15px;
   }
+}
+.storefront-product-detail .review-rate {
+  color: #707070;
 }
 .storefront-product-detail #reviews .commentlist li p.meta {
   text-align: left;
@@ -386,6 +388,15 @@
 }
 .storefront-product-detail #reviews .commentlist li p.meta .woocommerce-review__author {
   text-transform: capitalize;
+  position: relative;
+}
+.storefront-product-detail #reviews .commentlist li p.meta .woocommerce-review__author::before {
+  position: absolute;
+  content: "";
+  font-size: 16px;
+  color: #2e9e00;
+  right: 0;
+  font-family: "Ionicons";
 }
 .storefront-product-detail #reviews .commentlist li .description {
   order: 3;
@@ -420,7 +431,7 @@
 }
 .storefront-product-detail .description p {
   font-family: "Barlow";
-  font-size: 15px;
+  font-size: 16px;
   font-weight: normal;
   font-style: normal;
   font-stretch: normal;
@@ -436,7 +447,10 @@
 }
 .storefront-product-detail #reviews .commentlist li .comment_container .comment-text {
   display: flex;
-  flex-direction: column;
+  width: 100%;
+}
+.storefront-product-detail #reviews .commentlist li .comment_container .comment-text .wrap-comment-right {
+  margin-left: 140px;
 }
 @media screen and (max-width: 480px) {
   .storefront-product-detail #reviews .commentlist li .comment_container .comment-text {
@@ -514,7 +528,7 @@
   overflow: auto;
   background: #ffffff;
   height: auto;
-  padding: 0 30px;
+  padding: 20px 30px;
   opacity: 0;
   transition: all 0.5s ease;
   position: fixed;
@@ -1189,7 +1203,17 @@
   border-bottom-color: #ffffff !important;
   padding: 0;
   text-decoration: none;
-  color: #222222;
+  font-size: 18px;
+  color: #202020;
+  font-family: "Barlow-m";
+  position: relative;
+  padding-left: 20px;
+}
+.woocommerce-page .block-reviews .contribution-type-selector a::before {
+  position: absolute;
+  content: "";
+  font-family: "Ionicons";
+  left: 0;
 }
 .woocommerce-page .block-reviews #reviews #comments {
   clear: both;
@@ -1209,7 +1233,7 @@
   display: -ms-flexbox;
   display: flex;
   order: 2;
-  margin-top: 10px;
+  font-size: 16px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: reverse;
   -ms-flex-direction: column-reverse;
@@ -1400,6 +1424,50 @@ body.woocommerce-page #reviews .form-contribution .attachment-type[data-prev-val
 .woocommerce #reviews .form-contribution .form-row label {
   margin-bottom: 10px;
 }
+.field-header {
+  color: #2a2a2a;
+  font-family: "Barlow-s";
+  font-size: 28px;
+  margin-bottom: 30px;
+}
+.wrap-fields {
+  margin-bottom: 35px;
+}
+.wrap-fields label {
+  color: #2a2a2a;
+  margin-bottom: 10px;
+  display: block;
+}
+.wrap-fields input {
+  display: block;
+  width: 100%;
+  height: 44px;
+  border-radius: 4px;
+  border: 1px solid #d7d7d7;
+  transition: 0.3s all ease;
+  padding-left: 10px;
+  box-sizing: border-box;
+  padding: 10px;
+  font-size: 16px;
+  font-family: "Barlow";
+}
+.wrap-fields input:focus {
+  outline: none;
+  box-shadow: 1px 2px 11px 3px rgba(0, 0, 0, 0.1);
+  border-color: #ffffff;
+}
+.woocommerce.woocommerce-page #reviews .product-rating .product-rating-summary {
+  display: flex;
+  justify-content: space-between;
+}
+.woocommerce.woocommerce-page #reviews .product-rating .product-rating-summary .wrap-review-right button {
+  border: none;
+  background: no-repeat;
+  font-size: 16px;
+  color: #777777;
+  font-family: "Barlow-m";
+  text-transform: capitalize;
+}
 @media screen and (max-width: 767px) {
   .wrap-additional_information tbody {
     display: flex;
@@ -1417,9 +1485,19 @@ body.woocommerce-page #reviews .form-contribution .attachment-type[data-prev-val
     height: auto;
   }
   .woocommerce-page .block-reviews #reviews #comments ol.commentlist li .comment-text .review-title {
-    margin-bottom: 10px;
+    margin-bottom: 0;
   }
   .storefront-product-detail #review_form_wrapper {
-    width: calc(100% - 100px);
+    width: calc(100% - 60px);
+    padding: 10px;
+  }
+  .storefront-product-detail #reviews .commentlist li .comment_container .comment-text {
+    display: block;
+  }
+  .storefront-product-detail #reviews .commentlist li .comment_container .comment-text .wrap-comment-left {
+    margin-bottom: 25px;
+  }
+  .storefront-product-detail #reviews .commentlist li .comment_container .comment-text .wrap-comment-right {
+    margin-left: 0;
   }
 }
