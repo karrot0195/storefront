@@ -73,7 +73,11 @@ $total_rating_count = $product->get_rating_count();
 				?>
 				<div class="wrap-review-left">
 					<div class="review-title">Product Ratings</div>
-					<div class="review-rate">4/5 (17 reviewers)</div>
+					<div class="review-rate">
+						<div class="star-rating" role="img" aria-label="Rated <?= intval($average_rating) ?> out of 5"><span style="width:<?= $average_rating / 5 * 100 ?>%">Rated <strong class="rating"><?= intval($average_rating) ?></strong> out of 5</span></div>
+
+						<?= intval($average_rating) . '/5' ?> (<?= $reviews_count ?>  reviewers)
+					</div>
 				</div>
 				<div class="wrap-review-right">
 					<button>View all</button>
