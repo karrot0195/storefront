@@ -33,7 +33,7 @@ class ArchiveShopHelper {
         if ($bg) {
             $bg = wp_get_attachment_url($bg);$has_bg=true;
         } else {
-            $bg = "http://i3.ytimg.com/vi/".$video."/hqdefault.jpg";
+            $bg = "http://i3.ytimg.com/vi/".$video."/maxresdefault.jpg";
         }
         echo render_php('views/shop/video.php', [
             'bg' => $bg,
