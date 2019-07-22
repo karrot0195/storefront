@@ -1512,3 +1512,7 @@ body.woocommerce-page #reviews .form-contribution .attachment-type[data-prev-val
     margin-left: 0;
   }
 }
+.storefront-product-detail .home-page-1 .woocommerce-noreviews {
+  text-align: left;
+  padding-left: 0;
+}
