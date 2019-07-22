@@ -870,7 +870,7 @@ table.woocommerce-checkout-review-order-table .product-name ul li:first-child {
     margin-top: 0;
   }
   .form-row #stripe-cvc-element {
-    width: 100%;
+    width: 50%;
   }
   form.checkout.woocommerce-checkout #order_review table.woocommerce-checkout-review-order-table {
     width: 100%;
