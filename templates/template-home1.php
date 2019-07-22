@@ -36,14 +36,16 @@ get_header('home-1'); ?>
                                     <ul>
                                         <?php
                                         $class = 'active';
-                                        foreach ($menu_items as $attachment) {
-                                            $title = isset($attachment['title']) ? $attachment['title'] : '';
-                                            $link = $attachment['link'];
-                                            $description = isset($attachment['description']) ? $attachment['description'] : '';
-                                            // $description = nl2br($description);
-                                            $attachmentUrl = isset($attachment['background']) ? wp_get_attachment_url($attachment['background']) : '';
-                                            echo "<li><a href='".$link."' class='js-btn-slider ".$class."' data-description='".esc_html($description)."' data-src='".esc_url($attachmentUrl)."'>$title</a></li>";
-                                            $class = '';
+                                        if (!empty($menu_items)) {
+                                            foreach ($menu_items as $attachment) {
+                                                $title = isset($attachment['title']) ? $attachment['title'] : '';
+                                                $link = $attachment['link'];
+                                                $description = isset($attachment['description']) ? $attachment['description'] : '';
+                                                // $description = nl2br($description);
+                                                $attachmentUrl = isset($attachment['background']) ? wp_get_attachment_url($attachment['background']) : '';
+                                                echo "<li><a href='".$link."' class='js-btn-slider ".$class."' data-description='".esc_html($description)."' data-src='".esc_url($attachmentUrl)."'>$title</a></li>";
+                                                $class = '';
+                                            }
                                         }
                                         ?>
                                     </ul>
