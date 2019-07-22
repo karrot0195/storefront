@@ -20,7 +20,7 @@ get_header('home-1'); ?>
                     $menu_items = get_field('header_menu_item','option');
 
                     $description = isset($menu_items[0]['description']) ? $menu_items[0]['description'] : '';
-                    // $description = nl2br($description);
+                    $description = strip_tags($description, '<br>');
                     $attachmentUrl = isset($menu_items[0]['background']) ? wp_get_attachment_url($menu_items[0]['background']) : '';
                     ?>
                     <div class="slider--item" style="display: block;">
@@ -41,7 +41,7 @@ get_header('home-1'); ?>
                                                 $title = isset($attachment['title']) ? $attachment['title'] : '';
                                                 $link = $attachment['link'];
                                                 $description = isset($attachment['description']) ? $attachment['description'] : '';
-                                                // $description = nl2br($description);
+                                                $description = strip_tags($description, '<br>');
                                                 $attachmentUrl = isset($attachment['background']) ? wp_get_attachment_url($attachment['background']) : '';
                                                 echo "<li><a href='".$link."' class='js-btn-slider ".$class."' data-description='".esc_html($description)."' data-src='".esc_url($attachmentUrl)."'>$title</a></li>";
                                                 $class = '';
