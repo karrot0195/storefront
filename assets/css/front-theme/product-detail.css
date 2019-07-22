@@ -1289,6 +1289,7 @@
   box-sizing: border-box;
   padding: 10px;
   font-size: 16px;
+  font-family: "Barlow";
 }
 .woocommerce #reviews .form-contribution .form-row#review_title_field input:focus,
 .woocommerce #reviews .form-contribution .form-row#review_comment_field input:focus,
@@ -1313,6 +1314,14 @@
 .woocommerce #reviews .form-contribution .form-row#review_email_field a,
 .woocommerce #reviews .form-contribution .wc-product-reviews-pro-form-submit-row a {
   color: #2a2a2a;
+}
+.woocommerce #reviews .form-contribution .form-row#review_title_field textarea,
+.woocommerce #reviews .form-contribution .form-row#review_comment_field textarea,
+.woocommerce #reviews .form-contribution .form-row#review_attachment_type_field textarea,
+.woocommerce #reviews .form-contribution .form-row#review_author_field textarea,
+.woocommerce #reviews .form-contribution .form-row#review_email_field textarea,
+.woocommerce #reviews .form-contribution .wc-product-reviews-pro-form-submit-row textarea {
+  height: 60px;
 }
 .woocommerce #reviews .form-contribution .form-row#review_attachment_url_field input {
   height: 44px;

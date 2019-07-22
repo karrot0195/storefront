@@ -688,6 +688,9 @@ table.woocommerce-checkout-review-order-table .product-name ul li:first-child {
   font-size: 16px;
   cursor: pointer;
 }
+#payment.woocommerce-checkout-payment ul li.wc_payment_method label img {
+  padding-right: 10px;
+}
 .site-main.page-wishlist ul.products li.product img {
   max-height: 300px;
   max-width: 200px;
