@@ -391,6 +391,9 @@
 .storefront-product-detail .review-rate .star-rating span:before {
   color: #fcbb1c;
 }
+.storefront-product-detail .review-rate .part-2 {
+  padding-right: 5px;
+}
 .storefront-product-detail #reviews .commentlist li p.meta {
   text-align: left;
   margin: 0;
