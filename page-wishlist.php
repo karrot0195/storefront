@@ -10,9 +10,11 @@
  * @package storefront
  */
 $products =  [];
-if (is_user_logged_in()) {
-    $products = get_products_by_bookmark();
+if (!is_user_logged_in()) {
+    header('location: ' . home_url());
 }
+
+$products = get_products_by_bookmark();
 get_header('home-1'); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main page-wishlist" role="main">
