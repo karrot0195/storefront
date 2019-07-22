@@ -874,6 +874,14 @@ table.woocommerce-checkout-review-order-table{
   }
   #payment.woocommerce-checkout-payment ul li.wc_payment_method label{
     padding: 0;
+    display: block;
+  }
+  #payment.woocommerce-checkout-payment ul li.wc_payment_method label img{
+    padding-right: 10px;
+    padding-top: 15px;
+  }
+  #payment.woocommerce-checkout-payment ul li.wc_payment_method label img.stripe-visa-icon{
+    padding-left: 0;
   }
   form.checkout.woocommerce-checkout #order_review{
     width: 100%;
@@ -888,5 +896,8 @@ table.woocommerce-checkout-review-order-table{
   }
   .add-block-wrapper .place-order{
     margin-top: 30px;
+  }
+  #payment.woocommerce-checkout-payment .payment_box.payment_method_stripe #stripe-payment-data fieldset .form-row{
+    margin-top: 20px;
   }
 }
