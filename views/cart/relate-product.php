@@ -14,9 +14,11 @@ $term_ids = [];
 
 if (!empty($relate_product)) {
     for ($i=0; $i<count($relate_product); $i++) {
-        $terms = wp_get_post_terms($relate_product[$i], 'product_cat', ['field' => ['term_id']]);
-        $ids = array_column($terms, 'slug');
-        $term_ids = array_merge($term_ids, $ids);
+        if (isset($relate_product[$i])) {
+            $terms = wp_get_post_terms($relate_product[$i], 'product_cat', ['field' => ['term_id']]);
+            $ids = array_column($terms, 'slug');
+            $term_ids = array_merge($term_ids, $ids);
+        }
     }
 }
 
