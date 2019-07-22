@@ -474,6 +474,7 @@ body.page-template-template-home1 {
 .site-footer {
   background-color: #fff;
   clear: both;
+  border-top: 1px solid #e2e2e2;
 }
 .site-footer .footer-widget-3 {
   flex-grow: 1;
@@ -2937,4 +2938,7 @@ table th {
     margin: 0;
     float: none;
   }
+}
+.home .site-footer {
+  border-top: none;
 }

@@ -449,6 +449,10 @@ table.woocommerce-checkout-review-order-table tfoot .order-total td {
   border-radius: 22px;
   border: none;
   cursor: pointer;
+  width: 250px;
+  float: right;
+  margin-top: -60px;
+  position: relative;
 }
 #payment.woocommerce-checkout-payment ul li.wc_payment_method label {
   font-size: 24px;
@@ -702,6 +706,9 @@ table.woocommerce-checkout-review-order-table .product-name ul li:first-child {
   font-size: 16px;
   cursor: pointer;
 }
+.form-row #stripe-cvc-element {
+  width: 40%;
+}
 #payment.woocommerce-checkout-payment ul li.wc_payment_method label img {
   padding-right: 10px;
 }
@@ -855,5 +862,17 @@ table.woocommerce-checkout-review-order-table .product-name ul li:first-child {
   }
   #payment.woocommerce-checkout-payment .payment_box.payment_method_stripe #stripe-payment-data fieldset .form-row {
     margin-top: 20px;
+  }
+  #payment.woocommerce-checkout-payment .form-row.place-order button {
+    width: 100%;
+    float: none;
+    position: inherit;
+    margin-top: 0;
+  }
+  .form-row #stripe-cvc-element {
+    width: 100%;
+  }
+  form.checkout.woocommerce-checkout #order_review table.woocommerce-checkout-review-order-table {
+    width: 100%;
   }
 }
