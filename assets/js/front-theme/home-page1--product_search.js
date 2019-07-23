@@ -10,7 +10,7 @@
 
       setTimeout(function(){
         $('.wrap-search-product .block-content--main .wrap-item .block-title').addClass('block-title-show');
-      }, 1200);
+      }, 1500);
     }
   });
 
