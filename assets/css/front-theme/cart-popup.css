@@ -652,6 +652,10 @@ table.woocommerce-checkout-review-order-table .product-name ul li:first-child {
   text-align: right;
   padding-right: 10px;
 }
+.home-page-1 table.woocommerce-checkout-review-order-table thead th.product-total a {
+  color: #2a2a2a;
+  text-decoration: none;
+}
 .home-page-1 table.woocommerce-checkout-review-order-table tbody td.thumbnail {
   width: 80px;
 }
