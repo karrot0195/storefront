@@ -308,11 +308,14 @@
   color: #2a2a2a;
   margin: 0;
 }
+.contact-us-wrapper .content {
+  width: 50%;
+}
 .contact-us-wrapper .content .ad-p-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding-bottom: 30px;
+  padding-bottom: 65px;
   border-bottom: 1px solid rgba(149, 149, 149, 0.4);
 }
 .contact-us-wrapper .content .address,
@@ -324,9 +327,8 @@
 }
 .contact-us-wrapper .content .title {
   font-size: 18px;
-  font-family: "Barlow";
+  font-family: "Barlow-m";
   margin-bottom: 10px;
-  font-weight: bold;
 }
 .contact-us-wrapper .content .desc a {
   font-size: 16px;
@@ -335,10 +337,39 @@
   text-decoration: none;
 }
 .contact-us-wrapper .content .contact-form {
-  padding-top: 15px;
+  padding-top: 35px;
 }
 .contact-us-wrapper .content .contact-form .title {
-  margin-bottom: 30px;
+  margin-bottom: 55px;
+}
+.contact-us-wrapper .content .contact-form #gform_wrapper_1 .gform_heading {
+  display: none;
+}
+.contact-us-wrapper .content .contact-form #gform_wrapper_1 .gform_body ul.gform_fields li.gfield {
+  margin-bottom: 20px;
+}
+.contact-us-wrapper .content .contact-form #gform_wrapper_1 .gform_body ul.gform_fields #field_1_1,
+.contact-us-wrapper .content .contact-form #gform_wrapper_1 .gform_body ul.gform_fields #field_1_3 {
+  width: 49%;
+  clear: none;
+}
+.contact-us-wrapper .content .contact-form #gform_wrapper_1 .gform_body ul.gform_fields #field_1_1 {
+  float: left;
+}
+.contact-us-wrapper .content .contact-form #gform_wrapper_1 .gform_body ul.gform_fields #field_1_3 {
+  float: right;
+}
+.contact-us-wrapper .content .contact-form #gform_wrapper_1 .gform_body ul.gform_fields #field_1_4 {
+  clear: both;
+}
+.contact-us-wrapper .content .contact-form #gform_wrapper_1 .gform_body ul.gform_fields .ginput_container input.medium {
+  width: 100%;
+}
+.contact-us-wrapper .content .contact-form #gform_wrapper_1 .gform_body .gfield_label {
+  font-weight: normal;
+}
+.contact-us-wrapper .content .contact-form #gform_wrapper_1 .gform_body .gfield_label .gfield_required {
+  color: #2a2a2a;
 }
 .contact-us-wrapper .content .contact-form input,
 .contact-us-wrapper .content .contact-form textarea {
