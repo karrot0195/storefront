@@ -123,7 +123,7 @@
   letter-spacing: 0.22px;
   text-align: left;
   color: #2a2a2a;
-  margin: 20px auto 0;
+  margin: 0 auto;
 }
 @media screen and (max-width: 767px) {
   .faq .faq-wrapper .content .block__content .sub-title p,
@@ -132,6 +132,12 @@
   .shipping .shipping-wrapper .content .block__content .sub-title p {
     font-size: 14px;
   }
+}
+.faq .faq-wrapper .content .block__content .sub-title p:first-child,
+.shipping .faq-wrapper .content .block__content .sub-title p:first-child,
+.faq .shipping-wrapper .content .block__content .sub-title p:first-child,
+.shipping .shipping-wrapper .content .block__content .sub-title p:first-child {
+  margin-top: 20px;
 }
 .faq .faq-wrapper .content .block__content:first-child,
 .shipping .faq-wrapper .content .block__content:first-child,
