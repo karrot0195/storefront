@@ -5,7 +5,7 @@
     } else {
       $('.wrap-search-product').slideToggle(300);
       setTimeout(function(){
-        $('.wrap-search-product .block-content--main .wrap-item').toggleClass('wrap-item-show');
+        $('.wrap-search-product .block-content--main .wrap-item .block-thumbnail img').toggleClass('img-show');
       }, 500);
 
       setTimeout(function(){
