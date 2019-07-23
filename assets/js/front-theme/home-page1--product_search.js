@@ -6,11 +6,11 @@
       $('.wrap-search-product').slideToggle(300);
       setTimeout(function(){
         $('.wrap-search-product .block-content--main .wrap-item').addClass('wrap-item-show');
-      }, 1000);
+      }, 500);
 
       setTimeout(function(){
         $('.wrap-search-product .block-content--main .wrap-item .block-title').addClass('block-title-show');
-      }, 1500);
+      }, 200);
     }
   });
 
