@@ -3,7 +3,7 @@
     if ($('#page.one-page').length) {
       window.location = '/derma-rx?action=search';
     } else {
-      $('.wrap-search-product').slideToggle(300);
+      $('.wrap-search-product').slideToggle(500);
       setTimeout(function(){
         $('.wrap-search-product .block-content--main .wrap-item .block-thumbnail img').toggleClass('img-show');
       }, 500);
