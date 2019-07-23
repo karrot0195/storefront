@@ -330,6 +330,9 @@
   font-family: "Barlow-m";
   margin-bottom: 10px;
 }
+.contact-us-wrapper .content .desc p {
+  line-height: 1.8;
+}
 .contact-us-wrapper .content .desc a {
   font-size: 16px;
   line-height: 1.36;
