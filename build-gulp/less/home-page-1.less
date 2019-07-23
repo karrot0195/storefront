@@ -2789,9 +2789,10 @@ table th {
         margin-left: auto;
         i{
           transition: 0.3s all ease;
+          transform: rotate(180deg);
         }
         i.i-click{
-          transform: rotate(180deg);
+          transform: rotate(360deg);
         }
       }
     }
@@ -3112,5 +3113,13 @@ table th {
 .archive{
   .site-footer{
     border-top: none;
+  }
+}
+@media screen and (max-width: 375px){
+  .info-page .info-page-left a{
+    font-size: 10px;
+  }
+  .info-page .info-page-right button{
+    font-size: 12px;
   }
 }

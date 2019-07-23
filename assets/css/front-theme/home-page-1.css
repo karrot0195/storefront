@@ -2630,10 +2630,11 @@ table th {
   .wrapper-menu .menu-shop span i,
   .wrapper-menu .menu-info span i {
     transition: 0.3s all ease;
+    transform: rotate(180deg);
   }
   .wrapper-menu .menu-shop span i.i-click,
   .wrapper-menu .menu-info span i.i-click {
-    transform: rotate(180deg);
+    transform: rotate(360deg);
   }
   .wrapper-menu .menu-info {
     margin-top: 20px;
@@ -2943,4 +2944,12 @@ table th {
 .product-template-default .site-footer,
 .archive .site-footer {
   border-top: none;
+}
+@media screen and (max-width: 375px) {
+  .info-page .info-page-left a {
+    font-size: 10px;
+  }
+  .info-page .info-page-right button {
+    font-size: 12px;
+  }
 }
