@@ -8,6 +8,7 @@
 }
 .wrap-search-product .block-content--main {
   font-size: 0;
+  overflow: hidden;
 }
 .wrap-search-product .block-content--action {
   text-align: center;
@@ -122,7 +123,6 @@
 }
 .wrap-search-product .block-content--action {
   padding-bottom: 50px;
-  overflow: hidden;
 }
 .wrap-search-product .block-content--action a {
   border: 1px solid #222;
