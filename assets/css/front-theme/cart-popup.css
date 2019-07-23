@@ -320,6 +320,7 @@ table.cart td.product-quantity .quantity input[type=number]::-webkit-outer-spin-
   border: 1px solid #d7d7d7;
   transition: 0.3s all ease;
   font-size: 16px;
+  font-family: "Barlow";
 }
 .woocommerce-billing-fields__field-wrapper .form-row input:focus,
 .woocommerce-billing-fields__field-wrapper .form-row textarea:focus {
@@ -396,6 +397,7 @@ form.checkout.woocommerce-checkout #order_review table.woocommerce-checkout-revi
   height: 80px;
   padding-top: 8px;
   font-size: 16px;
+  font-family: "Barlow";
 }
 .woocommerce-additional-fields .form-row textarea:focus {
   outline: none;
