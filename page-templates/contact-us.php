@@ -25,7 +25,10 @@ get_header('home-1'); ?>
                         </div>
                         <div class="contact-form">
                             <div class="title">Please Send Your Inquiry</div>
-                             <?php echo do_shortcode( '[contact-form-7 id="244" title="Contact form 1"]' ); ?>
+                           <?php 
+                            $form = get_field('form_contact');
+                            gravity_form($form['id']);
+                            ?>
                         </div>
                     </div>
                 
