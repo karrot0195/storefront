@@ -5,12 +5,12 @@
     } else {
       $('.wrap-search-product').slideToggle(300);
       setTimeout(function(){
-        $('.wrap-search-product .block-content--main .wrap-item').addClass('wrap-item-show');
+        $('.wrap-search-product .block-content--main .wrap-item').toggleClass('wrap-item-show');
       }, 500);
 
       setTimeout(function(){
-        $('.wrap-search-product .block-content--main .wrap-item .block-title').addClass('block-title-show');
-      }, 700);
+        $('.wrap-search-product .block-content--main .wrap-item .block-title').toggleClass('block-title-show');
+      }, 1000);
     }
   });
 
