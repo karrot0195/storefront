@@ -340,7 +340,7 @@
   padding-top: 35px;
 }
 .contact-us-wrapper .content .contact-form .title {
-  margin-bottom: 55px;
+  margin-bottom: 40px;
 }
 .contact-us-wrapper .content .contact-form #gform_wrapper_1 .gform_heading {
   display: none;
@@ -364,12 +364,27 @@
 }
 .contact-us-wrapper .content .contact-form #gform_wrapper_1 .gform_body ul.gform_fields .ginput_container input.medium {
   width: 100%;
+  height: 44px;
 }
 .contact-us-wrapper .content .contact-form #gform_wrapper_1 .gform_body .gfield_label {
   font-weight: normal;
 }
 .contact-us-wrapper .content .contact-form #gform_wrapper_1 .gform_body .gfield_label .gfield_required {
   color: #2a2a2a;
+}
+.contact-us-wrapper .content .contact-form #gform_wrapper_1 .gform_footer {
+  margin-top: 55px;
+  padding: 0;
+}
+.contact-us-wrapper .content .contact-form #gform_wrapper_1 .gform_footer input[type=submit] {
+  height: 50px;
+  background: #0f1972;
+  border-radius: 25px;
+  width: 200px;
+  text-align: center;
+  color: #ffffff;
+  font-size: 16px;
+  cursor: pointer;
 }
 .contact-us-wrapper .content .contact-form input,
 .contact-us-wrapper .content .contact-form textarea {
@@ -412,19 +427,6 @@
   width: 100%;
   margin-top: 10px;
   padding-top: 10px;
-}
-.contact-us-wrapper .content .contact-form .form-submit {
-  margin-top: 55px;
-}
-.contact-us-wrapper .content .contact-form .form-submit input {
-  height: 50px;
-  background: #0f1972;
-  border-radius: 25px;
-  width: 200px;
-  text-align: center;
-  color: #ffffff;
-  font-size: 16px;
-  cursor: pointer;
 }
 .home-page-1 .woocommerce form .form-row .required {
   color: #2a2a2a;
