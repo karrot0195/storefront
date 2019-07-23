@@ -105,13 +105,23 @@
           width: calc(100%/4 - 20px);
           display: inline-block;
           margin-right: 20px;
+          transform: translateY(-100%);
+          transition: 1s all ease;
           .block-title {
+            transform: scale(0);
+            transition: 0.5s all ease;
             a {
               text-decoration: none;
               color: #020202;
               font-size: 18px;
             }
           }
+          .block-title-show{
+            transform: scale(1);
+          }
+        }
+        .wrap-item-show{
+          transform: translateY(0);
         }
         padding-bottom: 50px;
       }
@@ -133,6 +143,7 @@
         }
   
         padding-bottom: 50px;
+        overflow: hidden;
       }
     }
   }

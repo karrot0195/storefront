@@ -4,6 +4,8 @@
       window.location = '/derma-rx?action=search';
     } else {
       $('.wrap-search-product').slideToggle(300);
+      $('.wrap-search-product .block-content--main .wrap-item').addClass('wrap-item-show');
+      $('.wrap-search-product .block-content--main .wrap-item .block-title').addClass('block-title-show');
     }
   });
 
