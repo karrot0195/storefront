@@ -1529,6 +1529,9 @@ body.woocommerce-page #reviews .form-contribution .attachment-type[data-prev-val
   .storefront-product-detail #reviews .commentlist li p.meta .woocommerce-review__author::before {
     right: 0;
   }
+  .field-header {
+    font-size: 20px;
+  }
 }
 .storefront-product-detail .home-page-1 .woocommerce-noreviews {
   text-align: left;
