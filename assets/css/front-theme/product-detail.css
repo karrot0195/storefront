@@ -400,10 +400,24 @@
   order: 1;
 }
 .storefront-product-detail #reviews .commentlist li p.meta .woocommerce-review__author {
+  font-size: 0;
+  display: flex;
+}
+.storefront-product-detail #reviews .commentlist li p.meta .woocommerce-review__author .contribution-badge {
   text-transform: capitalize;
   position: relative;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.2;
+  letter-spacing: 0.4px;
+  text-align: left;
+  color: #222222;
+  display: block;
+  font-size: 16px;
+  background: none;
 }
-.storefront-product-detail #reviews .commentlist li p.meta .woocommerce-review__author::before {
+.storefront-product-detail #reviews .commentlist li p.meta .woocommerce-review__author .contribution-badge::before {
   position: absolute;
   content: "";
   font-size: 16px;
@@ -1253,9 +1267,6 @@
   -webkit-box-direction: reverse;
   -ms-flex-direction: column-reverse;
   flex-direction: column-reverse;
-}
-.woocommerce-page .block-reviews #reviews #comments ol.commentlist li .comment-text .meta .woocommerce-review__author .contribution-badge {
-  display: none;
 }
 .woocommerce-page .block-reviews #reviews #comments ol.commentlist li .comment-text .contribution-actions {
   display: none;

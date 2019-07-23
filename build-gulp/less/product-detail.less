@@ -384,19 +384,34 @@
       margin: 0;
       order: 1;
       .woocommerce-review__author{
-        text-transform: capitalize;
-        position: relative;
-        &::before{
-          position: absolute;
-          content: "";
+        font-size: 0;
+        display: flex;
+        .contribution-badge{
+          text-transform: capitalize;
+          position: relative;
+          font-weight: bold;
+          font-style: normal;
+          font-stretch: normal;
+          line-height: 1.2;
+          letter-spacing: 0.4px;
+          text-align: left;
+          color: #222222;
+          display: block;
           font-size: 16px;
-          color: #2e9e00;
-          right: -25px;
-          font-family: "Ionicons";
-          top: 50%;
-          transform: translateY(-50%);
+          background: none;
+          &::before{
+            position: absolute;
+            content: "";
+            font-size: 16px;
+            color: #2e9e00;
+            right: -25px;
+            font-family: "Ionicons";
+            top: 50%;
+            transform: translateY(-50%);
+          }
+         }
         }
-      }
+       
     }
     .description{
       order: 3;
@@ -1251,13 +1266,6 @@
           -webkit-box-direction: reverse;
               -ms-flex-direction: column-reverse;
                   flex-direction: column-reverse;
-        }
-        .meta{
-          .woocommerce-review__author{
-            .contribution-badge{
-              display: none;
-            }
-          }
         }
         .contribution-actions{
           display: none;
