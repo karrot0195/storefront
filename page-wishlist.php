@@ -10,9 +10,11 @@
  * @package storefront
  */
 $products =  [];
-if (is_user_logged_in()) {
-    $products = get_products_by_bookmark();
+if (!is_user_logged_in()) {
+    header('location: ' . home_url());
 }
+
+$products = get_products_by_bookmark();
 get_header('home-1'); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main page-wishlist" role="main">
@@ -53,12 +55,17 @@ get_header('home-1'); ?>
                                         </div>
                                     </form>
                                 </div>
+                                <?php 
+                                $check =$product->get_manage_stock() && (intval($product->get_low_stock_amount()) - intval($product->get_stock_quantity())) >= 0;
+
+                                if ($check): ?>
                                 <div class="stock">
                                     <div class="wrapper">
                                         <span><i class="ion ion-ios-information-circle"></i></span>
                                         <span class="text"><?= esc_html__('Low in stock', 'storefornt') ?></span>
                                     </div>
                                 </div>
+                                <?php endif; ?>
                             </li>
                         <?php
                         }
