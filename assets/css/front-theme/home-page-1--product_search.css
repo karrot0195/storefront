@@ -103,6 +103,7 @@
   width: calc(100%/4 - 20px);
   display: inline-block;
   margin-right: 20px;
+  overflow: hidden;
 }
 .wrap-search-product .block-content--main .wrap-item .block-thumbnail img {
   transform: translateY(-100%);
