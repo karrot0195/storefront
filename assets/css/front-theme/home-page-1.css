@@ -2013,13 +2013,14 @@ body.disable .home-page-1 .site-header {
   text-decoration: none;
   color: #222;
   background-color: #fff;
-  font-family: "Barlow-m";
+  font-family: "Barlow";
   text-transform: uppercase;
   border-bottom: 1px solid #ddd;
   padding: 20px 0;
 }
 .home-page-1 .site-header .col-full .menu-mobile .ugd b {
   padding-left: 10px;
+  font-family: "Barlow-m";
 }
 .home-page-1 .site-header .col-full .menu-mobile .ugd a {
   margin-left: auto;

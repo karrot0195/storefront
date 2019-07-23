@@ -20,7 +20,7 @@ get_header('home-1'); ?>
                             </div>
                             <div class="phone">
                                 <p class="title">Phone</p>
-                                <div class="desc"><?php echo get_field('phone') ?></div>
+                                <div class="desc"><a href="#"><?php echo get_field('phone') ?></a></div>
                             </div>
                         </div>
                         <div class="contact-form">
