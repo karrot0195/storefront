@@ -245,11 +245,6 @@ body.page-template-template-home1 {
   width: 100%;
   z-index: 9;
 }
-@media screen and (max-width: 992px) {
-  .home-page-1 .site-header.fixed .col-full .site-branding {
-    padding-left: 50px;
-  }
-}
 .home-page-1 .site-header.fixed .col-full .site-branding img {
   width: 100%;
   height: 100%;
@@ -265,14 +260,17 @@ body.page-template-template-home1 {
 }
 @media screen and (max-width: 992px) {
   .home-page-1 .site-header .col-full .site-branding {
-    padding-left: 50px;
+    padding-left: 0;
     float: none;
     margin: 0 auto;
+    width: 100%;
+    text-align: center;
   }
 }
 .home-page-1 .site-header .col-full .site-branding a {
   display: block;
   width: 120px;
+  margin: 0 auto;
 }
 @media screen and (max-width: 992px) {
   .home-page-1 .site-header .col-full .site-branding .custom-logo-link {
@@ -290,6 +288,7 @@ body.page-template-template-home1 {
     max-width: 90%;
     width: auto;
     height: auto;
+    vertical-align: bottom;
   }
 }
 .home-page-1 .site-header .col-full .block-menu {
@@ -1872,6 +1871,11 @@ body.disable .home-page-1 .site-header {
   width: 100%;
   align-items: center;
 }
+@media screen and (max-width: 992px) {
+  .home-page-1 .menu-desktop {
+    position: relative;
+  }
+}
 .home-page-1 .menu-mobile {
   display: none;
 }
@@ -2278,6 +2282,8 @@ body.disable .home-page-1 .site-header {
     margin-left: 0px;
     width: auto;
     justify-content: flex-end;
+    position: absolute;
+    right: 0;
   }
   .header-icon {
     width: 50px;
