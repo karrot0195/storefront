@@ -328,9 +328,11 @@
   margin-bottom: 10px;
   font-weight: bold;
 }
-.contact-us-wrapper .content .desc p {
+.contact-us-wrapper .content .desc a {
   font-size: 16px;
   line-height: 1.36;
+  color: #2a2a2a;
+  text-decoration: none;
 }
 .contact-us-wrapper .content .contact-form {
   padding-top: 15px;
