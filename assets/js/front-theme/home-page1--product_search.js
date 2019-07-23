@@ -15,7 +15,9 @@
   });
 
   $(document).on('click', '.wrap-search-product .close', function() {
-    $('.wrap-search-product').slideUp(300);
+    $('.wrap-search-product').slideUp(500);
+    $('.wrap-search-product .block-content--main .wrap-item .block-thumbnail img').removeClass('img-show');
+    $('.wrap-search-product .block-content--main .wrap-item .block-title').removeClass('block-title-show');
   });
 
   $(document).on('click', '.js-remind-text', function() {
