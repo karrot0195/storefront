@@ -86,12 +86,13 @@
 
   // Scroll Menu 
   $(window).scroll(function(){
-      if ($(this).scrollTop() > 1) {
+      if ($(this).scrollTop() > 100) {
         $('.site-header').addClass('fixed');
       } else {
         $('.site-header').removeClass('fixed');
       }
   });
+
   // Filter
   $('.btn-filter').on('click', function(){
     $('.button-close').show(300);
