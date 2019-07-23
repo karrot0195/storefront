@@ -119,11 +119,11 @@
 .faq .shipping-wrapper .content .block__content .sub-title p,
 .shipping .shipping-wrapper .content .block__content .sub-title p {
   font-size: 16px;
-  line-height: 2.18;
+  line-height: 1.5;
   letter-spacing: 0.22px;
   text-align: left;
   color: #2a2a2a;
-  margin: 0 auto;
+  margin: 10px auto 0;
 }
 @media screen and (max-width: 767px) {
   .faq .faq-wrapper .content .block__content .sub-title p,
