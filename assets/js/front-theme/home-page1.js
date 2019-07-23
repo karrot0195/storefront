@@ -86,7 +86,7 @@
 
   // Scroll Menu 
   $(window).scroll(function(){
-      if ($(this).scrollTop() > 100) {
+      if ($(this).scrollTop() > 20) {
         $('.site-header').addClass('fixed');
       } else {
         $('.site-header').removeClass('fixed');
