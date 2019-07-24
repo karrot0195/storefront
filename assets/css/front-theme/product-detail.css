@@ -951,6 +951,7 @@
 @media screen and (max-width: 767px) {
   .storefront-product-detail .block-process {
     justify-content: center;
+    font-size: 14px;
   }
 }
 .storefront-product-detail.single-product div.product .product_meta {
@@ -986,6 +987,11 @@
   letter-spacing: 1.1px;
   text-align: left;
   color: #8e8d8d;
+}
+@media screen and (max-width: 767px) {
+  .storefront-product-detail .woocommerce-product-details__short-description + .wrap-cart .wrap-block.wrap-proccess .value-button i {
+    font-size: 14px;
+  }
 }
 .storefront-product-detail .wrap-product-item .fm-sl-cart .block-number {
   width: 60px;
@@ -1058,6 +1064,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+@media screen and (max-width: 767px) {
+  .storefront-product-detail .wrap-cart .fm-detail-cart .block-number .val {
+    font-family: "Barlow-m" !important;
+    font-size: 20px !important;
+  }
 }
 .storefront-product-detail .wrap-cart .fm-detail-cart .btn-add-to-cart {
   margin-left: 20px;
@@ -1132,6 +1144,13 @@
 .storefront-product-detail .wrap-cart .fm-detail-cart .value-button {
   padding: 15px 20px;
   cursor: pointer;
+}
+@media screen and (max-width: 767px) {
+  .storefront-product-detail .wrap-cart .fm-detail-cart .value-button {
+    align-items: center;
+    display: flex;
+    color: #8e8d8d;
+  }
 }
 .storefront-product-detail .wrap-cart .fm-detail-cart .value-button#increase {
   border-bottom-right-radius: 20px;

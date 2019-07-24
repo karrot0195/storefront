@@ -927,6 +927,7 @@
     display: flex;
     @media screen and (max-width: 767px) {
       justify-content: center;
+      font-size: 14px;
     }
   }
   &.single-product div.product .product_meta {
@@ -964,6 +965,9 @@
             letter-spacing: 1.1px;
             text-align: left;
             color: #8e8d8d;
+            @media screen and(max-width: 767px){
+              font-size: 14px;
+            }
           }
         }
       }
@@ -1040,6 +1044,12 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        .val{
+          @media screen and (max-width: 767px){
+            font-family: "Barlow-m" !important;
+            font-size: 20px !important;
+          }
+        }
       }
 
       .btn-add-to-cart {
@@ -1117,7 +1127,11 @@
       .value-button {
         padding: 15px 20px;
         cursor: pointer;
-
+        @media screen and (max-width: 767px){
+          align-items: center;
+          display: flex;
+          color: #8e8d8d;
+        }
         &#increase {
           border-bottom-right-radius: 20px;
           border-top-right-radius: 20px;
