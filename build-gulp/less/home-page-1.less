@@ -808,9 +808,12 @@ body {
 /* ---------------- 1. Banner ------------------------ */
 .banner-main {
   background-image: url(../../images/common/micro-dermarx_02.jpg);
-  background-size: 200% 130%;
+  background-size: cover;
+  @media screen and (max-width: 540px){
+    background-size: 200% 130%;
+    background-position: 70% 0px;
+  }
   background-repeat: no-repeat;
-  background-position: 70% 0px;
   .banner-title {
     max-width: 610px;
     font-family: "Barlow-m";
@@ -2252,9 +2255,6 @@ body.disable {
       @media screen and (max-width: 767px) {
         left: 251px;
       }
-      @media screen and (max-width: 374px) {
-        left: 267px;
-      }
     }
     // &.active {
     //   left: 0;
@@ -2808,9 +2808,6 @@ table th {
     overflow: auto;
     width: 250px;
     box-sizing: border-box;
-    @media screen and (max-width: 374px){
-      width: 266px;
-    }
       &::after{
         content: '';
         display: block;
