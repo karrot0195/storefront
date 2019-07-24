@@ -40,6 +40,7 @@ get_header('home-1'); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main page-wishlist" role="main">
             <div class="container">
+                <?php get_breadcrumb() ?>
             <ul class="products columns-4">
                 <div class="loop-main-product" id="product_main">
                     <?php
