@@ -381,6 +381,10 @@ body.page-template-template-home1 {
   text-decoration: none;
   display: inline-block;
   vertical-align: -webkit-baseline-middle;
+  width: 18px;
+}
+.home-page-1 .site-header .col-full .block-icon-action .list-action a img {
+  width: 100%;
 }
 .home-page-1 .site-header .col-full .block-icon-action .list-action a.cur {
   line-height: 20px;
