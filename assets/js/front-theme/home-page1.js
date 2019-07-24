@@ -27,13 +27,13 @@
   
   // MY ACCOUNT MOBILE
   $(document).ready(function(){
-    var title_tab = "<h6></h6>";
+    var title_tab = "<h5></h5>";
     var test =`<i class="fas fa-chevron-down"></i>`;
     $(".woocommerce-account .hentry .entry-content .woocommerce .woocommerce-MyAccount-navigation").prepend(title_tab);
     var htmlString = $( '.woocommerce-account .hentry .entry-content .woocommerce .woocommerce-MyAccount-navigation ul li.woocommerce-MyAccount-navigation-link.is-active a' ).text();
-    $('h6').text( htmlString); 
-    $('h6').prepend(test);
-    $('.woocommerce-MyAccount-navigation h6').click(function(){
+    $('h5').text( htmlString); 
+    $('h5').prepend(test);
+    $('.woocommerce-MyAccount-navigation h5').click(function(){
       $('.woocommerce-MyAccount-navigation ul').slideToggle(300);
       $(this).find('i').toggleClass('tab-click');
     });
