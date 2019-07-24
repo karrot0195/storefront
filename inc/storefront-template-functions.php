@@ -314,7 +314,7 @@ if ( ! function_exists( 'storefront_page_header' ) ) {
 	 * @since 1.0.0
 	 */
 	function storefront_page_header() {
-		if ( is_front_page() && is_page_template( 'template-fullwidth.php' ) ) {
+		if ( is_front_page() && is_page_template( 'template-fullwidth.php' ) || is_cart() ) {
 			return;
 		}
 

@@ -364,6 +364,9 @@ if ( ! class_exists( 'Storefront' ) ) :
 
 			// login
 			wp_enqueue_style( 'storefront-style-login', get_template_directory_uri() . '/assets/css/front-theme/login.css', '', $storefront_version );
+
+			// breadcrumb
+			wp_enqueue_style( 'storefront-style-breadcrumb', get_template_directory_uri() . '/assets/css/front-theme/breadcrumb.css', '', $storefront_version );
         }
 
 		/**
