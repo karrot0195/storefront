@@ -267,7 +267,8 @@
 
   // SHOW POPUP REVIEW
   $('.contribution-type-selector .js-switch-contribution-type').click(function(){
-    $('body').addClass('disable');
+    $('body').addClass('disable-review');
+    $('.site-header').addClass('site-header-hide');
 
     if ($('#review_form_wrapper .close').length == 0) {
       $('#review_form_wrapper form').prepend(`<div class="close"><i class="icon ion-md-close"></i></div>`);
@@ -275,7 +276,9 @@
         $('.popup-background').css('opacity', '0');
         $('.popup-background').remove();
         $('#review_form_wrapper').removeClass('show');
-        $('body').removeClass('disable');
+        $('body').removeClass('disable-review');
+        $('.site-header').removeClass('site-header-hide');
+
       });
     }
     $('#review_form_wrapper').addClass('show');
