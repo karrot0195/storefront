@@ -2648,7 +2648,7 @@ table th {
     padding: 10px 0;
   }
   .wrapper-menu {
-    height: 100%;
+    min-height: 100%;
     position: relative;
     z-index: 1;
     background: #ffffff;
