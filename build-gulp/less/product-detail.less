@@ -1097,7 +1097,7 @@
           color: #ffffff;
           &::after{
             content: 'ADDED';
-            animation: test 0.4s ease forwards;
+            animation: test 0.2s ease forwards;
           }
         }
 
@@ -1112,7 +1112,7 @@
       }
       .test-f::after{
         content: 'ADD TO CART';
-            animation: test-1 0.4s ease forwards;
+            animation: test-1 0.2s ease forwards;
       }
       .value-button {
         padding: 15px 20px;
@@ -1155,19 +1155,19 @@
 	}
 }
 @keyframes test {
-	0% {
-    transform: scaleY(0);
+  0% {
+    transform: translateY(100%) scale(0);
 	}
 	to {
-    transform: scaleY(1);
-	}
+    transform: translateY(0) scale(1);
+  }
 }
 @keyframes test-1 {
 	0% {
-    transform: scaleY(0);
+    transform: translateY(100%) scale(0);
 	}
 	to {
-    transform: scaleY(1);
+    transform: translateY(0) scale(1);
 	}
 }
 
