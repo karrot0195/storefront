@@ -649,3 +649,50 @@
     font-size: 14px;
   }
 }
+/* REGISTER */
+.wrap-create-account {
+  display: none;
+}
+.wrap-create-account .wrap-register-message {
+  color: #ff0000;
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+.wrap-create-account .button-wrap {
+  padding-top: 20px;
+}
+.wrap-create-account .button-wrap button {
+  border-radius: 26px;
+  width: 210px;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  height: 44px;
+  border: none;
+  background: #004a80;
+  color: #ffffff;
+  font-size: 16px;
+  letter-spacing: 0.22px;
+  position: relative;
+  margin-bottom: 68px;
+  cursor: pointer;
+}
+.wrap-create-account .wrap-field {
+  padding-bottom: 15px;
+}
+.wrap-create-account .wrap-field .error {
+  font-size: 12px;
+  color: #ff0000;
+}
+.wrap-create-account .btn-create-account i {
+  display: none;
+}
+.wrap-create-account .btn-create-account span {
+  display: block;
+}
+.wrap-create-account.proccessing .btn-create-account i {
+  display: block;
+}
+.wrap-create-account.proccessing .btn-create-account span {
+  display: none;
+}
