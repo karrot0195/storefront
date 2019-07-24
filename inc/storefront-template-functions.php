@@ -711,7 +711,7 @@ if ( !function_exists('storefront_site_action') ) {
 ?>
 <div class="block-icon-action">
     <ul class="list-action">
-        <li><a href="#" class="js-show-wrap-product"><img src="<?= esc_url($userSearchIcon) ?>" alt=""></a></li>
+        <li><a href="#" class="js-show-wrap-product"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/icon/ic-search.svg" alt=""></a></li>
         <li><a href="<?= esc_url($sgd_link) ?>" class="cur">SGD</a></li>
         <li><a href="<?= esc_url($userLink) ?>"><img src="<?= esc_url($userIcon) ?>" alt=""></a></li>
         <li id="list-action-cart">

@@ -1115,8 +1115,8 @@
   color: #ffffff;
 }
 .storefront-product-detail .wrap-cart .fm-detail-cart .btn-add-to-cart.proccess::after {
-  content: 'DONE';
-  animation: test 0.4s ease forwards;
+  content: 'ADDED';
+  animation: test 0.2s ease forwards;
 }
 .storefront-product-detail .wrap-cart .fm-detail-cart .btn-add-to-cart-click {
   transform: scale(0.98);
@@ -1127,7 +1127,7 @@
 }
 .storefront-product-detail .wrap-cart .fm-detail-cart .test-f::after {
   content: 'ADD TO CART';
-  animation: test-1 0.4s ease forwards;
+  animation: test-1 0.2s ease forwards;
 }
 .storefront-product-detail .wrap-cart .fm-detail-cart .value-button {
   padding: 15px 20px;
@@ -1165,18 +1165,18 @@
 }
 @keyframes test {
   0% {
-    transform: scaleY(0);
+    transform: translateY(100%) scale(0);
   }
   to {
-    transform: scaleY(1);
+    transform: translateY(0) scale(1);
   }
 }
 @keyframes test-1 {
   0% {
-    transform: scaleY(0);
+    transform: translateY(100%) scale(0);
   }
   to {
-    transform: scaleY(1);
+    transform: translateY(0) scale(1);
   }
 }
 .block-reviews {

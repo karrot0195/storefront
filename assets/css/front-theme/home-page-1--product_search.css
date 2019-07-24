@@ -105,24 +105,10 @@
   margin-right: 20px;
   overflow: hidden;
 }
-.wrap-search-product .block-content--main .wrap-item .block-thumbnail img {
-  transform: translateY(-100%);
-  transition: 1s all ease;
-}
-.wrap-search-product .block-content--main .wrap-item .block-thumbnail img.img-show {
-  transform: translateY(0);
-}
-.wrap-search-product .block-content--main .wrap-item .block-title {
-  transform: scale(0);
-  transition: 0.5s all ease;
-}
 .wrap-search-product .block-content--main .wrap-item .block-title a {
   text-decoration: none;
   color: #020202;
   font-size: 18px;
-}
-.wrap-search-product .block-content--main .wrap-item .block-title-show {
-  transform: scale(1);
 }
 .wrap-search-product .block-content--action {
   padding-bottom: 50px;

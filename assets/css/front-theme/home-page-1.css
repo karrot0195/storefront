@@ -2947,6 +2947,11 @@ table th {
 .archive .site-footer {
   border-top: none;
 }
+@media screen and (max-width: 767px) {
+  .home-page-1 .site-header .col-full .block-icon-action .list-action li {
+    display: flex;
+  }
+}
 @media screen and (max-width: 375px) {
   .info-page .info-page-left a {
     font-size: 10px;
