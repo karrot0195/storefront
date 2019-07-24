@@ -103,7 +103,7 @@ body {
     .block-item {
       display: flex;
       justify-content: flex-start;
-      padding: 50px 0;
+      padding: 10px 0;
       border-bottom: 1px solid #eaeaea;
       .thumbnail-item {
         margin-right:10px;
@@ -117,6 +117,9 @@ body {
         font-size: 16px;
         text-align: left;
         color: #2a2a2a;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
         @media screen and (max-width: 767px){
           font-size: 14px;
         }
@@ -126,6 +129,7 @@ body {
       }
       .price-item {
         margin-left: auto;
+        padding-top: 48px;
         .woocommerce-Price-amount.amount{
           color: #2a2a2a;
           font-family: "Barlow-m";
