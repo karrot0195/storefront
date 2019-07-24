@@ -292,7 +292,7 @@ body.page-template-template-home1 {
 }
 @media screen and (max-width: 992px) {
   .home-page-1 .site-header .col-full .site-branding img {
-    max-width: 90%;
+    max-width: 80%;
     width: auto;
     height: auto;
     vertical-align: bottom;
@@ -2647,6 +2647,7 @@ table th {
     transition: 0.3s all ease;
     transform: rotate(180deg);
     color: #626262;
+    font-size: 12px;
   }
   .wrapper-menu .menu-shop span i.i-click,
   .wrapper-menu .menu-info span i.i-click {
