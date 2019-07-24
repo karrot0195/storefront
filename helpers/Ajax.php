@@ -214,4 +214,26 @@ function get_html_popup_cart($is_html=false) {
     exit();
 }
 
+
+add_action('wp_ajax_action_create_account', 'action_create_account');
+add_action('wp_ajax_nopriv_action_create_account', 'action_create_account');
+
+function action_create_account() {
+    $result = [
+        'error' => true,
+        'message' => ''
+    ];
+    $username = $email = $_POST['email'];
+    $password = $_POST['password'];
+    $user = wp_create_user( $username, $password, $email);
+    if( is_wp_error( $user ) ) {
+        $result['message'] = $user->get_error_message();
+    } else {
+        login($user);
+        $result['error'] = false;
+    }
+    header('Content-Type: application/json');
+    echo json_encode($result);
+    exit();
+}
 // end ajax

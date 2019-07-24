@@ -83,7 +83,34 @@ get_header('home-1');
                     </div>
                     <div id="tab-2" class="tab-content-login register">
                         <p class="title">Register</p>
-                        <button class="btn-register"> Create an Account</button>
+                        <div class="wrap-create-account js-wrap-form-register">
+                            <div class="wrap-register-message error"></div>
+
+                            <div class="wrap-field email-wrapper">
+                                <label>Email Address</label>
+                                <input type="text" name="email" id="reg-email" value="" />
+                                <span class="error"></span>
+                            </div>
+                            <div class="wrap-field password-wrapper">
+                                <label>Password</label>
+                                <input type="password" name="password" id="reg-password" value="" />
+                                <span class="error"></span>
+                            </div>
+
+                            <div class="wrap-field password-wrapper">
+                                <label>Confirm Password</label>
+                                <input type="password" name="repassword" id="reg-repassword" value="" />
+                                <span class="error"></span>
+                            </div>
+
+                            <div class="button-wrap">
+                                <button class="btn-create-account js-btn-create-account">
+                                    <span>Create</span>
+                                    <i class="fas fa-spinner fa-spin"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <button class="btn-register js-btn-register"> Create an Account</button>
                     </div>
                 </div>        
             </div>
@@ -119,6 +146,73 @@ get_header('home-1');
             request.send(formData);
         }
     }
+
+    (function($) {
+        $('.js-btn-register').on('click', function () {
+            $('.js-wrap-form-register').toggle();
+            $(this).hide();
+        });
+
+        $('.js-btn-create-account').on('click', function() {
+            let eEmail = $('#reg-email');
+            let ePass = $('#reg-password');
+            let eRepass = $('#reg-repassword');
+
+            const email = eEmail.val();
+            const password = ePass.val();
+            const repassword = eRepass.val();
+
+            let error = false;
+            if (email.trim().length == 0) {
+                eEmail.parent().find('.error').html('This field is required');
+                error = true;
+            } else {
+                eEmail.parent().find('.error').html('');
+            }
+
+            if (password.trim().length == 0) {
+                ePass.parent().find('.error').html('This field is required');
+                error = true;
+            } else {
+                ePass.parent().find('.error').html('');
+
+            }
+
+            if (repassword.trim().length == 0) {
+                eRepass.parent().find('.error').html('This field is required');
+                error = true;
+            } else {
+                eRepass.parent().find('.error').html('');
+            }
+
+            if (!error) {
+                if (password != repassword) {
+                    eRepass.parent().find('.error').html('This field do not match');
+                    error = true;
+                }
+            }
+
+            if (!error) {
+                $('.wrap-create-account').addClass('proccessing');
+                $.post(my_ajax_object.ajax_url, 
+                    {
+                        email: email,
+                        password: password,
+                        action: 'action_create_account'
+                    }
+                , function (json) {
+                   setTimeout(function () {
+                     $('.wrap-create-account').removeClass('proccessing');
+                        if (json.error) {
+                            $('.wrap-register-message').html(json.message);
+                        } else {
+                            window.location.reload();
+                        }
+                    }, 500);
+                });
+            }
+        });
+    })(jQuery);
 </script>
 <?php
 get_footer('home-1');
