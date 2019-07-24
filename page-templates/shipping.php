@@ -8,6 +8,7 @@ get_header('home-1'); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main shipping" role="main">
             <div class="container">
+                <?php get_breadcrumb() ?>
                 <div class="shipping-wrapper">
                     <div class="sidebar">
                         <?php echo get_field('shipping_sidebar') ?>

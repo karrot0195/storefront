@@ -290,6 +290,14 @@ function get_breadcrumb() {
 		    echo '<a href="'.home_url('derma-rx').'" rel="nofollow">Product</a>';
 	        echo "&nbsp;&nbsp;&gt;&nbsp;&nbsp;";
         }
+
+        if (is_checkout()) {
+		    echo '<a href="'.home_url('derma-rx').'" rel="nofollow">Product</a>';
+	        echo "&nbsp;&nbsp;&gt;&nbsp;&nbsp;";
+
+	        echo '<a href="'.home_url('cart').'" rel="nofollow">Cart</a>';
+	        echo "&nbsp;&nbsp;&gt;&nbsp;&nbsp;";
+        }
         echo '<span>';
         the_title();
         echo '</span>';
