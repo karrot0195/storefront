@@ -2103,7 +2103,7 @@ body.disable .home-page-1 .site-header {
   -o-transition: all 0.5s ease;
 }
 .home-page-1 .hamburger-menu.close {
-  top: 0;
+  top: 44px;
   transform: translateX(0px);
   right: auto;
   left: 320px;
@@ -2113,12 +2113,12 @@ body.disable .home-page-1 .site-header {
 }
 @media screen and (max-width: 767px) {
   .home-page-1 .hamburger-menu.close {
-    left: 250px;
+    left: 251px;
   }
 }
 @media screen and (max-width: 374px) {
   .home-page-1 .hamburger-menu.close {
-    left: 266px;
+    left: 267px;
   }
 }
 .home-page-1 .hamburger-menu .bar {
