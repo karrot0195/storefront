@@ -965,12 +965,6 @@
   margin-bottom: 45px;
   margin-top: 40px;
 }
-@media screen and (max-width: 767px) {
-  .storefront-product-detail .woocommerce-product-details__short-description + .wrap-cart .fm-detail-cart .wrap-block {
-    display: block ;
-    text-align: center;
-  }
-}
 .storefront-product-detail .woocommerce-product-details__short-description + .wrap-cart .wrap-block.wrap-proccess #number .val {
   font-family: "Barlow";
   font-size: 26px;
@@ -1531,6 +1525,10 @@ body.woocommerce-page #reviews .form-contribution .attachment-type[data-prev-val
   }
   .field-header {
     font-size: 20px;
+  }
+  .storefront-product-detail .wrap-cart .fm-detail-cart .wrap-block {
+    display: block;
+    text-align: center;
   }
 }
 .storefront-product-detail .home-page-1 .woocommerce-noreviews {

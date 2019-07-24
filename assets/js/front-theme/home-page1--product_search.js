@@ -4,20 +4,11 @@
       window.location = '/derma-rx?action=search';
     } else {
       $('.wrap-search-product').slideToggle(500);
-      setTimeout(function(){
-        $('.wrap-search-product .block-content--main .wrap-item .block-thumbnail img').toggleClass('img-show');
-      }, 300);
-
-      setTimeout(function(){
-        $('.wrap-search-product .block-content--main .wrap-item .block-title').toggleClass('block-title-show');
-      }, 500);
     }
   });
 
   $(document).on('click', '.wrap-search-product .close', function() {
     $('.wrap-search-product').slideUp(500);
-    $('.wrap-search-product .block-content--main .wrap-item .block-thumbnail img').removeClass('img-show');
-    $('.wrap-search-product .block-content--main .wrap-item .block-title').removeClass('block-title-show');
   });
 
   $(document).on('click', '.js-remind-text', function() {
