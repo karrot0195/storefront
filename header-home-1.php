@@ -68,8 +68,8 @@ if (is_page_template('templates/template-home1.php')) {
                         <?php
                         storefront_mobile_footer_widgets();
                         ?>
-                        <a class="my-account" href="#"><span><span>My Account</span><img src="<?php bloginfo('template_url'); ?>/assets/images/icon/user.png"  alt="#"/></span></a>
-                        <a class="my-account my-wishlist" href="#"><span>My wishlist</span><span class="block-like"></span></a>
+                        <a class="my-account" href="<?= home_url('my-account') ?>"><span><span>My Account</span><img src="<?php bloginfo('template_url'); ?>/assets/images/icon/user.png"  alt="#"/></span></a>
+                        <a class="my-account my-wishlist" href="<?= home_url('wishlist') ?>"><span>My wishlist</span><span class="block-like"></span></a>
                         <div class="ugd">shop in <b>SGD</b><a href="#">change</a></div>
                         <div class="block footer-widget-3">
                             <div id="custom_html-3" class="widget_text widget widget_custom_html">
