@@ -11,17 +11,9 @@
     $('.wrap-search-product').slideUp(500);
   });
 
-  $(document).on('click', '.js-remind-text', function() {
-    ProductSearch.configs.must_search = true;
-    jQuery('.search-content-remind').html('');
-    $('.js-input-search').val($(this).html());
-    ProductSearch.configs.clean_remind = true;
-    ProductSearch.search();
-  });
-
   $(document).on('keyup', '.js-input-search', function(e) {
     // enter
-    ProductSearch.search();
+    ProductSearch.search(jQuery('.js-input-search').val());
   });
 
 })(jQuery);
@@ -34,20 +26,21 @@ const ProductSearch = {
   },
   configs: {
     proccess_search: false,
-    clean_remind: false,
-    must_search: true
+    queue: [],
+    pre_text: ''
   },
-  search: function() {
-    this.metas.text  = jQuery('.js-input-search').val();
-    if (this.check_condition()) {
-      this.beforeSeach();
-      this.ajax(() => {
-        this.afterSearch();
-      });
-    } else {
-      if (this.metas.text.trim().length == 0) {
-        this.defaultHtml();
+  search: function(text) {
+    if (!this.configs.proccess_search) {
+      if (text.trim() != this.configs.pre_text) {
+        this.metas.text  = text;
+        this.configs.pre_text = this.metas.text.trim();
+        this.beforeSeach();
+        this.ajax(() => {
+           this.afterSearch();
+        });
       }
+    } else {
+      this.configs.queue.push(text);
     }
   },
   ajax: function(callback) {
@@ -59,48 +52,45 @@ const ProductSearch = {
       callback();
     });
   },
-  check_condition: function() {
-    if (this.configs.must_search) {
-      this.configs.must_search = false;
-      return true;
-    }
-
-    if (!this.configs.proccess_search &&
-      this.metas.text.trim().length > 0 &&
-      this.metas.pre_text.trim() != this.metas.text.trim()) {
-      return true;
-    }
-    return false;
-  },
   defaultHtml: function() {
     jQuery('.block-content--main').html(this.metas.defaul_html);
   },
   setHtmlResult: function (res, callback) {
     const json = JSON.parse(res);
     let html = '';
-    let remindHtml = ''
-    json.suggestions.map((row, idx) => {
-      html += row.item_html;
-        if (idx < 3) {
-          remindHtml += `<li class="js-remind-text">${row.value}</li>`;
-        }
-    });
-    jQuery('.block-content--main').html(html);
-    jQuery('.search-content-remind').html(remindHtml);
+    let remindHtml = '';
+    if (this.configs.pre_text.trim().length == 0) {
+      jQuery('.js-result-empty').hide();
+      jQuery('.block-content--main').hide();
+    } else if (json.suggestions.length > 0) {
+      json.suggestions.map((row, idx) => {
+        html += row.item_html;
+      });
+      jQuery('.block-content--main').html(html);
+      jQuery('.js-result-empty').hide();
+
+      jQuery('.block-content--main').show();
+    } else {
+      html = `No results`;
+      jQuery('.block-content--main').hide();
+      jQuery('.js-result-empty span').html(this.configs.pre_text);
+
+      jQuery('.js-result-empty').show();
+    }
+   
   },
   afterSearch: function () {
-    this.metas.pre_text = this.metas.text;
-
     jQuery('.block-content--main').animate({
       opacity: 1
     }, 300, () => {
         this.configs.proccess_search = false;
+        if (this.configs.queue.length > 0) {
+          console.log('queuing ...');
+          const text = this.configs.queue[this.configs.queue.length-1];
+          this.configs.queue = [];
+          this.search(text);
+        }
     });
-
-    if (ProductSearch.configs.clean_remind) {
-      ProductSearch.configs.clean_remind = false;
-      jQuery('.search-content-remind').html('');
-    }
     jQuery('.search-content-remind').animate({
       opacity: 1
     }, 300);
