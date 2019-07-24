@@ -756,7 +756,6 @@ body.single-product div.product .woocommerce-product-gallery .flex-viewport {
 }
 body .wrap-storefront-breadcrumb {
   margin: 90px 0;
-  font-size: 14px;
   height: auto;
 }
 @media screen and (max-width: 767px) {
@@ -768,6 +767,13 @@ body .wrap-storefront-breadcrumb {
 body .wrap-storefront-breadcrumb a,
 body .wrap-storefront-breadcrumb span {
   line-height: unset;
+  font-size: 14px;
+}
+@media screen and (max-width: 767px) {
+  body .wrap-storefront-breadcrumb a,
+  body .wrap-storefront-breadcrumb span {
+    font-size: 12px;
+  }
 }
 @media screen and (max-width: 767px) {
   .site-main.page-wishlist ul.products li.product img {
