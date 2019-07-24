@@ -1115,7 +1115,7 @@
   color: #ffffff;
 }
 .storefront-product-detail .wrap-cart .fm-detail-cart .btn-add-to-cart.proccess::after {
-  content: 'DONE';
+  content: 'ADDED';
   animation: test 0.4s ease forwards;
 }
 .storefront-product-detail .wrap-cart .fm-detail-cart .btn-add-to-cart-click {
