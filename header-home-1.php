@@ -59,7 +59,10 @@ if (is_page_template('templates/template-home1.php')) {
                     <div class="wrapper-menu">
                    
                         <?php
-                            do_action( $action );
+                           do_action( $action );
+                           if (is_page_template('templates/template-home1.php')) {
+                            storefront_slider_header();
+                           }
                         ?>
                         <?php
                         storefront_mobile_footer_widgets();
