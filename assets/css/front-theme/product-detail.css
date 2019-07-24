@@ -1488,6 +1488,9 @@ body.woocommerce-page #reviews .form-contribution .attachment-type[data-prev-val
   font-family: "Barlow-m";
   text-transform: capitalize;
 }
+.woocommerce-product-details__short-description .stock.in-stock {
+  display: none;
+}
 @media screen and (max-width: 767px) {
   .wrap-additional_information tbody {
     display: flex;
