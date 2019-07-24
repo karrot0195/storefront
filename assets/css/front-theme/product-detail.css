@@ -1046,6 +1046,8 @@
   background-color: #142d73;
 }
 .storefront-product-detail .wrap-cart {
+  margin-bottom: 45px;
+  margin-top: 40px;
   position: relative;
 }
 .storefront-product-detail .wrap-cart .fm-detail-cart {
