@@ -64,7 +64,7 @@ get_header('home-1');
                                 <label>Password</label>
                                 <input type="password" name="password" id="password" value="" />
                             </div>
-                            <p class="fg-pass">Forgot Password</p>
+                            <p class="fg-pass">Forgot Password?</p>
                             <button class="btn-login" onClick="loginForm()">Login</button>
                         </div>
                     </div>

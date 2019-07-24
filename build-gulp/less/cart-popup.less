@@ -79,6 +79,9 @@ body {
           font-family: "Barlow";
           display: inline;
           font-size: 18px;
+          @media screen and (max-width: 767px){
+            font-size: 14px;
+          }
           b{
             text-transform: capitalize;
           }
@@ -114,6 +117,9 @@ body {
         font-size: 16px;
         text-align: left;
         color: #2a2a2a;
+        @media screen and (max-width: 767px){
+          font-size: 14px;
+        }
         .item-name{
           margin-bottom: 25px;
         }
@@ -123,6 +129,9 @@ body {
         .woocommerce-Price-amount.amount{
           color: #2a2a2a;
           font-family: "Barlow-m";
+          @media screen and (max-width: 767px){
+            font-size: 14px;
+          }
           span{
             margin-right: 5px;
           }
@@ -136,7 +145,9 @@ body {
         padding:25px 0;
         border-top: 1px solid #eaeaea;
         display: flex;
-
+        @media screen and (max-width: 767px){
+          font-size: 14px;
+        }
         &--price {
           margin-left: auto;
           .woocommerce-Price-amount.amount{
@@ -790,6 +801,11 @@ table.woocommerce-checkout-review-order-table{
 .site-main.page-wishlist ul.products li.product img{
   max-height: 300px;
   max-width: 200px;
+}
+
+//fix feedback
+body.single-product div.product .woocommerce-product-gallery .flex-viewport{
+  margin-bottom: 0;
 }
 @media screen and (max-width: 767px){
   .site-main.page-wishlist ul.products li.product img{

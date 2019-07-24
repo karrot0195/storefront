@@ -79,6 +79,11 @@ body {
   display: inline;
   font-size: 18px;
 }
+@media screen and (max-width: 767px) {
+  .wrap-cart-side .block-cart-side .block-info .info .desc {
+    font-size: 14px;
+  }
+}
 .wrap-cart-side .block-cart-side .block-info .info .desc b {
   text-transform: capitalize;
 }
@@ -110,6 +115,11 @@ body {
   text-align: left;
   color: #2a2a2a;
 }
+@media screen and (max-width: 767px) {
+  .wrap-cart-side .block-cart-side .block-item .info-item {
+    font-size: 14px;
+  }
+}
 .wrap-cart-side .block-cart-side .block-item .info-item .item-name {
   margin-bottom: 25px;
 }
@@ -119,6 +129,11 @@ body {
 .wrap-cart-side .block-cart-side .block-item .price-item .woocommerce-Price-amount.amount {
   color: #2a2a2a;
   font-family: "Barlow-m";
+}
+@media screen and (max-width: 767px) {
+  .wrap-cart-side .block-cart-side .block-item .price-item .woocommerce-Price-amount.amount {
+    font-size: 14px;
+  }
 }
 .wrap-cart-side .block-cart-side .block-item .price-item .woocommerce-Price-amount.amount span {
   margin-right: 5px;
@@ -136,6 +151,11 @@ body {
   font-style: normal;
   font-stretch: normal;
   color: #2a2a2a;
+}
+@media screen and (max-width: 767px) {
+  .wrap-cart-side .block-cart-side .block-action .block-subinfo {
+    font-size: 14px;
+  }
 }
 .wrap-cart-side .block-cart-side .block-action .block-subinfo--price {
   margin-left: auto;
@@ -730,6 +750,9 @@ table.woocommerce-checkout-review-order-table .product-name ul li:first-child {
 .site-main.page-wishlist ul.products li.product img {
   max-height: 300px;
   max-width: 200px;
+}
+body.single-product div.product .woocommerce-product-gallery .flex-viewport {
+  margin-bottom: 0;
 }
 @media screen and (max-width: 767px) {
   .site-main.page-wishlist ul.products li.product img {

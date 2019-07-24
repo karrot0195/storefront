@@ -19,12 +19,21 @@
   font-family: "Barlow-s";
   src: url(../../fonts/Barlow-SemiBold.ttf);
 }
-
+html{
+  height: 100%;
+}
 body {
   margin: 0 !important;
   font-family: 'Barlow';
   padding: 0;
   overflow-x: hidden;
+  position: relative;
+  min-height: 100%;
+  &::after{
+    content: '';
+    display: block;
+    height: 52px;
+  }
   &.page-template-template-home1 {
     margin: 0 !important;
     padding: 0;
@@ -544,6 +553,9 @@ body {
   background-color: #fff;
   clear: both;
   border-top: 1px solid #e2e2e2;
+  position: absolute;
+    bottom: 0;
+    width: 100%;
   .footer-widget-3 {
     flex-grow: 1;
   }
@@ -681,7 +693,7 @@ body {
   .home-page-1{
     .modal-title-sp{
       display: block;
-      padding: 70px 20px 30px;
+      padding: 30px 20px;
       font-size: 18px;
       line-height: 1.22;
       color: #333333;
@@ -691,7 +703,7 @@ body {
     .button-close-sp{
       display: block;
       position: absolute;
-      top: 70px;
+      top: 30px;
       right: 20px;
       i::before{
         font-size: 30px;
@@ -764,7 +776,7 @@ body {
     height: 40px;
     padding-top: 2px;
     position: absolute;
-    right: 40px;
+    right: 0;
     top: 0;
     width: 100%;
     z-index: 10;
@@ -793,9 +805,9 @@ body {
 /* ---------------- 1. Banner ------------------------ */
 .banner-main {
   background-image: url(../../images/common/micro-dermarx_02.jpg);
-  background-size: cover;
+  background-size: 200% 130%;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: 70% 0px;
   .banner-title {
     max-width: 610px;
     font-family: "Barlow-m";
@@ -886,7 +898,7 @@ body {
           width: 30px;
           height: 30px;
           font-size: 11px;
-          margin-left: 10px;
+          margin-left: 5px;
         }
         @media screen and (max-width: 320px) {
           margin-left: 10px;
@@ -1949,12 +1961,12 @@ figure.woocommerce-product-gallery__wrapper{
 
   .home-page-1 .modal-filter .block-content{
     display: block;
+    padding: 0 20px;
   }
   .home-page-1 .modal-filter .block-content .content,
   .home-page-1 .modal-filter .block-content .content.content-1{
     width: 100%;
-    margin-left: 20px;
-    border-bottom: 1px solid rgba(51,51,51,.2);
+    border-bottom: 1px solid rgba(61, 42, 42, 0.2);
   }
   .wrap-product-item .fm-sl-cart .block-number{
     width: 35px;
@@ -2229,7 +2241,7 @@ body.disable {
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
     &.close {
-      top: 44px;
+      top: 5px;
       transform: translateX(0px);
       right: auto;
       left: 320px;

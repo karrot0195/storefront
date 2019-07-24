@@ -582,6 +582,8 @@
   }
   .woocommerce-account .hentry .entry-content .woocommerce .woocommerce-MyAccount-navigation h4 i {
     transition: 0.3s all ease;
+    font-size: 12px;
+    color: #696969;
   }
   .woocommerce-account .hentry .entry-content .woocommerce .woocommerce-MyAccount-navigation h4 i.tab-click {
     transform: rotate(180deg);

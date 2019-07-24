@@ -19,11 +19,21 @@
   font-family: "Barlow-s";
   src: url(../../fonts/Barlow-SemiBold.ttf);
 }
+html {
+  height: 100%;
+}
 body {
   margin: 0 !important;
   font-family: 'Barlow';
   padding: 0;
   overflow-x: hidden;
+  position: relative;
+  min-height: 100%;
+}
+body::after {
+  content: '';
+  display: block;
+  height: 52px;
 }
 body.page-template-template-home1 {
   margin: 0 !important;
@@ -481,6 +491,9 @@ body.page-template-template-home1 {
   background-color: #fff;
   clear: both;
   border-top: 1px solid #e2e2e2;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
 .site-footer .footer-widget-3 {
   flex-grow: 1;
@@ -611,7 +624,7 @@ body.page-template-template-home1 {
   }
   .home-page-1 .modal-title-sp {
     display: block;
-    padding: 70px 20px 30px;
+    padding: 30px 20px;
     font-size: 18px;
     line-height: 1.22;
     color: #333333;
@@ -621,7 +634,7 @@ body.page-template-template-home1 {
   .home-page-1 .button-close-sp {
     display: block;
     position: absolute;
-    top: 70px;
+    top: 30px;
     right: 20px;
   }
   .home-page-1 .button-close-sp i::before {
@@ -693,7 +706,7 @@ body.page-template-template-home1 {
     height: 40px;
     padding-top: 2px;
     position: absolute;
-    right: 40px;
+    right: 0;
     top: 0;
     width: 100%;
     z-index: 10;
@@ -720,9 +733,9 @@ body.page-template-template-home1 {
 /* ---------------- 1. Banner ------------------------ */
 .banner-main {
   background-image: url(../../images/common/micro-dermarx_02.jpg);
-  background-size: cover;
+  background-size: 200% 130%;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: 70% 0px;
 }
 .banner-main .banner-title {
   max-width: 610px;
@@ -825,7 +838,7 @@ body.page-template-template-home1 {
     width: 30px;
     height: 30px;
     font-size: 11px;
-    margin-left: 10px;
+    margin-left: 5px;
   }
 }
 @media screen and (max-width: 320px) {
@@ -1852,12 +1865,12 @@ figure.woocommerce-product-gallery__wrapper {
   }
   .home-page-1 .modal-filter .block-content {
     display: block;
+    padding: 0 20px;
   }
   .home-page-1 .modal-filter .block-content .content,
   .home-page-1 .modal-filter .block-content .content.content-1 {
     width: 100%;
-    margin-left: 20px;
-    border-bottom: 1px solid rgba(51, 51, 51, 0.2);
+    border-bottom: 1px solid rgba(61, 42, 42, 0.2);
   }
   .wrap-product-item .fm-sl-cart .block-number {
     width: 35px;
@@ -2121,7 +2134,7 @@ body.disable .home-page-1 .site-header {
   -o-transition: all 0.5s ease;
 }
 .home-page-1 .hamburger-menu.close {
-  top: 44px;
+  top: 5px;
   transform: translateX(0px);
   right: auto;
   left: 320px;
