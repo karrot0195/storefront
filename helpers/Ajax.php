@@ -207,6 +207,7 @@ add_action('wp_ajax_nopriv_get_html_popup_cart', 'get_html_popup_cart');
 
 function get_html_popup_cart() {
     echo render_php('views/cart/popup-cart.php');
+    die;
 }
 
 // end ajax
