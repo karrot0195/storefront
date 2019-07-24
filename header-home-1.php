@@ -111,7 +111,7 @@ if (is_page_template('templates/template-home1.php')) {
             <div class="block-search">
                 <span class="close"><i class="icon ion-md-close"></i></span>
                 <input type="text" class="js-input-search" name="search" autocomplete="off">
-                <div class="js-result-empty" style="display: none; font-weight: 600;">
+                <div class="js-result-empty" style="display: none; font-weight: 600; padding-top: 5px;">
                     No results for "<span></span>"
                 </div>
             </div>
