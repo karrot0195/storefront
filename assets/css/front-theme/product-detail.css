@@ -1532,6 +1532,10 @@ body.woocommerce-page #reviews .form-contribution .attachment-type[data-prev-val
   .field-header {
     font-size: 20px;
   }
+  .storefront-product-detail .wrap-cart .fm-detail-cart .wrap-block {
+    display: block;
+    text-align: center;
+  }
 }
 .storefront-product-detail .home-page-1 .woocommerce-noreviews {
   text-align: left;
