@@ -1197,11 +1197,11 @@ a:hover {
 .home-page-1 .added_to_cart.wc-forward {
   display: none;
 }
-.home-page-1 .slick-slide img {
+.home-page-1 .tabs-stage .slick-slide img {
   margin: 0 auto;
 }
 @media screen and (max-width: 767px) {
-  .home-page-1 .slick-slide img {
+  .home-page-1 .tabs-stage .slick-slide img {
     max-width: 80px;
   }
 }

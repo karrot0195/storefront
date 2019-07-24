@@ -238,6 +238,7 @@
     videoPlay(wrapper);
   });
 
+  
   //вопроизводим видео, при этом скрывая постер
   function videoPlay(wrapper) {
     var iframe = wrapper.find('.js-videoIframe');

@@ -691,6 +691,15 @@
   .storefront-product-detail .wrap-description p {
     font-size: 14px;
   }
+  .storefront-product-detail .wrap-description p .morelink {
+    display: block;
+    text-align: center;
+    font-size: 15px;
+    color: #333333;
+    text-transform: capitalize;
+    margin-top: 30px;
+    cursor: pointer;
+  }
 }
 .storefront-product-detail .woocommerce-product-attributes-item__value p {
   font-family: "Barlow";
@@ -1553,6 +1562,10 @@ body.woocommerce-page #reviews .form-contribution .attachment-type[data-prev-val
   .storefront-product-detail .wrap-cart .fm-detail-cart .wrap-block {
     display: block;
     text-align: center;
+  }
+  .storefront-product-detail .wrap-description {
+    overflow-y: hidden;
+    height: auto;
   }
 }
 .storefront-product-detail .home-page-1 .woocommerce-noreviews {
