@@ -67,15 +67,21 @@ body {
           border-radius: 50%;
           color: #ffffff;
           font-size: 13px;
-          padding: 6px 10px;
-          display: inline;
+          display: inline-block;
           margin-right: 10px;
+          width: 20px;
+          height: 20px;
+          text-align: center;
+          line-height: 20px;
         }
 
         .desc {
           font-family: "Barlow";
           display: inline;
           font-size: 18px;
+          b{
+            text-transform: capitalize;
+          }
         }
 
       }
@@ -99,7 +105,7 @@ body {
       .thumbnail-item {
         margin-right:10px;
         img {
-          width: 50px;
+          width: 100px;
         }
       }
 
@@ -174,7 +180,7 @@ body {
           height: 20px;
           transform: scale(1);
           text-decoration: none;
-          width: 80%;
+          width: 100%;
           i {
             position: absolute;
             top: 50%;
@@ -182,6 +188,7 @@ body {
             right: 20px;
             font-size: 20px;
             color: #fff;
+            display: none;
           }
         }
       }
