@@ -351,8 +351,8 @@ body.page-template-template-home1 {
 }
 .home-page-1 .site-header .col-full .block-icon-action #list-action-cart .cart-header {
   position: relative;
-  width: 20px;
-  height: 20px;
+  width: 25px;
+  height: 25px;
   background-color: #333333;
   border-radius: 50%;
   text-align: center;
@@ -361,13 +361,11 @@ body.page-template-template-home1 {
   justify-content: center;
 }
 .home-page-1 .site-header .col-full .block-icon-action #list-action-cart .cart-header span {
-  width: 7px;
-  height: 10px;
   font-size: 13px;
   font-weight: 500;
   font-style: normal;
   font-stretch: normal;
-  line-height: 20px;
+  line-height: 25px;
   letter-spacing: normal;
   color: #f2f2f2;
 }
@@ -1979,10 +1977,11 @@ body.disable .home-page-1 .site-header {
   margin: 0;
 }
 .home-page-1 .site-header .col-full .menu-mobile .footer-widget-3 ul li {
-  padding: 0 10px;
+  padding: 0 20px;
 }
 .home-page-1 .site-header .col-full .menu-mobile .footer-widget-3 ul li a {
-  color: #222;
+  color: #565454;
+  font-size: 20px;
 }
 .home-page-1 .site-header .col-full .menu-mobile .my-account {
   display: block;
