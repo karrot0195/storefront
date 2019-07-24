@@ -641,4 +641,10 @@
   .contact-us-wrapper .content .contact-form #gform_wrapper_1 .gform_footer {
     margin-top: 45px;
   }
+  .contact-us-wrapper p,
+  .contact-us-wrapper .content .desc a,
+  .contact-us-wrapper .content .contact-form #gform_wrapper_1 .gform_body .gfield_label,
+  .contact-us-wrapper .content .contact-form #gform_wrapper_1 .gform_footer input[type=submit] {
+    font-size: 14px;
+  }
 }
