@@ -111,34 +111,17 @@ if (is_page_template('templates/template-home1.php')) {
             <div class="block-search">
                 <span class="close"><i class="icon ion-md-close"></i></span>
                 <input type="text" class="js-input-search" name="search" autocomplete="off">
-                <span class="close"><i class="icon ion-md-close"></i></span>
-                <ul class="search-content-remind">
-                </ul>
+                <div class="js-result-empty" style="display: none; font-weight: 600; padding-top: 5px;">
+                    No results for "<span></span>"
+                </div>
             </div>
         </div>
 
         <div class="block-content">
-            <div class="block-content--main">
-                <?php
-                $products = getProductByText();
-                if (!empty($products)):
-                foreach ($products as $product): ?>
-                    <div class="wrap-item">
-                        <div class="block-thumbnail">
-                            <a href="<?= esc_url($product['permalink']) ?>">
-                                <img width="100%" src="<?= esc_url($product['thumbnail_url']) ?>" alt="<?= esc_attr($product['title']) ?>">
-                            </a>
-                        </div>
-                        <div class="block-title">
-                            <a href="<?= esc_url($product['permalink']) ?>"><?= esc_html($product['title']) ?></a>
-                        </div>
-                    </div>
-                <?php
-                endforeach;
-                endif;
-                ?>
+            <div class="block-content--main" style="display: none">
+               
             </div>
-            <div class="block-content--action">
+            <div class="block-content--action" style="display: none">
                 <a href="#" class="js-btn-search"><?= esc_html('View all products', 'storefront') ?></a>
             </div>
         </div>
