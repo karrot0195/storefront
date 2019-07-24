@@ -116,8 +116,7 @@ if (is_page_template('templates/template-home1.php')) {
         <div class="block-content">
             <div class="block-content--main">
                 <?php
-                // $products = getProductByText();
-                $products = [];
+                $products = getProductByText();
                 if (!empty($products)):
                 foreach ($products as $product): ?>
                     <div class="wrap-item">
