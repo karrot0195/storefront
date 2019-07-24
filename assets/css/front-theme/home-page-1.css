@@ -2147,11 +2147,8 @@ body.disable .home-page-1 .site-header {
   z-index: 99;
   background-color: #ffffff;
   padding: 21px 13px;
-}
-@media screen and (max-width: 767px) {
-  .home-page-1 .hamburger-menu.close {
-    left: 251px;
-  }
+  position: fixed;
+  left: -100%;
 }
 .home-page-1 .hamburger-menu .bar {
   position: relative;
@@ -2214,6 +2211,9 @@ body.disable .home-page-1 .site-header {
   }
 }
 @media screen and (max-width: 992px) {
+  .home-page-1 .open-menu-mobile .hamburger-menu.close {
+    left: 251px;
+  }
   .wrap-search-product .block-content--main {
     display: -ms-grid;
     display: grid;

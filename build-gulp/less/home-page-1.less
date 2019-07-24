@@ -2252,27 +2252,10 @@ body.disable {
       z-index: 99;
       background-color: #ffffff;
       padding: 21px 13px;
-      @media screen and (max-width: 767px) {
-        left: 251px;
-      }
+      position: fixed;
+      left: -100%;
     }
-    // &.active {
-    //   left: 0;
-    //   @media screen and (max-width: 767px) {
-    //     transform: translateY(0);
-    //     left: 320px;
-    //     background-color: #ddd;
-    //     padding: 25px 16px;
-    //     top: 0;
-    //   }
-    //   @media screen and (max-width: 374px) {
-    //     left: 266px;
-    //     transform: translateY(0);
-    //     background-color: #ddd;
-    //     padding: 25px 16px;
-    //     top: 0;
-    //   }
-    // }
+
     .bar {
       position: relative;
       width: 16px;
@@ -2335,6 +2318,9 @@ body.disable {
 }
 
 @media screen and (max-width: 992px){
+  .home-page-1 .open-menu-mobile .hamburger-menu.close{
+    left: 251px;
+  }
   .wrap-search-product .block-content--main{
     display: -ms-grid;
     display: grid;
