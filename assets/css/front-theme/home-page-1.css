@@ -29,6 +29,14 @@ body.page-template-template-home1 {
   margin: 0 !important;
   padding: 0;
 }
+.disabled-review {
+  height: 100vh;
+  overflow: hidden!important;
+  transition: right 0.5s ease;
+}
+.site-header-hide {
+  display: none;
+}
 .home-page-1.one-page {
   height: 100vh;
   display: flex;
@@ -265,7 +273,11 @@ body.page-template-template-home1 {
 .home-page-1 .site-header .col-full .site-branding a {
   display: block;
   width: 120px;
-  margin: 0 auto;
+}
+@media screen and (max-width: 992px) {
+  .home-page-1 .site-header .col-full .site-branding a {
+    margin: 0 auto;
+  }
 }
 @media screen and (max-width: 992px) {
   .home-page-1 .site-header .col-full .site-branding .custom-logo-link {
@@ -280,7 +292,7 @@ body.page-template-template-home1 {
 }
 @media screen and (max-width: 992px) {
   .home-page-1 .site-header .col-full .site-branding img {
-    max-width: 90%;
+    max-width: 80%;
     width: auto;
     height: auto;
     vertical-align: bottom;
@@ -344,12 +356,11 @@ body.page-template-template-home1 {
   background-color: #333333;
   border-radius: 50%;
   text-align: center;
-  display: inline-table;
+  display: flex;
   vertical-align: middle;
+  justify-content: center;
 }
 .home-page-1 .site-header .col-full .block-icon-action #list-action-cart .cart-header span {
-  width: 7px;
-  height: 10px;
   font-size: 13px;
   font-weight: 500;
   font-style: normal;
@@ -710,6 +721,7 @@ body.page-template-template-home1 {
   background-image: url(../../images/common/micro-dermarx_02.jpg);
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
 }
 .banner-main .banner-title {
   max-width: 610px;
@@ -734,8 +746,13 @@ body.page-template-template-home1 {
 }
 @media screen and (max-width: 767px) {
   .banner-main .banner-title {
-    font-size: 25px;
-    padding: 40px 0;
+    font-size: 29px;
+    padding: 100px 0;
+  }
+}
+@media screen and (max-width: 375px) {
+  .banner-main .banner-title {
+    font-size: 26px;
   }
 }
 /* ------------------ Info Page ------------------- */
@@ -1183,6 +1200,11 @@ a:hover {
 .home-page-1 .slick-slide img {
   margin: 0 auto;
 }
+@media screen and (max-width: 767px) {
+  .home-page-1 .slick-slide img {
+    max-width: 80px;
+  }
+}
 .home-page-1 .slick-initialized .slick-slide:focus {
   outline: none;
   box-shadow: 0;
@@ -1312,6 +1334,7 @@ a:hover {
 @media screen and (max-width: 767px) {
   .storefront-product-detail .woocommerce-product-details__short-description p {
     font-size: 14px;
+    line-height: 2;
   }
 }
 .storefront-product-detail.single-product div.product .product_meta .posted_in,
@@ -1778,14 +1801,15 @@ figure.woocommerce-product-gallery__wrapper {
 }
 @media screen and (max-width: 767px) {
   .home-page-1 .site-content .block-content .slider--item .block-desc {
-    font-size: 25px;
+    font-size: 40px;
+    margin-bottom: 85px;
   }
   .home-page-1 .site-content .block-content .slider--item .block-img .bg-img {
-    object-fit: initial;
+    object-fit: cover;
     object-position: initial;
   }
   .home-page-1 .site-content .block-content .slider--item .list-title ul li a {
-    font-size: 18px;
+    font-size: 28px;
   }
   .home-page-1 ul.products li.product {
     padding-bottom: 60px;
@@ -1811,7 +1835,7 @@ figure.woocommerce-product-gallery__wrapper {
     top: 20%;
   }
   .home-page-1 .site-content .block-content .slider--item .list-title ul li {
-    padding-bottom: 20px;
+    padding-bottom: 30px;
   }
   .home-page-1 .site-main ul.products.columns-4 li.product:hover h2.woocommerce-loop-product__title,
   .home-page-1 .site-main ul.products.columns-4 li.product:hover .price {
@@ -1843,7 +1867,7 @@ figure.woocommerce-product-gallery__wrapper {
 }
 @media screen and (max-width: 400px) {
   .home-page-1 .site-header .col-full .block-icon-action .list-action li {
-    padding-left: 12px;
+    padding-left: 25px;
   }
 }
 body.disable .home-page-1 .site-header {
@@ -1965,10 +1989,11 @@ body.disable .home-page-1 .site-header {
   margin: 0;
 }
 .home-page-1 .site-header .col-full .menu-mobile .footer-widget-3 ul li {
-  padding: 0 10px;
+  padding: 0 20px;
 }
 .home-page-1 .site-header .col-full .menu-mobile .footer-widget-3 ul li a {
-  color: #222;
+  color: #565454;
+  font-size: 20px;
 }
 .home-page-1 .site-header .col-full .menu-mobile .my-account {
   display: block;
@@ -2094,7 +2119,7 @@ body.disable .home-page-1 .site-header {
   -o-transition: all 0.5s ease;
 }
 .home-page-1 .hamburger-menu.close {
-  top: 0;
+  top: 44px;
   transform: translateX(0px);
   right: auto;
   left: 320px;
@@ -2104,18 +2129,18 @@ body.disable .home-page-1 .site-header {
 }
 @media screen and (max-width: 767px) {
   .home-page-1 .hamburger-menu.close {
-    left: 250px;
+    left: 251px;
   }
 }
 @media screen and (max-width: 374px) {
   .home-page-1 .hamburger-menu.close {
-    left: 266px;
+    left: 267px;
   }
 }
 .home-page-1 .hamburger-menu .bar {
   position: relative;
-  width: 20px;
-  height: 3px;
+  width: 16px;
+  height: 2px;
   background-color: #020202;
   transition: bottom 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms cubic-bezier(0.23, 1, 0.32, 1), -webkit-transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
 }
@@ -2144,8 +2169,8 @@ body.disable .home-page-1 .site-header {
   content: "";
   position: absolute;
   left: 0;
-  width: 20px;
-  height: 3px;
+  width: 16px;
+  height: 2px;
   bottom: 6px;
   background-color: #020202;
   transition: bottom 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1), -webkit-transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
@@ -2156,8 +2181,8 @@ body.disable .home-page-1 .site-header {
   content: "";
   position: absolute;
   left: 0;
-  width: 20px;
-  height: 3px;
+  width: 16px;
+  height: 2px;
   top: 6px;
   background-color: #020202;
   transition: top 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1), -webkit-transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
@@ -2633,6 +2658,8 @@ table th {
   .wrapper-menu .menu-info span i {
     transition: 0.3s all ease;
     transform: rotate(180deg);
+    color: #626262;
+    font-size: 12px;
   }
   .wrapper-menu .menu-shop span i.i-click,
   .wrapper-menu .menu-info span i.i-click {
@@ -2946,6 +2973,12 @@ table th {
 .product-template-default .site-footer,
 .archive .site-footer {
   border-top: none;
+}
+@media screen and (max-width: 992px) {
+  .home-page-1 .site-header .col-full .menu-mobile .site-branding a {
+    margin: unset;
+    text-align: left;
+  }
 }
 @media screen and (max-width: 767px) {
   .home-page-1 .site-header .col-full .block-icon-action .list-action li {
