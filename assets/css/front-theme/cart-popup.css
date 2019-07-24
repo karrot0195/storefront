@@ -754,6 +754,16 @@ table.woocommerce-checkout-review-order-table .product-name ul li:first-child {
 body.single-product div.product .woocommerce-product-gallery .flex-viewport {
   margin-bottom: 0;
 }
+body .wrap-storefront-breadcrumb {
+  margin: 90px 0;
+  font-size: 14px;
+}
+@media screen and (max-width: 767px) {
+  body .wrap-storefront-breadcrumb {
+    margin: 40px 0 0;
+    font-size: 12px;
+  }
+}
 @media screen and (max-width: 767px) {
   .site-main.page-wishlist ul.products li.product img {
     max-height: 225px;
