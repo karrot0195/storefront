@@ -764,6 +764,10 @@ body .wrap-storefront-breadcrumb {
     font-size: 12px;
   }
 }
+body .wrap-storefront-breadcrumb a,
+body .wrap-storefront-breadcrumb span {
+  line-height: unset;
+}
 @media screen and (max-width: 767px) {
   .site-main.page-wishlist ul.products li.product img {
     max-height: 225px;
