@@ -2035,7 +2035,7 @@ body.disable {
       left: -100%;
       max-width: 100%;
       width: 250px;
-      height: 100vh;
+      height: 100%;
       z-index: 999;
       padding-top: 0px;
       margin-left: 0px;
@@ -2044,6 +2044,7 @@ body.disable {
       -webkit-transition: all 0.5s ease;
       -moz-transition: all 0.55s ease;
       -o-transition: all 0.55s ease;
+      overflow: auto;
       &::before {
         position: fixed;
         content: '';
@@ -2052,7 +2053,7 @@ body.disable {
         opacity: 0;
         z-index: -1;
         width: 100vw;
-        height: 100vh;
+        height: 100%;
         pointer-events: none;
         background-color: rgba(0, 0, 0, 0.7);
         -webkit-transition: all 0.3s ease;
@@ -2792,7 +2793,7 @@ table th {
   }
   .home-page-1 .site-header .col-full .menu-mobile .footer-widget-3{
     display: block;
-    margin-bottom: 220px;
+    margin-bottom: 60px;
     .get-social{
       text-align: center;
       text-transform: uppercase;
@@ -2808,7 +2809,11 @@ table th {
     background: #ffffff;
     padding: 0 25px 0 20px;
     overflow: auto;
-
+      &::after{
+        content: '';
+        display: block;
+        height: 31px;
+      }
     .block-menu{
       border-bottom: 1px solid #ebebeb;
       padding-bottom: 20px;
@@ -2857,7 +2862,10 @@ table th {
       }
     }
     .new-letter-mb{
-      margin-bottom: 40px;
+      position: absolute;
+      bottom: 40px;
+      width: 100%;
+      clear: both;
       .footer-widgets.row-2.fix{
         display: none;
       }
