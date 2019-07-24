@@ -721,6 +721,7 @@ body.page-template-template-home1 {
   background-image: url(../../images/common/micro-dermarx_02.jpg);
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
 }
 .banner-main .banner-title {
   max-width: 610px;
@@ -745,8 +746,13 @@ body.page-template-template-home1 {
 }
 @media screen and (max-width: 767px) {
   .banner-main .banner-title {
-    font-size: 25px;
-    padding: 40px 0;
+    font-size: 29px;
+    padding: 100px 0;
+  }
+}
+@media screen and (max-width: 375px) {
+  .banner-main .banner-title {
+    font-size: 26px;
   }
 }
 /* ------------------ Info Page ------------------- */
@@ -1193,6 +1199,11 @@ a:hover {
 }
 .home-page-1 .slick-slide img {
   margin: 0 auto;
+}
+@media screen and (max-width: 767px) {
+  .home-page-1 .slick-slide img {
+    max-width: 80px;
+  }
 }
 .home-page-1 .slick-initialized .slick-slide:focus {
   outline: none;

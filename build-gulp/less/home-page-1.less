@@ -794,6 +794,7 @@ body {
   background-image: url(../../images/common/micro-dermarx_02.jpg);
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
   .banner-title {
     max-width: 610px;
     font-family: "Barlow-m";
@@ -813,8 +814,11 @@ body {
       padding: 120px 0 180px;
     }
     @media screen and (max-width: 767px) {
-      font-size: 25px;
-      padding: 40px 0;
+      font-size: 29px;
+      padding: 100px 0;
+    }
+    @media screen and (max-width: 375px) {
+      font-size: 26px;
     }
   }
 }
@@ -1267,6 +1271,9 @@ body {
     }
     .slick-slide img {
         margin: 0 auto;
+        @media screen and (max-width: 767px){
+          max-width: 80px;
+        }
     }
     .slick-initialized .slick-slide {
         &:focus {
