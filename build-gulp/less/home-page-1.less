@@ -19,12 +19,21 @@
   font-family: "Barlow-s";
   src: url(../../fonts/Barlow-SemiBold.ttf);
 }
-
+html{
+  height: 100%;
+}
 body {
   margin: 0 !important;
   font-family: 'Barlow';
   padding: 0;
   overflow-x: hidden;
+  position: relative;
+  min-height: 100%;
+  &::after{
+    content: '';
+    display: block;
+    height: 52px;
+  }
   &.page-template-template-home1 {
     margin: 0 !important;
     padding: 0;
@@ -544,6 +553,9 @@ body {
   background-color: #fff;
   clear: both;
   border-top: 1px solid #e2e2e2;
+  position: absolute;
+    bottom: 0;
+    width: 100%;
   .footer-widget-3 {
     flex-grow: 1;
   }
