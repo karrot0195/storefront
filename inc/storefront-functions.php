@@ -271,3 +271,41 @@ function convert_vi_to_en($str)
 function convert_text_2_key($str, $space='') {
     return strtolower(str_replace(' ', $space, convert_vi_to_en($str)));
 }
+
+function get_breadcrumb() {
+	echo '<div class="wrap-storefront-breadcrumb">';
+    echo '<a href="'.home_url().'" rel="nofollow">Home</a>';
+    if (is_category() || is_single()) {
+        echo "&nbsp;&nbsp;&gt;&nbsp;&nbsp;";
+        the_category(' &bull; ');
+            if (is_single()) {
+                echo " &nbsp;&nbsp;&gt;&nbsp;&nbsp; ";
+                echo '<span>';
+                the_title();
+                echo '</span>';
+            }
+    } elseif (is_page()) {
+        echo "&nbsp;&nbsp;&gt;&nbsp;&nbsp;";
+        if (is_cart()) {
+		    echo '<a href="'.home_url('derma-rx').'" rel="nofollow">Product</a>';
+	        echo "&nbsp;&nbsp;&gt;&nbsp;&nbsp;";
+        }
+
+        if (is_checkout()) {
+		    echo '<a href="'.home_url('derma-rx').'" rel="nofollow">Product</a>';
+	        echo "&nbsp;&nbsp;&gt;&nbsp;&nbsp;";
+
+	        echo '<a href="'.home_url('cart').'" rel="nofollow">Cart</a>';
+	        echo "&nbsp;&nbsp;&gt;&nbsp;&nbsp;";
+        }
+        echo '<span>';
+        the_title();
+        echo '</span>';
+    } elseif (is_search()) {
+        echo "&nbsp;&nbsp;&gt;&nbsp;&nbsp;Search Results for... ";
+        echo '"<em>';
+        echo the_search_query();
+        echo '</em>"';
+    }
+    echo '</div>';
+}

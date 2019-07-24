@@ -10,10 +10,9 @@
  * @package storefront
  */
 get_header('home-1'); ?>
-
 	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
-
+		<main id="main" class="site-main page-detail" role="main">
+			<?php get_breadcrumb(); ?>
 			<?php
 			while ( have_posts() ) :
 				the_post();

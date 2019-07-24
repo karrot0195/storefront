@@ -32,6 +32,7 @@ get_header('home-1');
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main login" role="main">
             <div class="container">
+                <?php get_breadcrumb();  ?>
                 <div class="login-wrapper">
                     <div class="title-tab">
                         <div class="tab login-title tab-click" data-tab="tab-1">Login</div>

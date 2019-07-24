@@ -8,6 +8,7 @@ get_header('home-1'); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main return-policy privacy-policy" role="main">
             <div class="container">
+                <?php get_breadcrumb() ?>
                 <div class="privacy-policy-wrapper return-policy-wrapper">
                     <div class="sidebar">
                         <?php echo get_field('return_policy_sidebar') ?>

@@ -7,6 +7,7 @@ get_header('home-1'); ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main about-us" role="main">
+            <?php get_breadcrumb() ?>
             <div class="slider">
                 <?php
                     $slider = get_field('slider_about_us');

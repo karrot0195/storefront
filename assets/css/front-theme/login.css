@@ -13,7 +13,7 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 100px;
+  padding: 40px 100px 100px 100px;
   color: #2a2a2a;
 }
 .login .login-wrapper .title {
