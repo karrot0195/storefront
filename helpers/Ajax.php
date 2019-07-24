@@ -205,11 +205,13 @@ function storefront_filter_product() {
 add_action('wp_ajax_get_html_popup_cart', 'get_html_popup_cart');
 add_action('wp_ajax_nopriv_get_html_popup_cart', 'get_html_popup_cart');
 
-function get_html_popup_cart($is_ajax=true) {
-    echo render_php('views/cart/popup-cart.php');
-    if ($is_ajax) {
-        exit();
+function get_html_popup_cart($is_html=false) {
+    if ($is_html) {
+        return render_php('views/cart/popup-cart.php');
     }
+
+    echo render_php('views/cart/popup-cart.php');
+    exit();
 }
 
 // end ajax

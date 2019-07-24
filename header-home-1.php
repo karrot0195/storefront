@@ -28,7 +28,7 @@
 </head>
 
 <div class="wrap-cart-side">
-    <?= get_html_popup_cart(false) ?>
+    <?= get_html_popup_cart(true) ?>
 </div>
 
 <body <?php body_class(); ?>>
