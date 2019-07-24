@@ -58,11 +58,6 @@ body.page-template-template-home1 {
 .home-page-1.one-page .site-header .col-full .site-branding {
   width: 50%;
 }
-@media screen and (max-width: 992px) {
-  .home-page-1.one-page .site-header .col-full .site-branding {
-    padding-left: 50px;
-  }
-}
 @media screen and (max-width: 767px) {
   .home-page-1.one-page .site-header .col-full .site-branding {
     width: 40%;
