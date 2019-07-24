@@ -124,7 +124,6 @@
   .storefront-product-detail #reviews #comments .woocommerce-noreviews {
     text-align: left;
     padding: 0;
-    margin-top: -25px;
     margin-bottom: 20px;
   }
 }
