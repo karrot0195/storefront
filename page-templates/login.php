@@ -2,6 +2,9 @@
 /**
  * Template name: Template Login
  */
+if(!session_id()) {
+    session_start();
+}
 
 if (isset($_POST['email']) && isset($_POST['password'])) {
     $result = [
@@ -15,6 +18,12 @@ if (isset($_POST['email']) && isset($_POST['password'])) {
     $user = get_user_by('email', $email);
     if ($user && $wp_hasher->CheckPassword($password, $user->data->user_pass)) {
         $result['error'] = false;
+        $result['cb'] = '';
+
+        if (isset($_SESSION['callback_url']) && !empty($_SESSION['callback_url'])) {
+            $result['cb'] = $_SESSION['callback_url'];
+            unset($_SESSION['callback_url']);
+        }
         wp_clear_auth_cookie();
         wp_set_current_user ( $user->data->ID );
         wp_set_auth_cookie  ( $user->data->ID );
@@ -25,6 +34,10 @@ if (isset($_POST['email']) && isset($_POST['password'])) {
     header('Content-Type: application/json');
     echo json_encode($result);
     exit();
+}
+
+if (isset($_GET['cb']) && !empty($_GET['cb'])) {
+    $_SESSION['callback_url'] = $_GET['cb'];
 }
 
 get_header('home-1'); 
@@ -93,7 +106,11 @@ get_header('home-1');
             request.onload = function() {
                 let json = this.response;
                 if (!json.error) {
-                    window.location.reload();
+                    if (json['cb']) {
+                        window.location.href = json['cb'];
+                    } else {
+                        window.location.reload();
+                    }
                 } else {
                     alert(json.mss);
                 }

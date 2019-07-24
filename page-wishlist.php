@@ -11,7 +11,7 @@
  */
 $products =  [];
 if (!is_user_logged_in()) {
-    header('location: ' . home_url());
+    header('location: ' . home_url('login?cb=' . home_url('wishlist')));
 }
 
 $products = get_products_by_bookmark();
