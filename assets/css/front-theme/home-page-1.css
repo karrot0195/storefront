@@ -720,9 +720,9 @@ body.page-template-template-home1 {
 /* ---------------- 1. Banner ------------------------ */
 .banner-main {
   background-image: url(../../images/common/micro-dermarx_02.jpg);
-  background-size: cover;
+  background-size: 200% 130%;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: 70% 0px;
 }
 .banner-main .banner-title {
   max-width: 610px;
@@ -825,7 +825,7 @@ body.page-template-template-home1 {
     width: 30px;
     height: 30px;
     font-size: 11px;
-    margin-left: 10px;
+    margin-left: 5px;
   }
 }
 @media screen and (max-width: 320px) {
@@ -2121,7 +2121,7 @@ body.disable .home-page-1 .site-header {
   -o-transition: all 0.5s ease;
 }
 .home-page-1 .hamburger-menu.close {
-  top: 44px;
+  top: 5px;
   transform: translateX(0px);
   right: auto;
   left: 320px;
