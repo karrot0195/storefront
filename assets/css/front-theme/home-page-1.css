@@ -2609,7 +2609,8 @@ table th {
 .home-page-1 table.shop_table_responsive tr td .quantity label {
   display: none;
 }
-.home-page-1 table.shop_table_responsive tr.order-total th {
+.home-page-1 table.shop_table_responsive tr.order-total th,
+.home-page-1 table.shop_table_responsive tr.order-total td {
   border: 0;
 }
 .home-page-1 table.shop_table.shop_table_responsive {
