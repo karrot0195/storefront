@@ -3165,6 +3165,10 @@ table th {
   td .wrap-quantity i {
     font-size: 20px;
   }
+  .home-page-1 .order-total .woocommerce-Price-amount.amount,
+  .home-page-1 .cart-subtotal .woocommerce-Price-amount.amount {
+    font-weight: bold;
+  }
 }
 @media screen and (max-width: 375px) {
   .info-page .info-page-left a {
