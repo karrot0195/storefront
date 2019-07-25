@@ -54,7 +54,7 @@ $sub_price = 0;
         </div>
 
         <div class="block-checkoutbutton">
-            <a href="<?= home_url('checkout') ?>" class="btn btn-checkout"><span class="checkout"><?= esc_html__('Checkout', 'storefront') ?></span><i class="ion ion-ios-arrow-forward"></i></a>
+            <a href="<?= home_url('cart') ?>" class="btn btn-checkout"><span class="checkout"><?= esc_html__('Checkout', 'storefront') ?></span><i class="ion ion-ios-arrow-forward"></i></a>
         </div>
     </div>
 </div>
