@@ -49,12 +49,23 @@ $product_ids = [];
 						$product_permalink = apply_filters( 'woocommerce_cart_item_permalink', $_product->is_visible() ? $_product->get_permalink( $cart_item ) : '', $cart_item, $cart_item_key );
 
 					if ($_product->get_type() == 'variation') {
-						$size_attribute_data = wc_get_product_terms($_product->get_parent_id(), 'pa_size');
+						$parent = wc_get_product($_product->get_parent_id());
+						$children = $parent->get_children();
+						$size_attribute_data = wc_get_product_terms($parent->get_id(), 'pa_size');
 
 						$pa_size_selected = isset($_product->get_attributes()['pa_size']) ? $_product->get_attributes()['pa_size'] : '';
-					} else {
+					} else if ($_product->get_type() == 'variable') {
+						
+						$children = $_product->get_children();
+						$size_attribute_data = wc_get_product_terms($_product->get_id(), 'pa_size');
+						$pa_size_selected = '';
+
+					} 
+					else {
 						$size_attribute_data = [];
 					}
+
+
 						?>
 						<tr class="woocommerce-cart-form__cart-item <?php echo esc_attr( apply_filters( 'woocommerce_cart_item_class', 'cart_item', $cart_item, $cart_item_key ) ); ?>">
 							<td class="product-remove">
@@ -104,12 +115,14 @@ $product_ids = [];
 								<div class="wrap-size">
 										<?php 
 										if (!empty($size_attribute_data)) {
-											echo '<select class="sl-attr-size">';
-											foreach ($size_attribute_data as $item) {
+											echo '<select class="sl-attr-size js-pa-size-change">';
+											foreach ($size_attribute_data as $i => $item) {
 												$selected = $pa_size_selected == $item->slug ? 'selected="selected"' : '';
-												echo '<option name="pa_size" '.$selected.' value="'.$item->slug.'">'.$item->name.'</option>';
+
+												$id = isset($children[$i]) ? $children[$i] : '';
+												echo '<option name="pa_size" '.$selected.' value="'.$id.'">'.$item->name.'</option>';
 											}
-											echo '</select>';
+											echo '</select>';	
 										}
 										?>
 								</div>
@@ -344,3 +357,20 @@ $product_ids = [];
 </div>
 
 <?php do_action( 'woocommerce_after_cart' ); ?>
+
+
+<script type="text/javascript">
+	
+	(function($) {
+		$('.js-pa-size-change').on('change', function () {
+			const variable = $(this).val();
+			const self = $(this);
+			$.get(`?add-to-cart=${variable}&quantity=1`, function() {
+				const href = $(self).parents('tr').find('.product-remove a').attr('href');
+				$.get(href, function() {
+					window.location.reload();
+				})
+			});
+		});
+	})(jQuery)
+</script>
