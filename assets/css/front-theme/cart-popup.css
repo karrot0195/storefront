@@ -983,4 +983,7 @@ body .wrap-storefront-breadcrumb span {
   form.checkout.woocommerce-checkout #order_review table.woocommerce-checkout-review-order-table {
     width: 100%;
   }
+  .woocommerce-additional-fields {
+    margin-top: 60px;
+  }
 }
