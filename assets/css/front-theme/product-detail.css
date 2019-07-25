@@ -130,6 +130,10 @@
 .storefront-product-detail .block-wite-comment {
   padding-right: 70px;
 }
+.stock.out-of-stock,
+#reviews .commentlist li p.meta .verified {
+  display: none;
+}
 .storefront-product-detail {
   /* background of the scrollbar except button or resizer */
   /* scrollbar itself */
@@ -579,7 +583,7 @@
   position: fixed;
   top: -200%;
   left: 50%;
-  max-height: 80%;
+  max-height: 90%;
 }
 .storefront-product-detail #review_form_wrapper .close {
   position: absolute;

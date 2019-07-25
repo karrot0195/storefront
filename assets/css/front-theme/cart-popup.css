@@ -3,7 +3,6 @@ body.disable {
   height: 100vh;
   overflow: hidden!important;
   transition: right 0.5s ease;
-  position: fixed;
 }
 body {
   transition: right 0.5s ease;
@@ -37,17 +36,25 @@ body {
 }
 .wrap-cart-side .block-cart-side {
   position: fixed;
+  top: 0;
   display: flex;
   flex-direction: column;
-  float: right;
   width: 400px;
   max-height: 100%;
   background-color: white;
   padding: 0px 25px;
   right: -100%;
-  overflow: auto;
+  overflow-y: auto;
   z-index: 999;
-  min-height: 100vh;
+  height: 100vh;
+}
+@media screen and (max-width: 767px) {
+  .wrap-cart-side .block-cart-side .block-main {
+    height: calc(100% - 270px);
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    padding-right: 10px;
+  }
 }
 @media screen and (max-width: 767px) {
   .wrap-cart-side .block-cart-side {
@@ -102,6 +109,9 @@ body {
   justify-content: flex-start;
   padding: 10px 0;
   border-bottom: 1px solid #eaeaea;
+}
+.wrap-cart-side .block-cart-side .block-item:last-child {
+  border-bottom: 0;
 }
 .wrap-cart-side .block-cart-side .block-item .thumbnail-item {
   margin-right: 10px;
@@ -962,12 +972,19 @@ body .wrap-storefront-breadcrumb span {
   table.woocommerce-checkout-review-order-table .product-name ul li:first-child {
     text-align: right;
     float: right;
+    font-size: 14px;
+  }
+  table.woocommerce-checkout-review-order-table .product-name ul li,
+  table.woocommerce-checkout-review-order-table tfoot,
+  table th,
+  .add-block-wrapper .free p {
+    font-size: 14px;
   }
   .add-block-wrapper {
     margin-top: 15px;
   }
   .add-block-wrapper .place-order {
-    margin-top: 30px;
+    margin: 30px 0;
   }
   #payment.woocommerce-checkout-payment .payment_box.payment_method_stripe #stripe-payment-data fieldset .form-row {
     margin-top: 20px;
@@ -986,5 +1003,27 @@ body .wrap-storefront-breadcrumb span {
   }
   .woocommerce-additional-fields {
     margin-top: 60px;
+  }
+  #payment.woocommerce-checkout-payment .payment_box.payment_method_stripe #stripe-payment-data fieldset .form-row label,
+  #payment.woocommerce-checkout-payment .payment_box.payment_method_stripe #stripe-payment-data p label {
+    font-size: 14px;
+  }
+  .page-template-default .woocommerce {
+    overflow-x: hidden;
+  }
+}
+.home-page-1 table.shop_table_responsive tbody th {
+  font-family: "Barlow-m";
+}
+body .wrap-block-to-shopping a,
+body .wrap-block-to-shopping i {
+  color: #a7a7a7;
+  font-size: 15px;
+  text-transform: uppercase;
+}
+@media screen and (max-width: 767px) {
+  body .wrap-block-to-shopping a,
+  body .wrap-block-to-shopping i {
+    font-size: 13px;
   }
 }
