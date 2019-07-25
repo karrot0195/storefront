@@ -220,6 +220,22 @@ $product_ids = [];
 					$_product   = apply_filters( 'woocommerce_cart_item_product', $cart_item['data'], $cart_item, $cart_item_key );
 					$product_id = apply_filters( 'woocommerce_cart_item_product_id', $cart_item['product_id'], $cart_item, $cart_item_key );
                     $product_ids[] = $product_id;
+
+                    if ($_product->get_type() == 'variation') {
+						$parent = wc_get_product($_product->get_parent_id());
+						$children = $parent->get_children();
+						$size_attribute_data = wc_get_product_terms($parent->get_id(), 'pa_size');
+
+						$pa_size_selected = isset($_product->get_attributes()['pa_size']) ? $_product->get_attributes()['pa_size'] : '';
+					} else if ($_product->get_type() == 'variable') {
+						$children = $_product->get_children();
+						$size_attribute_data = wc_get_product_terms($_product->get_id(), 'pa_size');
+						$pa_size_selected = '';
+					} 
+					else {
+						$size_attribute_data = [];
+					}
+
 					if ( $_product && $_product->exists() && $cart_item['quantity'] > 0 && apply_filters( 'woocommerce_cart_item_visible', true, $cart_item, $cart_item_key ) ) {
 						$product_permalink = apply_filters( 'woocommerce_cart_item_permalink', $_product->is_visible() ? $_product->get_permalink( $cart_item ) : '', $cart_item, $cart_item_key );
 						?>
@@ -385,7 +401,16 @@ $product_ids = [];
 		$('.js-pa-size-change').on('change', function () {
 			const variable = $(this).val();
 			const self = $(this);
-			const val = self.parents('tr').find('.product-quantity input').val();
+
+			let val = 1;
+			if (self.parents('tr').find('.product-quantity input').length) {
+				val = self.parents('tr').find('.product-quantity input').val();
+			}
+
+			if (self.parents('tr').find('.product-quantity select').length) {
+				val = self.parents('tr').find('.product-quantity select').val();
+			}
+
 			$.get(`?add-to-cart=${variable}&quantity=${val}`, function() {
 				const href = $(self).parents('tr').find('.product-remove a').attr('href');
 				$.get(href, function() {
