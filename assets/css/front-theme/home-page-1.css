@@ -811,6 +811,30 @@ body.home .site-footer {
     font-size: 26px;
   }
 }
+.woocommerce-form__label-for-checkbox .woocommerce-form__input-checkbox,
+#wc-stripe-new-payment-method {
+  display: none;
+}
+.woocommerce-form__label-for-checkbox .woocommerce-form__input-checkbox + span::before,
+#wc-stripe-new-payment-method + label::before {
+  content: "";
+  border: 1px solid #d7d7d7;
+  border-radius: 4px;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  vertical-align: bottom;
+  color: transparent;
+  transition: 0.2s;
+  box-sizing: border-box;
+  font-family: "Ionicons";
+  text-align: center;
+}
+.woocommerce-form__label-for-checkbox input[type=checkbox]:checked + span::before,
+.form-row input[type=checkbox]#wc-stripe-new-payment-method:checked + label::before {
+  color: #2a2a2a;
+}
 /* ------------------ Info Page ------------------- */
 .info-page-child {
   display: flex;
