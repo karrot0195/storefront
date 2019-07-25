@@ -173,7 +173,7 @@
   .shipping .shipping-wrapper .sidebar,
   .home-page-1 .privacy-policy .privacy-policy-wrapper .sidebar {
     width: 100%;
-    margin: 50px auto 20px;
+    margin: 0 35px;
   }
   .faq .faq-wrapper .content,
   .shipping .faq-wrapper .content,
