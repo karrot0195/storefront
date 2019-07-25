@@ -20,7 +20,7 @@ do_action( 'woocommerce_before_cart' );
 $product_ids = [];
 ?>
 <div class="container">
-
+	<?php if (!isMobileDevice()): ?>
 	<form class="woocommerce-cart-form pc" action="<?php echo esc_url( wc_get_cart_url() ); ?>" method="post">
 		<?php do_action( 'woocommerce_before_cart_table' ); ?>
 
@@ -196,7 +196,7 @@ $product_ids = [];
 			
 		<?php do_action( 'woocommerce_after_cart_table' ); ?>
 	</form>
-
+	<?php else: ?>
 	<form class="woocommerce-cart-form sp" action="<?php echo esc_url( wc_get_cart_url() ); ?>" method="post">
 		<?php do_action( 'woocommerce_before_cart_table' ); ?>
 
@@ -338,7 +338,7 @@ $product_ids = [];
 			
 		<?php do_action( 'woocommerce_after_cart_table' ); ?>
 	</form>
-
+	<?php endif; ?>
 	<div class="cart-collaterals">
 		<?php
 			/**
