@@ -60,7 +60,7 @@ if ( ! $checkout->is_registration_enabled() && $checkout->is_registration_requir
             <!-- Place Order -->
             <div class="add-block-wrapper">
                 <div class="free">
-                    <span><i class="fa fa-exclamation-circle"></i></span>
+                    <span><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/icon-info.png"></i></span>
                     <p>FREE STANDAR DELIVERY TO SINGAPORE WHEN YOU SPEND OVER SGD 200</p>
                 </div>
                 <div class="place-order">

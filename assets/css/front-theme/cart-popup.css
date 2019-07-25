@@ -434,11 +434,11 @@ form.checkout.woocommerce-checkout #order_review table.woocommerce-checkout-revi
 }
 .col2-set .woocommerce-billing-fields__field-wrapper .form-row-first,
 .col2-set .woocommerce-billing-fields__field-wrapper .form-row-last {
-  width: 49%;
+  width: 48%;
   margin-right: 0;
 }
 .col2-set .woocommerce-billing-fields__field-wrapper .update_totals_on_change {
-  width: 49%;
+  width: 48%;
 }
 .col2-set .woocommerce-billing-fields__field-wrapper .update_totals_on_change .select2-container--default .select2-selection--single {
   height: 44px;
@@ -456,11 +456,11 @@ form.checkout.woocommerce-checkout #order_review table.woocommerce-checkout-revi
   transform: translateY(-50%);
 }
 .col2-set .woocommerce-billing-fields__field-wrapper .validate-phone {
-  width: 49%;
+  width: 48%;
   float: left;
 }
 .col2-set .woocommerce-billing-fields__field-wrapper .validate-email {
-  width: 49%;
+  width: 48%;
   float: right;
   clear: none;
 }
@@ -677,7 +677,7 @@ table.woocommerce-checkout-review-order-table tfoot .order-total td {
   margin-bottom: 35px;
 }
 .payment-wrapper .m-y-wrapper input {
-  width: 49%;
+  width: 48%;
 }
 .payment-wrapper .save-card {
   color: #2a2a2a;
