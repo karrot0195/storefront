@@ -1006,6 +1006,9 @@ body .wrap-storefront-breadcrumb span {
   #payment.woocommerce-checkout-payment .payment_box.payment_method_stripe #stripe-payment-data p label {
     font-size: 14px;
   }
+  .page-template-default .woocommerce {
+    overflow-x: hidden;
+  }
 }
 .home-page-1 table.shop_table_responsive tbody th {
   font-family: "Barlow-m";
