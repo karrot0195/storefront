@@ -1680,6 +1680,9 @@ body.woocommerce-page #reviews .form-contribution .attachment-type[data-prev-val
   .single-product .home-page-1 ul.products li.product {
     padding-bottom: 40px;
   }
+  .wrap-size {
+    margin-top: 10px;
+  }
 }
 .storefront-product-detail .home-page-1 .woocommerce-noreviews {
   text-align: left;
