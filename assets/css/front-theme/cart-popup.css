@@ -54,10 +54,7 @@ body {
     height: calc(100% - 270px);
     overflow-y: auto;
     padding-right: 10px;
-    -webkit-overflow-scrolling: touch;
-    /* Lets it scroll lazy */
-    -webkit-overflow-scrolling: auto;
-    /* Stops scrolling immediately */
+    scroll-behavior: smooth;
   }
 }
 @media screen and (max-width: 767px) {
