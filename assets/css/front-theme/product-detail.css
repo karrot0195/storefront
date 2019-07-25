@@ -355,6 +355,8 @@
   text-align: left;
   margin-top: 10px;
   font-size: 13px;
+  letter-spacing: 1.3px;
+  width: auto;
 }
 @media screen and (max-width: 767px) {
   .storefront-product-detail #reviews .commentlist li .comment_container .comment-text .star-rating {
@@ -384,6 +386,8 @@
 .storefront-product-detail .review-rate .star-rating {
   font-size: 14px;
   margin-right: 10px;
+  letter-spacing: 1.4px;
+  width: 6em;
 }
 .storefront-product-detail .review-rate .star-rating::before {
   color: #cbcbcb;
