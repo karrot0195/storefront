@@ -187,6 +187,7 @@
     arrows: true,
     speed: 500,
   });
+  var windowwidth = $(window).width(); 
   if(windowwidth > 767){
     $('.related-slider').slick({
       dots: false,
