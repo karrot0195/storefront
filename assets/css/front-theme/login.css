@@ -75,6 +75,7 @@
   display: flex;
   justify-content: center;
   margin: 0 auto;
+  background: #0f1972;
 }
 .login .login-wrapper .login .login-type {
   display: -webkit-box;
