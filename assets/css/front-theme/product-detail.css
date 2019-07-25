@@ -586,12 +586,16 @@
   max-height: 90%;
 }
 .storefront-product-detail #review_form_wrapper .close {
-  position: absolute;
-  top: 10px;
-  right: 20px;
+  position: sticky;
+  top: 0;
+  right: 0;
   font-size: 20px;
   cursor: pointer;
   font-weight: 600;
+  left: auto;
+  width: 10px;
+  display: flex;
+  margin-left: auto;
 }
 .storefront-product-detail #review_form_wrapper.show {
   z-index: 1000;
