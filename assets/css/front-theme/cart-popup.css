@@ -414,6 +414,7 @@ form.checkout.woocommerce-checkout #order_review {
 form.checkout.woocommerce-checkout #order_review table.woocommerce-checkout-review-order-table {
   line-height: unset;
   margin-bottom: 0;
+  width: 100%;
 }
 .woocommerce-additional-fields h3 {
   font-size: 24px;
