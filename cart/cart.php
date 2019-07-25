@@ -269,7 +269,12 @@ $product_ids = [];
 									}
 									?>
 									<div class="wrap-size">
-									<span><?= $_product->get_attribute('pa_size') ?></span>
+										<select class="sl-attr-size">
+											<option>25 ml</option>
+											<option>35 ml</option>
+										</select>
+									</div>
+									
 								</div>
 								</td>
 

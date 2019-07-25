@@ -922,11 +922,7 @@ body .wrap-storefront-breadcrumb span {
     width: 20px;
   }
   table.cart td.product-quantity .quantity .quantity-nav {
-    display: block;
-    right: 0;
-    width: auto;
-    top: 50%;
-    transform: translateY(-50%);
+    display: none;
   }
   table.cart td.product-quantity .quantity .quantity-nav .quantity-button {
     width: auto;
@@ -1056,6 +1052,14 @@ body .wrap-storefront-breadcrumb span {
   }
   .page-template-default .woocommerce {
     overflow-x: hidden;
+  }
+  .sl-attr-size {
+    border: none;
+    font-size: 14px;
+    color: #2a2a2a;
+    outline: none;
+    min-width: 65px;
+    font-family: "Barlow";
   }
 }
 .home-page-1 table.shop_table_responsive tbody th {

@@ -819,6 +819,7 @@ body.home{
     overflow-x: scroll;
     overflow-y: visible;
     display: flex;
+    margin: 0;
   }
   .home-page-1 ul.products .loop-main-product{
     display: grid;
@@ -1009,6 +1010,7 @@ body.home{
       -webkit-line-clamp: 1;
       -webkit-box-orient: vertical;
       margin-bottom: 0;
+      margin-top: 0;
     }
   }
 
@@ -3120,6 +3122,7 @@ table th {
   margin-top: 50px;
   @media screen and (max-width: 767px){
     margin-top: 0;
+    padding-bottom: 35px;
   }
   &::before{
     position: absolute;
@@ -3230,6 +3233,9 @@ table th {
   }
   .home-page-1 .slick-dots li:nth-child(n+4){
     display: none;
+  }
+  .woocommerce-cart .home-page-1 ul.products {
+    margin-bottom: 0;
   }
 }
 @media screen and (max-width: 375px){
