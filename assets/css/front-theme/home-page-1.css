@@ -3135,6 +3135,9 @@ table th {
 .archive .site-footer {
   border-top: none;
 }
+.woocommerce-checkout ul#shipping_method span.label {
+  display: none;
+}
 @media screen and (max-width: 992px) {
   .home-page-1 .site-header .col-full .menu-mobile .site-branding a {
     margin: unset;
@@ -3168,12 +3171,16 @@ table th {
   td .wrap-quantity i {
     font-size: 20px;
   }
-  .home-page-1 .order-total .woocommerce-Price-amount.amount,
-  .home-page-1 .cart-subtotal .woocommerce-Price-amount.amount {
+  .woocommerce-cart .home-page-1 .order-total .woocommerce-Price-amount.amount,
+  .woocommerce-cart .home-page-1 .cart-subtotal .woocommerce-Price-amount.amount {
     font-weight: bold;
   }
   .woocommerce-cart article {
     height: 100%;
+  }
+  .cart-subtotal th,
+  .woocommerce-shipping-totals th {
+    font-family: "Barlow";
   }
 }
 @media screen and (max-width: 375px) {

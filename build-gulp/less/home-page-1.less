@@ -3264,6 +3264,9 @@ table th {
     border-top: none;
   }
 }
+.woocommerce-checkout ul#shipping_method span.label{
+  display: none;
+}
 @media screen and (max-width: 992px){
   .home-page-1 .site-header .col-full .menu-mobile .site-branding a{
     margin: unset;
@@ -3299,7 +3302,7 @@ table th {
       font-size: 20px;
     }
   }
-  .home-page-1 {
+  .woocommerce-cart .home-page-1 {
     .order-total,
     .cart-subtotal{
       .woocommerce-Price-amount.amount{
@@ -3310,7 +3313,12 @@ table th {
   .woocommerce-cart article{
     height: 100%;
   }
- 
+ .cart-subtotal,
+ .woocommerce-shipping-totals{
+   th{
+   font-family: "Barlow";
+ }
+ } 
 }
 @media screen and (max-width: 375px){
   .info-page .info-page-left a{
