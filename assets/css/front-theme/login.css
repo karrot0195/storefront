@@ -291,7 +291,7 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 100px;
+  padding: 130px 100px 100px;
   color: #2a2a2a;
 }
 .contact-us-wrapper p {
@@ -744,4 +744,19 @@ body.page-template-about-us .wrap-storefront-breadcrumb {
 }
 .forgot-form .button-wrap .btn-forgot.proccessing span {
   display: none;
+}
+.page-template-contact-us .site-header {
+  background: #f9f9f9;
+}
+.page-template-contact-us .wrap-storefront-breadcrumb {
+  position: relative;
+}
+.page-template-contact-us .wrap-storefront-breadcrumb::before {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 100%;
+  background: #f9f9f9;
+  top: 0;
+  left: 0;
 }
