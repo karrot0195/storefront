@@ -372,6 +372,9 @@ table.cart td.product-quantity .quantity input[type=number]::-webkit-outer-spin-
     font-size: 14px;
   }
 }
+.woocommerce-billing-fields__field-wrapper p .optional {
+  display: none;
+}
 .woocommerce-billing-fields__field-wrapper .form-row input,
 .woocommerce-billing-fields__field-wrapper .form-row textarea {
   height: 44px;
