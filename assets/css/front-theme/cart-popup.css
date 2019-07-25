@@ -3,7 +3,6 @@ body.disable {
   height: 100vh;
   overflow: hidden!important;
   transition: right 0.5s ease;
-  position: fixed;
 }
 body {
   transition: right 0.5s ease;
