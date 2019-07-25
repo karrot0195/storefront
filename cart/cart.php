@@ -42,13 +42,19 @@ $product_ids = [];
 				foreach ( WC()->cart->get_cart() as $cart_item_key => $cart_item ) {
 					$_product   = apply_filters( 'woocommerce_cart_item_product', $cart_item['data'], $cart_item, $cart_item_key );
 					
-					$attributes = $_product->get_attributes();
-					
 					$product_id = apply_filters( 'woocommerce_cart_item_product_id', $cart_item['product_id'], $cart_item, $cart_item_key );
                     $product_ids[] = $product_id;
 
 					if ( $_product && $_product->exists() && $cart_item['quantity'] > 0 && apply_filters( 'woocommerce_cart_item_visible', true, $cart_item, $cart_item_key ) ) {
 						$product_permalink = apply_filters( 'woocommerce_cart_item_permalink', $_product->is_visible() ? $_product->get_permalink( $cart_item ) : '', $cart_item, $cart_item_key );
+
+					if ($_product->get_type() == 'variation') {
+						$size_attribute_data = wc_get_product_terms($_product->get_parent_id(), 'pa_size');
+
+						$pa_size_selected = isset($_product->get_attributes()['pa_size']) ? $_product->get_attributes()['pa_size'] : '';
+					} else {
+						$size_attribute_data = [];
+					}
 						?>
 						<tr class="woocommerce-cart-form__cart-item <?php echo esc_attr( apply_filters( 'woocommerce_cart_item_class', 'cart_item', $cart_item, $cart_item_key ) ); ?>">
 							<td class="product-remove">
@@ -97,8 +103,12 @@ $product_ids = [];
 							<td>
 								<div class="wrap-size">
 									<select class="sl-attr-size">
-										<option>25 ml</option>
-										<option>35 ml</option>
+										<?php 
+										foreach ($size_attribute_data as $item) {
+											$selected = $pa_size_selected == $item->slug ? 'selected="selected"' : '';
+											echo '<option name="pa_size" '.$selected.' value="'.$item->slug.'">'.$item->name.'</option>';
+										}
+										?>
 									</select>
 								</div>
 							</td>
