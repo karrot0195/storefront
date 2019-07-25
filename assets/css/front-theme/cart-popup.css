@@ -45,9 +45,10 @@ body {
   background-color: white;
   padding: 0px 25px;
   right: -100%;
-  overflow: auto;
+  overflow-y: auto;
   z-index: 999;
   min-height: 100vh;
+  height: -webkit-fill-available;
 }
 @media screen and (max-width: 767px) {
   .wrap-cart-side .block-cart-side {
