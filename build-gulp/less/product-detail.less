@@ -282,7 +282,7 @@
     right: 20px;
     left: auto;
     @media screen and (max-width: 767px){
-      right: 24px;
+      right: 0;
       top: 5px;
     }
   }
@@ -342,6 +342,9 @@
     float: none;
     text-align: left;
     margin-top: 10px;
+    font-size: 13px;
+    letter-spacing: 1.3px;
+    width: auto;
     @media screen and (max-width: 767px) {
       margin-top: 10px;
     }
@@ -356,7 +359,7 @@
     color: #222222;
     margin-bottom: 5px;
     @media screen and (max-width: 767px) {
-      font-size: 15px;
+      font-size: 20px;
     }
   }
   .review-rate{
@@ -364,10 +367,15 @@
     display: flex;
     align-items: center;
     .star-rating{
-      font-size: 12px;
+      font-size: 14px;
       margin-right: 10px;
+      letter-spacing: 1.4px;
+      width: 6em;
       &::before{
         color: #cbcbcb;
+      }
+      span{
+        width: 76% !important;
       }
       span:before{
         color: #fcbb1c;
@@ -398,6 +406,11 @@
           display: block;
           font-size: 16px;
           background: none;
+          font-family: "Barlow-m";
+          padding: 0;
+          @media screen and (max-width: 767px){
+            font-size: 15px;
+          }
           &::before{
             position: absolute;
             content: "";
@@ -457,7 +470,7 @@
       color: #222222;
       @media screen and (max-width: 767px) {
         font-size: 14px;
-        
+        margin-bottom: 0;
       }
     }
   }
@@ -490,7 +503,7 @@
     }
     @media screen and (max-width: 767px) {
       top: 60px;
-      right: 30px;
+      right: 8px;
     }
   }
   .related.products {
@@ -739,6 +752,7 @@
     border-bottom: 1px solid #d1d1d1;
     @media screen and (max-width: 767px) {
       padding: 25px 0;
+      margin-bottom: 25px;
     }
     &:last-child {
       border: 0;
@@ -949,7 +963,9 @@
     + .wrap-cart {
       margin-bottom: 45px;
       margin-top: 40px;
-
+      @media screen and (max-width: 767px){
+        margin-top: 25px;
+      }
       .wrap-block.wrap-proccess {
         #number {
           .val {
@@ -1111,12 +1127,13 @@
         }
         @media screen and (max-width: 767px) {
           margin-left: 0;
-          margin-top: 20px;
+          margin-top: 10px;
         }
 
         &.proccess {
           background-color: #0f1972;
           color: #ffffff;
+
           &::after{
             content: 'ADDED';
             animation: test 0.2s ease forwards;
@@ -1483,8 +1500,8 @@ body.woocommerce-page #reviews .form-contribution .attachment-type[data-prev-val
 
 .woocommerce.woocommerce-page #reviews .product-rating .product-rating-summary{
   display: flex;
-  justify-content: space-between;
   .wrap-review-right{
+    margin-left: auto;
     button{
       border: none;
       background: no-repeat;
@@ -1546,6 +1563,9 @@ body.woocommerce-page #reviews .form-contribution .attachment-type[data-prev-val
   .storefront-product-detail .wrap-description{
     overflow-y: hidden;
     height: auto;
+  }
+  .storefront-product-detail #reviews .commentlist li p.meta time{
+    padding-top: 0;
   }
 }
 

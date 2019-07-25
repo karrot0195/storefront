@@ -29,7 +29,7 @@
 }
 .about-us .content {
   text-align: center;
-  padding: 100px 0;
+  padding: 100px 0 160px;
   color: #2a2a2a;
   max-width: 1140px;
   margin: 0 auto;
@@ -121,7 +121,7 @@
     object-position: right;
   }
   .about-us .content .sub_title {
-    margin-bottom: 10px;
+    margin-bottom: 30px;
   }
   .about-us .content .box {
     display: block;
@@ -130,16 +130,16 @@
   .about-us .content .box .right {
     width: 100%;
     box-sizing: border-box;
-    padding: 20px;
+    padding: 25px;
   }
   .about-us .content .desc p {
-    margin-top: 10px;
+    margin-top: 30px;
   }
   .about-us .content .box .right {
     margin-top: 20px;
   }
   .about-us .content {
-    padding: 40px 0;
+    padding: 40px 0 70px;
   }
   .about-us .content .title {
     font-size: 22px;

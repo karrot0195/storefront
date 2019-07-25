@@ -37,6 +37,15 @@ body {
   &.page-template-template-home1 {
     margin: 0 !important;
     padding: 0;
+   
+  }
+}
+body.home{
+  &::after{
+    content: none;
+  }
+  .site-footer{
+    position: unset;
   }
 }
 .disabled-review{
@@ -269,6 +278,9 @@ body {
   }
   .block-notify {
     padding: 27px 0px 25px;
+    @media screen and (max-width: 767px){
+      display: flex;
+    }
   }
   .block-notify--element  {
     font-family: "Barlow";
@@ -285,8 +297,8 @@ body {
     z-index: 6;
     &.block-notify--action {
       margin-left: 36px;
-      @media screen and (max-width: 480px) {
-        margin-left: 30px;
+      @media screen and (max-width: 767px) {
+        margin-left: auto;
       }
       cursor: pointer;
       i {
@@ -966,7 +978,7 @@ body {
       display: none;
   }
   ul.products li.product .woocommerce-loop-product__title, ul.products li.product h2 {
-    font-family: "Barlow";
+    font-family: "Barlow-m";
     font-size: 18px;
     font-weight: 600;
     font-style: normal;
@@ -983,6 +995,7 @@ body {
       display: -webkit-box;
       -webkit-line-clamp: 1;
       -webkit-box-orient: vertical;
+      margin-bottom: 0;
     }
   }
 
@@ -1438,7 +1451,7 @@ body {
     &.single-product div.product .product_meta .posted_in, 
     &.single-product div.product .product_meta .sku_wrapper, 
     &.single-product div.product .product_meta .tagged_as {
-        font-family: "Barlow";
+        font-family: "Barlow-m";
         font-size: 14px;
         font-weight: 600;
         font-style: normal;
@@ -1497,6 +1510,9 @@ body {
         margin-right: 20px;
         margin-bottom: 15px;
         display: inline-block;
+        @media screen and (max-width: 767px){
+          margin-right: 10px;
+        }
         &:first-child {
             margin-left: 0px;
         }

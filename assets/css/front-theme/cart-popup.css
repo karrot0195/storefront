@@ -190,7 +190,7 @@ body {
   cursor: pointer;
   display: inline-block;
   border: 1px solid #142d73;
-  text-transform: uppercase;
+  text-transform: capitalize;
   transition: 0.3s all ease;
   position: relative;
   height: 20px;
@@ -807,8 +807,9 @@ body .wrap-storefront-breadcrumb {
 }
 @media screen and (max-width: 767px) {
   body .wrap-storefront-breadcrumb {
-    margin: 40px 0 0;
+    margin: 40px 0;
     font-size: 12px;
+    padding-left: 0;
   }
 }
 body .wrap-storefront-breadcrumb a,

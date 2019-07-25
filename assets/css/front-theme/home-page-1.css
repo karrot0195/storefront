@@ -39,6 +39,12 @@ body.page-template-template-home1 {
   margin: 0 !important;
   padding: 0;
 }
+body.home::after {
+  content: none;
+}
+body.home .site-footer {
+  position: unset;
+}
 .disabled-review {
   height: 100vh;
   overflow: hidden!important;
@@ -228,6 +234,11 @@ body.page-template-template-home1 {
 .home-page-1 .block-notify {
   padding: 27px 0px 25px;
 }
+@media screen and (max-width: 767px) {
+  .home-page-1 .block-notify {
+    display: flex;
+  }
+}
 .home-page-1 .block-notify--element {
   font-family: "Barlow";
   font-size: 14px;
@@ -246,9 +257,9 @@ body.page-template-template-home1 {
   margin-left: 36px;
   cursor: pointer;
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 767px) {
   .home-page-1 .block-notify--element.block-notify--action {
-    margin-left: 30px;
+    margin-left: auto;
   }
 }
 .home-page-1 .block-notify--element.block-notify--action i {
@@ -914,7 +925,7 @@ body.page-template-template-home1 {
 }
 .home-page-1 ul.products li.product .woocommerce-loop-product__title,
 .home-page-1 ul.products li.product h2 {
-  font-family: "Barlow";
+  font-family: "Barlow-m";
   font-size: 18px;
   font-weight: 600;
   font-style: normal;
@@ -934,6 +945,7 @@ body.page-template-template-home1 {
     display: -webkit-box;
     -webkit-line-clamp: 1;
     -webkit-box-orient: vertical;
+    margin-bottom: 0;
   }
 }
 .home-page-1 ul.products li.product .price {
@@ -1365,7 +1377,7 @@ a:hover {
 .storefront-product-detail.single-product div.product .product_meta .posted_in,
 .storefront-product-detail.single-product div.product .product_meta .sku_wrapper,
 .storefront-product-detail.single-product div.product .product_meta .tagged_as {
-  font-family: "Barlow";
+  font-family: "Barlow-m";
   font-size: 14px;
   font-weight: 600;
   font-style: normal;
@@ -1430,6 +1442,11 @@ a:hover {
   margin-right: 20px;
   margin-bottom: 15px;
   display: inline-block;
+}
+@media screen and (max-width: 767px) {
+  .storefront-product-detail.single-product div.product .product_meta a {
+    margin-right: 10px;
+  }
 }
 .storefront-product-detail.single-product div.product .product_meta a:first-child {
   margin-left: 0px;
