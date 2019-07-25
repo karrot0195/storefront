@@ -39,9 +39,9 @@ body {
 
   .block-cart-side {
     position: fixed;
+    top: 0;
     display: flex;
     flex-direction: column;
-    float: right;
     width: 400px;
     max-height: 100%;
     background-color: white;
@@ -49,14 +49,13 @@ body {
     right: -100%;
     overflow-y: auto;
     z-index: 999;
-    min-height: 100vh;
+    height: 100vh;
     @media screen and (max-width: 767px) {
       .block-main {
         height: calc(100% - 270px);
         overflow-y: auto;
         padding-right: 10px;
-        -webkit-overflow-scrolling: touch; /* Lets it scroll lazy */
-        -webkit-overflow-scrolling: auto; /* Stops scrolling immediately */
+        scroll-behavior: smooth;
       }
     }
     
