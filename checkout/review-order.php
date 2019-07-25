@@ -24,7 +24,7 @@ $total_item = count(WC()->cart->get_cart());
 	<thead>
 		<tr>
 			<th class="product-name"><?= $total_item ?> <?php _e( 'Item', 'woocommerce' ); ?></th>
-			<th class="product-total"><?php _e( 'Edit', 'woocommerce' ); ?></th>
+			<th class="product-total"><a href="<?= home_url('/cart') ?>"><?php _e( 'Edit', 'woocommerce' ); ?></a></th>
 		</tr>
 	</thead>
 	<tbody>
@@ -119,3 +119,4 @@ $total_item = count(WC()->cart->get_cart());
 
 	</tfoot>
 </table>
+

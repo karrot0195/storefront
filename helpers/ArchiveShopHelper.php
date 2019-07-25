@@ -29,9 +29,11 @@ class ArchiveShopHelper {
         $page = get_page_by_title('shop');
         $video = get_field('video', $page->ID ? $page->ID : '');
         $bg = get_field('video_bg', $page->ID ? $page->ID : '');
-        $has_bg = false;
+        $has_bg = true;
         if ($bg) {
             $bg = wp_get_attachment_url($bg);$has_bg=true;
+        } else {
+            $bg = "http://i3.ytimg.com/vi/".$video."/maxresdefault.jpg";
         }
         echo render_php('views/shop/video.php', [
             'bg' => $bg,

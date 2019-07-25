@@ -15,7 +15,7 @@
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
-        padding: 100px;
+        padding: 40px 100px 100px 100px;
         color:  #2a2a2a;
         .title{
             font-size: 26px;
@@ -155,7 +155,7 @@
     padding-left: 114px;
     margin-bottom: 80px;
 }
-.woocommerce-account .hentry .entry-content .woocommerce .woocommerce-MyAccount-navigation h6{
+.woocommerce-account .hentry .entry-content .woocommerce .woocommerce-MyAccount-navigation h4{
     display: none;
 }
 /*-Dashboard-*/ 
@@ -281,7 +281,7 @@
         }
     }
 } 
-.woocommerce-account .hentry .entry-content .woocommerce .woocommerce-MyAccount-navigation ul h6{
+.woocommerce-account .hentry .entry-content .woocommerce .woocommerce-MyAccount-navigation ul h4{
     display: none;
 }
 
@@ -292,7 +292,7 @@
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    padding: 100px;
+    padding: 130px 100px 100px;
     color: #2a2a2a;
     p{
         margin: 0;
@@ -309,11 +309,12 @@
         }
     }
     .content{
+        width: 50%;
         .ad-p-wrapper{
             display: -webkit-box;
             display: -ms-flexbox;
             display: flex;
-            padding-bottom: 30px;
+            padding-bottom: 65px;
             border-bottom: 1px solid rgba(149, 149, 149, 0.4);
         }
         .address,
@@ -325,18 +326,79 @@
         }
         .title{
             font-size: 18px;
-            font-family: "Barlow";
+            font-family: "Barlow-m";
             margin-bottom: 10px;
             font-weight: bold;
         }
         .desc p{
+            line-height: 1.8;
+        }
+        .desc a{
             font-size: 16px;
             line-height: 1.36;
+            color: #2a2a2a;
+            text-decoration: none;
         }
         .contact-form{
-            padding-top: 15px;
+            padding-top: 35px;
             .title{
-                margin-bottom: 30px;
+                margin-bottom: 40px;
+            }
+            #gform_wrapper_1{
+                .gform_heading{
+                    display: none;
+                }
+                .gform_body{
+                    ul.gform_fields{
+                        li.gfield{
+                            margin-bottom: 20px;
+                            padding: 0;
+                        }
+                        #field_1_1,
+                        #field_1_3{
+                            width: 48%;
+                            clear: none;
+                           
+                        }
+                        #field_1_1{
+                            float: left;
+                        }
+                        #field_1_3{
+                            float: right;
+                        }
+                        #field_1_4{
+                            clear: both;
+                        }
+                        .ginput_container{
+                            input.medium{
+                                width: 100%;
+                                height: 44px;
+                                padding: 10px;
+                            }
+                        }
+                    }
+                    .gfield_label{
+                        font-weight: normal;
+                        .gfield_required{
+                            color: #2a2a2a;
+                        }
+                    }
+                }
+                .gform_footer{
+                    margin-top: 55px;
+                    padding: 0;
+                    input[type=submit]{
+                        height: 50px;
+                        background: #0f1972;
+                        border-radius: 25px;
+                        width: 290px;
+                        text-align: center;
+                        color: #ffffff;
+                        font-size: 16px;
+                        cursor: pointer;
+    
+                    }
+                }
             }
             input,
             textarea{
@@ -352,6 +414,9 @@
                     box-shadow: 1px 2px 11px 3px rgba(0, 0, 0, 0.1);
                     border-color: #ffffff;
                 }
+            }
+            textarea{
+                height: 88px;
             }
             .form-flex{
                 display: -webkit-box;
@@ -380,20 +445,7 @@
                     padding-top: 10px;
                 }
             }
-            .form-submit{
-                margin-top: 55px;
-                input{
-                    height: 50px;
-                    background: #0f1972;
-                    border-radius: 25px;
-                    width: 200px;
-                    text-align: center;
-                    color: #ffffff;
-                    font-size: 16px;
-                    cursor: pointer;
-
-                }
-            }
+          
         }
     }
 }
@@ -401,13 +453,16 @@
     color: #2a2a2a;
     text-decoration: none;
 }
+body.page-template-about-us .wrap-storefront-breadcrumb{
+    display: none;
+}
 /*==================== RESPONSIVE ====================*/
 @media screen and (max-width: 767px){
 
     // LOGIN //
     .login .login-wrapper{
         display: block;
-        padding: 40px 20px;
+        padding: 0 20px;
     }
     .login .login-wrapper .login,
     .login .login-wrapper .register{
@@ -463,7 +518,7 @@
     }
     .login .login-wrapper .login .login-type,
     .login .login-wrapper .login .fg-pass{
-        margin-bottom: 42px;
+        margin-bottom: 45px;
     }
     .login .login-wrapper .login .btn-fb, 
     .login .login-wrapper .login .btn-login,
@@ -486,7 +541,6 @@
         margin: 30px 0;
         font-size: 20px;
         color: #2a2a2a;
-        font-weight: 500;
     }
     .woocommerce-account .hentry .entry-content .woocommerce{
         display: block;
@@ -532,7 +586,7 @@
         padding: 20px 0 0;
         margin-bottom: 45px;
     }
-    .woocommerce-account .hentry .entry-content .woocommerce .woocommerce-MyAccount-navigation h6{
+    .woocommerce-account .hentry .entry-content .woocommerce .woocommerce-MyAccount-navigation h4{
         font-size: 16px;
         font-family: "Barlow";
         color: #2a2a2a;
@@ -546,6 +600,8 @@
         padding-bottom: 20px;
         i{
             transition: 0.3s all ease;
+            font-size: 12px;
+            color: #696969;
         }
         i.tab-click{
             transform: rotate(180deg);
@@ -562,27 +618,30 @@
     // CONTACT US
     .contact-us-wrapper{
         display: block;
-        padding: 30px 0;
+        padding: 0 0 90px;
         .sidebar,
         .content{
             width: 100%;
         }
         .sidebar{
-            margin-bottom: 30px;
+            margin-bottom: 35px;
         }
         .content{
             .ad-p-wrapper{
                 display: block;
-                padding-bottom: 60px;
+                padding-bottom: 45px;
             }
             .phone{
                 padding-left: 0;
-                margin-top: 30px;
+                margin-top: 25px;
             }
             .contact-form{
                 padding-top: 30px;
             }
         }
+    }
+    .contact-us-wrapper .content .title{
+        font-size: 14px;
     }
     .contact-us-wrapper .content .contact-form .form-flex{
         display: block;
@@ -594,7 +653,171 @@
         display: block;
         margin-top: 20px;
     }
+    .contact-us-wrapper .content .contact-form .title{
+        margin-bottom: 25px;
+    }
     .contact-us-wrapper .content .contact-form .form-submit input{
         width: 100%;
+    }
+    .contact-us-wrapper .content .contact-form #gform_wrapper_1 .gform_body ul.gform_fields #field_1_3,
+    .contact-us-wrapper .content .contact-form #gform_wrapper_1 .gform_body ul.gform_fields #field_1_1,
+    .contact-us-wrapper .content .contact-form #gform_wrapper_1 .gform_footer input[type=submit]{
+        float: none;
+        width: 100%;
+    }
+    .contact-us-wrapper .content .contact-form #gform_wrapper_1 .gform_footer{
+        margin-top: 45px;
+    }
+    .contact-us-wrapper p,
+    .contact-us-wrapper .content .desc a,
+    .contact-us-wrapper .content .contact-form #gform_wrapper_1 .gform_body .gfield_label{
+        font-size: 14px;
+    }
+    .contact-us-wrapper .sidebar p{
+        font-size: 20px;
+    }
+
+}
+
+
+/* REGISTER */
+
+.wrap-create-account {
+    display: none;
+    .wrap-register-message {
+        color: #ff0000;
+        font-size: 13px;
+        margin-bottom: 10px;
+    }
+
+    .button-wrap {
+        padding-top: 20px;
+        button {
+            @media screen and (max-width: 768px){
+                width: 100%;
+                background: #0f1972;
+            }
+            border-radius: 26px;
+            width: 210px;
+            display: flex;
+            justify-content: center;
+            margin: 0 auto;
+            height: 44px;
+            border: none;
+            background: #004a80;
+            color: #ffffff;
+            font-size: 16px;
+            letter-spacing: 0.22px;
+            position: relative;
+            margin-bottom: 68px;
+            cursor: pointer;
+        }
+         .btn-create-account {
+            i {
+                display: none;
+            }
+
+            span {
+                display: block;
+            }
+        }
+    }
+
+    .wrap-field {
+        padding-bottom: 15px;
+
+        .error {
+            font-size: 12px;
+            color: #ff0000;
+        }
+    }
+
+   
+
+    &.proccessing {
+        .btn-create-account {
+            i {
+                display: block;
+            }
+
+            span {
+                display: none;
+            }
+        }
+
+    }
+}
+
+.forgot-form {
+    display: none;
+    .button-wrap {
+        padding-top: 20px;
+        button {
+            @media screen and (max-width: 768px){
+                width: 100%;
+                background: #0f1972;
+            }
+            border-radius: 26px;
+            width: 210px;
+            display: flex;
+            justify-content: center;
+            margin: 0 auto;
+            height: 44px;
+            border: none;
+            background: #004a80;
+            color: #ffffff;
+            font-size: 16px;
+            letter-spacing: 0.22px;
+            position: relative;
+            margin-bottom: 68px;
+            cursor: pointer;
+        }
+         .btn-forgot {
+            i {
+                display: none;
+            }
+
+            span {
+                display: block;
+            }
+
+            &.proccessing {
+                i {
+                    display: block;
+                }
+
+                span {
+                    display: none;
+                }            
+            }
+        }
+    }
+}
+
+body.page-template-contact-us,
+body.page-template-general-faq,
+body.page-template-shipping{
+    .site-header{
+        background: #f9f9f9;
+        @media screen and (max-width: 767px){
+            background: #ffffff;
+        }
+    }
+    .wrap-storefront-breadcrumb{
+        position: relative;
+        &::before{
+            position: absolute;
+            content: '';
+            width: 2000%;
+            height: 100%;
+            background: #f9f9f9;
+            top: 0;
+            left: -500px;
+            z-index: -1;
+            @media screen and (max-width: 767px){
+                content: none;
+            }
+        }
+        
     }
 }

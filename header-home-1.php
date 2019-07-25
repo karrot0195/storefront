@@ -28,7 +28,7 @@
 </head>
 
 <div class="wrap-cart-side">
-    <?= get_html_popup_cart() ?>
+    <?= get_html_popup_cart(true) ?>
 </div>
 
 <body <?php body_class(); ?>>
@@ -42,6 +42,7 @@ if (is_page_template('templates/template-home1.php')) {
     $action = 'storefront_header_home_1';
 }
 ?>
+
 <div id="page" class="hfeed site home-page-1 <?= implode(' ', $class) ?>">
     <header id="masthead" class="site-header" role="banner" style="<?php storefront_header_styles(); ?>">
         <div class="container">
@@ -59,13 +60,16 @@ if (is_page_template('templates/template-home1.php')) {
                     <div class="wrapper-menu">
                    
                         <?php
-                            do_action( $action );
+                           do_action( $action );
+                           if (is_page_template('templates/template-home1.php')) {
+                            storefront_slider_header();
+                           }
                         ?>
                         <?php
                         storefront_mobile_footer_widgets();
                         ?>
-                        <a class="my-account" href="#"><span><span>My Account</span><img src="<?php bloginfo('template_url'); ?>/assets/images/icon/user.png"  alt="#"/></span></a>
-                        <a class="my-account my-wishlist" href="#"><span>My wishlist</span><span class="block-like"></span></a>
+                        <a class="my-account" href="<?= home_url('login') ?>"><span><span>My Account</span><img src="<?php bloginfo('template_url'); ?>/assets/images/icon/user.png"  alt="#"/></span></a>
+                        <a class="my-account my-wishlist" href="<?= home_url('wishlist') ?>"><span>My wishlist</span><span class="block-like"></span></a>
                         <div class="ugd">shop in <b>SGD</b><a href="#">change</a></div>
                         <div class="block footer-widget-3">
                             <div id="custom_html-3" class="widget_text widget widget_custom_html">
@@ -107,34 +111,17 @@ if (is_page_template('templates/template-home1.php')) {
             <div class="block-search">
                 <span class="close"><i class="icon ion-md-close"></i></span>
                 <input type="text" class="js-input-search" name="search" autocomplete="off">
-                <span class="close"><i class="icon ion-md-close"></i></span>
-                <ul class="search-content-remind">
-                </ul>
+                <div class="js-result-empty" style="display: none; font-weight: 600; padding-top: 5px;">
+                    No results for "<span></span>"
+                </div>
             </div>
         </div>
 
         <div class="block-content">
-            <div class="block-content--main">
-                <?php
-                $products = getProductByText();
-                if (!empty($products)):
-                foreach ($products as $product): ?>
-                    <div class="wrap-item">
-                        <div class="block-thumbnail">
-                            <a href="<?= esc_url($product['permalink']) ?>">
-                                <img width="100%" src="<?= esc_url($product['thumbnail_url']) ?>" alt="<?= esc_attr($product['title']) ?>">
-                            </a>
-                        </div>
-                        <div class="block-title">
-                            <a href="<?= esc_url($product['permalink']) ?>"><?= esc_html($product['title']) ?></a>
-                        </div>
-                    </div>
-                <?php
-                endforeach;
-                endif;
-                ?>
+            <div class="block-content--main" style="display: none">
+               
             </div>
-            <div class="block-content--action">
+            <div class="block-content--action" style="display: none">
                 <a href="#" class="js-btn-search"><?= esc_html('View all products', 'storefront') ?></a>
             </div>
         </div>

@@ -43,7 +43,7 @@
   display: flex;
   justify-content: center;
   position: relative;
-  z-index: 9;
+  z-index: 1;
   max-width: 50%;
   margin: 0 auto;
 }
@@ -124,7 +124,6 @@
   .storefront-product-detail #reviews #comments .woocommerce-noreviews {
     text-align: left;
     padding: 0;
-    margin-top: -25px;
     margin-bottom: 20px;
   }
 }
@@ -291,7 +290,7 @@
 }
 @media screen and (max-width: 767px) {
   .storefront-product-detail.single-product div.product .woocommerce-product-gallery .woocommerce-product-gallery__trigger {
-    right: 24px;
+    right: 0;
     top: 5px;
   }
 }
@@ -327,7 +326,7 @@
 }
 .storefront-product-detail #reviews .commentlist li p.meta strong {
   font-family: "Barlow";
-  font-size: 15px;
+  font-size: 16px;
   font-weight: bold;
   font-style: normal;
   font-stretch: normal;
@@ -336,8 +335,6 @@
   text-align: left;
   color: #222222;
   display: block;
-  max-width: 140px;
-  overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
@@ -357,6 +354,9 @@
   float: none;
   text-align: left;
   margin-top: 10px;
+  font-size: 13px;
+  letter-spacing: 1.3px;
+  width: auto;
 }
 @media screen and (max-width: 767px) {
   .storefront-product-detail #reviews .commentlist li .comment_container .comment-text .star-rating {
@@ -365,19 +365,41 @@
 }
 .storefront-product-detail .review-title {
   font-family: "Barlow";
-  font-size: 18px;
-  font-weight: 700;
+  font-size: 26px;
   font-style: normal;
   font-stretch: normal;
   line-height: 1.2;
-  letter-spacing: 0.5px;
   text-align: left;
   color: #222222;
+  margin-bottom: 5px;
 }
 @media screen and (max-width: 767px) {
   .storefront-product-detail .review-title {
-    font-size: 15px;
+    font-size: 20px;
   }
+}
+.storefront-product-detail .review-rate {
+  color: #707070;
+  display: flex;
+  align-items: center;
+}
+.storefront-product-detail .review-rate .star-rating {
+  font-size: 14px;
+  margin-right: 10px;
+  letter-spacing: 1.4px;
+  width: 6em;
+}
+.storefront-product-detail .review-rate .star-rating::before {
+  color: #cbcbcb;
+}
+.storefront-product-detail .review-rate .star-rating span {
+  width: 76% !important;
+}
+.storefront-product-detail .review-rate .star-rating span:before {
+  color: #fcbb1c;
+}
+.storefront-product-detail .review-rate .part-2 {
+  padding-right: 5px;
 }
 .storefront-product-detail #reviews .commentlist li p.meta {
   text-align: left;
@@ -385,7 +407,39 @@
   order: 1;
 }
 .storefront-product-detail #reviews .commentlist li p.meta .woocommerce-review__author {
+  font-size: 0;
+  display: flex;
+}
+.storefront-product-detail #reviews .commentlist li p.meta .woocommerce-review__author .contribution-badge {
   text-transform: capitalize;
+  position: relative;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.2;
+  letter-spacing: 0.4px;
+  text-align: left;
+  color: #222222;
+  display: block;
+  font-size: 16px;
+  background: none;
+  font-family: "Barlow-m";
+  padding: 0;
+}
+@media screen and (max-width: 767px) {
+  .storefront-product-detail #reviews .commentlist li p.meta .woocommerce-review__author .contribution-badge {
+    font-size: 15px;
+  }
+}
+.storefront-product-detail #reviews .commentlist li p.meta .woocommerce-review__author .contribution-badge::before {
+  position: absolute;
+  content: "";
+  font-size: 16px;
+  color: #2e9e00;
+  right: -25px;
+  font-family: "Ionicons";
+  top: 50%;
+  transform: translateY(-50%);
 }
 .storefront-product-detail #reviews .commentlist li .description {
   order: 3;
@@ -420,7 +474,7 @@
 }
 .storefront-product-detail .description p {
   font-family: "Barlow";
-  font-size: 15px;
+  font-size: 16px;
   font-weight: normal;
   font-style: normal;
   font-stretch: normal;
@@ -432,11 +486,15 @@
 @media screen and (max-width: 767px) {
   .storefront-product-detail .description p {
     font-size: 14px;
+    margin-bottom: 0;
   }
 }
 .storefront-product-detail #reviews .commentlist li .comment_container .comment-text {
   display: flex;
-  flex-direction: column;
+  width: 100%;
+}
+.storefront-product-detail #reviews .commentlist li .comment_container .comment-text .wrap-comment-right {
+  margin-left: 140px;
 }
 @media screen and (max-width: 480px) {
   .storefront-product-detail #reviews .commentlist li .comment_container .comment-text {
@@ -465,7 +523,7 @@
 @media screen and (max-width: 767px) {
   .storefront-product-detail .block-bookmark {
     top: 60px;
-    right: 30px;
+    right: 8px;
   }
 }
 .storefront-product-detail .related.products {
@@ -509,18 +567,19 @@
 }
 .storefront-product-detail #review_form_wrapper {
   padding-bottom: 60px;
-  position: absolute;
-  width: 700px;
-  top: 15px;
-  left: 50%;
+  min-width: 35%;
   transform: translateX(-50%);
-  overflow: scroll;
+  overflow: auto;
   background: #ffffff;
-  height: 100vh;
-  padding: 30px;
+  height: auto;
+  padding: 20px 30px;
   opacity: 0;
   z-index: -1;
   transition: all 0.5s ease;
+  position: fixed;
+  top: -200%;
+  left: 50%;
+  max-height: 80%;
 }
 .storefront-product-detail #review_form_wrapper .close {
   position: absolute;
@@ -534,6 +593,9 @@
   z-index: 1000;
   position: fixed;
   opacity: 1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 .storefront-product-detail .site-content {
   background-color: #f6f6f6;
@@ -659,6 +721,15 @@
   .storefront-product-detail .wrap-description p {
     font-size: 14px;
   }
+  .storefront-product-detail .wrap-description p .morelink {
+    display: block;
+    text-align: center;
+    font-size: 15px;
+    color: #333333;
+    text-transform: capitalize;
+    margin-top: 30px;
+    cursor: pointer;
+  }
 }
 .storefront-product-detail .woocommerce-product-attributes-item__value p {
   font-family: "Barlow";
@@ -730,6 +801,7 @@
 @media screen and (max-width: 767px) {
   .storefront-product-detail #reviews .commentlist li {
     padding: 25px 0;
+    margin-bottom: 25px;
   }
 }
 .storefront-product-detail #reviews .commentlist li:last-child {
@@ -772,7 +844,6 @@
   font-family: "Barlow";
 }
 .storefront-product-detail .comment-text .description {
-  height: 40px;
   overflow: hidden;
   transition: height 0.3s ease;
 }
@@ -920,6 +991,7 @@
 @media screen and (max-width: 767px) {
   .storefront-product-detail .block-process {
     justify-content: center;
+    font-size: 14px;
   }
 }
 .storefront-product-detail.single-product div.product .product_meta {
@@ -935,9 +1007,8 @@
   margin-top: 40px;
 }
 @media screen and (max-width: 767px) {
-  .storefront-product-detail .woocommerce-product-details__short-description + .wrap-cart .fm-detail-cart .wrap-block {
-    display: block ;
-    text-align: center;
+  .storefront-product-detail .woocommerce-product-details__short-description + .wrap-cart {
+    margin-top: 25px;
   }
 }
 .storefront-product-detail .woocommerce-product-details__short-description + .wrap-cart .wrap-block.wrap-proccess #number .val {
@@ -961,6 +1032,11 @@
   letter-spacing: 1.1px;
   text-align: left;
   color: #8e8d8d;
+}
+@media screen and (max-width: 767px) {
+  .storefront-product-detail .woocommerce-product-details__short-description + .wrap-cart .wrap-block.wrap-proccess .value-button i {
+    font-size: 14px;
+  }
 }
 .storefront-product-detail .wrap-product-item .fm-sl-cart .block-number {
   width: 60px;
@@ -1015,6 +1091,8 @@
   background-color: #142d73;
 }
 .storefront-product-detail .wrap-cart {
+  margin-bottom: 45px;
+  margin-top: 40px;
   position: relative;
 }
 .storefront-product-detail .wrap-cart .fm-detail-cart {
@@ -1033,6 +1111,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+@media screen and (max-width: 767px) {
+  .storefront-product-detail .wrap-cart .fm-detail-cart .block-number .val {
+    font-family: "Barlow-m" !important;
+    font-size: 20px !important;
+  }
 }
 .storefront-product-detail .wrap-cart .fm-detail-cart .btn-add-to-cart {
   margin-left: 20px;
@@ -1082,7 +1166,7 @@
 @media screen and (max-width: 767px) {
   .storefront-product-detail .wrap-cart .fm-detail-cart .btn-add-to-cart {
     margin-left: 0;
-    margin-top: 20px;
+    margin-top: 10px;
   }
 }
 .storefront-product-detail .wrap-cart .fm-detail-cart .btn-add-to-cart.proccess {
@@ -1090,8 +1174,8 @@
   color: #ffffff;
 }
 .storefront-product-detail .wrap-cart .fm-detail-cart .btn-add-to-cart.proccess::after {
-  content: 'DONE';
-  animation: test 0.4s ease forwards;
+  content: 'ADDED';
+  animation: test 0.2s ease forwards;
 }
 .storefront-product-detail .wrap-cart .fm-detail-cart .btn-add-to-cart-click {
   transform: scale(0.98);
@@ -1102,11 +1186,18 @@
 }
 .storefront-product-detail .wrap-cart .fm-detail-cart .test-f::after {
   content: 'ADD TO CART';
-  animation: test-1 0.4s ease forwards;
+  animation: test-1 0.2s ease forwards;
 }
 .storefront-product-detail .wrap-cart .fm-detail-cart .value-button {
   padding: 15px 20px;
   cursor: pointer;
+}
+@media screen and (max-width: 767px) {
+  .storefront-product-detail .wrap-cart .fm-detail-cart .value-button {
+    align-items: center;
+    display: flex;
+    color: #8e8d8d;
+  }
 }
 .storefront-product-detail .wrap-cart .fm-detail-cart .value-button#increase {
   border-bottom-right-radius: 20px;
@@ -1140,18 +1231,18 @@
 }
 @keyframes test {
   0% {
-    transform: scaleY(0);
+    transform: translateY(100%) scale(0);
   }
   to {
-    transform: scaleY(1);
+    transform: translateY(0) scale(1);
   }
 }
 @keyframes test-1 {
   0% {
-    transform: scaleY(0);
+    transform: translateY(100%) scale(0);
   }
   to {
-    transform: scaleY(1);
+    transform: translateY(0) scale(1);
   }
 }
 .block-reviews {
@@ -1201,7 +1292,17 @@
   border-bottom-color: #ffffff !important;
   padding: 0;
   text-decoration: none;
-  color: #222222;
+  font-size: 18px;
+  color: #202020;
+  font-family: "Barlow-m";
+  position: relative;
+  padding-left: 20px;
+}
+.woocommerce-page .block-reviews .contribution-type-selector a::before {
+  position: absolute;
+  content: "";
+  font-family: "Ionicons";
+  left: 0;
 }
 .woocommerce-page .block-reviews #reviews #comments {
   clear: both;
@@ -1221,14 +1322,11 @@
   display: -ms-flexbox;
   display: flex;
   order: 2;
-  margin-top: 10px;
+  font-size: 16px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: reverse;
   -ms-flex-direction: column-reverse;
   flex-direction: column-reverse;
-}
-.woocommerce-page .block-reviews #reviews #comments ol.commentlist li .comment-text .meta .woocommerce-review__author .contribution-badge {
-  display: none;
 }
 .woocommerce-page .block-reviews #reviews #comments ol.commentlist li .comment-text .contribution-actions {
   display: none;
@@ -1272,7 +1370,7 @@
 .woocommerce #reviews .form-contribution .wc-product-reviews-pro-form-submit-row {
   display: block !important;
   color: #2a2a2a;
-  margin-bottom: 25px;
+  margin-bottom: 15px;
 }
 .woocommerce #reviews .form-contribution .form-row#review_title_field label,
 .woocommerce #reviews .form-contribution .form-row#review_comment_field label,
@@ -1302,6 +1400,7 @@
   box-sizing: border-box;
   padding: 10px;
   font-size: 16px;
+  font-family: "Barlow";
 }
 .woocommerce #reviews .form-contribution .form-row#review_title_field input:focus,
 .woocommerce #reviews .form-contribution .form-row#review_comment_field input:focus,
@@ -1327,11 +1426,41 @@
 .woocommerce #reviews .form-contribution .wc-product-reviews-pro-form-submit-row a {
   color: #2a2a2a;
 }
+.woocommerce #reviews .form-contribution .form-row#review_title_field textarea,
+.woocommerce #reviews .form-contribution .form-row#review_comment_field textarea,
+.woocommerce #reviews .form-contribution .form-row#review_attachment_type_field textarea,
+.woocommerce #reviews .form-contribution .form-row#review_author_field textarea,
+.woocommerce #reviews .form-contribution .form-row#review_email_field textarea,
+.woocommerce #reviews .form-contribution .wc-product-reviews-pro-form-submit-row textarea {
+  height: 60px;
+}
+.woocommerce #reviews .form-contribution .form-row#review_attachment_url_field input {
+  height: 44px;
+  border-radius: 4px;
+  border: 1px solid #d7d7d7;
+  transition: 0.3s all ease;
+  padding-left: 10px;
+  box-sizing: border-box;
+  padding: 10px;
+  font-size: 16px;
+}
+.woocommerce #reviews .form-contribution .form-row#review_attachment_url_field input:focus {
+  outline: none;
+  box-shadow: 1px 2px 11px 3px rgba(0, 0, 0, 0.1);
+  border-color: #ffffff;
+}
+.woocommerce #reviews .form-contribution .form-row#review_rating_field fieldset {
+  padding: 2px 0;
+  margin-right: 10px;
+}
+.woocommerce #reviews .form-contribution .form-row#review_rating_field .star-label {
+  float: none;
+  text-transform: uppercase;
+  color: #2a2a2a;
+  font-size: 16px;
+}
 .woocommerce #reviews .form-contribution .form-row#subscribe_to_replies_field {
   display: none !important;
-}
-.woocommerce #reviews .form-contribution #review_rating_field fieldset {
-  margin: 10px 0 15px;
 }
 .woocommerce #reviews .form-contribution .wc-product-reviews-pro-form-submit-row {
   text-align: center;
@@ -1381,6 +1510,55 @@ body.woocommerce-page #reviews .form-contribution .attachment-type[data-prev-val
 .woocommerce #reviews .form-contribution .form-row label {
   margin-bottom: 10px;
 }
+.field-header {
+  color: #2a2a2a;
+  font-family: "Barlow-s";
+  font-size: 28px;
+  margin-bottom: 30px;
+}
+.wrap-fields {
+  margin-bottom: 35px;
+}
+.wrap-fields label {
+  color: #2a2a2a;
+  margin-bottom: 10px;
+  display: block;
+}
+.wrap-fields input {
+  display: block;
+  width: 100%;
+  height: 44px;
+  border-radius: 4px;
+  border: 1px solid #d7d7d7;
+  transition: 0.3s all ease;
+  padding-left: 10px;
+  box-sizing: border-box;
+  padding: 10px;
+  font-size: 16px;
+  font-family: "Barlow";
+}
+.wrap-fields input:focus {
+  outline: none;
+  box-shadow: 1px 2px 11px 3px rgba(0, 0, 0, 0.1);
+  border-color: #ffffff;
+}
+.woocommerce.woocommerce-page #reviews .product-rating .product-rating-summary {
+  display: flex;
+}
+.woocommerce.woocommerce-page #reviews .product-rating .product-rating-summary .wrap-review-right {
+  margin-left: auto;
+}
+.woocommerce.woocommerce-page #reviews .product-rating .product-rating-summary .wrap-review-right button {
+  border: none;
+  background: no-repeat;
+  font-size: 16px;
+  color: #777777;
+  font-family: "Barlow-m";
+  text-transform: capitalize;
+}
+.stock.in-stock {
+  display: none;
+}
 @media screen and (max-width: 767px) {
   .wrap-additional_information tbody {
     display: flex;
@@ -1417,8 +1595,57 @@ body.woocommerce-page #reviews .form-contribution .attachment-type[data-prev-val
 .btn-readmore:hover {
   background-color: transparent;
 }
+.disable-review {
+  position: fixed;
+}
+.disable-review.storefront-product-detail.single-product div.product .woocommerce-product-gallery .woocommerce-product-gallery__trigger {
+  z-index: -1;
+}
 @media screen and (max-width: 767px) {
   .btn-readmore {
     display: block;
   }
+  .block-reviews {
+    padding: 50px 0;
+  }
+  .storefront-product-detail .comment-text .description {
+    height: auto;
+  }
+  .woocommerce-page .block-reviews #reviews #comments ol.commentlist li .comment-text .review-title {
+    margin-bottom: 0;
+  }
+  .storefront-product-detail #review_form_wrapper {
+    width: calc(100% - 60px);
+    padding: 10px;
+  }
+  .storefront-product-detail #reviews .commentlist li .comment_container .comment-text {
+    display: block;
+  }
+  .storefront-product-detail #reviews .commentlist li .comment_container .comment-text .wrap-comment-left {
+    margin-bottom: 25px;
+  }
+  .storefront-product-detail #reviews .commentlist li .comment_container .comment-text .wrap-comment-right {
+    margin-left: 0;
+  }
+  .storefront-product-detail #reviews .commentlist li p.meta .woocommerce-review__author::before {
+    right: 0;
+  }
+  .field-header {
+    font-size: 20px;
+  }
+  .storefront-product-detail .wrap-cart .fm-detail-cart .wrap-block {
+    display: block;
+    text-align: center;
+  }
+  .storefront-product-detail .wrap-description {
+    overflow-y: hidden;
+    height: auto;
+  }
+  .storefront-product-detail #reviews .commentlist li p.meta time {
+    padding-top: 0;
+  }
+}
+.storefront-product-detail .home-page-1 .woocommerce-noreviews {
+  text-align: left;
+  padding-left: 0;
 }

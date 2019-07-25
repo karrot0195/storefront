@@ -295,6 +295,7 @@ $product_ids = [];
 	</div>
 
 	<?php
+	echo render_php('views/common/back-to-shopping.php');
     echo render_php('views/cart/relate-product.php', [
         'title' => get_field('title'),
         'description' => get_field('description'),

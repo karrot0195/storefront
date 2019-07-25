@@ -314,7 +314,7 @@ if ( ! function_exists( 'storefront_page_header' ) ) {
 	 * @since 1.0.0
 	 */
 	function storefront_page_header() {
-		if ( is_front_page() && is_page_template( 'template-fullwidth.php' ) ) {
+		if ( is_front_page() && is_page_template( 'template-fullwidth.php' ) || is_cart() ) {
 			return;
 		}
 
@@ -707,12 +707,12 @@ if ( !function_exists('storefront_site_action') ) {
         if (is_user_logged_in()) {
             $userLink = home_url('my-account');
         }
-
+        $sgd_link = get_field('sgd_link', 'optopm');
 ?>
 <div class="block-icon-action">
     <ul class="list-action">
-        <li><a href="#" class="js-show-wrap-product"><img src="<?= esc_url($userSearchIcon) ?>" alt=""></a></li>
-        <li><a href="#" class="cur">SGD</a></li>
+        <li><a href="#" class="js-show-wrap-product"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/icon/ic-search.svg" alt=""></a></li>
+        <li><a href="<?= esc_url($sgd_link) ?>" class="cur">SGD</a></li>
         <li><a href="<?= esc_url($userLink) ?>"><img src="<?= esc_url($userIcon) ?>" alt=""></a></li>
         <li id="list-action-cart">
         	<a class="js-cart-header cart-header" href="javascript:void(0)">
@@ -729,26 +729,19 @@ if ( !function_exists('storefront_site_action') ) {
 
 if (!function_exists('storefront_slider_header')) {
 	function storefront_slider_header() {
-		$pages = get_pages([
-            'meta_key' => '_wp_page_template',
-            'meta_value' => 'templates/template-home1.php'
-        ]);
-
-        if (count($pages)) {
-            $gallery = get_field('gallery', $pages[0]->ID);
-            ?>
-            <div class="block-menu">
-				<div class="menu-shop">Shop <span><i class="fa fa-chevron-up"></i></span></div>
-                <ul>
-                    <?php if (!empty($gallery)): foreach ($gallery as $idx => $item) : 
-			            $slug = str_replace(' ', '-', strtolower( $item['title']));
-                    	?>
-                        <li><a href="<?= home_url($slug) ?>"><?= $item['title'] ?></a></li>
-                    <?php endforeach; endif; ?>
-                </ul>
-            </div>
-<?php
-        }
+        $menu_items = get_field('header_menu_item', 'option');
+        ?>
+        <div class="block-menu">
+			<div class="menu-shop">Shop <span><i class="fa fa-chevron-up"></i></span></div>
+            <ul>
+                <?php if (!empty($menu_items)): foreach ($menu_items as $idx => $item) : 
+		            $link = $item['link'];
+                	?>
+                    <li><a href="<?= $link ?>"><?= $item['title'] ?></a></li>
+                <?php endforeach; endif; ?>
+            </ul>
+        </div>
+		<?php
 	}
 }
 

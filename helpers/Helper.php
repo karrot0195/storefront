@@ -29,6 +29,9 @@ function get_user_bookmark() {
 
 function get_products_by_bookmark() {
     $bookmark_ids = get_user_bookmark();
+    if (empty($bookmark_ids)) {
+        return [];
+    }
     $query = new WC_Product_Query( [
         'include' => $bookmark_ids
     ] );
@@ -64,4 +67,14 @@ function get_quality_product_cart($product_id) {
 		}
 	}
 	return $quality;
+}
+
+function generateRandomString($length = 10) {
+    $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    $charactersLength = strlen($characters);
+    $randomString = '';
+    for ($i = 0; $i < $length; $i++) {
+        $randomString .= $characters[rand(0, $charactersLength - 1)];
+    }
+    return $randomString;
 }

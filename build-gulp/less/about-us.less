@@ -1,3 +1,9 @@
+
+
+.page-template-about-us .home-page-1 .site-header{
+    position: absolute;
+    background: transparent;
+}
 .about-us{
     .slider__item{
         position: relative;
@@ -19,20 +25,21 @@
         text-align: center;
         color: #ffffff;
         width: 100%;
-        .title{
+        max-width: 900px;
+        .title p{
             font-size: 42px;
             font-family: "Barlow-m";
             letter-spacing: 0.42px;
             margin-bottom: 12px;
         }
-        .sub-title{
+        .sub-title p{
             font-size: 36px;
             letter-spacing: 0.36px;
         }
     }
     .content{
         text-align: center;
-        padding: 100px 0;
+        padding: 100px 0 160px;
         color: #2a2a2a;
         max-width: 1140px;
         margin: 0 auto;
@@ -107,20 +114,25 @@
 }
 /*============= Responsive =============*/
 @media screen and (max-width: 767px){
-    .about-us .slider__item__content .title{
+    .about-us .slider__item__content .title p{
         font-size: 25px;
     }
-    .about-us .slider__item__content .sub-title{
+    .about-us .slider__item__content .sub-title p{
         font-size: 16px;
+        padding: 35px;
     }
-    .about-us .slider__item .slick-track{
+    .about-us .slick-track{
         height: 540px;
+        .slider__item__img{
+            height: 100%;
+        }
         img{
             object-fit: cover;
+            object-position: right;
         }
     }
     .about-us .content .sub_title{
-        margin-bottom: 10px;
+        margin-bottom: 30px;
     }
 
     .about-us .content .box{
@@ -129,16 +141,16 @@
     .about-us .content .box .left, .about-us .content .box .right{
         width: 100%;
         box-sizing: border-box;
-        padding: 20px;
+        padding: 25px;
     }
     .about-us .content .desc p{
-        margin-top: 10px;
+        margin-top: 30px;
     }
     .about-us .content .box .right{
         margin-top: 20px;
     }
     .about-us .content{
-        padding: 40px 0;
+        padding: 40px 0 70px;
     }
     .about-us .content .title{
         font-size: 22px;
@@ -162,4 +174,8 @@
     .about-us .block-image img:last-child{
         padding-right: 5px;
     }
+    .about-us .content p{
+        font-size: 14px;
+    }
+    
 }

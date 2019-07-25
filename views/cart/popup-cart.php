@@ -1,6 +1,5 @@
 <?php
 $cart = WC()->cart->get_cart();
-
 $total = get_all_quantity_item();
 $sub_price = 0;
 ?>

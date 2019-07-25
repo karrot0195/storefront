@@ -8,13 +8,6 @@
 /*          Faq         */
 /************************/
 
-.site-main.faq,
-.site-main.contact-us,
-.site-main.about-us,
-.site-main.privacy-policy,
-.site-main.shipping{
-    border-bottom: 1px solid #e2e2e2;
-}
 
 .faq,
 .shipping{
@@ -23,14 +16,14 @@
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
-        padding: 100px;
+        padding: 130px 100px 100px;
         @media screen and (max-width: 1024px){
             padding: 100px 0;
         }
         .sidebar{
             width: 40%;
             p{
-                font-size: 22px;
+                font-size: 24px;
                 font-family: 'Barlow-m';
                 letter-spacing: 0.34px;
                 text-align: left;
@@ -43,6 +36,9 @@
         }
         .content{
             width: 60%;
+            p{
+                margin: 0;
+            }
             .block__content{
                 padding-top: 24px;
                 padding-bottom: 30px;
@@ -55,6 +51,7 @@
                     text-align: left;
                     color: #2a2a2a;
                     position: relative;
+                    font-family: "Barlow-m";
                     @media screen and (max-width: 767px){
                         font-size: 16px;
                     }
@@ -78,14 +75,17 @@
                     display: none;
                     p{
                         font-size: 16px;
-                        line-height: 2.18;
+                        line-height: 1.5;
                         letter-spacing: 0.22px;
                         text-align: left;
                         color: #2a2a2a;
-                        margin: 30px auto 0;
+                        margin: 10px auto 0;
                         @media screen and (max-width: 767px){
                             font-size: 14px;
                         }
+                    }
+                    p:first-child{
+                        margin-top: 20px;
                     }
                 }
             }
@@ -124,7 +124,7 @@
         padding: 0;
         .sidebar{
             width: 100%;
-            margin: 50px auto 20px;
+            margin: 0 0 35px;
         }
         .content{
             width: 100%;

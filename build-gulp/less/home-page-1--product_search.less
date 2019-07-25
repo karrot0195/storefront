@@ -8,6 +8,7 @@
     }
     .block-content--main {
       font-size: 0;
+      overflow: hidden;
     }
     .block-content--action {
       text-align: center;
@@ -105,6 +106,7 @@
           width: calc(100%/4 - 20px);
           display: inline-block;
           margin-right: 20px;
+          overflow: hidden;
           .block-title {
             a {
               text-decoration: none;
@@ -113,6 +115,7 @@
             }
           }
         }
+       
         padding-bottom: 50px;
       }
   
@@ -134,5 +137,17 @@
   
         padding-bottom: 50px;
       }
+    }
+  }
+  @media screen and (max-width: 767px){
+    .wrap-search-product .wrap-block-search{
+      max-width: 100%;
+      padding-right: 0.75rem;
+      padding-left: 0.75rem;
+      min-height: unset;
+    }
+    .wrap-search-product .wrap-block-search .block-search input{
+      box-sizing: border-box;
+      font-size: 16px;
     }
   }

@@ -8,6 +8,7 @@ get_header('home-1'); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main contact-us" role="main">
             <div class="container">
+                <?php get_breadcrumb() ?>
                 <div class="contact-us-wrapper">
                     <div class="sidebar">
                         <?php echo get_field('sidebar') ?>
@@ -20,12 +21,15 @@ get_header('home-1'); ?>
                             </div>
                             <div class="phone">
                                 <p class="title">Phone</p>
-                                <div class="desc"><?php echo get_field('phone') ?></div>
+                                <div class="desc"><a href="tel: <?php echo get_field('phone') ?>"><?php echo get_field('phone') ?></a></div>
                             </div>
                         </div>
                         <div class="contact-form">
                             <div class="title">Please Send Your Inquiry</div>
-                             <?php echo do_shortcode( '[contact-form-7 id="244" title="Contact form 1"]' ); ?>
+                           <?php 
+                            $form = get_field('form_contact');
+                            gravity_form($form['id']);
+                            ?>
                         </div>
                     </div>
                 

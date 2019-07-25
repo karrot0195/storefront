@@ -25,7 +25,7 @@
   width: 60%;
 }
 .privacy-policy .privacy-policy-wrapper .content .desc {
-  margin-bottom: 20px;
+  margin-bottom: 35px;
 }
 .privacy-policy .privacy-policy-wrapper .content .desc p {
   line-height: 24px;
@@ -33,10 +33,10 @@
 .privacy-policy .privacy-policy-wrapper .content .block__content .title {
   font-family: "Barlow-m";
   line-height: 24px;
-  margin-bottom: 20px;
+  margin-bottom: 35px;
 }
 .privacy-policy .privacy-policy-wrapper .content .block__content .sub-title {
-  margin-bottom: 20px;
+  margin-bottom: 35px;
 }
 .privacy-policy .privacy-policy-wrapper .content .block__content .sub-title p {
   line-height: 24px;
@@ -45,12 +45,19 @@
   font-family: "Barlow-m";
 }
 .privacy-policy .privacy-policy-wrapper .content .block__content .extra-title p {
-  margin-bottom: 20px;
+  margin-bottom: 35px;
+}
+.privacy-policy .privacy-policy-wrapper .content .block__content .extra-desc p {
+  margin-bottom: 35px;
 }
 /*============ Responsive ================*/
 @media screen and (max-width: 767px) {
   .privacy-policy .privacy-policy-wrapper {
     display: block;
     padding: 0;
+  }
+  .privacy-policy .privacy-policy-wrapper p,
+  .shipping-wrapper .desc p {
+    font-size: 14px;
   }
 }

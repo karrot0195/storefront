@@ -10,15 +10,39 @@
  * @package storefront
  */
 $products =  [];
-if (is_user_logged_in()) {
-    $products = get_products_by_bookmark();
+if (!is_user_logged_in()) {
+    header('location: ' . home_url('login?cb=' . home_url('wishlist')));
 }
+
+$products = get_products_by_bookmark();
+
+$html_empty_row = '  <div class="wrap-block-empty">
+                            <div class="block-message">
+                                <p>You\'ve not added any products into your wishlist yet.</p>
+                            </div>                
+                            <div class="block-button">
+                                <a href="'.home_url('derma-rx').'">Continue shopping</a>
+                            </div>
+                        </div>
+                          <style type="text/css">
+                            .wrap-block-empty {
+                                text-align: center;
+                                padding: 10px 0;
+                                height: 200px;
+                            }
+
+                            .block-message {
+                                font-size: 20px;
+                            }
+                        </style>';
+
 get_header('home-1'); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main page-wishlist" role="main">
             <div class="container">
+                <?php get_breadcrumb() ?>
             <ul class="products columns-4">
-                <div class="loop-main-product">
+                <div class="loop-main-product" id="product_main">
                     <?php
                     if (!empty($products)) {
                         foreach ($products as $product) {
@@ -53,20 +77,32 @@ get_header('home-1'); ?>
                                         </div>
                                     </form>
                                 </div>
+                                <?php 
+                                $check =$product->get_manage_stock() && (intval($product->get_low_stock_amount()) - intval($product->get_stock_quantity())) >= 0;
+
+                                if ($check): ?>
                                 <div class="stock">
                                     <div class="wrapper">
                                         <span><i class="ion ion-ios-information-circle"></i></span>
                                         <span class="text"><?= esc_html__('Low in stock', 'storefornt') ?></span>
                                     </div>
                                 </div>
+                                <?php endif; ?>
                             </li>
                         <?php
                         }
+                    }
+                    else {
+                        echo $html_empty_row;
                     }
                     ?>
 
                 </div>
             </ul>
+
+            <?php 
+            echo render_php('views/common/back-to-shopping.php');
+            ?>
             <?php
 
             echo render_php('views/cart/relate-product.php', [
@@ -94,8 +130,11 @@ get_header('home-1'); ?>
                                     const parent = $(self).parents('li.product');
                                     parent.hide(500, function () {
                                         parent.remove();
-                                    });
 
+                                        if ($('#product_main .wrap-product-item').length == 0) {
+                                            $('#product_main').html(`<?= $html_empty_row ?>`);
+                                        }
+                                    });
                                 }
                                 proccessing = false;
                             });

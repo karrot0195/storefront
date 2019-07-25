@@ -57,6 +57,16 @@ if ( ! $checkout->is_registration_enabled() && $checkout->is_registration_requir
 
 		<div id="order_review" class="woocommerce-checkout-review-order">
 			<?php do_action( 'woocommerce_checkout_order_review' ); ?>
+            <!-- Place Order -->
+            <div class="add-block-wrapper">
+                <div class="free">
+                    <span><i class="fa fa-exclamation-circle"></i></span>
+                    <p>FREE STANDAR DELIVERY TO SINGAPORE WHEN YOU SPEND OVER SGD 200</p>
+                </div>
+                <div class="place-order">
+                    <button>Place Order</button>
+                </div>
+            </div>
 		</div>
 
 		<?php do_action( 'woocommerce_checkout_after_order_review' ); ?>

@@ -27,19 +27,19 @@
   
   // MY ACCOUNT MOBILE
   $(document).ready(function(){
-    var title_tab = "<h6></h6>";
+    var title_tab = "<h4></h4>";
     var test =`<i class="fas fa-chevron-down"></i>`;
     $(".woocommerce-account .hentry .entry-content .woocommerce .woocommerce-MyAccount-navigation").prepend(title_tab);
     var htmlString = $( '.woocommerce-account .hentry .entry-content .woocommerce .woocommerce-MyAccount-navigation ul li.woocommerce-MyAccount-navigation-link.is-active a' ).text();
-    $('h6').text( htmlString); 
-    $('h6').prepend(test);
-    $('.woocommerce-MyAccount-navigation h6').click(function(){
+    $('h4').text( htmlString); 
+    $('h4').prepend(test);
+    $('.woocommerce-MyAccount-navigation h4').click(function(){
       $('.woocommerce-MyAccount-navigation ul').slideToggle(300);
       $(this).find('i').toggleClass('tab-click');
     });
   });
 
-  // Control 1 product
+  // Control 1 product on mobile
   var count_product = $('ul.products li').length;
   if(count_product <= 1){
     $('ul.products').addClass('products-mb');
@@ -86,12 +86,13 @@
 
   // Scroll Menu 
   $(window).scroll(function(){
-      if ($(this).scrollTop() > 50) {
+      if ($(this).scrollTop() > 20) {
         $('.site-header').addClass('fixed');
       } else {
         $('.site-header').removeClass('fixed');
       }
   });
+
   // Filter
   $('.btn-filter').on('click', function(){
     $('.button-close').show(300);
@@ -156,8 +157,8 @@
       {
         breakpoint: 600,
         settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
+          slidesToShow: 3,
+          slidesToScroll: 1,
           arrows: false,
           dots: true,
         }
@@ -165,7 +166,7 @@
       {
         breakpoint: 480,
         settings: {
-          slidesToShow: 1,
+          slidesToShow: 3,
           slidesToScroll: 1,
           arrows: false,
           dots: true,
@@ -237,6 +238,7 @@
     videoPlay(wrapper);
   });
 
+  
   //вопроизводим видео, при этом скрывая постер
   function videoPlay(wrapper) {
     var iframe = wrapper.find('.js-videoIframe');
@@ -266,7 +268,8 @@
 
   // SHOW POPUP REVIEW
   $('.contribution-type-selector .js-switch-contribution-type').click(function(){
-    $('body').addClass('disable');
+    $('body').addClass('disable-review');
+    $('.site-header').addClass('site-header-hide');
 
     if ($('#review_form_wrapper .close').length == 0) {
       $('#review_form_wrapper form').prepend(`<div class="close"><i class="icon ion-md-close"></i></div>`);
@@ -274,7 +277,9 @@
         $('.popup-background').css('opacity', '0');
         $('.popup-background').remove();
         $('#review_form_wrapper').removeClass('show');
-        $('body').removeClass('disable');
+        $('body').removeClass('disable-review');
+        $('.site-header').removeClass('site-header-hide');
+
       });
     }
     $('#review_form_wrapper').addClass('show');
@@ -428,7 +433,7 @@
     }
 
   // [ABOUT US] SLICK SLIDER
-  $ ('.slider__item__img').slick({
+  $ ('.slider').slick({
     autoplay: true,
     autoplaySpeed: 2000,
     arrows: false

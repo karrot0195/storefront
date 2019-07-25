@@ -205,8 +205,62 @@ function storefront_filter_product() {
 add_action('wp_ajax_get_html_popup_cart', 'get_html_popup_cart');
 add_action('wp_ajax_nopriv_get_html_popup_cart', 'get_html_popup_cart');
 
-function get_html_popup_cart() {
+function get_html_popup_cart($is_html=false) {
+    if ($is_html) {
+        return render_php('views/cart/popup-cart.php');
+    }
+
     echo render_php('views/cart/popup-cart.php');
+    exit();
 }
 
+
+add_action('wp_ajax_action_create_account', 'action_create_account');
+add_action('wp_ajax_nopriv_action_create_account', 'action_create_account');
+
+function action_create_account() {
+    $result = [
+        'error' => true,
+        'message' => ''
+    ];
+    $username = $email = $_POST['email'];
+    $password = $_POST['password'];
+    $user = wp_create_user( $username, $password, $email);
+    if( is_wp_error( $user ) ) {
+        $result['message'] = $user->get_error_message()
+;    } else {
+        login($user);
+        $result['error'] = false;
+    }
+    header('Content-Type: application/json');
+    echo json_encode($result);
+    exit();
+}
+
+add_action('wp_ajax_action_forgot_password', 'action_forgot_password');
+add_action('wp_ajax_nopriv_action_forgot_password', 'action_forgot_password');
+
+function action_forgot_password() {
+    $result = [
+        'error' => true,
+        'message' => ''
+    ];
+    $email = $_POST['email'];
+    $user = get_user_by_email($email);
+    if ($user) {
+        $pass = generateRandomString();
+        $to = $email;
+        $subject = 'DERMA SYSTEM';
+        $body = 'Password current: '. $pass;
+        $headers = array('Content-Type: text/html; charset=UTF-8');
+        wp_mail( $to, $subject, $body, $headers );
+        wp_set_password($pass, $user->ID);
+        $result['error'] = false;
+    } else {
+        $result['message'] = 'User is not exists';
+    }
+    header('Content-Type: application/json');
+    echo json_encode($result);
+    exit();
+}
 // end ajax

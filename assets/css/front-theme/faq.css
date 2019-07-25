@@ -5,13 +5,6 @@
 /************************/
 /*          Faq         */
 /************************/
-.site-main.faq,
-.site-main.contact-us,
-.site-main.about-us,
-.site-main.privacy-policy,
-.site-main.shipping {
-  border-bottom: 1px solid #e2e2e2;
-}
 .faq .faq-wrapper,
 .shipping .faq-wrapper,
 .faq .shipping-wrapper,
@@ -19,7 +12,7 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 100px;
+  padding: 130px 100px 100px;
 }
 @media screen and (max-width: 1024px) {
   .faq .faq-wrapper,
@@ -39,7 +32,7 @@
 .shipping .faq-wrapper .sidebar p,
 .faq .shipping-wrapper .sidebar p,
 .shipping .shipping-wrapper .sidebar p {
-  font-size: 22px;
+  font-size: 24px;
   font-family: 'Barlow-m';
   letter-spacing: 0.34px;
   text-align: left;
@@ -60,6 +53,12 @@
 .shipping .shipping-wrapper .content {
   width: 60%;
 }
+.faq .faq-wrapper .content p,
+.shipping .faq-wrapper .content p,
+.faq .shipping-wrapper .content p,
+.shipping .shipping-wrapper .content p {
+  margin: 0;
+}
 .faq .faq-wrapper .content .block__content,
 .shipping .faq-wrapper .content .block__content,
 .faq .shipping-wrapper .content .block__content,
@@ -79,6 +78,7 @@
   text-align: left;
   color: #2a2a2a;
   position: relative;
+  font-family: "Barlow-m";
 }
 @media screen and (max-width: 767px) {
   .faq .faq-wrapper .content .block__content .title,
@@ -120,11 +120,11 @@
 .faq .shipping-wrapper .content .block__content .sub-title p,
 .shipping .shipping-wrapper .content .block__content .sub-title p {
   font-size: 16px;
-  line-height: 2.18;
+  line-height: 1.5;
   letter-spacing: 0.22px;
   text-align: left;
   color: #2a2a2a;
-  margin: 30px auto 0;
+  margin: 10px auto 0;
 }
 @media screen and (max-width: 767px) {
   .faq .faq-wrapper .content .block__content .sub-title p,
@@ -133,6 +133,12 @@
   .shipping .shipping-wrapper .content .block__content .sub-title p {
     font-size: 14px;
   }
+}
+.faq .faq-wrapper .content .block__content .sub-title p:first-child,
+.shipping .faq-wrapper .content .block__content .sub-title p:first-child,
+.faq .shipping-wrapper .content .block__content .sub-title p:first-child,
+.shipping .shipping-wrapper .content .block__content .sub-title p:first-child {
+  margin-top: 20px;
 }
 .faq .faq-wrapper .content .block__content:first-child,
 .shipping .faq-wrapper .content .block__content:first-child,
@@ -168,7 +174,7 @@
   .shipping .shipping-wrapper .sidebar,
   .home-page-1 .privacy-policy .privacy-policy-wrapper .sidebar {
     width: 100%;
-    margin: 50px auto 20px;
+    margin: 0 0 35px;
   }
   .faq .faq-wrapper .content,
   .shipping .faq-wrapper .content,

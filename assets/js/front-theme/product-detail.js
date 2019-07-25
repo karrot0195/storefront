@@ -34,17 +34,15 @@
                     $(document).trigger('add-cart');
 
 
-                  self.html('DONE');
                     self.addClass('proccess');
                     self.removeClass('btn-add-to-cart-click');
                     setTimeout(() => {
-                      self.html(text);
-                        self.removeClass('proccess')
+                        self.removeClass('proccess');
                         self.addClass('test-f');
                         setTimeout(() => {
                           self.removeClass('test-f');
                     },1000);
-                    });  
+                    },1000);  
                 });
              });
           }
@@ -52,6 +50,46 @@
       });
 
   }, 100);
+
+  $(document).ready(function() {
+    // Configure/customize these variables.
+   
+    var windowwidth = $(window).width();
+    // if(windowwidth <= 767){
+    //   var showChar = 50;  // How many characters are shown by default
+    //   var ellipsestext = "...";
+    //   var moretext = "Read more";
+    //   var lesstext = "Read less";
+    // var content = $('.wrap-description').html();
+
+
+    //   if(content.length > showChar) {
+ 
+    //     var h = content.substr(showChar, content.length - 100);
+
+    //     var html = h + '<a href="" class="morelink">' + moretext + '</a>';
+
+    //     $('.wrap-description').html(html);
+    //   }
+    //   $(".morelink").click(function(){
+    //     if($(this).hasClass("less")) {
+    //         $(this).removeClass("less");
+    //         $(this).html(moretext);
+
+    //     } else {
+    //         $(this).addClass("less");
+    //         $(this).html(lesstext);
+    //     }
+    //     $(this).parent().toggle();
+    //     $(this).prev().toggle();
+    //     return false;
+    // });
+    // }
+       
+ 
+ 
+    
+});
 })(jQuery);
 
 // if no Webkit browser

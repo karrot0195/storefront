@@ -95,8 +95,13 @@ if (!empty($_SESSION['fb_access_token'])) {
 				exit();	        	
 	        }
 	    }
-
-		header('location: ' . home_url('my-account'));
+	    if (isset($_SESSION['callback_url']) && !empty($_SESSION['callback_url'])) {
+	    	$cb = $_SESSION['callback_url'];
+	    	unset($_SESSION['callback_url']);
+	    	header('location: ' . $cb);
+	    } else {
+			header('location: ' . home_url('my-account'));
+	    }
 		exit();
 	}
 }
