@@ -365,6 +365,7 @@
 @media screen and (max-width: 767px) {
   .storefront-product-detail #reviews .commentlist li .comment_container .comment-text .star-rating {
     margin-top: 10px;
+    width: 74.81px;
   }
 }
 .storefront-product-detail .review-title {
