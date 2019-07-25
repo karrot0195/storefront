@@ -96,11 +96,7 @@ $product_ids = [];
 
 							<td>
 								<div class="wrap-size">
-									<select class="sl-attr-size">
-										<option>25 ml</option>
-										<option>35 ml</option>
-									</select>
-								</div>
+									<span><?= $_product->get_attribute('pa_size') ?></span>
 							</td>
 
 							<td class="product-price" data-title="<?php esc_attr_e( 'Price', 'woocommerce' ); ?>">
@@ -244,7 +240,12 @@ $product_ids = [];
 									}
 									?>
 									<div class="wrap-size">
-									<span><?= $_product->get_attribute('pa_size') ?></span>
+										<select class="sl-attr-size">
+											<option>25 ml</option>
+											<option>35 ml</option>
+										</select>
+									</div>
+									
 								</div>
 								</td>
 
