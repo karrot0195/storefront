@@ -47,14 +47,6 @@
   }
 
   // Change tab class and display content
-  $('.tabs-nav a').on('mouseover', function(event) {
-    event.preventDefault();
-    $('.tabs-nav li').removeClass('tab-active');
-    $(this).parent().addClass('tab-active');
-    $('.tabs-stage section').hide();
-    $($(this).attr('href')).fadeIn(700);
-  });
-
   $('.tabs-nav a').on('click', function(event) {
     event.preventDefault();
     $('.tabs-nav li').removeClass('tab-active');
@@ -62,6 +54,21 @@
     $('.tabs-stage section').hide();
     $($(this).attr('href')).fadeIn(700);
   });
+  var w_tab = $(window).width();
+
+  if(w_tab > 767){
+    $('.tabs-nav a').on('mouseover', function(event) {
+      event.preventDefault();
+      $('.tabs-nav li').removeClass('tab-active');
+      $(this).parent().addClass('tab-active');
+      $('.tabs-stage section').hide();
+      $($(this).attr('href')).fadeIn(700);
+    });
+    
+  }
+
+
+
 
   // Menu Mobile
   $('.hamburger-menu').on('click', function(){
