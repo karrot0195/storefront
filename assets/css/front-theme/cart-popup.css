@@ -890,6 +890,7 @@ body .wrap-storefront-breadcrumb span {
     font-size: 14px;
     text-align: left;
     border-bottom: 1px solid rgba(149, 149, 149, 0.4);
+    border-top: none;
   }
   .woocommerce-cart .woocommerce-cart-form table.cart th a,
   .woocommerce-cart .woocommerce-cart-form table.cart td a {
