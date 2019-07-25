@@ -2957,6 +2957,7 @@ table th {
 }
 .site-main.page-wishlist .related ul.products.columns-4 li.product:hover {
   box-shadow: none;
+  background: transparent;
 }
 .related {
   position: relative;
