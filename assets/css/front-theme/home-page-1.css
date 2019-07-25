@@ -2486,6 +2486,14 @@ table.cart {
   appearance: none;
   -moz-appearance: none;
   -webkit-appearance: none;
+  position: relative;
+}
+.shop_table select::before {
+  position: absolute;
+  font-family: "Ionicons";
+  content: "";
+  right: 0;
+  top: 0;
 }
 .shop_table select::-ms-expand {
   display: none;
