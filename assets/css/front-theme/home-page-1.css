@@ -2482,6 +2482,31 @@ body.disable .home-page-1 .site-header {
 table.cart {
   width: 100%;
 }
+td .wrap-size {
+  position: relative;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: center;
+}
+td .wrap-size i {
+  position: absolute;
+  right: 40px;
+}
+td .wrap-size .sl-attr-size {
+  border: none;
+  font-size: 16px;
+  color: #2a2a2a;
+  outline: none;
+  min-width: 65px;
+  background: transparent;
+  font-family: "Barlow";
+}
+@media screen and (max-width: 767px) {
+  td .wrap-size .sl-attr-size {
+    font-size: 14px;
+  }
+}
 .shop_table select {
   appearance: none;
   -moz-appearance: none;
