@@ -395,7 +395,8 @@ $product_ids = [];
 		});
 
 		$('.wrap-quantity select').on('change', function () {
-			$('.wrap-quantity span').html($('.wrap-quantity select option:selected').val());
+			const parent = $(this).parents('.wrap-quantity');
+			parent.find('span').html(parent.find('select option:selected').val());
 		});
 	})(jQuery)
 </script>
