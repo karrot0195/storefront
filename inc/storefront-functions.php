@@ -273,6 +273,7 @@ function convert_text_2_key($str, $space='') {
 }
 
 function get_breadcrumb() {
+	echo '<div class="container">';
 	echo '<div class="wrap-storefront-breadcrumb">';
     echo '<a href="'.home_url().'" rel="nofollow">Home</a>';
     if (is_category() || is_single()) {
@@ -307,5 +308,6 @@ function get_breadcrumb() {
         echo the_search_query();
         echo '</em>"';
     }
-    echo '</div>';
+	echo '</div>';
+	echo '</div>';
 }

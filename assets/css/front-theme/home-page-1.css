@@ -216,6 +216,7 @@ body.home .site-footer {
 }
 .home-page-1 .site-main {
   margin-bottom: 0;
+  overflow: hidden;
 }
 .home-page-1 .col-full {
   padding: 16px 0;
