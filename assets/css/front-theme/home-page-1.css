@@ -3087,6 +3087,9 @@ table th {
     min-width: 70px;
     width: auto;
   }
+  .home-page-1 .slick-dots li:nth-child(n+4) {
+    display: none;
+  }
 }
 @media screen and (max-width: 375px) {
   .info-page .info-page-left a {
