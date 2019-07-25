@@ -2928,7 +2928,7 @@ table th {
 .related::before {
   position: absolute;
   content: '';
-  width: 2000%;
+  width: 100%;
   left: -500px;
   top: 0;
   height: 100%;
