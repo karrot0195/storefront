@@ -809,6 +809,7 @@ body .wrap-storefront-breadcrumb {
   body .wrap-storefront-breadcrumb {
     margin: 40px 0;
     font-size: 12px;
+    padding-left: 0;
   }
 }
 body .wrap-storefront-breadcrumb a,

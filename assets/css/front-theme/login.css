@@ -596,7 +596,7 @@
   }
   .contact-us-wrapper {
     display: block;
-    padding: 30px 0;
+    padding: 0 0 30px;
   }
   .contact-us-wrapper .sidebar,
   .contact-us-wrapper .content {
