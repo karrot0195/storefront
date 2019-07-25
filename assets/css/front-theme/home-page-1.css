@@ -1837,6 +1837,9 @@ figure.woocommerce-product-gallery__wrapper {
   text-decoration: none;
   cursor: pointer;
 }
+.woocommerce #reviews .form-contribution .response {
+  display: none;
+}
 /*======= Responsive =======*/
 @media screen and (max-width: 1024px) {
   .block.footer-widget-1,
