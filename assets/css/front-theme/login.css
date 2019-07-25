@@ -669,7 +669,7 @@
   margin: 0 auto;
   height: 44px;
   border: none;
-  background: #0f1972;
+  background: #004a80;
   color: #ffffff;
   font-size: 16px;
   letter-spacing: 0.22px;
@@ -680,6 +680,7 @@
 @media screen and (max-width: 768px) {
   .wrap-create-account .button-wrap button {
     width: 100%;
+    background: #0f1972;
   }
 }
 .wrap-create-account .wrap-field {
