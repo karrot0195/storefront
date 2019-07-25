@@ -278,6 +278,9 @@ body.home{
   }
   .block-notify {
     padding: 27px 0px 25px;
+    @media screen and (max-width: 767px){
+      display: flex;
+    }
   }
   .block-notify--element  {
     font-family: "Barlow";
@@ -294,8 +297,8 @@ body.home{
     z-index: 6;
     &.block-notify--action {
       margin-left: 36px;
-      @media screen and (max-width: 480px) {
-        margin-left: 30px;
+      @media screen and (max-width: 767px) {
+        margin-left: auto;
       }
       cursor: pointer;
       i {
