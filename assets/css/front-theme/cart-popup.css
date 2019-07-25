@@ -244,6 +244,19 @@ body {
 .woocommerce-cart .actions {
   display: flex;
 }
+.woocommerce-cart .actions .coupon .add-code {
+  color: #2a2a2a;
+  display: flex;
+}
+.woocommerce-cart .actions .coupon .add-code .add-link {
+  color: #2a2a2a;
+  font-family: "Barlow-m";
+  text-decoration: underline;
+  margin-left: 5px;
+}
+.woocommerce-cart .actions .coupon .form-add {
+  display: none;
+}
 .woocommerce-cart .actions .coupon label {
   display: none;
 }
@@ -401,6 +414,7 @@ form.checkout.woocommerce-checkout #order_review {
 form.checkout.woocommerce-checkout #order_review table.woocommerce-checkout-review-order-table {
   line-height: unset;
   margin-bottom: 0;
+  width: 100%;
 }
 .woocommerce-additional-fields h3 {
   font-size: 24px;
@@ -850,19 +864,14 @@ body .wrap-storefront-breadcrumb span {
     display: block;
   }
   .woocommerce-cart .woocommerce-cart-form.sp table.cart {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
   }
   .woocommerce-cart .woocommerce-cart-form.sp label {
     display: none;
   }
   .woocommerce-cart .woocommerce-cart-form.sp .actions {
-    display: block;
-    text-align: right;
-  }
-  .woocommerce-cart .woocommerce-cart-form.sp .coupon {
     display: flex;
-    justify-content: space-between;
-    margin-bottom: 30px;
+    align-items: center;
   }
   .woocommerce-cart .woocommerce-cart-form.sp .coupon input {
     width: 60%;
@@ -870,15 +879,19 @@ body .wrap-storefront-breadcrumb span {
   .woocommerce-cart .woocommerce-cart-form.sp .coupon button {
     width: 50%;
   }
+  .woocommerce-cart .actions button {
+    min-width: 140px;
+  }
   .home-page-1 table.cart td.product-remove a.remove {
     position: initial;
   }
   .woocommerce-cart .woocommerce-cart-form table.cart th,
   .woocommerce-cart .woocommerce-cart-form table.cart td {
-    padding: 10px 0;
+    padding: 15px 0;
     font-size: 14px;
     text-align: left;
     border-bottom: 1px solid rgba(149, 149, 149, 0.4);
+    border-top: none;
   }
   .woocommerce-cart .woocommerce-cart-form table.cart th a,
   .woocommerce-cart .woocommerce-cart-form table.cart td a {
@@ -891,10 +904,14 @@ body .wrap-storefront-breadcrumb span {
   .woocommerce-cart .woocommerce-cart-form table.cart th.product-thumbnail,
   .woocommerce-cart .woocommerce-cart-form table.cart td.product-thumbnail {
     text-align: center;
+    width: 100px;
   }
   .woocommerce-cart .woocommerce-cart-form table.cart td.product-quantity {
     text-align: right;
     color: #2a2a2a;
+  }
+  .woocommerce-cart .woocommerce-cart-form table.cart th {
+    font-size: 16px;
   }
   table.cart td.product-quantity .quantity {
     justify-content: flex-end;
@@ -920,8 +937,37 @@ body .wrap-storefront-breadcrumb span {
   .home-page-1 .cart-collaterals .cart_totals {
     width: 100%;
   }
+  .shop_table.shop_table_responsive tr td {
+    display: flex;
+  }
+  .shop_table.shop_table_responsive tr td span,
+  .shop_table.shop_table_responsive tr td strong {
+    margin-left: auto;
+  }
+  .home-page-1 table.shop_table_responsive tr.cart-subtotal td,
+  .home-page-1 table.shop_table_responsive tr.order-total td {
+    border-bottom: none;
+    border-top: 1px solid rgba(149, 149, 149, 0.4);
+    line-height: 3.5;
+    font-size: 14px;
+  }
+  .wrap-size span {
+    font-size: 14px;
+    color: #2a2a2a;
+    padding-top: 15px;
+  }
+  .home-page-1 .wc-proceed-to-checkout {
+    margin-bottom: 70px;
+  }
+  .home-page-1 .wc-proceed-to-checkout .button.checkout-button {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  body .wrap-block-to-shopping {
+    margin: 0 0 30px;
+  }
   .woocommerce-cart .cart-collaterals {
-    margin-top: 20px;
+    margin-top: 50px;
   }
   .woocommerce-billing-fields h3 {
     margin-bottom: 30px;
@@ -1015,9 +1061,15 @@ body .wrap-storefront-breadcrumb span {
 .home-page-1 table.shop_table_responsive tbody th {
   font-family: "Barlow-m";
 }
-.body .wrap-block-to-shopping a,
-.body .wrap-block-to-shopping i {
+body .wrap-block-to-shopping a,
+body .wrap-block-to-shopping i {
   color: #a7a7a7;
   font-size: 15px;
   text-transform: uppercase;
+}
+@media screen and (max-width: 767px) {
+  body .wrap-block-to-shopping a,
+  body .wrap-block-to-shopping i {
+    font-size: 13px;
+  }
 }

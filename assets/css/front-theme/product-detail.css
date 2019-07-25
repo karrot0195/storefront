@@ -635,6 +635,7 @@
 @media screen and (max-width: 767px) {
   .storefront-product-detail.single-product div.product p.price {
     text-align: center;
+    margin: 15px 0 25px;
   }
 }
 .storefront-product-detail.single-product div.product .woocommerce-product-rating a {
@@ -1218,7 +1219,7 @@
 }
 @media screen and (max-width: 767px) {
   .storefront-product-detail .wrap-product-item .fm-sl-cart .block-number {
-    width: 35px;
+    width: 4px;
   }
 }
 @keyframes anim-effect-jelena {
@@ -1592,7 +1593,7 @@ body.woocommerce-page #reviews .form-contribution .attachment-type[data-prev-val
   display: block;
   width: 100%;
   text-align: center;
-  margin-top: 30px;
+  margin-top: 10px;
   display: none;
 }
 .btn-readmore:focus,

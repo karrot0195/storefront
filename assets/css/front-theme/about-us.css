@@ -2,6 +2,10 @@
   position: absolute;
   background: transparent;
 }
+.page-template-about-us .home-page-1 .site-header.fixed {
+  position: fixed;
+  background: #ffffff;
+}
 .about-us .slider__item {
   position: relative;
 }

@@ -754,24 +754,32 @@ body.page-template-about-us .wrap-storefront-breadcrumb {
 }
 body.page-template-contact-us .site-header,
 body.page-template-general-faq .site-header,
-body.page-template-shipping .site-header {
+body.page-template-shipping .site-header,
+body.page-template-privacy-policy .site-header,
+body.page-template-return-policy .site-header {
   background: #f9f9f9;
 }
 @media screen and (max-width: 767px) {
   body.page-template-contact-us .site-header,
   body.page-template-general-faq .site-header,
-  body.page-template-shipping .site-header {
+  body.page-template-shipping .site-header,
+  body.page-template-privacy-policy .site-header,
+  body.page-template-return-policy .site-header {
     background: #ffffff;
   }
 }
 body.page-template-contact-us .wrap-storefront-breadcrumb,
 body.page-template-general-faq .wrap-storefront-breadcrumb,
-body.page-template-shipping .wrap-storefront-breadcrumb {
+body.page-template-shipping .wrap-storefront-breadcrumb,
+body.page-template-privacy-policy .wrap-storefront-breadcrumb,
+body.page-template-return-policy .wrap-storefront-breadcrumb {
   position: relative;
 }
 body.page-template-contact-us .wrap-storefront-breadcrumb::before,
 body.page-template-general-faq .wrap-storefront-breadcrumb::before,
-body.page-template-shipping .wrap-storefront-breadcrumb::before {
+body.page-template-shipping .wrap-storefront-breadcrumb::before,
+body.page-template-privacy-policy .wrap-storefront-breadcrumb::before,
+body.page-template-return-policy .wrap-storefront-breadcrumb::before {
   position: absolute;
   content: '';
   width: 2000%;
@@ -784,7 +792,9 @@ body.page-template-shipping .wrap-storefront-breadcrumb::before {
 @media screen and (max-width: 767px) {
   body.page-template-contact-us .wrap-storefront-breadcrumb::before,
   body.page-template-general-faq .wrap-storefront-breadcrumb::before,
-  body.page-template-shipping .wrap-storefront-breadcrumb::before {
+  body.page-template-shipping .wrap-storefront-breadcrumb::before,
+  body.page-template-privacy-policy .wrap-storefront-breadcrumb::before,
+  body.page-template-return-policy .wrap-storefront-breadcrumb::before {
     content: none;
   }
 }

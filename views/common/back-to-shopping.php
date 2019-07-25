@@ -1,6 +1,6 @@
 <div class="wrap-block-to-shopping">
 	<i class="ion ion-ios-arrow-back"></i>
-	<a href="<?= home_url('derma-rx') ?>">Back to shopping</a>
+	<a href="<?= home_url('derma-rx') ?>">Continue shopping</a>
 </div>
 
 <style>
