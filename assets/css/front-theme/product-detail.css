@@ -583,7 +583,7 @@
   position: fixed;
   top: -200%;
   left: 50%;
-  max-height: 80%;
+  max-height: 90%;
 }
 .storefront-product-detail #review_form_wrapper .close {
   position: absolute;
