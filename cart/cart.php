@@ -113,6 +113,7 @@ $product_ids = [];
 
 							<td>
 								<div class="wrap-size">
+										<i class="ion ion-md-arrow-dropdown"></i>
 										<?php 
 										if (!empty($size_attribute_data)) {
 											echo '<select class="sl-attr-size js-pa-size-change">';

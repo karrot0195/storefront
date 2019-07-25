@@ -135,7 +135,7 @@ if ( 'contribution_comment' === $type ) {
 					<input type="hidden" id="comment_ID" value="">
 					<button type="button" class="button update-review"><?php esc_html_e( 'Update Review', 'woocommerce-product-reviews-pro' ); ?></button>
 				<?php else : ?>
-					<button type="submit" class="button"><?php echo esc_html( $contribution_type->get_button_text() ); ?></button>
+					<button type="submit" class="button"><?php esc_html_e( 'Submit Review', 'woocommerce-product-reviews-pro' ); ?></button>
 				<?php endif; ?>
 				<span class="response"></span>
 			</p>
