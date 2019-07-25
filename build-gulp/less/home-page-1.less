@@ -2606,9 +2606,19 @@ td .wrap-size{
   flex-direction: row-reverse;
   justify-content: center;
   align-items: center;
+  @media screen and(max-width: 767px){
+    justify-content: flex-end;
+    margin-top: 10px;
+  }
   i{
     position: absolute;
     right: 40px;
+    font-size: 20px;
+    color: #2a2a2a;
+    @media screen and(max-width: 767px){
+      right: auto;
+      left: 48px;
+    }
   }
   .sl-attr-size{
     border: none;
@@ -3279,6 +3289,13 @@ table th {
   }
   .woocommerce-cart .home-page-1 ul.products {
     margin-bottom: 0;
+  }
+  td .wrap-quantity{
+    display: flex;
+    justify-content: flex-end;
+    i{
+      font-size: 20px;
+    }
   }
 }
 @media screen and (max-width: 375px){
