@@ -75,6 +75,7 @@
   display: flex;
   justify-content: center;
   margin: 0 auto;
+  background: #0f1972;
 }
 .login .login-wrapper .login .login-type {
   display: -webkit-box;
@@ -222,9 +223,10 @@
 }
 .woocommerce-account .hentry .entry-content .woocommerce .woocommerce-MyAccount-content p {
   margin: 0 0 45px;
+  font-family: "Barlow-m";
 }
 .woocommerce-account .hentry .entry-content .woocommerce .woocommerce-MyAccount-content a {
-  color: #1c2ec9;
+  color: #0f1972;
 }
 /*-Account Details-*/
 .woocommerce-account .hentry .entry-content .woocommerce .woocommerce-MyAccount-content label {
@@ -448,7 +450,7 @@ body.page-template-about-us .wrap-storefront-breadcrumb {
 @media screen and (max-width: 767px) {
   .login .login-wrapper {
     display: block;
-    padding: 40px 20px;
+    padding: 0 20px;
   }
   .login .login-wrapper .login,
   .login .login-wrapper .register {
@@ -505,7 +507,7 @@ body.page-template-about-us .wrap-storefront-breadcrumb {
   }
   .login .login-wrapper .login .login-type,
   .login .login-wrapper .login .fg-pass {
-    margin-bottom: 42px;
+    margin-bottom: 45px;
   }
   .login .login-wrapper .login .btn-fb,
   .login .login-wrapper .login .btn-login,
@@ -541,7 +543,6 @@ body.page-template-about-us .wrap-storefront-breadcrumb {
     display: none;
   }
   .woocommerce-account .hentry .entry-content .woocommerce .woocommerce-MyAccount-content p {
-    margin-bottom: 0;
     font-size: 14px;
     line-height: 28px;
   }
@@ -752,21 +753,25 @@ body.page-template-about-us .wrap-storefront-breadcrumb {
   display: none;
 }
 body.page-template-contact-us .site-header,
-body.page-template-general-faq .site-header {
+body.page-template-general-faq .site-header,
+body.page-template-shipping .site-header {
   background: #f9f9f9;
 }
 @media screen and (max-width: 767px) {
   body.page-template-contact-us .site-header,
-  body.page-template-general-faq .site-header {
+  body.page-template-general-faq .site-header,
+  body.page-template-shipping .site-header {
     background: #ffffff;
   }
 }
 body.page-template-contact-us .wrap-storefront-breadcrumb,
-body.page-template-general-faq .wrap-storefront-breadcrumb {
+body.page-template-general-faq .wrap-storefront-breadcrumb,
+body.page-template-shipping .wrap-storefront-breadcrumb {
   position: relative;
 }
 body.page-template-contact-us .wrap-storefront-breadcrumb::before,
-body.page-template-general-faq .wrap-storefront-breadcrumb::before {
+body.page-template-general-faq .wrap-storefront-breadcrumb::before,
+body.page-template-shipping .wrap-storefront-breadcrumb::before {
   position: absolute;
   content: '';
   width: 2000%;
@@ -778,7 +783,8 @@ body.page-template-general-faq .wrap-storefront-breadcrumb::before {
 }
 @media screen and (max-width: 767px) {
   body.page-template-contact-us .wrap-storefront-breadcrumb::before,
-  body.page-template-general-faq .wrap-storefront-breadcrumb::before {
+  body.page-template-general-faq .wrap-storefront-breadcrumb::before,
+  body.page-template-shipping .wrap-storefront-breadcrumb::before {
     content: none;
   }
 }

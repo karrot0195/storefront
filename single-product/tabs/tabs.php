@@ -44,6 +44,7 @@ if ( isset($tabs['description']) ) {
     <div class="wrap-description">
         <?php if ( isset( $tab['callback'] ) ) { call_user_func( $tab['callback'], $key, $tab ); } ?>
     </div>
+    <button class="btn-readmore">Read More</button>
 <?php
 }
 
