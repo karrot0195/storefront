@@ -885,7 +885,7 @@ body .wrap-storefront-breadcrumb span {
   }
   .woocommerce-cart .woocommerce-cart-form table.cart th,
   .woocommerce-cart .woocommerce-cart-form table.cart td {
-    padding: 10px 0;
+    padding: 15px 0;
     font-size: 14px;
     text-align: left;
     border-bottom: 1px solid rgba(149, 149, 149, 0.4);
@@ -947,6 +947,11 @@ body .wrap-storefront-breadcrumb span {
     border-top: 1px solid rgba(149, 149, 149, 0.4);
     line-height: 3.5;
     font-size: 14px;
+  }
+  .wrap-size span {
+    font-size: 14px;
+    color: #2a2a2a;
+    padding-top: 15px;
   }
   .home-page-1 .wc-proceed-to-checkout {
     margin-bottom: 70px;
