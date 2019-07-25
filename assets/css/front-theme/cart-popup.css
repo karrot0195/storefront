@@ -802,7 +802,7 @@ body.single-product div.product .woocommerce-product-gallery .flex-viewport {
   margin-bottom: 0;
 }
 body .wrap-storefront-breadcrumb {
-  margin: 90px 0;
+  padding: 90px 0;
   height: auto;
 }
 @media screen and (max-width: 767px) {
