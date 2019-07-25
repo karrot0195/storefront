@@ -3169,6 +3169,9 @@ table th {
   .home-page-1 .cart-subtotal .woocommerce-Price-amount.amount {
     font-weight: bold;
   }
+  .woocommerce-cart article {
+    height: 100%;
+  }
 }
 @media screen and (max-width: 375px) {
   .info-page .info-page-left a {
