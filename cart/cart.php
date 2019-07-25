@@ -139,8 +139,18 @@ $product_ids = [];
 
 						<?php if ( wc_coupons_enabled() ) { ?>
 							<div class="coupon">
-								<label for="coupon_code"><?php esc_html_e( 'Coupon:', 'woocommerce' ); ?></label> <input type="text" name="coupon_code" class="input-text" id="coupon_code" value="" placeholder="<?php esc_attr_e( 'Coupon code', 'woocommerce' ); ?>" /> <button type="submit" class="button" name="apply_coupon" value="<?php esc_attr_e( 'Apply coupon', 'woocommerce' ); ?>"><?php esc_attr_e( 'Apply coupon', 'woocommerce' ); ?></button>
-								<?php do_action( 'woocommerce_cart_coupon' ); ?>
+								<div class="add-code">
+									<div class="label">
+										Promo Code?
+									</div>
+									<a class="add-link">
+										Add it here
+									</a>
+								</div>
+								<div class="form-add">
+									<label for="coupon_code"><?php esc_html_e( 'Coupon:', 'woocommerce' ); ?></label> <input type="text" name="coupon_code" class="input-text" id="coupon_code" value="" placeholder="<?php esc_attr_e( 'Coupon code', 'woocommerce' ); ?>" /> <button type="submit" class="button" name="apply_coupon" value="<?php esc_attr_e( 'Apply coupon', 'woocommerce' ); ?>"><?php esc_attr_e( 'Apply coupon', 'woocommerce' ); ?></button>
+									<?php do_action( 'woocommerce_cart_coupon' ); ?>
+								</div>
 							</div>
 						<?php } ?>
 
@@ -265,8 +275,19 @@ $product_ids = [];
 
 						<?php if ( wc_coupons_enabled() ) { ?>
 							<div class="coupon">
-								<label for="coupon_code"><?php esc_html_e( 'Coupon:', 'woocommerce' ); ?></label> <input type="text" name="coupon_code" class="input-text" id="coupon_code" value="" placeholder="<?php esc_attr_e( 'Coupon code', 'woocommerce' ); ?>" /> <button type="submit" class="button" name="apply_coupon" value="<?php esc_attr_e( 'Apply coupon', 'woocommerce' ); ?>"><?php esc_attr_e( 'Apply coupon', 'woocommerce' ); ?></button>
-								<?php do_action( 'woocommerce_cart_coupon' ); ?>
+								<div class="add-code">
+									<div class="label">
+										Promo Code?
+									</div>
+									<a class="add-link">
+										Add it here
+						</a>
+								</div>
+								<div class="form-add">
+									<label for="coupon_code"><?php esc_html_e( 'Coupon:', 'woocommerce' ); ?></label> <input type="text" name="coupon_code" class="input-text" id="coupon_code" value="" placeholder="<?php esc_attr_e( 'Coupon code', 'woocommerce' ); ?>" /> <button type="submit" class="button" name="apply_coupon" value="<?php esc_attr_e( 'Apply coupon', 'woocommerce' ); ?>"><?php esc_attr_e( 'Apply coupon', 'woocommerce' ); ?></button>
+									<?php do_action( 'woocommerce_cart_coupon' ); ?>
+								</div>
+							
 							</div>
 						<?php } ?>
 
