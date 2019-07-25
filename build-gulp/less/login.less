@@ -292,7 +292,7 @@
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    padding: 100px;
+    padding: 130px 100px 100px;
     color: #2a2a2a;
     p{
         margin: 0;
@@ -328,6 +328,7 @@
             font-size: 18px;
             font-family: "Barlow-m";
             margin-bottom: 10px;
+            font-weight: bold;
         }
         .desc p{
             line-height: 1.8;
@@ -617,13 +618,13 @@ body.page-template-about-us .wrap-storefront-breadcrumb{
     // CONTACT US
     .contact-us-wrapper{
         display: block;
-        padding: 0 0 30px;
+        padding: 0 0 90px;
         .sidebar,
         .content{
             width: 100%;
         }
         .sidebar{
-            margin-bottom: 30px;
+            margin-bottom: 35px;
         }
         .content{
             .ad-p-wrapper{
@@ -638,6 +639,9 @@ body.page-template-about-us .wrap-storefront-breadcrumb{
                 padding-top: 30px;
             }
         }
+    }
+    .contact-us-wrapper .content .title{
+        font-size: 14px;
     }
     .contact-us-wrapper .content .contact-form .form-flex{
         display: block;
@@ -666,9 +670,11 @@ body.page-template-about-us .wrap-storefront-breadcrumb{
     }
     .contact-us-wrapper p,
     .contact-us-wrapper .content .desc a,
-    .contact-us-wrapper .content .contact-form #gform_wrapper_1 .gform_body .gfield_label,
-    .contact-us-wrapper .content .contact-form #gform_wrapper_1 .gform_footer input[type=submit]{
+    .contact-us-wrapper .content .contact-form #gform_wrapper_1 .gform_body .gfield_label{
         font-size: 14px;
+    }
+    .contact-us-wrapper .sidebar p{
+        font-size: 20px;
     }
 
 }
@@ -785,5 +791,32 @@ body.page-template-about-us .wrap-storefront-breadcrumb{
                 }            
             }
         }
+    }
+}
+
+body.page-template-contact-us,
+body.page-template-general-faq{
+    .site-header{
+        background: #f9f9f9;
+        @media screen and (max-width: 767px){
+            background: #ffffff;
+        }
+    }
+    .wrap-storefront-breadcrumb{
+        position: relative;
+        &::before{
+            position: absolute;
+            content: '';
+            width: 2000%;
+            height: 100%;
+            background: #f9f9f9;
+            top: 0;
+            left: -500px;
+            z-index: -1;
+            @media screen and (max-width: 767px){
+                content: none;
+            }
+        }
+        
     }
 }
