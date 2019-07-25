@@ -635,6 +635,7 @@
 @media screen and (max-width: 767px) {
   .storefront-product-detail.single-product div.product p.price {
     text-align: center;
+    margin: 15px 0 25px;
   }
 }
 .storefront-product-detail.single-product div.product .woocommerce-product-rating a {
