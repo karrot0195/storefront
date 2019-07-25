@@ -807,6 +807,9 @@ table.woocommerce-checkout-review-order-table .product-name ul li:first-child {
     font-size: 14px;
   }
 }
+body table.shop_table_responsive tr td[data-title]::before {
+  font-weight: normal;
+}
 .site-main.page-wishlist ul.products li.product img {
   max-height: 300px;
   max-width: 200px;
