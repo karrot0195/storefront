@@ -1710,7 +1710,8 @@ figure.woocommerce-product-gallery__wrapper {
   .wrap-product-item .fm-sl-cart .lb-btn {
     font-size: 10px;
     height: 40px;
-    min-width: 70px;
+    min-width: unset;
+    width: 44px;
   }
 }
 .wrap-product-item .fm-sl-cart .block-number {
@@ -1911,7 +1912,7 @@ figure.woocommerce-product-gallery__wrapper {
     border-bottom: 1px solid rgba(61, 42, 42, 0.2);
   }
   .wrap-product-item .fm-sl-cart .block-number {
-    width: 5px;
+    width: 4px;
   }
   .home-page-1 .products::after,
   .home-page-1 .products::before {
