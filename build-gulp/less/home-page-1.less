@@ -2599,6 +2599,14 @@ body.disable {
 table.cart {
   width: 100%;
 }
+.shop_table select{
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+}
+.shop_table select::-ms-expand{
+  display: none;
+}
 
 table th {
   font-family: "Barlow-m";
@@ -2716,7 +2724,7 @@ table th {
       -moz-osx-font-smoothing: grayscale;
     }
   }
-
+ 
   .woocommerce-Price-amount.amount {
     font-weight: normal;
   }
