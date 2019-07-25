@@ -537,7 +537,7 @@
 }
 @media screen and (max-width: 767px) {
   .storefront-product-detail .related.products {
-    padding: 30px 0;
+    padding: 65px 0;
   }
 }
 .storefront-product-detail .related.products:before {

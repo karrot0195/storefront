@@ -755,6 +755,7 @@ body.home .site-footer {
     overflow-x: scroll;
     overflow-y: visible;
     display: flex;
+    margin: 0;
   }
   .home-page-1 ul.products .loop-main-product {
     display: grid;
