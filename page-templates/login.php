@@ -172,7 +172,7 @@ get_header('home-1');
               if (json.error) {
                     alert(json.message);
                 } else {
-                    alert('Completed!');
+                    alert('Complete! Please check your email');
                     window.location.reload();
                 }
 
