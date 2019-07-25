@@ -903,19 +903,16 @@ body .wrap-storefront-breadcrumb{
   .woocommerce-cart .woocommerce-cart-form.sp{
     display: block;
     table.cart{
-      margin-bottom: 30px;
+      margin-bottom: 20px;
     }
     label{
       display: none;
     }
     .actions{
-      display: block;
-      text-align: right;
+      display: flex;
+      align-items: center;
     }
     .coupon{
-      display: flex;
-      justify-content: space-between;
-      margin-bottom: 30px;
       input{
         width: 60%;
       }
@@ -924,6 +921,9 @@ body .wrap-storefront-breadcrumb{
       }
     }
   }
+  .woocommerce-cart .actions button{
+    min-width: 140px;
+  }
   .home-page-1 table.cart td.product-remove a.remove{
     position: initial;
   }
@@ -931,7 +931,7 @@ body .wrap-storefront-breadcrumb{
     th,
     td{
       padding: 10px 0;
-      font-size: 14px;
+      font-size: 16px;
       text-align: left;
       border-bottom: 1px solid rgba(149, 149, 149, 0.4);
       a{
@@ -945,11 +945,15 @@ body .wrap-storefront-breadcrumb{
     th.product-thumbnail,
     td.product-thumbnail{
       text-align: center;
+      width: 100px;
     }
     td.product-quantity{
       text-align: right;
       color: #2a2a2a;
     }
+  }
+  .woocommerce-cart .woocommerce-cart-form table.cart th{
+    font-size: 16px;
   }
   table.cart td.product-quantity .quantity{
     justify-content: flex-end;
@@ -975,8 +979,35 @@ body .wrap-storefront-breadcrumb{
   .home-page-1 .cart-collaterals .cart_totals{
     width: 100%;
   }
+  .shop_table.shop_table_responsive  tr td{
+    display: flex;
+    span,
+    strong{
+      margin-left: auto;
+    }
+  }
+  .home-page-1 table.shop_table_responsive{
+    tr.cart-subtotal,
+    tr.order-total{
+      td{
+        border-bottom: none;
+        border-top: 1px solid rgba(149, 149, 149, 0.4);
+        line-height: 3.5;
+      }
+    }
+  }
+  .home-page-1 .wc-proceed-to-checkout{
+    margin-bottom: 70px;
+    .button.checkout-button{
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+  }
+  body .wrap-block-to-shopping{
+    margin: 0 0 30px;
+  }
   .woocommerce-cart .cart-collaterals{
-    margin-top: 20px;
+    margin-top: 50px;
   }
   .woocommerce-billing-fields h3{
     margin-bottom: 30px;
