@@ -99,6 +99,10 @@ get_header('home-1'); ?>
 
                 </div>
             </ul>
+
+            <?php 
+            echo render_php('views/common/back-to-shopping.php');
+            ?>
             <?php
 
             echo render_php('views/cart/relate-product.php', [
