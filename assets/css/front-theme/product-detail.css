@@ -974,6 +974,11 @@
   margin-bottom: 45px;
   margin-top: 40px;
 }
+@media screen and (max-width: 767px) {
+  .storefront-product-detail .woocommerce-product-details__short-description + .wrap-cart {
+    margin-top: 25px;
+  }
+}
 .storefront-product-detail .woocommerce-product-details__short-description + .wrap-cart .wrap-block.wrap-proccess #number .val {
   font-family: "Barlow";
   font-size: 26px;
