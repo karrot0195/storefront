@@ -111,6 +111,9 @@ body {
   padding: 10px 0;
   border-bottom: 1px solid #eaeaea;
 }
+.wrap-cart-side .block-cart-side .block-item:last-child {
+  border-bottom: 0;
+}
 .wrap-cart-side .block-cart-side .block-item .thumbnail-item {
   margin-right: 10px;
 }
