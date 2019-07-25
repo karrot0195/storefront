@@ -354,6 +354,7 @@
   float: none;
   text-align: left;
   margin-top: 10px;
+  font-size: 13px;
 }
 @media screen and (max-width: 767px) {
   .storefront-product-detail #reviews .commentlist li .comment_container .comment-text .star-rating {
@@ -372,7 +373,7 @@
 }
 @media screen and (max-width: 767px) {
   .storefront-product-detail .review-title {
-    font-size: 15px;
+    font-size: 20px;
   }
 }
 .storefront-product-detail .review-rate {
@@ -381,7 +382,7 @@
   align-items: center;
 }
 .storefront-product-detail .review-rate .star-rating {
-  font-size: 12px;
+  font-size: 14px;
   margin-right: 10px;
 }
 .storefront-product-detail .review-rate .star-rating::before {
