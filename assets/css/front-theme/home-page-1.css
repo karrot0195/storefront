@@ -42,6 +42,9 @@ body.page-template-template-home1 {
 body.home::after {
   content: none;
 }
+body.home .site-footer {
+  position: unset;
+}
 .disabled-review {
   height: 100vh;
   overflow: hidden!important;
