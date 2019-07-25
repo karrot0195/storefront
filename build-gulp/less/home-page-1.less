@@ -3127,7 +3127,7 @@ table th {
   }
   .title {
     font-family: "Barlow-s";
-    font-size: 21px;
+    font-size: 20px;
     font-weight: 600;
     font-style: normal;
     font-stretch: normal;
@@ -3135,10 +3135,15 @@ table th {
     letter-spacing: 0.28px;
     text-align: left;
     color: #2a2a2a;
+    @media screen and (max-width: 767px){
+      color: #A7A7A7;
+      text-align: center;
+      padding-top: 35px;
+    }
   }
   .description{
     font-family: "Barlow";
-    font-size: 17px;
+    font-size: 16px;
     font-weight: normal;
     font-style: normal;
     font-stretch: normal;
@@ -3146,6 +3151,10 @@ table th {
     letter-spacing: 0.22px;
     text-align: left;
     color: #2a2a2a;
+    @media screen and (max-width: 767px){
+      color: #333333;
+      font-size: 14px;
+    }
   }
 
   .related-wrapper {
