@@ -1021,3 +1021,9 @@ body .wrap-block-to-shopping i {
   font-size: 15px;
   text-transform: uppercase;
 }
+@media screen and (max-width: 767px) {
+  body .wrap-block-to-shopping a,
+  body .wrap-block-to-shopping i {
+    font-size: 13px;
+  }
+}
