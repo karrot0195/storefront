@@ -2925,6 +2925,11 @@ table th {
   position: relative;
   margin-top: 50px;
 }
+@media screen and (max-width: 767px) {
+  .related {
+    margin-top: 0;
+  }
+}
 .related::before {
   position: absolute;
   content: '';
@@ -3009,6 +3014,9 @@ table th {
 @media screen and (max-width: 767px) {
   .home-page-1 .site-header .col-full .block-icon-action .list-action li {
     display: flex;
+  }
+  .storefront-product-detail .related > h2:first-child {
+    margin-top: 0;
   }
 }
 @media screen and (max-width: 375px) {
