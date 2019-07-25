@@ -1340,7 +1340,7 @@ body.home{
       text-transform: none;
       text-rendering: auto;
       line-height: 1;
-      -webkit-font-smoothing: antialiased;
+      -webkit-font-smoothing: antialiased;-webkit-font-smoothing: antialiased;
     }
     .slick-arrow{
       z-index: 9;
@@ -2758,13 +2758,16 @@ table th {
 
   table.cart td.product-remove a.remove {
     font-size: 0;
+    width: 20px;
+    height: 20px;
+    display: block;
     &::before {
       font-size: 20px;
       content: "";
       display: inline-block;
       font-family: "Ionicons";
       speak: none;
-      color: #e60b2f;
+      color: #c9c9c9;
       font-style: normal;
       font-weight: normal;
       font-variant: normal;
@@ -2773,6 +2776,11 @@ table th {
       line-height: 1;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
+    }
+    &:hover{
+      &::before{
+        color: #e60b2f;
+      }
     }
   }
   table.cart .product-thumbnail img {
@@ -3104,7 +3112,7 @@ table th {
   &::before{
     position: absolute;
     content: '';
-    width: 100%;
+    width: 2000%;
     left: -500px;
     top: 0;
     height: 100%;
