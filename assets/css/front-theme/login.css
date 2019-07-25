@@ -751,18 +751,22 @@ body.page-template-about-us .wrap-storefront-breadcrumb {
 .forgot-form .button-wrap .btn-forgot.proccessing span {
   display: none;
 }
-body.page-template-contact-us .site-header {
+body.page-template-contact-us .site-header,
+body.page-template-general-faq .site-header {
   background: #f9f9f9;
 }
 @media screen and (max-width: 767px) {
-  body.page-template-contact-us .site-header {
+  body.page-template-contact-us .site-header,
+  body.page-template-general-faq .site-header {
     background: #ffffff;
   }
 }
-body.page-template-contact-us .wrap-storefront-breadcrumb {
+body.page-template-contact-us .wrap-storefront-breadcrumb,
+body.page-template-general-faq .wrap-storefront-breadcrumb {
   position: relative;
 }
-body.page-template-contact-us .wrap-storefront-breadcrumb::before {
+body.page-template-contact-us .wrap-storefront-breadcrumb::before,
+body.page-template-general-faq .wrap-storefront-breadcrumb::before {
   position: absolute;
   content: '';
   width: 2000%;
@@ -773,7 +777,8 @@ body.page-template-contact-us .wrap-storefront-breadcrumb::before {
   z-index: -1;
 }
 @media screen and (max-width: 767px) {
-  body.page-template-contact-us .wrap-storefront-breadcrumb::before {
+  body.page-template-contact-us .wrap-storefront-breadcrumb::before,
+  body.page-template-general-faq .wrap-storefront-breadcrumb::before {
     content: none;
   }
 }
