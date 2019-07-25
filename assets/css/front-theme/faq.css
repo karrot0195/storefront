@@ -78,6 +78,7 @@
   text-align: left;
   color: #2a2a2a;
   position: relative;
+  font-family: "Barlow-m";
 }
 @media screen and (max-width: 767px) {
   .faq .faq-wrapper .content .block__content .title,
