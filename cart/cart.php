@@ -403,6 +403,7 @@ $product_ids = [];
 <style type="text/css">
 	.wrap-quantity {
 		position: relative;
+		margin-bottom: 10px;
 	}
 
 	.wrap-quantity .block-select {
