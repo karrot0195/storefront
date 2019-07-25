@@ -241,7 +241,7 @@ body.home .site-footer {
 }
 .home-page-1 .block-notify--element {
   font-family: "Barlow";
-  font-size: 14px;
+  font-size: 17px;
   font-weight: normal;
   font-style: normal;
   font-stretch: normal;
@@ -252,6 +252,11 @@ body.home .site-footer {
   vertical-align: middle;
   position: relative;
   z-index: 6;
+}
+@media screen and (max-width: 767px) {
+  .home-page-1 .block-notify--element {
+    font-size: 14px;
+  }
 }
 .home-page-1 .block-notify--element.block-notify--action {
   margin-left: 36px;
@@ -573,6 +578,11 @@ body.home .site-footer {
   width: 100%;
   font-size: 13px;
 }
+@media screen and (max-width: 767px) {
+  .site-footer .text-info-footer {
+    font-size: 12px;
+  }
+}
 .site-footer .block-social-footer ul {
   display: flex;
   list-style: none;
@@ -609,7 +619,7 @@ body.home .site-footer {
 .site-footer .block-widget-page ul li a {
   text-decoration: none;
   font-family: "Barlow";
-  font-size: 13px;
+  font-size: 15px;
   font-weight: normal;
   font-style: normal;
   font-stretch: normal;
