@@ -686,6 +686,12 @@ body.page-template-about-us .wrap-storefront-breadcrumb {
     background: #0f1972;
   }
 }
+.wrap-create-account .button-wrap .btn-create-account i {
+  display: none;
+}
+.wrap-create-account .button-wrap .btn-create-account span {
+  display: block;
+}
 .wrap-create-account .wrap-field {
   padding-bottom: 15px;
 }
@@ -693,15 +699,49 @@ body.page-template-about-us .wrap-storefront-breadcrumb {
   font-size: 12px;
   color: #ff0000;
 }
-.wrap-create-account .btn-create-account i {
-  display: none;
-}
-.wrap-create-account .btn-create-account span {
-  display: block;
-}
 .wrap-create-account.proccessing .btn-create-account i {
   display: block;
 }
 .wrap-create-account.proccessing .btn-create-account span {
+  display: none;
+}
+.forgot-form {
+  display: none;
+}
+.forgot-form .button-wrap {
+  padding-top: 20px;
+}
+.forgot-form .button-wrap button {
+  border-radius: 26px;
+  width: 210px;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  height: 44px;
+  border: none;
+  background: #004a80;
+  color: #ffffff;
+  font-size: 16px;
+  letter-spacing: 0.22px;
+  position: relative;
+  margin-bottom: 68px;
+  cursor: pointer;
+}
+@media screen and (max-width: 768px) {
+  .forgot-form .button-wrap button {
+    width: 100%;
+    background: #0f1972;
+  }
+}
+.forgot-form .button-wrap .btn-forgot i {
+  display: none;
+}
+.forgot-form .button-wrap .btn-forgot span {
+  display: block;
+}
+.forgot-form .button-wrap .btn-forgot.proccessing i {
+  display: block;
+}
+.forgot-form .button-wrap .btn-forgot.proccessing span {
   display: none;
 }

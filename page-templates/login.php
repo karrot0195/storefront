@@ -52,23 +52,22 @@ get_header('home-1');
                         <div class="tab register-title" data-tab="tab-2">Register</div>
                     </div>
                     <div id="tab-1" class="tab-content-login login current">
-                        <div class="login-form">
-                            <p class="title">Login</p>
-                            <button class="btn-fb" onClick="loginFacebook()">
-                                <i class="fab fa-facebook-f"></i>
-                                <span>Sign in via Facebook</span>
-                            </button>
+                         <p class="title">Login</p>
+                        <button class="btn-fb" onClick="loginFacebook()">
+                            <i class="fab fa-facebook-f"></i>
+                            <span>Sign in via Facebook</span>
+                        </button>
 
-                            <div class="login-type">
-                                <div class="line">
-                                </div>
-                                <div class="or">
-                                    or
-                                </div>
-                                <div class="line">
-                                </div>
+                        <div class="login-type">
+                            <div class="line">
                             </div>
-                            
+                            <div class="or">
+                                or
+                            </div>
+                            <div class="line">
+                            </div>
+                        </div>
+                        <div class="wrap-form login-form"> 
                             <div class="email-wrapper">
                                 <label>Email Address</label>
                                 <input type="text" name="email" id="email" value="" />
@@ -77,8 +76,23 @@ get_header('home-1');
                                 <label>Password</label>
                                 <input type="password" name="password" id="password" value="" />
                             </div>
-                            <p class="fg-pass">Forgot Password?</p>
+                            <p class="fg-pass js-switch-from" data-form="forgot-form" style="cursor: pointer;">Forgot Password?</p>
                             <button class="btn-login" onClick="loginForm()">Login</button>
+                        </div>
+
+
+                        <div class="wrap-form forgot-form">
+                            <div class="email-wrapper">
+                                <label>Email Address</label>
+                                <input type="text" name="email" id="fg-email" value="" />
+                            </div>
+                            <p class="fg-pass js-switch-from" data-form="login-form" style="cursor: pointer;">Login Form?</p>
+                            <div class="button-wrap">
+                                <button class="btn-forgot" onClick="forgotForm()">
+                                    <span>Submit</span>
+                                    <i class="fas fa-spinner fa-spin"></i>
+                                </button>
+                            </div>
                         </div>
                     </div>
                     <div id="tab-2" class="tab-content-login register">
@@ -122,7 +136,7 @@ get_header('home-1');
     }
 
     function loginForm() {
-        let email = document.getElementById('email').value;
+        let email = document.getElementById('email').value.toLocaleLowerCase();
         let password = document.getElementById('password').value;
         if (email && email.length && password && password.length) {
             let formData = new FormData();
@@ -138,12 +152,32 @@ get_header('home-1');
                     } else {
                         window.location.reload();
                     }
-                } else {
+                } else { 
                     alert(json.mss);
                 }
             };
             request.open("POST", "");
             request.send(formData);
+        }
+    }
+
+    function forgotForm() {
+        let email = jQuery('#fg-email').val().toLocaleLowerCase();
+        if (email.trim().length > 0) {
+            jQuery('.btn-forgot').addClass('proccessing');
+            jQuery.post(my_ajax_object.ajax_url, {
+                    email: email,
+                    action: 'action_forgot_password'
+            }, function (json) {
+              if (json.error) {
+                    alert(json.message);
+                } else {
+                    alert('Complete! Please check your email');
+                    window.location.reload();
+                }
+
+                jQuery('.btn-forgot').removeClass('proccessing');
+            });
         }
     }
 
@@ -153,12 +187,19 @@ get_header('home-1');
             $(this).hide();
         });
 
+        $('.js-switch-from').on('click', function () {
+            let formClass = $(this).data('form');
+
+            $(this).parents('.wrap-form').hide();
+            $('.'+formClass).show();
+        });
+
         $('.js-btn-create-account').on('click', function() {
             let eEmail = $('#reg-email');
             let ePass = $('#reg-password');
             let eRepass = $('#reg-repassword');
 
-            const email = eEmail.val();
+            const email = eEmail.val().toLocaleLowerCase();
             const password = ePass.val();
             const repassword = eRepass.val();
 
