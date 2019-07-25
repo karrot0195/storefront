@@ -818,6 +818,19 @@ table.woocommerce-checkout-review-order-table .product-name ul li:first-child {
 #payment.woocommerce-checkout-payment ul li.wc_payment_method label img {
   padding-right: 10px;
 }
+.sl-attr-size {
+  border: none;
+  font-size: 16px;
+  color: #2a2a2a;
+  outline: none;
+  min-width: 65px;
+  font-family: "Barlow";
+}
+@media screen and (max-width: 767px) {
+  .sl-attr-size {
+    font-size: 14px;
+  }
+}
 .site-main.page-wishlist ul.products li.product img {
   max-height: 300px;
   max-width: 200px;
@@ -1052,14 +1065,6 @@ body .wrap-storefront-breadcrumb span {
   }
   .page-template-default .woocommerce {
     overflow-x: hidden;
-  }
-  .sl-attr-size {
-    border: none;
-    font-size: 14px;
-    color: #2a2a2a;
-    outline: none;
-    min-width: 65px;
-    font-family: "Barlow";
   }
 }
 .home-page-1 table.shop_table_responsive tbody th {

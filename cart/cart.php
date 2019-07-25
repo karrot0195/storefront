@@ -269,11 +269,19 @@ $product_ids = [];
 									}
 									?>
 									<div class="wrap-size">
-										<select class="sl-attr-size">
-											<option>25 ml</option>
-											<option>35 ml</option>
-										</select>
-									</div>
+										<?php 
+										if (!empty($size_attribute_data)) {
+											echo '<select class="sl-attr-size js-pa-size-change">';
+											foreach ($size_attribute_data as $i => $item) {
+												$selected = $pa_size_selected == $item->slug ? 'selected="selected"' : '';
+
+												$id = isset($children[$i]) ? $children[$i] : '';
+												echo '<option name="pa_size" '.$selected.' value="'.$id.'">'.$item->name.'</option>';
+											}
+											echo '</select>';	
+										}
+										?>
+								</div>
 									
 								</div>
 								</td>
