@@ -252,6 +252,7 @@ body {
   color: #2a2a2a;
   font-family: "Barlow-m";
   text-decoration: underline;
+  margin-left: 5px;
 }
 .woocommerce-cart .actions .coupon .form-add {
   display: none;
