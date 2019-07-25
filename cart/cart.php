@@ -20,7 +20,7 @@ do_action( 'woocommerce_before_cart' );
 $product_ids = [];
 ?>
 <div class="container">
-
+	<?php if (!isMobileDevice()): ?>
 	<form class="woocommerce-cart-form pc" action="<?php echo esc_url( wc_get_cart_url() ); ?>" method="post">
 		<?php do_action( 'woocommerce_before_cart_table' ); ?>
 
@@ -42,13 +42,30 @@ $product_ids = [];
 				foreach ( WC()->cart->get_cart() as $cart_item_key => $cart_item ) {
 					$_product   = apply_filters( 'woocommerce_cart_item_product', $cart_item['data'], $cart_item, $cart_item_key );
 					
-					$attributes = $_product->get_attributes();
-					
 					$product_id = apply_filters( 'woocommerce_cart_item_product_id', $cart_item['product_id'], $cart_item, $cart_item_key );
                     $product_ids[] = $product_id;
 
 					if ( $_product && $_product->exists() && $cart_item['quantity'] > 0 && apply_filters( 'woocommerce_cart_item_visible', true, $cart_item, $cart_item_key ) ) {
 						$product_permalink = apply_filters( 'woocommerce_cart_item_permalink', $_product->is_visible() ? $_product->get_permalink( $cart_item ) : '', $cart_item, $cart_item_key );
+
+					if ($_product->get_type() == 'variation') {
+						$parent = wc_get_product($_product->get_parent_id());
+						$children = $parent->get_children();
+						$size_attribute_data = wc_get_product_terms($parent->get_id(), 'pa_size');
+
+						$pa_size_selected = isset($_product->get_attributes()['pa_size']) ? $_product->get_attributes()['pa_size'] : '';
+					} else if ($_product->get_type() == 'variable') {
+						
+						$children = $_product->get_children();
+						$size_attribute_data = wc_get_product_terms($_product->get_id(), 'pa_size');
+						$pa_size_selected = '';
+
+					} 
+					else {
+						$size_attribute_data = [];
+					}
+
+
 						?>
 						<tr class="woocommerce-cart-form__cart-item <?php echo esc_attr( apply_filters( 'woocommerce_cart_item_class', 'cart_item', $cart_item, $cart_item_key ) ); ?>">
 							<td class="product-remove">
@@ -96,10 +113,18 @@ $product_ids = [];
 
 							<td>
 								<div class="wrap-size">
-									<select class="sl-attr-size">
-										<option>25 ml</option>
-										<option>35 ml</option>
-									</select>
+										<?php 
+										if (!empty($size_attribute_data)) {
+											echo '<select class="sl-attr-size js-pa-size-change">';
+											foreach ($size_attribute_data as $i => $item) {
+												$selected = $pa_size_selected == $item->slug ? 'selected="selected"' : '';
+
+												$id = isset($children[$i]) ? $children[$i] : '';
+												echo '<option name="pa_size" '.$selected.' value="'.$id.'">'.$item->name.'</option>';
+											}
+											echo '</select>';	
+										}
+										?>
 								</div>
 							</td>
 
@@ -171,7 +196,7 @@ $product_ids = [];
 			
 		<?php do_action( 'woocommerce_after_cart_table' ); ?>
 	</form>
-
+	<?php else: ?>
 	<form class="woocommerce-cart-form sp" action="<?php echo esc_url( wc_get_cart_url() ); ?>" method="post">
 		<?php do_action( 'woocommerce_before_cart_table' ); ?>
 
@@ -244,7 +269,20 @@ $product_ids = [];
 									}
 									?>
 									<div class="wrap-size">
-									<span><?= $_product->get_attribute('pa_size') ?></span>
+										<?php 
+										if (!empty($size_attribute_data)) {
+											echo '<select class="sl-attr-size js-pa-size-change">';
+											foreach ($size_attribute_data as $i => $item) {
+												$selected = $pa_size_selected == $item->slug ? 'selected="selected"' : '';
+
+												$id = isset($children[$i]) ? $children[$i] : '';
+												echo '<option name="pa_size" '.$selected.' value="'.$id.'">'.$item->name.'</option>';
+											}
+											echo '</select>';	
+										}
+										?>
+								</div>
+									
 								</div>
 								</td>
 
@@ -308,7 +346,7 @@ $product_ids = [];
 			
 		<?php do_action( 'woocommerce_after_cart_table' ); ?>
 	</form>
-
+	<?php endif; ?>
 	<div class="cart-collaterals">
 		<?php
 			/**
@@ -332,3 +370,21 @@ $product_ids = [];
 </div>
 
 <?php do_action( 'woocommerce_after_cart' ); ?>
+
+
+<script type="text/javascript">
+	
+	(function($) {
+		$('.js-pa-size-change').on('change', function () {
+			const variable = $(this).val();
+			const self = $(this);
+			const val = self.parents('tr').find('.product-quantity input').val();
+			$.get(`?add-to-cart=${variable}&quantity=${val}`, function() {
+				const href = $(self).parents('tr').find('.product-remove a').attr('href');
+				$.get(href, function() {
+					window.location.reload();
+				})
+			});
+		});
+	})(jQuery)
+</script>
