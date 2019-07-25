@@ -745,13 +745,18 @@ body.page-template-about-us .wrap-storefront-breadcrumb {
 .forgot-form .button-wrap .btn-forgot.proccessing span {
   display: none;
 }
-.page-template-contact-us .site-header {
+body.page-template-contact-us .site-header {
   background: #f9f9f9;
 }
-.page-template-contact-us .wrap-storefront-breadcrumb {
+@media screen and (max-width: 767px) {
+  body.page-template-contact-us .site-header {
+    background: #ffffff;
+  }
+}
+body.page-template-contact-us .wrap-storefront-breadcrumb {
   position: relative;
 }
-.page-template-contact-us .wrap-storefront-breadcrumb::before {
+body.page-template-contact-us .wrap-storefront-breadcrumb::before {
   position: absolute;
   content: '';
   width: 100%;
@@ -759,4 +764,9 @@ body.page-template-about-us .wrap-storefront-breadcrumb {
   background: #f9f9f9;
   top: 0;
   left: 0;
+}
+@media screen and (max-width: 767px) {
+  body.page-template-contact-us .wrap-storefront-breadcrumb::before {
+    content: none;
+  }
 }

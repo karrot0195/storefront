@@ -788,11 +788,13 @@ body.page-template-about-us .wrap-storefront-breadcrumb{
     }
 }
 
-.page-template-contact-us{
+body.page-template-contact-us{
     .site-header{
         background: #f9f9f9;
+        @media screen and (max-width: 767px){
+            background: #ffffff;
+        }
     }
-
     .wrap-storefront-breadcrumb{
         position: relative;
         &::before{
@@ -803,6 +805,10 @@ body.page-template-about-us .wrap-storefront-breadcrumb{
             background: #f9f9f9;
             top: 0;
             left: 0;
+            @media screen and (max-width: 767px){
+                content: none;
+            }
         }
+        
     }
 }
