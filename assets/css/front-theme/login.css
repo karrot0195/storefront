@@ -600,7 +600,7 @@ body.page-template-about-us .wrap-storefront-breadcrumb {
   }
   .contact-us-wrapper {
     display: block;
-    padding: 0 0 30px;
+    padding: 0 0 90px;
   }
   .contact-us-wrapper .sidebar,
   .contact-us-wrapper .content {
@@ -619,6 +619,9 @@ body.page-template-about-us .wrap-storefront-breadcrumb {
   }
   .contact-us-wrapper .content .contact-form {
     padding-top: 30px;
+  }
+  .contact-us-wrapper .content .title {
+    font-size: 14px;
   }
   .contact-us-wrapper .content .contact-form .form-flex {
     display: block;
