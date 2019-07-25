@@ -499,6 +499,31 @@ jQuery('.quantity').each(function() {
 
 });
 
+
+// readmore
+(function($){
+  var windowsize = $(window).width();
+  if (windowsize < 767) {
+    if($('.wrap-description').height() < 380) {
+      $('.btn-readmore').hide();
+    }
+    else {
+      $('.btn-readmore').show();
+    }
+    $('.wrap-description').css({"height": "365px"});
+  }
+  $('.btn-readmore').on('click', function(){
+    $('.wrap-description').toggleClass('show');
+    if($('.wrap-description').hasClass('show')) {
+      $(this).text('Less More');
+    }
+    else {
+      $(this).text('Read More')
+    }
+  });
+  
+})((jQuery));
+
 /* END CUSTOM */
 
 
