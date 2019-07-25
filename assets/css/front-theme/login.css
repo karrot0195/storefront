@@ -677,6 +677,12 @@
   margin-bottom: 68px;
   cursor: pointer;
 }
+@media screen and (max-width: 768px) {
+  .wrap-create-account .button-wrap button {
+    width: 100%;
+    background: #0f1972;
+  }
+}
 .wrap-create-account .wrap-field {
   padding-bottom: 15px;
 }
