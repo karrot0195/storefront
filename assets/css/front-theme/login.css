@@ -448,7 +448,7 @@ body.page-template-about-us .wrap-storefront-breadcrumb {
 @media screen and (max-width: 767px) {
   .login .login-wrapper {
     display: block;
-    padding: 40px 20px;
+    padding: 0 20px;
   }
   .login .login-wrapper .login,
   .login .login-wrapper .register {
@@ -505,7 +505,7 @@ body.page-template-about-us .wrap-storefront-breadcrumb {
   }
   .login .login-wrapper .login .login-type,
   .login .login-wrapper .login .fg-pass {
-    margin-bottom: 42px;
+    margin-bottom: 45px;
   }
   .login .login-wrapper .login .btn-fb,
   .login .login-wrapper .login .btn-login,
