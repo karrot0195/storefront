@@ -86,12 +86,14 @@
 
   // Scroll Menu 
   $(window).scroll(function(){
-      if ($(this).scrollTop() > 20) {
-        $('.site-header').addClass('fixed');
-      } else {
-        $('.site-header').removeClass('fixed');
-      }
+    var sticky = $('.site-header'),
+        scroll = $(window).scrollTop();
+  
+    if (scroll >=80) sticky.addClass('fixed');
+    else sticky.removeClass('fixed');
   });
+
+
 
   // Filter
   $('.btn-filter').on('click', function(){
