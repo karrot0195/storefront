@@ -222,9 +222,10 @@
 }
 .woocommerce-account .hentry .entry-content .woocommerce .woocommerce-MyAccount-content p {
   margin: 0 0 45px;
+  font-family: "Barlow-m";
 }
 .woocommerce-account .hentry .entry-content .woocommerce .woocommerce-MyAccount-content a {
-  color: #1c2ec9;
+  color: #0f1972;
 }
 /*-Account Details-*/
 .woocommerce-account .hentry .entry-content .woocommerce .woocommerce-MyAccount-content label {
@@ -541,7 +542,6 @@ body.page-template-about-us .wrap-storefront-breadcrumb {
     display: none;
   }
   .woocommerce-account .hentry .entry-content .woocommerce .woocommerce-MyAccount-content p {
-    margin-bottom: 0;
     font-size: 14px;
     line-height: 28px;
   }
