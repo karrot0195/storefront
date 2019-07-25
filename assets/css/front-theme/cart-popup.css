@@ -52,9 +52,9 @@ body {
 @media screen and (max-width: 767px) {
   .wrap-cart-side .block-cart-side .block-main {
     height: calc(100% - 270px);
-    overflow-y: auto;
-    padding-right: 10px;
+    overflow-y: scroll;
     scroll-behavior: smooth;
+    padding-right: 10px;
   }
 }
 @media screen and (max-width: 767px) {
@@ -110,6 +110,9 @@ body {
   justify-content: flex-start;
   padding: 10px 0;
   border-bottom: 1px solid #eaeaea;
+}
+.wrap-cart-side .block-cart-side .block-item:last-child {
+  border-bottom: 0;
 }
 .wrap-cart-side .block-cart-side .block-item .thumbnail-item {
   margin-right: 10px;

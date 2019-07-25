@@ -53,9 +53,9 @@ body {
     @media screen and (max-width: 767px) {
       .block-main {
         height: calc(100% - 270px);
-        overflow-y: auto;
-        padding-right: 10px;
+        overflow-y: scroll;
         scroll-behavior: smooth;
+        padding-right: 10px;
       }
     }
     
@@ -113,6 +113,9 @@ body {
       justify-content: flex-start;
       padding: 10px 0;
       border-bottom: 1px solid #eaeaea;
+      &:last-child {
+        border-bottom: 0;
+      }
       .thumbnail-item {
         margin-right:10px;
         img {
