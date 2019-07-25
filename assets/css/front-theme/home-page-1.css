@@ -745,11 +745,15 @@ body.home .site-footer {
     width: 10px;
   }
   .single-product .home-page-1 ul.products,
-  .home-page-1 ul.products .loop-main-product {
+  .woocommerce-cart .home-page-1 ul.products .loop-main-product {
     white-space: nowrap;
     overflow-x: scroll;
     overflow-y: visible;
     display: flex;
+  }
+  .home-page-1 ul.products .loop-main-product {
+    display: grid;
+    grid-template-columns: auto auto;
   }
   .home-page-1 ul.products li.product img {
     width: 150px;
