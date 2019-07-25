@@ -669,13 +669,18 @@
   margin: 0 auto;
   height: 44px;
   border: none;
-  background: #004a80;
+  background: #0f1972;
   color: #ffffff;
   font-size: 16px;
   letter-spacing: 0.22px;
   position: relative;
   margin-bottom: 68px;
   cursor: pointer;
+}
+@media screen and (max-width: 768px) {
+  .wrap-create-account .button-wrap button {
+    width: 100%;
+  }
 }
 .wrap-create-account .wrap-field {
   padding-bottom: 15px;
