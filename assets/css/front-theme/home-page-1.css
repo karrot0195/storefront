@@ -1443,6 +1443,11 @@ a:hover {
   margin-bottom: 15px;
   display: inline-block;
 }
+@media screen and (max-width: 767px) {
+  .storefront-product-detail.single-product div.product .product_meta a {
+    margin-right: 10px;
+  }
+}
 .storefront-product-detail.single-product div.product .product_meta a:first-child {
   margin-left: 0px;
 }
