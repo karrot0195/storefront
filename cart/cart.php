@@ -370,7 +370,8 @@ $product_ids = [];
 		$('.js-pa-size-change').on('change', function () {
 			const variable = $(this).val();
 			const self = $(this);
-			$.get(`?add-to-cart=${variable}&quantity=1`, function() {
+			const val = self.parents('tr').find('.product-quantity input').val();
+			$.get(`?add-to-cart=${variable}&quantity=${val}`, function() {
 				const href = $(self).parents('tr').find('.product-remove a').attr('href');
 				$.get(href, function() {
 					window.location.reload();
