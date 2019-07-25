@@ -280,22 +280,29 @@ $product_ids = [];
 
 								<td class="product-quantity" data-title="<?php esc_attr_e( 'Quantity', 'woocommerce' ); ?>">
 									<?php
+									echo '<div class="wrap-quantity">';
 									if ( $_product->is_sold_individually() ) {
-										$product_quantity = sprintf( '1 <input type="hidden" name="cart[%s][qty]" value="1" />', $cart_item_key );
+										echo $product_quantity = sprintf( '1 <input type="hidden" name="cart[%s][qty]" value="1" />', $cart_item_key );
 									} else {
-										$product_quantity = woocommerce_quantity_input( array(
-											'input_name'   => "cart[{$cart_item_key}][qty]",
-											'input_value'  => $cart_item['quantity'],
-											'max_value'    => $_product->get_max_purchase_quantity(),
-											'min_value'    => '0',
-											'product_name' => $_product->get_name(),
-										), $_product, false );
-									}
+										
+										?>
+										<span><?= $cart_item['quantity']; ?></span>
+										<i class="ion ion-md-arrow-dropdown"></i>
+										<select class="block-select" id="qty<?= $cart_item_key ?>" name="cart[<?= $cart_item_key ?>][qty]">
+											<?php 
+											$max = $_product->get_max_purchase_quantity();
+											$max = $max == -1 ? 5 : $max;
+											for ($i=0; $i<=$max; $i++) {
+												$selected = $cart_item['quantity'] == $i ? 'selected="selected"' : '';
+												echo '<option '.$selected.' value="'.$i.'">'.$i.'</option>';
 
-									echo apply_filters( 'woocommerce_cart_item_quantity', $product_quantity, $cart_item_key, $cart_item ); // PHPCS: XSS ok.
-									?>
+											}
+											?>
+										</select>
 									<?php
-										echo apply_filters( 'woocommerce_cart_item_subtotal', WC()->cart->get_product_subtotal( $_product, $cart_item['quantity'] ), $cart_item, $cart_item_key ); // PHPCS: XSS ok.
+									}
+									echo '</div>';
+									echo apply_filters( 'woocommerce_cart_item_subtotal', WC()->cart->get_product_subtotal( $_product, $cart_item['quantity'] ), $cart_item, $cart_item_key ); // PHPCS: XSS ok.
 									?>
 								</td>
 						</tr>
@@ -378,5 +385,31 @@ $product_ids = [];
 				})
 			});
 		});
+
+		$('.wrap-quantity select').on('change', function () {
+			$('.wrap-quantity span').html($('.wrap-quantity select option:selected').val());
+		});
 	})(jQuery)
 </script>
+
+<style type="text/css">
+	.wrap-quantity {
+		position: relative;
+	}
+
+	.wrap-quantity .block-select {
+		position: absolute;
+		top: 0;
+		width: 60px;
+		opacity: 0;
+		left: 0;
+	}
+
+	.wrap-quantity span {
+		margin-right: 10px;
+	}
+
+	.wrap-quantity i {
+		font-size: 10px;
+	}
+</style>
