@@ -102,14 +102,16 @@ $product_ids = [];
 
 							<td>
 								<div class="wrap-size">
-									<select class="sl-attr-size">
 										<?php 
-										foreach ($size_attribute_data as $item) {
-											$selected = $pa_size_selected == $item->slug ? 'selected="selected"' : '';
-											echo '<option name="pa_size" '.$selected.' value="'.$item->slug.'">'.$item->name.'</option>';
+										if (!empty($size_attribute_data)) {
+											echo '<select class="sl-attr-size">';
+											foreach ($size_attribute_data as $item) {
+												$selected = $pa_size_selected == $item->slug ? 'selected="selected"' : '';
+												echo '<option name="pa_size" '.$selected.' value="'.$item->slug.'">'.$item->name.'</option>';
+											}
+											echo '</select>';
 										}
 										?>
-									</select>
 								</div>
 							</td>
 
