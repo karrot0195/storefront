@@ -39,6 +39,9 @@ body.page-template-template-home1 {
   margin: 0 !important;
   padding: 0;
 }
+body.page-template-template-home1::after {
+  content: none;
+}
 .disabled-review {
   height: 100vh;
   overflow: hidden!important;
