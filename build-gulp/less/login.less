@@ -702,6 +702,15 @@
             margin-bottom: 68px;
             cursor: pointer;
         }
+         .btn-create-account {
+            i {
+                display: none;
+            }
+
+            span {
+                display: block;
+            }
+        }
     }
 
     .wrap-field {
@@ -713,15 +722,7 @@
         }
     }
 
-    .btn-create-account {
-        i {
-            display: none;
-        }
-
-        span {
-            display: block;
-        }
-    }
+   
 
     &.proccessing {
         .btn-create-account {
@@ -734,5 +735,51 @@
             }
         }
 
+    }
+}
+
+.forgot-form {
+    display: none;
+    .button-wrap {
+        padding-top: 20px;
+        button {
+            @media screen and (max-width: 768px){
+                width: 100%;
+                background: #0f1972;
+            }
+            border-radius: 26px;
+            width: 210px;
+            display: flex;
+            justify-content: center;
+            margin: 0 auto;
+            height: 44px;
+            border: none;
+            background: #004a80;
+            color: #ffffff;
+            font-size: 16px;
+            letter-spacing: 0.22px;
+            position: relative;
+            margin-bottom: 68px;
+            cursor: pointer;
+        }
+         .btn-forgot {
+            i {
+                display: none;
+            }
+
+            span {
+                display: block;
+            }
+
+            &.proccessing {
+                i {
+                    display: block;
+                }
+
+                span {
+                    display: none;
+                }            
+            }
+        }
     }
 }
