@@ -440,6 +440,9 @@
   color: #2a2a2a;
   text-decoration: none;
 }
+body.page-template-about-us .wrap-storefront-breadcrumb {
+  display: none;
+}
 /*==================== RESPONSIVE ====================*/
 @media screen and (max-width: 767px) {
   .login .login-wrapper {
@@ -647,9 +650,6 @@
   .contact-us-wrapper .content .contact-form #gform_wrapper_1 .gform_body .gfield_label,
   .contact-us-wrapper .content .contact-form #gform_wrapper_1 .gform_footer input[type=submit] {
     font-size: 14px;
-  }
-  body.page-template-about-us .wrap-storefront-breadcrumb {
-    display: none;
   }
 }
 /* REGISTER */
