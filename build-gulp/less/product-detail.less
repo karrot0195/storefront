@@ -470,7 +470,7 @@
       color: #222222;
       @media screen and (max-width: 767px) {
         font-size: 14px;
-        
+        margin-bottom: 0;
       }
     }
   }
@@ -752,6 +752,7 @@
     border-bottom: 1px solid #d1d1d1;
     @media screen and (max-width: 767px) {
       padding: 25px 0;
+      margin-bottom: 25px;
     }
     &:last-child {
       border: 0;
@@ -1562,6 +1563,9 @@ body.woocommerce-page #reviews .form-contribution .attachment-type[data-prev-val
   .storefront-product-detail .wrap-description{
     overflow-y: hidden;
     height: auto;
+  }
+  .storefront-product-detail #reviews .commentlist li p.meta time{
+    padding-top: 0;
   }
 }
 

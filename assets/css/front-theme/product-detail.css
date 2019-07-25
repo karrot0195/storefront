@@ -486,6 +486,7 @@
 @media screen and (max-width: 767px) {
   .storefront-product-detail .description p {
     font-size: 14px;
+    margin-bottom: 0;
   }
 }
 .storefront-product-detail #reviews .commentlist li .comment_container .comment-text {
@@ -785,6 +786,7 @@
 @media screen and (max-width: 767px) {
   .storefront-product-detail #reviews .commentlist li {
     padding: 25px 0;
+    margin-bottom: 25px;
   }
 }
 .storefront-product-detail #reviews .commentlist li:last-child {
@@ -1587,6 +1589,9 @@ body.woocommerce-page #reviews .form-contribution .attachment-type[data-prev-val
   .storefront-product-detail .wrap-description {
     overflow-y: hidden;
     height: auto;
+  }
+  .storefront-product-detail #reviews .commentlist li p.meta time {
+    padding-top: 0;
   }
 }
 .storefront-product-detail .home-page-1 .woocommerce-noreviews {
