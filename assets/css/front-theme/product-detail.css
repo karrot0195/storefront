@@ -420,6 +420,12 @@
   display: block;
   font-size: 16px;
   background: none;
+  font-family: "Barlow-m";
+}
+@media screen and (max-width: 767px) {
+  .storefront-product-detail #reviews .commentlist li p.meta .woocommerce-review__author .contribution-badge {
+    font-size: 15px;
+  }
 }
 .storefront-product-detail #reviews .commentlist li p.meta .woocommerce-review__author .contribution-badge::before {
   position: absolute;
@@ -1517,7 +1523,9 @@ body.woocommerce-page #reviews .form-contribution .attachment-type[data-prev-val
 }
 .woocommerce.woocommerce-page #reviews .product-rating .product-rating-summary {
   display: flex;
-  justify-content: space-between;
+}
+.woocommerce.woocommerce-page #reviews .product-rating .product-rating-summary .wrap-review-right {
+  margin-left: auto;
 }
 .woocommerce.woocommerce-page #reviews .product-rating .product-rating-summary .wrap-review-right button {
   border: none;

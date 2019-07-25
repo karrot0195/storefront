@@ -403,6 +403,10 @@
           display: block;
           font-size: 16px;
           background: none;
+          font-family: "Barlow-m";
+          @media screen and (max-width: 767px){
+            font-size: 15px;
+          }
           &::before{
             position: absolute;
             content: "";
@@ -1491,8 +1495,8 @@ body.woocommerce-page #reviews .form-contribution .attachment-type[data-prev-val
 
 .woocommerce.woocommerce-page #reviews .product-rating .product-rating-summary{
   display: flex;
-  justify-content: space-between;
   .wrap-review-right{
+    margin-left: auto;
     button{
       border: none;
       background: no-repeat;
