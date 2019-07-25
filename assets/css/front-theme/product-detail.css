@@ -1593,7 +1593,7 @@ body.woocommerce-page #reviews .form-contribution .attachment-type[data-prev-val
   display: block;
   width: 100%;
   text-align: center;
-  margin-top: 30px;
+  margin-top: 10px;
   display: none;
 }
 .btn-readmore:focus,
