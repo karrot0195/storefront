@@ -590,7 +590,7 @@ body.page-template-about-us .wrap-storefront-breadcrumb{
             margin: 55px 0;
             .order_details{
                 background: transparent;
-               
+                width: 100%;
                 thead{
                     th{
                         line-height: unset;
@@ -613,13 +613,25 @@ body.page-template-about-us .wrap-storefront-breadcrumb{
                     td.product-name{
                         display: flex;
                         align-items: center;
+                        img{
+                            width: 100px;
+                        }
                         a{
                             color: #0f1972;
                             margin-right: 15px;
                         }
+                        span{
+                            letter-spacing: 5px;
+                        }
                     }
                     td.product-total{
                         text-align: right;
+                    }
+                }
+                tfoot{
+                    th,td{
+                        line-height: unset;
+                        border-bottom: 1px solid #eaeaea;
                     }
                 }
             }
