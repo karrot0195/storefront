@@ -852,7 +852,7 @@ body .wrap-storefront-breadcrumb {
 }
 @media screen and (max-width: 767px) {
   body .wrap-storefront-breadcrumb {
-    padding: 35px 0;
+    padding: 30px 0;
     font-size: 12px;
     padding-left: 0;
   }

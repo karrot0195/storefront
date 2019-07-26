@@ -679,6 +679,63 @@ body.page-template-about-us .wrap-storefront-breadcrumb {
 }
 /*==================== RESPONSIVE ====================*/
 @media screen and (max-width: 767px) {
+  .woocommerce-order-received .woocommerce-order .woocommerce-thankyou-order-received {
+    font-size: 20px;
+  }
+  .woocommerce-order-received .woocommerce-order {
+    padding: 0 0.75rem;
+  }
+  .woocommerce-order-received .woocommerce-order ul.order_details,
+  .woocommerce-order-received .woocommerce-order .woocommerce-order-details {
+    float: none;
+    width: 100%;
+  }
+  body.woocommerce-order-received .wrap-storefront-breadcrumb {
+    padding: 30px 0;
+  }
+  .woocommerce-order-received .woocommerce-order ul.order_details {
+    margin: 35px 0;
+  }
+  .woocommerce-order-received .woocommerce-order h2 {
+    font-size: 16px;
+  }
+  .woocommerce-order-received .woocommerce-order .woocommerce-thankyou-order-details__title {
+    margin-bottom: 30px;
+  }
+  .woocommerce-order-received .woocommerce-order ul.order_details li {
+    font-size: 12px;
+    padding: 20px;
+  }
+  .woocommerce-order-received .woocommerce-order ul.order_details li strong {
+    font-size: 14px;
+    margin-top: 5px;
+  }
+  .woocommerce-order-received .woocommerce-order .woocommerce-order-details {
+    padding-left: 0;
+    margin: 30px 0 0;
+  }
+  .woocommerce-order-received .woocommerce-order .woocommerce-order-details .order_details thead th {
+    padding-bottom: 12px;
+  }
+  .woocommerce-order-received .woocommerce-order .woocommerce-order-details .order_details thead th {
+    font-size: 12px;
+  }
+  .woocommerce-order-received .woocommerce-order .woocommerce-order-details .order_details tbody td {
+    font-size: 14px;
+  }
+  .woocommerce-order-received .woocommerce-order .woocommerce-order-details .order_details tbody td.product-name span {
+    letter-spacing: 0;
+    width: 40px;
+  }
+  .woocommerce-order-received .woocommerce-order .woocommerce-order-details .order_details tfoot th,
+  .woocommerce-order-received .woocommerce-order .woocommerce-order-details .order_details tfoot td {
+    font-size: 14px;
+    padding-top: 20px;
+  }
+  .woocommerce-order-received .woocommerce-order .woocommerce-order-details .order_details tfoot tr:nth-child(2) td,
+  .woocommerce-order-received .woocommerce-order .woocommerce-order-details .order_details tfoot tr:nth-child(3) td {
+    font-size: 14px;
+  }
   .login .login-wrapper {
     display: block;
     padding: 0 20px;
