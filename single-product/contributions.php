@@ -69,6 +69,7 @@ $total_rating_count = $product->get_rating_count();
 
 				/* translators: Placeholders: %s - average rating stars count (float casted as string to avoid trailing zeroes), %d - 5 stars total (integer) -- (e.g "4.2 out of 5 stars") */
 				$reviews_label  = sprintf( __( '%s out of %d stars', 'woocommerce-product-reviews-pro' ), $average_rating, 5 );
+
 				?>
 				<div class="wrap-review-left">
 					<div class="review-title">Product Ratings</div>
@@ -302,3 +303,9 @@ $total_rating_count = $product->get_rating_count();
 	</noscript>
 
 </div>
+
+<style>
+	.storefront-product-detail #reviews .commentlist li .comment_container .comment-text .star-rating{
+		width: 75px;
+	}
+</style>
