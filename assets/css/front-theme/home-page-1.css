@@ -2954,6 +2954,13 @@ table th {
     box-shadow: 2.2px 11.3px 19.3px 1.7px rgba(0, 0, 1, 0.12);
     background-color: #ffffff;
     margin-bottom: 30px;
+    margin: 0 5px;
+  }
+  .site-main.page-wishlist ul.products.columns-4 li.product:nth-child(odd) {
+    margin-left: 0;
+  }
+  .site-main.page-wishlist ul.products.columns-4 li.product:nth-child(even) {
+    margin-right: 0;
   }
   .site-main.page-wishlist ul.products.columns-4 li.product.wrap-product-item .fm-sl-cart {
     position: relative;
