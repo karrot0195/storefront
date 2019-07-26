@@ -413,7 +413,6 @@
   order: 1;
 }
 .storefront-product-detail #reviews .commentlist li p.meta .woocommerce-review__author {
-  font-size: 0;
   display: flex;
 }
 .storefront-product-detail #reviews .commentlist li p.meta .woocommerce-review__author .contribution-badge {
