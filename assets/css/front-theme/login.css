@@ -610,7 +610,7 @@ body.page-template-about-us .wrap-storefront-breadcrumb {
   font-family: "Barlow";
 }
 .woocommerce-order-received .woocommerce-order .woocommerce-order-details .order_details thead th.product-name {
-  width: 300px;
+  width: 400px;
 }
 .woocommerce-order-received .woocommerce-order .woocommerce-order-details .order_details thead th.product-total {
   text-align: right;
@@ -635,10 +635,13 @@ body.page-template-about-us .wrap-storefront-breadcrumb {
 .woocommerce-order-received .woocommerce-order .woocommerce-order-details .order_details tbody td.product-total {
   text-align: right;
 }
+.woocommerce-order-received .woocommerce-order .woocommerce-order-details .order_details tfoot {
+  font-size: 18px;
+}
 .woocommerce-order-received .woocommerce-order .woocommerce-order-details .order_details tfoot th,
 .woocommerce-order-received .woocommerce-order .woocommerce-order-details .order_details tfoot td {
   line-height: unset;
-  border-bottom: 1px solid #eaeaea;
+  border-bottom: 0;
 }
 .woocommerce-order-received .woocommerce-order h2 {
   font-size: 26px;
