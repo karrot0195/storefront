@@ -576,8 +576,13 @@ body.page-template-about-us .wrap-storefront-breadcrumb {
   padding: 35px;
 }
 .woocommerce-order-received .woocommerce-order ul.order_details li strong {
+  margin-top: 15px;
+  font-size: 18px;
   font-weight: normal;
   font-family: "Barlow-m";
+}
+.woocommerce-order-received .woocommerce-order ul.order_details li strong span {
+  font-weight: bold;
 }
 .woocommerce-order-received .woocommerce-order ul.order_details li.woocommerce-order-overview__order {
   border-top-left-radius: 6px;
