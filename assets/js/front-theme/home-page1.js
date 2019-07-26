@@ -37,6 +37,8 @@
       $('.woocommerce-MyAccount-navigation ul').slideToggle(300);
       $(this).find('i').toggleClass('tab-click');
     });
+
+   
   });
 
   // Control 1 product on mobile
@@ -95,9 +97,17 @@
   $(window).scroll(function(){
     var sticky = $('.site-header'),
         scroll = $(window).scrollTop();
-  
-    if (scroll >=120) sticky.addClass('fixed');
-    else sticky.removeClass('fixed');
+        var w = $(window).height();
+        console.log(w);
+        var d = $(document).height();
+        console.log(d);
+        if(d > w + 120){
+          if (scroll >=120) {
+            sticky.addClass('fixed');
+          } else 
+            sticky.removeClass('fixed');
+        }
+   
   });
 
 
