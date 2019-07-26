@@ -320,7 +320,7 @@ $product_ids = [];
 										<select class="block-select" id="qty<?= $cart_item_key ?>" name="cart[<?= $cart_item_key ?>][qty]">
 											<?php 
 											$max = $_product->get_max_purchase_quantity();
-											$max = $max == -1 ? 5 : $max;
+											$max = $max == -1 ? 10 : $max;
 											for ($i=0; $i<=$max; $i++) {
 												$selected = $cart_item['quantity'] == $i ? 'selected="selected"' : '';
 												echo '<option '.$selected.' value="'.$i.'">'.$i.'</option>';

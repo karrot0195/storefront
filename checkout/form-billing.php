@@ -52,7 +52,7 @@ defined( 'ABSPATH' ) || exit;
 				<label class="woocommerce-form__label woocommerce-form__label-for-checkbox checkbox">
 					<input class="woocommerce-form__input woocommerce-form__input-checkbox input-checkbox" id="createaccount" <?php checked( ( true === $checkout->get_value( 'createaccount' ) || ( true === apply_filters( 'woocommerce_create_account_default_checked', false ) ) ), true ); ?> type="checkbox" name="createaccount" value="1" /> <span><?php esc_html_e( 'Create an account?', 'woocommerce' ); ?></span>
 
-					<div class="createaccount-notify">Thanks for shopping with us! We’ve sent an email with your password</span>
+					<div class="createaccount-notify">Thanks for shopping with us! We will send an email with your password.</span>
 				</label>
 			</p>
 
