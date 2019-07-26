@@ -2953,9 +2953,19 @@ table th {
     width: auto;
     box-shadow: 2.2px 11.3px 19.3px 1.7px rgba(0, 0, 1, 0.12);
     background-color: #ffffff;
+    margin-bottom: 30px;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+  .site-main.page-wishlist ul.products.columns-4 li.product:nth-child(odd) {
+    margin-left: 0;
+  }
+  .site-main.page-wishlist ul.products.columns-4 li.product:nth-child(even) {
+    margin-right: 0;
   }
   .site-main.page-wishlist ul.products.columns-4 li.product.wrap-product-item .fm-sl-cart {
     position: relative;
+    margin-bottom: 15px;
   }
   .site-main.page-wishlist ul.products.columns-4 li.product:hover .stock {
     opacity: 1;
@@ -2998,8 +3008,8 @@ table th {
 }
 @media screen and (max-width: 767px) {
   .site-main.page-wishlist ul.products.columns-4 li.product .stock {
-    margin-top: 10px;
     padding: 0;
+    opacity: 1;
   }
 }
 .site-main.page-wishlist ul.products.columns-4 li.product .stock span {
