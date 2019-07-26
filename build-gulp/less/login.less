@@ -519,6 +519,38 @@ body.page-template-about-us .wrap-storefront-breadcrumb{
 .home-page-1 table.shop_table_responsive tr td.contribution-date{
     text-align: left;
 }
+.woocommerce-edit-address.woocommerce-account .hentry .entry-content .woocommerce .woocommerce-MyAccount-content .woocommerce-address-fields__field-wrapper + p{
+    text-align: center;
+    button:hover{
+        background: #0f1972;
+        color: #ffffff;
+    }
+}
+//----------------- ORDER  RECIEVER ------------------//
+.woocommerce-order-received{
+    color: #2a2a2a;
+    .entry-title{
+        display: none;
+    }
+    .woocommerce-order{
+        max-width: 1140px;
+        margin: 0 auto;
+        .woocommerce-thankyou-order-received{
+            margin: 0;
+            font-size: 30px;
+            font-family: "Barlow-m";
+        }
+        ul.order_details{
+            margin: 55px 0;
+            &::before{
+                position: unset;
+            }
+        }
+    }
+}
+
+
+
 /*==================== RESPONSIVE ====================*/
 @media screen and (max-width: 767px){
 
