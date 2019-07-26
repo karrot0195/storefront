@@ -1489,6 +1489,7 @@
   border: none;
   font-size: 16px;
   cursor: pointer;
+  outline: none;
 }
 .home-page-1 .woocommerce #reviews #comments ol.commentlist li .contribution-actions a,
 .home-page-1 .woocommerce-page #reviews #comments ol.commentlist li .contribution-actions a,
