@@ -7,6 +7,7 @@ if(!session_id()) {
 }
 
 if (isset($_POST['email']) && isset($_POST['password'])) {
+    require_once (ABSPATH . 'wp-includes/class-phpass.php');
     $result = [
         'error' => true,
         'mss' => ''
@@ -152,6 +153,7 @@ get_header('home-1');
             formData.append('password', password);
             let request = new XMLHttpRequest();
             request.responseType = 'json';
+
             request.onload = function() {
                 let json = this.response;
                 console.log(json);
