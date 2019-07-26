@@ -429,10 +429,15 @@ form.checkout.woocommerce-checkout {
   padding: 0 114px;
 }
 form.checkout.woocommerce-checkout .col2-set {
-  width: 65%;
-  padding-right: 100px;
+  width: 100%;
+  padding-right: 0;
   box-sizing: border-box;
   margin-right: 0;
+  display: flex;
+}
+form.checkout.woocommerce-checkout .col2-set .col-1 {
+  width: 65%;
+  padding-right: 100px;
 }
 form.checkout.woocommerce-checkout #order_review_heading,
 form.checkout.woocommerce-checkout .woocommerce-shipping-fields {
@@ -440,6 +445,7 @@ form.checkout.woocommerce-checkout .woocommerce-shipping-fields {
 }
 form.checkout.woocommerce-checkout #order_review {
   width: 35%;
+  padding-top: 90px;
 }
 form.checkout.woocommerce-checkout #order_review table.woocommerce-checkout-review-order-table {
   line-height: unset;
