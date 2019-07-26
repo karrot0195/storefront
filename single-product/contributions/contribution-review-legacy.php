@@ -56,8 +56,7 @@ $rating_enabled = $rating && wc_review_ratings_enabled();
 				<h3 class="contribution-title review-title">
 
 					<?php if ( $rating_enabled ) : ?>
-
-						<span itemprop="reviewRating" itemscope itemtype="http://schema.org/Rating" class="star-rating" title="<?php echo esc_attr( sprintf( __( 'Rated %d out of 5', 'woocommerce-product-reviews-pro' ), $rating ) ); ?>">
+						<span> itemprop="reviewRating" itemscope itemtype="http://schema.org/Rating" class="star-rating" title="<?php echo esc_attr( sprintf( __( 'Rated %d out of 5', 'woocommerce-product-reviews-pro' ), $rating ) ); ?>">
 							<span style="width:<?php echo esc_attr( ( $rating / 5 ) * 100 ); ?>%;">
 								<?php /* translators: Placeholder: %d contribution rating */
 								printf( __( '<strong itemprop="ratingValue">%d</strong> out of 5', 'woocommerce-product-reviews-pro' ), esc_attr( $rating ) ) ; ?>

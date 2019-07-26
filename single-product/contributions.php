@@ -303,3 +303,9 @@ $total_rating_count = $product->get_rating_count();
 	</noscript>
 
 </div>
+
+<style>
+	.storefront-product-detail #reviews .commentlist li .comment_container .comment-text .star-rating{
+		width: 75px;
+	}
+</style>
