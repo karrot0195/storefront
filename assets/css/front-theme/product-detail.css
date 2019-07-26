@@ -407,6 +407,9 @@
 .storefront-product-detail .review-rate .part-2 {
   padding-right: 5px;
 }
+.storefront-product-detail #reviews .commentlist li.comment-author-admin p.meta .woocommerce-review__author {
+  font-size: 0;
+}
 .storefront-product-detail #reviews .commentlist li p.meta {
   text-align: left;
   margin: 0;
