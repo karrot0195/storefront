@@ -531,6 +531,17 @@ body.page-template-about-us .wrap-storefront-breadcrumb {
   background: #0f1972;
   color: #ffffff;
 }
+.woocommerce-edit-address .select2-container--default .select2-selection--single {
+  height: 44px;
+  border: solid 1px #d7d7d7;
+}
+.woocommerce-edit-address .select2-container--default .select2-selection--single .select2-selection__rendered {
+  line-height: 44px;
+}
+.woocommerce-edit-address .select2-container--default .select2-selection--single .select2-selection__arrow {
+  top: 50%;
+  transform: translateY(-50%);
+}
 .woocommerce-order-received {
   color: #2a2a2a;
 }
@@ -548,6 +559,7 @@ body.page-template-about-us .wrap-storefront-breadcrumb {
 }
 .woocommerce-order-received .woocommerce-order ul.order_details {
   margin: 55px 0;
+  padding-left: 0;
 }
 .woocommerce-order-received .woocommerce-order ul.order_details::before {
   position: unset;
