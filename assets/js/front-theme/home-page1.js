@@ -312,7 +312,7 @@
   });
 
 
-  $(".block-like").on('click touchstart', function(){
+  $(".block-like").on('click', function(){
     $(this).toggleClass('is_animating');
   });
   
