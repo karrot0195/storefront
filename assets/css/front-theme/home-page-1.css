@@ -2529,6 +2529,7 @@ td .wrap-size i {
   td .wrap-size i {
     right: auto;
     left: 48px;
+    margin-top: 6px;
   }
 }
 td .wrap-size .sl-attr-size {

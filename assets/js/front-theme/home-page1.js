@@ -532,7 +532,7 @@ jQuery('.quantity').each(function() {
   $('.btn-readmore').on('click', function(){
     $('.wrap-description').toggleClass('show');
     if($('.wrap-description').hasClass('show')) {
-      $(this).text('Less More');
+      $(this).text('Close');
     }
     else {
       $(this).text('Read More')
