@@ -74,7 +74,7 @@ if ( $show_downloads ) {
 					<div class="tr">
 						<div class="th" scope="row"><?php echo $total['label']; ?></div>
 						<div class="td"><?php echo ( 'payment_method' === $key ) ? esc_html( $total['value'] ) : $total['value']; ?></div>
-					</tr>
+				</div>
 					<?php
 				}
 			?>
