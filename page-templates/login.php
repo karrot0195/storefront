@@ -7,6 +7,7 @@ if(!session_id()) {
 }
 
 if (isset($_POST['email']) && isset($_POST['password'])) {
+    require_once (ABSPATH . 'wp-includes/class-phpass.php');
     $result = [
         'error' => true,
         'mss' => ''
@@ -28,7 +29,13 @@ if (isset($_POST['email']) && isset($_POST['password'])) {
         wp_set_current_user ( $user->data->ID );
         wp_set_auth_cookie  ( $user->data->ID );
     } else {
-        $result['mss'] = 'Invalid login!';
+        if (empty($user)) {
+            $result['mss'] = 'Email does not exist!';
+            $result['field'] = 'email';
+        } else {
+            $result['mss'] = 'Incorrect password';
+            $result['field'] = 'password';
+        }
     }
 
     header('Content-Type: application/json');
@@ -68,13 +75,15 @@ get_header('home-1');
                             </div>
                         </div>
                         <div class="wrap-form login-form"> 
-                            <div class="email-wrapper">
+                            <div class="email-wrapper wrap-field">
                                 <label>Email Address</label>
                                 <input type="text" name="email" id="email" value="" />
+                                <span class="error"></span>
                             </div>
-                            <div class="password-wrapper">
+                            <div class="password-wrapper wrap-field">
                                 <label>Password</label>
                                 <input type="password" name="password" id="password" value="" />
+                                <span class="error"></span>
                             </div>
                             <p class="fg-pass js-switch-from" data-form="forgot-form" style="cursor: pointer;">Forgot Password?</p>
                             <button class="btn-login" onClick="loginForm()">Login</button>
@@ -144,8 +153,10 @@ get_header('home-1');
             formData.append('password', password);
             let request = new XMLHttpRequest();
             request.responseType = 'json';
+
             request.onload = function() {
                 let json = this.response;
+                console.log(json);
                 if (!json.error) {
                     if (json['cb']) {
                         window.location.href = json['cb'];
@@ -153,7 +164,12 @@ get_header('home-1');
                         window.location.reload();
                     }
                 } else { 
-                    alert(json.mss);
+                    if (json['field']) {
+                        jQuery(`.login-form .wrap-field .error`).html('');
+                        jQuery(`.login-form .${json['field']}-wrapper .error`).html(json['mss']);
+                    } else {
+                        alert(json['mss']);
+                    }
                 }
             };
             request.open("POST", "");

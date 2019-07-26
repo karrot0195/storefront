@@ -353,6 +353,7 @@
   text-align: left;
   color: #777777;
   padding-top: 10px;
+  min-width: 100px;
 }
 .storefront-product-detail #reviews .commentlist li .comment_container .comment-text .star-rating {
   float: none;
@@ -587,6 +588,7 @@
   max-height: 90%;
 }
 .storefront-product-detail #review_form_wrapper .close {
+  position: -webkit-sticky;
   position: sticky;
   top: 0;
   right: 0;
@@ -872,7 +874,7 @@
   cursor: pointer;
   height: 50px;
   width: 50px;
-  background-image: url('https://abs.twimg.com/a/1446542199/img/t1/web_heart_animation.png');
+  background-image: url('https://cssanimation.rocks/images/posts/steps/heart.png');
   background-position: left;
   background-repeat: no-repeat;
   background-size: 2900%;
@@ -881,12 +883,16 @@
   width: 40px;
   height: 40px;
 }
-.block-like:hover,
 .block-like.bookmark {
   background-position: right;
 }
 .is_animating {
   animation: heart-burst 0.8s steps(28) 1;
+}
+@media screen and (max-width: 767px) {
+  .is_animating {
+    animation: heart-burst 0.5s steps(28) 1;
+  }
 }
 @keyframes heart-burst {
   from {
@@ -1224,7 +1230,7 @@
 }
 @media screen and (max-width: 767px) {
   .storefront-product-detail .wrap-product-item .fm-sl-cart .block-number {
-    width: 4px;
+    width: 20px;
   }
 }
 @keyframes anim-effect-jelena {
@@ -1484,6 +1490,7 @@
   border: none;
   font-size: 16px;
   cursor: pointer;
+  outline: none;
 }
 .home-page-1 .woocommerce #reviews #comments ol.commentlist li .contribution-actions a,
 .home-page-1 .woocommerce-page #reviews #comments ol.commentlist li .contribution-actions a,

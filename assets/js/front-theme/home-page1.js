@@ -37,6 +37,8 @@
       $('.woocommerce-MyAccount-navigation ul').slideToggle(300);
       $(this).find('i').toggleClass('tab-click');
     });
+
+   
   });
 
   // Control 1 product on mobile
@@ -95,9 +97,17 @@
   $(window).scroll(function(){
     var sticky = $('.site-header'),
         scroll = $(window).scrollTop();
-  
-    if (scroll >=120) sticky.addClass('fixed');
-    else sticky.removeClass('fixed');
+        var w = $(window).height();
+        console.log(w);
+        var d = $(document).height();
+        console.log(d);
+        if(d > w + 120){
+          if (scroll >=120) {
+            sticky.addClass('fixed');
+          } else 
+            sticky.removeClass('fixed');
+        }
+   
   });
 
 
@@ -312,7 +322,7 @@
   });
 
 
-  $(".block-like").on('click touchstart', function(){
+  $(".block-like").on('click', function(){
     $(this).toggleClass('is_animating');
   });
   
@@ -444,6 +454,19 @@
       });
     }
 
+  // SHOW PROMO CODE
+  var windowwidth = $(window).width();
+  if(windowwidth > 767 ){
+    $('.add-link').click(function(){
+      $(this).parents('.coupon').addClass('coupon-click');
+    });
+  } else{
+    $('.add-link').click(function(){
+      $(this).parents('.actions').addClass('actions-click');
+    });
+  }
+
+
   // [ABOUT US] SLICK SLIDER
   $ ('.slider').slick({
     autoplay: true,
@@ -535,7 +558,7 @@ jQuery('.quantity').each(function() {
   $('.btn-readmore').on('click', function(){
     $('.wrap-description').toggleClass('show');
     if($('.wrap-description').hasClass('show')) {
-      $(this).text('Less More');
+      $(this).text('Close');
     }
     else {
       $(this).text('Read More')

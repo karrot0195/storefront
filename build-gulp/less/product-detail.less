@@ -340,6 +340,7 @@
     text-align: left;
     color: #777777;
     padding-top: 10px;
+    min-width: 100px;
   }
   #reviews .commentlist li .comment_container .comment-text .star-rating {
     float: none;
@@ -559,6 +560,7 @@
     left: 50%;
     max-height: 90%;
     .close {
+      position: -webkit-sticky;
       position: sticky;
       top: 0;
       right: 0;
@@ -839,7 +841,7 @@
   cursor: pointer;
   height: 50px;
   width: 50px;
-  background-image:url( 'https://abs.twimg.com/a/1446542199/img/t1/web_heart_animation.png');
+  background-image:url('https://cssanimation.rocks/images/posts/steps/heart.png');
   background-position: left;
   background-repeat:no-repeat;
   background-size:2900%;
@@ -851,12 +853,17 @@
 }
 
 // [ NOT EDIT ]
-.block-like:hover, .block-like.bookmark {
+
+.block-like.bookmark {
   background-position:right;
+
 }
 
 .is_animating {
-  animation: heart-burst .8s steps(28) 1;
+  animation: heart-burst 0.8s steps(28) 1;
+  @media screen and (max-width: 767px){
+    animation: heart-burst 0.5s steps(28) 1;
+  }
 }
 
 @keyframes heart-burst {
@@ -1203,7 +1210,7 @@
 }
 @media screen and (max-width: 767px){
   .storefront-product-detail .wrap-product-item .fm-sl-cart .block-number{
-    width: 4px;
+    width: 20px;
   }
 }
 
@@ -1450,6 +1457,7 @@
         border: none;
         font-size: 16px;
         cursor: pointer;
+        outline: none;
       }
     }
 }
