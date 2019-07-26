@@ -2516,7 +2516,6 @@ td .wrap-size {
 @media screen and (max-width: 767px) {
   td .wrap-size {
     justify-content: flex-end;
-    margin-top: 10px;
   }
 }
 td .wrap-size i {
@@ -2543,6 +2542,7 @@ td .wrap-size .sl-attr-size {
 @media screen and (max-width: 767px) {
   td .wrap-size .sl-attr-size {
     font-size: 14px;
+    margin-top: 10px;
   }
 }
 .shop_table select {
