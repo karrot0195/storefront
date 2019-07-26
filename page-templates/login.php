@@ -152,6 +152,7 @@ get_header('home-1');
             formData.append('password', password);
             let request = new XMLHttpRequest();
             request.responseType = 'json';
+            
             request.onload = function() {
                 let json = this.response;
                 console.log(json);
