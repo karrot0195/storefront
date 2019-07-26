@@ -2885,6 +2885,11 @@ table th {
 .menu-shop{
   display: none;
 }
+.home-page-1 .page-wishlist {
+  ul.products .loop-main-product{
+    display: block;
+  }
+}
 @media screen and (max-width: 992px){
   .home-page-1 .site-header .col-full .menu-mobile .site-branding{
     display: block;
@@ -3072,6 +3077,12 @@ table th {
   }
 }
 
+.page-wishlist .container >.container{
+  @media screen and (max-width: 767px){
+    padding-left: 0;
+  }
+}
+
 .site-main.page-wishlist ul.products.columns-4 li.product {
   margin-right: 1%;
   margin-left: 1%;
@@ -3084,7 +3095,8 @@ table th {
     -webkit-transition:  all 0.3s ease;
     @media screen and (max-width: 767px) {
       border-radius: 7.5px;
-      width: auto;
+      width: calc(50% - 10px);
+      display: inline-block;
       box-shadow: 2.2px 11.3px 19.3px 1.7px rgba(0, 0, 1, 0.12);
       background-color: #ffffff;
       margin-bottom: 30px;
