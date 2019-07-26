@@ -590,17 +590,31 @@ body.page-template-about-us .wrap-storefront-breadcrumb{
             margin: 55px 0;
             .order_details{
                 background: transparent;
-                th{
-                    line-height: unset;
-                }
+               
                 thead{
-                    border-bottom: 1px solid #eaeaea;
+                    th{
+                        line-height: unset;
+                        padding-bottom: 25px;
+                        border-bottom: 1px solid #eaeaea;
+                        text-transform: uppercase;
+                        font-family: "Barlow";
+                    }
+                }
+                tbody{
+                    td{
+                        border-bottom: 1px solid #eaeaea;
+                    }
                 }
             }
         }
         h2{
             font-size: 26px;
-            margin: 0 0 40px;
+        }
+        .woocommerce-thankyou-order-details__title{
+            margin: 0 0 60px;
+        }
+        .woocommerce-order-details__title{
+            margin: 0 0 30px;
         }
     }
 }
