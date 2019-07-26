@@ -584,9 +584,20 @@ table.woocommerce-checkout-review-order-table{
       display: flex;
       img{
         float: none;
+        padding: 4px 10px !important;
+        border: 1px solid #ececec;
+        border-radius: 4px;
+        max-width: 30px !important;
+        margin-left: 10px !important;
+        @media screen and (max-width: 767px){
+          margin-top: 20px !important;
+        }
       }
       img.stripe-visa-icon{
-        padding-left: 10px;
+        margin-left: 20px !important;
+        @media screen and (max-width: 767px){
+          margin-left: 0 !important;
+        }
       }
     }
   }
@@ -841,9 +852,7 @@ table.woocommerce-checkout-review-order-table{
     width: 40%;
   }
 }
-#payment.woocommerce-checkout-payment ul li.wc_payment_method label img{
-  padding-right: 10px;
-}
+
 
 body table.shop_table_responsive tr td[data-title]::before{
   font-weight: normal;
