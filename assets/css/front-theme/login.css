@@ -703,6 +703,9 @@ body.page-template-about-us .wrap-storefront-breadcrumb {
 .woocommerce .woocommerce-info.woo-coupon {
   margin-bottom: 50px;
 }
+.woocommerce .woocommerce-form-coupon {
+  margin: 0 115px;
+}
 /*==================== RESPONSIVE ====================*/
 @media screen and (max-width: 767px) {
   .woocommerce-order-received .woocommerce-order .woocommerce-thankyou-order-received {
