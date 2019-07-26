@@ -573,6 +573,7 @@ body.page-template-about-us .wrap-storefront-breadcrumb {
   border: 1px solid #eaeaea;
   border-bottom: 0;
   font-size: 16px;
+  padding: 35px;
 }
 .woocommerce-order-received .woocommerce-order ul.order_details li strong {
   margin-top: 15px;
@@ -602,6 +603,9 @@ body.page-template-about-us .wrap-storefront-breadcrumb {
 }
 .woocommerce-order-received .woocommerce-order .woocommerce-order-details .order_details th {
   line-height: unset;
+}
+.woocommerce-order-received .woocommerce-order .woocommerce-order-details .order_details thead {
+  border-bottom: 1px solid #eaeaea;
 }
 .woocommerce-order-received .woocommerce-order h2 {
   font-size: 26px;
