@@ -64,7 +64,7 @@ $total_rating_count = $product->get_rating_count();
 				 * @param \WC_Product $product the product object
 				 * 
 				 */
-				$average_rating = max( 0, (float) apply_filters( 'wc_product_reviews_pro_product_rating_average', $product->get_rating_count(), $product ) );
+				$average_rating = max( 0, (float) apply_filters( 'wc_product_reviews_pro_product_rating_average', $product->get_average_rating(), $product ) );
 				$reviews_count  = max( 0, wc_product_reviews_pro_get_contributions_count( $product, 'review' ) );
 
 				/* translators: Placeholders: %s - average rating stars count (float casted as string to avoid trailing zeroes), %d - 5 stars total (integer) -- (e.g "4.2 out of 5 stars") */
