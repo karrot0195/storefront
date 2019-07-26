@@ -716,12 +716,16 @@ body.page-template-about-us .wrap-storefront-breadcrumb {
 }
 .woocommerce .woocommerce-form-coupon .form-coup-wr {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
 }
 .woocommerce .woocommerce-form-coupon .form-coup-wr p {
   float: none;
   width: 320px;
   margin-bottom: 0;
+}
+.woocommerce .woocommerce-form-coupon .form-coup-wr p.form-row-last {
+  width: 140px;
+  margin-left: -200px;
 }
 .woocommerce .woocommerce-form-coupon p input {
   height: 44px;
