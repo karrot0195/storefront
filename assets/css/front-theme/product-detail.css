@@ -430,6 +430,7 @@
   background: none;
   font-family: "Barlow-m";
   padding: 0;
+  white-space: normal;
 }
 @media screen and (max-width: 767px) {
   .storefront-product-detail #reviews .commentlist li p.meta .woocommerce-review__author .contribution-badge {
@@ -498,8 +499,11 @@
   display: flex;
   width: 100%;
 }
+.storefront-product-detail #reviews .commentlist li .comment_container .comment-text .wrap-comment-left {
+  width: 200px;
+}
 .storefront-product-detail #reviews .commentlist li .comment_container .comment-text .wrap-comment-right {
-  margin-left: 140px;
+  margin-left: 175px;
 }
 @media screen and (max-width: 480px) {
   .storefront-product-detail #reviews .commentlist li .comment_container .comment-text {
@@ -755,13 +759,13 @@
 }
 .storefront-product-detail .wrap-additional_information {
   clear: both;
-  flex-basis: 15em;
+  flex-basis: 25em;
 }
 .storefront-product-detail .wrap-container-description {
   display: flex;
   clear: both;
   z-index: 1;
-  padding: 60px 30px;
+  padding: 60px 30px 30px 92px;
   position: relative;
 }
 @media screen and (max-width: 768px) {
