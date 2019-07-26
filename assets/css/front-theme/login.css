@@ -561,9 +561,47 @@ body.page-template-about-us .wrap-storefront-breadcrumb {
   margin: 55px 0;
   padding-left: 0;
   background: transparent;
+  width: 35%;
+  float: left;
+  box-sizing: border-box;
+  border: 1px solid #eaeaea;
+  border-radius: 4px;
 }
-.woocommerce-order-received .woocommerce-order ul.order_details::before {
+.woocommerce-order-received .woocommerce-order ul.order_details::before,
+.woocommerce-order-received .woocommerce-order ul.order_details::after {
   display: none;
+}
+.woocommerce-order-received .woocommerce-order ul.order_details li {
+  border: 1px solid #eaeaea;
+  border-bottom: 0;
+  font-size: 16px;
+}
+.woocommerce-order-received .woocommerce-order ul.order_details li strong {
+  margin-top: 15px;
+  font-size: 18px;
+}
+.woocommerce-order-received .woocommerce-order ul.order_details li strong span {
+  font-weight: bold;
+}
+.woocommerce-order-received .woocommerce-order ul.order_details li.woocommerce-order-overview__order {
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}
+.woocommerce-order-received .woocommerce-order ul.order_details li.woocommerce-order-overview__payment-method {
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+  border-bottom: 1px solid #eaeaea;
+}
+.woocommerce-order-received .woocommerce-order .woocommerce-order-details {
+  width: 65%;
+  float: right;
+  padding-left: 150px;
+  box-sizing: border-box;
+  margin: 55px 0;
+}
+.woocommerce-order-received .woocommerce-order h2 {
+  font-size: 26px;
+  margin: 0;
 }
 /*==================== RESPONSIVE ====================*/
 @media screen and (max-width: 767px) {
