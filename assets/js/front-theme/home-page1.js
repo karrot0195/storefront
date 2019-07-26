@@ -167,7 +167,7 @@
         breakpoint: 600,
         settings: {
           slidesToShow: 3,
-          slidesToScroll: 1,
+          slidesToScroll: 2,
           arrows: false,
           dots: true,
         }
@@ -176,7 +176,7 @@
         breakpoint: 480,
         settings: {
           slidesToShow: 3,
-          slidesToScroll: 1,
+          slidesToScroll: 2,
           arrows: false,
           dots: true,
         }
