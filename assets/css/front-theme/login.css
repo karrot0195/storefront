@@ -743,6 +743,10 @@ body.page-template-about-us .wrap-storefront-breadcrumb {
   .woocommerce-order-received .woocommerce-order .woocommerce-order-details .tfoot .tr:nth-child(3) .td {
     font-size: 14px;
   }
+  .woocommerce-order-received .woocommerce-order .woocommerce-order-details .tfoot .tr:nth-child(3) {
+    padding-bottom: 20px;
+    border-bottom: 2px solid #eaeaea;
+  }
   .login .login-wrapper {
     display: block;
     padding: 0 20px;
