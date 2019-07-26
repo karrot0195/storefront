@@ -596,7 +596,7 @@ body.page-template-about-us .wrap-storefront-breadcrumb {
   float: right;
   padding-left: 150px;
   box-sizing: border-box;
-  margin: 55px 0;
+  margin: 55px 0 200px;
 }
 .woocommerce-order-received .woocommerce-order .woocommerce-order-details .order_details {
   background: transparent;
