@@ -560,9 +560,10 @@ body.page-template-about-us .wrap-storefront-breadcrumb {
 .woocommerce-order-received .woocommerce-order ul.order_details {
   margin: 55px 0;
   padding-left: 0;
+  background: transparent;
 }
 .woocommerce-order-received .woocommerce-order ul.order_details::before {
-  position: unset;
+  display: none;
 }
 /*==================== RESPONSIVE ====================*/
 @media screen and (max-width: 767px) {
