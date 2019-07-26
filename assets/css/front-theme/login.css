@@ -734,13 +734,13 @@ body.page-template-about-us .wrap-storefront-breadcrumb {
     letter-spacing: 0;
     width: 40px;
   }
-  .woocommerce-order-received .woocommerce-order .woocommerce-order-details .order_details tfoot th,
-  .woocommerce-order-received .woocommerce-order .woocommerce-order-details .order_details tfoot td {
+  .woocommerce-order-received .woocommerce-order .woocommerce-order-details .tfoot .th,
+  .woocommerce-order-received .woocommerce-order .woocommerce-order-details .tfoot .td {
     font-size: 14px;
     padding-top: 20px;
   }
-  .woocommerce-order-received .woocommerce-order .woocommerce-order-details .order_details tfoot tr:nth-child(2) td,
-  .woocommerce-order-received .woocommerce-order .woocommerce-order-details .order_details tfoot tr:nth-child(3) td {
+  .woocommerce-order-received .woocommerce-order .woocommerce-order-details .tfoot .tr:nth-child(2) .td,
+  .woocommerce-order-received .woocommerce-order .woocommerce-order-details .tfoot .tr:nth-child(3) .td {
     font-size: 14px;
   }
   .login .login-wrapper {
