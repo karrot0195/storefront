@@ -98,9 +98,7 @@
     var sticky = $('.site-header'),
         scroll = $(window).scrollTop();
         var w = $(window).height();
-        console.log(w);
         var d = $(document).height();
-        console.log(d);
         if(d > w + 120){
           if (scroll >=120) {
             sticky.addClass('fixed');
@@ -458,11 +456,18 @@
   var windowwidth = $(window).width();
   if(windowwidth > 767 ){
     $('.add-link').click(function(){
-      $(this).parents('.coupon').addClass('coupon-click');
+      $(this).parents('.coupon').toggleClass('coupon-click');
+      // $(this).parents('.coupon').fadeIn('');
+      if($(this).parents('.coupon').hasClass('coupon-click')){
+        $(this).html('Close');
+      } else $(this).html('Add it here');
     });
   } else{
     $('.add-link').click(function(){
-      $(this).parents('.actions').addClass('actions-click');
+      $(this).parents('.actions').toggleClass('actions-click');
+      if($(this).parents('.actions').hasClass('actions-click')){
+        $(this).html('Close');
+      } else $(this).html('Add it here');
     });
   }
 

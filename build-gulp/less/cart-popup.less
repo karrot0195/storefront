@@ -263,7 +263,7 @@ body {
         }
       }
       .form-add{
-        transform: scaleX(0);
+        display: none;
         margin-bottom: 0;
         transition: 0.3s all ease;
       }
@@ -294,10 +294,10 @@ body {
     }
     .coupon-click{
       display: flex;
-      flex-direction: column-reverse;
+      flex-direction: column;
       .form-add{
-        transform: scaleX(1);
         margin-bottom: 10px;
+        display: block;
       }
     }
     button{
@@ -937,10 +937,13 @@ body .wrap-storefront-breadcrumb{
     }
     .coupon{
       input{
-        width: 60%;
+        width: 50%;
+        flex-grow: 1;
       }
       button{
-        width: 50%;
+        width: 140px;
+        margin-left: 10px;
+        min-width: unset;
       }
     }
   }
@@ -1124,11 +1127,11 @@ body .wrap-storefront-breadcrumb{
   }
   .woocommerce-cart .woocommerce-cart-form.sp .actions{
     transition: 0.3s all ease;
+    position: relative;
     .coupon{
-      position: relative;
       .form-add{
         position: absolute;
-        width: 100vw;
+        width: 100%;
         bottom: -80px;
       }
     }
@@ -1137,7 +1140,7 @@ body .wrap-storefront-breadcrumb{
     margin-bottom: 120px;
     .coupon{
       .form-add{
-        transform: scaleX(1);
+        display: flex;
       }
     }
   }
