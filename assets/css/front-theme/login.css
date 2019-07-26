@@ -684,6 +684,10 @@ body.page-template-about-us .wrap-storefront-breadcrumb {
 .woocommerce-order-received .woocommerce-order .woocommerce-order-details__title {
   margin: 0 0 30px;
 }
+.woocommerce-order-received .wrap-block-to-shopping {
+  margin-left: 0;
+  clear: both;
+}
 /*==================== RESPONSIVE ====================*/
 @media screen and (max-width: 767px) {
   .woocommerce-order-received .woocommerce-order .woocommerce-thankyou-order-received {
@@ -748,7 +752,7 @@ body.page-template-about-us .wrap-storefront-breadcrumb {
     border-bottom: 2px solid #eaeaea;
   }
   .woocommerce-order-received .woocommerce-order .woocommerce-order-details .tfoot {
-    margin-bottom: 70px;
+    margin-bottom: 90px;
   }
   .login .login-wrapper {
     display: block;
