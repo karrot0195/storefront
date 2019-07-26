@@ -688,6 +688,13 @@ body.page-template-about-us .wrap-storefront-breadcrumb {
   margin-left: 0;
   clear: both;
 }
+.woocommerce .woocommerce-info {
+  background-color: #c5ecfb;
+  color: #2a2a2a;
+}
+.woocommerce .woocommerce-info a {
+  color: #2a2a2a;
+}
 /*==================== RESPONSIVE ====================*/
 @media screen and (max-width: 767px) {
   .woocommerce-order-received .woocommerce-order .woocommerce-thankyou-order-received {
