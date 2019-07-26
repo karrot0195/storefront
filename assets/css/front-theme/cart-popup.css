@@ -318,6 +318,7 @@ body {
   color: #fefefe;
   font-size: 16px;
   cursor: pointer;
+  line-height: 22px;
 }
 .home-page-1 table tbody td {
   background: #ffffff;
@@ -1083,19 +1084,23 @@ body .wrap-storefront-breadcrumb span {
   .woocommerce-cart .woocommerce-cart-form.sp .actions .coupon .form-add {
     position: absolute;
     width: 100%;
-    bottom: -70px;
+    bottom: 0;
     height: auto;
-    transform: scaleY(1);
-    display: none;
+    transform: scale(1);
+    display: flex;
+    opacity: 0;
+    z-index: -1;
   }
   .woocommerce-cart .woocommerce-cart-form.sp .actions-click {
     margin-bottom: 120px;
     transition: 0.3s all ease;
   }
   .woocommerce-cart .woocommerce-cart-form.sp .actions-click .coupon .form-add {
-    display: flex;
     height: auto;
-    transform: scaleY(1);
+    bottom: -70px;
+    opacity: 1;
+    z-index: 1;
+    width: 100%;
   }
 }
 .home-page-1 table.shop_table_responsive tbody th {

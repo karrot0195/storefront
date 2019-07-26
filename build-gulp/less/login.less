@@ -463,6 +463,59 @@ body.page-template-about-us .wrap-storefront-breadcrumb{
         display: block;
     }
 }
+.cart-empty,
+.return-to-shop{
+    margin-left: 0.75rem;
+    margin-right: 0.75rem;
+    @media screen and (min-width: 576px){
+        max-width: 540px;
+    }
+    @media screen and (min-width: 768px){
+        max-width: 720px;
+    }
+    @media screen and (min-width: 992px){
+        max-width: 960px;
+    }
+    @media screen and (min-width: 1200px){
+        max-width: 1200px;
+    }
+    @media screen and (min-width: 1560px){
+        max-width: 1600px;
+    }
+    @media screen and (min-width: 1025px){
+        padding-left: 115px;
+    }
+  
+}
+.cart-empty,
+.return-to-shop{
+    color: #2a2a2a;
+    a{
+        height: 44px;
+        width: 200px;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 22px;
+        text-decoration: none;
+        background: #0f1972;
+        color: #ffffff;
+        font-size: 16px;
+        &:hover{
+            background: #0f1972;
+            color: #ffffff;
+        }
+    }
+    @media screen and (max-width: 767px){
+        text-align: center;
+    }
+}
+.return-to-shop{
+    margin-top: 30px;
+}
+.home-page-1 table.shop_table_responsive tr td.contribution-date{
+    text-align: left;
+}
 /*==================== RESPONSIVE ====================*/
 @media screen and (max-width: 767px){
 
