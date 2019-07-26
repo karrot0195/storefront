@@ -647,6 +647,9 @@ body.page-template-about-us .wrap-storefront-breadcrumb {
   padding-top: 30px;
   font-size: 18px;
 }
+.woocommerce-order-received .woocommerce-order .woocommerce-order-details .order_details tfoot td {
+  text-align: right;
+}
 .woocommerce-order-received .woocommerce-order .woocommerce-order-details .order_details tfoot tr:nth-child(2) td,
 .woocommerce-order-received .woocommerce-order .woocommerce-order-details .order_details tfoot tr:nth-child(3) td {
   font-size: 16px;
