@@ -3231,6 +3231,11 @@ table th {
   .site-main.page-wishlist ul.products.columns-4 .related-slider li.product {
     background-color: transparent;
   }
+  .home-page-1 ul.products li.product .woocommerce-loop-product__title {
+    display: block;
+    height: 40px;
+    line-height: 19px;
+  }
 }
 @media screen and (max-width: 375px) {
   .info-page .info-page-left a {
