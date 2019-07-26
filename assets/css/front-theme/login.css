@@ -612,7 +612,7 @@ body.page-template-about-us .wrap-storefront-breadcrumb {
   font-family: "Barlow";
 }
 .woocommerce-order-received .woocommerce-order .woocommerce-order-details .order_details thead th.product-name {
-  width: 400px;
+  width: 350px;
 }
 .woocommerce-order-received .woocommerce-order .woocommerce-order-details .order_details thead th.product-total {
   text-align: right;
