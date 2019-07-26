@@ -691,7 +691,7 @@ body.page-template-about-us .wrap-storefront-breadcrumb {
 .woocommerce .container {
   clear: both;
 }
-.woocommerce .woocommerce-error {
+.woocommerce .woo-coupon + .woocommerce-error {
   margin: 20px 115px 0;
 }
 .woocommerce .woocommerce-info {
@@ -764,7 +764,7 @@ body.page-template-about-us .wrap-storefront-breadcrumb {
 }
 /*==================== RESPONSIVE ====================*/
 @media screen and (max-width: 767px) {
-  .woocommerce .woocommerce-error {
+  .woocommerce .woo-coupon + .woocommerce-error {
     margin: 10px 0 0;
   }
   .woocommerce .woocommerce-form-coupon .form-coup-wr {
