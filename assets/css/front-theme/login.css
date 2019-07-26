@@ -688,6 +688,9 @@ body.page-template-about-us .wrap-storefront-breadcrumb {
   margin-left: 0;
   clear: both;
 }
+.woocommerce .container {
+  clear: both;
+}
 .woocommerce .woocommerce-info {
   background-color: #c5ecfb;
   color: #2a2a2a;
@@ -703,9 +706,6 @@ body.page-template-about-us .wrap-storefront-breadcrumb {
 }
 .woocommerce .woocommerce-info.woo-return {
   margin-bottom: 20px;
-}
-.woocommerce .woo-coupon .woocommerce-info {
-  margin-bottom: 50px;
 }
 .woocommerce .woocommerce-form-coupon {
   margin: 0 115px;

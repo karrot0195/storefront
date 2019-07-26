@@ -374,14 +374,14 @@ table.cart td.product-quantity .quantity input[type=number]::-webkit-outer-spin-
 /* Bill */
 .woocommerce-billing-fields h3 {
   font-family: "Barlow-m";
-  font-size: 21px;
+  font-size: 26px;
   font-weight: 500;
   font-style: normal;
   font-stretch: normal;
   letter-spacing: 0.28px;
   text-align: left;
   color: #2a2a2a;
-  margin: 0 0 80px;
+  margin: 50px 0 80px;
 }
 .woocommerce-billing-fields__field-wrapper .form-row label {
   font-family: "Barlow";
