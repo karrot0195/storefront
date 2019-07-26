@@ -2474,9 +2474,6 @@ body.disable .home-page-1 .site-header {
   width: 40px;
   height: 40px;
 }
-.block-like:hover {
-  background-position: right;
-}
 .is_animating {
   animation: heart-burst 0.8s steps(28) 1;
 }
