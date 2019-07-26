@@ -640,6 +640,10 @@ body.page-template-about-us .wrap-storefront-breadcrumb {
 .woocommerce-order-received .woocommerce-order .woocommerce-order-details .tfoot {
   font-size: 18px;
 }
+.woocommerce-order-received .woocommerce-order .woocommerce-order-details .tfoot .tr {
+  display: flex;
+  justify-content: space-between;
+}
 .woocommerce-order-received .woocommerce-order .woocommerce-order-details .tfoot .th,
 .woocommerce-order-received .woocommerce-order .woocommerce-order-details .tfoot .td {
   line-height: unset;
@@ -650,12 +654,12 @@ body.page-template-about-us .wrap-storefront-breadcrumb {
 .woocommerce-order-received .woocommerce-order .woocommerce-order-details .tfoot .td {
   text-align: right;
 }
-.woocommerce-order-received .woocommerce-order .woocommerce-order-details .tfoot .tr:nth-child(2) td,
-.woocommerce-order-received .woocommerce-order .woocommerce-order-details .tfoot .tr:nth-child(3) td {
+.woocommerce-order-received .woocommerce-order .woocommerce-order-details .tfoot .tr:nth-child(2) .td,
+.woocommerce-order-received .woocommerce-order .woocommerce-order-details .tfoot .tr:nth-child(3) .td {
   font-size: 16px;
 }
-.woocommerce-order-received .woocommerce-order .woocommerce-order-details .tfoot .tr:nth-child(2) td small,
-.woocommerce-order-received .woocommerce-order .woocommerce-order-details .tfoot .tr:nth-child(3) td small {
+.woocommerce-order-received .woocommerce-order .woocommerce-order-details .tfoot .tr:nth-child(2) .td small,
+.woocommerce-order-received .woocommerce-order .woocommerce-order-details .tfoot .tr:nth-child(3) .td small {
   display: none;
 }
 .woocommerce-order-received .woocommerce-order .woocommerce-order-details .tfoot .tr:nth-child(4) .td,
