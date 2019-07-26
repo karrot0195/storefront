@@ -587,6 +587,7 @@
   max-height: 90%;
 }
 .storefront-product-detail #review_form_wrapper .close {
+  position: -webkit-sticky;
   position: sticky;
   top: 0;
   right: 0;
