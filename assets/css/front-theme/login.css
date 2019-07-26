@@ -692,6 +692,7 @@ body.page-template-about-us .wrap-storefront-breadcrumb {
   background-color: #c5ecfb;
   color: #2a2a2a;
   margin: 0 115px;
+  border-left: 0.61804697em solid #0f1972;
 }
 .woocommerce .woocommerce-info a {
   color: #2a2a2a;
