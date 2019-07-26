@@ -23,6 +23,7 @@ if ( ! wc_coupons_enabled() ) { // @codingStandardsIgnoreLine.
 
 ?>
 <?php if (!is_user_logged_in()): ?>
+<div class="container">
 <div class="woocommerce-form-coupon-toggle">
 	<div class="woocommerce-info">
 		Returning customer? <a href="<?= home_url('login?cb='.home_url('checkout')) ?>" >Click here to login</a>	
@@ -49,3 +50,4 @@ if ( ! wc_coupons_enabled() ) { // @codingStandardsIgnoreLine.
 
 	<div class="clear"></div>
 </form>
+</div>
