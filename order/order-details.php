@@ -66,26 +66,26 @@ if ( $show_downloads ) {
 			do_action( 'woocommerce_order_details_after_order_table_items', $order );
 			?>
 		</tbody>
-
-		<tfoot>
+		</table>
+		<div class="tfoot">
 			<?php
 				foreach ( $order->get_order_item_totals() as $key => $total ) {
 					?>
-					<tr>
-						<th scope="row"><?php echo $total['label']; ?></th>
-						<td><?php echo ( 'payment_method' === $key ) ? esc_html( $total['value'] ) : $total['value']; ?></td>
+					<div class="tr">
+						<div class="th" scope="row"><?php echo $total['label']; ?></div>
+						<div class="td"><?php echo ( 'payment_method' === $key ) ? esc_html( $total['value'] ) : $total['value']; ?></div>
 					</tr>
 					<?php
 				}
 			?>
 			<?php if ( $order->get_customer_note() ) : ?>
-				<tr>
-					<th><?php _e( 'Note:', 'woocommerce' ); ?></th>
-					<td><?php echo wptexturize( $order->get_customer_note() ); ?></td>
-				</tr>
+				<div class="tr">
+					<div class="th"><?php _e( 'Note:', 'woocommerce' ); ?></div>
+					<div class="td"><?php echo wptexturize( $order->get_customer_note() ); ?></div>
+			</div>
 			<?php endif; ?>
-		</tfoot>
-	</table>
+			</div>
+
 
 	<?php do_action( 'woocommerce_order_details_after_order_table', $order ); ?>
 </section>
