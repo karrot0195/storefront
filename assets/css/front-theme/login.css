@@ -576,11 +576,8 @@ body.page-template-about-us .wrap-storefront-breadcrumb {
   padding: 35px;
 }
 .woocommerce-order-received .woocommerce-order ul.order_details li strong {
-  margin-top: 15px;
-  font-size: 18px;
-}
-.woocommerce-order-received .woocommerce-order ul.order_details li strong span {
-  font-weight: bold;
+  font-weight: normal;
+  font-family: "Barlow-m";
 }
 .woocommerce-order-received .woocommerce-order ul.order_details li.woocommerce-order-overview__order {
   border-top-left-radius: 6px;
@@ -663,6 +660,8 @@ body.page-template-about-us .wrap-storefront-breadcrumb {
 }
 .woocommerce-order-received .woocommerce-order h2 {
   font-size: 26px;
+  font-weight: normal;
+  font-family: "Barlow-m";
 }
 .woocommerce-order-received .woocommerce-order .woocommerce-thankyou-order-details__title {
   margin: 0 0 60px;
