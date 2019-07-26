@@ -753,6 +753,15 @@ body.page-template-about-us .wrap-storefront-breadcrumb {
 }
 /*==================== RESPONSIVE ====================*/
 @media screen and (max-width: 767px) {
+  .woocommerce .woocommerce-info {
+    margin: auto;
+  }
+  .woocommerce .woocommerce-info.woo-return {
+    margin-bottom: 10px;
+  }
+  .woocommerce .woocommerce-form-coupon {
+    margin: auto;
+  }
   .woocommerce-order-received .woocommerce-order .woocommerce-thankyou-order-received {
     font-size: 20px;
   }
