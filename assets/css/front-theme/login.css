@@ -605,7 +605,7 @@ body.page-template-about-us .wrap-storefront-breadcrumb {
 }
 .woocommerce-order-received .woocommerce-order h2 {
   font-size: 26px;
-  margin: 0;
+  margin: 0 0 40px;
 }
 /*==================== RESPONSIVE ====================*/
 @media screen and (max-width: 767px) {
