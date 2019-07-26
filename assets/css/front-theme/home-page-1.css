@@ -3183,9 +3183,6 @@ table th {
     min-width: 70px;
     width: auto;
   }
-  .home-page-1 .slick-dots li:nth-child(n+4) {
-    display: none;
-  }
   .woocommerce-cart .home-page-1 ul.products {
     margin-bottom: 0;
   }
