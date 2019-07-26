@@ -167,7 +167,7 @@
         breakpoint: 600,
         settings: {
           slidesToShow: 3,
-          slidesToScroll: 1,
+          slidesToScroll: 2,
           arrows: false,
           dots: true,
         }
@@ -176,7 +176,7 @@
         breakpoint: 480,
         settings: {
           slidesToShow: 3,
-          slidesToScroll: 1,
+          slidesToScroll: 2,
           arrows: false,
           dots: true,
         }
@@ -532,7 +532,7 @@ jQuery('.quantity').each(function() {
   $('.btn-readmore').on('click', function(){
     $('.wrap-description').toggleClass('show');
     if($('.wrap-description').hasClass('show')) {
-      $(this).text('Less More');
+      $(this).text('Close');
     }
     else {
       $(this).text('Read More')

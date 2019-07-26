@@ -20,6 +20,11 @@
 body .page-wishlist .wrap-storefront-breadcrumb {
   padding: 90px 65px 15px;
 }
+@media screen and (max-width: 767px) {
+  body .page-wishlist .wrap-storefront-breadcrumb {
+    padding-left: 0;
+  }
+}
 body .faq .wrap-storefront-breadcrumb {
   padding-left: 88px;
   padding-right: 88px;
