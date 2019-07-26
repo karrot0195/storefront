@@ -183,9 +183,9 @@
     max-width: 1200px;
   }
 }
-@media screen and (min-width: 1360px) {
+@media screen and (min-width: 1560px) {
   .woocommerce-account .hentry .entry-content {
-    max-width: 1400px;
+    max-width: 1600px;
   }
 }
 .woocommerce-account .hentry .entry-contentp {
