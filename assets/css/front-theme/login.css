@@ -651,6 +651,9 @@ body.page-template-about-us .wrap-storefront-breadcrumb {
   padding-top: 30px;
   font-size: 18px;
 }
+.woocommerce-order-received .woocommerce-order .woocommerce-order-details .tfoot .th {
+  font-family: "Barlow-m";
+}
 .woocommerce-order-received .woocommerce-order .woocommerce-order-details .tfoot .td {
   text-align: right;
 }
