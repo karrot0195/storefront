@@ -591,6 +591,7 @@ table.woocommerce-checkout-review-order-table tfoot .order-total td {
   width: 250px;
   float: right;
   margin-top: -60px;
+  outline: none;
   position: relative;
 }
 #payment.woocommerce-checkout-payment ul li.wc_payment_method label {
