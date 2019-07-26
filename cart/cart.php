@@ -450,4 +450,12 @@ $product_ids = [];
 	.wrap-quantity i {
 		font-size: 10px;
 	}
+
+	.woocommerce-error li{
+		display: none;
+	}
+
+	.woocommerce-error li:first-child {
+		display: block;
+	}
 </style>
