@@ -263,9 +263,10 @@ body {
   cursor: pointer;
 }
 .woocommerce-cart .actions .coupon .form-add {
-  display: none;
   margin-bottom: 0;
   transition: 0.3s all ease;
+  height: 0;
+  transform: scaleY(0);
 }
 .woocommerce-cart .actions .coupon label {
   display: none;
@@ -296,7 +297,8 @@ body {
 }
 .woocommerce-cart .actions .coupon-click .form-add {
   margin-bottom: 10px;
-  display: block;
+  height: auto;
+  transform: scaleY(1);
 }
 .woocommerce-cart .actions button {
   margin-left: auto;
@@ -1081,13 +1083,19 @@ body .wrap-storefront-breadcrumb span {
   .woocommerce-cart .woocommerce-cart-form.sp .actions .coupon .form-add {
     position: absolute;
     width: 100%;
-    bottom: -80px;
+    bottom: -70px;
+    height: auto;
+    transform: scaleY(1);
+    display: none;
   }
   .woocommerce-cart .woocommerce-cart-form.sp .actions-click {
     margin-bottom: 120px;
+    transition: 0.3s all ease;
   }
   .woocommerce-cart .woocommerce-cart-form.sp .actions-click .coupon .form-add {
     display: flex;
+    height: auto;
+    transform: scaleY(1);
   }
 }
 .home-page-1 table.shop_table_responsive tbody th {

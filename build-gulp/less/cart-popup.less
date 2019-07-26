@@ -263,9 +263,10 @@ body {
         }
       }
       .form-add{
-        display: none;
         margin-bottom: 0;
         transition: 0.3s all ease;
+        height: 0;
+        transform: scaleY(0);
       }
       label{
         display: none;
@@ -297,7 +298,8 @@ body {
       flex-direction: column;
       .form-add{
         margin-bottom: 10px;
-        display: block;
+        height: auto;
+        transform: scaleY(1);
       }
     }
     button{
@@ -1132,15 +1134,21 @@ body .wrap-storefront-breadcrumb{
       .form-add{
         position: absolute;
         width: 100%;
-        bottom: -80px;
+        bottom: -70px;
+        height: auto;
+        transform: scaleY(1);
+        display: none;
       }
     }
   } 
   .woocommerce-cart .woocommerce-cart-form.sp .actions-click{
     margin-bottom: 120px;
+    transition: 0.3s all ease;
     .coupon{
       .form-add{
         display: flex;
+        height: auto;
+        transform: scaleY(1);
       }
     }
   }
