@@ -427,6 +427,7 @@ table.cart td.product-quantity .quantity input[type=number]::-webkit-outer-spin-
 }
 form.checkout.woocommerce-checkout {
   padding: 0 114px;
+  margin-bottom: 200px;
 }
 form.checkout.woocommerce-checkout .col2-set {
   width: 100%;
@@ -451,6 +452,9 @@ form.checkout.woocommerce-checkout #order_review table.woocommerce-checkout-revi
   line-height: unset;
   margin-bottom: 0;
   width: 100%;
+}
+.woocommerce-checkout .entry-header h1 {
+  display: none;
 }
 .woocommerce-additional-fields h3 {
   font-size: 24px;
