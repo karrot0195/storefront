@@ -549,7 +549,8 @@ body.page-template-about-us .wrap-storefront-breadcrumb {
   display: none;
 }
 .woocommerce-order-received .woocommerce-order {
-  margin: 0 450px;
+  max-width: 1140px;
+  margin: 0 auto;
 }
 .woocommerce-order-received .woocommerce-order .woocommerce-thankyou-order-received {
   margin: 0;
