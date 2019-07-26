@@ -62,21 +62,20 @@ $total_rating_count = $product->get_rating_count();
 				 *
 				 * @param float $average_rating average rating
 				 * @param \WC_Product $product the product object
+				 * 
 				 */
 				$average_rating = max( 0, (float) apply_filters( 'wc_product_reviews_pro_product_rating_average', $product->get_average_rating(), $product ) );
-
 				$reviews_count  = max( 0, wc_product_reviews_pro_get_contributions_count( $product, 'review' ) );
 
 				/* translators: Placeholders: %s - average rating stars count (float casted as string to avoid trailing zeroes), %d - 5 stars total (integer) -- (e.g "4.2 out of 5 stars") */
 				$reviews_label  = sprintf( __( '%s out of %d stars', 'woocommerce-product-reviews-pro' ), $average_rating, 5 );
-
 				?>
 				<div class="wrap-review-left">
 					<div class="review-title">Product Ratings</div>
 					<div class="review-rate">
-						<div class="part-1 star-rating" role="img" aria-label="Rated <?= intval($average_rating) ?> out of 5"><span style="width:<?= $average_rating / 5 * 100 ?>%">Rated <strong class="rating"><?= intval($average_rating) ?></strong> out of 5</span></div>
+						<div class="part-1 star-rating" role="img" aria-label="Rated <?= round($average_rating) ?> out of 5"><span style="width:<?= round($average_rating) / 5 * 100 ?>%">Rated <strong class="rating"><?= intval($average_rating) ?></strong> out of 5</span></div>
 						<div class="part-2">
-							<?= intval($average_rating) . '/5' ?>
+							<?= round($average_rating) . '/5' ?>
 						</div>
 
 						<div class="part-3">

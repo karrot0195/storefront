@@ -213,3 +213,20 @@ if( function_exists('acf_add_options_page') ) {
         'redirect'      => false
     ));
 }
+
+
+add_action( 'woocommerce_save_account_details', 'save_favorite_color_account_details', 12, 1 );
+function save_favorite_color_account_details( $user_id ) {
+    // For Favorite color
+    if( isset( $_POST['phone'] ) )
+        update_user_meta( $user_id, 'phone', sanitize_text_field( $_POST['phone'] ) );
+
+    if( isset( $_POST['company_name'] ) )
+        update_user_meta( $user_id, 'company_name', sanitize_text_field( $_POST['company_name'] ) );
+}
+
+add_filter('woocommerce_save_account_details_required_fields', 'wc_save_account_details_required_fields' );
+function wc_save_account_details_required_fields( $required_fields ){
+    unset( $required_fields['account_display_name'] );
+    return $required_fields;
+}
