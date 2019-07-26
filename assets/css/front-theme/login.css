@@ -697,10 +697,10 @@ body.page-template-about-us .wrap-storefront-breadcrumb {
 .woocommerce .woocommerce-info a {
   color: #2a2a2a;
 }
-.woocommerce .woocommerce-infor.woo-return {
+.woocommerce .woocommerce-info.woo-return {
   margin-bottom: 20px;
 }
-.woocommerce .woocommerce-infor.woo-coupon {
+.woocommerce .woocommerce-info.woo-coupon {
   margin-bottom: 50px;
 }
 /*==================== RESPONSIVE ====================*/
