@@ -854,10 +854,14 @@
 // [ NOT EDIT ]
 .block-like:hover, .block-like.bookmark {
   background-position:right;
+
 }
 
 .is_animating {
-  animation: heart-burst .8s steps(28) 1;
+  animation: heart-burst 0.8s steps(28) 1;
+  @media screen and (max-width: 767px){
+    animation: heart-burst 0.5s steps(28) 1;
+  }
 }
 
 @keyframes heart-burst {

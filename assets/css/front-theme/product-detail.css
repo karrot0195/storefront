@@ -889,6 +889,11 @@
 .is_animating {
   animation: heart-burst 0.8s steps(28) 1;
 }
+@media screen and (max-width: 767px) {
+  .is_animating {
+    animation: heart-burst 0.5s steps(28) 1;
+  }
+}
 @keyframes heart-burst {
   from {
     background-position: left;
