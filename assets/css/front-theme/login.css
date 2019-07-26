@@ -564,8 +564,6 @@ body.page-template-about-us .wrap-storefront-breadcrumb {
   width: 35%;
   float: left;
   box-sizing: border-box;
-  border: 1px solid #eaeaea;
-  border-radius: 4px;
 }
 .woocommerce-order-received .woocommerce-order ul.order_details::before,
 .woocommerce-order-received .woocommerce-order ul.order_details::after {
