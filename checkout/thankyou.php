@@ -40,7 +40,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 			<p class="woocommerce-notice woocommerce-notice--success woocommerce-thankyou-order-received"><?php echo apply_filters( 'woocommerce_thankyou_order_received_text', __( 'Thank you. Your order has been received.', 'woocommerce' ), $order ); ?></p>
 
 			<ul class="woocommerce-order-overview woocommerce-thankyou-order-details order_details">
-
+				<h2 class="woocommerce-thankyou-order-details__title">Order received</h2>
 				<li class="woocommerce-order-overview__order order">
 					<?php _e( 'Order number:', 'woocommerce' ); ?>
 					<strong><?php echo $order->get_order_number(); ?></strong>
