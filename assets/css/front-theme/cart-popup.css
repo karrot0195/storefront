@@ -248,6 +248,9 @@ body {
 .woocommerce-cart .actions {
   display: flex;
 }
+.woocommerce-cart .actions .coupon {
+  display: block;
+}
 .woocommerce-cart .actions .coupon .add-code {
   color: #2a2a2a;
   display: flex;
@@ -257,9 +260,12 @@ body {
   font-family: "Barlow-m";
   text-decoration: underline;
   margin-left: 5px;
+  cursor: pointer;
 }
 .woocommerce-cart .actions .coupon .form-add {
-  display: none;
+  transform: scaleX(0);
+  margin-bottom: 0;
+  transition: 0.3s all ease;
 }
 .woocommerce-cart .actions .coupon label {
   display: none;
@@ -269,14 +275,28 @@ body {
   min-height: 44px;
   box-shadow: none;
   outline: 0;
-  padding: 10px 25px;
+  padding: 10px;
   border: 1px solid #ddd;
   border-radius: 25px;
   box-sizing: border-box;
   font-size: 15px;
+  transition: 0.3s all ease;
+}
+.woocommerce-cart .actions .coupon input:focus {
+  outline: none;
+  box-shadow: 1px 2px 11px 3px rgba(0, 0, 0, 0.1);
+  border-color: #ffffff;
 }
 .woocommerce-cart .actions .coupon button {
-  margin-left: -84px;
+  margin-left: -65px;
+}
+.woocommerce-cart .actions .coupon-click {
+  display: flex;
+  flex-direction: column-reverse;
+}
+.woocommerce-cart .actions .coupon-click .form-add {
+  transform: scaleX(1);
+  margin-bottom: 10px;
 }
 .woocommerce-cart .actions button {
   margin-left: auto;
@@ -1050,6 +1070,23 @@ body .wrap-storefront-breadcrumb span {
   }
   .page-template-default .woocommerce {
     overflow-x: hidden;
+  }
+  .woocommerce-cart .woocommerce-cart-form.sp .actions {
+    transition: 0.3s all ease;
+  }
+  .woocommerce-cart .woocommerce-cart-form.sp .actions .coupon {
+    position: relative;
+  }
+  .woocommerce-cart .woocommerce-cart-form.sp .actions .coupon .form-add {
+    position: absolute;
+    width: 100vw;
+    bottom: -80px;
+  }
+  .woocommerce-cart .woocommerce-cart-form.sp .actions-click {
+    margin-bottom: 120px;
+  }
+  .woocommerce-cart .woocommerce-cart-form.sp .actions-click .coupon .form-add {
+    transform: scaleX(1);
   }
 }
 .home-page-1 table.shop_table_responsive tbody th {

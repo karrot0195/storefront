@@ -444,6 +444,19 @@
       });
     }
 
+  // SHOW PROMO CODE
+  var windowwidth = $(window).width();
+  if(windowwidth > 767 ){
+    $('.add-link').click(function(){
+      $(this).parents('.coupon').addClass('coupon-click');
+    });
+  } else{
+    $('.add-link').click(function(){
+      $(this).parents('.actions').addClass('actions-click');
+    });
+  }
+
+
   // [ABOUT US] SLICK SLIDER
   $ ('.slider').slick({
     autoplay: true,
