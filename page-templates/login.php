@@ -160,6 +160,8 @@ get_header('home-1');
                 if (!json.error) {
                     if (json['cb']) {
                         window.location.href = json['cb'];
+                    } else {
+                        window.location.reload();
                     }
                 } else { 
                     if (json['field']) {
