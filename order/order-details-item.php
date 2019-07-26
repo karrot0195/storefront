@@ -22,11 +22,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 if ( ! apply_filters( 'woocommerce_order_item_visible', true, $item ) ) {
 	return;
 }
-$thumbnail_url = get_the_post_thumbnail_url($item->get_id());
+$thumbnail_url = get_the_post_thumbnail_url($item->get_product_id());
 ?>
 <tr class="<?php echo esc_attr( apply_filters( 'woocommerce_order_item_class', 'woocommerce-table__line-item order_item', $item, $order ) ); ?>">
 	<td>
-		<img src="<?= esc_url($thumbnail_url) ?>">
+		<img width="30px" src="<?= esc_url($thumbnail_url) ?>">
 	</td>
 	<td class="woocommerce-table__product-name product-name">
 		<?php
