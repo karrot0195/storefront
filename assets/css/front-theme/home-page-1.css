@@ -751,7 +751,8 @@ body.home .site-footer {
     width: 10px;
   }
   .single-product .home-page-1 ul.products,
-  .woocommerce-cart .home-page-1 ul.products .loop-main-product {
+  .woocommerce-cart .home-page-1 ul.products .loop-main-product,
+  .page-template-default .home-page-1 ul.products .loop-main-product {
     white-space: nowrap;
     overflow-x: scroll;
     overflow-y: visible;
