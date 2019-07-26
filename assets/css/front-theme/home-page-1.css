@@ -2952,6 +2952,7 @@ table th {
     border-radius: 7.5px;
     width: auto;
     box-shadow: 2.2px 11.3px 19.3px 1.7px rgba(0, 0, 1, 0.12);
+    background-color: #ffffff;
   }
   .site-main.page-wishlist ul.products.columns-4 li.product.wrap-product-item .fm-sl-cart {
     position: relative;
@@ -3182,9 +3183,6 @@ table th {
     min-width: 70px;
     width: auto;
   }
-  .home-page-1 .slick-dots li:nth-child(n+4) {
-    display: none;
-  }
   .woocommerce-cart .home-page-1 ul.products {
     margin-bottom: 0;
   }
@@ -3205,6 +3203,9 @@ table th {
   .cart-subtotal th,
   .woocommerce-shipping-totals th {
     font-family: "Barlow";
+  }
+  .site-main.page-wishlist ul.products.columns-4 .related-slider li.product {
+    background-color: transparent;
   }
 }
 @media screen and (max-width: 375px) {
