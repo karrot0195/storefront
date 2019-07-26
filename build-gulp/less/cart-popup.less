@@ -320,6 +320,7 @@ body {
       color: #fefefe;
       font-size: 16px;
       cursor: pointer;
+      line-height: 22px;
     }
   }
  
@@ -1134,10 +1135,12 @@ body .wrap-storefront-breadcrumb{
       .form-add{
         position: absolute;
         width: 100%;
-        bottom: -70px;
+        bottom: 0;
         height: auto;
-        transform: scaleY(1);
-        display: none;
+        transform: scale(1);
+        display: flex;
+        opacity: 0;
+        z-index: -1;
       }
     }
   } 
@@ -1146,9 +1149,11 @@ body .wrap-storefront-breadcrumb{
     transition: 0.3s all ease;
     .coupon{
       .form-add{
-        display: flex;
         height: auto;
-        transform: scaleY(1);
+        bottom: -70px;
+        opacity: 1;
+        z-index: 1;
+        width: 100%;
       }
     }
   }
