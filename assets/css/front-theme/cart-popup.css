@@ -263,9 +263,10 @@ body {
   cursor: pointer;
 }
 .woocommerce-cart .actions .coupon .form-add {
-  transform: scaleX(0);
   margin-bottom: 0;
   transition: 0.3s all ease;
+  height: 0;
+  transform: scaleY(0);
 }
 .woocommerce-cart .actions .coupon label {
   display: none;
@@ -292,11 +293,12 @@ body {
 }
 .woocommerce-cart .actions .coupon-click {
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: column;
 }
 .woocommerce-cart .actions .coupon-click .form-add {
-  transform: scaleX(1);
   margin-bottom: 10px;
+  height: auto;
+  transform: scaleY(1);
 }
 .woocommerce-cart .actions button {
   margin-left: auto;
@@ -892,10 +894,13 @@ body .wrap-storefront-breadcrumb span {
     align-items: center;
   }
   .woocommerce-cart .woocommerce-cart-form.sp .coupon input {
-    width: 60%;
+    width: 50%;
+    flex-grow: 1;
   }
   .woocommerce-cart .woocommerce-cart-form.sp .coupon button {
-    width: 50%;
+    width: 140px;
+    margin-left: 10px;
+    min-width: unset;
   }
   .woocommerce-cart .actions button {
     min-width: 140px;
@@ -1073,20 +1078,24 @@ body .wrap-storefront-breadcrumb span {
   }
   .woocommerce-cart .woocommerce-cart-form.sp .actions {
     transition: 0.3s all ease;
-  }
-  .woocommerce-cart .woocommerce-cart-form.sp .actions .coupon {
     position: relative;
   }
   .woocommerce-cart .woocommerce-cart-form.sp .actions .coupon .form-add {
     position: absolute;
-    width: 100vw;
-    bottom: -80px;
+    width: 100%;
+    bottom: -70px;
+    height: auto;
+    transform: scaleY(1);
+    display: none;
   }
   .woocommerce-cart .woocommerce-cart-form.sp .actions-click {
     margin-bottom: 120px;
+    transition: 0.3s all ease;
   }
   .woocommerce-cart .woocommerce-cart-form.sp .actions-click .coupon .form-add {
-    transform: scaleX(1);
+    display: flex;
+    height: auto;
+    transform: scaleY(1);
   }
 }
 .home-page-1 table.shop_table_responsive tbody th {
@@ -1103,4 +1112,9 @@ body .wrap-block-to-shopping i {
   body .wrap-block-to-shopping i {
     font-size: 13px;
   }
+}
+#payment.woocommerce-checkout-payment .payment_box.payment_method_stripe #stripe-payment-data fieldset .form-row:nth-child(3) label {
+  width: 42px;
+  white-space: nowrap;
+  overflow: hidden;
 }

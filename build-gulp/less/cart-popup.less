@@ -263,9 +263,10 @@ body {
         }
       }
       .form-add{
-        transform: scaleX(0);
         margin-bottom: 0;
         transition: 0.3s all ease;
+        height: 0;
+        transform: scaleY(0);
       }
       label{
         display: none;
@@ -294,10 +295,11 @@ body {
     }
     .coupon-click{
       display: flex;
-      flex-direction: column-reverse;
+      flex-direction: column;
       .form-add{
-        transform: scaleX(1);
         margin-bottom: 10px;
+        height: auto;
+        transform: scaleY(1);
       }
     }
     button{
@@ -937,10 +939,13 @@ body .wrap-storefront-breadcrumb{
     }
     .coupon{
       input{
-        width: 60%;
+        width: 50%;
+        flex-grow: 1;
       }
       button{
-        width: 50%;
+        width: 140px;
+        margin-left: 10px;
+        min-width: unset;
       }
     }
   }
@@ -1124,20 +1129,26 @@ body .wrap-storefront-breadcrumb{
   }
   .woocommerce-cart .woocommerce-cart-form.sp .actions{
     transition: 0.3s all ease;
+    position: relative;
     .coupon{
-      position: relative;
       .form-add{
         position: absolute;
-        width: 100vw;
-        bottom: -80px;
+        width: 100%;
+        bottom: -70px;
+        height: auto;
+        transform: scaleY(1);
+        display: none;
       }
     }
   } 
   .woocommerce-cart .woocommerce-cart-form.sp .actions-click{
     margin-bottom: 120px;
+    transition: 0.3s all ease;
     .coupon{
       .form-add{
-        transform: scaleX(1);
+        display: flex;
+        height: auto;
+        transform: scaleY(1);
       }
     }
   }
@@ -1153,4 +1164,10 @@ body .wrap-block-to-shopping i{
   @media screen and (max-width: 767px){
     font-size: 13px;
   }
+}
+
+#payment.woocommerce-checkout-payment .payment_box.payment_method_stripe #stripe-payment-data fieldset .form-row:nth-child(3) label {
+  width: 42px;
+  white-space: nowrap;
+  overflow: hidden;
 }
