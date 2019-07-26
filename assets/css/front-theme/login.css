@@ -607,7 +607,7 @@ body.page-template-about-us .wrap-storefront-breadcrumb {
 .woocommerce-order-received .woocommerce-order .woocommerce-order-details .order_details thead th {
   line-height: unset;
   padding-bottom: 25px;
-  border-bottom: 1px solid #eaeaea;
+  border-bottom: 2px solid #eaeaea;
   text-transform: uppercase;
   font-family: "Barlow";
 }
@@ -618,7 +618,7 @@ body.page-template-about-us .wrap-storefront-breadcrumb {
   text-align: right;
 }
 .woocommerce-order-received .woocommerce-order .woocommerce-order-details .order_details tbody td {
-  border-bottom: 1px solid #eaeaea;
+  border-bottom: 2px solid #eaeaea;
 }
 .woocommerce-order-received .woocommerce-order .woocommerce-order-details .order_details tbody td.product-name {
   display: flex;
