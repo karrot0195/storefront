@@ -747,6 +747,9 @@ body.page-template-about-us .wrap-storefront-breadcrumb {
     padding-bottom: 20px;
     border-bottom: 2px solid #eaeaea;
   }
+  .woocommerce-order-received .woocommerce-order .woocommerce-order-details .tfoot {
+    margin-bottom: 70px;
+  }
   .login .login-wrapper {
     display: block;
     padding: 0 20px;
