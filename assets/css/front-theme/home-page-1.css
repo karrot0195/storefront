@@ -2965,6 +2965,8 @@ table th {
     margin-bottom: 30px;
     margin-left: 5px;
     margin-right: 5px;
+    position: relative;
+    height: 380px;
   }
   .site-main.page-wishlist ul.products.columns-4 li.product:nth-child(odd) {
     margin-left: 0;
@@ -3019,6 +3021,9 @@ table th {
   .site-main.page-wishlist ul.products.columns-4 li.product .stock {
     padding: 0;
     opacity: 1;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
   }
 }
 .site-main.page-wishlist ul.products.columns-4 li.product .stock span {
