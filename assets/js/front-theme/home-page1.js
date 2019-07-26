@@ -47,14 +47,6 @@
   }
 
   // Change tab class and display content
-  $('.tabs-nav a').on('mouseover', function(event) {
-    event.preventDefault();
-    $('.tabs-nav li').removeClass('tab-active');
-    $(this).parent().addClass('tab-active');
-    $('.tabs-stage section').hide();
-    $($(this).attr('href')).fadeIn(700);
-  });
-
   $('.tabs-nav a').on('click', function(event) {
     event.preventDefault();
     $('.tabs-nav li').removeClass('tab-active');
@@ -62,6 +54,21 @@
     $('.tabs-stage section').hide();
     $($(this).attr('href')).fadeIn(700);
   });
+  var w_tab = $(window).width();
+
+  if(w_tab > 767){
+    $('.tabs-nav a').on('mouseover', function(event) {
+      event.preventDefault();
+      $('.tabs-nav li').removeClass('tab-active');
+      $(this).parent().addClass('tab-active');
+      $('.tabs-stage section').hide();
+      $($(this).attr('href')).fadeIn(700);
+    });
+    
+  }
+
+
+
 
   // Menu Mobile
   $('.hamburger-menu').on('click', function(){
@@ -277,7 +284,7 @@
     $('.site-header').addClass('site-header-hide');
 
     if ($('#review_form_wrapper .close').length == 0) {
-      $('#review_form_wrapper form').prepend(`<div class="close"><i class="icon ion-md-close"></i></div>`);
+      $('#review_form_wrapper').prepend(`<div class="close"><i class="icon ion-md-close"></i></div>`);
       $('#review_form_wrapper .close').on('click', function () {
         $('.popup-background').css('opacity', '0');
         $('.popup-background').remove();

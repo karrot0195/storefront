@@ -372,6 +372,9 @@ table.cart td.product-quantity .quantity input[type=number]::-webkit-outer-spin-
     font-size: 14px;
   }
 }
+.woocommerce-billing-fields__field-wrapper p .optional {
+  display: none;
+}
 .woocommerce-billing-fields__field-wrapper .form-row input,
 .woocommerce-billing-fields__field-wrapper .form-row textarea {
   height: 44px;
@@ -562,9 +565,24 @@ table.woocommerce-checkout-review-order-table tfoot .order-total td {
 }
 #payment.woocommerce-checkout-payment ul li.wc_payment_method label img {
   float: none;
+  padding: 4px 10px !important;
+  border: 1px solid #ececec;
+  border-radius: 4px;
+  max-width: 30px !important;
+  margin-left: 10px !important;
+}
+@media screen and (max-width: 767px) {
+  #payment.woocommerce-checkout-payment ul li.wc_payment_method label img {
+    margin-top: 20px !important;
+  }
 }
 #payment.woocommerce-checkout-payment ul li.wc_payment_method label img.stripe-visa-icon {
-  padding-left: 10px;
+  margin-left: 20px !important;
+}
+@media screen and (max-width: 767px) {
+  #payment.woocommerce-checkout-payment ul li.wc_payment_method label img.stripe-visa-icon {
+    margin-left: 0 !important;
+  }
 }
 #payment.woocommerce-checkout-payment .payment_box.payment_method_stripe {
   background: #ffffff;
@@ -749,7 +767,7 @@ table.woocommerce-checkout-review-order-table .product-name ul li:first-child {
   font-size: 16px;
 }
 .add-block-wrapper {
-  margin-top: 50px;
+  margin-top: 40px;
 }
 .add-block-wrapper .free {
   padding: 20px;
@@ -791,21 +809,8 @@ table.woocommerce-checkout-review-order-table .product-name ul li:first-child {
 .form-row #stripe-cvc-element {
   width: 40%;
 }
-#payment.woocommerce-checkout-payment ul li.wc_payment_method label img {
-  padding-right: 10px;
-}
-.sl-attr-size {
-  border: none;
-  font-size: 16px;
-  color: #2a2a2a;
-  outline: none;
-  min-width: 65px;
-  font-family: "Barlow";
-}
-@media screen and (max-width: 767px) {
-  .sl-attr-size {
-    font-size: 14px;
-  }
+body table.shop_table_responsive tr td[data-title]::before {
+  font-weight: normal;
 }
 .site-main.page-wishlist ul.products li.product img {
   max-height: 300px;
