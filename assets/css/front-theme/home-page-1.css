@@ -3246,8 +3246,3 @@ table th {
     font-size: 12px;
   }
 }
-#wc-stripe-cc-form .form-row-wide:nth-child(3) label {
-  width: 42px;
-  white-space: nowrap;
-  overflow: hidden;
-}
