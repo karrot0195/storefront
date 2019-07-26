@@ -22,6 +22,15 @@ if ( ! wc_coupons_enabled() ) { // @codingStandardsIgnoreLine.
 }
 
 ?>
+<?php if (!is_user_logged_in()): ?>
+<div class="woocommerce-form-coupon-toggle">
+	<div class="woocommerce-info">
+		Returning customer? <a href="<?= home_url('login?cb='.home_url('checkout')) ?>" >Click here to login</a>	
+	</div>
+</div>
+
+<?php endif; ?>
+
 <div class="woocommerce-form-coupon-toggle">
 	<?php wc_print_notice( apply_filters( 'woocommerce_checkout_coupon_message', __( 'Have a coupon?', 'woocommerce' ) . ' <a href="#" class="showcoupon">' . __( 'Click here to enter your code', 'woocommerce' ) . '</a>' ), 'notice' ); ?>
 </div>
