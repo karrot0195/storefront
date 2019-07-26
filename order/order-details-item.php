@@ -25,10 +25,8 @@ if ( ! apply_filters( 'woocommerce_order_item_visible', true, $item ) ) {
 $thumbnail_url = get_the_post_thumbnail_url($item->get_product_id());
 ?>
 <tr class="<?php echo esc_attr( apply_filters( 'woocommerce_order_item_class', 'woocommerce-table__line-item order_item', $item, $order ) ); ?>">
-	<td>
-		<img width="30px" src="<?= esc_url($thumbnail_url) ?>">
-	</td>
 	<td class="woocommerce-table__product-name product-name">
+		<img width="30px" src="<?= esc_url($thumbnail_url) ?>">
 		<?php
 			$is_visible        = $product && $product->is_visible();
 			$product_permalink = apply_filters( 'woocommerce_order_item_permalink', $is_visible ? $product->get_permalink( $item ) : '', $item, $order );

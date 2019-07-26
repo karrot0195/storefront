@@ -41,7 +41,6 @@ if ( $show_downloads ) {
 
 		<thead>
 			<tr>
-				<th></th>
 				<th class="woocommerce-table__product-name product-name"><?php _e( 'Product', 'woocommerce' ); ?></th>
 				<th class="woocommerce-table__product-table product-total"><?php _e( 'Total', 'woocommerce' ); ?></th>
 			</tr>
