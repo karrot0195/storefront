@@ -16,12 +16,11 @@
  */
 
 defined( 'ABSPATH' ) || exit;
-
-do_action( 'woocommerce_before_edit_account_form' ); ?>
+do_action( 'woocommerce_before_edit_account_form' ); 
+?>
 <form class="woocommerce-EditAccountForm edit-account" action="" method="post" <?php do_action( 'woocommerce_edit_account_form_tag' ); ?> >
 
 	<?php do_action( 'woocommerce_edit_account_form_start' ); ?>
-
 	<p class="woocommerce-form-row woocommerce-form-row--first form-row form-row-first">
 		<label for="account_first_name"><?php esc_html_e( 'First name', 'woocommerce' ); ?>&nbsp;<span class="required">*</span></label>
 		<input type="text" class="woocommerce-Input woocommerce-Input--text input-text" name="account_first_name" id="account_first_name" autocomplete="given-name" value="<?php echo esc_attr( $user->first_name ); ?>" />
@@ -33,14 +32,14 @@ do_action( 'woocommerce_before_edit_account_form' ); ?>
 	<div class="clear"></div>
 
 	<p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide clear">
-		<label for="account_display_name"><?php esc_html_e( 'Company name', 'woocommerce' ); ?></label>
-		<input type="text" class="woocommerce-Input woocommerce-Input--number input-text" name="account_display_name" id="account_display_name" value="<?= $user->display_name ?>" />
+		<label for="company_name"><?php esc_html_e( 'Company name', 'woocommerce' ); ?></label>
+		<input type="text" class="woocommerce-Input woocommerce-Input--number input-text" name="company_name" id="company_name" value="<?= $user->company_name ?>" />
 	</p>
 	<div class="clear"></div>
 
 	<p class="woocommerce-form-row woocommerce-form-row--last form-row form-row-first">
 		<label for="account_phone"><?php esc_html_e( 'Phone', 'woocommerce' ); ?>&nbsp;<span class="required">*</span></label>
-		<input type="tel" class="woocommerce-Input woocommerce-Input--text input-tel" name="account_phone" id="account_phone" autocomplete="phone" value="<?php echo esc_attr( $user->phone ); ?>" />
+		<input type="tel" class="woocommerce-Input woocommerce-Input--text input-tel" name="phone" id="account_phone" autocomplete="phone" value="<?php echo esc_attr( $user->phone ); ?>" />
 	</p>
 
 	<p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide form-row-last">
