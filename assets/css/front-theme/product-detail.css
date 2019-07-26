@@ -398,14 +398,14 @@
 .storefront-product-detail .review-rate .star-rating::before {
   color: #cbcbcb;
 }
-.storefront-product-detail .review-rate .star-rating span {
-  width: 76% !important;
-}
 .storefront-product-detail .review-rate .star-rating span:before {
   color: #fcbb1c;
 }
 .storefront-product-detail .review-rate .part-2 {
   padding-right: 5px;
+}
+.storefront-product-detail #reviews .commentlist li.comment-author-admin p.meta .woocommerce-review__author {
+  font-size: 0;
 }
 .storefront-product-detail #reviews .commentlist li p.meta {
   text-align: left;

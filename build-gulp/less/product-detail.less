@@ -379,9 +379,6 @@
       &::before{
         color: #cbcbcb;
       }
-      span{
-        width: 76% !important;
-      }
       span:before{
         color: #fcbb1c;
       }
@@ -391,6 +388,13 @@
     }
   }
   #reviews .commentlist li{
+    &.comment-author-admin {
+      p.meta {
+        .woocommerce-review__author{
+          font-size: 0;
+        }
+      }
+    }
     p.meta {
       text-align:left;
       margin: 0;
