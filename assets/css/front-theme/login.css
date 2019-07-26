@@ -524,6 +524,89 @@ body.page-template-about-us .wrap-storefront-breadcrumb {
 .home-page-1 table.shop_table_responsive tr td.contribution-date {
   text-align: left;
 }
+.woocommerce-edit-address.woocommerce-account .hentry .entry-content .woocommerce .woocommerce-MyAccount-content .woocommerce-address-fields__field-wrapper + p {
+  text-align: center;
+}
+.woocommerce-edit-address.woocommerce-account .hentry .entry-content .woocommerce .woocommerce-MyAccount-content .woocommerce-address-fields__field-wrapper + p button:hover {
+  background: #0f1972;
+  color: #ffffff;
+}
+.woocommerce-edit-address .select2-container--default .select2-selection--single {
+  height: 44px;
+  border: solid 1px #d7d7d7;
+}
+.woocommerce-edit-address .select2-container--default .select2-selection--single .select2-selection__rendered {
+  line-height: 44px;
+}
+.woocommerce-edit-address .select2-container--default .select2-selection--single .select2-selection__arrow {
+  top: 50%;
+  transform: translateY(-50%);
+}
+.woocommerce-order-received {
+  color: #2a2a2a;
+}
+.woocommerce-order-received .entry-title {
+  display: none;
+}
+.woocommerce-order-received .woocommerce-order {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+.woocommerce-order-received .woocommerce-order .woocommerce-thankyou-order-received {
+  margin: 0;
+  font-size: 30px;
+  font-family: "Barlow-m";
+}
+.woocommerce-order-received .woocommerce-order ul.order_details {
+  margin: 55px 0;
+  padding-left: 0;
+  background: transparent;
+  width: 35%;
+  float: left;
+  box-sizing: border-box;
+}
+.woocommerce-order-received .woocommerce-order ul.order_details::before,
+.woocommerce-order-received .woocommerce-order ul.order_details::after {
+  display: none;
+}
+.woocommerce-order-received .woocommerce-order ul.order_details li {
+  border: 1px solid #eaeaea;
+  border-bottom: 0;
+  font-size: 16px;
+}
+.woocommerce-order-received .woocommerce-order ul.order_details li strong {
+  margin-top: 15px;
+  font-size: 18px;
+}
+.woocommerce-order-received .woocommerce-order ul.order_details li strong span {
+  font-weight: bold;
+}
+.woocommerce-order-received .woocommerce-order ul.order_details li.woocommerce-order-overview__order {
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}
+.woocommerce-order-received .woocommerce-order ul.order_details li.woocommerce-order-overview__payment-method {
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+  border-bottom: 1px solid #eaeaea;
+}
+.woocommerce-order-received .woocommerce-order .woocommerce-order-details {
+  width: 65%;
+  float: right;
+  padding-left: 150px;
+  box-sizing: border-box;
+  margin: 55px 0;
+}
+.woocommerce-order-received .woocommerce-order .woocommerce-order-details .order_details {
+  background: transparent;
+}
+.woocommerce-order-received .woocommerce-order .woocommerce-order-details .order_details th {
+  line-height: unset;
+}
+.woocommerce-order-received .woocommerce-order h2 {
+  font-size: 26px;
+  margin: 0 0 40px;
+}
 /*==================== RESPONSIVE ====================*/
 @media screen and (max-width: 767px) {
   .login .login-wrapper {
