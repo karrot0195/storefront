@@ -301,7 +301,7 @@ body {
 .woocommerce-cart .actions button {
   margin-left: auto;
   min-width: 175px;
-  min-height: 44px;
+  height: 44px;
   padding: 10px 25px;
   border-radius: 25px;
   border: 0;
