@@ -700,7 +700,7 @@ body.page-template-about-us .wrap-storefront-breadcrumb {
 .woocommerce .woocommerce-info.woo-return {
   margin-bottom: 20px;
 }
-.woocommerce .woocommerce-info.woo-coupon {
+.woocommerce .woo-coupon .woocommerce-info {
   margin-bottom: 50px;
 }
 .woocommerce .woocommerce-form-coupon {
