@@ -654,6 +654,9 @@ body.page-template-about-us .wrap-storefront-breadcrumb {
   font-family: "Barlow-s";
   text-transform: uppercase;
 }
+.woocommerce-order-received .woocommerce-order .woocommerce-order-details .order_details tfoot tr:last-child {
+  display: none;
+}
 .woocommerce-order-received .woocommerce-order h2 {
   font-size: 26px;
 }
