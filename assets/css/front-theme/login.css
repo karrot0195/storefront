@@ -649,6 +649,10 @@ body.page-template-about-us .wrap-storefront-breadcrumb {
 .woocommerce-order-received .woocommerce-order .woocommerce-order-details .order_details tfoot tr:nth-child(3) td {
   font-size: 16px;
 }
+.woocommerce-order-received .woocommerce-order .woocommerce-order-details .order_details tfoot tr:nth-child(2) td small,
+.woocommerce-order-received .woocommerce-order .woocommerce-order-details .order_details tfoot tr:nth-child(3) td small {
+  display: none;
+}
 .woocommerce-order-received .woocommerce-order .woocommerce-order-details .order_details tfoot tr:nth-child(4) td,
 .woocommerce-order-received .woocommerce-order .woocommerce-order-details .order_details tfoot tr:nth-child(4) th {
   font-family: "Barlow-s";
