@@ -711,6 +711,9 @@ body.page-template-about-us .wrap-storefront-breadcrumb {
   margin: 0 115px;
   color: #2a2a2a;
 }
+.woocommerce .woocommerce-form-coupon p.title-coupon {
+  margin-bottom: 0;
+}
 .woocommerce .woocommerce-form-coupon p input {
   height: 44px;
   border-radius: 4px;
