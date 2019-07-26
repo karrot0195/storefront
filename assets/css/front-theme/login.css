@@ -691,9 +691,16 @@ body.page-template-about-us .wrap-storefront-breadcrumb {
 .woocommerce .woocommerce-info {
   background-color: #c5ecfb;
   color: #2a2a2a;
+  margin: 0 115px;
 }
 .woocommerce .woocommerce-info a {
   color: #2a2a2a;
+}
+.woocommerce .woocommerce-infor.woo-return {
+  margin-bottom: 20px;
+}
+.woocommerce .woocommerce-infor.woo-coupon {
+  margin-bottom: 50px;
 }
 /*==================== RESPONSIVE ====================*/
 @media screen and (max-width: 767px) {
