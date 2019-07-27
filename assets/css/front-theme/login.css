@@ -576,6 +576,11 @@ body.page-template-about-us .wrap-storefront-breadcrumb {
 .woocommerce-order-received .woocommerce-order {
   margin: 0 auto;
 }
+@media screen and (min-width: 992px) {
+  .woocommerce-order-received .woocommerce-order {
+    max-width: 710px;
+  }
+}
 @media screen and (min-width: 1200px) {
   .woocommerce-order-received .woocommerce-order {
     max-width: 840px;
@@ -603,6 +608,11 @@ body.page-template-about-us .wrap-storefront-breadcrumb {
   float: left;
   box-sizing: border-box;
 }
+@media screen and (min-width: 992px) {
+  .woocommerce-order-received .woocommerce-order ul.order_details {
+    width: 45%;
+  }
+}
 @media screen and (min-width: 1200px) {
   .woocommerce-order-received .woocommerce-order ul.order_details {
     width: 40%;
@@ -621,7 +631,16 @@ body.page-template-about-us .wrap-storefront-breadcrumb {
   border: 1px solid #eaeaea;
   border-bottom: 0;
   font-size: 16px;
-  padding: 35px;
+}
+@media screen and (min-width: 1200px) {
+  .woocommerce-order-received .woocommerce-order ul.order_details li {
+    padding: 20px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .woocommerce-order-received .woocommerce-order ul.order_details li {
+    padding: 35px;
+  }
 }
 .woocommerce-order-received .woocommerce-order ul.order_details li strong {
   margin-top: 15px;
@@ -643,13 +662,19 @@ body.page-template-about-us .wrap-storefront-breadcrumb {
 }
 .woocommerce-order-received .woocommerce-order .woocommerce-order-details {
   float: right;
-  padding-left: 150px;
   box-sizing: border-box;
   margin: 55px 0 200px;
+}
+@media screen and (min-width: 992px) {
+  .woocommerce-order-received .woocommerce-order .woocommerce-order-details {
+    width: 55%;
+    padding-left: 50px;
+  }
 }
 @media screen and (min-width: 1200px) {
   .woocommerce-order-received .woocommerce-order .woocommerce-order-details {
     width: 60%;
+    padding-left: 150px;
   }
 }
 @media screen and (min-width: 1360px) {
