@@ -4,6 +4,26 @@
   $('.tabs-stage section:first').show();
   $('.tabs-nav li:first').addClass('tab-active');
 
+  // SHOW FORM INPUT PROMO CODE
+  var windowwidth = $(window).width();
+  if(windowwidth > 767 ){
+    $('.add-link').click(function(){
+      $(this).parents('.coupon').toggleClass('coupon-click');
+      // $(this).parents('.coupon').fadeIn('');
+      if($(this).parents('.coupon').hasClass('coupon-click')){
+        $(this).html('Close');
+      } else $(this).html('Add it here');
+    });
+  } else{
+    $('.add-link').click(function(){
+      console.log($('.add-link'));
+      $(this).parents('.actions').toggleClass('actions-click');
+      if($(this).parents('.actions').hasClass('actions-click')){
+        $(this).html('Close');
+      } else $(this).html('Add it here');
+    });
+  }
+  
   // JS MENU MOBILE
   $('.menu-shop').click(function(){
     $(this).find('i').toggleClass('i-click');
@@ -452,25 +472,7 @@
       });
     }
 
-  // SHOW FORM INPUT PROMO CODE
-  var windowwidth = $(window).width();
-  if(windowwidth > 767 ){
-    $('.add-link').click(function(){
-      $(this).parents('.coupon').toggleClass('coupon-click');
-      // $(this).parents('.coupon').fadeIn('');
-      if($(this).parents('.coupon').hasClass('coupon-click')){
-        $(this).html('Close');
-      } else $(this).html('Add it here');
-    });
-  } else{
-    $('.add-link').click(function(){
-      console.log($('.add-link'));
-      $(this).parents('.actions').toggleClass('actions-click');
-      if($(this).parents('.actions').hasClass('actions-click')){
-        $(this).html('Close');
-      } else $(this).html('Add it here');
-    });
-  }
+
 
 
   // [ABOUT US] SLICK SLIDER
