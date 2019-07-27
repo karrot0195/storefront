@@ -294,7 +294,7 @@
 }
 @media screen and (max-width: 767px) {
   .storefront-product-detail.single-product div.product .woocommerce-product-gallery .woocommerce-product-gallery__trigger {
-    right: 0;
+    right: 25px;
     top: 5px;
   }
 }
@@ -533,7 +533,7 @@
 @media screen and (max-width: 767px) {
   .storefront-product-detail .block-bookmark {
     top: 60px;
-    right: 8px;
+    right: 30px;
   }
 }
 .storefront-product-detail .related.products {
