@@ -579,7 +579,7 @@ body.page-template-about-us .wrap-storefront-breadcrumb {
 }
 .woocommerce-order-received .woocommerce-order .woocommerce-thankyou-order-received {
   margin: 0;
-  font-size: 30px;
+  font-size: 25px;
   font-family: "Barlow-m";
 }
 .woocommerce-order-received .woocommerce-order ul.order_details {
@@ -699,7 +699,7 @@ body.page-template-about-us .wrap-storefront-breadcrumb {
   display: none;
 }
 .woocommerce-order-received .woocommerce-order h2 {
-  font-size: 26px;
+  font-size: 22px;
   font-weight: normal;
   font-family: "Barlow-m";
 }

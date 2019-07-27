@@ -5,5 +5,16 @@
     display: none;
 }
 
-// PAGE CHECKOUT NOT LOGIN
-.logged-in
+// PAGE CHECKOUT LOGGED IN
+.logged-in{
+    form.checkout.woocommerce-checkout .col2-set{
+        display: block;
+        width: 65%;
+        .optional{
+            display: none;
+        }
+    }
+    form.checkout.woocommerce-checkout .col2-set .col-1{
+        width: auto;
+    }
+}

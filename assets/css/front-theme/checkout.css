@@ -4,3 +4,13 @@
   font-family: Barlow;
   display: none;
 }
+.logged-in form.checkout.woocommerce-checkout .col2-set {
+  display: block;
+  width: 65%;
+}
+.logged-in form.checkout.woocommerce-checkout .col2-set .optional {
+  display: none;
+}
+.logged-in form.checkout.woocommerce-checkout .col2-set .col-1 {
+  width: auto;
+}
