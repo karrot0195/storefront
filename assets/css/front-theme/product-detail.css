@@ -501,6 +501,7 @@
 }
 .storefront-product-detail #reviews .commentlist li .comment_container .comment-text .wrap-comment-left {
   width: 200px;
+  min-width: 200px;
 }
 .storefront-product-detail #reviews .commentlist li .comment_container .comment-text .wrap-comment-right {
   margin-left: 175px;

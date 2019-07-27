@@ -452,7 +452,7 @@
       });
     }
 
-  // SHOW PROMO CODE
+  // SHOW FORM INPUT PROMO CODE
   var windowwidth = $(window).width();
   if(windowwidth > 767 ){
     $('.add-link').click(function(){
@@ -464,6 +464,7 @@
     });
   } else{
     $('.add-link').click(function(){
+      console.log($('.add-link'));
       $(this).parents('.actions').toggleClass('actions-click');
       if($(this).parents('.actions').hasClass('actions-click')){
         $(this).html('Close');
