@@ -492,7 +492,7 @@
   $('.block__content .title').click(function(){
     // $('.block__content').find('.sub-title').hide();
     $(this).toggleClass('title-click');
-    $(this).next('.q-a').slideToggle(200);
+    $(this).next('.q-a-wrapper').slideToggle(200);
   });
 
   
