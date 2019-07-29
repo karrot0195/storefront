@@ -352,8 +352,7 @@
   color: #2e9e00;
   right: -25px;
   font-family: "Ionicons";
-  top: 50%;
-  transform: translateY(-50%);
+  top: 0;
 }
 .storefront-product-detail #reviews .commentlist li p.meta time {
   font-family: "Barlow";
