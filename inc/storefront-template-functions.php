@@ -729,7 +729,9 @@ if ( !function_exists('storefront_site_action') ) {
 
 if (!function_exists('storefront_slider_header')) {
 	function storefront_slider_header() {
-        $menu_items = get_field('header_menu_item', 'option');
+        // $menu_items = get_field('header_menu_item', 'option');
+		$page = get_page_by_title('home');
+		$menu_items = get_field('gallery',isset($page->ID) ? $page->ID : '');
         ?>
         <div class="block-menu">
 			<div class="menu-shop">Shop <span><i class="fa fa-chevron-up"></i></span></div>

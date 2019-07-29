@@ -17,7 +17,8 @@ get_header('home-1'); ?>
             <main id="main" class="site-main" role="main">
                 <div class="slider">
                     <?php
-                    $menu_items = get_field('header_menu_item','option');
+                    $page = get_page_by_title('home');
+                    $menu_items = get_field('gallery',isset($page->ID) ? $page->ID : '');
 
                     $description = isset($menu_items[0]['description']) ? $menu_items[0]['description'] : '';
                     $description = strip_tags($description, '<br>');
