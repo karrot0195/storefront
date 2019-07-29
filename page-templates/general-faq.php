@@ -24,21 +24,24 @@ get_header('home-1'); ?>
                                         <div class="title">
                                             <?php echo $content_item['faq_category'] ?>
                                         </div>
-
-                                        <?php $q_a = $content_item['q-a'];
-                                            if($q_a) :
-                                                foreach($q_a as $q_a_item) :
-                                        ?>
-                                        <div class="q-a">
-                                            <div class="sub-title">
-                                            <?php echo $q_a_item['question'] ?>
+                                        <div class="q-a-wrapper">
+                                            <?php $q_a = $content_item['q-a'];
+                                                if($q_a) :
+                                                    foreach($q_a as $q_a_item) :
+                                            ?>
+                                            
+                                            <div class="q-a">
+                                                <div class="sub-title">
+                                                <?php echo $q_a_item['question'] ?>
+                                                </div>
+                                                <div class="answer">
+                                                <?php echo $q_a_item['answer'] ?>
+                                                </div>
                                             </div>
-                                            <div class="answer">
-                                            <?php echo $q_a_item['answer'] ?>
-                                            </div>
+                                        
+                                            <?php endforeach ?>
+                                            <?php endif ?>
                                         </div>
-                                        <?php endforeach ?>
-                                        <?php endif ?>
                                     </div>
                                 <?php endforeach ?>
                         <?php endif ?>
