@@ -7,7 +7,7 @@ class ArchiveShopHelper {
             $image = get_field('banner_image',$page->ID);
             $imageUrl = wp_get_attachment_url($image);
             ?>
-            <section class="banner-main" <?= !empty($imageUrl) ? 'style="background: url('.esc_url($imageUrl).')' : '' ?>">
+            <section class="banner-main" <?= !empty($imageUrl) ? 'style="background-image: url('.esc_url($imageUrl).')' : '' ?>">
                 <div class="banner-title"><?= $title ?></div>
             </section>
             <?php
