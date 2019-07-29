@@ -75,7 +75,12 @@ if ( ! class_exists( 'Storefront_WooCommerce' ) ) :
 			add_theme_support( 'wc-product-gallery-zoom' );
 			add_theme_support( 'wc-product-gallery-lightbox' );
 			add_theme_support( 'wc-product-gallery-slider' );
-
+			add_theme_support( 'woocommerce', array(
+			    'thumbnail_image_width' => 216,
+			    'single_image_width' => 324,
+			    ) 
+			);
+			
 			/**
 			 * Add 'storefront_woocommerce_setup' action.
 			 *
