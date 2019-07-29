@@ -315,18 +315,31 @@
     color: #686868;
   }
   #reviews .commentlist li p.meta strong {
-    font-family: "Barlow";
-    font-size: 16px;
-    font-weight: bold;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: 1.2;
-    letter-spacing: 0.4px;
-    text-align: left;
-    color: #222222;
-    display: block;
-    text-overflow: ellipsis;
-    white-space: nowrap;
+    text-transform: capitalize;
+          position: relative;
+          font-weight: bold;
+          font-style: normal;
+          font-stretch: normal;
+          line-height: 1.2;
+          letter-spacing: 0.4px;
+          text-align: left;
+          color: #222222;
+          display: initial;
+          font-size: 16px;
+          background: none;
+          font-family: "Barlow-m";
+          padding: 0;
+          white-space: normal;
+          &::before{
+            position: absolute;
+            content: "";
+            font-size: 16px;
+            color: #2e9e00;
+            right: -25px;
+            font-family: "Ionicons";
+            top: 50%;
+            transform: translateY(-50%);
+          }
   }
 
   #reviews .commentlist li p.meta time {
@@ -391,7 +404,7 @@
     &.comment-author-admin {
       p.meta {
         .woocommerce-review__author{
-          font-size: 0;
+          // font-size: 0;
         }
       }
     }
@@ -400,7 +413,6 @@
       margin: 0;
       order: 1;
       .woocommerce-review__author{
-        display: flex;
         .contribution-badge{
           text-transform: capitalize;
           position: relative;
@@ -411,7 +423,7 @@
           letter-spacing: 0.4px;
           text-align: left;
           color: #222222;
-          display: block;
+          display: none;
           font-size: 16px;
           background: none;
           font-family: "Barlow-m";
@@ -1659,9 +1671,6 @@ body.woocommerce-page #reviews .form-contribution .attachment-type[data-prev-val
   }
   .storefront-product-detail #reviews .commentlist li .comment_container .comment-text .wrap-comment-right{
     margin-left: 0;
-  }
-  .storefront-product-detail #reviews .commentlist li p.meta .woocommerce-review__author::before{
-    right: 0;
   }
   .field-header{
     font-size: 20px;
