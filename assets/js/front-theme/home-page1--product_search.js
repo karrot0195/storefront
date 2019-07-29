@@ -1,7 +1,7 @@
 (function($) {
   $(document).on('click', '.js-show-wrap-product', function() {
     if (!window.location.href.match(/derma-rx/)) {
-      window.location = '/derma-rx?action=search';
+      window.location = 'derma-rx?action=search';
     } else {
       $('.wrap-search-product').slideToggle(500);
     }
