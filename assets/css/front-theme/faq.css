@@ -152,6 +152,16 @@
 .shipping .shipping-wrapper .content .block__content:last-child {
   border-bottom: 1px solid rgba(149, 149, 149, 0.4);
 }
+body .faq .faq-wrapper .content .block__content .sub-title {
+  display: block;
+  font-weight: bold;
+}
+body .faq .faq-wrapper .content .block__content .q-a {
+  display: none;
+}
+body .faq .faq-wrapper .content .block__content .q-a .answer {
+  margin-top: 5px;
+}
 /************************/
 /*       Shipping        */
 /************************/

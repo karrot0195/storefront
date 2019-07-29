@@ -489,6 +489,12 @@
     $(this).next('.sub-title').slideToggle(200);
   });
 
+  $('.block__content .title').click(function(){
+    // $('.block__content').find('.sub-title').hide();
+    $(this).toggleClass('title-click');
+    $(this).next('.q-a').slideToggle(200);
+  });
+
   
   // [MY ACCOUNT] TAB CONTENT
   $('.sidebar .sidebar__tab').click(function(){
