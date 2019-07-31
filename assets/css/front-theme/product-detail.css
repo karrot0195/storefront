@@ -1586,6 +1586,9 @@ body.woocommerce-page #reviews .form-contribution .attachment-type[data-prev-val
   display: none;
 }
 @media screen and (max-width: 767px) {
+  .wrap-additional_information table {
+    width: 100%;
+  }
   .wrap-additional_information tbody {
     display: grid;
     grid-template-columns: auto auto;
