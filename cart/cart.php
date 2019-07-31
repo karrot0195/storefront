@@ -388,11 +388,13 @@ $product_ids = [];
 	</div>
 
 	<?php
+
+	$ids = get_field('product_related', get_the_ID());
 	echo render_php('views/common/back-to-shopping.php');
     echo render_php('views/cart/relate-product.php', [
         'title' => get_field('title'),
         'description' => get_field('description'),
-        'relate_product' => $product_ids
+        'relate_product' => $ids
     ]);
     ?>
 </div>

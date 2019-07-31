@@ -820,3 +820,55 @@ acf_add_local_field_group(array (
 ));
 
 endif;
+
+
+if( function_exists('acf_add_local_field_group') ):
+$page = get_page_by_title('cart');
+acf_add_local_field_group(array (
+	'key' => 'group_5d3f0a07c921b',
+	'title' => 'Product Related Cart',
+	'fields' => array (
+		array (
+			'key' => 'field_5d3f0a1438e4f',
+			'label' => 'product related',
+			'name' => 'product_related',
+			'type' => 'post_object',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array (
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'post_type' => array (
+				0 => 'product',
+			),
+			'taxonomy' => array (
+			),
+			'allow_null' => 0,
+			'multiple' => 1,
+			'return_format' => 'id',
+			'ui' => 1,
+		),
+	),
+	'location' => array (
+		array (
+			array (
+				'param' => 'page',
+				'operator' => '==',
+				'value' => isset($page->ID) ? $page->ID : '',
+			),
+		),
+	),
+	'menu_order' => 0,
+	'position' => 'normal',
+	'style' => 'default',
+	'label_placement' => 'top',
+	'instruction_placement' => 'label',
+	'hide_on_screen' => '',
+	'active' => 1,
+	'description' => '',
+));
+
+endif;
