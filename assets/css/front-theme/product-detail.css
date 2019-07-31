@@ -1587,10 +1587,8 @@ body.woocommerce-page #reviews .form-contribution .attachment-type[data-prev-val
 }
 @media screen and (max-width: 767px) {
   .wrap-additional_information tbody {
-    display: flex;
-  }
-  .wrap-additional_information tbody tr:last-child {
-    padding-left: 36px;
+    display: grid;
+    grid-template-columns: auto auto;
   }
   .home-page-1 ul.products {
     margin-top: 2.235801em;
