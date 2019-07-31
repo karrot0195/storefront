@@ -14,9 +14,6 @@ get_header('home-1'); ?>
                     <?php echo get_field('privacy_policy_sidebar') ?>
                     </div>    
                     <div class="content">
-                        <div class="desc">
-                            <?php echo get_field('description') ?>
-                        </div>
                         <?php 
                             $content=get_field('privacy_policy_content');
                             if($content) :
@@ -29,21 +26,6 @@ get_header('home-1'); ?>
                                 <div class="sub-title">
                                     <?php echo $content_item['answer'] ?>
                                 </div>
-                                <?php
-                                    $extra_block = $content_item['extra_block'];
-                                        if($extra_block) :
-                                            foreach($extra_block as $extra_block_item) :
-                                ?>
-                                        <div class="extra-block">
-                                            <div class="extra-title">
-                                                <?php echo $extra_block_item['title'] ?>
-                                            </div>
-                                            <div class="extra-desc">
-                                                <?php echo $extra_block_item['description'] ?>
-                                            </div>
-                                        </div>
-                                    <?php endforeach ?>
-                                <?php endif ?>
                             </div>
                             <?php endforeach ?>
                         <?php endif ?>
