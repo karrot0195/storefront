@@ -13,6 +13,9 @@
   width: 100%;
   height: 100%;
 }
+.about-us .slider__item__img img.sp {
+  display: none;
+}
 .about-us .slider__item__content {
   position: absolute;
   top: 50%;
@@ -128,6 +131,12 @@
   .about-us .slick-track img {
     object-fit: cover;
     object-position: right;
+  }
+  .about-us .slider__item__img img.pc {
+    display: none;
+  }
+  .about-us .slider__item__img img.sp {
+    display: block;
   }
   .about-us .content .sub_title {
     margin-bottom: 30px;

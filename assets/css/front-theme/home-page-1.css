@@ -1059,10 +1059,6 @@ body.home .site-footer {
 .home-page-1 .site-main ul.products.columns-3 li.product {
   position: relative;
 }
-.home-page-1 .site-main ul.products.columns-3 li.product:hover h2.woocommerce-loop-product__title,
-.home-page-1 .site-main ul.products.columns-3 li.product:hover .price {
-  visibility: hidden;
-}
 .home-page-1 .onsale {
   display: none;
 }
@@ -2407,10 +2403,6 @@ body.disable .home-page-1 .site-header {
 }
 .wrap-cart {
   position: relative;
-}
-.site-main ul.products.columns-4 li.product:hover h2.woocommerce-loop-product__title,
-.site-main ul.products.columns-4 li.product:hover .price {
-  visibility: hidden;
 }
 @media screen and (max-width: 767px) {
   .site-main ul.products.columns-4 li.product:hover h2.woocommerce-loop-product__title,

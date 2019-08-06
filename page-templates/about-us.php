@@ -13,11 +13,13 @@ get_header('home-1'); ?>
                     $slider = get_field('slider_about_us');
                     if($slider) :
                         foreach($slider as $slider_item ):
-                            $bg_image= wp_get_attachment_url($slider_item['background_image']);
+                            $bg_image_pc= wp_get_attachment_url($slider_item['background_image_desktop']);
+                            $bg_image_sp= wp_get_attachment_url($slider_item['background_image_mobile']);
                         ?>
                         <div class="slider__item">
                             <div class="slider__item__img">
-                                <img class="bg_img" alt="" src="<?= esc_url($bg_image) ?>">
+                                <img class="bg_img pc" alt="" src="<?= esc_url($bg_image_pc) ?>">
+                                <img class="bg_img sp" alt="" src="<?= esc_url($bg_image_sp) ?>">
                             </div>
                             <div class="slider__item__content">
                                 <div class="title">
