@@ -356,6 +356,7 @@ body.home .site-footer {
 .home-page-1 .site-header .col-full .block-menu ul li {
   display: inline;
   padding-right: 30px;
+  display: none;
 }
 .home-page-1 .site-header .col-full .block-menu ul li a {
   text-decoration: none;
@@ -378,6 +379,7 @@ body.home .site-footer {
 .home-page-1 .site-header .col-full .block-menu ul li:first-child a {
   text-decoration: underline;
   color: #222222;
+  display: block;
 }
 .home-page-1 .site-header .col-full .block-icon-action {
   width: 30%;
